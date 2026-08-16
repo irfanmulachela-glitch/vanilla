@@ -69,7 +69,7 @@ const faqs = [
       },
       {
         q: "Do you ship to my country?",
-        a: "We export to 40+ countries including UAE, Australia, USA, UK, France, Germany, Japan, Singapore, and many more. Contact us to confirm availability for your specific location.",
+        a: "We export to 20+ countries including UAE, Australia, USA, UK, France, Germany, Japan, Singapore, and many more. Contact us to confirm availability for your specific location.",
       },
     ],
   },

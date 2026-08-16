@@ -20,7 +20,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
   description:
-    "PT Penta Pelita Semesta - Indonesia's trusted vanilla supplier. HACCP certified. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 40+ countries. MOQ 1kg.",
+    "PT Penta Pelita Semesta - Indonesia's trusted vanilla supplier. HACCP certified. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 1kg.",
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
@@ -121,7 +121,7 @@ export default function HomePage() {
                 label: "Experience",
                 value: `${siteConfig.stats.yearsExperience} Years`,
               },
-              { icon: Users, label: "Happy Clients", value: "100+" },
+              { icon: Users, label: "Happy Clients", value: "30+" },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">

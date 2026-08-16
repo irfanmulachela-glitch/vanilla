@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "PT Penta Pelita Semesta",
-  description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. HACCP certified. 10+ years experience shipping to 40+ countries.",
+  description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. HACCP certified. 10+ years experience shipping to 20+ countries.",
   url: "https://pentapelitasemesta.id",
   ogImage: "/og-image.jpg",
   keywords: [
@@ -86,9 +86,9 @@ export const siteConfig = {
     },
   ],
   stats: {
-    countriesServed: "40+",
+    countriesServed: "20+",
     yearsExperience: "10+",
-    happyClients: "100+",
+    happyClients: "30+",
     tonsExported: "500+",
   },
 } as const;
