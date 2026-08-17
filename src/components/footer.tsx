@@ -62,7 +62,7 @@ export function Footer() {
           {/* Company info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 relative">
+              <div className="w-10 h-10 relative flex-shrink-0">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
@@ -71,7 +71,7 @@ export function Footer() {
                   className="object-contain brightness-0 invert opacity-90"
                 />
               </div>
-              <div className="w-24 relative h-8">
+              <div className="w-24 relative h-8 flex items-center">
                 <Image
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
