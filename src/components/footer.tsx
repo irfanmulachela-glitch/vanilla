@@ -34,7 +34,7 @@ export function Footer() {
               <h3 className="text-xl font-bold text-white">
                 Stay Updated on Vanilla Market Trends
               </h3>
-              <p className="text-stone-600 mt-1">
+              <p className="text-stone-400 mt-1">
                 Get insights on pricing, quality, and export opportunities.
               </p>
             </div>
@@ -42,11 +42,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#3D3425] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="flex-1 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50] transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors flex items-center gap-2"
               >
                 Subscribe
                 <ArrowRight className="w-4 h-4" />
@@ -80,7 +80,7 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-stone-600 mb-4">
+            <p className="text-sm text-stone-400 mb-4">
               Premium Indonesian vanilla supplier for wholesale, B2B, and direct
               export. HACCP certified with {siteConfig.stats.yearsExperience} years of experience.
             </p>
@@ -89,14 +89,14 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:text-[#D8C393] transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-[#B5A37A] transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 {siteConfig.social.whatsapp}
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-2 text-sm hover:text-[#D8C393] transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-[#B5A37A] transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 {siteConfig.social.email}
@@ -116,7 +116,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-[#D8C393] transition-colors"
+                    className="text-sm hover:text-[#B5A37A] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -133,7 +133,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-[#D8C393] transition-colors"
+                    className="text-sm hover:text-[#B5A37A] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -152,7 +152,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-[#D8C393] transition-colors"
+                    className="text-sm hover:text-[#B5A37A] transition-colors"
                   >
                     {link.name}
                   </Link>

@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F6F2;
+  --foreground: #2C2518;
+  --gold: #B5A37A;
+  --gold-hover: #A8956A;
+  --border: #E5E0D8;
+  --muted: #6B6358;
 }
 
 @theme inline {
@@ -43,6 +47,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: #fef3c7;
-  color: #92400e;
+  background-color: #B5A37A;
+  color: white;
 }

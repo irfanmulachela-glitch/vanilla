@@ -30,14 +30,14 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-[#D8C393] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#B5A37A] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.whatsapp}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-1.5 hover:text-[#D8C393] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#B5A37A] transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.email}</span>
@@ -53,7 +53,7 @@ export function Navigation() {
       </div>
 
       {/* Main navigation */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-100">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E5E0D8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
@@ -82,7 +82,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-stone-700 hover:text-[#8B7D50] hover:bg-[#F5F0E6] rounded-lg transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F8F6F2] rounded-lg transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -93,7 +93,7 @@ export function Navigation() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-[#A08C5A] text-white text-sm font-medium rounded-lg hover:bg-[#8B7D50] transition-colors"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
               >
                 Get Quote
               </Link>
@@ -101,7 +101,7 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-[#B5A37A] text-white text-sm font-medium rounded-lg hover:bg-[#A8956A] transition-colors"
               >
                 WhatsApp
               </Link>
@@ -109,7 +109,7 @@ export function Navigation() {
               {/* Mobile menu button */}
               <button
                 type="button"
-                className="lg:hidden p-2 text-stone-700 hover:bg-stone-100 rounded-lg"
+                className="lg:hidden p-2 text-[#2C2518] hover:bg-[#F8F6F2] rounded-lg"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
@@ -124,13 +124,13 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-stone-100">
+          <div className="lg:hidden border-t border-[#E5E0D8]">
             <div className="px-4 py-4 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-stone-700 hover:text-[#8B7D50] hover:bg-[#F5F0E6] rounded-lg"
+                  className="block px-3 py-2 text-base font-medium text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F8F6F2] rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -139,7 +139,7 @@ export function Navigation() {
               <div className="pt-4 space-y-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-4 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50]"
+                  className="block w-full text-center px-4 py-3 bg-[#2C2518] text-white font-medium rounded-lg hover:bg-[#3D3425]"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
@@ -148,7 +148,7 @@ export function Navigation() {
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-3 bg-stone-900 text-white font-medium rounded-lg hover:bg-stone-800"
+                  className="block w-full text-center px-4 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A]"
                 >
                   WhatsApp Us
                 </Link>
