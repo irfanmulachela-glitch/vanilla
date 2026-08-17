@@ -191,7 +191,7 @@ export default async function RegionPage({
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -199,7 +199,7 @@ export default async function RegionPage({
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Vanilla Supplier in {region.name}
               </h1>
-              <p className="text-lg text-amber-100 mb-8">
+              <p className="text-lg text-stone-700 mb-8">
                 {region.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -245,9 +245,9 @@ export default async function RegionPage({
             {region.highlights.map((highlight) => (
               <div
                 key={highlight}
-                className="bg-amber-50 rounded-xl p-6 text-center"
+                className="bg-[#F5F0E6] rounded-xl p-6 text-center"
               >
-                <CheckCircle2 className="w-8 h-8 text-amber-700 mx-auto mb-3" />
+                <CheckCircle2 className="w-8 h-8 text-[#8B7D50] mx-auto mb-3" />
                 <p className="font-medium text-gray-900">{highlight}</p>
               </div>
             ))}
@@ -266,7 +266,7 @@ export default async function RegionPage({
               <div className="space-y-4">
                 {region.compliance.map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <Shield className="w-5 h-5 text-amber-700" />
+                    <Shield className="w-5 h-5 text-[#8B7D50]" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -278,7 +278,7 @@ export default async function RegionPage({
               </h2>
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="flex items-center gap-3 mb-4">
-                  <Truck className="w-6 h-6 text-amber-700" />
+                  <Truck className="w-6 h-6 text-[#8B7D50]" />
                   <span className="font-semibold text-gray-900">
                     Delivery Time: {region.shippingTime}
                   </span>
@@ -304,12 +304,12 @@ export default async function RegionPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-stone-900 text-white">
+      <section className="py-16 bg-[#D8C393] text-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Source Vanilla for {region.name}?
           </h2>
-          <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-stone-700 text-lg mb-8 max-w-2xl mx-auto">
             Get a free quote and sample within 24 hours. We understand the
             requirements for {region.name} and can provide all necessary
             documentation.

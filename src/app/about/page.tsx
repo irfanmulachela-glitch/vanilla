@@ -13,13 +13,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               About La Vanilla Supplier
             </h1>
-            <p className="text-lg text-amber-100">
+            <p className="text-lg text-stone-700">
               Bridging Indonesian vanilla farmers with global markets through
               responsible trade, trusted partnerships, and sustainable products.
             </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-[#8B7D50] mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         {item.title}
@@ -129,8 +129,8 @@ export default function AboutPage() {
                 key={item.title}
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-amber-700" />
+                <div className="w-12 h-12 bg-[#E8DCC0] rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-[#8B7D50]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">
                   {item.title}
@@ -205,7 +205,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-stone-900 text-white">
+      <section className="py-16 bg-[#D8C393] text-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -216,7 +216,7 @@ export default function AboutPage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl font-bold mb-2">{stat.value}</p>
-                <p className="text-amber-200">{stat.label}</p>
+                <p className="text-[#8B7D50]">{stat.label}</p>
               </div>
             ))}
           </div>

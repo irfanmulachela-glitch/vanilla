@@ -25,16 +25,16 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-300">
+    <footer className="bg-[#2C2518] text-stone-300">
       {/* Newsletter section */}
-      <div className="border-b border-stone-800">
+      <div className="border-b border-[#3D3425]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl font-bold text-white">
                 Stay Updated on Vanilla Market Trends
               </h3>
-              <p className="text-stone-400 mt-1">
+              <p className="text-stone-600 mt-1">
                 Get insights on pricing, quality, and export opportunities.
               </p>
             </div>
@@ -42,11 +42,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 lg:w-72 px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="flex-1 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#3D3425] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800 transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50] transition-colors flex items-center gap-2"
               >
                 Subscribe
                 <ArrowRight className="w-4 h-4" />
@@ -62,7 +62,7 @@ export function Footer() {
           {/* Company info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 relative rounded-lg overflow-hidden bg-stone-800 flex items-center justify-center">
+              <div className="w-10 h-10 relative rounded-lg overflow-hidden bg-[#3D3425] flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
@@ -75,10 +75,10 @@ export function Footer() {
                 <p className="font-bold text-white text-sm leading-tight">
                   La Vanilla
                 </p>
-                <p className="text-stone-400 text-xs">Supplier</p>
+                <p className="text-stone-600 text-xs">Supplier</p>
               </div>
             </Link>
-            <p className="text-sm text-stone-400 mb-4">
+            <p className="text-sm text-stone-600 mb-4">
               Premium Indonesian vanilla supplier for wholesale, B2B, and direct
               export. HACCP certified with {siteConfig.stats.yearsExperience} years of experience.
             </p>
@@ -87,14 +87,14 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:text-amber-400 transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-[#D8C393] transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 {siteConfig.social.whatsapp}
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-2 text-sm hover:text-amber-400 transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-[#D8C393] transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 {siteConfig.social.email}
@@ -114,7 +114,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-amber-400 transition-colors"
+                    className="text-sm hover:text-[#D8C393] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -131,7 +131,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-amber-400 transition-colors"
+                    className="text-sm hover:text-[#D8C393] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -150,7 +150,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-amber-400 transition-colors"
+                    className="text-sm hover:text-[#D8C393] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -162,7 +162,7 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-stone-800">
+      <div className="border-t border-[#3D3425]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-stone-500">

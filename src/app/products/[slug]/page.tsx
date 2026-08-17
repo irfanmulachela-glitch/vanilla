@@ -53,27 +53,27 @@ export default async function ProductPage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Link
                 href="/products"
-                className="inline-flex items-center text-amber-300 hover:text-white mb-6 text-sm"
+                className="inline-flex items-center text-[#8B7D50] hover:text-stone-900 mb-6 text-sm"
               >
                 ← Back to Products
               </Link>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 {product.name}
               </h1>
-              <p className="text-lg text-amber-100 mb-8">
+              <p className="text-lg text-stone-700 mb-8">
                 {product.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {product.certifications.map((cert) => (
                   <span
                     key={cert}
-                    className="inline-flex items-center gap-1 px-3 py-1 bg-stone-800/50 text-amber-200 text-sm font-medium rounded-full border border-amber-700/50"
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-[#C4B07A]/50 text-stone-900 text-sm font-medium rounded-full border border-[#C4B07A]/50"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     {cert}
@@ -148,7 +148,7 @@ export default async function ProductPage({ params }: PageProps) {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Quick quote card */}
-              <div className="bg-amber-50 rounded-2xl p-6">
+                <div className="bg-[#F5F0E6] rounded-2xl p-6">
                 <h3 className="font-bold text-gray-900 mb-4">
                   Get a Quick Quote
                 </h3>
@@ -158,7 +158,7 @@ export default async function ProductPage({ params }: PageProps) {
                 </p>
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
+                  className="block w-full text-center px-6 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50] transition-colors"
                 >
                   Request Quote
                 </Link>
@@ -188,8 +188,8 @@ export default async function ProductPage({ params }: PageProps) {
                     },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-4 h-4 text-amber-700" />
+                      <div className="w-8 h-8 bg-[#E8DCC0] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-4 h-4 text-[#8B7D50]" />
                       </div>
                       <div>
                         <p className="font-medium text-gray-900 text-sm">
@@ -213,7 +213,7 @@ export default async function ProductPage({ params }: PageProps) {
               >
                 <MessageSquare className="w-8 h-8 mx-auto mb-2" />
                 <p className="font-bold">Chat on WhatsApp</p>
-                <p className="text-sm text-stone-100">
+                <p className="text-sm text-stone-700">
                   Get instant response
                 </p>
               </a>

@@ -22,7 +22,7 @@ export function Navigation() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-stone-900 text-white text-sm">
+      <div className="bg-[#D8C393] text-stone-900 text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-4">
@@ -43,7 +43,7 @@ export function Navigation() {
                 <span>{siteConfig.social.email}</span>
               </a>
             </div>
-            <div className="hidden sm:flex items-center gap-4 text-stone-400">
+            <div className="hidden sm:flex items-center gap-4 text-stone-600">
               <span>HACCP Certified</span>
               <span>|</span>
               <span>Export to {siteConfig.stats.countriesServed} Countries</span>
@@ -58,7 +58,7 @@ export function Navigation() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 relative rounded-lg overflow-hidden bg-stone-900 flex items-center justify-center">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 relative rounded-lg overflow-hidden bg-[#E8DCC0] flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
@@ -80,7 +80,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-stone-700 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-stone-700 hover:text-[#8B7D50] hover:bg-[#F5F0E6] rounded-lg transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -91,7 +91,7 @@ export function Navigation() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-amber-700 text-white text-sm font-medium rounded-lg hover:bg-amber-800 transition-colors"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-[#A08C5A] text-white text-sm font-medium rounded-lg hover:bg-[#8B7D50] transition-colors"
               >
                 Get Quote
               </Link>
@@ -128,7 +128,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-stone-700 hover:text-amber-700 hover:bg-amber-50 rounded-lg"
+                  className="block px-3 py-2 text-base font-medium text-stone-700 hover:text-[#8B7D50] hover:bg-[#F5F0E6] rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -137,7 +137,7 @@ export function Navigation() {
               <div className="pt-4 space-y-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-4 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800"
+                  className="block w-full text-center px-4 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50]"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
