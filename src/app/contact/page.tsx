@@ -43,13 +43,13 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Get in Touch
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               Ready to start your vanilla journey? Request a quote, ask
               questions, or schedule a facility visit. We respond within 24
               hours.
@@ -79,9 +79,9 @@ export default function ContactPage() {
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors"
+                  className="flex items-start gap-4 p-4 bg-stone-50 rounded-xl hover:bg-stone-100 transition-colors"
                 >
-                  <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-stone-900 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MessageSquare className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   href={`mailto:${siteConfig.social.email}`}
                   className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
                 >
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 </a>
 
                 <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -145,8 +145,8 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               {submitted ? (
-                <div className="bg-emerald-50 rounded-2xl p-8 text-center">
-                  <CheckCircle2 className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
+                <div className="bg-amber-50 rounded-2xl p-8 text-center">
+                  <CheckCircle2 className="w-16 h-16 text-amber-700 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     Thank You!
                   </h3>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                         message: "",
                       });
                     }}
-                    className="px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                    className="px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
                   >
                     Send Another Inquiry
                   </button>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -213,7 +213,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -245,7 +245,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       />
                     </div>
                     <div>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                         required
                         value={formData.product}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       >
                         <option value="">Select a product</option>
                         <option value="vanilla-beans">Vanilla Beans</option>
@@ -284,7 +284,7 @@ export default function ContactPage() {
                         placeholder="e.g., 50 kg"
                         value={formData.quantity}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       />
                     </div>
                     <div className="md:col-span-2">
@@ -300,7 +300,7 @@ export default function ContactPage() {
                         required
                         value={formData.region}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                       >
                         <option value="">Select your region</option>
                         <option value="uae">UAE / Middle East</option>
@@ -326,13 +326,13 @@ export default function ContactPage() {
                         placeholder="Tell us about your requirements, specifications, or any questions you have..."
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent resize-none"
                       />
                     </div>
                   </div>
                   <button
                     type="submit"
-                    className="mt-6 w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors"
+                    className="mt-6 w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-amber-700 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Send Inquiry

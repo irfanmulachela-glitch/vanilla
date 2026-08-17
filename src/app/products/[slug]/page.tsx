@@ -53,27 +53,27 @@ export default async function ProductPage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Link
                 href="/products"
-                className="inline-flex items-center text-emerald-300 hover:text-white mb-6 text-sm"
+                className="inline-flex items-center text-amber-300 hover:text-white mb-6 text-sm"
               >
                 ← Back to Products
               </Link>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 {product.name}
               </h1>
-              <p className="text-lg text-emerald-100 mb-8">
+              <p className="text-lg text-amber-100 mb-8">
                 {product.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {product.certifications.map((cert) => (
                   <span
                     key={cert}
-                    className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-800/50 text-emerald-200 text-sm font-medium rounded-full border border-emerald-700/50"
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-stone-800/50 text-amber-200 text-sm font-medium rounded-full border border-amber-700/50"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     {cert}
@@ -83,7 +83,7 @@ export default async function ProductPage({ params }: PageProps) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-900 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-stone-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
                 >
                   Request Quote
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -92,7 +92,7 @@ export default async function ProductPage({ params }: PageProps) {
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white font-semibold rounded-lg hover:bg-stone-800 transition-colors"
                 >
                   <MessageSquare className="mr-2 w-5 h-5" />
                   Chat on WhatsApp
@@ -148,7 +148,7 @@ export default async function ProductPage({ params }: PageProps) {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Quick quote card */}
-              <div className="bg-emerald-50 rounded-2xl p-6">
+              <div className="bg-amber-50 rounded-2xl p-6">
                 <h3 className="font-bold text-gray-900 mb-4">
                   Get a Quick Quote
                 </h3>
@@ -158,7 +158,7 @@ export default async function ProductPage({ params }: PageProps) {
                 </p>
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                  className="block w-full text-center px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
                 >
                   Request Quote
                 </Link>
@@ -188,8 +188,8 @@ export default async function ProductPage({ params }: PageProps) {
                     },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-4 h-4 text-emerald-600" />
+                      <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-4 h-4 text-amber-700" />
                       </div>
                       <div>
                         <p className="font-medium text-gray-900 text-sm">
@@ -209,11 +209,11 @@ export default async function ProductPage({ params }: PageProps) {
                 href={`https://wa.me/${siteConfig.social.whatsapp}?text=Hi, I'm interested in ${product.name}. Can you provide more details?`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-green-500 text-white rounded-2xl p-6 text-center hover:bg-green-600 transition-colors"
+                className="block bg-stone-900 text-white rounded-2xl p-6 text-center hover:bg-stone-800 transition-colors"
               >
                 <MessageSquare className="w-8 h-8 mx-auto mb-2" />
                 <p className="font-bold">Chat on WhatsApp</p>
-                <p className="text-sm text-green-100">
+                <p className="text-sm text-stone-100">
                   Get instant response
                 </p>
               </a>
@@ -246,7 +246,7 @@ export default async function ProductPage({ params }: PageProps) {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">
                       {p.name}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">

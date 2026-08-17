@@ -67,7 +67,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-gray-900">
+      <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900">
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />

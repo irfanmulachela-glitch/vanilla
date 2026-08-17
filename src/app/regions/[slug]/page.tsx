@@ -191,7 +191,7 @@ export default async function RegionPage({
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -199,13 +199,13 @@ export default async function RegionPage({
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Vanilla Supplier in {region.name}
               </h1>
-              <p className="text-lg text-emerald-100 mb-8">
+              <p className="text-lg text-amber-100 mb-8">
                 {region.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-900 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-stone-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
                 >
                   Get Quote for {region.name}
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -214,7 +214,7 @@ export default async function RegionPage({
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white font-semibold rounded-lg hover:bg-stone-800 transition-colors"
                 >
                   Chat on WhatsApp
                 </Link>
@@ -245,9 +245,9 @@ export default async function RegionPage({
             {region.highlights.map((highlight) => (
               <div
                 key={highlight}
-                className="bg-emerald-50 rounded-xl p-6 text-center"
+                className="bg-amber-50 rounded-xl p-6 text-center"
               >
-                <CheckCircle2 className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+                <CheckCircle2 className="w-8 h-8 text-amber-700 mx-auto mb-3" />
                 <p className="font-medium text-gray-900">{highlight}</p>
               </div>
             ))}
@@ -266,7 +266,7 @@ export default async function RegionPage({
               <div className="space-y-4">
                 {region.compliance.map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <Shield className="w-5 h-5 text-emerald-600" />
+                    <Shield className="w-5 h-5 text-amber-700" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -278,7 +278,7 @@ export default async function RegionPage({
               </h2>
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="flex items-center gap-3 mb-4">
-                  <Truck className="w-6 h-6 text-emerald-600" />
+                  <Truck className="w-6 h-6 text-amber-700" />
                   <span className="font-semibold text-gray-900">
                     Delivery Time: {region.shippingTime}
                   </span>
@@ -304,12 +304,12 @@ export default async function RegionPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-emerald-900 text-white">
+      <section className="py-16 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Source Vanilla for {region.name}?
           </h2>
-          <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
             Get a free quote and sample within 24 hours. We understand the
             requirements for {region.name} and can provide all necessary
             documentation.
@@ -317,7 +317,7 @@ export default async function RegionPage({
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-900 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-stone-900 font-semibold rounded-lg hover:bg-amber-50 transition-colors"
             >
               Request Free Quote
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -326,7 +326,7 @@ export default async function RegionPage({
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white font-semibold rounded-lg hover:bg-stone-800 transition-colors"
             >
               Chat on WhatsApp
             </Link>

@@ -20,13 +20,13 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Our Vanilla Products
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               From raw beans to custom formulations — we provide complete
               vanilla solutions for food manufacturers, distributors, and
               artisan producers worldwide.
@@ -60,7 +60,7 @@ export default function ProductsPage() {
                 </div>
 
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full mb-4">
+                  <span className="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full mb-4">
                     {product.category === "beans"
                       ? "Vanilla Beans"
                       : product.category === "paste"
@@ -91,7 +91,7 @@ export default function ProductsPage() {
                     {product.certifications.map((cert) => (
                       <span
                         key={cert}
-                        className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full"
+                        className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium rounded-full"
                       >
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         {cert}
@@ -101,7 +101,7 @@ export default function ProductsPage() {
 
                   <Link
                     href={`/products/${product.slug}`}
-                    className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                    className="inline-flex items-center px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
                   >
                     View Full Specifications
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -116,7 +116,7 @@ export default function ProductsPage() {
       {/* Custom Formulation CTA */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-emerald-50 rounded-2xl p-8 lg:p-12">
+          <div className="bg-amber-50 rounded-2xl p-8 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
@@ -136,14 +136,14 @@ export default function ProductsPage() {
                     "Small batch prototyping available",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-amber-700 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                  className="inline-flex items-center px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
                 >
                   Discuss Your Requirements
                   <ArrowRight className="ml-2 w-4 h-4" />

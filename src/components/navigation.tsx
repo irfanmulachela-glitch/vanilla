@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -22,7 +22,7 @@ export function Navigation() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-emerald-900 text-white text-sm">
+      <div className="bg-stone-900 text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-4">
@@ -30,20 +30,20 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-emerald-200 transition-colors"
+                className="flex items-center gap-1.5 hover:text-amber-300 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.whatsapp}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-1.5 hover:text-emerald-200 transition-colors"
+                className="flex items-center gap-1.5 hover:text-amber-300 transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.email}</span>
               </a>
             </div>
-            <div className="hidden sm:flex items-center gap-4 text-emerald-200">
+            <div className="hidden sm:flex items-center gap-4 text-stone-400">
               <span>HACCP Certified</span>
               <span>|</span>
               <span>Export to {siteConfig.stats.countriesServed} Countries</span>
@@ -53,19 +53,24 @@ export function Navigation() {
       </div>
 
       {/* Main navigation */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-emerald-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg lg:text-xl">PP</span>
+              <div className="w-10 h-10 lg:w-12 lg:h-12 relative rounded-lg overflow-hidden bg-stone-900 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="La Vanilla Supplier"
+                  fill
+                  className="object-contain p-1"
+                />
               </div>
               <div className="hidden sm:block">
-                <p className="font-bold text-gray-900 text-sm lg:text-base leading-tight">
-                  Penta Pelita
+                <p className="font-bold text-stone-900 text-sm lg:text-base leading-tight">
+                  La Vanilla
                 </p>
-                <p className="text-gray-500 text-xs lg:text-sm">Semesta</p>
+                <p className="text-stone-500 text-xs lg:text-sm">Supplier</p>
               </div>
             </Link>
 
@@ -75,7 +80,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-stone-700 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -86,7 +91,7 @@ export function Navigation() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-amber-700 text-white text-sm font-medium rounded-lg hover:bg-amber-800 transition-colors"
               >
                 Get Quote
               </Link>
@@ -94,7 +99,7 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-colors"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors"
               >
                 WhatsApp
               </Link>
@@ -102,7 +107,7 @@ export function Navigation() {
               {/* Mobile menu button */}
               <button
                 type="button"
-                className="lg:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-lg"
+                className="lg:hidden p-2 text-stone-700 hover:bg-stone-100 rounded-lg"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
@@ -117,13 +122,13 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-100">
+          <div className="lg:hidden border-t border-stone-100">
             <div className="px-4 py-4 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg"
+                  className="block px-3 py-2 text-base font-medium text-stone-700 hover:text-amber-700 hover:bg-amber-50 rounded-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -132,7 +137,7 @@ export function Navigation() {
               <div className="pt-4 space-y-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-4 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700"
+                  className="block w-full text-center px-4 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
@@ -141,7 +146,7 @@ export function Navigation() {
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-3 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600"
+                  className="block w-full text-center px-4 py-3 bg-stone-900 text-white font-medium rounded-lg hover:bg-stone-800"
                 >
                   WhatsApp Us
                 </Link>

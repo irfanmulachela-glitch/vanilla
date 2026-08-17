@@ -117,13 +117,13 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               Find answers to common questions about our products, ordering,
               shipping, and certifications.
             </p>
@@ -145,7 +145,7 @@ export default function FAQPage() {
                     key={faq.q}
                     className="group bg-gray-50 rounded-xl overflow-hidden"
                   >
-                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-emerald-600 transition-colors">
+                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-amber-700 transition-colors">
                       {faq.q}
                       <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
                         ▼
@@ -175,7 +175,7 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-amber-700 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -184,7 +184,7 @@ export default function FAQPage() {
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white font-semibold rounded-lg hover:bg-stone-800 transition-colors"
             >
               <MessageSquare className="mr-2 w-5 h-5" />
               Chat on WhatsApp

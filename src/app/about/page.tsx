@@ -6,20 +6,20 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About Us - Our Story & Mission",
   description:
-    "Learn about PT Penta Pelita Semesta - Indonesia's trusted vanilla supplier with 10+ years of experience in premium vanilla export. HACCP certified.",
+    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier with 10+ years of experience in premium vanilla export. HACCP certified.",
 };
 
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              About PT Penta Pelita Semesta
+              About La Vanilla Supplier
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               Bridging Indonesian vanilla farmers with global markets through
               responsible trade, trusted partnerships, and sustainable products.
             </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-amber-700 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         {item.title}
@@ -129,8 +129,8 @@ export default function AboutPage() {
                 key={item.title}
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
               >
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-emerald-600" />
+                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-amber-700" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">
                   {item.title}
@@ -205,7 +205,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-emerald-900 text-white">
+      <section className="py-16 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -216,7 +216,7 @@ export default function AboutPage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl font-bold mb-2">{stat.value}</p>
-                <p className="text-emerald-200">{stat.label}</p>
+                <p className="text-amber-200">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            name: "About PT Penta Pelita Semesta",
+            name: "About La Vanilla Supplier",
             description: "Learn about our vanilla export business",
             url: `${siteConfig.url}/about`,
             mainEntity: {

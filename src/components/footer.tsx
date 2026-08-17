@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 
@@ -24,16 +25,16 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-stone-900 text-stone-300">
       {/* Newsletter section */}
-      <div className="border-b border-gray-800">
+      <div className="border-b border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl font-bold text-white">
                 Stay Updated on Vanilla Market Trends
               </h3>
-              <p className="text-gray-400 mt-1">
+              <p className="text-stone-400 mt-1">
                 Get insights on pricing, quality, and export opportunities.
               </p>
             </div>
@@ -41,11 +42,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 lg:w-72 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="flex-1 lg:w-72 px-4 py-3 bg-stone-800 border border-stone-700 rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-800 transition-colors flex items-center gap-2"
               >
                 Subscribe
                 <ArrowRight className="w-4 h-4" />
@@ -61,17 +62,23 @@ export function Footer() {
           {/* Company info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">PP</span>
+              <div className="w-10 h-10 relative rounded-lg overflow-hidden bg-stone-800 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="La Vanilla Supplier"
+                  width={40}
+                  height={40}
+                  className="object-contain p-1"
+                />
               </div>
               <div>
                 <p className="font-bold text-white text-sm leading-tight">
-                  Penta Pelita
+                  La Vanilla
                 </p>
-                <p className="text-gray-400 text-xs">Semesta</p>
+                <p className="text-stone-400 text-xs">Supplier</p>
               </div>
             </Link>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-stone-400 mb-4">
               Premium Indonesian vanilla supplier for wholesale, B2B, and direct
               export. HACCP certified with {siteConfig.stats.yearsExperience} years of experience.
             </p>
@@ -80,14 +87,14 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-amber-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 {siteConfig.social.whatsapp}
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-2 text-sm hover:text-emerald-400 transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-amber-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 {siteConfig.social.email}
@@ -107,7 +114,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-emerald-400 transition-colors"
+                    className="text-sm hover:text-amber-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -124,7 +131,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-emerald-400 transition-colors"
+                    className="text-sm hover:text-amber-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -143,7 +150,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-emerald-400 transition-colors"
+                    className="text-sm hover:text-amber-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -155,22 +162,22 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-stone-500">
               © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 Terms of Service
               </Link>

@@ -76,13 +76,13 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Vanilla Industry Insights
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               Expert guides on sourcing, quality, export documentation, and
               market trends. Stay informed about the global vanilla trade.
             </p>
@@ -101,14 +101,14 @@ export default function BlogPage() {
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">
                       {post.category}
                     </span>
                     <span className="text-xs text-gray-500">
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-700 transition-colors">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h2>
                   <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
@@ -123,7 +123,7 @@ export default function BlogPage() {
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-emerald-600 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                      className="text-amber-700 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-emerald-50">
+      <section className="py-16 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Stay Updated on Vanilla Market
@@ -150,11 +150,11 @@ export default function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+              className="px-6 py-3 bg-amber-700 text-white font-medium rounded-lg hover:bg-amber-700 transition-colors"
             >
               Subscribe
             </button>

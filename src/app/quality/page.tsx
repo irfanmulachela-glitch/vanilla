@@ -20,13 +20,13 @@ export default function QualityPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-emerald-900 to-emerald-800 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-stone-900 to-stone-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Quality & Certifications
             </h1>
-            <p className="text-lg text-emerald-100">
+            <p className="text-lg text-amber-100">
               Our commitment to quality is backed by international certifications
               and rigorous testing protocols. Every product meets the highest
               global standards.
@@ -84,8 +84,8 @@ export default function QualityPage() {
                 key={cert.title}
                 className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
               >
-                <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                  <cert.icon className="w-7 h-7 text-emerald-600" />
+                <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                  <cert.icon className="w-7 h-7 text-amber-700" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {cert.title}
@@ -94,7 +94,7 @@ export default function QualityPage() {
                 <ul className="space-y-2">
                   {cert.details.map((detail) => (
                     <li key={detail} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      <CheckCircle2 className="w-4 h-4 text-amber-700" />
                       <span className="text-sm text-gray-700">{detail}</span>
                     </li>
                   ))}
@@ -144,10 +144,10 @@ export default function QualityPage() {
             ].map((item) => (
               <div key={item.step} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl font-bold text-emerald-600">
+                  <span className="text-2xl font-bold text-amber-700">
                     {item.step}
                   </span>
-                  <item.icon className="w-6 h-6 text-emerald-600" />
+                  <item.icon className="w-6 h-6 text-amber-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-600">{item.description}</p>
@@ -194,7 +194,7 @@ export default function QualityPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-amber-700 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="font-medium text-gray-900">{item.title}</p>
                       <p className="text-sm text-gray-600">
@@ -221,13 +221,13 @@ export default function QualityPage() {
       </section>
 
       {/* Documentation */}
-      <section className="py-16 bg-emerald-900 text-white">
+      <section className="py-16 bg-stone-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Complete Documentation With Every Shipment
             </h2>
-            <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
+            <p className="text-amber-100 text-lg max-w-2xl mx-auto">
               We provide all necessary export documentation to ensure smooth
               customs clearance in your country.
             </p>
@@ -245,9 +245,9 @@ export default function QualityPage() {
             ].map((doc) => (
               <div
                 key={doc}
-                className="bg-emerald-800/50 rounded-xl p-4 text-center border border-emerald-700/50"
+                className="bg-stone-800/50 rounded-xl p-4 text-center border border-amber-700/50"
               >
-                <FileCheck className="w-6 h-6 mx-auto mb-2 text-emerald-300" />
+                <FileCheck className="w-6 h-6 mx-auto mb-2 text-amber-300" />
                 <p className="text-sm font-medium">{doc}</p>
               </div>
             ))}
