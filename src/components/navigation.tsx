@@ -22,7 +22,7 @@ export function Navigation() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-[#D8C393] text-stone-900 text-sm">
+      <div className="bg-[#2C2518] text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-4">
@@ -30,20 +30,20 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-amber-300 transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#D8C393] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.whatsapp}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.social.email}`}
-                className="flex items-center gap-1.5 hover:text-amber-300 transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#D8C393] transition-colors"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>{siteConfig.social.email}</span>
               </a>
             </div>
-            <div className="hidden sm:flex items-center gap-4 text-stone-600">
+            <div className="hidden sm:flex items-center gap-4 text-stone-400">
               <span>HACCP Certified</span>
               <span>|</span>
               <span>Export to {siteConfig.stats.countriesServed} Countries</span>
