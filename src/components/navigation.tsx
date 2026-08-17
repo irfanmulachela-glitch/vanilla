@@ -66,7 +66,7 @@ export function Navigation() {
                   className="object-contain"
                 />
               </div>
-              <div className="hidden sm:block w-20 lg:w-24 relative h-5 lg:h-6">
+              <div className="hidden sm:block w-24 lg:w-28 relative h-6 lg:h-7">
                 <Image
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
