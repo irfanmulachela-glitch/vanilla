@@ -62,20 +62,22 @@ export function Footer() {
           {/* Company info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 relative rounded-lg overflow-hidden bg-[#3D3425] flex items-center justify-center">
+              <div className="w-10 h-10 relative">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
                   width={40}
                   height={40}
-                  className="object-contain p-1"
+                  className="object-contain"
                 />
               </div>
-              <div>
-                <p className="font-bold text-white text-sm leading-tight">
-                  La Vanilla
-                </p>
-                <p className="text-stone-600 text-xs">Supplier</p>
+              <div className="w-24 relative h-8">
+                <Image
+                  src="/logo-text.png"
+                  alt="La Vanilla Supplier"
+                  fill
+                  className="object-contain object-left"
+                />
               </div>
             </Link>
             <p className="text-sm text-stone-600 mb-4">

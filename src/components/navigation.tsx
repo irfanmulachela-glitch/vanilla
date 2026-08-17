@@ -66,11 +66,13 @@ export function Navigation() {
                   className="object-contain"
                 />
               </div>
-              <div className="hidden sm:block">
-                <p className="font-bold text-stone-900 text-sm lg:text-base leading-tight">
-                  La Vanilla
-                </p>
-                <p className="text-stone-500 text-xs lg:text-sm">Supplier</p>
+              <div className="hidden sm:block w-24 lg:w-32 relative h-8 lg:h-10">
+                <Image
+                  src="/logo-text.png"
+                  alt="La Vanilla Supplier"
+                  fill
+                  className="object-contain object-left"
+                />
               </div>
             </Link>
 
