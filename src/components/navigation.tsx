@@ -58,12 +58,12 @@ export function Navigation() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 relative rounded-lg overflow-hidden bg-[#E8DCC0] flex items-center justify-center">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 relative">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain p-1"
+                  className="object-contain"
                 />
               </div>
               <div className="hidden sm:block">
