@@ -35,14 +35,14 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#D8C393] via-[#C4B07A] to-[#CAB785] text-stone-900 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#8B7D2E] via-[#9A8A35] to-[#7A6D28] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#C4B07A]/50 rounded-full border border-[#C4B07A]/50 mb-6">
                 <CheckCircle2 className="w-4 h-4 text-[#C4B07A]" />
-                <span className="text-sm font-medium text-stone-700">
+                <span className="text-sm font-medium text-white">
                   HACCP Certified • 10+ Years Export Experience
                 </span>
               </div>
@@ -51,7 +51,7 @@ export default function HomePage() {
                 <span className="text-[#C4B07A]">Vanilla</span>{" "}
                 for Global Markets
               </h1>
-              <p className="text-lg lg:text-xl text-stone-700 mb-8 max-w-lg">
+              <p className="text-lg lg:text-xl text-white/90 mb-8 max-w-lg">
                 Direct from Indonesian farms to your production line. Vanilla
                 beans, custom paste, and pure powder — HACCP certified, shipped
                 to {siteConfig.stats.countriesServed} countries with full
@@ -67,7 +67,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#C4B07A]/50 text-stone-900 font-semibold rounded-lg border border-[#C4B07A] hover:bg-[#C4B07A] transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#C4B07A]/30 text-white font-semibold rounded-lg border border-[#C4B07A]/70 hover:bg-[#C4B07A]/50 transition-colors"
                 >
                   View Products
                 </Link>
