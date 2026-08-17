@@ -68,7 +68,7 @@ export function Footer() {
                   alt="La Vanilla Supplier"
                   width={40}
                   height={40}
-                  className="object-contain"
+                  className="object-contain brightness-0 invert opacity-90"
                 />
               </div>
               <div className="w-24 relative h-8">
@@ -76,7 +76,7 @@ export function Footer() {
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left brightness-0 invert opacity-90"
                 />
               </div>
             </Link>
