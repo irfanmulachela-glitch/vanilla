@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "La Vanilla Supplier",
   description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. HACCP certified. 10+ years experience shipping to 20+ countries.",
-  url: "https://pentapelitasemesta.id",
+  url: "https://lavanillasupplier.com",
   ogImage: "/og-image.jpg",
   keywords: [
     "vanilla supplier Indonesia",

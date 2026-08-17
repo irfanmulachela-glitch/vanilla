@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://pentapelitasemesta.id/sitemap.xml",
+    sitemap: "https://lavanillasupplier.com/sitemap.xml",
   };
 }
