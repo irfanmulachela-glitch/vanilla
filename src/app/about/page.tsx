@@ -168,22 +168,10 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {[
                   {
-                    title: "Coconut Groves",
-                    location: "Central Java",
-                    description:
-                      "Sustainably tended by local farmers across Central Java.",
-                  },
-                  {
                     title: "Vanilla Farms",
-                    location: "West Java & Flores",
+                    location: "Central Java, Indonesia",
                     description:
-                      "Hand-picked vanilla beans, cultivated in partnership with smallholder growers.",
-                  },
-                  {
-                    title: "Patchouli Fields",
-                    location: "Sumatra",
-                    description:
-                      "Patchouli leaves harvested and prepared for steam distillation.",
+                      "Hand-picked vanilla beans, cultivated in partnership with smallholder growers across Java.",
                   },
                 ].map((item) => (
                   <div
