@@ -9,8 +9,8 @@ import { siteConfig } from "@/lib/config";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
+  { name: "Wholesale", href: "/wholesale" },
   { name: "About", href: "/about" },
-  { name: "Quality", href: "/quality" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Calendar, User } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -63,12 +63,42 @@ const blogPosts = [
   {
     id: "6",
     title: "Food Safety Standards: Why They Matter for Vanilla Buyers",
-    slug: "haccp-certification-vanilla",
+    slug: "food-safety-standards-vanilla",
     excerpt:
-      "Understanding International Quality Standards and why they're critical for food safety in vanilla processing and export.",
+      "Understanding food safety standards and why they're critical for food safety in vanilla processing and export.",
     category: "Quality",
     date: "2025-12-15",
     readTime: "5 min read",
+  },
+  {
+    id: "7",
+    title: "Vanilla Bean Prices Indonesia 2026",
+    slug: "vanilla-bean-prices-indonesia",
+    excerpt:
+      "Current wholesale vanilla bean prices from Indonesian suppliers, factors affecting pricing, and how to get the best deals.",
+    category: "Market Analysis",
+    date: "2025-11-15",
+    readTime: "8 min read",
+  },
+  {
+    id: "8",
+    title: "Indonesian Vanilla vs Madagascar Vanilla",
+    slug: "indonesian-vanilla-vs-madagascar",
+    excerpt:
+      "Comparing the two largest vanilla origins: flavor profiles, pricing, quality characteristics, and best applications.",
+    category: "Product Guide",
+    date: "2025-11-01",
+    readTime: "9 min read",
+  },
+  {
+    id: "9",
+    title: "Finding a Halal Vanilla Supplier",
+    slug: "halal-vanilla-supplier",
+    excerpt:
+      "Guide to sourcing halal-certified vanilla products for Middle Eastern and Muslim-majority markets.",
+    category: "Sourcing Guide",
+    date: "2025-10-15",
+    readTime: "7 min read",
   },
 ];
 
@@ -76,13 +106,13 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
+      <section className="bg-[#F8F6F2] py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-6">
               Vanilla Industry Insights
             </h1>
-            <p className="text-lg text-stone-700">
+            <p className="text-lg text-[#6B6358]">
               Expert guides on sourcing, quality, export documentation, and
               market trends. Stay informed about the global vanilla trade.
             </p>
@@ -97,23 +127,25 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="group bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="group bg-[#F8F6F2] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-[#E5E0D8]"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-[#E8DCC0] text-[#8B7D50] text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-white text-[#B5A37A] text-xs font-medium rounded-full border border-[#E5E0D8] flex items-center gap-1">
+                      <Tag className="w-3 h-3" />
                       {post.category}
                     </span>
-                    <span className="text-xs text-gray-500">
+                    <span className="flex items-center gap-1 text-xs text-[#6B6358]">
+                      <Clock className="w-3 h-3" />
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#8B7D50] transition-colors">
+                  <h2 className="text-xl font-bold text-[#2C2518] mb-3 group-hover:text-[#B5A37A] transition-colors">
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h2>
-                  <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
+                  <p className="text-[#6B6358] text-sm mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
+                    <div className="flex items-center gap-2 text-xs text-[#6B6358]">
                       <Calendar className="w-3.5 h-3.5" />
                       {new Date(post.date).toLocaleDateString("en-US", {
                         year: "numeric",
@@ -123,7 +155,7 @@ export default function BlogPage() {
                     </div>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-[#8B7D50] text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
+                      className="text-[#B5A37A] text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
@@ -137,12 +169,12 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-[#F5F0E6]">
+      <section className="py-16 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Stay Updated on Vanilla Market
           </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#B5A37A] mb-8 max-w-2xl mx-auto">
             Get the latest insights on vanilla pricing, quality trends, and
             export opportunities delivered to your inbox.
           </p>
@@ -150,11 +182,11 @@ export default function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-[#A08C5A] text-white font-medium rounded-lg hover:bg-[#8B7D50] transition-colors"
+              className="px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors"
             >
               Subscribe
             </button>

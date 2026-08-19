@@ -8,6 +8,7 @@ const footerLinks = {
     { name: "Vanilla Beans", href: "/products/vanilla-beans" },
     { name: "Vanilla Paste", href: "/products/vanilla-paste" },
     { name: "Vanilla Powder", href: "/products/vanilla-powder" },
+    { name: "Wholesale", href: "/wholesale" },
   ],
   company: [
     { name: "About Us", href: "/about" },
@@ -16,9 +17,9 @@ const footerLinks = {
     { name: "FAQ", href: "/faq" },
   ],
   regions: [
-    { name: "UAE", href: "/regions/uae" },
-    { name: "Australia", href: "/regions/australia" },
-    { name: "USA", href: "/regions/usa" },
+    { name: "Dubai, UAE", href: "/suppliers/dubai" },
+    { name: "Sydney, Australia", href: "/suppliers/sydney" },
+    { name: "New York, USA", href: "/suppliers/new-york" },
     { name: "Europe", href: "/regions/europe" },
   ],
 };

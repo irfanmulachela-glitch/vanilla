@@ -414,6 +414,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Internal Links for SEO */}
+      <section className="py-16 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#2C2518] mb-8 text-center">
+            Explore Our Vanilla Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              href="/wholesale"
+              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
+            >
+              <Package className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
+              <h3 className="font-semibold text-[#2C2518]">Wholesale</h3>
+              <p className="text-sm text-[#6B6358]">Bulk orders from 25kg</p>
+            </Link>
+            <Link
+              href="/suppliers/dubai"
+              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
+            >
+              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
+              <h3 className="font-semibold text-[#2C2518]">Dubai & UAE</h3>
+              <p className="text-sm text-[#6B6358]">Halal certified supply</p>
+            </Link>
+            <Link
+              href="/suppliers/sydney"
+              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
+            >
+              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
+              <h3 className="font-semibold text-[#2C2518]">Sydney, Australia</h3>
+              <p className="text-sm text-[#6B6358]">Food safety compliant</p>
+            </Link>
+            <Link
+              href="/suppliers/new-york"
+              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
+            >
+              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
+              <h3 className="font-semibold text-[#2C2518]">New York, USA</h3>
+              <p className="text-sm text-[#6B6358]">FDA compliant supply</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -450,7 +493,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "LocalBusiness",
             name: siteConfig.name,
             url: siteConfig.url,
             logo: `${siteConfig.url}/logo.png`,
@@ -467,12 +510,23 @@ export default function HomePage() {
               contactType: "sales",
               availableLanguage: ["English", "Indonesian"],
             },
-            sameAs: [],
+            areaServed: [
+              "UAE",
+              "Australia",
+              "USA",
+              "Europe",
+              "Singapore",
+              "Malaysia",
+              "Japan",
+              "South Korea",
+            ],
             hasCredential: [
               "Quality Assured",
               "Halal Certified",
               "Phytosanitary Certified",
             ],
+            priceRange: "$$",
+            openingHours: "Mo-Fr 08:00-17:00",
           }),
         }}
       />
