@@ -120,7 +120,7 @@ const faqs = [
     questions: [
       {
         q: "How much do wholesale vanilla beans cost?",
-        a: "Grade A Indonesian vanilla beans typically range from $300-500/kg FOB. Grade B beans range from $150-300/kg. Prices depend on vanillin content, volume, and contract terms.",
+        a: "Pricing depends on grade, volume, and contract terms. Contact us with your requirements for a competitive quote within 24 hours.",
       },
       {
         q: "Can you supply 100kg or more per month?",

@@ -115,8 +115,8 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "Price Range (FOB)",
-                    gradeA: "$300–500/kg",
-                    gradeB: "$150–300/kg",
+                    gradeA: "Premium pricing",
+                    gradeB: "More economical",
                   },
                 ].map((row) => (
                   <tr key={row.spec} className="hover:bg-[#F8F6F2]">
@@ -221,8 +221,8 @@ export default function ComparisonPage() {
                   },
                   {
                     factor: "Price (FOB)",
-                    indonesia: "$300–500/kg",
-                    madagascar: "$500–800/kg",
+                    indonesia: "More competitive",
+                    madagascar: "Premium pricing",
                   },
                   {
                     factor: "Supply Stability",
