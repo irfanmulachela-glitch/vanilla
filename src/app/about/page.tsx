@@ -175,9 +175,9 @@ export default function AboutPage() {
                   },
                   {
                     title: "Our Processing",
-                    location: "Surakarta, Central Java",
+                    location: "Indonesia",
                     description:
-                      "From farm to finished product — our processing facility in Surakarta handles curing, grading, and packaging under strict quality controls.",
+                      "From farm to finished product — our processing facility handles curing, grading, and packaging under strict quality controls.",
                   },
                 ].map((item) => (
                   <div
