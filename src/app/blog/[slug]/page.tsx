@@ -21,7 +21,7 @@ const blogPosts = {
       <h2>Understanding Vanilla Bean Grades</h2>
       <p>Indonesian vanilla beans come in two primary grades:</p>
       <ul>
-        <li><strong>Grade A (Gourmet):</strong> 16-20 cm length, 25-35% moisture, 1.3-2.7% vanillin. Perfect for retail, pastry, and culinary applications.</li>
+        <li><strong>Grade A (Gourmet):</strong> 15-20 cm length, 25-35% moisture, 1.3-2.7% vanillin. Perfect for retail, pastry, and culinary applications.</li>
         <li><strong>Grade B (Extract):</strong> 10-16 cm length, less than 25% moisture, 1.3-2.2% vanillin. Ideal for extract manufacturing and industrial use.</li>
       </ul>
 
@@ -54,7 +54,7 @@ const blogPosts = {
       <h2>Grade A: Gourmet Vanilla Beans</h2>
       <p>Grade A beans are premium quality, designed for direct culinary use. Key characteristics include:</p>
       <ul>
-        <li><strong>Length:</strong> 16-20 cm</li>
+        <li><strong>Length:</strong> 15-20 cm</li>
         <li><strong>Moisture Content:</strong> 25-35%</li>
         <li><strong>Vanillin Content:</strong> 1.3-2.7%</li>
         <li><strong>Appearance:</strong> Plump, oily, with visible vanillin crystals</li>
