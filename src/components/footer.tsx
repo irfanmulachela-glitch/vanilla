@@ -82,7 +82,7 @@ export function Footer() {
             </Link>
             <p className="text-sm text-stone-400 mb-4">
               Premium Indonesian vanilla supplier for wholesale, B2B, and direct
-              export. HACCP certified with {siteConfig.stats.yearsExperience} years of experience.
+              export. Food Safety Standards with {siteConfig.stats.yearsExperience} years of experience.
             </p>
             <div className="space-y-2">
               <a

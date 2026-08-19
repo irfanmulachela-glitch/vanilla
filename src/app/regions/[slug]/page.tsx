@@ -57,7 +57,7 @@ const regions: Record<string, RegionConfig> = {
     name: "Australia",
     slug: "australia",
     description:
-      "HACCP certified Indonesian vanilla supplier for Sydney, Melbourne, Perth, and across Australia. Compliant with Australian food standards.",
+      "Quality Assured Indonesian vanilla supplier for Sydney, Melbourne, Perth, and across Australia. Compliant with Australian food standards.",
     keywords: [
       "vanilla supplier Australia",
       "vanilla beans Sydney",
@@ -66,14 +66,14 @@ const regions: Record<string, RegionConfig> = {
     ],
     flag: "🇦🇺",
     highlights: [
-      "HACCP certified processing",
+      "Quality-controlled processing",
       "Compliant with FSANZ standards",
       "Fast delivery to major cities",
       "Full phytosanitary documentation",
     ],
     cities: ["Sydney", "Melbourne", "Perth", "Brisbane", "Adelaide"],
     compliance: [
-      "HACCP Certified",
+      "Quality Assured",
       "FSANZ Compliant",
       "Australian Biosecurity standards",
       "English documentation",
@@ -109,7 +109,7 @@ const regions: Record<string, RegionConfig> = {
     ],
     compliance: [
       "FDA Compliant",
-      "HACCP Certified",
+      "Quality Assured",
       "USDA standards",
       "Full English documentation",
     ],
@@ -131,7 +131,7 @@ const regions: Record<string, RegionConfig> = {
     highlights: [
       "EU food safety standards",
       "Full traceability from farm to shipment",
-      "HACCP and Halal certified",
+      "Quality Assured and Halal certified",
       "Competitive pricing for EU buyers",
     ],
     cities: [
@@ -144,7 +144,7 @@ const regions: Record<string, RegionConfig> = {
     ],
     compliance: [
       "EU Food Safety Compliant",
-      "HACCP Certified",
+      "Quality Assured",
       "REACH compliant",
       "Full EU documentation",
     ],

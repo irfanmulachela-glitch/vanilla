@@ -174,7 +174,7 @@ export default async function ProductPage({ params }: PageProps) {
                     {
                       icon: Shield,
                       title: "Quality Guaranteed",
-                      description: "HACCP certified processing",
+                      description: "Food Safety Compliant processing",
                     },
                     {
                       icon: Truck,

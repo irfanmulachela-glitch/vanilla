@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About Us - Our Story & Mission",
   description:
-    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier with 10+ years of experience in premium vanilla export. HACCP certified.",
+    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier with 10+ years of experience in premium vanilla export. Food Safety Standards.",
 };
 
 export default function AboutPage() {

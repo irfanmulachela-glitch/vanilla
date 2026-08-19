@@ -11,9 +11,9 @@ import {
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Quality & Certifications - HACCP, Halal, Phytosanitary",
+  title: "Quality & Certifications - Food Safety Standards, Halal, Phytosanitary",
   description:
-    "Our commitment to quality: HACCP certified processing, Halal certified, Phytosanitary compliance. Full documentation for every shipment.",
+    "Our commitment to quality: Food Safety Standards processing, Halal certified, Phytosanitary compliance. Full documentation for every shipment.",
 };
 
 export default function QualityPage() {
@@ -45,9 +45,9 @@ export default function QualityPage() {
             {[
               {
                 icon: Shield,
-                title: "HACCP Certified",
+                title: "Quality Assured",
                 description:
-                  "Our processing facilities comply with Hazard Analysis Critical Control Points (HACCP) standards, ensuring food safety at every stage of production.",
+                  "Our processing facilities comply with International Quality Standards, ensuring food safety at every stage of production.",
                 details: [
                   "Regular third-party audits",
                   "Documented control points",
@@ -131,7 +131,7 @@ export default function QualityPage() {
                 step: "03",
                 title: "Processing",
                 description:
-                  "HACCP-certified facilities with documented control points at every stage of processing.",
+                  "Quality-controlled facilities with documented control points at every stage of processing.",
                 icon: Shield,
               },
               {
@@ -237,7 +237,7 @@ export default function QualityPage() {
               "Certificate of Analysis (CoA)",
               "Phytosanitary Certificate",
               "Certificate of Origin (COO)",
-              "HACCP Statement Letter",
+              "Quality Statement Letter",
               "Halal Certificate",
               "Packing List",
               "Commercial Invoice",
@@ -263,7 +263,7 @@ export default function QualityPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Quality & Certifications",
-            description: "HACCP certified vanilla processing facility",
+            description: "Quality-assured vanilla processing facility",
             url: `${siteConfig.url}/quality`,
           }),
         }}

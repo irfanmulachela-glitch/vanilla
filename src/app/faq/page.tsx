@@ -65,7 +65,7 @@ const faqs = [
       },
       {
         q: "What documents are included with shipments?",
-        a: "Every shipment includes: Certificate of Analysis (CoA), Phytosanitary Certificate, Certificate of Origin (COO), HACCP Statement Letter, Halal Certificate, Packing List, and Commercial Invoice.",
+        a: "Every shipment includes: Certificate of Analysis (CoA), Phytosanitary Certificate, Certificate of Origin (COO), Quality Statement Letter, Halal Certificate, Packing List, and Commercial Invoice.",
       },
       {
         q: "Do you ship to my country?",
@@ -99,7 +99,7 @@ const faqs = [
     questions: [
       {
         q: "What certifications do you have?",
-        a: "Our facilities are HACCP certified. All products are Halal certified. We provide phytosanitary certificates for all exports. Additional certifications (organic, FDA registration) are available upon request.",
+        a: "Our facilities follow Food Safety Standards. All products are Halal certified. We provide phytosanitary certificates for all exports. Additional certifications (organic, FDA registration) are available upon request.",
       },
       {
         q: "Are your products organic?",

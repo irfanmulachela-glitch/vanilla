@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "La Vanilla Supplier",
-  description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. HACCP certified. 10+ years experience shipping to 20+ countries.",
+  description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. Food Safety Standards. 10+ years experience shipping to 20+ countries.",
   url: "https://lavanillasupplier.com",
   ogImage: "/og-image.jpg",
   keywords: [
@@ -9,7 +9,7 @@ export const siteConfig = {
     "vanilla paste manufacturer",
     "vanilla powder supplier",
     "B2B vanilla exporter",
-    "HACCP certified vanilla",
+    "Quality Assured vanilla",
     "premium vanilla beans",
     "vanilla extract supplier",
     "organic vanilla Indonesia",
@@ -39,7 +39,7 @@ export const siteConfig = {
         hsCode: "0905.10",
         incoterms: "EXW / FOB Jakarta / CIF / DDP",
       },
-      certifications: ["HACCP", "Halal", "Phytosanitary"],
+      certifications: ["Quality Assured", "Halal", "Phytosanitary"],
     },
     {
       id: "vanilla-paste",
@@ -59,7 +59,7 @@ export const siteConfig = {
         hsCode: "2106.90",
         incoterms: "EXW / FOB Jakarta / CIF / DDP",
       },
-      certifications: ["HACCP", "Halal", "FDA Compliant"],
+      certifications: ["Quality Assured", "Halal", "FDA Compliant"],
     },
     {
       id: "vanilla-powder",
@@ -79,7 +79,7 @@ export const siteConfig = {
         hsCode: "0905.20",
         incoterms: "EXW / FOB Jakarta / CIF / DDP",
       },
-      certifications: ["HACCP", "Halal", "Organic"],
+      certifications: ["Quality Assured", "Halal", "Organic"],
     },
   ],
   stats: {

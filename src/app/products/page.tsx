@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Our Products - Vanilla Beans, Paste & Powder",
   description:
-    "Explore our range of premium Indonesian vanilla products. Grade A & B beans, custom vanilla paste, and pure vanilla powder. HACCP certified. MOQ 1kg.",
+    "Explore our range of premium Indonesian vanilla products. Grade A & B beans, custom vanilla paste, and pure vanilla powder. Food Safety Standards. MOQ 1kg.",
   keywords: [
     "vanilla beans Indonesia",
     "vanilla paste manufacturer",

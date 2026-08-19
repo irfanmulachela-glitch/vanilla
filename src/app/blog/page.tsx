@@ -62,10 +62,10 @@ const blogPosts = [
   },
   {
     id: "6",
-    title: "HACCP Certification: Why It Matters for Vanilla Buyers",
+    title: "Food Safety Standards: Why They Matter for Vanilla Buyers",
     slug: "haccp-certification-vanilla",
     excerpt:
-      "Understanding HACCP standards and why they're critical for food safety in vanilla processing and export.",
+      "Understanding International Quality Standards and why they're critical for food safety in vanilla processing and export.",
     category: "Quality",
     date: "2025-12-15",
     readTime: "5 min read",

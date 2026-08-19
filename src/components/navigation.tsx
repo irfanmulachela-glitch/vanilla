@@ -44,7 +44,7 @@ export function Navigation() {
               </a>
             </div>
             <div className="hidden sm:flex items-center gap-4 text-stone-400">
-              <span>HACCP Certified</span>
+              <span>Quality Assured</span>
               <span>|</span>
               <span>Export to {siteConfig.stats.countriesServed} Countries</span>
             </div>

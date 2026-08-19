@@ -20,14 +20,14 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
   description:
-    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. HACCP certified. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 1kg.",
+    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. Food Safety Standards. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 1kg.",
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
     "vanilla paste manufacturer",
     "vanilla powder supplier",
     "B2B vanilla exporter",
-    "HACCP certified vanilla",
+    "Quality Assured vanilla",
   ],
 };
 
@@ -42,7 +42,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/10 rounded-full mb-6">
                 <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
                 <span className="text-sm font-medium text-[#2C2518]">
-                  HACCP Certified • 10+ Years Export Experience
+                  Quality Assured • 10+ Years Export Experience
                 </span>
               </div>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-6 leading-tight">
@@ -52,7 +52,7 @@ export default function HomePage() {
               </h1>
               <p className="text-lg text-[#6B6358] mb-8 max-w-lg leading-relaxed">
                 Direct from Indonesian farms to your production line. Vanilla
-                beans, custom paste, and pure powder — HACCP certified, shipped
+                beans, custom paste, and pure powder — Food Safety Compliant, shipped
                 to {siteConfig.stats.countriesServed} countries with full
                 documentation.
               </p>
@@ -107,7 +107,7 @@ export default function HomePage() {
             {[
               {
                 icon: ShieldCheck,
-                label: "HACCP Certified",
+                label: "Quality Assured",
                 value: "Food Safety",
               },
               {
@@ -230,7 +230,7 @@ export default function HomePage() {
                     icon: FileCheck,
                     title: "Complete Documentation",
                     description:
-                      "Every shipment includes phytosanitary certificates, certificate of origin, and full HACCP compliance documentation.",
+                      "Every shipment includes phytosanitary certificates, certificate of origin, and full food safety compliance documentation.",
                   },
                   {
                     icon: Truck,
@@ -355,7 +355,7 @@ export default function HomePage() {
                 region: "Australia",
                 href: "/regions/australia",
                 description:
-                  "Sydney, Melbourne, Perth. HACCP compliant. 5-7 day delivery.",
+                  "Sydney, Melbourne, Perth. Food Safety Compliant. 5-7 day delivery.",
               },
               {
                 region: "USA",
@@ -469,7 +469,7 @@ export default function HomePage() {
             },
             sameAs: [],
             hasCredential: [
-              "HACCP Certified",
+              "Quality Assured",
               "Halal Certified",
               "Phytosanitary Certified",
             ],
