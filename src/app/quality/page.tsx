@@ -175,7 +175,7 @@ export default function QualityPage() {
                   {
                     title: "Vanillin Content Analysis",
                     description:
-                      "Gas chromatography testing to verify vanillin concentration meets specifications (1.8-2.7%).",
+                      "Gas chromatography testing to verify vanillin concentration meets specifications (1.3-2.7%).",
                   },
                   {
                     title: "Moisture Content Testing",

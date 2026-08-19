@@ -36,7 +36,7 @@ const faqs = [
     questions: [
       {
         q: "What is the difference between Grade A and Grade B vanilla beans?",
-        a: "Grade A beans are 16-20 cm long with 25-35% moisture content and 1.8-2.7% vanillin — ideal for gourmet culinary use. Grade B beans are 10-16 cm with less than 25% moisture — perfect for extract production. Both grades undergo the same 6-9 month curing process.",
+        a: "Grade A beans are 16-20 cm long with 25-35% moisture content and 1.3-2.7% vanillin — ideal for gourmet culinary use. Grade B beans are 10-16 cm with less than 25% moisture — perfect for extract production. Both grades undergo the same 6-9 month curing process.",
       },
       {
         q: "What vanilla species do you supply?",

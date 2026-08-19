@@ -149,7 +149,7 @@ INSERT INTO products (name, slug, category, short_description, description, spec
   'beans',
   'Premium Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months.',
   'Our vanilla beans are sourced directly from Indonesian smallholder farmers and carefully cured using traditional methods. Each bean is hand-picked at peak maturity and sun-dried for 6-9 months to develop optimal vanillin content (1.8-2.7%). Available in Grade A Gourmet and Grade B Extraction grades.',
-  '{"species": "V. planifolia / V. tahitensis", "moistureContent": "25-35%", "vanillinContent": "1.8-2.7%", "beanLength": "16-20 cm (Grade A) / 10-16 cm (Grade B)", "curing": "6-9 months, sun-dried + sweat-box", "hsCode": "0905.10", "incoterms": "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP"}',
+  '{"species": "V. planifolia / V. tahitensis", "moistureContent": "25-35%", "vanillinContent": "1.3-2.7%", "beanLength": "16-20 cm (Grade A) / 10-16 cm (Grade B)", "curing": "6-9 months, sun-dried + sweat-box", "hsCode": "0905.10", "incoterms": "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP"}',
   ARRAY['Quality Assured', 'Halal', 'Phytosanitary'],
   '1 kg',
   '3-7 days (air freight) from Semarang, Jakarta, or Surabaya'
