@@ -204,7 +204,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: siteConfig.stats.countriesServed, label: "Countries Served" },
-              { value: siteConfig.stats.yearsExperience, label: "Years Experience" },
+              { value: siteConfig.stats.yearsExperience, label: "Years in Business" },
               { value: siteConfig.stats.happyClients, label: "Happy Clients" },
               { value: siteConfig.stats.tonsExported, label: "Tons Exported" },
             ].map((stat) => (
@@ -213,6 +213,53 @@ export default function AboutPage() {
                 <p className="text-[#8B7D50]">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Visit */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#F8F6F2] rounded-2xl p-8 lg:p-12 border border-[#E5E0D8]">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#2C2518] mb-4">
+                  Visit Our Facility
+                </h2>
+                <p className="text-[#6B6358] mb-6">
+                  We welcome buyers to visit our processing facility and see how
+                  we maintain the highest quality standards. Schedule a visit to
+                  witness our curing, grading, and packaging operations
+                  firsthand.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "See our vanilla curing process in action",
+                    "Inspect quality control procedures",
+                    "Meet our team and discuss your requirements",
+                    "Verify our inventory and packaging",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
+                      <span className="text-[#6B6358]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="text-center lg:text-right">
+                <a
+                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+                >
+                  Schedule a Visit
+                </a>
+                <p className="text-sm text-[#6B6358] mt-4">
+                  Contact us to arrange your facility tour
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

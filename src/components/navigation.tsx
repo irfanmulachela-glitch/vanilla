@@ -10,7 +10,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
   { name: "Wholesale", href: "/wholesale" },
-  { name: "About", href: "/about" },
+  { name: "Comparison", href: "/comparison" },
   { name: "Blog", href: "/blog" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },

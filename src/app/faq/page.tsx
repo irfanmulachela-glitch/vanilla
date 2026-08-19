@@ -50,6 +50,10 @@ const faqs = [
         q: "How do you ensure consistent quality across orders?",
         a: "Every batch undergoes gas chromatography testing for vanillin content, moisture analysis, and sensory evaluation. We maintain detailed batch records and can provide Certificate of Analysis with every shipment.",
       },
+      {
+        q: "What is the vanillin content of your vanilla beans?",
+        a: "Our Grade A vanilla beans have vanillin content ranging from 1.3% to 2.7%. Grade B beans range from 1.3% to 2.2%. We can provide lab test results for every batch.",
+      },
     ],
   },
   {
@@ -108,6 +112,23 @@ const faqs = [
       {
         q: "Are your products US Import Ready?",
         a: "Yes, our products meet US import requirements. We can provide additional documentation as needed for US import compliance.",
+      },
+    ],
+  },
+  {
+    category: "Bulk & Wholesale Orders",
+    questions: [
+      {
+        q: "How much do wholesale vanilla beans cost?",
+        a: "Grade A Indonesian vanilla beans typically range from $300-500/kg FOB. Grade B beans range from $150-300/kg. Prices depend on vanillin content, volume, and contract terms.",
+      },
+      {
+        q: "Can you supply 100kg or more per month?",
+        yes: "Yes, we can supply consistent monthly volumes of 100kg or more. We maintain inventory to ensure year-round availability. Contact us to discuss your volume requirements.",
+      },
+      {
+        q: "Do you offer long-term supply contracts?",
+        a: "Yes, we offer quarterly and annual supply contracts with fixed pricing and priority allocation. Long-term partners receive preferential pricing and guaranteed supply.",
       },
     ],
   },
