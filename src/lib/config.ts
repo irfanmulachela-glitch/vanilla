@@ -17,7 +17,7 @@ export const siteConfig = {
   ],
   social: {
     whatsapp: "+6287834756945",
-    email: "Admin@lavanillasupplier.com",
+    email: "admin@lavanillasupplier.com",
   },
   regions: ["UAE", "Australia", "USA", "Europe"] as const,
   products: [
