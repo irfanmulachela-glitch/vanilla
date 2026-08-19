@@ -23,6 +23,9 @@ export default function AboutPage() {
               Bridging Indonesian vanilla farmers with global markets through
               responsible trade, trusted partnerships, and sustainable products.
             </p>
+            <p className="text-sm text-stone-600 mt-4">
+              Operated by PT Penta Pelita Semesta — Registered Indonesian Company
+            </p>
           </div>
         </div>
       </section>
