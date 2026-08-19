@@ -162,16 +162,22 @@ export default function AboutPage() {
                 Our Sources
               </h2>
               <p className="text-gray-600 mb-6">
-                From plantation to processing, every product begins in the hands
-                of local farmers and communities across Indonesia.
+                Our vanilla is cultivated directly in the rich volcanic soil of
+                Java, where we work hand-in-hand with local farming communities.
               </p>
               <div className="space-y-4">
                 {[
                   {
-                    title: "Vanilla Farms",
+                    title: "Our Farms",
                     location: "Central Java, Indonesia",
                     description:
-                      "Hand-picked vanilla beans, cultivated in partnership with smallholder growers across Java.",
+                      "Nestled in the highlands of Central Java, our vanilla farms benefit from rich volcanic soil and ideal tropical climate. Every bean is hand-picked at peak maturity and sun-cured for 6-9 months.",
+                  },
+                  {
+                    title: "Our Processing",
+                    location: "Surakarta, Central Java",
+                    description:
+                      "From farm to finished product — our processing facility in Surakarta handles curing, grading, and packaging under strict quality controls.",
                   },
                 ].map((item) => (
                   <div
