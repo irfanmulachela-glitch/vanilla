@@ -16,7 +16,7 @@ export const siteConfig = {
     "bulk vanilla supplier",
   ],
   social: {
-    whatsapp: "+6287834756945",
+    whatsapp: "+6287835756945",
     email: "admin@lavanillasupplier.com",
   },
   regions: ["UAE", "Australia", "USA", "Europe"] as const,
