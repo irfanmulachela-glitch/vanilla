@@ -14,7 +14,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Vanilla Supplier New York | Wholesale Vanilla Beans USA",
   description:
-    "Premium Indonesian vanilla supplier in New York, USA. FDA compliant vanilla beans, paste, and powder. Fast delivery to East and West coast.",
+    "Premium Indonesian vanilla supplier in New York, USA. US Import Ready vanilla beans, paste, and powder. Fast delivery to East and West coast.",
   keywords: [
     "vanilla supplier New York",
     "wholesale vanilla beans USA",
@@ -36,7 +36,7 @@ export default function NewYorkPage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/10 rounded-full mb-6">
                 <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
                 <span className="text-sm font-medium text-[#2C2518]">
-                  FDA Compliant • Serving USA
+                  US Import Ready • Serving USA
                 </span>
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-6">
@@ -44,9 +44,9 @@ export default function NewYorkPage() {
                 <span className="text-[#B5A37A]">New York</span>, USA
               </h1>
               <p className="text-lg text-[#6B6358] mb-8">
-                La Vanilla Supplier provides premium Indonesian vanilla to New
-                York, Los Angeles, Chicago, and across the USA. FDA compliant,
-                DHL and FedEx shipping.
+                  La Vanilla Supplier provides premium Indonesian vanilla to New
+                  York, Los Angeles, Chicago, and across the USA. US Import Ready,
+                  DHL and FedEx shipping.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -68,7 +68,7 @@ export default function NewYorkPage() {
               {[
                 {
                   icon: ShieldCheck,
-                  title: "FDA Compliant",
+                  title: "US Import Ready",
                   desc: "Meets US food standards",
                 },
                 {
@@ -111,9 +111,9 @@ export default function NewYorkPage() {
             {[
               {
                 icon: ShieldCheck,
-                title: "FDA Compliance",
+                title: "US Import Ready",
                 description:
-                  "Our products meet FDA requirements. We provide all required documentation for US import.",
+                  "Our products meet US import requirements. We provide all required documentation for US import.",
               },
               {
                 icon: Truck,
@@ -177,7 +177,7 @@ export default function NewYorkPage() {
             Ready to Import Vanilla to the USA?
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
-            Get a free sample and quote within 24 hours. FDA compliant. Minimum
+            Get a free sample and quote within 24 hours. US Import Ready. Minimum
             order 25 kg.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

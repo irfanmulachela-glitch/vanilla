@@ -85,7 +85,7 @@ const regions: Record<string, RegionConfig> = {
     name: "USA",
     slug: "usa",
     description:
-      "FDA compliant Indonesian vanilla supplier for New York, Los Angeles, Chicago, and across the United States. Full export documentation.",
+      "US Import Ready Indonesian vanilla supplier for New York, Los Angeles, Chicago, and across the United States. Full export documentation.",
     keywords: [
       "vanilla supplier USA",
       "vanilla beans New York",
@@ -94,7 +94,7 @@ const regions: Record<string, RegionConfig> = {
     ],
     flag: "🇺🇸",
     highlights: [
-      "FDA compliant products",
+      "US Import Ready products",
       "CoA provided with every order",
       "DHL/FedEx express shipping",
       "East and West coast delivery",
@@ -108,7 +108,7 @@ const regions: Record<string, RegionConfig> = {
       "Miami",
     ],
     compliance: [
-      "FDA Compliant",
+      "US Import Ready",
       "Quality Assured",
       "USDA standards",
       "Full English documentation",

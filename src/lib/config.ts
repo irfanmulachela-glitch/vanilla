@@ -12,7 +12,7 @@ export const siteConfig = {
     "Quality Assured vanilla",
     "premium vanilla beans",
     "vanilla extract supplier",
-    "organic vanilla Indonesia",
+    "Sustainably Sourced vanilla Indonesia",
     "bulk vanilla supplier",
   ],
   social: {
@@ -59,7 +59,7 @@ export const siteConfig = {
         hsCode: "2106.90",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Halal", "FDA Compliant"],
+      certifications: ["Quality Assured", "Halal", "US Import Ready"],
     },
     {
       id: "vanilla-powder",
@@ -79,7 +79,7 @@ export const siteConfig = {
         hsCode: "0905.20",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Halal", "Organic"],
+      certifications: ["Quality Assured", "Halal", "Sustainably Sourced"],
     },
   ],
   stats: {

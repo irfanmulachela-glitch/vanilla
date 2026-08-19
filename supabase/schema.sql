@@ -161,7 +161,7 @@ INSERT INTO products (name, slug, category, short_description, description, spec
   'Custom composition vanilla paste tailored to your exact specifications.',
   'Our vanilla paste is manufactured to your exact requirements. We offer custom formulations with adjustable vanillin concentration, sugar content, and viscosity. Perfect for food manufacturers, bakeries, and beverage companies requiring consistent, high-quality vanilla flavoring.',
   '{"vanillinContent": "Custom (1.0-3.0%)", "sugarContent": "Custom (0-65%)", "viscosity": "Adjustable", "shelfLife": "24 months", "packaging": "Bulk drums / Retail bottles", "hsCode": "2106.90", "incoterms": "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP"}',
-  ARRAY['Quality Assured', 'Halal', 'FDA Compliant'],
+  ARRAY['Quality Assured', 'Halal', 'US Import Ready'],
   '100 kg',
   '7-14 days (production + shipping)'
 ),
@@ -172,7 +172,7 @@ INSERT INTO products (name, slug, category, short_description, description, spec
   '100% pure vanilla powder, finely ground from premium cured beans.',
   'Our vanilla powder is made from 100% pure cured vanilla beans, finely ground to a consistent mesh size. No fillers, no additives. Ideal for dry mixes, baking blends, and applications where liquid vanilla is not suitable.',
   '{"meshSize": "40-80 mesh (customizable)", "vanillinContent": "1.5-2.5%", "moisture": "< 5%", "purity": "100% pure vanilla", "packaging": "Bulk bags / Retail containers", "hsCode": "0905.20", "incoterms": "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP"}',
-  ARRAY['Quality Assured', 'Halal', 'Organic'],
+  ARRAY['Quality Assured', 'Halal', 'Sustainably Sourced'],
   '5 kg',
   '3-7 days (air freight) from Semarang, Jakarta, or Surabaya'
 );

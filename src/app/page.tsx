@@ -355,13 +355,13 @@ export default function HomePage() {
                 region: "Australia",
                 href: "/regions/australia",
                 description:
-                  "Sydney, Melbourne, Perth. Food Safety Compliant. 5-7 day delivery.",
+                  "Sydney, Melbourne, Perth. US Import Ready. 5-7 day delivery.",
               },
               {
                 region: "USA",
                 href: "/regions/usa",
                 description:
-                  "FDA compliant. East and West coast. DHL and FedEx shipping.",
+                  "US Import Ready. East and West coast. DHL and FedEx shipping.",
               },
               {
                 region: "Europe",
@@ -451,7 +451,7 @@ export default function HomePage() {
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
               <h3 className="font-semibold text-[#2C2518]">New York, USA</h3>
-              <p className="text-sm text-[#6B6358]">FDA compliant supply</p>
+              <p className="text-sm text-[#6B6358]">US Import Ready supply</p>
             </Link>
           </div>
         </div>

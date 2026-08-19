@@ -99,15 +99,15 @@ const faqs = [
     questions: [
       {
         q: "What certifications do you have?",
-        a: "Our facilities follow Food Safety Standards. All products are Halal certified. We provide phytosanitary certificates for all exports. Additional certifications (organic, FDA registration) are available upon request.",
+        a: "Our facilities follow Food Safety Standards. All products are Halal certified. We provide phytosanitary certificates for all exports. Additional documentation available upon request.",
       },
       {
-        q: "Are your products organic?",
-        a: "Some of our products are available in organic certified variants. Contact us to discuss organic certification requirements for your specific market.",
+        q: "Are your products Sustainably Sourced?",
+        a: "Some of our products are available in Sustainably Sourced certified variants. Contact us to discuss certification requirements for your specific market.",
       },
       {
-        q: "Do you comply with FDA regulations?",
-        a: "Yes, our products meet FDA requirements for import into the United States. We can provide additional documentation as needed for FDA compliance.",
+        q: "Are your products US Import Ready?",
+        a: "Yes, our products meet US import requirements. We can provide additional documentation as needed for US import compliance.",
       },
     ],
   },
