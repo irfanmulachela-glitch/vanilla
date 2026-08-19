@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About Us - Our Story & Mission",
   description:
-    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier with 10+ years of experience in premium vanilla export. Food Safety Standards.",
+    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier based in Central Java. Premium natural vanilla for global markets.",
 };
 
 export default function AboutPage() {
@@ -20,8 +20,9 @@ export default function AboutPage() {
               About La Vanilla Supplier
             </h1>
             <p className="text-lg text-stone-700">
-              Bridging Indonesian vanilla farmers with global markets through
-              responsible trade, trusted partnerships, and sustainable products.
+              Indonesian vanilla supplier based in Central Java, providing
+              premium natural vanilla to global markets with consistent quality
+              and reliable supply.
             </p>
             <p className="text-sm text-stone-600 mt-4">
               Operated by PT Penta Pelita Semesta — Registered Indonesian Company
@@ -41,19 +42,19 @@ export default function AboutPage() {
               <div className="space-y-6">
                 {[
                   {
-                    title: "Growth With Purpose",
+                    title: "Quality First",
                     description:
-                      "We grow beyond profit, creating value for farmers, partners, communities, and long-term sustainability.",
+                      "We focus on delivering consistent, high-quality vanilla that meets international standards.",
                   },
                   {
-                    title: "Partnership Over Transaction",
+                    title: "Long-Term Reliability",
                     description:
-                      "We build business on trust, honesty, and lasting relationships — not just short-term deals.",
+                      "We build lasting partnerships based on trust, transparency, and consistent supply.",
                   },
                   {
-                    title: "Optimism in Every Opportunity",
+                    title: "Indonesian Excellence",
                     description:
-                      "We see challenges as opportunities to improve, innovate, and contribute to a better future for everyone.",
+                      "We are committed to showcasing the best of Indonesian vanilla to the world.",
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
@@ -95,7 +96,7 @@ export default function AboutPage() {
                 icon: Globe,
                 title: "Global Quality Standards",
                 description:
-                  "Deliver high-quality natural products to global markets through reliable supply and consistent standards.",
+                  "Deliver high-quality natural vanilla to global markets through reliable supply and consistent standards.",
               },
               {
                 icon: Users,
@@ -117,15 +118,15 @@ export default function AboutPage() {
               },
               {
                 icon: CheckCircle2,
-                title: "Sustainable Sourcing",
+                title: "Sustainable Practices",
                 description:
-                  "Support local producers and communities through responsible and sustainable sourcing practices.",
+                  "Maintain sustainable practices throughout our operations to support environmental responsibility.",
               },
               {
                 icon: Globe,
-                title: "Market Connectivity",
+                title: "Indonesian Heritage",
                 description:
-                  "Connect local Indonesian potential with global market needs through quality and commitment.",
+                  "Represent the rich tradition of Indonesian vanilla cultivation with pride and excellence.",
               },
             ].map((item) => (
               <div
@@ -162,25 +163,25 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Sources
+                Our Vanilla
               </h2>
               <p className="text-gray-600 mb-6">
-                Our vanilla is cultivated directly in the rich volcanic soil of
-                Java, where we work hand-in-hand with local farming communities.
+                Our vanilla is cultivated in the rich volcanic soil of Java,
+                where the tropical climate produces beans of exceptional quality.
               </p>
               <div className="space-y-4">
                 {[
                   {
-                    title: "Our Farms",
+                    title: "Origin",
                     location: "Central Java, Indonesia",
                     description:
-                      "Nestled in the highlands of Central Java, our vanilla farms benefit from rich volcanic soil and ideal tropical climate. Every bean is hand-picked at peak maturity and sun-cured for 6-9 months.",
+                      "Our vanilla comes from the highlands of Central Java, where rich volcanic soil and tropical climate create ideal growing conditions.",
                   },
                   {
-                    title: "Our Processing",
+                    title: "Processing",
                     location: "Indonesia",
                     description:
-                      "From farm to finished product — our processing facility handles curing, grading, and packaging under strict quality controls.",
+                      "We handle curing, grading, and packaging at our facility, ensuring quality control from harvest to shipment.",
                   },
                 ].map((item) => (
                   <div
