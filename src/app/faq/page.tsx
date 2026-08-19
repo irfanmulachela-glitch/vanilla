@@ -57,7 +57,7 @@ const faqs = [
     questions: [
       {
         q: "What shipping methods do you offer?",
-        a: "We ship via DHL, FedEx, or air cargo for smaller orders. For larger shipments, we offer sea freight options. FOB Jakarta, CIF, and DDP incoterms are available.",
+        a: "We ship via DHL, FedEx, or air cargo for smaller orders. For larger shipments, we offer sea freight options. FOB Semarang, Jakarta, or Surabaya, CIF, and DDP incoterms are available.",
       },
       {
         q: "How long does shipping take?",
@@ -86,7 +86,7 @@ const faqs = [
       },
       {
         q: "Do prices include shipping?",
-        a: "Our quoted prices are typically FOB Jakarta. Shipping costs depend on your location, order volume, and preferred shipping method. We'll provide a detailed quote including all costs.",
+        a: "Our quoted prices are typically FOB Semarang, Jakarta, or Surabaya. Shipping costs depend on your location, order volume, and preferred shipping method. We'll provide a detailed quote including all costs.",
       },
       {
         q: "Is there a price match guarantee?",

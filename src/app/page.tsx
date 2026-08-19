@@ -236,7 +236,7 @@ export default function HomePage() {
                     icon: Truck,
                     title: "Flexible Shipping",
                     description:
-                      "FOB Jakarta, CIF, or DDP — we ship via DHL, FedEx, or air cargo. 3-7 day delivery worldwide.",
+                      "FOB Semarang, Jakarta, or Surabaya, CIF, or DDP — we ship via DHL, FedEx, or air cargo. 3-7 day delivery worldwide.",
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
