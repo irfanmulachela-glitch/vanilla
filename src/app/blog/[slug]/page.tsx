@@ -380,144 +380,360 @@ const blogPosts = {
       <p>Indonesia, with its Muslim-majority population, is a natural source for halal vanilla products. Many Indonesian suppliers hold recognized halal certifications.</p>
     `,
   },
-  "bulk-vanilla-beans-indonesia": {
-    title: "How to Buy Bulk Vanilla Beans from Indonesia",
+  "vanilla-bean-storage-shelf-life": {
+    title: "How to Store Vanilla Beans: Shelf Life & Best Practices",
     excerpt:
-      "Complete guide to purchasing bulk vanilla beans wholesale. Pricing, MOQ, quality testing, and logistics explained.",
-    category: "Sourcing Guide",
-    date: "2025-09-20",
-    readTime: "10 min read",
+      "Learn how to properly store vanilla beans to maximize shelf life, preserve flavor, and maintain quality for food manufacturers and retailers.",
+    category: "Quality",
+    date: "2026-02-01",
+    readTime: "6 min read",
     content: `
-      <p>Buying bulk vanilla beans from Indonesia offers significant cost advantages for food manufacturers and distributors. This guide covers everything you need to know about wholesale vanilla procurement.</p>
+      <p>Proper storage of vanilla beans is essential for maintaining quality, flavor, and shelf life. Whether you're a food manufacturer, retailer, or distributor, understanding storage best practices protects your investment.</p>
 
-      <h2>Why Buy Bulk from Indonesia?</h2>
-      <p>Indonesia offers competitive pricing for bulk vanilla:</p>
+      <h2>Shelf Life of Vanilla Beans</h2>
+      <p>When stored properly, vanilla beans can last:</p>
       <ul>
-        <li>Grade A beans: $300-500/kg FOB</li>
-        <li>Grade B beans: $150-300/kg FOB</li>
-        <li>Volume discounts for 100kg+ orders</li>
-        <li>Year-round supply availability</li>
+        <li><strong>Grade A (Gourmet):</strong> 12-24 months with optimal storage</li>
+        <li><strong>Grade B (Extract):</strong> 18-36 months due to lower moisture</li>
+        <li><strong>Vacuum-sealed:</strong> Up to 36 months for both grades</li>
       </ul>
 
-      <h2>Minimum Order Quantities</h2>
-      <p>Most Indonesian suppliers offer flexible MOQs:</p>
+      <h2>Optimal Storage Conditions</h2>
+      <p>For maximum shelf life, store vanilla beans in:</p>
       <ul>
-        <li>Sample orders: 1-5 kg</li>
-        <li>Small wholesale: 25 kg</li>
-        <li>Standard wholesale: 50-100 kg</li>
-        <li>Bulk orders: 100kg+ with better pricing</li>
+        <li><strong>Temperature:</strong> 15-25°C (59-77°F) — cool, stable environment</li>
+        <li><strong>Humidity:</strong> 60-70% relative humidity</li>
+        <li><strong>Light:</strong> Dark or opaque containers, away from direct sunlight</li>
+        <li><strong>Air:</strong> Airtight containers to prevent drying</li>
       </ul>
 
-      <h2>Quality Testing for Bulk Orders</h2>
-      <p>Before placing large orders:</p>
+      <h2>Storage Methods</h2>
+      <p>Choose the right storage method based on your needs:</p>
       <ul>
-        <li>Request Certificate of Analysis (CoA)</li>
-        <li>Verify vanillin content (1.3-2.7% for Grade A)</li>
-        <li>Check moisture content (25-35% for Grade A)</li>
-        <li>Request samples for evaluation</li>
+        <li><strong>Refrigeration:</strong> Not recommended — can cause moisture condensation and mold</li>
+        <li><strong>Room temperature:</strong> Best for short-term storage (3-6 months)</li>
+        <li><strong>Freezing:</strong> Acceptable for long-term storage; thaw completely before use</li>
+        <li><strong>Vacuum sealing:</strong> Ideal for preserving flavor and extending shelf life</li>
       </ul>
 
-      <h2>Shipping Bulk Orders</h2>
-      <p>For large orders, consider:</p>
+      <h2>Signs of Quality Loss</h2>
+      <p>Check for these indicators that beans may be past their prime:</p>
       <ul>
-        <li>Air freight for urgent orders (3-7 days)</li>
-        <li>Sea freight for cost savings (2-4 weeks)</li>
-        <li>FOB terms from Semarang, Jakarta, or Surabaya</li>
-        <li>CIF or DDP for door-to-door delivery</li>
+        <li>Dry, brittle texture with no flexibility</li>
+        <li>Faded color (from dark brown to light brown)</li>
+        <li>Reduced aroma when split open</li>
+        <li>White crystalline deposits (vanillin) — actually a sign of quality</li>
+      </ul>
+
+      <h2>Best Practices for Retailers</h2>
+      <p>If you're selling vanilla beans retail:</p>
+      <ul>
+        <li>Store in glass jars or vacuum-sealed bags</li>
+        <li>Label with purchase date for FIFO rotation</li>
+        <li>Keep away from strong odors (vanilla absorbs smells)</li>
+        <li>Display away from heat sources and direct light</li>
+      </ul>
+
+      <h2>Storage Tips for Food Manufacturers</h2>
+      <p>For industrial storage:</p>
+      <ul>
+        <li>Use food-grade, airtight containers</li>
+        <li>Implement FIFO (First In, First Out) inventory rotation</li>
+        <li>Monitor temperature and humidity regularly</li>
+        <li>Keep storage area clean and free from pests</li>
+      </ul>
+    `,
+  },
+  "real-vs-fake-vanilla-beans": {
+    title: "Real vs Fake Vanilla Beans: How to Identify Authentic Vanilla",
+    excerpt:
+      "A practical guide to identifying genuine vanilla beans from synthetic alternatives, including visual, tactile, and aroma tests.",
+    category: "Quality",
+    date: "2026-02-08",
+    readTime: "7 min read",
+    content: `
+      <p>With vanilla being one of the most expensive spices in the world, counterfeit products are common. Knowing how to identify authentic vanilla beans protects your business and ensures product quality.</p>
+
+      <h2>Why Fake Vanilla Exists</h2>
+      <p>The high price of natural vanilla creates incentives for adulteration:</p>
+      <ul>
+        <li>Natural vanilla beans: $300-700/kg</li>
+        <li>Synthetic vanillin: $10-20/kg</li>
+        <li>Significant profit margins for counterfeiters</li>
+      </ul>
+
+      <h2>Visual Identification</h2>
+      <p>Authentic vanilla beans have distinct visual characteristics:</p>
+      <ul>
+        <li><strong>Color:</strong> Dark brown to black, never light brown or green</li>
+        <li><strong>Texture:</strong> Oily, plump, flexible — not dry or brittle</li>
+        <li><strong>Length:</strong> Grade A: 15-20 cm, Grade B: 10-16 cm</li>
+        <li><strong>Seeds:</strong> Tiny black seeds visible when split open</li>
+      </ul>
+
+      <h2>The Touch Test</h2>
+      <p>Genuine vanilla beans should:</p>
+      <ul>
+        <li>Bend without breaking (high moisture content)</li>
+        <li>Feel slightly oily to the touch</li>
+        <li>Be pliable, not stiff or papery</li>
+        <li>Return to shape after gentle bending</li>
+      </ul>
+
+      <h2>The Aroma Test</h2>
+      <p>Authentic vanilla has a complex, rich aroma:</p>
+      <ul>
+        <li>Sweet, creamy, with notes of caramel and dried fruit</li>
+        <li>No chemical or artificial smell</li>
+        <li>Aroma intensifies when bean is split or warmed</li>
+        <li>Lingers on hands after handling</li>
+      </ul>
+
+      <h2>The Taste Test</h2>
+      <p>For ultimate verification:</p>
+      <ul>
+        <li>Split a bean and taste a small section</li>
+        <li>Authentic vanilla: rich, complex, slightly sweet</li>
+        <li>Fake vanilla: flat, one-dimensional, possibly chemical</li>
+      </ul>
+
+      <h2>Working with Trusted Suppliers</h2>
+      <p>The best protection against fake vanilla:</p>
+      <ul>
+        <li>Buy from established, reputable suppliers</li>
+        <li>Request Certificate of Analysis (CoA) with vanillin content</li>
+        <li>Start with sample orders to verify quality</li>
+        <li>Build long-term supplier relationships</li>
+      </ul>
+
+      <h2>Common Adulteration Methods</h2>
+      <p>Be aware of these common adulteration techniques:</p>
+      <ul>
+        <li>Synthetic vanillin coating on inferior beans</li>
+        <li>Excessive moisture injection to increase weight</li>
+        <li>Blending real and synthetic vanilla</li>
+        <li>Mislabeled origin (claiming Madagascar when it's Indonesian)</li>
+      </ul>
+    `,
+  },
+  "bulk-vanilla-ordering-guide": {
+    title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
+    excerpt:
+      "Everything food manufacturers need to know about ordering vanilla in bulk — MOQ, logistics, documentation, and cost optimization.",
+    category: "Sourcing Guide",
+    date: "2026-02-15",
+    readTime: "9 min read",
+    content: `
+      <p>Ordering vanilla in bulk requires careful planning to ensure quality, cost efficiency, and timely delivery. This guide covers everything food manufacturers need to know about bulk vanilla procurement.</p>
+
+      <h2>Understanding MOQ Requirements</h2>
+      <p>Minimum Order Quantities (MOQ) vary by supplier and product:</p>
+      <ul>
+        <li><strong>Sample orders:</strong> 1-5 kg for quality evaluation</li>
+        <li><strong>Small wholesale:</strong> 25 kg minimum for most suppliers</li>
+        <li><strong>Standard wholesale:</strong> 50-100 kg for better pricing</li>
+        <li><strong>Bulk orders:</strong> 100kg+ for maximum cost savings</li>
+      </ul>
+
+      <h2>Cost Optimization Strategies</h2>
+      <p>Reduce your vanilla procurement costs:</p>
+      <ul>
+        <li>Order larger quantities for volume discounts</li>
+        <li>Consider Grade B for extract manufacturing</li>
+        <li>Establish long-term contracts for price stability</li>
+        <li>Compare pricing from multiple suppliers</li>
+      </ul>
+
+      <h2>Quality Assurance for Bulk Orders</h2>
+      <p>Before committing to large orders:</p>
+      <ul>
+        <li>Request Certificate of Analysis (CoA) with vanillin content</li>
+        <li>Verify moisture content (25-35% for Grade A)</li>
+        <li>Request samples for independent testing</li>
+        <li>Visit supplier facilities if possible</li>
+      </ul>
+
+      <h2>Documentation Requirements</h2>
+      <p>Ensure complete documentation for bulk shipments:</p>
+      <ul>
+        <li>Phytosanitary certificate</li>
+        <li>Certificate of origin</li>
+        <li>Certificate of analysis</li>
+        <li>Commercial invoice and packing list</li>
+        <li>Bill of lading or airway bill</li>
+      </ul>
+
+      <h2>Shipping and Logistics</h2>
+      <p>For bulk vanilla orders:</p>
+      <ul>
+        <li><strong>Air freight:</strong> Faster (3-7 days), higher cost</li>
+        <li><strong>Sea freight:</strong> More economical (2-4 weeks)</li>
+        <li><strong>FOB terms:</strong> Semarang, Jakarta, or Surabaya</li>
+        <li><strong>CIF/DDP:</strong> Door-to-door delivery options</li>
+      </ul>
+
+      <h2>Payment Terms</h2>
+      <p>Common payment terms for bulk orders:</p>
+      <ul>
+        <li>T/T (Telegraphic Transfer): 30-50% advance, balance before shipment</li>
+        <li>L/C (Letter of Credit): For larger orders</li>
+        <li>Open account: For established relationships</li>
       </ul>
 
       <h2>Tips for First-Time Buyers</h2>
-      <p>Start with a trial order to verify quality before committing to large volumes. Establish clear specifications and get everything in writing.</p>
-    `,
-  },
-  "vanilla-bean-moisture-content": {
-    title: "Vanilla Bean Moisture Content: Why It Matters",
-    excerpt:
-      "Understanding how moisture content affects vanilla bean quality, pricing, and shelf life. Technical guide for B2B buyers.",
-    category: "Quality",
-    date: "2025-09-10",
-    readTime: "6 min read",
-    content: `
-      <p>Moisture content is one of the most critical factors in vanilla bean quality. Understanding its impact helps buyers make informed purchasing decisions.</p>
-
-      <h2>Moisture Content Standards</h2>
-      <p>Indonesian vanilla bean moisture standards:</p>
+      <p>Start your bulk vanilla procurement right:</p>
       <ul>
-        <li><strong>Grade A:</strong> 25-35% moisture</li>
-        <li><strong>Grade B:</strong> Less than 25% moisture</li>
-      </ul>
-
-      <h2>Why Moisture Matters</h2>
-      <p>Moisture content affects:</p>
-      <ul>
-        <li><strong>Flavor intensity:</strong> Higher moisture = more aromatic</li>
-        <li><strong>Shelf life:</strong> Lower moisture = longer storage</li>
-        <li><strong>Weight:</strong> Affects pricing per kilogram</li>
-        <li><strong>Appearance:</strong> Higher moisture = plumper, oilier beans</li>
-      </ul>
-
-      <h2>Testing Moisture Content</h2>
-      <p>Professional testing methods include:</p>
-      <ul>
-        <li>Halogen moisture analyzer</li>
-        <li>Oven-drying method</li>
-        <li>Karl Fischer titration</li>
-      </ul>
-
-      <h2>Implications for Buyers</h2>
-      <p>When evaluating vanilla beans:</p>
-      <ul>
-        <li>Request moisture test results with your order</li>
-        <li>Consider your storage conditions</li>
-        <li>Factor moisture into cost calculations</li>
-        <li>Understand how moisture affects your application</li>
+        <li>Begin with a trial order to verify quality</li>
+        <li>Get all specifications in writing</li>
+        <li>Establish clear communication channels</li>
+        <li>Build a relationship with your supplier</li>
       </ul>
     `,
   },
-  "vanilla-extract-manufacturing": {
-    title: "Vanilla Extract Manufacturing: A Complete Guide",
+  "indonesian-vanilla-processing": {
+    title: "Indonesian Vanilla Processing: From Harvest to Export",
     excerpt:
-      "Step-by-step guide to manufacturing vanilla extract. Equipment, processes, and raw material requirements explained.",
-    category: "Product Guide",
-    date: "2025-08-25",
-    readTime: "12 min read",
+      "A step-by-step look at how Indonesian vanilla beans are harvested, cured, graded, and prepared for global export.",
+    category: "Industry",
+    date: "2026-02-22",
+    readTime: "8 min read",
     content: `
-      <p>Manufacturing vanilla extract requires careful selection of raw materials and understanding of the extraction process. This guide covers everything manufacturers need to know.</p>
+      <p>Understanding the vanilla processing journey from harvest to export helps buyers appreciate the quality and care that goes into every bean. Here's how Indonesian vanilla is processed.</p>
 
-      <h2>Raw Material Selection</h2>
-      <p>For extract manufacturing, use Grade B vanilla beans:</p>
+      <h2>Harvest</h2>
+      <p>Vanilla harvesting in Indonesia:</p>
       <ul>
-        <li>Moisture content: Less than 25%</li>
-      <li>Vanillin content: 1.3-2.2%</li>
-      <li>Bean length: 10-16 cm</li>
-      <li>Cost-effective for large-volume production</li>
+        <li>Beans hand-picked at peak maturity (7-9 months after flowering)</li>
+        <li>Harvested during dry season (May-September)</li>
+        <li>Each bean carefully selected for quality</li>
+        <li>Processed within 24 hours of harvest</li>
       </ul>
 
-      <h2>Extraction Process</h2>
-      <p>Basic vanilla extract manufacturing:</p>
+      <h2>Killing</h2>
+      <p>The first step in processing:</p>
       <ul>
-        <li>Chop or split vanilla beans</li>
-        <li>Combine with alcohol and water solution</li>
-        <li>Age for 3-6 months minimum</li>
-        <li>Filter and package</li>
+        <li>Beans dipped in hot water (65-70°C) for 2-3 minutes</li>
+        <li>Stops vegetative growth and begins enzyme activity</li>
+        <li>Beans turn from green to brown</li>
       </ul>
 
-      <h2>Equipment Needed</h2>
-      <p>Essential equipment includes:</p>
+      <h2>Sweating</h2>
+      <p>Critical for flavor development:</p>
       <ul>
-        <li>Extraction tanks</li>
-        <li>Filtration system</li>
-        <li>Testing equipment (vanillin analyzer)</li>
-        <li>Packaging equipment</li>
+        <li>Beans wrapped in wool blankets or stored in sweating boxes</li>
+        <li>Temperature maintained at 45-65°C for 24-48 hours</li>
+        <li>Enzymes break down, releasing vanillin precursors</li>
+        <li>Process repeated daily for several days</li>
       </ul>
 
-      <h2>Quality Control</h2>
-      <p>Ensure consistent quality with:</p>
+      <h2>Sun Drying</h2>
+      <p>Slow drying develops flavor:</p>
       <ul>
-        <li>Regular vanillin content testing</li>
-        <li>Sensory evaluation</li>
-        <li>Batch documentation</li>
-        <li>Shelf life testing</li>
+        <li>Beans laid out in sunlight during the day</li>
+        <li>Brought inside at night to prevent moisture reabsorption</li>
+        <li>Process continues for 2-4 weeks</li>
+        <li>Beans lose 60-70% of their moisture</li>
+      </ul>
+
+      <h2>Conditioning</h2>
+      <p>Final flavor development:</p>
+      <ul>
+        <li>Beans stored in sealed containers for 2-3 months</li>
+        <li>Moisture equalizes throughout the bean</li>
+        <li>Vanillin content increases to final levels</li>
+        <li>Flavor matures and deepens</li>
+      </ul>
+
+      <h2>Grading</h2>
+      <p>Quality classification:</p>
+      <ul>
+        <li><strong>Grade A:</strong> 15-20 cm, 25-35% moisture, 1.3-2.7% vanillin</li>
+        <li><strong>Grade B:</strong> 10-16 cm, less than 25% moisture, 1.3-2.2% vanillin</li>
+        <li>Visual inspection for defects</li>
+        <li>Moisture and vanillin testing</li>
+      </ul>
+
+      <h2>Packaging and Export</h2>
+      <p>Final preparation for shipment:</p>
+      <ul>
+        <li>Beans vacuum-sealed or packed in airtight containers</li>
+        <li>Labeled with grade, weight, and origin</li>
+        <li>Stored in climate-controlled environment</li>
+        <li>Exported via air or sea freight from Indonesian ports</li>
+      </ul>
+    `,
+  },
+  "indonesian-vanilla-best-choice": {
+    title: "Why Indonesian Vanilla Is the Best Choice for B2B Buyers",
+    excerpt:
+      "Discover why Indonesian vanilla offers the best value for B2B buyers — competitive pricing, consistent quality, and reliable supply.",
+    category: "Market Analysis",
+    date: "2026-03-01",
+    readTime: "7 min read",
+    content: `
+      <p>For B2B buyers seeking the best value in vanilla, Indonesia offers compelling advantages over other origins. Here's why Indonesian vanilla should be your top choice.</p>
+
+      <h2>Competitive Pricing</h2>
+      <p>Indonesian vanilla offers significant cost advantages:</p>
+      <ul>
+        <li>Grade A beans: $300-500/kg (vs. Madagascar $500-800/kg)</li>
+        <li>Grade B beans: $150-300/kg for extract manufacturing</li>
+        <li>Volume discounts for bulk orders</li>
+        <li>Stable pricing year-round</li>
+      </ul>
+
+      <h2>Consistent Quality</h2>
+      <p>Indonesian vanilla maintains high quality standards:</p>
+      <ul>
+        <li>Vanillin content: 1.3-2.7% (Grade A)</li>
+        <li>Consistent bean size and moisture levels</li>
+        <li>Strict grading and quality control processes</li>
+        <li>Certificate of Analysis (CoA) with every shipment</li>
+      </ul>
+
+      <h2>Reliable Supply</h2>
+      <p>Indonesia offers supply chain advantages:</p>
+      <ul>
+        <li>Year-round production (not seasonal like some origins)</li>
+        <li>Established export infrastructure</li>
+        <li>Multiple shipping ports (Semarang, Jakarta, Surabaya)</li>
+        <li>Flexible MOQs from 25kg to 100kg+</li>
+      </ul>
+
+      <h2>Strategic Location</h2>
+      <p>Indonesia's geographic advantages:</p>
+      <ul>
+        <li>Central location for Asian and Middle Eastern markets</li>
+        <li>Shorter shipping times to major markets</li>
+        <li>Competitive freight rates</li>
+        <li>Established trade routes</li>
+      </ul>
+
+      <h2>Quality Certifications</h2>
+      <p>Indonesian suppliers offer important certifications:</p>
+      <ul>
+        <li>Halal certification (important for Muslim-majority markets)</li>
+        <li>Food safety standards compliance</li>
+        <li>Phytosanitary certification for export</li>
+        <li>Traceability documentation</li>
+      </ul>
+
+      <h2>Applications and Versatility</h2>
+      <p>Indonesian vanilla suits various applications:</p>
+      <ul>
+        <li><strong>Grade A:</strong> Retail, pastry, ice cream, culinary</li>
+        <li><strong>Grade B:</strong> Extract manufacturing, industrial flavoring</li>
+        <li>Vanilla paste production</li>
+        <li>Vanilla powder manufacturing</li>
+      </ul>
+
+      <h2>Getting Started</h2>
+      <p>Begin your Indonesian vanilla sourcing journey:</p>
+      <ul>
+        <li>Request samples from multiple suppliers</li>
+        <li>Compare pricing and quality specifications</li>
+        <li>Start with a trial order to verify quality</li>
+        <li>Build a long-term supplier relationship</li>
       </ul>
     `,
   },

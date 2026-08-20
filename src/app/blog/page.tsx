@@ -100,6 +100,56 @@ const blogPosts = [
     date: "2025-10-15",
     readTime: "7 min read",
   },
+  {
+    id: "10",
+    title: "How to Store Vanilla Beans: Shelf Life & Best Practices",
+    slug: "vanilla-bean-storage-shelf-life",
+    excerpt:
+      "Learn how to properly store vanilla beans to maximize shelf life, preserve flavor, and maintain quality for food manufacturers and retailers.",
+    category: "Quality",
+    date: "2026-02-01",
+    readTime: "6 min read",
+  },
+  {
+    id: "11",
+    title: "Real vs Fake Vanilla Beans: How to Identify Authentic Vanilla",
+    slug: "real-vs-fake-vanilla-beans",
+    excerpt:
+      "A practical guide to identifying genuine vanilla beans from synthetic alternatives, including visual, tactile, and aroma tests.",
+    category: "Quality",
+    date: "2026-02-08",
+    readTime: "7 min read",
+  },
+  {
+    id: "12",
+    title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
+    slug: "bulk-vanilla-ordering-guide",
+    excerpt:
+      "Everything food manufacturers need to know about ordering vanilla in bulk — MOQ, logistics, documentation, and cost optimization.",
+    category: "Sourcing Guide",
+    date: "2026-02-15",
+    readTime: "9 min read",
+  },
+  {
+    id: "13",
+    title: "Indonesian Vanilla Processing: From Harvest to Export",
+    slug: "indonesian-vanilla-processing",
+    excerpt:
+      "A step-by-step look at how Indonesian vanilla beans are harvested, cured, graded, and prepared for global export.",
+    category: "Industry",
+    date: "2026-02-22",
+    readTime: "8 min read",
+  },
+  {
+    id: "14",
+    title: "Why Indonesian Vanilla Is the Best Choice for B2B Buyers",
+    slug: "indonesian-vanilla-best-choice",
+    excerpt:
+      "Discover why Indonesian vanilla offers the best value for B2B buyers — competitive pricing, consistent quality, and reliable supply.",
+    category: "Market Analysis",
+    date: "2026-03-01",
+    readTime: "7 min read",
+  },
 ];
 
 export default function BlogPage() {
