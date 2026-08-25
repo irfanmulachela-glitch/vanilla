@@ -8,9 +8,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/admin/", "/_next/"],
       },
-      // Allow AI crawlers for better AI visibility
+      // Allow all AI crawlers for maximum visibility
       {
-        userAgent: ["GPTBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "OAI-SearchBot"],
+        userAgent: ["GPTBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "OAI-SearchBot", "Claude-Web", "anthropic-ai", "Google-Extended"],
         allow: "/",
       },
     ],

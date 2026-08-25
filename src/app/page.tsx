@@ -20,7 +20,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
   description:
-    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. Food Safety Standards. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 1kg.",
+    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. Food Safety Standards. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 25kg.",
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "vanilla powder supplier",
     "B2B vanilla exporter",
     "Quality Assured vanilla",
+    "Indonesian vanilla beans",
+    "best vanilla supplier",
+    "bulk vanilla beans",
   ],
 };
 
@@ -48,13 +51,10 @@ export default function HomePage() {
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-6 leading-tight">
                 Premium Indonesian{" "}
                 <span className="text-[#B5A37A]">Vanilla</span>{" "}
-                for Global Markets
+                Supplier
               </h1>
               <p className="text-lg text-[#6B6358] mb-8 max-w-lg leading-relaxed">
-                Direct from Indonesian farms to your production line. Vanilla
-                beans, custom paste, and pure powder — Food Safety Compliant, shipped
-                to {siteConfig.stats.countriesServed} countries with full
-                documentation.
+                La Vanilla Supplier is an Indonesian vanilla supplier based in Central Java, providing Grade A and Grade B vanilla beans, vanilla paste, and vanilla powder to food manufacturers and distributors in 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
