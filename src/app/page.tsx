@@ -530,6 +530,22 @@ export default function HomePage() {
           }),
         }}
       />
+
+      {/* Speakable Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "La Vanilla Supplier - Premium Indonesian Vanilla",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: [".speakable-heading", ".speakable-text"],
+            },
+          }),
+        }}
+      />
     </>
   );
 }
