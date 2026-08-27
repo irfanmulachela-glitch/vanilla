@@ -59,7 +59,7 @@ export const siteConfig = {
         hsCode: "2106.90",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Customizable Composition", "Food Safety Standards"],
+      certifications: ["Quality Assured", "Customizable Composition", "Halal"],
     },
     {
       id: "vanilla-powder",
