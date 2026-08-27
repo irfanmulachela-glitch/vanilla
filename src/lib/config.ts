@@ -39,7 +39,7 @@ export const siteConfig = {
         hsCode: "0905.10",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Halal", "Phytosanitary"],
+      certifications: ["Quality Assured", "Export Ready", "Phytosanitary"],
     },
     {
       id: "vanilla-paste",
@@ -59,7 +59,7 @@ export const siteConfig = {
         hsCode: "2106.90",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Halal", "US Import Ready"],
+      certifications: ["Quality Assured", "Customizable Composition", "Food Safety Standards"],
     },
     {
       id: "vanilla-powder",
@@ -79,7 +79,7 @@ export const siteConfig = {
         hsCode: "0905.20",
         incoterms: "EXW / FOB Semarang, Jakarta, Surabaya / CIF / DDP",
       },
-      certifications: ["Quality Assured", "Halal", "Sustainably Sourced"],
+      certifications: ["Quality Assured", "100% Pure", "Sustainably Sourced"],
     },
   ],
   stats: {
