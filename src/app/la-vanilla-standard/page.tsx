@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle2, ArrowRight, Shield, Leaf, Award, FileCheck, Truck } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ const steps = [
   {
     number: "01",
     title: "Source Verification",
+    icon: Leaf,
     description:
       "Every batch originates from verified farms in Central Java, Indonesia. We maintain direct relationships with farming communities, ensuring traceability from harvest to shipment.",
     details: [
@@ -25,6 +27,7 @@ const steps = [
   {
     number: "02",
     title: "Curing Excellence",
+    icon: Award,
     description:
       "Our 6-9 month curing process combines traditional sun-drying with controlled sweat-box techniques, developing the rich, complex flavor profile that defines premium Indonesian vanilla.",
     details: [
@@ -37,6 +40,7 @@ const steps = [
   {
     number: "03",
     title: "Precision Grading",
+    icon: Shield,
     description:
       "Each bean undergoes multi-stage inspection for length, moisture content, and vanillin concentration. Only beans meeting our strict specifications receive the La Vanilla Standard designation.",
     details: [
@@ -49,6 +53,7 @@ const steps = [
   {
     number: "04",
     title: "Quality Assurance",
+    icon: FileCheck,
     description:
       "Every shipment includes complete documentation: Phytosanitary Certificate, Certificate of Origin, and batch-specific quality testing results. No exceptions.",
     details: [
@@ -61,6 +66,7 @@ const steps = [
   {
     number: "05",
     title: "Reliable Delivery",
+    icon: Truck,
     description:
       "We ship FOB from Semarang, Jakarta, or Surabaya with flexible terms (CIF, DDP). Temperature-controlled packaging preserves bean quality during transit.",
     details: [
@@ -76,13 +82,28 @@ export default function LaVanillaStandardPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1600"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              The La Vanilla Standard
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/20 rounded-full mb-6">
+              <Shield className="w-4 h-4 text-[#B5A37A]" />
+              <span className="text-sm font-medium text-[#B5A37A]">
+                Our Quality Framework
+              </span>
+            </div>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+              The La Vanilla{" "}
+              <span className="text-[#B5A37A]">Standard</span>
             </h1>
-            <p className="text-lg text-stone-700">
+            <p className="text-lg text-stone-300 leading-relaxed">
               A 5-step quality framework that ensures every vanilla bean we
               export meets the highest standards of quality, traceability, and
               consistency. This is how we deliver reliability to B2B buyers
@@ -92,41 +113,111 @@ export default function LaVanillaStandardPage() {
         </div>
       </section>
 
+      {/* Overview Stats */}
+      <section className="py-12 bg-[#F8F6F2] border-b border-[#E5E0D8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "5", label: "Quality Steps" },
+              { value: "6-9", label: "Months Curing" },
+              { value: "100%", label: "Traceable" },
+              { value: "0", label: "Exceptions" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p className="text-sm text-[#6B6358]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Framework Steps */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
-            {steps.map((step) => (
+          <div className="space-y-8">
+            {steps.map((step, index) => (
               <div
                 key={step.number}
-                className="grid lg:grid-cols-2 gap-12 items-start"
+                className="group relative bg-[#F8F6F2] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-[#E5E0D8]"
               >
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-5xl font-bold text-[#B5A37A]/30">
+                <div className="grid lg:grid-cols-3 gap-0">
+                  {/* Left: Number + Icon */}
+                  <div className="bg-[#2C2518] p-8 lg:p-12 flex flex-col justify-center items-center text-center">
+                    <span className="text-6xl font-bold text-[#B5A37A]/30 mb-4">
                       {step.number}
                     </span>
-                    <h2 className="text-2xl font-bold text-[#2C2518]">
+                    <div className="w-16 h-16 bg-[#B5A37A]/20 rounded-2xl flex items-center justify-center">
+                      <step.icon className="w-8 h-8 text-[#B5A37A]" />
+                    </div>
+                  </div>
+
+                  {/* Middle: Description */}
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
+                    <h2 className="text-2xl font-bold text-[#2C2518] mb-4">
                       {step.title}
                     </h2>
+                    <p className="text-[#6B6358] leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
-                  <p className="text-[#6B6358] leading-relaxed">
-                    {step.description}
-                  </p>
+
+                  {/* Right: Details */}
+                  <div className="p-8 lg:p-12 bg-white border-l border-[#E5E0D8]">
+                    <h3 className="font-semibold text-[#2C2518] mb-4 text-sm uppercase tracking-wider">
+                      Key Requirements
+                    </h3>
+                    <ul className="space-y-3">
+                      {step.details.map((detail) => (
+                        <li key={detail} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
+                          <span className="text-[#6B6358] text-sm">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="bg-[#F8F6F2] rounded-xl p-6 border border-[#E5E0D8]">
-                  <h3 className="font-semibold text-[#2C2518] mb-4">
-                    Key Requirements
-                  </h3>
-                  <ul className="space-y-3">
-                    {step.details.map((detail) => (
-                      <li key={detail} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                        <span className="text-[#6B6358] text-sm">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Promise Section */}
+      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Our Promise to You
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Every shipment backed by the La Vanilla Standard. No exceptions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Full Traceability",
+                description: "From farm to shipment, every step documented and verified.",
+              },
+              {
+                title: "Consistent Quality",
+                description: "Same high standards across every batch, every order.",
+              },
+              {
+                title: "Complete Documentation",
+                description: "All certificates and compliance documents included.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white p-6 rounded-xl border border-[#E5E0D8] text-center"
+              >
+                <CheckCircle2 className="w-10 h-10 text-[#B5A37A] mx-auto mb-4" />
+                <h3 className="font-semibold text-[#2C2518] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-[#6B6358] text-sm">{item.description}</p>
               </div>
             ))}
           </div>
