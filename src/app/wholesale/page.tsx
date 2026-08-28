@@ -106,44 +106,53 @@ export default function WholesalePage() {
               We make B2B vanilla sourcing simple, transparent, and reliable.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 icon: Package,
                 title: "Direct from Source",
                 description:
                   "We work directly with Indonesian farmers. No middlemen, better prices.",
+                highlight: "No middlemen",
               },
               {
                 icon: ShieldCheck,
                 title: "Quality Assured",
                 description:
                   "Every batch tested. Certificate of Analysis with vanillin content provided.",
+                highlight: "Every batch tested",
               },
               {
                 icon: FileCheck,
                 title: "Complete Documentation",
                 description:
                   "Phytosanitary certificate, certificate of origin, and export documents included.",
+                highlight: "Full compliance",
               },
               {
                 icon: Truck,
                 title: "Global Shipping",
                 description:
                   "FOB Semarang, Jakarta, or Surabaya. Air freight or sea freight options.",
+                highlight: "3 ports available",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-[#F8F6F2] p-6 rounded-xl border border-[#E5E0D8] text-center hover:shadow-md transition-shadow"
+                className="group flex gap-5 bg-[#F8F6F2] p-6 rounded-2xl border border-[#E5E0D8] hover:border-[#B5A37A]/50 hover:shadow-md transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 border border-[#E5E0D8]">
-                  <item.icon className="w-7 h-7 text-[#B5A37A]" />
+                <div className="w-14 h-14 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A] transition-colors duration-300">
+                  <item.icon className="w-7 h-7 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-[#2C2518] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-[#6B6358] text-sm">{item.description}</p>
+                <div>
+                  <h3 className="text-lg font-bold text-[#2C2518] mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#6B6358] text-sm mb-2">{item.description}</p>
+                  <span className="inline-block text-xs font-semibold text-[#B5A37A] bg-[#B5A37A]/10 px-2 py-0.5 rounded">
+                    {item.highlight}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -208,47 +217,61 @@ export default function WholesalePage() {
       {/* How It Works */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
               How It Works
             </h2>
             <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
-              From inquiry to delivery — a simple process.
+              From inquiry to delivery — a simple, transparent process.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Request Quote",
-                description: "Tell us your product, quantity, and destination.",
-              },
-              {
-                step: "02",
-                title: "Get Pricing",
-                description: "We send a detailed quote within 24 hours.",
-              },
-              {
-                step: "03",
-                title: "Confirm Order",
-                description: "Approve and we begin processing your order.",
-              },
-              {
-                step: "04",
-                title: "Receive Delivery",
-                description: "Your vanilla ships with full documentation.",
-              },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-16 h-16 bg-[#2C2518] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-[#B5A37A]">
-                    {item.step}
-                  </span>
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-[#E5E0D8]">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#B5A37A]/0 via-[#B5A37A] to-[#B5A37A]/0" />
+            </div>
+            <div className="grid md:grid-cols-4 gap-8 relative">
+              {[
+                {
+                  step: "01",
+                  title: "Request Quote",
+                  description: "Tell us your product, quantity, and destination.",
+                  icon: "💬",
+                },
+                {
+                  step: "02",
+                  title: "Get Pricing",
+                  description: "We send a detailed quote within 24 hours.",
+                  icon: "📋",
+                },
+                {
+                  step: "03",
+                  title: "Confirm Order",
+                  description: "Approve and we begin processing your order.",
+                  icon: "✅",
+                },
+                {
+                  step: "04",
+                  title: "Receive Delivery",
+                  description: "Your vanilla ships with full documentation.",
+                  icon: "📦",
+                },
+              ].map((item, index) => (
+                <div key={item.step} className="text-center relative">
+                  {/* Step circle */}
+                  <div className="relative z-10 w-20 h-20 bg-[#2C2518] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <span className="text-2xl font-bold text-[#B5A37A]">
+                      {item.step}
+                    </span>
+                  </div>
+                  {/* Content card */}
+                  <div className="bg-[#F8F6F2] rounded-xl p-5 border border-[#E5E0D8] hover:border-[#B5A37A]/50 transition-colors">
+                    <h3 className="font-bold text-[#2C2518] mb-2">{item.title}</h3>
+                    <p className="text-[#6B6358] text-sm">{item.description}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-[#2C2518] mb-2">{item.title}</h3>
-                <p className="text-[#6B6358] text-sm">{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -264,42 +287,40 @@ export default function WholesalePage() {
               Competitive pricing based on your specific requirements.
             </p>
           </div>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8]">
-              <h3 className="text-xl font-bold text-[#2C2518] mb-6 text-center">
-                Price Factors
-              </h3>
-              <ul className="space-y-4 text-[#6B6358]">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="text-[#2C2518]">Grade:</strong> Grade A
-                    (Gourmet) vs Grade B (Extract)
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="text-[#2C2518]">Vanillin Content:</strong>{" "}
-                    Higher vanillin commands premium pricing
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="text-[#2C2518]">Volume:</strong> Bulk
-                    orders (100kg+) receive better pricing
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="text-[#2C2518]">Contract:</strong>{" "}
-                    Long-term contracts offer additional discounts
-                  </span>
-                </li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                icon: "🏷️",
+                title: "Grade",
+                description: "Grade A (Gourmet) vs Grade B (Extract)",
+              },
+              {
+                icon: "📊",
+                title: "Vanillin Content",
+                description: "Higher vanillin commands premium pricing",
+              },
+              {
+                icon: "📦",
+                title: "Volume",
+                description: "Bulk orders (100kg+) receive better pricing",
+              },
+              {
+                icon: "🤝",
+                title: "Contract",
+                description: "Long-term contracts offer additional discounts",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white p-6 rounded-2xl border border-[#E5E0D8] flex items-start gap-4 hover:shadow-md transition-shadow"
+              >
+                <div className="text-3xl">{item.icon}</div>
+                <div>
+                  <h3 className="font-bold text-[#2C2518] mb-1">{item.title}</h3>
+                  <p className="text-[#6B6358] text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
