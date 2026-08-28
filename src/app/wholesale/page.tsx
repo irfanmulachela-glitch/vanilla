@@ -312,9 +312,9 @@ export default function WholesalePage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="group bg-white p-6 rounded-2xl border border-[#E5E0D8] flex items-start gap-4 hover:border-[#B5A37A]/50 hover:shadow-md transition-all duration-300"
+                className="group bg-white p-6 rounded-2xl border border-[#D8D3C9] flex items-start gap-4 hover:border-[#B5A37A]/60 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-[#F8F6F2] rounded-xl flex items-center justify-center flex-shrink-0 border border-[#E5E0D8] group-hover:border-[#B5A37A]/50 transition-colors">
+                <div className="w-12 h-12 bg-[#F0ECE4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A]/15 transition-colors duration-300">
                   <item.icon className="w-6 h-6 text-[#B5A37A]" />
                 </div>
                 <div>
