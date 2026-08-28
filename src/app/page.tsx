@@ -240,7 +240,7 @@ export default function HomePage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 border border-[#E5E0D8]">
+                    <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-6 h-6 text-[#B5A37A]" />
                     </div>
                     <div>
@@ -285,18 +285,18 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden">
+          <div className="bg-white rounded-2xl border border-[#D8D3C9] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-[#F8F6F2]">
+                <thead className="bg-[#2C2518]">
                   <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#2C2518]">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
                       Specification
                     </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#2C2518]">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
                       Grade A Beans
                     </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#2C2518]">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
                       Grade B Beans
                     </th>
                   </tr>
@@ -310,8 +310,8 @@ export default function HomePage() {
                     { spec: "Curing Period", gradeA: "6–9 months", gradeB: "6–9 months" },
                     { spec: "MOQ", gradeA: "25 kg", gradeB: "25 kg" },
                     { spec: "HS Code", gradeA: "0905.10", gradeB: "0905.10" },
-                  ].map((row) => (
-                    <tr key={row.spec} className="hover:bg-[#F8F6F2]">
+                  ].map((row, index) => (
+                    <tr key={row.spec} className={index % 2 === 0 ? "bg-white" : "bg-[#F8F6F2]"}>
                       <td className="px-6 py-4 text-sm font-medium text-[#2C2518]">
                         {row.spec}
                       </td>
@@ -373,14 +373,14 @@ export default function HomePage() {
               <Link
                 key={item.region}
                 href={item.href}
-                className="group p-6 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                className="group p-6 bg-white rounded-xl border border-[#D8D3C9] hover:border-[#B5A37A]/60 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="w-5 h-5 text-[#B5A37A]" />
-                  <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
-                    {item.region}
-                  </h3>
+                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#B5A37A] transition-colors duration-300">
+                  <MapPin className="w-5 h-5 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
                 </div>
+                <h3 className="font-semibold text-[#2C2518] mb-1 group-hover:text-[#B5A37A] transition-colors">
+                  {item.region}
+                </h3>
                 <p className="text-sm text-[#6B6358]">{item.description}</p>
               </Link>
             ))}
@@ -389,7 +389,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6">
@@ -400,15 +400,15 @@ export default function HomePage() {
                 />
               ))}
             </div>
-            <blockquote className="text-xl lg:text-2xl font-medium text-[#2C2518] mb-8 leading-relaxed">
+            <blockquote className="text-xl lg:text-2xl font-medium text-white mb-8 leading-relaxed">
               &ldquo;The vanillin content and aroma were exactly as promised.
               Our pastry chef baked a batch of vanilla bean canelés with their
               pods. Customers were literally asking if we changed the recipe.
               Safe to say we are hooked.&rdquo;
             </blockquote>
             <div>
-              <p className="font-semibold text-[#2C2518]">Sophie</p>
-              <p className="text-[#6B6358]">Budapest, Hungary</p>
+              <p className="font-semibold text-white">Sophie</p>
+              <p className="text-[#B5A37A]">Budapest, Hungary</p>
             </div>
           </div>
         </div>
