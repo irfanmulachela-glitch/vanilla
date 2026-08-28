@@ -10,6 +10,10 @@ import {
   Truck,
   ShieldCheck,
   Clock,
+  Tag,
+  BarChart3,
+  Boxes,
+  Handshake,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
@@ -236,25 +240,21 @@ export default function WholesalePage() {
                   step: "01",
                   title: "Request Quote",
                   description: "Tell us your product, quantity, and destination.",
-                  icon: "💬",
                 },
                 {
                   step: "02",
                   title: "Get Pricing",
                   description: "We send a detailed quote within 24 hours.",
-                  icon: "📋",
                 },
                 {
                   step: "03",
                   title: "Confirm Order",
                   description: "Approve and we begin processing your order.",
-                  icon: "✅",
                 },
                 {
                   step: "04",
                   title: "Receive Delivery",
                   description: "Your vanilla ships with full documentation.",
-                  icon: "📦",
                 },
               ].map((item, index) => (
                 <div key={item.step} className="text-center relative">
@@ -290,31 +290,33 @@ export default function WholesalePage() {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                icon: "🏷️",
+                icon: Tag,
                 title: "Grade",
                 description: "Grade A (Gourmet) vs Grade B (Extract)",
               },
               {
-                icon: "📊",
+                icon: BarChart3,
                 title: "Vanillin Content",
                 description: "Higher vanillin commands premium pricing",
               },
               {
-                icon: "📦",
+                icon: Boxes,
                 title: "Volume",
                 description: "Bulk orders (100kg+) receive better pricing",
               },
               {
-                icon: "🤝",
+                icon: Handshake,
                 title: "Contract",
                 description: "Long-term contracts offer additional discounts",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-6 rounded-2xl border border-[#E5E0D8] flex items-start gap-4 hover:shadow-md transition-shadow"
+                className="group bg-white p-6 rounded-2xl border border-[#E5E0D8] flex items-start gap-4 hover:border-[#B5A37A]/50 hover:shadow-md transition-all duration-300"
               >
-                <div className="text-3xl">{item.icon}</div>
+                <div className="w-12 h-12 bg-[#F8F6F2] rounded-xl flex items-center justify-center flex-shrink-0 border border-[#E5E0D8] group-hover:border-[#B5A37A]/50 transition-colors">
+                  <item.icon className="w-6 h-6 text-[#B5A37A]" />
+                </div>
                 <div>
                   <h3 className="font-bold text-[#2C2518] mb-1">{item.title}</h3>
                   <p className="text-[#6B6358] text-sm">{item.description}</p>
