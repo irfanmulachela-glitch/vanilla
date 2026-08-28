@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -8,6 +9,7 @@ import {
   FileCheck,
   Truck,
   ShieldCheck,
+  Clock,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
@@ -29,20 +31,28 @@ export default function WholesalePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#F8F6F2] py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1600"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/10 rounded-full mb-6">
-              <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
-              <span className="text-sm font-medium text-[#2C2518]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/20 rounded-full mb-6">
+              <Package className="w-4 h-4 text-[#B5A37A]" />
+              <span className="text-sm font-medium text-[#B5A37A]">
                 Direct from Indonesian Farms
               </span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-6">
-              Wholesale Vanilla Beans{" "}
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+              Wholesale Vanilla{" "}
               <span className="text-[#B5A37A]">Indonesia</span>
             </h1>
-            <p className="text-lg text-[#6B6358] mb-8">
+            <p className="text-lg text-stone-300 leading-relaxed mb-8">
               Premium Indonesian vanilla beans, paste, and powder at wholesale
               prices. Direct from source, no middlemen. MOQ 25kg. Export to 20+
               countries.
@@ -50,14 +60,14 @@ export default function WholesalePage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg hover:bg-[#F8F6F2] transition-colors"
               >
                 Get Wholesale Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
               >
                 View Products
               </Link>
@@ -66,12 +76,36 @@ export default function WholesalePage() {
         </div>
       </section>
 
+      {/* Stats Bar */}
+      <section className="py-12 bg-[#F8F6F2] border-b border-[#E5E0D8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "25kg", label: "Minimum Order" },
+              { value: "20+", label: "Countries Served" },
+              { value: "10+", label: "Years Experience" },
+              { value: "500+", label: "Tons Exported" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p className="text-sm text-[#6B6358]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#2C2518] mb-12 text-center">
-            Why Buy Wholesale from Us
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Why Buy Wholesale from Us
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              We make B2B vanilla sourcing simple, transparent, and reliable.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -99,8 +133,11 @@ export default function WholesalePage() {
                   "FOB Semarang, Jakarta, or Surabaya. Air freight or sea freight options.",
               },
             ].map((item) => (
-              <div key={item.title} className="text-center">
-                <div className="w-14 h-14 bg-[#F0EDE6] rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div
+                key={item.title}
+                className="bg-[#F8F6F2] p-6 rounded-xl border border-[#E5E0D8] text-center hover:shadow-md transition-shadow"
+              >
+                <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 border border-[#E5E0D8]">
                   <item.icon className="w-7 h-7 text-[#B5A37A]" />
                 </div>
                 <h3 className="text-lg font-bold text-[#2C2518] mb-2">
@@ -116,9 +153,15 @@ export default function WholesalePage() {
       {/* Products */}
       <section className="py-16 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#2C2518] mb-12 text-center">
-            Wholesale Vanilla Products
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Wholesale Vanilla Products
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Choose from our range of premium vanilla products. All available
+              at wholesale pricing.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {siteConfig.products.map((product) => (
               <Link
@@ -126,24 +169,32 @@ export default function WholesalePage() {
                 href={`/products/${product.slug}`}
                 className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
               >
+                <div className="relative h-48">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-[#6B6358] mb-4">
+                  <p className="text-[#6B6358] mb-4 text-sm">
                     {product.shortDescription}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {product.certifications.map((cert) => (
                       <span
                         key={cert}
-                        className="px-2 py-1 bg-[#F8F6F2] text-[#6B6358] text-xs font-medium rounded"
+                        className="px-2 py-1 bg-[#F8F6F2] text-[#6B6358] text-xs font-medium rounded border border-[#E5E0D8]"
                       >
                         {cert}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center text-[#B5A37A] font-medium">
+                  <div className="flex items-center text-[#B5A37A] font-medium text-sm">
                     View Details
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -154,18 +205,71 @@ export default function WholesalePage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* How It Works */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#2C2518] mb-12 text-center">
-            Wholesale Pricing
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              How It Works
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              From inquiry to delivery — a simple process.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Request Quote",
+                description: "Tell us your product, quantity, and destination.",
+              },
+              {
+                step: "02",
+                title: "Get Pricing",
+                description: "We send a detailed quote within 24 hours.",
+              },
+              {
+                step: "03",
+                title: "Confirm Order",
+                description: "Approve and we begin processing your order.",
+              },
+              {
+                step: "04",
+                title: "Receive Delivery",
+                description: "Your vanilla ships with full documentation.",
+              },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-16 h-16 bg-[#2C2518] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-[#B5A37A]">
+                    {item.step}
+                  </span>
+                </div>
+                <h3 className="font-bold text-[#2C2518] mb-2">{item.title}</h3>
+                <p className="text-[#6B6358] text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Wholesale Pricing
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Competitive pricing based on your specific requirements.
+            </p>
+          </div>
           <div className="max-w-3xl mx-auto">
-            <div className="bg-[#F8F6F2] rounded-2xl p-8 border border-[#E5E0D8]">
-              <h3 className="text-xl font-bold text-[#2C2518] mb-4">
+            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8]">
+              <h3 className="text-xl font-bold text-[#2C2518] mb-6 text-center">
                 Price Factors
               </h3>
-              <ul className="space-y-3 text-[#6B6358]">
+              <ul className="space-y-4 text-[#6B6358]">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
                   <span>
