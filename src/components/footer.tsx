@@ -82,8 +82,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-stone-400 mb-4">
-              Premium Indonesian vanilla supplier for wholesale, B2B, and direct
-              export. Food Safety Standards with {siteConfig.stats.yearsExperience} years of experience.
+              Your Formula. Our Vanilla. Premium Indonesian vanilla exported to{" "}
+              {siteConfig.stats.countriesServed}+ countries.
             </p>
             <div className="space-y-2">
               <a
