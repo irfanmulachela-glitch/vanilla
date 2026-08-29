@@ -174,7 +174,7 @@ export default function WholesalePage() {
               <Link
                 key={product.id}
                 href={`/products/${product.slug}`}
-                className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <div className="relative h-48">
                   <Image
@@ -184,7 +184,7 @@ export default function WholesalePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
                     {product.name}
                   </h3>
@@ -201,7 +201,7 @@ export default function WholesalePage() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center text-[#B5A37A] font-medium text-sm">
+                  <div className="mt-auto flex items-center text-[#B5A37A] font-medium text-sm">
                     View Details
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
