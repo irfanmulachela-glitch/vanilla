@@ -47,15 +47,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - Dark, premium, clean */}
-      <section className="bg-[#2C2518] overflow-hidden">
+      {/* Hero Section - Light, premium, clean */}
+      <section className="bg-[#F8F6F2] overflow-hidden">
         <div className="grid lg:grid-cols-5 min-h-[600px]">
           {/* Text Content - 2/5 */}
           <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-20 lg:col-span-2">
             <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-4 leading-tight">
               Premium{" "}
               <span className="text-[#B5A37A]">Indonesian</span>{" "}
               Vanilla
@@ -63,23 +63,23 @@ export default function HomePage() {
             <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
               Your Formula. Our Vanilla.
             </p>
-            <p className="text-stone-400 mb-4 leading-relaxed">
-              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Central Java. We source <strong className="text-white">V. planifolia</strong> beans from local smallholder farmers and cure them using traditional 6-9 month sun-drying methods.
+            <p className="text-[#6B6358] mb-4 leading-relaxed">
+              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Central Java. We source <strong className="text-[#2C2518]">V. planifolia</strong> beans from local smallholder farmers and cure them using traditional 6-9 month sun-drying methods.
             </p>
-            <p className="text-stone-400 mb-8 leading-relaxed">
-              We supply <strong className="text-white">Grade A Gourmet</strong> and <strong className="text-white">Grade B Extraction</strong> vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers in <strong className="text-white">20+ countries</strong>. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
+            <p className="text-[#6B6358] mb-8 leading-relaxed">
+              We supply <strong className="text-[#2C2518]">Grade A Gourmet</strong> and <strong className="text-[#2C2518]">Grade B Extraction</strong> vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers in <strong className="text-[#2C2518]">20+ countries</strong>. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
               >
                 Get Free Sample
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border border-white/30 hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
               >
                 View Products
               </Link>
@@ -95,7 +95,7 @@ export default function HomePage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518] via-transparent to-transparent lg:block hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F8F6F2] via-transparent to-transparent lg:block hidden" />
           </div>
         </div>
       </section>
