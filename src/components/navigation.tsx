@@ -41,7 +41,7 @@ export function Navigation() {
           <div className="flex items-center justify-between h-14 lg:h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 lg:w-10 lg:h-10 relative transition-transform duration-300 group-hover:scale-105">
+              <div className="w-9 h-9 lg:w-11 lg:h-11 relative transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
@@ -51,7 +51,7 @@ export function Navigation() {
                   }`}
                 />
               </div>
-              <div className="hidden sm:block w-16 lg:w-20 relative h-4 lg:h-5">
+              <div className="hidden sm:block w-18 lg:w-22 relative h-4.5 lg:h-5.5">
                 <Image
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
@@ -69,7 +69,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-3.5 py-1.5 text-[12px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
+                  className={`relative px-3.5 py-1.5 text-[13px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
                     !scrolled
                       ? "text-[#2C2518]/60 hover:text-[#2C2518]"
                       : "text-white/60 hover:text-white"
@@ -89,7 +89,7 @@ export function Navigation() {
             <div className="flex items-center gap-2.5">
               <Link
                 href="/contact"
-                className={`hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium rounded-full transition-all duration-300 ${
+                className={`hidden sm:inline-flex items-center gap-1.5 px-4.5 py-2 text-xs font-medium rounded-full transition-all duration-300 ${
                   !scrolled
                     ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
                     : "bg-white text-[#2C2518] hover:bg-white/90 hover:shadow-lg hover:shadow-white/20"
@@ -102,7 +102,7 @@ export function Navigation() {
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#B5A37A] text-white text-xs font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30"
+                className="hidden sm:inline-flex items-center gap-1.5 px-4.5 py-2 bg-[#B5A37A] text-white text-xs font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30"
               >
                 WhatsApp
               </Link>
