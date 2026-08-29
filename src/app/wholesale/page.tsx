@@ -140,7 +140,7 @@ export default function WholesalePage() {
                 className="group flex gap-5 bg-[#F8F6F2] p-6 rounded-2xl border border-[#E5E0D8] hover:border-[#B5A37A]/50 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A] transition-colors duration-300">
-                  <item.icon className="w-7 h-7 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
+                  <item.icon className="w-7 h-7 text-[#D4C48A] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#2C2518] mb-1">
@@ -254,7 +254,7 @@ export default function WholesalePage() {
                 <div key={item.step} className="text-center relative">
                   {/* Step circle */}
                   <div className="relative z-10 w-20 h-20 bg-[#2C2518] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                    <span className="text-2xl font-bold text-[#B5A37A]">
+                    <span className="text-2xl font-bold text-[#D4C48A]">
                       {item.step}
                     </span>
                   </div>
