@@ -107,7 +107,7 @@ export default function HomePage() {
             About Us
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
-            A decade of delivering vanilla the world relies on.
+            Your Formula. Our Vanilla. Delivered with precision.
           </h2>
           <p className="text-lg text-[#6B6358] mb-6 max-w-3xl mx-auto leading-relaxed">
             La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods. We work directly with growers — no middlemen — ensuring consistent quality and fair pricing.
