@@ -28,7 +28,7 @@ export const siteConfig = {
       shortDescription: "Premium Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months.",
       description: "Our vanilla beans are sourced directly from Indonesian smallholder farmers and carefully cured using traditional methods. Each bean is hand-picked at peak maturity and sun-dried for 6-9 months to develop optimal vanillin content (1.3-2.7%). Available in Grade A Gourmet and Grade B Extraction grades.",
       category: "beans" as const,
-      image: "/images/vanilla-beans.jpg",
+      image: "/vanilla-beans.jpg",
       specifications: {
         species: "V. planifolia",
         moistureContent: "25-35%",
@@ -48,7 +48,7 @@ export const siteConfig = {
       shortDescription: "Custom composition vanilla paste tailored to your exact specifications.",
       description: "Our vanilla paste is manufactured to your exact requirements. We offer custom formulations with adjustable vanillin concentration, sugar content, and viscosity. Perfect for food manufacturers, bakeries, and beverage companies requiring consistent, high-quality vanilla flavoring.",
       category: "paste" as const,
-      image: "/images/vanilla-paste.jpg",
+      image: "/vanilla-paste.jpg",
       specifications: {
         vanillinContent: "Custom (1.3-2.7%)",
         sugarContent: "Custom (0-65%)",
@@ -68,7 +68,7 @@ export const siteConfig = {
       shortDescription: "100% pure vanilla powder, finely ground from premium cured beans.",
       description: "Our vanilla powder is made from 100% pure cured vanilla beans, finely ground to a consistent mesh size. No fillers, no additives. Ideal for dry mixes, baking blends, and applications where liquid vanilla is not suitable.",
       category: "powder" as const,
-      image: "/images/vanilla-powder.jpg",
+      image: "/vanilla-powder.jpg",
       specifications: {
         meshSize: "40-80 mesh (customizable)",
         vanillinContent: "1.3-2.7%",
