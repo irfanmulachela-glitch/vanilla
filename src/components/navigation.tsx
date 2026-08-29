@@ -38,9 +38,9 @@ export function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 lg:h-16">
+          <div className="flex items-center h-14 lg:h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group mr-auto">
               <div className="w-12 h-12 lg:w-14 lg:h-14 relative transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
@@ -63,67 +63,69 @@ export function Navigation() {
               </div>
             </Link>
 
-            {/* Desktop navigation - pushed right */}
-            <nav className="hidden lg:flex items-center gap-1 mr-6">
-              {navigation.map((item) => (
+            {/* Desktop navigation + CTA grouped right */}
+            <div className="hidden lg:flex items-center gap-6">
+              <nav className="flex items-center gap-1">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
+                      !scrolled
+                        ? "text-[#2C2518]/60 hover:text-[#2C2518]"
+                        : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                    <span
+                      className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full transition-all duration-300 group-hover:w-5 ${
+                        !scrolled ? "bg-[#B5A37A]" : "bg-[#B5A37A]"
+                      }`}
+                    />
+                  </Link>
+                ))}
+              </nav>
+
+              {/* CTA buttons */}
+              <div className="flex items-center gap-2.5">
                 <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`relative px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
+                  href="/contact"
+                  className={`inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
                     !scrolled
-                      ? "text-[#2C2518]/60 hover:text-[#2C2518]"
-                      : "text-white/60 hover:text-white"
+                      ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
+                      : "bg-white text-[#2C2518] hover:bg-white/90 hover:shadow-lg hover:shadow-white/20"
                   }`}
                 >
-                  {item.name}
-                  <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full transition-all duration-300 group-hover:w-5 ${
-                      !scrolled ? "bg-[#B5A37A]" : "bg-[#B5A37A]"
-                    }`}
-                  />
+                  Get Quote
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
-              ))}
-            </nav>
-
-            {/* CTA buttons */}
-            <div className="flex items-center gap-2.5">
-              <Link
-                href="/contact"
-                className={`hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
-                  !scrolled
-                    ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
-                    : "bg-white text-[#2C2518] hover:bg-white/90 hover:shadow-lg hover:shadow-white/20"
-                }`}
-              >
-                Get Quote
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href={`https://wa.me/${siteConfig.social.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#B5A37A] text-white text-sm font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30"
-              >
-                WhatsApp
-              </Link>
-
-              {/* Mobile menu button */}
-              <button
-                type="button"
-                className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${
-                  !scrolled
-                    ? "text-[#2C2518] hover:bg-[#2C2518]/5"
-                    : "text-white hover:bg-white/10"
-                }`}
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-4 h-4" />
-                ) : (
-                  <Menu className="w-4 h-4" />
-                )}
-              </button>
+                <Link
+                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#B5A37A] text-white text-sm font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30"
+                >
+                  WhatsApp
+                </Link>
+              </div>
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              className={`lg:hidden p-2 rounded-lg transition-all duration-300 ml-4 ${
+                !scrolled
+                  ? "text-[#2C2518] hover:bg-[#2C2518]/5"
+                  : "text-white hover:bg-white/10"
+              }`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? (
+                <X className="w-4 h-4" />
+              ) : (
+                <Menu className="w-4 h-4" />
+              )}
+            </button>
           </div>
         </div>
 
