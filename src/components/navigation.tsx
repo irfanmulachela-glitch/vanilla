@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
@@ -20,8 +19,6 @@ const navigation = [
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -32,9 +29,9 @@ export function Navigation() {
 
   return (
     <>
-      {/* Top bar - hidden on homepage for cleaner hero */}
-      {!isHome && (
-        <div className="bg-[#2C2518] text-white text-sm">
+      {/* Top bar - hidden when not scrolled */}
+      {!scrolled && (
+        <div className="bg-[#F8F6F2] text-[#6B6358] text-sm border-b border-[#E5E0D8]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-10">
               <div className="flex items-center gap-4">
@@ -55,7 +52,7 @@ export function Navigation() {
                   <span>{siteConfig.social.email}</span>
                 </a>
               </div>
-              <div className="hidden sm:flex items-center gap-4 text-stone-400">
+              <div className="hidden sm:flex items-center gap-4 text-[#6B6358]/70">
                 <span>Quality Assured</span>
                 <span>|</span>
                 <span>Export to {siteConfig.stats.countriesServed} Countries</span>
@@ -68,7 +65,7 @@ export function Navigation() {
       {/* Main navigation */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isHome && !scrolled
+          !scrolled
             ? "bg-[#F8F6F2] border-b border-[#E5E0D8]"
             : "bg-[#2C2518] border-b border-[#3D3425]"
         }`}
@@ -83,7 +80,7 @@ export function Navigation() {
                   alt="La Vanilla Supplier"
                   fill
                   className={`object-contain transition-all duration-300 ${
-                    isHome && !scrolled ? "" : "brightness-0 invert"
+                    !scrolled ? "" : "brightness-0 invert"
                   }`}
                 />
               </div>
@@ -93,7 +90,7 @@ export function Navigation() {
                   alt="La Vanilla Supplier"
                   fill
                   className={`object-contain object-left transition-all duration-300 ${
-                    isHome && !scrolled ? "" : "brightness-0 invert"
+                    !scrolled ? "" : "brightness-0 invert"
                   }`}
                 />
               </div>
@@ -106,7 +103,7 @@ export function Navigation() {
                   key={item.name}
                   href={item.href}
                   className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                    isHome && !scrolled
+                    !scrolled
                       ? "text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F0ECE4]"
                       : "text-stone-300 hover:text-white hover:bg-white/10"
                   }`}
@@ -121,7 +118,7 @@ export function Navigation() {
               <Link
                 href="/contact"
                 className={`hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  isHome && !scrolled
+                  !scrolled
                     ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
                     : "bg-white text-[#2C2518] hover:bg-stone-100"
                 }`}
@@ -141,7 +138,7 @@ export function Navigation() {
               <button
                 type="button"
                 className={`lg:hidden p-2 rounded-lg transition-colors ${
-                  isHome && !scrolled
+                  !scrolled
                     ? "text-[#2C2518] hover:bg-[#F0ECE4]"
                     : "text-white hover:bg-white/10"
                 }`}
@@ -160,17 +157,17 @@ export function Navigation() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className={`lg:hidden border-t ${
-            isHome && !scrolled ? "border-[#E5E0D8]" : "border-white/10"
+            !scrolled ? "border-[#E5E0D8]" : "border-white/10"
           }`}>
             <div className={`px-4 py-4 space-y-1 ${
-              isHome && !scrolled ? "bg-[#F8F6F2]" : "bg-[#2C2518]"
+              !scrolled ? "bg-[#F8F6F2]" : "bg-[#2C2518]"
             }`}>
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 text-base font-medium rounded-lg ${
-                    isHome && !scrolled
+                    !scrolled
                       ? "text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F0ECE4]"
                       : "text-stone-300 hover:text-white hover:bg-white/10"
                   }`}
@@ -183,7 +180,7 @@ export function Navigation() {
                 <Link
                   href="/contact"
                   className={`block w-full text-center px-4 py-3 font-medium rounded-lg ${
-                    isHome && !scrolled
+                    !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
                       : "bg-white text-[#2C2518] hover:bg-stone-100"
                   }`}
