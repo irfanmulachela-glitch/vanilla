@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 const navigation = [
@@ -29,39 +29,6 @@ export function Navigation() {
 
   return (
     <>
-      {/* Top bar - hidden when not scrolled */}
-      {!scrolled && (
-        <div className="bg-[#F8F6F2] text-[#6B6358] text-sm border-b border-[#E5E0D8]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-10">
-              <div className="flex items-center gap-4">
-                <a
-                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 hover:text-[#B5A37A] transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>{siteConfig.social.whatsapp}</span>
-                </a>
-                <a
-                  href={`mailto:${siteConfig.social.email}`}
-                  className="flex items-center gap-1.5 hover:text-[#B5A37A] transition-colors"
-                >
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>{siteConfig.social.email}</span>
-                </a>
-              </div>
-              <div className="hidden sm:flex items-center gap-4 text-[#6B6358]/70">
-                <span>Quality Assured</span>
-                <span>|</span>
-                <span>Export to {siteConfig.stats.countriesServed} Countries</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Main navigation */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
