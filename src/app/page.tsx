@@ -63,8 +63,11 @@ export default function HomePage() {
             <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
               Your Formula. Our Vanilla.
             </p>
-            <p className="text-stone-400 mb-8 leading-relaxed max-w-md">
-              Direct from Central Java. Grade A & B beans, custom vanilla paste, and pure powder. Export-ready to 20+ countries. MOQ 25kg.
+            <p className="text-stone-400 mb-4 leading-relaxed">
+              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Central Java. We source <strong className="text-white">V. planifolia</strong> beans from local smallholder farmers and cure them using traditional 6-9 month sun-drying methods.
+            </p>
+            <p className="text-stone-400 mb-8 leading-relaxed">
+              We supply <strong className="text-white">Grade A Gourmet</strong> and <strong className="text-white">Grade B Extraction</strong> vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers in <strong className="text-white">20+ countries</strong>. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -536,9 +539,10 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "La Vanilla Supplier - Premium Indonesian Vanilla",
+            description: "Direct Indonesian vanilla supplier. Grade A & B beans, custom vanilla paste, pure powder. Export to 20+ countries. MOQ 25kg. Halal certified.",
             speakable: {
               "@type": "SpeakableSpecification",
-              cssSelector: [".speakable-heading", ".speakable-text"],
+              cssSelector: ["h1", ".speakable-text"],
             },
           }),
         }}
