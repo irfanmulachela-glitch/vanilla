@@ -21,7 +21,7 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 150);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -31,10 +31,10 @@ export function Navigation() {
     <>
       {/* Main navigation */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
           !scrolled
-            ? "bg-[#F8F6F2]/80 backdrop-blur-xl border-b border-[#E5E0D8]/60"
-            : "bg-[#2C2518]/95 backdrop-blur-xl border-b border-[#3D3425] shadow-lg shadow-black/10"
+            ? "bg-[#F8F6F2]/90 backdrop-blur-md border-b border-[#E5E0D8]/40"
+            : "bg-[#2C2518]/95 backdrop-blur-xl border-b border-[#3D3425]/50 shadow-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
