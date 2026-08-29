@@ -47,67 +47,53 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - Clean, light, premium */}
-      <section className="relative bg-[#F8F6F2] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/10 rounded-full mb-6">
-                <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
-                <span className="text-sm font-medium text-[#2C2518]">
-                  Quality Assured • 10+ Years Export Experience
-                </span>
-              </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-6 leading-tight">
-                Premium Indonesian{" "}
-                <span className="text-[#B5A37A]">Vanilla</span>{" "}
-                Supplier
+      {/* Hero Section - Dark, premium, clean */}
+      <section className="bg-[#2C2518] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 min-h-[600px]">
+            {/* Text Content - 2/5 */}
+            <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-20 lg:col-span-2">
+              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+                Indonesia&apos;s #1 Vanilla Supplier
+              </p>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
+                Premium{" "}
+                <span className="text-[#B5A37A]">Indonesian</span>{" "}
+                Vanilla
               </h1>
-              <p className="text-lg text-[#B5A37A] font-medium mb-2 italic">
+              <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
                 Your Formula. Our Vanilla.
               </p>
-              <p className="text-lg text-[#6B6358] mb-8 max-w-lg leading-relaxed">
-                La Vanilla Supplier is an Indonesian vanilla supplier based in Central Java, providing Grade A and Grade B vanilla beans, vanilla paste, and vanilla powder to food manufacturers and distributors in 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya.
+              <p className="text-stone-400 mb-8 leading-relaxed max-w-md">
+                Direct from Central Java. Grade A & B beans, custom vanilla paste, and pure powder. Export-ready to 20+ countries. MOQ 25kg.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
                 >
-                  Request a Quote
+                  Get Free Sample
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   href="/products"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border border-white/30 hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
                 >
                   View Products
                 </Link>
               </div>
             </div>
-            <div className="relative hidden lg:block">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1631206846301-7d2e0d1e5a9e?w=800"
-                  alt="Premium Indonesian vanilla beans"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-sm border border-[#E5E0D8]">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-[#F0EDE6] rounded-lg flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-[#B5A37A]" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-[#2C2518]">
-                      {siteConfig.stats.countriesServed}
-                    </p>
-                    <p className="text-sm text-[#6B6358]">Countries Served</p>
-                  </div>
-                </div>
-              </div>
+
+            {/* Image - 3/5 */}
+            <div className="relative lg:col-span-3 min-h-[400px] lg:min-h-full">
+              <Image
+                src="/wholesale-hero.jpeg"
+                alt="Premium Indonesian vanilla beans being sorted at our facility in Central Java"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518] via-transparent to-transparent lg:block hidden" />
             </div>
           </div>
         </div>
