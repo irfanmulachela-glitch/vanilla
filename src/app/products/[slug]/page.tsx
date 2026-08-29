@@ -260,11 +260,11 @@ export default async function ProductPage({ params }: PageProps) {
                 href={`https://wa.me/${siteConfig.social.whatsapp}?text=Hi, I'm interested in ${product.name}. Can you provide more details?`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-[#25D366] text-white rounded-2xl p-5 text-center hover:bg-[#128C7E] transition-colors"
+                className="block bg-[#2C2518] text-white rounded-2xl p-5 text-center hover:bg-[#3D3425] transition-colors border border-[#B5A37A]/30"
               >
-                <MessageSquare className="w-6 h-6 mx-auto mb-2" />
+                <MessageSquare className="w-6 h-6 mx-auto mb-2 text-[#B5A37A]" />
                 <p className="font-semibold text-sm">Chat on WhatsApp</p>
-                <p className="text-xs text-white/80">Instant response</p>
+                <p className="text-xs text-[#B5A37A]">Instant response</p>
               </a>
 
               {/* Testimonial */}
