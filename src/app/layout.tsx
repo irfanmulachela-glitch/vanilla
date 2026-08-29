@@ -72,7 +72,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
       </head>
-      <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900">
+      <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900 overflow-x-hidden">
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
