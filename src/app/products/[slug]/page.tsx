@@ -69,8 +69,8 @@ export default async function ProductPage({ params }: PageProps) {
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">
             {product.name}
           </h1>
-          <p className="text-stone-300 max-w-2xl mb-6">
-            {product.shortDescription}
+          <p className="text-stone-300 max-w-2xl mb-6 leading-relaxed">
+            {product.description}
           </p>
           <div className="flex flex-wrap gap-2">
             {product.certifications.map((cert) => (
