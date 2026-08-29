@@ -65,10 +65,10 @@ export default function HomePage() {
               Your Formula. Our Vanilla.
             </p>
             <p className="text-[#6B6358] mb-3 leading-relaxed">
-              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods.
+              Direct from Java. Premium Vanilla planifolia beans cured for 6-9 months using traditional sun-drying methods. Grade A Gourmet and Grade B Extraction available.
             </p>
             <p className="text-[#6B6358] mb-7 leading-relaxed">
-              We export Grade A Gourmet and Grade B Extraction vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
+              We export to food manufacturers and distributors across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -109,8 +109,11 @@ export default function HomePage() {
           <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
             A decade of delivering vanilla the world relies on.
           </h2>
-          <p className="text-lg text-[#6B6358] mb-12 max-w-3xl mx-auto leading-relaxed">
-            PT Penta Pelita Semesta was founded in Java, Indonesia with a single obsession — to source and cure vanilla beans so consistent, so reliable, that our clients never need to second-guess their supplier.
+          <p className="text-lg text-[#6B6358] mb-6 max-w-3xl mx-auto leading-relaxed">
+            La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods. We work directly with growers — no middlemen — ensuring consistent quality and fair pricing.
+          </p>
+          <p className="text-sm text-[#6B6358]/70 mb-12">
+            Operated by PT Penta Pelita Semesta — Registered Indonesian Company
           </p>
 
           {/* Animated Stats */}
