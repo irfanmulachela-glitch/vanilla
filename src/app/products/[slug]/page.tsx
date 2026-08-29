@@ -92,7 +92,7 @@ export default async function ProductPage({ params }: PageProps) {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Product Image */}
             <div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[#E5E0D8]">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#F8F6F2]">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -104,8 +104,8 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
 
             {/* Quick Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-[#2C2518] mb-6">
+            <div className="flex flex-col justify-center">
+              <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
                 Quick Overview
               </h2>
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -117,15 +117,15 @@ export default async function ProductPage({ params }: PageProps) {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="p-4 rounded-lg border border-[#E5E0D8] bg-[#F8F6F2]"
+                    className="p-5 rounded-xl border border-[#D8D3C9] bg-white hover:border-[#B5A37A]/50 transition-colors"
                   >
                     <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3">
                       <stat.icon className="w-5 h-5 text-[#B5A37A]" />
                     </div>
-                    <p className="font-semibold text-[#2C2518] text-sm">
+                    <p className="font-semibold text-[#2C2518]">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-[#6B6358]">{stat.label}</p>
+                    <p className="text-xs text-[#6B6358] mt-0.5">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -134,7 +134,7 @@ export default async function ProductPage({ params }: PageProps) {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
-                  className="flex-1 inline-flex items-center justify-center px-6 py-3.5 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+                  className="flex-1 inline-flex items-center justify-center px-6 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
                 >
                   Request Quote
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -143,7 +143,7 @@ export default async function ProductPage({ params }: PageProps) {
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center px-6 py-3.5 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
+                  className="flex-1 inline-flex items-center justify-center px-6 py-4 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
                 >
                   <MessageSquare className="mr-2 w-4 h-4" />
                   WhatsApp
@@ -160,17 +160,17 @@ export default async function ProductPage({ params }: PageProps) {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Specs Table */}
             <div className="lg:col-span-2">
-              <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+              <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
                 Technical Specifications
               </h2>
-              <div className="bg-white rounded-xl border border-[#E5E0D8] overflow-hidden">
+              <div className="bg-white rounded-2xl border border-[#D8D3C9] overflow-hidden">
                 <table className="w-full">
-                  <thead className="bg-[#F8F6F2]">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-sm font-semibold text-[#2C2518] border-b border-[#E5E0D8]">
+                  <thead>
+                    <tr className="border-b border-[#E5E0D8]">
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-[#6B6358] uppercase tracking-wider">
                         Specification
                       </th>
-                      <th className="px-6 py-3 text-left text-sm font-semibold text-[#2C2518] border-b border-[#E5E0D8]">
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-[#6B6358] uppercase tracking-wider">
                         Value
                       </th>
                     </tr>
@@ -180,18 +180,14 @@ export default async function ProductPage({ params }: PageProps) {
                       ([key, value], index) => (
                         <tr
                           key={key}
-                          className={
-                            index % 2 === 0
-                              ? "bg-white"
-                              : "bg-[#F8F6F2]/50"
-                          }
+                          className="border-b border-[#E5E0D8]/50 last:border-0 hover:bg-[#F8F6F2]/50 transition-colors"
                         >
-                          <td className="px-6 py-3 text-sm font-medium text-[#2C2518] border-b border-[#E5E0D8]/50">
+                          <td className="px-6 py-4 text-sm font-medium text-[#2C2518]">
                             {key
                               .replace(/([A-Z])/g, " $1")
                               .replace(/^./, (str) => str.toUpperCase())}
                           </td>
-                          <td className="px-6 py-3 text-sm text-[#6B6358] border-b border-[#E5E0D8]/50">
+                          <td className="px-6 py-4 text-sm text-[#6B6358]">
                             {value}
                           </td>
                         </tr>
@@ -205,28 +201,28 @@ export default async function ProductPage({ params }: PageProps) {
             {/* Sidebar */}
             <div className="space-y-4">
               {/* Quote Card */}
-              <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
-                <h3 className="font-bold text-[#2C2518] mb-2">
+              <div className="bg-[#2C2518] rounded-2xl p-6 text-white">
+                <h3 className="font-semibold mb-2">
                   Get a Quote
                 </h3>
-                <p className="text-sm text-[#6B6358] mb-4">
+                <p className="text-sm text-stone-300 mb-4">
                   Tell us your quantity and requirements. We&apos;ll respond
                   within 24 hours.
                 </p>
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-4 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors"
+                  className="block w-full text-center px-4 py-3 bg-[#B5A37A] text-white font-medium rounded-xl hover:bg-[#A8956A] transition-colors"
                 >
                   Request Quote
                 </Link>
               </div>
 
               {/* Trust Card */}
-              <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
-                <h3 className="font-bold text-[#2C2518] mb-4">
+              <div className="bg-white rounded-2xl p-6 border border-[#D8D3C9]">
+                <h3 className="font-semibold text-[#2C2518] mb-4">
                   Why Buy From Us
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {[
                     {
                       icon: Shield,
@@ -245,7 +241,7 @@ export default async function ProductPage({ params }: PageProps) {
                     },
                   ].map((item) => (
                     <div key={item.title} className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-9 h-9 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
                         <item.icon className="w-4 h-4 text-[#B5A37A]" />
                       </div>
                       <div>
@@ -264,15 +260,15 @@ export default async function ProductPage({ params }: PageProps) {
                 href={`https://wa.me/${siteConfig.social.whatsapp}?text=Hi, I'm interested in ${product.name}. Can you provide more details?`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-[#2C2518] text-white rounded-xl p-5 text-center hover:bg-[#3D3425] transition-colors"
+                className="block bg-[#25D366] text-white rounded-2xl p-5 text-center hover:bg-[#128C7E] transition-colors"
               >
-                <MessageSquare className="w-6 h-6 mx-auto mb-2 text-[#B5A37A]" />
-                <p className="font-bold text-sm">Chat on WhatsApp</p>
-                <p className="text-xs text-stone-400">Instant response</p>
+                <MessageSquare className="w-6 h-6 mx-auto mb-2" />
+                <p className="font-semibold text-sm">Chat on WhatsApp</p>
+                <p className="text-xs text-white/80">Instant response</p>
               </a>
 
               {/* Testimonial */}
-              <div className="bg-white rounded-xl p-5 border border-[#E5E0D8]">
+              <div className="bg-white rounded-2xl p-5 border border-[#D8D3C9]">
                 <div className="flex mb-2">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star
@@ -281,12 +277,19 @@ export default async function ProductPage({ params }: PageProps) {
                     />
                   ))}
                 </div>
-                <p className="text-sm text-[#6B6358] italic mb-2">
+                <p className="text-sm text-[#6B6358] italic mb-3 leading-relaxed">
                   &ldquo;The vanillin content and aroma were exactly as
                   promised. Safe to say we are hooked.&rdquo;
                 </p>
-                <p className="text-xs font-medium text-[#2C2518]">Sophie</p>
-                <p className="text-xs text-[#6B6358]">Budapest, Hungary</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-[#F8F6F2] rounded-full flex items-center justify-center">
+                    <span className="text-xs font-semibold text-[#2C2518]">S</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium text-[#2C2518]">Sophie</p>
+                    <p className="text-xs text-[#6B6358]">Budapest, Hungary</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -296,7 +299,7 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Key Features */}
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+          <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
             Key Features
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -324,15 +327,15 @@ export default async function ProductPage({ params }: PageProps) {
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="p-4 rounded-xl border border-[#E5E0D8] bg-[#F8F6F2]"
+                className="p-5 rounded-2xl border border-[#D8D3C9] bg-[#F8F6F2] hover:border-[#B5A37A]/50 transition-colors"
               >
-                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3">
+                <div className="w-10 h-10 bg-[#2C2518] rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-5 h-5 text-[#B5A37A]" />
                 </div>
-                <h3 className="font-semibold text-[#2C2518] text-sm mb-1">
+                <h3 className="font-semibold text-[#2C2518] mb-1.5">
                   {feature.title}
                 </h3>
-                <p className="text-[#6B6358] text-xs leading-relaxed">
+                <p className="text-[#6B6358] text-sm leading-relaxed">
                   {feature.desc}
                 </p>
               </div>
