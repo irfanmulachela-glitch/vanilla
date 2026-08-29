@@ -52,21 +52,21 @@ export default function HomePage() {
         <div className="grid lg:grid-cols-5 min-h-[550px]">
           {/* Text Content - 40% */}
           <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-14 py-16 lg:py-20 lg:col-span-2">
-            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-3">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-4 leading-tight">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-3 leading-[1.1]">
               Premium{" "}
               <span className="text-[#B5A37A]">Indonesian Vanilla</span>{" "}
               Supplier
             </h1>
-            <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
+            <p className="text-lg text-[#B5A37A] font-medium mb-5 italic">
               Your Formula. Our Vanilla.
             </p>
-            <p className="text-[#6B6358] mb-4 leading-relaxed">
+            <p className="text-[#6B6358] mb-3 leading-relaxed">
               La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods.
             </p>
-            <p className="text-[#6B6358] mb-8 leading-relaxed">
+            <p className="text-[#6B6358] mb-7 leading-relaxed">
               We export Grade A Gourmet and Grade B Extraction vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -99,37 +99,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="bg-white border-b border-[#E5E0D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* About Us Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+            About Us
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
+            A decade of delivering vanilla the world relies on.
+          </h2>
+          <p className="text-lg text-[#6B6358] mb-12 max-w-3xl mx-auto leading-relaxed">
+            PT Penta Pelita Semesta was founded in Java, Indonesia with a single obsession — to source and cure vanilla beans so consistent, so reliable, that our clients never need to second-guess their supplier.
+          </p>
+
+          {/* Animated Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {[
-              {
-                icon: ShieldCheck,
-                label: "Quality Assured",
-                value: "Food Safety",
-              },
-              {
-                icon: Globe,
-                label: "Global Export",
-                value: `${siteConfig.stats.countriesServed} Countries`,
-              },
-              {
-                icon: Award,
-                label: "Experience",
-                value: `${siteConfig.stats.yearsExperience} Years`,
-              },
-              { icon: Users, label: "Happy Clients", value: "30+" },
-            ].map((item) => (
-              <div key={item.label} className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#F0EDE6] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-[#B5A37A]" />
-                </div>
-                <div>
-                  <p className="font-semibold text-[#2C2518]">{item.value}</p>
-                  <p className="text-sm text-[#6B6358]">{item.label}</p>
-                </div>
+              { value: 10, suffix: "+", label: "Years Experience" },
+              { value: 500, suffix: "+", label: "Tons Exported" },
+              { value: 20, suffix: "+", label: "Countries Served" },
+              { value: 30, suffix: "+", label: "Happy Clients" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-2">
+                  <span>{stat.value}</span>
+                  <span className="text-[#B5A37A]">{stat.suffix}</span>
+                </p>
+                <p className="text-sm text-[#6B6358]">{stat.label}</p>
               </div>
+            ))}
+          </div>
+
+          {/* Certification Badges */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              "Quality Assured",
+              "Halal Certified",
+              "Full Documentation",
+              "Phytosanitary",
+            ].map((badge) => (
+              <span
+                key={badge}
+                className="px-5 py-2.5 bg-[#F8F6F2] text-[#2C2518] text-sm font-medium rounded-full border border-[#E5E0D8]"
+              >
+                {badge}
+              </span>
             ))}
           </div>
         </div>
