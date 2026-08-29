@@ -38,10 +38,10 @@ export function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-14 lg:h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 relative transition-transform duration-300 group-hover:scale-105">
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="w-8 h-8 lg:w-10 lg:h-10 relative transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
                   alt="La Vanilla Supplier"
@@ -51,7 +51,7 @@ export function Navigation() {
                   }`}
                 />
               </div>
-              <div className="hidden sm:block w-20 lg:w-24 relative h-5 lg:h-6">
+              <div className="hidden sm:block w-16 lg:w-20 relative h-4 lg:h-5">
                 <Image
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
@@ -64,20 +64,20 @@ export function Navigation() {
             </Link>
 
             {/* Desktop navigation */}
-            <nav className="hidden lg:flex items-center gap-0.5">
+            <nav className="hidden lg:flex items-center gap-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300 group ${
+                  className={`relative px-3.5 py-1.5 text-[12px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
                     !scrolled
-                      ? "text-[#2C2518]/70 hover:text-[#2C2518]"
-                      : "text-white/70 hover:text-white"
+                      ? "text-[#2C2518]/60 hover:text-[#2C2518]"
+                      : "text-white/60 hover:text-white"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-6 ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full transition-all duration-300 group-hover:w-5 ${
                       !scrolled ? "bg-[#B5A37A]" : "bg-[#B5A37A]"
                     }`}
                   />
@@ -86,23 +86,23 @@ export function Navigation() {
             </nav>
 
             {/* CTA buttons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5">
               <Link
                 href="/contact"
-                className={`hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
+                className={`hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium rounded-full transition-all duration-300 ${
                   !scrolled
                     ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
                     : "bg-white text-[#2C2518] hover:bg-white/90 hover:shadow-lg hover:shadow-white/20"
                 }`}
               >
                 Get Quote
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <Link
                 href={`https://wa.me/${siteConfig.social.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#B5A37A] text-white text-sm font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30 hover:scale-[1.02]"
+                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#B5A37A] text-white text-xs font-medium rounded-full hover:bg-[#A8956A] transition-all duration-300 hover:shadow-lg hover:shadow-[#B5A37A]/30"
               >
                 WhatsApp
               </Link>
@@ -110,7 +110,7 @@ export function Navigation() {
               {/* Mobile menu button */}
               <button
                 type="button"
-                className={`lg:hidden p-2.5 rounded-xl transition-all duration-300 ${
+                className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${
                   !scrolled
                     ? "text-[#2C2518] hover:bg-[#2C2518]/5"
                     : "text-white hover:bg-white/10"
@@ -118,9 +118,9 @@ export function Navigation() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4" />
                 ) : (
-                  <Menu className="w-5 h-5" />
+                  <Menu className="w-4 h-4" />
                 )}
               </button>
             </div>
@@ -139,7 +139,7 @@ export function Navigation() {
             }`}
           >
             <div
-              className={`px-4 py-6 space-y-1 ${
+              className={`px-4 py-5 space-y-0.5 ${
                 !scrolled ? "bg-white" : "bg-[#2C2518]"
               }`}
             >
@@ -147,10 +147,10 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 ${
+                  className={`block px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
                     !scrolled
-                      ? "text-[#2C2518]/80 hover:text-[#2C2518] hover:bg-[#B5A37A]/10"
-                      : "text-white/80 hover:text-white hover:bg-white/10"
+                      ? "text-[#2C2518]/70 hover:text-[#2C2518] hover:bg-[#B5A37A]/10"
+                      : "text-white/70 hover:text-white hover:bg-white/10"
                   }`}
                   style={{
                     transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
@@ -160,10 +160,10 @@ export function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3">
+              <div className="pt-3 space-y-2">
                 <Link
                   href="/contact"
-                  className={`flex items-center justify-center gap-2 w-full px-4 py-3.5 font-medium rounded-xl transition-all duration-300 ${
+                  className={`flex items-center justify-center gap-1.5 w-full px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
                     !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
                       : "bg-white text-[#2C2518] hover:bg-white/90"
@@ -171,13 +171,13 @@ export function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-[#B5A37A] text-white font-medium rounded-xl hover:bg-[#A8956A] transition-all duration-300"
+                  className="flex items-center justify-center gap-1.5 w-full px-3 py-2.5 text-sm bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-all duration-300"
                 >
                   WhatsApp Us
                 </Link>
@@ -188,7 +188,7 @@ export function Navigation() {
       </header>
 
       {/* Spacer to prevent content from going under fixed navbar */}
-      <div className="h-16 lg:h-20" />
+      <div className="h-14 lg:h-16" />
     </>
   );
 }
