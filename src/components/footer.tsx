@@ -173,16 +173,10 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="/privacy"
+                href="/quality"
                 className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
-              >
-                Terms of Service
+                Quality Policy
               </Link>
             </div>
           </div>

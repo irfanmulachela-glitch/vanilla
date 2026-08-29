@@ -206,18 +206,29 @@ export default function DubaiPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "La Vanilla Supplier - Dubai",
+            "@type": "Organization",
+            name: siteConfig.name,
             description:
-              "Premium Indonesian vanilla supplier in Dubai, UAE. Halal certified.",
+              "Premium Indonesian vanilla supplier serving Dubai, UAE. Halal certified.",
             url: `${siteConfig.url}/suppliers/dubai`,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Dubai",
-              addressRegion: "UAE",
-              addressCountry: "AE",
+            areaServed: [
+              { "@type": "City", name: "Dubai" },
+              { "@type": "City", name: "Abu Dhabi" },
+              { "@type": "City", name: "Sharjah" },
+              { "@type": "Country", name: "UAE" },
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Vanilla Products for UAE",
+              itemListElement: siteConfig.products.map((p) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Product",
+                  name: p.name,
+                  description: p.shortDescription,
+                },
+              })),
             },
-            areaServed: ["Dubai", "Abu Dhabi", "Sharjah", "UAE", "GCC"],
           }),
         }}
       />

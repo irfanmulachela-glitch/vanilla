@@ -53,6 +53,9 @@ export default function HomePage() {
                 <span className="text-[#B5A37A]">Vanilla</span>{" "}
                 Supplier
               </h1>
+              <p className="text-lg text-[#B5A37A] font-medium mb-2 italic">
+                Your Formula. Our Vanilla.
+              </p>
               <p className="text-lg text-[#6B6358] mb-8 max-w-lg leading-relaxed">
                 La Vanilla Supplier is an Indonesian vanilla supplier based in Central Java, providing Grade A and Grade B vanilla beans, vanilla paste, and vanilla powder to food manufacturers and distributors in 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya.
               </p>
@@ -542,6 +545,24 @@ export default function HomePage() {
             speakable: {
               "@type": "SpeakableSpecification",
               cssSelector: [".speakable-heading", ".speakable-text"],
+            },
+          }),
+        }}
+      />
+
+      {/* WebSite Schema for Sitelinks Searchbox */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: siteConfig.name,
+            url: siteConfig.url,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${siteConfig.url}/search?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
             },
           }),
         }}

@@ -19,6 +19,9 @@ export default function AboutPage() {
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               About La Vanilla Supplier
             </h1>
+            <p className="text-lg text-[#B5A37A] font-medium mb-2 italic">
+              Your Formula. Our Vanilla.
+            </p>
             <p className="text-lg text-stone-700">
               Indonesian vanilla supplier based in Central Java, providing
               premium natural vanilla to global markets with consistent quality
@@ -276,12 +279,32 @@ export default function AboutPage() {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             name: "About La Vanilla Supplier",
-            description: "Learn about our vanilla export business",
+            description: "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier",
             url: `${siteConfig.url}/about`,
             mainEntity: {
               "@type": "Organization",
               name: siteConfig.name,
               description: siteConfig.description,
+              url: siteConfig.url,
+              logo: `${siteConfig.url}/logo.png`,
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Surakarta",
+                addressRegion: "Central Java",
+                addressCountry: "ID",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: siteConfig.social.whatsapp,
+                contactType: "sales",
+                availableLanguage: ["English", "Indonesian"],
+              },
+              areaServed: ["UAE", "Australia", "USA", "Europe"],
+              hasCredential: [
+                "Quality Assured",
+                "Halal Certified",
+                "Phytosanitary Certified",
+              ],
             },
           }),
         }}

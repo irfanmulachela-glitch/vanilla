@@ -206,18 +206,29 @@ export default function SydneyPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "La Vanilla Supplier - Sydney",
+            "@type": "Organization",
+            name: siteConfig.name,
             description:
-              "Premium Indonesian vanilla supplier in Sydney, Australia.",
+              "Premium Indonesian vanilla supplier serving Sydney, Australia.",
             url: `${siteConfig.url}/suppliers/sydney`,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Sydney",
-              addressRegion: "NSW",
-              addressCountry: "AU",
+            areaServed: [
+              { "@type": "City", name: "Sydney" },
+              { "@type": "City", name: "Melbourne" },
+              { "@type": "City", name: "Perth" },
+              { "@type": "Country", name: "Australia" },
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Vanilla Products for Australia",
+              itemListElement: siteConfig.products.map((p) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Product",
+                  name: p.name,
+                  description: p.shortDescription,
+                },
+              })),
             },
-            areaServed: ["Sydney", "Melbourne", "Perth", "Australia"],
           }),
         }}
       />

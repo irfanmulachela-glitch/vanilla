@@ -67,7 +67,7 @@ export default async function ProductPage({ params }: PageProps) {
             ← Back to Products
           </Link>
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-            {product.name}
+            {product.name} — Premium Indonesian {product.category === "beans" ? "Vanilla Beans" : product.category === "paste" ? "Vanilla Paste" : "Vanilla Powder"} for Wholesale & B2B
           </h1>
           <p className="text-stone-300 max-w-2xl mb-6 leading-relaxed">
             {product.description}

@@ -206,18 +206,29 @@ export default function NewYorkPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "La Vanilla Supplier - New York",
+            "@type": "Organization",
+            name: siteConfig.name,
             description:
-              "Premium Indonesian vanilla supplier in New York, USA.",
+              "Premium Indonesian vanilla supplier serving New York, USA.",
             url: `${siteConfig.url}/suppliers/new-york`,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "New York",
-              addressRegion: "NY",
-              addressCountry: "US",
+            areaServed: [
+              { "@type": "City", name: "New York" },
+              { "@type": "City", name: "Los Angeles" },
+              { "@type": "City", name: "Chicago" },
+              { "@type": "Country", name: "USA" },
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Vanilla Products for USA",
+              itemListElement: siteConfig.products.map((p) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Product",
+                  name: p.name,
+                  description: p.shortDescription,
+                },
+              })),
             },
-            areaServed: ["New York", "Los Angeles", "Chicago", "USA"],
           }),
         }}
       />

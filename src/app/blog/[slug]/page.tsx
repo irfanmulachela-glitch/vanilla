@@ -869,6 +869,31 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Related Products */}
+      <section className="bg-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Explore Our Products
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {siteConfig.products.map((product) => (
+              <Link
+                key={product.id}
+                href={`/products/${product.slug}`}
+                className="p-4 bg-[#F8F6F2] rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+              >
+                <h3 className="font-semibold text-[#2C2518]">
+                  {product.name}
+                </h3>
+                <p className="text-sm text-[#6B6358] mt-1">
+                  {product.shortDescription}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Posts */}
       <section className="bg-[#F8F6F2] py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -907,6 +932,7 @@ export default async function BlogPostPage({ params }: Props) {
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
+            dateModified: post.date,
             author: {
               "@type": "Organization",
               name: siteConfig.name,
@@ -923,6 +949,8 @@ export default async function BlogPostPage({ params }: Props) {
               "@type": "WebPage",
               "@id": `${siteConfig.url}/blog/${slug}`,
             },
+            image: `${siteConfig.url}/og-image.jpg`,
+            keywords: [post.category, "vanilla supplier Indonesia", "wholesale vanilla"],
           }),
         }}
       />
