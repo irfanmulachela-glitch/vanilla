@@ -33,8 +33,8 @@ export function Navigation() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
           !scrolled
-            ? "bg-[#F8F6F2]/90 backdrop-blur-md border-b border-[#E5E0D8]/40"
-            : "bg-[#2C2518]/95 backdrop-blur-xl border-b border-[#3D3425]/50 shadow-sm"
+            ? "bg-transparent border-b border-transparent"
+            : "bg-[#2C2518] border-b border-[#3D3425]/30 shadow-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,12 +135,12 @@ export function Navigation() {
         >
           <div
             className={`border-t ${
-              !scrolled ? "border-[#E5E0D8]/60" : "border-white/10"
+              !scrolled ? "border-[#2C2518]/10" : "border-white/10"
             }`}
           >
             <div
               className={`px-4 py-6 space-y-1 ${
-                !scrolled ? "bg-[#F8F6F2]" : "bg-[#2C2518]"
+                !scrolled ? "bg-white" : "bg-[#2C2518]"
               }`}
             >
               {navigation.map((item, index) => (
