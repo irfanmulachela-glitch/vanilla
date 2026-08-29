@@ -47,11 +47,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section - Light, premium, clean */}
-      <section className="bg-[#F8F6F2] overflow-hidden">
-        <div className="grid lg:grid-cols-5 min-h-[600px]">
-          {/* Text Content - 2/5 */}
-          <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-20 lg:col-span-2">
+      {/* Hero Section - Light, clean, side by side */}
+      <section className="bg-[#F8F6F2]">
+        <div className="grid lg:grid-cols-2 min-h-[550px]">
+          {/* Text Content - 50% */}
+          <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
             <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
@@ -86,8 +86,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Image - 3/5, full width to right edge */}
-          <div className="relative lg:col-span-3 min-h-[400px] lg:min-h-full">
+          {/* Image - 50%, full bleed, no outline */}
+          <div className="relative min-h-[400px] lg:min-h-full">
             <Image
               src="/wholesale-hero.jpeg"
               alt="Premium Indonesian vanilla beans being sorted at our facility in Central Java"
@@ -95,7 +95,6 @@ export default function HomePage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F8F6F2] via-transparent to-transparent lg:block hidden" />
           </div>
         </div>
       </section>
