@@ -15,7 +15,7 @@ import {
   Clock,
   Award,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -417,6 +417,20 @@ export default async function ProductPage({ params }: PageProps) {
               })
             ),
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Products", url: "/products" },
+              { name: product.name, url: `/products/${product.slug}` },
+            ])
+          ),
         }}
       />
     </>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, User, ArrowLeft, Clock, Tag } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { notFound } from "next/navigation";
 
 const blogPosts = {
@@ -952,6 +952,20 @@ export default async function BlogPostPage({ params }: Props) {
             image: `${siteConfig.url}/og-image.jpg`,
             keywords: [post.category, "vanilla supplier Indonesia", "wholesale vanilla"],
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Blog", url: "/blog" },
+              { name: post.title, url: `/blog/${slug}` },
+            ])
+          ),
         }}
       />
     </>

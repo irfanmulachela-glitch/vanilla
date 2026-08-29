@@ -9,7 +9,7 @@ import {
   Package,
   FileCheck,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Vanilla Supplier Sydney | Wholesale Vanilla Beans Australia",
@@ -23,6 +23,15 @@ export const metadata: Metadata = {
     "vanilla beans Perth",
     "vanilla paste manufacturer Australia",
   ],
+  alternates: {
+    canonical: "/suppliers/sydney",
+  },
+  openGraph: {
+    title: "Vanilla Supplier Sydney | Wholesale Vanilla Beans Australia",
+    description: "Premium Indonesian vanilla supplier in Sydney, Australia.",
+    url: "https://lavanillasupplier.com/suppliers/sydney",
+    type: "website",
+  },
 };
 
 export default function SydneyPage() {
@@ -232,6 +241,17 @@ export default function SydneyPage() {
           }),
         }}
       />
-    </>
-  );
-}
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Export Regions", url: "/regions" },
+              { name: "Sydney, Australia", url: "/suppliers/sydney" },
+            ])
+          ),
+        }}
+      />

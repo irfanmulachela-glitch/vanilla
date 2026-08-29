@@ -1,12 +1,28 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MessageSquare } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "FAQ - Frequently Asked Questions",
   description:
     "Answers to common questions about ordering vanilla beans, paste, and powder. MOQ, shipping, certifications, payment terms, and more.",
+  keywords: [
+    "vanilla supplier FAQ",
+    "vanilla beans ordering",
+    "wholesale vanilla MOQ",
+    "vanilla shipping",
+    "vanilla certifications",
+  ],
+  alternates: {
+    canonical: "/faq",
+  },
+  openGraph: {
+    title: "FAQ - La Vanilla Supplier",
+    description: "Answers to common questions about ordering vanilla beans, paste, and powder.",
+    url: "https://lavanillasupplier.com/faq",
+    type: "website",
+  },
 };
 
 const faqs = [
@@ -232,6 +248,19 @@ export default function FAQPage() {
               }))
             ),
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "FAQ", url: "/faq" },
+            ])
+          ),
         }}
       />
     </>

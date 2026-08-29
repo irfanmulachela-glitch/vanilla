@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Indonesian Vanilla Bean Comparison | Grade A vs Grade B Specs",
@@ -14,6 +14,15 @@ export const metadata: Metadata = {
     "Indonesian vanilla moisture content",
     "vanilla vanillin content",
   ],
+  alternates: {
+    canonical: "/comparison",
+  },
+  openGraph: {
+    title: "Indonesian Vanilla Bean Comparison | Grade A vs Grade B",
+    description: "Technical comparison of Grade A gourmet vs Grade B extraction vanilla beans.",
+    url: "https://lavanillasupplier.com/comparison",
+    type: "website",
+  },
 };
 
 export default function ComparisonPage() {
@@ -298,6 +307,19 @@ export default function ComparisonPage() {
               "Technical comparison of Grade A vs Grade B vanilla beans",
             url: `${siteConfig.url}/comparison`,
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Comparison", url: "/comparison" },
+            ])
+          ),
         }}
       />
     </>

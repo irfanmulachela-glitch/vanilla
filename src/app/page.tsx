@@ -15,7 +15,7 @@ import {
   FileCheck,
   MapPin,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
@@ -32,6 +32,16 @@ export const metadata: Metadata = {
     "best vanilla supplier",
     "bulk vanilla beans",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
+    description: "Indonesia's trusted vanilla supplier. Grade A & B beans, vanilla paste, powder. Export to 20+ countries.",
+    url: "https://lavanillasupplier.com",
+    siteName: "La Vanilla Supplier",
+    type: "website",
+  },
 };
 
 export default function HomePage() {
@@ -565,6 +575,18 @@ export default function HomePage() {
               "query-input": "required name=search_term_string",
             },
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+            ])
+          ),
         }}
       />
     </>

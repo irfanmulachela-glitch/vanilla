@@ -15,7 +15,7 @@ import {
   Boxes,
   Handshake,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Indonesia | Bulk Vanilla Supplier",
@@ -29,6 +29,15 @@ export const metadata: Metadata = {
     "vanilla powder wholesale",
     "B2B vanilla supplier",
   ],
+  alternates: {
+    canonical: "/wholesale",
+  },
+  openGraph: {
+    title: "Wholesale Vanilla Beans Indonesia | Bulk Supplier",
+    description: "Premium wholesale vanilla beans from Indonesia. MOQ 25kg. Direct from source.",
+    url: "https://lavanillasupplier.com/wholesale",
+    type: "website",
+  },
 };
 
 export default function WholesalePage() {
@@ -369,6 +378,19 @@ export default function WholesalePage() {
               offerCount: "3",
             },
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Wholesale", url: "/wholesale" },
+            ])
+          ),
         }}
       />
     </>

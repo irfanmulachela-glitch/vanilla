@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Shield, Leaf, Award, FileCheck, Truck } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "The La Vanilla Standard | Quality Framework for Vanilla Supply",
@@ -279,6 +279,19 @@ export default function LaVanillaStandardPage() {
               "@id": `${siteConfig.url}/la-vanilla-standard`,
             },
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "The La Vanilla Standard", url: "/la-vanilla-standard" },
+            ])
+          ),
         }}
       />
     </>

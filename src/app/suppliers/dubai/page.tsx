@@ -9,7 +9,7 @@ import {
   Package,
   FileCheck,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Vanilla Supplier Dubai | Wholesale Vanilla Beans UAE",
@@ -23,6 +23,15 @@ export const metadata: Metadata = {
     "vanilla beans Abu Dhabi",
     "vanilla paste manufacturer UAE",
   ],
+  alternates: {
+    canonical: "/suppliers/dubai",
+  },
+  openGraph: {
+    title: "Vanilla Supplier Dubai | Wholesale Vanilla Beans UAE",
+    description: "Premium Indonesian vanilla supplier in Dubai, UAE. Halal certified.",
+    url: "https://lavanillasupplier.com/suppliers/dubai",
+    type: "website",
+  },
 };
 
 export default function DubaiPage() {
@@ -232,6 +241,17 @@ export default function DubaiPage() {
           }),
         }}
       />
-    </>
-  );
-}
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Export Regions", url: "/regions" },
+              { name: "Dubai, UAE", url: "/suppliers/dubai" },
+            ])
+          ),
+        }}
+      />

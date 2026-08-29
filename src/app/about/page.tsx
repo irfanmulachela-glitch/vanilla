@@ -1,12 +1,21 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2, Users, Globe, Award, Leaf } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "About Us - Our Story & Mission",
   description:
     "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier based in Central Java. Premium natural vanilla for global markets.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About La Vanilla Supplier",
+    description: "Indonesia's trusted vanilla supplier based in Central Java. Premium natural vanilla for global markets.",
+    url: "https://lavanillasupplier.com/about",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
@@ -307,6 +316,19 @@ export default function AboutPage() {
               ],
             },
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "About", url: "/about" },
+            ])
+          ),
         }}
       />
     </>

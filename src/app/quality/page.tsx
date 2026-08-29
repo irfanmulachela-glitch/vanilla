@@ -8,12 +8,27 @@ import {
   FlaskConical,
   Microscope,
 } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Quality & Certifications - Food Safety Standards, Halal, Phytosanitary",
   description:
     "Our commitment to quality: Food Safety Standards processing, Halal certified, Phytosanitary compliance. Full documentation for every shipment.",
+  keywords: [
+    "vanilla quality certifications",
+    "halal vanilla supplier",
+    "phytosanitary certificate vanilla",
+    "food safety vanilla",
+  ],
+  alternates: {
+    canonical: "/quality",
+  },
+  openGraph: {
+    title: "Quality & Certifications - La Vanilla Supplier",
+    description: "Food Safety Standards, Halal certified, Phytosanitary compliance. Full documentation.",
+    url: "https://lavanillasupplier.com/quality",
+    type: "website",
+  },
 };
 
 export default function QualityPage() {
@@ -266,6 +281,19 @@ export default function QualityPage() {
             description: "Quality-assured vanilla processing facility",
             url: `${siteConfig.url}/quality`,
           }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Quality & Certifications", url: "/quality" },
+            ])
+          ),
         }}
       />
     </>
