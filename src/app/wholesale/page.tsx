@@ -36,13 +36,14 @@ export default function WholesalePage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1600"
+            src="/wholesale-hero.jpeg"
             alt=""
             fill
-            className="object-cover"
+            className="object-cover opacity-40"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/90 via-[#2C2518]/70 to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
