@@ -69,7 +69,7 @@ export function Navigation() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isHome && !scrolled
-            ? "bg-[#2C2518]/90 backdrop-blur-md border-b border-white/10"
+            ? "bg-[#F8F6F2] border-b border-[#E5E0D8]"
             : "bg-[#2C2518] border-b border-[#3D3425]"
         }`}
       >
@@ -82,7 +82,9 @@ export function Navigation() {
                   src="/logo.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain brightness-0 invert"
+                  className={`object-contain transition-all duration-300 ${
+                    isHome && !scrolled ? "" : "brightness-0 invert"
+                  }`}
                 />
               </div>
               <div className="hidden sm:block w-24 lg:w-28 relative h-6 lg:h-7">
@@ -90,7 +92,9 @@ export function Navigation() {
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain object-left brightness-0 invert"
+                  className={`object-contain object-left transition-all duration-300 ${
+                    isHome && !scrolled ? "" : "brightness-0 invert"
+                  }`}
                 />
               </div>
             </Link>
@@ -103,7 +107,7 @@ export function Navigation() {
                   href={item.href}
                   className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                     isHome && !scrolled
-                      ? "text-white/90 hover:text-white hover:bg-white/10"
+                      ? "text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F0ECE4]"
                       : "text-stone-300 hover:text-white hover:bg-white/10"
                   }`}
                 >
@@ -116,7 +120,11 @@ export function Navigation() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center px-4 py-2 bg-white text-[#2C2518] text-sm font-medium rounded-lg hover:bg-stone-100 transition-colors"
+                className={`hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  isHome && !scrolled
+                    ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
+                    : "bg-white text-[#2C2518] hover:bg-stone-100"
+                }`}
               >
                 Get Quote
               </Link>
@@ -132,7 +140,11 @@ export function Navigation() {
               {/* Mobile menu button */}
               <button
                 type="button"
-                className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg"
+                className={`lg:hidden p-2 rounded-lg transition-colors ${
+                  isHome && !scrolled
+                    ? "text-[#2C2518] hover:bg-[#F0ECE4]"
+                    : "text-white hover:bg-white/10"
+                }`}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
@@ -147,13 +159,21 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/10">
-            <div className="px-4 py-4 space-y-1">
+          <div className={`lg:hidden border-t ${
+            isHome && !scrolled ? "border-[#E5E0D8]" : "border-white/10"
+          }`}>
+            <div className={`px-4 py-4 space-y-1 ${
+              isHome && !scrolled ? "bg-[#F8F6F2]" : "bg-[#2C2518]"
+            }`}>
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-stone-300 hover:text-white hover:bg-white/10 rounded-lg"
+                  className={`block px-3 py-2 text-base font-medium rounded-lg ${
+                    isHome && !scrolled
+                      ? "text-[#6B6358] hover:text-[#B5A37A] hover:bg-[#F0ECE4]"
+                      : "text-stone-300 hover:text-white hover:bg-white/10"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -162,7 +182,11 @@ export function Navigation() {
               <div className="pt-4 space-y-2">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-4 py-3 bg-white text-[#2C2518] font-medium rounded-lg hover:bg-stone-100"
+                  className={`block w-full text-center px-4 py-3 font-medium rounded-lg ${
+                    isHome && !scrolled
+                      ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
+                      : "bg-white text-[#2C2518] hover:bg-stone-100"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
