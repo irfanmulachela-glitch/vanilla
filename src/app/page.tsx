@@ -49,25 +49,25 @@ export default function HomePage() {
     <>
       {/* Hero Section - Light, clean, side by side */}
       <section className="bg-[#F8F6F2]">
-        <div className="grid lg:grid-cols-2 min-h-[550px]">
-          {/* Text Content - 50% */}
-          <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
+        <div className="grid lg:grid-cols-5 min-h-[550px]">
+          {/* Text Content - 40% */}
+          <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-14 py-16 lg:py-20 lg:col-span-2">
             <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-4 leading-tight">
               Premium{" "}
-              <span className="text-[#B5A37A]">Indonesian</span>{" "}
-              Vanilla
+              <span className="text-[#B5A37A]">Indonesian Vanilla</span>{" "}
+              Supplier
             </h1>
             <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
               Your Formula. Our Vanilla.
             </p>
             <p className="text-[#6B6358] mb-4 leading-relaxed">
-              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Central Java. We source <strong className="text-[#2C2518]">V. planifolia</strong> beans from local smallholder farmers and cure them using traditional 6-9 month sun-drying methods.
+              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods.
             </p>
             <p className="text-[#6B6358] mb-8 leading-relaxed">
-              We supply <strong className="text-[#2C2518]">Grade A Gourmet</strong> and <strong className="text-[#2C2518]">Grade B Extraction</strong> vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers in <strong className="text-[#2C2518]">20+ countries</strong>. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
+              We export Grade A Gourmet and Grade B Extraction vanilla beans, custom vanilla paste, and 100% pure vanilla powder to food manufacturers, distributors, and artisan producers across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -86,11 +86,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Image - 50%, full bleed, no outline */}
-          <div className="relative min-h-[400px] lg:min-h-full">
+          {/* Image - 60%, full bleed, no outline */}
+          <div className="relative min-h-[400px] lg:min-h-full lg:col-span-3">
             <Image
               src="/wholesale-hero.jpeg"
-              alt="Premium Indonesian vanilla beans being sorted at our facility in Central Java"
+              alt="Premium Indonesian vanilla beans being sorted at our facility in Java"
               fill
               className="object-cover"
               priority
@@ -537,8 +537,8 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "La Vanilla Supplier - Premium Indonesian Vanilla",
-            description: "Direct Indonesian vanilla supplier. Grade A & B beans, custom vanilla paste, pure powder. Export to 20+ countries. MOQ 25kg. Halal certified.",
+            name: "La Vanilla Supplier - Premium Indonesian Vanilla Supplier",
+            description: "Direct Indonesian vanilla supplier based in Java. Grade A Gourmet and Grade B Extraction vanilla beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 25kg. Halal certified.",
             speakable: {
               "@type": "SpeakableSpecification",
               cssSelector: ["h1", ".speakable-text"],
