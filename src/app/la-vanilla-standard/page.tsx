@@ -93,12 +93,6 @@ export default function LaVanillaStandardPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#B5A37A]/20 rounded-full mb-6">
-              <Shield className="w-4 h-4 text-[#B5A37A]" />
-              <span className="text-sm font-medium text-[#B5A37A]">
-                Our Quality Framework
-              </span>
-            </div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
               The La Vanilla{" "}
               <span className="text-[#B5A37A]">Standard</span>
