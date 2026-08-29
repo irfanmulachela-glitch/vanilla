@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { OverlayScrollbar } from "@/components/scrollbar";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -73,6 +74,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900 overflow-x-hidden">
+        <OverlayScrollbar />
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
