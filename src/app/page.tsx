@@ -49,52 +49,50 @@ export default function HomePage() {
     <>
       {/* Hero Section - Dark, premium, clean */}
       <section className="bg-[#2C2518] overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-5 min-h-[600px]">
-            {/* Text Content - 2/5 */}
-            <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-20 lg:col-span-2">
-              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
-                Indonesia&apos;s #1 Vanilla Supplier
-              </p>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
-                Premium{" "}
-                <span className="text-[#B5A37A]">Indonesian</span>{" "}
-                Vanilla
-              </h1>
-              <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
-                Your Formula. Our Vanilla.
-              </p>
-              <p className="text-stone-400 mb-8 leading-relaxed max-w-md">
-                Direct from Central Java. Grade A & B beans, custom vanilla paste, and pure powder. Export-ready to 20+ countries. MOQ 25kg.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
-                >
-                  Get Free Sample
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/products"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border border-white/30 hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
-                >
-                  View Products
-                </Link>
-              </div>
+        <div className="grid lg:grid-cols-5 min-h-[600px]">
+          {/* Text Content - 2/5 */}
+          <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-12 py-16 lg:py-20 lg:col-span-2">
+            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+              Indonesia&apos;s #1 Vanilla Supplier
+            </p>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight">
+              Premium{" "}
+              <span className="text-[#B5A37A]">Indonesian</span>{" "}
+              Vanilla
+            </h1>
+            <p className="text-lg text-[#B5A37A] font-medium mb-6 italic">
+              Your Formula. Our Vanilla.
+            </p>
+            <p className="text-stone-400 mb-8 leading-relaxed max-w-md">
+              Direct from Central Java. Grade A & B beans, custom vanilla paste, and pure powder. Export-ready to 20+ countries. MOQ 25kg.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
+              >
+                Get Free Sample
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border border-white/30 hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+              >
+                View Products
+              </Link>
             </div>
+          </div>
 
-            {/* Image - 3/5 */}
-            <div className="relative lg:col-span-3 min-h-[400px] lg:min-h-full">
-              <Image
-                src="/wholesale-hero.jpeg"
-                alt="Premium Indonesian vanilla beans being sorted at our facility in Central Java"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518] via-transparent to-transparent lg:block hidden" />
-            </div>
+          {/* Image - 3/5, full width to right edge */}
+          <div className="relative lg:col-span-3 min-h-[400px] lg:min-h-full">
+            <Image
+              src="/wholesale-hero.jpeg"
+              alt="Premium Indonesian vanilla beans being sorted at our facility in Central Java"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518] via-transparent to-transparent lg:block hidden" />
           </div>
         </div>
       </section>
