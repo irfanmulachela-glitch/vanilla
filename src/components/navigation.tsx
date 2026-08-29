@@ -82,7 +82,7 @@ export function Navigation() {
                   src="/logo.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain"
+                  className="object-contain brightness-0 invert"
                 />
               </div>
               <div className="hidden sm:block w-24 lg:w-28 relative h-6 lg:h-7">
@@ -90,7 +90,7 @@ export function Navigation() {
                   src="/logo-text.png"
                   alt="La Vanilla Supplier"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left brightness-0 invert"
                 />
               </div>
             </Link>
