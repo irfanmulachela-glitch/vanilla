@@ -38,7 +38,7 @@ export function OverlayScrollbar() {
       style={{ opacity: isScrolling ? 1 : 0 }}
     >
       <div
-        className="w-full rounded-full bg-white/30 backdrop-blur-sm transition-all duration-150"
+        className="w-full rounded-full bg-gray-400/40 backdrop-blur-sm transition-all duration-150"
         style={{
           height: `${Math.max(20, 100 - scrollProgress)}%`,
           transform: `translateY(${scrollProgress}%)`,
