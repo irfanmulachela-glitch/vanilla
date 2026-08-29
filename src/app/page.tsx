@@ -16,6 +16,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { AnimatedCounter } from "@/components/animated-counter";
 
 export const metadata: Metadata = {
   title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
@@ -122,8 +123,7 @@ export default function HomePage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-2">
-                  <span>{stat.value}</span>
-                  <span className="text-[#B5A37A]">{stat.suffix}</span>
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-sm text-[#6B6358]">{stat.label}</p>
               </div>
