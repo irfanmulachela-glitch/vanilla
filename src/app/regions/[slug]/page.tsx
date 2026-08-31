@@ -173,6 +173,15 @@ export async function generateMetadata({
     title: `Vanilla Supplier ${region.name} - Premium Indonesian Vanilla`,
     description: region.description,
     keywords: region.keywords,
+    alternates: {
+      canonical: `/regions/${slug}`,
+    },
+    openGraph: {
+      title: `Vanilla Supplier ${region.name} | La Vanilla Supplier`,
+      description: region.description,
+      url: `${siteConfig.url}/regions/${slug}`,
+      type: "website",
+    },
   };
 }
 

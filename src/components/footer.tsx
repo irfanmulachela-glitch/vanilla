@@ -17,9 +17,9 @@ const footerLinks = {
     { name: "FAQ", href: "/faq" },
   ],
   regions: [
-    { name: "Dubai, UAE", href: "/suppliers/dubai" },
-    { name: "Sydney, Australia", href: "/suppliers/sydney" },
-    { name: "New York, USA", href: "/suppliers/new-york" },
+    { name: "Dubai, UAE", href: "/regions/uae" },
+    { name: "Sydney, Australia", href: "/regions/australia" },
+    { name: "New York, USA", href: "/regions/usa" },
     { name: "Europe", href: "/regions/europe" },
   ],
 };

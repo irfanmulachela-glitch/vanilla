@@ -55,11 +55,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const supplierPages = [
-    { url: `${baseUrl}/suppliers/dubai`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${baseUrl}/suppliers/sydney`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${baseUrl}/suppliers/new-york`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-  ];
-
-  return [...staticPages, ...productPages, ...regionPages, ...blogPages, ...supplierPages];
+  return [...staticPages, ...productPages, ...regionPages, ...blogPages];
 }

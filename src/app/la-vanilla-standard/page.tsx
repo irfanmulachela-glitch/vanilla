@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   title: "The La Vanilla Standard | Quality Framework for Vanilla Supply",
   description:
     "The La Vanilla Standard is our 5-step quality framework for vanilla sourcing, grading, and export. Learn how we ensure consistent quality for B2B buyers worldwide.",
+  alternates: {
+    canonical: "/la-vanilla-standard",
+  },
+  openGraph: {
+    title: "The La Vanilla Standard | La Vanilla Supplier",
+    description:
+      "Our 5-step quality framework for vanilla sourcing, grading, and export.",
+    url: `${siteConfig.url}/la-vanilla-standard`,
+    siteName: siteConfig.name,
+    type: "website",
+  },
 };
 
 const steps = [

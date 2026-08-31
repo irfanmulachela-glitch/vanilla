@@ -754,6 +754,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -949,7 +952,7 @@ export default async function BlogPostPage({ params }: Props) {
               "@type": "WebPage",
               "@id": `${siteConfig.url}/blog/${slug}`,
             },
-            image: `${siteConfig.url}/og-image.jpg`,
+            image: `${siteConfig.url}/og-image.png`,
             keywords: [post.category, "vanilla supplier Indonesia", "wholesale vanilla"],
           }),
         }}

@@ -44,6 +44,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       "wholesale vanilla",
       "B2B vanilla",
     ],
+    alternates: {
+      canonical: `/products/${slug}`,
+    },
+    openGraph: {
+      title: `${product.name} - La Vanilla Supplier`,
+      description: product.shortDescription,
+      url: `${siteConfig.url}/products/${slug}`,
+      type: "website",
+    },
   };
 }
 

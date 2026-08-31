@@ -451,7 +451,7 @@ export default function HomePage() {
               <p className="text-sm text-[#6B6358]">Bulk orders from 25kg</p>
             </Link>
             <Link
-              href="/suppliers/dubai"
+              href="/regions/uae"
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -459,7 +459,7 @@ export default function HomePage() {
               <p className="text-sm text-[#6B6358]">Halal certified supply</p>
             </Link>
             <Link
-              href="/suppliers/sydney"
+              href="/regions/australia"
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -467,7 +467,7 @@ export default function HomePage() {
               <p className="text-sm text-[#6B6358]">Food safety compliant</p>
             </Link>
             <Link
-              href="/suppliers/new-york"
+              href="/regions/usa"
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />

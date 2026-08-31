@@ -7,6 +7,17 @@ export const metadata: Metadata = {
   title: "Blog - Vanilla Industry Insights & Guides",
   description:
     "Expert insights on vanilla sourcing, quality testing, export documentation, and market trends. Your guide to the global vanilla trade.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | La Vanilla Supplier",
+    description:
+      "Expert insights on vanilla sourcing, quality testing, export documentation, and market trends.",
+    url: `${siteConfig.url}/blog`,
+    siteName: siteConfig.name,
+    type: "website",
+  },
 };
 
 const blogPosts = [

@@ -9,6 +9,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/suppliers/dubai",
+        destination: "/regions/uae",
+        permanent: true,
+      },
+      {
+        source: "/suppliers/sydney",
+        destination: "/regions/australia",
+        permanent: true,
+      },
+      {
+        source: "/suppliers/new-york",
+        destination: "/regions/usa",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
