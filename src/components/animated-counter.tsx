@@ -13,15 +13,23 @@ export function AnimatedCounter({
   suffix = "",
   duration = 2000,
 }: AnimatedCounterProps) {
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const finalText = `${value}${suffix}`;
 
+  // SSR renders the final value. On mount, reset to 0 so the
+  // animation has something to count up from.
+  const [display, setDisplay] = useState(finalText);
+
   useEffect(() => {
+    // Mark mounted and reset to 0 so the count-up can begin.
+    setHasMounted(true);
+    setDisplay(`0${suffix}`);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
+        if (entry.isIntersecting) {
+          observer.disconnect();
           const start = 0;
           const end = value;
           const startTime = performance.now();
@@ -31,9 +39,7 @@ export function AnimatedCounter({
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = Math.floor(start + (end - start) * eased);
-            if (ref.current) {
-              ref.current.textContent = `${current}${suffix}`;
-            }
+            setDisplay(`${current}${suffix}`);
 
             if (progress < 1) {
               requestAnimationFrame(animate);
@@ -43,16 +49,16 @@ export function AnimatedCounter({
           requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0 }
     );
 
     const el = ref.current;
     if (el) observer.observe(el);
 
     return () => {
-      if (el) observer.unobserve(el);
+      observer.disconnect();
     };
-  }, [value, duration, hasAnimated, suffix]);
+  }, [value, duration, suffix]);
 
-  return <span ref={ref}>{finalText}</span>;
+  return <span ref={ref}>{display}</span>;
 }
