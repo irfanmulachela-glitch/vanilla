@@ -388,6 +388,43 @@ export default function GradeSelector() {
           </div>
         </div>
       </section>
+
+      {/* Other Products */}
+      <section className="bg-[#F8F6F2] py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Other Products
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {siteConfig.products
+              .filter((p) => p.slug !== "vanilla-beans")
+              .map((p) => (
+                <Link
+                  key={p.id}
+                  href={`/products/${p.slug}`}
+                  className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={p.image}
+                      alt={p.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
+                      {p.name}
+                    </h3>
+                    <p className="text-sm text-[#6B6358] mt-1 line-clamp-2">
+                      {p.shortDescription}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
