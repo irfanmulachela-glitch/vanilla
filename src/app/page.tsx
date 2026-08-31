@@ -5,14 +5,11 @@ import {
   ShieldCheck,
   Globe,
   Award,
-  Truck,
-  Leaf,
   Users,
   ArrowRight,
   CheckCircle2,
   Star,
   Package,
-  FileCheck,
   MapPin,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
@@ -216,84 +213,81 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gradient-to-br from-[#F8F6F2] via-white to-[#F8F6F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="bg-[#F8F6F2]" aria-labelledby="why-choose-heading">
+        <div className="grid lg:grid-cols-2 min-h-[600px]">
+          {/* Left panel — dark with heading + image */}
+          <div className="bg-[#2C2518] flex flex-col justify-between p-8 sm:p-12 lg:p-16">
             <div>
-              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
-                Why Choose Us
+              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-6">
+                Why La Vanilla Supplier
               </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
-                Why Global Buyers{" "}
-                <span className="text-[#B5A37A]">Choose Us</span>
+              <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white/90 leading-[1.15] mb-8">
+                There are hundreds of vanilla suppliers in Indonesia.
               </h2>
-              <p className="text-lg text-[#6B6358] mb-10 leading-relaxed">
-                With over a decade of experience exporting Indonesian vanilla to
-                the world, we understand what B2B buyers need: consistency,
-                transparency, and reliable supply.
+              <p className="text-xl sm:text-2xl font-medium text-white/40 leading-snug mb-8">
+                Finding one that consistently delivers quality — that&apos;s the hard part.
               </p>
-              <div className="space-y-5">
-                {[
-                  {
-                    icon: Leaf,
-                    title: "Direct from Source",
-                    description:
-                      "We work directly with Indonesian farmers, ensuring fair trade practices and full traceability from farm to shipment.",
-                  },
-                  {
-                    icon: Package,
-                    title: "Verified Physical Stock",
-                    description:
-                      "No middlemen. We maintain our own inventory with video call verification available for all wholesale partners.",
-                  },
-                  {
-                    icon: FileCheck,
-                    title: "Complete Documentation",
-                    description:
-                      "Every shipment includes phytosanitary certificates, certificate of origin, and full food safety compliance documentation.",
-                  },
-                  {
-                    icon: Truck,
-                    title: "Flexible Shipping",
-                    description:
-                      "FOB Semarang, Jakarta, or Surabaya, CIF, or DDP — we ship via DHL, FedEx, or air cargo.",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={item.title}
-                    className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A] transition-colors duration-300">
-                      <item.icon className="w-5 h-5 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#2C2518] mb-1.5 group-hover:text-[#B5A37A] transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      <p className="text-[#6B6358] text-sm leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <div className="w-12 h-[2px] bg-[#B5A37A] mb-8" />
+              <p className="text-white/60 text-sm leading-relaxed max-w-md">
+                There are hundreds of vanilla suppliers in Indonesia. Very few
+                have the consistency, transparency, and long-term commitment
+                that serious importers need.
+              </p>
             </div>
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[#2C2518]/10">
-                <Image
-                  src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800"
-                  alt="Vanilla processing facility"
-                  width={600}
-                  height={400}
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C2518]/40 to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#2C2518] text-white rounded-2xl p-6 shadow-xl">
-                <p className="text-3xl font-bold">500+</p>
-                <p className="text-[#B5A37A] text-sm font-medium">Tons Exported</p>
-              </div>
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#B5A37A]/20 rounded-full blur-2xl" />
+            <div className="mt-10 relative rounded-xl overflow-hidden h-48 sm:h-56">
+              <Image
+                src="/why-choose-us.jpg"
+                alt="Vanilla beans being sorted and prepared for export at our facility in Java, Indonesia"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right panel — numbered proof rows */}
+          <div className="bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+            <div className="space-y-0">
+              {[
+                {
+                  num: "01",
+                  title: "Direct from Source",
+                  body: "We work directly with Indonesian farmers, ensuring fair trade practices and full traceability from farm to shipment.",
+                },
+                {
+                  num: "02",
+                  title: "Verified Physical Stock",
+                  body: "No middlemen. We maintain our own inventory with video call verification available for all wholesale partners.",
+                },
+                {
+                  num: "03",
+                  title: "Complete Documentation",
+                  body: "Every shipment includes phytosanitary certificates, certificate of origin, and full food safety compliance documentation.",
+                },
+                {
+                  num: "04",
+                  title: "Flexible Shipping",
+                  body: "FOB Semarang, Jakarta, or Surabaya, CIF, or DDP — we ship via DHL, FedEx, or air cargo.",
+                },
+              ].map((item, i) => (
+                <div
+                  key={item.num}
+                  className={`flex gap-5 sm:gap-6 py-7 ${
+                    i < 3 ? "border-b border-[#E5E0D8]" : ""
+                  }`}
+                >
+                  <span className="text-2xl sm:text-3xl font-medium text-[#B5A37A] leading-none pt-0.5 w-8 sm:w-10 flex-shrink-0">
+                    {item.num}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-base sm:text-lg font-medium text-[#2C2518] mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-[#6B6358] leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -13,15 +13,15 @@ export function AnimatedCounter({
   suffix = "",
   duration = 2000,
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
-  const hasAnimated = useRef(false);
+  const finalText = `${value}${suffix}`;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
           const start = 0;
           const end = value;
           const startTime = performance.now();
@@ -31,7 +31,9 @@ export function AnimatedCounter({
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = Math.floor(start + (end - start) * eased);
-            setCount(current);
+            if (ref.current) {
+              ref.current.textContent = `${current}${suffix}`;
+            }
 
             if (progress < 1) {
               requestAnimationFrame(animate);
@@ -44,17 +46,13 @@ export function AnimatedCounter({
       { threshold: 0.5 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    const el = ref.current;
+    if (el) observer.observe(el);
 
-    return () => observer.disconnect();
-  }, [value, duration]);
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, [value, duration, hasAnimated, suffix]);
 
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  );
+  return <span ref={ref}>{finalText}</span>;
 }
