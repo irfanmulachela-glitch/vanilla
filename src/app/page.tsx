@@ -514,11 +514,16 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            logo: `${siteConfig.url}/logo.png`,
-            description: siteConfig.description,
+            "@type": "Organization",
+            "@id": "https://www.lavanillasupplier.com/#organization",
+            name: "La Vanilla Supplier",
+            legalName: "PT Penta Pelita Semesta",
+            url: "https://www.lavanillasupplier.com",
+            logo: "https://www.lavanillasupplier.com/logo.png",
+            description:
+              "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Minimum order 25 kg. FOB Semarang, Jakarta or Surabaya.",
+            email: "admin@lavanillasupplier.com",
+            telephone: "+62-878-3575-6945",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Surakarta",
@@ -527,61 +532,35 @@ export default function HomePage() {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: siteConfig.social.whatsapp,
+              telephone: "+62-878-3575-6945",
+              email: "admin@lavanillasupplier.com",
               contactType: "sales",
               availableLanguage: ["English", "Indonesian"],
             },
-            areaServed: [
-              "UAE",
-              "Australia",
-              "USA",
-              "Europe",
-              "Singapore",
-              "Malaysia",
-              "Japan",
-              "South Korea",
+            areaServed: ["AE", "AU", "US", "NL", "FR", "DE", "SG", "MY", "JP", "KR"],
+            knowsAbout: [
+              "Vanilla planifolia",
+              "vanilla bean curing",
+              "vanillin content",
+              "vanilla export documentation",
+              "phytosanitary certification",
+              "Indonesian vanilla",
             ],
-            hasCredential: [
-              "Quality Assured",
-              "Halal Certified",
-              "Phytosanitary Certified",
-            ],
-            priceRange: "$$",
-            openingHours: "Mo-Fr 08:00-17:00",
           }),
         }}
       />
 
-      {/* Speakable Schema for Voice Search */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "La Vanilla Supplier - Premium Indonesian Vanilla Supplier",
-            description: "Direct Indonesian vanilla supplier based in Java. Grade A Gourmet and Grade B Extraction vanilla beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 25kg. Halal certified.",
-            speakable: {
-              "@type": "SpeakableSpecification",
-              cssSelector: ["h1", ".speakable-text"],
-            },
-          }),
-        }}
-      />
-
-      {/* WebSite Schema for Sitelinks Searchbox */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: siteConfig.name,
-            url: siteConfig.url,
-            potentialAction: {
-              "@type": "SearchAction",
-              target: `${siteConfig.url}/search?q={search_term_string}`,
-              "query-input": "required name=search_term_string",
+            "@id": "https://www.lavanillasupplier.com/#website",
+            name: "La Vanilla Supplier",
+            url: "https://www.lavanillasupplier.com",
+            publisher: {
+              "@id": "https://www.lavanillasupplier.com/#organization",
             },
           }),
         }}

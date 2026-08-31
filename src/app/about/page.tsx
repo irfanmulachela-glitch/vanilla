@@ -308,9 +308,8 @@ export default function AboutPage() {
                 contactType: "sales",
                 availableLanguage: ["English", "Indonesian"],
               },
-              areaServed: ["UAE", "Australia", "USA", "Europe"],
+              areaServed: ["AE", "AU", "US", "NL", "FR", "DE", "SG", "MY", "JP", "KR"],
               hasCredential: [
-                "Quality Assured",
                 "Halal Certified",
                 "Phytosanitary Certified",
               ],

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "La Vanilla Supplier",
   description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. Food Safety Standards. 10+ years experience shipping to 20+ countries.",
-  url: "https://lavanillasupplier.com",
+  url: "https://www.lavanillasupplier.com",
   ogImage: "/og-image.png",
   keywords: [
     "vanilla supplier Indonesia",

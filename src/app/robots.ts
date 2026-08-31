@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://lavanillasupplier.com/sitemap.xml",
+    sitemap: "https://www.lavanillasupplier.com/sitemap.xml",
   };
 }
