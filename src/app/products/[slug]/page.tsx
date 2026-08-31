@@ -98,23 +98,23 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Product + Quick Info */}
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Product Image */}
-            <div className="sticky top-24">
-              <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#F8F6F2]">
+            <div className="sticky top-24 h-full">
+              <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#F8F6F2] h-full">
                 <Image
                   src={product.image}
                   alt={product.name}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
                   priority
                 />
               </div>
             </div>
 
             {/* Quick Info */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-between h-full">
+              <div>
               <h2 className="text-xl font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-sm">
                 Quick Overview
               </h2>
@@ -145,7 +145,7 @@ export default async function ProductPage({ params }: PageProps) {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                 <Link
                   href="/contact"
                   className="flex-1 inline-flex items-center justify-center px-6 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
@@ -162,6 +162,7 @@ export default async function ProductPage({ params }: PageProps) {
                   <MessageSquare className="mr-2 w-4 h-4" />
                   WhatsApp
                 </Link>
+              </div>
               </div>
             </div>
           </div>
