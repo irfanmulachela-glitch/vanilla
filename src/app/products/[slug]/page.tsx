@@ -114,27 +114,31 @@ export default async function ProductPage({ params }: PageProps) {
 
             {/* Quick Info */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
+              <h2 className="text-xl font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-sm">
                 Quick Overview
               </h2>
+              <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
+                La Vanilla Supplier provides <strong className="text-[#2C2518]">{product.name}</strong> sourced directly from Indonesian smallholder farmers. Every batch is quality-tested for vanillin content and moisture, with full documentation included. Minimum order quantity is 25 kg, shipping FOB from Semarang, Jakarta, or Surabaya.
+              </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { icon: Shield, label: "Quality", value: "Assured" },
-                  { icon: Package, label: "MOQ", value: "25 kg" },
-                  { icon: Truck, label: "Shipping", value: "FOB/CIF/DDP" },
-                  { icon: FileCheck, label: "Documents", value: "Included" },
+                  { icon: Shield, label: "Quality Assured", value: "Lab-Tested", desc: "Third-party vanillin verification" },
+                  { icon: Package, label: "Minimum Order", value: "25 kg", desc: "Flexible for trial orders" },
+                  { icon: Truck, label: "Shipping Terms", value: "FOB/CIF/DDP", desc: "Semarang, Jakarta, Surabaya" },
+                  { icon: FileCheck, label: "Documents", value: "All Included", desc: "CoA, Phytosanitary, COO" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="p-5 rounded-xl border border-[#D8D3C9] bg-white hover:border-[#B5A37A]/50 transition-colors"
+                    className="p-5 rounded-xl border border-[#D8D3C9] bg-white hover:border-[#B5A37A]/50 transition-colors group"
                   >
-                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3">
+                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#3D3425] transition-colors">
                       <stat.icon className="w-5 h-5 text-[#B5A37A]" />
                     </div>
                     <p className="font-semibold text-[#2C2518]">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-[#6B6358] mt-0.5">{stat.label}</p>
+                    <p className="text-xs font-medium text-[#B5A37A] mt-0.5">{stat.label}</p>
+                    <p className="text-xs text-[#6B6358] mt-1">{stat.desc}</p>
                   </div>
                 ))}
               </div>
