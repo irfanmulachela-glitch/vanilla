@@ -216,19 +216,23 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#F8F6F2]">
+      <section className="py-24 bg-gradient-to-br from-[#F8F6F2] via-white to-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6">
-                Why Global Buyers Choose Us
+              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+                Why Choose Us
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
+                Why Global Buyers{" "}
+                <span className="text-[#B5A37A]">Choose Us</span>
               </h2>
-              <p className="text-lg text-[#6B6358] mb-8">
+              <p className="text-lg text-[#6B6358] mb-10 leading-relaxed">
                 With over a decade of experience exporting Indonesian vanilla to
                 the world, we understand what B2B buyers need: consistency,
                 transparency, and reliable supply.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {[
                   {
                     icon: Leaf,
@@ -254,23 +258,28 @@ export default function HomePage() {
                     description:
                       "FOB Semarang, Jakarta, or Surabaya, CIF, or DDP — we ship via DHL, FedEx, or air cargo.",
                   },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-[#B5A37A]" />
+                ].map((item, index) => (
+                  <div
+                    key={item.title}
+                    className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A] transition-colors duration-300">
+                      <item.icon className="w-5 h-5 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#2C2518] mb-1">
+                      <h3 className="font-semibold text-[#2C2518] mb-1.5 group-hover:text-[#B5A37A] transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-[#6B6358]">{item.description}</p>
+                      <p className="text-[#6B6358] text-sm leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[#2C2518]/10">
                 <Image
                   src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800"
                   alt="Vanilla processing facility"
@@ -278,11 +287,13 @@ export default function HomePage() {
                   height={400}
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C2518]/40 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-[#2C2518] text-white rounded-xl p-6">
+              <div className="absolute -bottom-6 -right-6 bg-[#2C2518] text-white rounded-2xl p-6 shadow-xl">
                 <p className="text-3xl font-bold">500+</p>
-                <p className="text-[#B5A37A]">Tons Exported</p>
+                <p className="text-[#B5A37A] text-sm font-medium">Tons Exported</p>
               </div>
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#B5A37A]/20 rounded-full blur-2xl" />
             </div>
           </div>
         </div>
