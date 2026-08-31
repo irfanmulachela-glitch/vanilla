@@ -369,61 +369,6 @@ export default async function ProductPage({ params }: PageProps) {
       <section className="bg-[#F8F6F2] py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[#2C2518] mb-6">
-            Choose Your Grade
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Link
-              href="/products/vanilla-beans/grade-a"
-              className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
-            >
-              <div className="relative h-48">
-                <Image
-                  src="/vanilla-beans.jpg"
-                  alt="Grade A Gourmet Vanilla Beans"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="px-2 py-1 bg-[#B5A37A] text-white text-xs font-semibold rounded">Grade A</span>
-                  <span className="text-xs text-[#6B6358]">Gourmet</span>
-                </div>
-                <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-2">
-                  Premium Vanilla Beans for Retail & Culinary
-                </h3>
-                <p className="text-sm text-[#6B6358]">
-                  15-20 cm, 25-35% moisture, 1.3-2.7% vanillin. Perfect for pastry, ice cream, and gourmet applications.
-                </p>
-              </div>
-            </Link>
-            <Link
-              href="/products/vanilla-beans/grade-b"
-              className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
-            >
-              <div className="relative h-48">
-                <Image
-                  src="/vanilla-beans.jpg"
-                  alt="Grade B Extraction Vanilla Beans"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="px-2 py-1 bg-[#2C2518] text-white text-xs font-semibold rounded">Grade B</span>
-                  <span className="text-xs text-[#6B6358]">Extraction</span>
-                </div>
-                <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-2">
-                  Cost-Effective Beans for Extract Manufacturing
-                </h3>
-                <p className="text-sm text-[#6B6358]">
-                  10-15 cm, less than 25% moisture, 1.3-2.2% vanillin. Optimized for industrial extraction processes.
-                </p>
-              </div>
-            </Link>
-          </div>
-          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
             Other Products
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
