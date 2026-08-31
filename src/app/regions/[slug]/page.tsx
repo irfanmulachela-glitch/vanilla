@@ -175,6 +175,13 @@ export async function generateMetadata({
     keywords: region.keywords,
     alternates: {
       canonical: `/regions/${slug}`,
+      languages: {
+        "en-ae": "/regions/uae",
+        "en-au": "/regions/australia",
+        "en-us": "/regions/usa",
+        "en-nl": "/regions/europe",
+        "x-default": `/regions/${slug}`,
+      },
     },
     openGraph: {
       title: `Vanilla Supplier ${region.name} | La Vanilla Supplier`,

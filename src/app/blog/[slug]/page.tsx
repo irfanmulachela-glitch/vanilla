@@ -828,10 +828,22 @@ export default async function BlogPostPage({ params }: Props) {
                 day: "numeric",
               })}
             </span>
-            <span className="flex items-center gap-1.5">
-              <User className="w-4 h-4" />
-              La Vanilla Supplier
-            </span>
+          </div>
+
+          {/* Author Byline */}
+          <div className="mt-6 flex items-center gap-3 p-4 bg-[#F8F6F2] rounded-lg border border-[#E5E0D8]">
+            <div className="w-10 h-10 rounded-full bg-[#2C2518] flex items-center justify-center text-white font-semibold text-sm">
+              MI
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-[#2C2518]">Muhammad Irfan</p>
+              <p className="text-xs text-[#6B6358]">
+                Founder &amp; Director, La Vanilla Supplier
+              </p>
+              <p className="text-xs text-[#6B6358]">
+                10+ years in the Indonesian vanilla industry
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -843,6 +855,47 @@ export default async function BlogPostPage({ params }: Props) {
             className="prose prose-lg max-w-none prose-headings:text-[#2C2518] prose-p:text-[#6B6358] prose-li:text-[#6B6358] prose-strong:text-[#2C2518] prose-a:text-[#B5A37A] prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+        </div>
+      </section>
+
+      {/* Related Topics */}
+      <section className="bg-[#F8F6F2] py-12 border-t border-[#E5E0D8]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg font-bold text-[#2C2518] mb-4">
+            Related Topics
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/products"
+              className="inline-flex items-center px-4 py-2 bg-white rounded-lg border border-[#E5E0D8] text-sm font-medium text-[#2C2518] hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+            >
+              Explore Our Products
+            </Link>
+            <Link
+              href="/products/vanilla-beans"
+              className="inline-flex items-center px-4 py-2 bg-white rounded-lg border border-[#E5E0D8] text-sm font-medium text-[#2C2518] hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+            >
+              Vanilla Beans
+            </Link>
+            <Link
+              href="/wholesale"
+              className="inline-flex items-center px-4 py-2 bg-white rounded-lg border border-[#E5E0D8] text-sm font-medium text-[#2C2518] hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+            >
+              Wholesale Orders
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-4 py-2 bg-white rounded-lg border border-[#E5E0D8] text-sm font-medium text-[#2C2518] hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex items-center px-4 py-2 bg-white rounded-lg border border-[#E5E0D8] text-sm font-medium text-[#2C2518] hover:border-[#B5A37A] hover:text-[#B5A37A] transition-colors"
+            >
+              Read More Articles
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -937,8 +990,13 @@ export default async function BlogPostPage({ params }: Props) {
             datePublished: post.date,
             dateModified: post.date,
             author: {
-              "@type": "Organization",
-              name: siteConfig.name,
+              "@type": "Person",
+              name: "Muhammad Irfan",
+              jobTitle: "Founder & Director",
+              worksFor: {
+                "@type": "Organization",
+                name: "La Vanilla Supplier",
+              },
             },
             publisher: {
               "@type": "Organization",

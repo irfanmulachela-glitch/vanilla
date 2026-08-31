@@ -49,8 +49,54 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Philosophy
+                Meet Our Founder
               </h2>
+              <div className="space-y-4">
+                <p className="text-gray-600 leading-relaxed">
+                  <strong>Muhammad Irfan</strong> is the Founder &amp; Director of La Vanilla Supplier (PT Penta Pelita Semesta). With over 10 years of experience in the Indonesian vanilla industry, Irfan has built direct relationships with smallholder farmers across Central Java, ensuring fair trade practices and full traceability from farm to shipment.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  His deep knowledge of vanilla curing, grading, and export logistics has helped food manufacturers and distributors in 20+ countries source consistent, high-quality Indonesian vanilla. Irfan personally oversees quality control and maintains the relationships that make La Vanilla Supplier a trusted partner for B2B buyers worldwide.
+                </p>
+                <div className="flex items-center gap-3 pt-2">
+                  <a
+                    href="https://www.linkedin.com/in/muhammad-irfan-601756367"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-[#B5A37A] hover:text-[#A8956A] font-medium"
+                  >
+                    View LinkedIn Profile →
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg bg-[#F8F6F2] p-8">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
+                    <span className="text-gray-700">10+ years in Indonesian vanilla industry</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
+                    <span className="text-gray-700">Direct relationships with Central Java farmers</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
+                    <span className="text-gray-700">Exported to 20+ countries worldwide</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
+                    <span className="text-gray-700">Personally oversees quality control</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
               <div className="space-y-6">
                 {[
                   {
@@ -313,6 +359,15 @@ export default function AboutPage() {
                 "Halal Certified",
                 "Phytosanitary Certified",
               ],
+              founder: {
+                "@type": "Person",
+                name: "Muhammad Irfan",
+                jobTitle: "Founder & Director",
+                url: "https://www.linkedin.com/in/muhammad-irfan-601756367",
+                sameAs: [
+                  "https://www.linkedin.com/in/muhammad-irfan-601756367",
+                ],
+              },
             },
           }),
         }}

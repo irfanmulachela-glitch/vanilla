@@ -62,10 +62,10 @@ export default function HomePage() {
               Your Formula. Our Vanilla.
             </p>
             <p className="text-[#6B6358] mb-3 leading-relaxed">
-              Direct from Java. Premium Vanilla planifolia beans cured for 6-9 months using traditional sun-drying methods. Grade A Gourmet and Grade B Extraction available.
+              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, sourcing premium Vanilla planifolia beans from local smallholder farmers and curing them for 6-9 months using traditional sun-drying methods.
             </p>
             <p className="text-[#6B6358] mb-7 leading-relaxed">
-              We export to food manufacturers and distributors across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
+              Grade A Gourmet and Grade B Extraction available. We export to food manufacturers and distributors across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -545,6 +545,10 @@ export default function HomePage() {
               "vanilla export documentation",
               "phytosanitary certification",
               "Indonesian vanilla",
+            ],
+            sameAs: [
+              "https://www.linkedin.com/company/lavanillasupplier",
+              "https://wa.me/+6287835756945",
             ],
           }),
         }}

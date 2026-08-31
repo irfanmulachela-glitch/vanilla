@@ -1,35 +1,69 @@
 # La Vanilla Supplier - Indonesian Vanilla Bean Exporter
 
-## About
-La Vanilla Supplier (PT Penta Pelita Semesta) is an Indonesian vanilla supplier based in Central Java, providing premium natural vanilla to global markets. We supply Grade A gourmet beans, Grade B extract beans, vanilla paste, and vanilla powder to food manufacturers, distributors, and retailers in 20+ countries.
+## Company Overview
+La Vanilla Supplier (PT Penta Pelita Semesta) is an Indonesian vanilla supplier based in Semarang, Central Java, specializing in premium natural Bourbon vanilla beans for global food manufacturers, distributors, and retailers. Established in 2014, we are a legally registered PT (Perseroan Terbatas) with export licenses, serving 20+ countries across Asia, Europe, North America, and the Middle East.
 
-## Key Products
-- Grade A Vanilla Beans: 15-20 cm, 25-35% moisture, 1.3-2.7% vanillin
-- Grade B Vanilla Beans: 10-15 cm, less than 25% moisture, 1.3-2.2% vanillin
-- Vanilla Paste: Custom formulations available
-- Vanilla Powder: Pure ground vanilla beans
+## What Sets Us Apart
+Direct farm-to-exporter model eliminates middlemen, ensuring fresher product and competitive pricing. Our vanilla is sourced from smallholder farmers across Java and Sumatra, then processed and graded at our facility in Central Java. Every batch undergoes third-party lab testing for vanillin content, moisture, and contaminants. We maintain full traceability from farm to shipment.
 
-## Key Facts
-- MOQ: 25 kg
-- Shipping: FOB Semarang, Jakarta, Surabaya
-- Species: V. planifolia (Bourbon vanilla)
-- Countries served: 20+
-- Years in business: 10+
+## Product Specifications
 
-## Important Pages
-- Products: /products
-- Wholesale: /wholesale
-- Quality: /quality
-- About: /about
-- Contact: /contact
-- Blog: /blog
-- FAQ: /faq
-- Comparison: /comparison
+### Grade A Vanilla Beans (Gourmet)
+- Length: 15-20 cm
+- Moisture: 25-35%
+- Vanillin content: 1.8-2.7%
+- Appearance: Black, oily, flexible, full pod
+- Use: Premium food products, baking, culinary
+- Packaging: Vacuum-sealed, 1 kg per bundle (approx. 100-130 beans)
 
-## Contact
-- WhatsApp: +6287835756945
+### Grade B Vanilla Beans (Extract)
+- Length: 10-15 cm
+- Moisture: Less than 25%
+- Vanillin content: 1.3-2.2%
+- Appearance: Dry, thinner, may have split ends
+- Use: Vanilla extract, industrial flavoring
+- Packaging: Vacuum-sealed, 1 kg per bundle
+
+### Vanilla Bean Paste
+- Standard: 28% vanilla bean solids
+- Shelf life: 24 months unopened
+- Formats: 500 mL, 1 L, 5 L, 20 L, bulk drums
+
+### Vanilla Powder
+- Mesh size: 40-60
+- Moisture: Less than 5%
+- Use: Bakery mixes, beverages, supplements
+
+## Shipping and Terms
+- Incoterms: FOB, CIF, CFR
+- Ports: Semarang, Surabaya, Jakarta
+- MOQ: 25 kg (Grade A), 50 kg (Grade B)
+- Payment: T/T, L/C
+- Lead time: 14-21 days after order confirmation
+- Shelf life: 12-24 months depending on grade and storage
+
+## Key Statistics
+- Years in operation: 11 (since 2014)
+- Countries exported to: 20+
+- Monthly production capacity: 10-15 metric tons
+- Quality certifications: BPOM, Halal, SPS, fumigation certificates
+
+## Citable Pages (Full URLs)
+- Homepage: https://www.lavanillasupplier.com
+- Products: https://www.lavanillasupplier.com/products
+- Wholesale: https://www.lavanillasupplier.com/wholesale
+- Quality Control: https://www.lavanillasupplier.com/quality
+- About Us: https://www.lavanillasupplier.com/about
+- Contact: https://www.lavanillasupplier.com/contact
+- Blog: https://www.lavanillasupplier.com/blog
+- FAQ: https://www.lavanillasupplier.com/faq
+- Vanilla Bean Comparison: https://www.lavanillasupplier.com/comparison
+- Export Process: https://www.lavanillasupplier.com/export-process
+
+## Contact Information
+- Company: PT Penta Pelita Semesta
+- Address: Semarang, Central Java, Indonesia
+- Phone: +6287835756945 (WhatsApp)
 - Email: admin@lavanillasupplier.com
-- Website: https://lavanillasupplier.com
-
-## Legal Entity
-PT Penta Pelita Semesta - Registered Indonesian Company
+- Website: https://www.lavanillasupplier.com
+- Business hours: Monday-Friday, 08:00-17:00 WIB (UTC+7)

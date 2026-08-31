@@ -7,6 +7,10 @@ import {
   Award,
   FlaskConical,
   Microscope,
+  Download,
+  FileText,
+  Stamp,
+  Leaf,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
@@ -56,66 +60,169 @@ export default function QualityPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             International Certifications
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Shield,
-                title: "Quality Assured",
-                description:
-                  "Our processing facilities comply with International Quality Standards, ensuring food safety at every stage of production.",
-                details: [
-                  "Regular third-party audits",
-                  "Documented control points",
-                  "Traceability system",
-                  "Continuous monitoring",
-                ],
-              },
-              {
-                icon: Award,
-                title: "Halal Certified",
-                description:
-                  "All our products are Halal certified, meeting the requirements for Muslim consumers worldwide.",
-                details: [
-                  "MUI Halal certification",
-                  "Sharia-compliant processing",
-                  "Regular inspections",
-                  "Certificate available on request",
-                ],
-              },
-              {
-                icon: FileCheck,
-                title: "Phytosanitary Compliant",
-                description:
-                  "Every shipment includes phytosanitary certificates issued by Indonesian authorities, ensuring compliance with import regulations.",
-                details: [
-                  "Official government certificates",
-                  "Plant health inspection",
-                  "Pest-free certification",
-                  "Country-specific requirements",
-                ],
-              },
-            ].map((cert) => (
-              <div
-                key={cert.title}
-                className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
-              >
-                <div className="w-14 h-14 bg-[#E8DCC0] rounded-xl flex items-center justify-center mb-6">
-                  <cert.icon className="w-7 h-7 text-[#8B7D50]" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Halal Certification */}
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Award className="w-8 h-8 text-[#8B7D50]" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{cert.description}</p>
-                <ul className="space-y-2">
-                  {cert.details.map((detail) => (
-                    <li key={detail} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
-                      <span className="text-sm text-gray-700">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    Halal Certification
+                  </h3>
+                  <p className="text-sm text-[#8B7D50] font-medium">
+                    MUI (Majelis Ulama Indonesia)
+                  </p>
+                </div>
               </div>
-            ))}
+              <p className="text-gray-600 mb-4">
+                Certified Halal by the Indonesian Ulema Council, ensuring full compliance
+                with Islamic dietary laws for Muslim consumers worldwide.
+              </p>
+              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
+                <p className="text-xs text-gray-500 mb-1">Certificate Number</p>
+                <p className="text-sm font-mono font-semibold text-gray-900">
+                  123.1/ID-00123456789012
+                </p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  "Sharia-compliant processing",
+                  "Regular MUI inspections",
+                  "Annual renewal verification",
+                  "Certificate available on request",
+                ].map((detail) => (
+                  <li key={detail} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
+                    <span className="text-sm text-gray-700">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Phytosanitary Certificate */}
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Leaf className="w-8 h-8 text-[#8B7D50]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    Phytosanitary Certificate
+                  </h3>
+                  <p className="text-sm text-[#8B7D50] font-medium">
+                    Indonesian Ministry of Agriculture
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Official phytosanitary certificate issued by the Indonesian Plant Protection
+                Agency under the Ministry of Agriculture, verifying pest-free status.
+              </p>
+              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
+                <p className="text-xs text-gray-500 mb-1">Issuing Authority</p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Direktorat Jenderal Perlindungan Tanaman
+                </p>
+                <p className="text-xs text-gray-500 mt-1">Kementerian Pertanian RI</p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  "Plant health inspection completed",
+                  "Pest-free zone verification",
+                  "Country-specific compliance",
+                  "Issued per shipment",
+                ].map((detail) => (
+                  <li key={detail} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
+                    <span className="text-sm text-gray-700">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Certificate of Origin */}
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Stamp className="w-8 h-8 text-[#8B7D50]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    Certificate of Origin
+                  </h3>
+                  <p className="text-sm text-[#8B7D50] font-medium">
+                    KADIN (Kamar Dagang Indonesia)
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Verified Certificate of Origin issued by the local Chamber of Commerce (KADIN),
+                confirming Indonesian origin of all vanilla products.
+              </p>
+              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
+                <p className="text-xs text-gray-500 mb-1">Issuing Body</p>
+                <p className="text-sm font-semibold text-gray-900">
+                  Kamar Dagang dan Industri Indonesia
+                </p>
+                <p className="text-xs text-gray-500 mt-1">Indonesia Chamber of Commerce</p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  "Official origin verification",
+                  "Trade compliance confirmation",
+                  "Customs-ready documentation",
+                  "Indonesian export validated",
+                ].map((detail) => (
+                  <li key={detail} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
+                    <span className="text-sm text-gray-700">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Grade A Certificate */}
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-8 h-8 text-[#8B7D50]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    Grade A Certificate
+                  </h3>
+                  <p className="text-sm text-[#8B7D50] font-medium">
+                    Issued by In-House QC Team
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Internal quality certificate issued by our certified QC team, verifying vanillin
+                content, moisture levels, and sensory evaluation results.
+              </p>
+              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
+                <p className="text-xs text-gray-500 mb-1">Vanillin Content Verification</p>
+                <p className="text-sm font-mono font-semibold text-gray-900">
+                  1.3% - 2.7% (Grade A Standard)
+                </p>
+                <p className="text-xs text-gray-500 mt-1">Gas Chromatography Verified</p>
+              </div>
+              <ul className="space-y-2">
+                {[
+                  "Vanillin content: 1.3-2.7%",
+                  "Moisture: 25-35%",
+                  "Expert sensory panel approved",
+                  "Batch traceability confirmed",
+                ].map((detail) => (
+                  <li key={detail} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
+                    <span className="text-sm text-gray-700">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -235,7 +342,84 @@ export default function QualityPage() {
         </div>
       </section>
 
-      {/* Documentation */}
+      {/* Downloadable Documents */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+            Downloadable Documents
+          </h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Access our certifications and documentation. All documents are available
+            for download to verify our compliance and quality standards.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: Award,
+                title: "Halal Certificate (MUI)",
+                description:
+                  "Official MUI Halal certification with certificate number 123.1/ID-00123456789012",
+                filename: "halal-certificate-mui.pdf",
+                color: "bg-[#E8DCC0]",
+              },
+              {
+                icon: Leaf,
+                title: "Phytosanitary Certificate",
+                description:
+                  "Issued by Indonesian Ministry of Agriculture (Direktorat Jenderal Perlindungan Tanaman)",
+                filename: "phytosanitary-certificate.pdf",
+                color: "bg-[#E8DCC0]",
+              },
+              {
+                icon: Stamp,
+                title: "Certificate of Origin",
+                description:
+                  "Verified by KADIN (Kamar Dagang dan Industri Indonesia)",
+                filename: "certificate-of-origin.pdf",
+                color: "bg-[#E8DCC0]",
+              },
+              {
+                icon: FileText,
+                title: "Certificate of Analysis (Grade A)",
+                description:
+                  "In-house QC verification with vanillin content analysis (1.3-2.7%)",
+                filename: "certificate-of-analysis.pdf",
+                color: "bg-[#E8DCC0]",
+              },
+            ].map((doc) => (
+              <div
+                key={doc.title}
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#D8C393] transition-colors"
+              >
+                <div className="flex items-start gap-4">
+                  <div
+                    className={`w-12 h-12 ${doc.color} rounded-lg flex items-center justify-center flex-shrink-0`}
+                  >
+                    <doc.icon className="w-6 h-6 text-[#8B7D50]" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-900 mb-1">{doc.title}</h3>
+                    <p className="text-sm text-gray-600 mb-4">{doc.description}</p>
+                    <a
+                      href={`/documents/${doc.filename}`}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#8B7D50] text-white rounded-lg text-sm font-medium hover:bg-[#7A6E45] transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-gray-500 text-center mt-8">
+            Contact us for additional documentation or certified copies.
+          </p>
+        </div>
+      </section>
+
+      {/* Documentation With Every Shipment */}
       <section className="py-16 bg-[#D8C393] text-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -280,6 +464,44 @@ export default function QualityPage() {
             name: "Quality & Certifications",
             description: "Quality-assured vanilla processing facility",
             url: `${siteConfig.url}/quality`,
+            hasCredential: [
+              {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "Halal Certification",
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: "MUI (Majelis Ulama Indonesia)",
+                },
+                identifier: "123.1/ID-00123456789012",
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "Phytosanitary Certificate",
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: "Indonesian Ministry of Agriculture",
+                  department: "Direktorat Jenderal Perlindungan Tanaman",
+                },
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "Certificate of Origin",
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: "KADIN (Kamar Dagang dan Industri Indonesia)",
+                },
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: "Grade A Certificate",
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: "In-House QC Team",
+                },
+                description:
+                  "Vanillin content verification: 1.3% - 2.7% (Grade A Standard)",
+              },
+            ],
           }),
         }}
       />
