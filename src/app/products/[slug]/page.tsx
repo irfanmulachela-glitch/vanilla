@@ -16,6 +16,7 @@ import {
   Award,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import GradeSelector from "@/components/grade-selector";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -62,6 +63,11 @@ export default async function ProductPage({ params }: PageProps) {
 
   if (!product) {
     notFound();
+  }
+
+  // Use GradeSelector for vanilla beans page
+  if (slug === "vanilla-beans") {
+    return <GradeSelector />;
   }
 
   return (
