@@ -394,60 +394,6 @@ export default async function ProductPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: product.name,
-            description: product.description,
-            image: `${siteConfig.url}${product.image}`,
-            brand: {
-              "@type": "Brand",
-              name: siteConfig.name,
-            },
-            manufacturer: {
-              "@id": "https://www.lavanillasupplier.com/#organization",
-            },
-            countryOfOrigin: "ID",
-            additionalProperty: [
-              ...Object.entries(product.specifications).map(
-                ([key, value]) => ({
-                  "@type": "PropertyValue",
-                  name: key.replace(/([A-Z])/g, " $1").trim(),
-                  value: value,
-                })
-              ),
-              {
-                "@type": "PropertyValue",
-                name: "Minimum order quantity",
-                value: "25 kg",
-              },
-            ],
-            offers: {
-              "@type": "Offer",
-              availability: "https://schema.org/InStock",
-              priceCurrency: "USD",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                valueAddedTaxIncluded: false,
-                description: "Price on request. Quote issued within 24 hours.",
-              },
-              eligibleQuantity: {
-                "@type": "QuantitativeValue",
-                minValue: 25,
-                unitCode: "KGM",
-              },
-              seller: {
-                "@id": "https://www.lavanillasupplier.com/#organization",
-              },
-            },
-          }),
-        }}
-      />
-
-      {/* BreadcrumbList Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: "/" },
