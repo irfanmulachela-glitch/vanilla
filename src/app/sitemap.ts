@@ -24,6 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const vanillaBeanGradePages = [
+    { url: `${baseUrl}/products/vanilla-beans/grade-a`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${baseUrl}/products/vanilla-beans/grade-b`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 },
+  ];
+
   const regionPages = siteConfig.regions.map((region) => ({
     url: `${baseUrl}/regions/${region.toLowerCase()}`,
     lastModified: new Date(),
@@ -55,5 +60,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages, ...regionPages, ...blogPages];
+  return [...staticPages, ...productPages, ...vanillaBeanGradePages, ...regionPages, ...blogPages];
 }
