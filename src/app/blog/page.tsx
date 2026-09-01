@@ -163,6 +163,36 @@ const blogPosts = [
     date: "2026-03-01",
     readTime: "7 min read",
   },
+  {
+    id: "15",
+    title: "Vanilla Bean Quality Testing Methods: Complete Guide for B2B Buyers",
+    slug: "vanilla-bean-quality-testing-methods",
+    excerpt:
+      "Learn the essential quality testing methods for vanilla beans including gas chromatography, moisture analysis, and sensory evaluation.",
+    category: "Quality",
+    date: "2026-03-15",
+    readTime: "10 min read",
+  },
+  {
+    id: "16",
+    title: "How to Choose the Right Vanilla Supplier: 7 Essential Criteria",
+    slug: "how-to-choose-right-vanilla-supplier",
+    excerpt:
+      "Learn the 7 essential criteria for selecting a reliable vanilla supplier. Due diligence checklist for B2B buyers.",
+    category: "Sourcing Guide",
+    date: "2026-03-20",
+    readTime: "11 min read",
+  },
+  {
+    id: "17",
+    title: "Vanilla Bean Storage Best Practices: Extending Shelf Life for Retailers",
+    slug: "vanilla-bean-storage-best-practices",
+    excerpt:
+      "Learn how to store vanilla beans properly to maximize shelf life, preserve flavor, and maintain quality for retailers.",
+    category: "Quality",
+    date: "2026-03-25",
+    readTime: "8 min read",
+  },
 ];
 
 export default function BlogPage() {
