@@ -395,7 +395,7 @@ export default function GradeSelector() {
           <h2 className="text-xl font-bold text-[#2C2518] mb-6">
             Other Products
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {siteConfig.products
               .filter((p) => p.slug !== "vanilla-beans")
               .map((p) => (
