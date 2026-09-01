@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -154,13 +154,19 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
+      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <Link
+              href="/"
+              className="inline-flex items-center text-[#B5A37A] hover:text-white mb-6 text-sm transition-colors"
+            >
+              ← Back to Home
+            </Link>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-stone-700">
+            <p className="text-lg text-stone-300 leading-relaxed">
               Find answers to common questions about our products, ordering,
               shipping, and certifications.
             </p>
@@ -168,27 +174,53 @@ export default function FAQPage() {
         </div>
       </section>
 
+      {/* Quick Navigation */}
+      <section className="bg-white border-b border-[#E5E0D8] py-6 sticky top-0 z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-2">
+            {faqs.map((category) => (
+              <a
+                key={category.category}
+                href={`#${category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                className="px-4 py-2 text-sm font-medium text-[#6B6358] bg-[#F8F6F2] rounded-full border border-[#E5E0D8] hover:bg-[#2C2518] hover:text-white hover:border-[#2C2518] transition-all"
+              >
+                {category.category}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Content */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {faqs.map((category) => (
-            <div key={category.category} className="mb-12 last:mb-0">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
-                {category.category}
-              </h2>
-              <div className="space-y-6">
+            <div
+              key={category.category}
+              id={category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+              className="mb-16 last:mb-0 scroll-mt-24"
+            >
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[#B5A37A] font-bold text-sm">
+                    {category.category.charAt(0)}
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-[#2C2518]">
+                  {category.category}
+                </h2>
+              </div>
+              <div className="space-y-4">
                 {category.questions.map((faq) => (
                   <details
                     key={faq.q}
-                    className="group bg-gray-50 rounded-xl overflow-hidden"
+                    className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:border-[#B5A37A]/50 transition-colors"
                   >
-                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-gray-900 hover:text-[#8B7D50] transition-colors">
-                      {faq.q}
-                      <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
-                        ▼
-                      </span>
+                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors list-none">
+                      <span className="pr-4">{faq.q}</span>
+                      <ChevronDown className="w-5 h-5 text-[#6B6358] group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
                     </summary>
-                    <div className="px-6 pb-6 text-gray-600">
+                    <div className="px-6 pb-6 text-[#6B6358] leading-relaxed border-t border-[#E5E0D8] pt-4">
                       {faq.a}
                     </div>
                   </details>
@@ -200,19 +232,19 @@ export default function FAQPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-[#2C2518] mb-4">
             Still Have Questions?
           </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#6B6358] mb-8 max-w-2xl mx-auto">
             Can&apos;t find the answer you&apos;re looking for? Our team is
             ready to help. Chat with us on WhatsApp for instant response.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#A08C5A] text-white font-semibold rounded-lg hover:bg-[#8B7D50] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -221,7 +253,7 @@ export default function FAQPage() {
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-stone-900 text-white font-semibold rounded-lg hover:bg-stone-800 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
             >
               <MessageSquare className="mr-2 w-5 h-5" />
               Chat on WhatsApp
