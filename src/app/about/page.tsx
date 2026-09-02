@@ -251,11 +251,35 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-12 flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                  <MapPin className="w-20 h-20 text-[#B5A37A] mx-auto mb-6" />
-                  <p className="text-stone-300 text-lg">Java, Indonesia</p>
-                  <p className="text-stone-400 text-sm mt-2">Rich volcanic soil. Tropical climate.</p>
+              <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-8">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
+                    <div className="w-12 h-12 bg-[#B5A37A] rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#2C2518]" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white">Java, Indonesia</p>
+                      <p className="text-sm text-stone-300">Heart of vanilla cultivation</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="p-4 bg-white/5 rounded-xl text-center">
+                      <p className="text-2xl font-bold text-[#B5A37A]">0-1200m</p>
+                      <p className="text-xs text-stone-300 mt-1">Altitude Range</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded-xl text-center">
+                      <p className="text-2xl font-bold text-[#B5A37A]">27°C</p>
+                      <p className="text-xs text-stone-300 mt-1">Avg Temperature</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded-xl text-center">
+                      <p className="text-2xl font-bold text-[#B5A37A]">80%</p>
+                      <p className="text-xs text-stone-300 mt-1">Humidity Level</p>
+                    </div>
+                    <div className="p-4 bg-white/5 rounded-xl text-center">
+                      <p className="text-2xl font-bold text-[#B5A37A]">Volcanic</p>
+                      <p className="text-xs text-stone-300 mt-1">Rich Soil Type</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
