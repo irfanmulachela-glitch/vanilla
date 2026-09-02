@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Shield, Leaf, Award, FileCheck, Truck } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
 export const metadata: Metadata = {
   title: "The La Vanilla Standard | Quality Framework for Vanilla Supply",
@@ -185,6 +186,24 @@ export default function LaVanillaStandardPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Grading Chart */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em] mb-3">
+              Visual Reference
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Vanilla Bean Grading System
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Understand the differences between our vanilla bean grades with this visual comparison.
+            </p>
+          </div>
+          <VanillaGradingChart />
         </div>
       </section>
 

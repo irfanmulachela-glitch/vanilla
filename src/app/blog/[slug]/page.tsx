@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Calendar, User, ArrowLeft, Clock, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { notFound } from "next/navigation";
+import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
 const blogPosts = {
   "sourcing-vanilla-beans-indonesia": {
@@ -855,6 +856,13 @@ export default async function BlogPostPage({ params }: Props) {
             className="prose prose-lg max-w-none prose-headings:text-[#2C2518] prose-p:text-[#6B6358] prose-li:text-[#6B6358] prose-strong:text-[#2C2518] prose-a:text-[#B5A37A] prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+          
+          {/* Grading Chart for vanilla-bean-grading post */}
+          {slug === "vanilla-bean-grading" && (
+            <div className="mt-12">
+              <VanillaGradingChart />
+            </div>
+          )}
         </div>
       </section>
 
