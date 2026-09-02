@@ -5,20 +5,27 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
+import { LanguageSwitcher } from "./language-switcher";
+import { getTranslations, type Locale } from "@/i18n";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Products", href: "/products" },
-  { name: "Wholesale", href: "/wholesale" },
-  { name: "Our Standard", href: "/la-vanilla-standard" },
-  { name: "Blog", href: "/blog" },
-  { name: "FAQ", href: "/faq" },
-  { name: "Contact", href: "/contact" },
-];
+interface NavigationProps {
+  locale?: Locale;
+}
 
-export function Navigation() {
+export function Navigation({ locale = "en" }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const t = getTranslations(locale);
+
+  const navigation = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.products, href: "/products" },
+    { name: t.nav.wholesale, href: "/wholesale" },
+    { name: t.nav.ourStandard, href: "/la-vanilla-standard" },
+    { name: t.nav.blog, href: "/blog" },
+    { name: t.nav.faq, href: "/faq" },
+    { name: t.nav.contact, href: "/contact" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 150);
@@ -86,6 +93,9 @@ export function Navigation() {
                 ))}
               </nav>
 
+              {/* Language Switcher */}
+              <LanguageSwitcher currentLocale={locale} />
+
               {/* CTA buttons */}
               <div className="flex items-center gap-2.5">
                 <Link
@@ -96,7 +106,7 @@ export function Navigation() {
                       : "bg-white text-[#2C2518] hover:bg-white/90 hover:shadow-lg hover:shadow-white/20"
                   }`}
                 >
-                  Get Quote
+                  {t.common.getQuote}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
@@ -162,6 +172,32 @@ export function Navigation() {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Language Switcher */}
+              <div className="pt-2 pb-1">
+                <p className={`text-xs font-medium mb-2 ${!scrolled ? "text-[#2C2518]/50" : "text-white/50"}`}>
+                  Language
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {(["en", "fr", "de", "es", "tr", "ar"] as const).map((loc) => (
+                    <Link
+                      key={loc}
+                      href={`/${loc === "en" ? "" : loc}`}
+                      className={`px-3 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
+                        locale === loc
+                          ? "bg-[#B5A37A] text-white"
+                          : !scrolled
+                          ? "bg-[#2C2518]/5 text-[#2C2518]/70 hover:bg-[#B5A37A]/10"
+                          : "bg-white/10 text-white/70 hover:bg-white/20"
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {localeFlags[loc]} {localeNames[loc]}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <div className="pt-3 space-y-2">
                 <Link
                   href="/contact"
@@ -172,7 +208,7 @@ export function Navigation() {
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Quote
+                  {t.common.getQuote}
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
@@ -194,3 +230,5 @@ export function Navigation() {
     </>
   );
 }
+
+import { localeFlags, localeNames } from "@/i18n";

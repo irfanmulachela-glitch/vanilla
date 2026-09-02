@@ -14,35 +14,57 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { AnimatedCounter } from "@/components/animated-counter";
+import { getTranslations, type Locale } from "@/i18n";
 
-export const metadata: Metadata = {
-  title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
-  description:
-    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. Food Safety Standards. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries. MOQ 25kg.",
-  keywords: [
-    "vanilla supplier Indonesia",
-    "wholesale vanilla beans",
-    "vanilla paste manufacturer",
-    "vanilla powder supplier",
-    "B2B vanilla exporter",
-    "Quality Assured vanilla",
-    "Indonesian vanilla beans",
-    "best vanilla supplier",
-    "bulk vanilla beans",
-  ],
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
+interface HomePageProps {
+  params?: Promise<{ [key: string]: string | string[] }>;
+}
+
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const locale = (resolvedParams?.locale as string) || "en";
+  const t = getTranslations(locale as Locale);
+
+  return {
     title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
-    description: "Indonesia's trusted vanilla supplier. Grade A & B beans, vanilla paste, powder. Export to 20+ countries.",
-    url: "https://lavanillasupplier.com",
-    siteName: "La Vanilla Supplier",
-    type: "website",
-  },
-};
+    description: t.home.heroDescription,
+    keywords: [
+      "vanilla supplier Indonesia",
+      "wholesale vanilla beans",
+      "vanilla paste manufacturer",
+      "vanilla powder supplier",
+      "B2B vanilla exporter",
+      "Quality Assured vanilla",
+      "Indonesian vanilla beans",
+      "best vanilla supplier",
+      "bulk vanilla beans",
+    ],
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/",
+        fr: "/fr",
+        de: "/de",
+        es: "/es",
+        tr: "/tr",
+        ar: "/ar",
+      },
+    },
+    openGraph: {
+      title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
+      description: t.home.heroDescription,
+      url: "https://lavanillasupplier.com",
+      siteName: "La Vanilla Supplier",
+      type: "website",
+    },
+  };
+}
 
-export default function HomePage() {
+export default async function HomePage({ params }: HomePageProps) {
+  const resolvedParams = await params;
+  const locale = (resolvedParams?.locale as string) || "en";
+  const t = getTranslations(locale as Locale);
+
   return (
     <>
       {/* Hero Section - Light, clean, side by side */}
@@ -54,32 +76,27 @@ export default function HomePage() {
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-3 leading-[1.1]">
-              Premium{" "}
-              <span className="text-[#B5A37A]">Indonesian Vanilla</span>{" "}
-              Supplier
+              {t.home.heroTitle}
             </h1>
             <p className="text-lg text-[#B5A37A] font-medium mb-5 italic">
-              Your Formula. Our Vanilla.
+              {t.home.heroSubtitle}
             </p>
             <p className="text-[#6B6358] mb-3 leading-relaxed">
-              La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, sourcing premium Vanilla planifolia beans from local smallholder farmers and curing them for 6-9 months using traditional sun-drying methods.
-            </p>
-            <p className="text-[#6B6358] mb-7 leading-relaxed">
-              Grade A Gourmet and Grade B Extraction available. We export to food manufacturers and distributors across 20+ countries. MOQ 25kg. FOB from Semarang, Jakarta, or Surabaya. Halal certified. Full documentation with every shipment.
+              {t.home.heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
               >
-                Get Free Sample
+                {t.common.requestSample}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
                 href="/products"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2C2518] text-sm font-medium rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
               >
-                View Products
+                {t.common.learnMore}
               </Link>
             </div>
           </div>
@@ -104,22 +121,22 @@ export default function HomePage() {
             About Us
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
-            Your Formula. Our Vanilla. Delivered with precision.
+            {t.common.tagline}
           </h2>
           <p className="text-lg text-[#6B6358] mb-6 max-w-3xl mx-auto leading-relaxed">
-            La Vanilla Supplier is a direct Indonesian vanilla supplier based in Java, specializing in premium Vanilla planifolia beans sourced from local smallholder farmers and cured using traditional 6-9 month sun-drying methods. We work directly with growers — no middlemen — ensuring consistent quality and fair pricing.
+            {t.about.description}
           </p>
           <p className="text-sm text-[#6B6358]/70 mb-12">
-            Operated by PT Penta Pelita Semesta — Registered Indonesian Company
+            {t.about.operatedBy} {t.about.registeredCompany}
           </p>
 
           {/* Animated Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {[
-              { value: 10, suffix: "+", label: "Years Experience" },
-              { value: 500, suffix: "+", label: "Tons Exported" },
-              { value: 20, suffix: "+", label: "Countries Served" },
-              { value: 30, suffix: "+", label: "Happy Clients" },
+              { value: 10, suffix: "+", label: t.home.yearsExperience },
+              { value: 500, suffix: "+", label: t.home.tonsExported },
+              { value: 20, suffix: "+", label: t.home.countriesServed },
+              { value: 30, suffix: "+", label: t.home.happyClients },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-2">
@@ -133,10 +150,10 @@ export default function HomePage() {
           {/* Certification Badges */}
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "Quality Assured",
-              "Halal Certified",
-              "Full Documentation",
-              "Phytosanitary",
+              t.quality.qualityAssured,
+              t.quality.halalCertified,
+              t.products.fullDocumentation,
+              t.quality.phytosanitary,
             ].map((badge) => (
               <span
                 key={badge}
@@ -154,11 +171,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-              Our Premium Vanilla Products
+              {t.products.title}
             </h2>
             <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
-              From gourmet beans to custom paste formulations — we provide
-              complete vanilla solutions for every industry.
+              {t.products.subtitle}
             </p>
           </div>
 
@@ -202,7 +218,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <div className="flex items-center text-[#B5A37A] font-medium">
-                    View Details
+                    {t.products.whyChoose}
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -219,7 +235,7 @@ export default function HomePage() {
           <div className="bg-[#2C2518] flex flex-col justify-between p-8 sm:p-12 lg:p-16">
             <div>
               <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-6">
-                Why La Vanilla Supplier
+                {t.home.whyChooseUs}
               </p>
               <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white/90 leading-[1.15] mb-8">
                 There are hundreds of vanilla suppliers in Indonesia.
@@ -250,8 +266,8 @@ export default function HomePage() {
               {[
                 {
                   num: "01",
-                  title: "Direct from Source",
-                  body: "We work directly with Indonesian farmers, ensuring fair trade practices and full traceability from farm to shipment.",
+                  title: t.home.directFromSource,
+                  body: t.home.directFromSourceDesc,
                 },
                 {
                   num: "02",
@@ -260,13 +276,13 @@ export default function HomePage() {
                 },
                 {
                   num: "03",
-                  title: "Complete Documentation",
-                  body: "Every shipment includes phytosanitary certificates, certificate of origin, and full food safety compliance documentation.",
+                  title: t.products.fullDocumentation,
+                  body: t.products.fullDocumentationDesc,
                 },
                 {
                   num: "04",
-                  title: "Flexible Shipping",
-                  body: "FOB Semarang, Jakarta, or Surabaya, CIF, or DDP — we ship via DHL, FedEx, or air cargo.",
+                  title: t.home.globalSupply,
+                  body: t.home.globalSupplyDesc,
                 },
               ].map((item, i) => (
                 <div
@@ -312,7 +328,7 @@ export default function HomePage() {
                 <thead className="bg-[#2C2518]">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
-                      Specification
+                      {t.products.specification}
                     </th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
                       Grade A Beans
@@ -447,7 +463,7 @@ export default function HomePage() {
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Package className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
-              <h3 className="font-semibold text-[#2C2518]">Wholesale</h3>
+              <h3 className="font-semibold text-[#2C2518]">{t.nav.wholesale}</h3>
               <p className="text-sm text-[#6B6358]">Bulk orders from 25kg</p>
             </Link>
             <Link
@@ -493,7 +509,7 @@ export default function HomePage() {
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg hover:bg-[#F8F6F2] transition-colors"
             >
-              Request Free Sample
+              {t.common.requestSample}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
@@ -502,7 +518,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
             >
-              Chat on WhatsApp
+              {t.common.whatsapp}
             </Link>
           </div>
         </div>
@@ -535,7 +551,7 @@ export default function HomePage() {
               telephone: "+62-878-3575-6945",
               email: "admin@lavanillasupplier.com",
               contactType: "sales",
-              availableLanguage: ["English", "Indonesian"],
+              availableLanguage: ["English", "French", "German", "Spanish", "Turkish", "Arabic"],
             },
             areaServed: ["AE", "AU", "US", "NL", "FR", "DE", "SG", "MY", "JP", "KR"],
             knowsAbout: [

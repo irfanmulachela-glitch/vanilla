@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { OverlayScrollbar } from "@/components/scrollbar";
 import { siteConfig } from "@/lib/config";
+import { type Locale, getDirection } from "@/i18n";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +12,10 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+export async function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "fr" }, { locale: "de" }, { locale: "es" }, { locale: "tr" }, { locale: "ar" }];
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -58,13 +63,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params?: Promise<{ [key: string]: string | string[] }>;
 }>) {
+  const resolvedParams = await params;
+  const locale = (resolvedParams?.locale as string) || "en";
+  const direction = getDirection(locale as Locale);
+
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang={locale} dir={direction} className={`${inter.variable} scroll-smooth`}>
       <head>
         <link rel="icon" href="/favicon-32x32.png" type="image/png" />
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -72,12 +83,21 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+        
+        {/* Hreflang tags for SEO */}
+        <link rel="alternate" hrefLang="en" href={`${siteConfig.url}`} />
+        <link rel="alternate" hrefLang="fr" href={`${siteConfig.url}/fr`} />
+        <link rel="alternate" hrefLang="de" href={`${siteConfig.url}/de`} />
+        <link rel="alternate" hrefLang="es" href={`${siteConfig.url}/es`} />
+        <link rel="alternate" hrefLang="tr" href={`${siteConfig.url}/tr`} />
+        <link rel="alternate" hrefLang="ar" href={`${siteConfig.url}/ar`} />
+        <link rel="alternate" hrefLang="x-default" href={`${siteConfig.url}`} />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900 overflow-x-hidden">
         <OverlayScrollbar />
-        <Navigation />
+        <Navigation locale={locale as Locale} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer locale={locale as Locale} />
       </body>
     </html>
   );

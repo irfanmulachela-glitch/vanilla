@@ -2,29 +2,36 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { getTranslations, type Locale } from "@/i18n";
 
-const footerLinks = {
-  products: [
-    { name: "Vanilla Beans", href: "/products/vanilla-beans" },
-    { name: "Vanilla Paste", href: "/products/vanilla-paste" },
-    { name: "Vanilla Powder", href: "/products/vanilla-powder" },
-    { name: "Wholesale", href: "/wholesale" },
-  ],
-  company: [
-    { name: "About Us", href: "/about" },
-    { name: "Quality & Certifications", href: "/quality" },
-    { name: "Blog", href: "/blog" },
-    { name: "FAQ", href: "/faq" },
-  ],
-  regions: [
-    { name: "Dubai, UAE", href: "/regions/uae" },
-    { name: "Sydney, Australia", href: "/regions/australia" },
-    { name: "New York, USA", href: "/regions/usa" },
-    { name: "Europe", href: "/regions/europe" },
-  ],
-};
+interface FooterProps {
+  locale?: Locale;
+}
 
-export function Footer() {
+export function Footer({ locale = "en" }: FooterProps) {
+  const t = getTranslations(locale);
+
+  const footerLinks = {
+    products: [
+      { name: t.products.vanillaBeans, href: "/products/vanilla-beans" },
+      { name: t.products.vanillaPaste, href: "/products/vanilla-paste" },
+      { name: t.products.vanillaPowder, href: "/products/vanilla-powder" },
+      { name: t.nav.wholesale, href: "/wholesale" },
+    ],
+    company: [
+      { name: "About Us", href: "/about" },
+      { name: t.quality.title, href: "/quality" },
+      { name: t.nav.blog, href: "/blog" },
+      { name: t.nav.faq, href: "/faq" },
+    ],
+    regions: [
+      { name: "Dubai, UAE", href: "/regions/uae" },
+      { name: "Sydney, Australia", href: "/regions/australia" },
+      { name: "New York, USA", href: "/regions/usa" },
+      { name: "Europe", href: "/regions/europe" },
+    ],
+  };
+
   return (
     <footer className="bg-[#2C2518] text-stone-300">
       {/* Newsletter section */}
@@ -33,23 +40,23 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl font-bold text-white">
-                Stay Updated on Vanilla Market Trends
+                {t.home.stayUpdated}
               </h3>
               <p className="text-stone-400 mt-1">
-                Get insights on pricing, quality, and export opportunities.
+                {t.home.stayUpdatedDesc}
               </p>
             </div>
             <form className="flex w-full lg:w-auto gap-2">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t.home.emailPlaceholder}
                 className="flex-1 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
               />
               <button
                 type="submit"
                 className="px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors flex items-center gap-2"
               >
-                Subscribe
+                {t.common.subscribe}
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -82,8 +89,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-stone-400 mb-4">
-              Your Formula. Our Vanilla. Premium Indonesian vanilla exported to{" "}
-              {siteConfig.stats.countriesServed}+ countries.
+              {t.footer.tagline}
             </p>
             <div className="space-y-2">
               <a
@@ -111,7 +117,7 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Products</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.products}</h4>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
@@ -128,7 +134,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.company}</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -146,7 +152,7 @@ export function Footer() {
           {/* Regions */}
           <div>
             <h4 className="text-white font-semibold mb-4">
-              Export Regions
+              {t.footer.exportRegions}
             </h4>
             <ul className="space-y-2">
               {footerLinks.regions.map((link) => (
@@ -169,14 +175,14 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-stone-500">
-              © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+              © {new Date().getFullYear()} {siteConfig.name}. {t.footer.allRightsReserved}
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/quality"
                 className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
-                Quality Policy
+                {t.footer.qualityPolicy}
               </Link>
             </div>
           </div>
