@@ -393,11 +393,11 @@ export function HomePageContent() {
               ))}
             </div>
             <blockquote className="text-xl lg:text-2xl font-medium text-white mb-8 leading-relaxed">
-              &ldquo;We&apos;ve been sourcing vanilla beans from La Vanilla Supplier for over 3 years. The quality has been consistently excellent — the aroma, the moisture content, and the vanillin levels are always on point. Their documentation is always complete and shipments arrive on time. They&apos;re our trusted partner for European distribution.&rdquo;
+              &ldquo;Honestly, we had a bad experience with another supplier before finding La Vanilla. The beans were dry, half of them smelled like nothing. La Vanilla was recommended by a friend in the industry and we haven&apos;t looked back. The quality speaks for itself — our clients keep coming back for more.&rdquo;
             </blockquote>
             <div>
-              <p className="font-semibold text-white">Marco Bellini</p>
-              <p className="text-[#B5A37A]">Procurement Director, Milan, Italy</p>
+              <p className="font-semibold text-white">Ahmed Al-Rashid</p>
+              <p className="text-[#B5A37A]">Food Importer, Dubai, UAE</p>
             </div>
           </div>
         </div>
