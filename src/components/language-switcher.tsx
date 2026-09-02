@@ -46,7 +46,7 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase text-white/60 hover:text-white transition-colors duration-300 group"
+        className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase text-[#B5A37A] hover:text-[#D4C48A] transition-colors duration-300 group"
       >
         <Globe className="w-3.5 h-3.5" />
         <span>{localeShortNames[currentLocale]}</span>
