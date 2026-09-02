@@ -6,13 +6,13 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About Us - Our Story & Mission",
   description:
-    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier based in Central Java. Premium natural vanilla for global markets.",
+    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier based in Java. Premium natural vanilla for global markets.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About La Vanilla Supplier",
-    description: "Indonesia's trusted vanilla supplier based in Central Java. Premium natural vanilla for global markets.",
+    description: "Indonesia's trusted vanilla supplier based in Java. Premium natural vanilla for global markets.",
     url: "https://lavanillasupplier.com/about",
     type: "website",
   },
@@ -38,7 +38,7 @@ export default function AboutPage() {
               Your Formula. Our Vanilla.
             </p>
             <p className="text-lg text-stone-300 leading-relaxed">
-              Indonesian vanilla supplier based in Central Java, providing
+              Indonesian vanilla supplier based in Java, providing
               premium natural vanilla to global markets with consistent quality
               and reliable supply.
             </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 <p className="text-[#6B6358] leading-relaxed">
-                  <strong className="text-[#2C2518]">Muhammad Irfan</strong> is the Founder &amp; Director of La Vanilla Supplier (PT Penta Pelita Semesta). Based in Central Java, Irfan has established direct relationships with smallholder farmers across the region, ensuring fair trade practices and full traceability from farm to shipment.
+                  <strong className="text-[#2C2518]">Muhammad Irfan</strong> is the Founder &amp; Director of La Vanilla Supplier (PT Penta Pelita Semesta). Based in Java, Irfan has established direct relationships with smallholder farmers across the region, ensuring fair trade practices and full traceability from farm to shipment.
                 </p>
                 <p className="text-[#6B6358] leading-relaxed">
                   His deep knowledge of vanilla curing, grading, and export logistics has helped food manufacturers and distributors in 20+ countries source consistent, high-quality Indonesian vanilla. Irfan personally oversees quality control and maintains the relationships that make La Vanilla Supplier a trusted partner for B2B buyers worldwide.
@@ -85,7 +85,7 @@ export default function AboutPage() {
                       <MapPin className="w-5 h-5 text-[#B5A37A]" />
                     </div>
                     <div>
-                      <p className="font-semibold text-[#2C2518]">Based in Central Java</p>
+                      <p className="font-semibold text-[#2C2518]">Based in Java</p>
                       <p className="text-sm text-[#6B6358]">Heart of Indonesian vanilla production</p>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-12 flex items-center justify-center min-h-[400px]">
                 <div className="text-center">
                   <MapPin className="w-20 h-20 text-[#B5A37A] mx-auto mb-6" />
-                  <p className="text-stone-300 text-lg">Central Java, Indonesia</p>
+                  <p className="text-stone-300 text-lg">Java, Indonesia</p>
                   <p className="text-stone-400 text-sm mt-2">Rich volcanic soil. Tropical climate.</p>
                 </div>
               </div>
@@ -270,10 +270,10 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
                   <p className="font-semibold text-[#2C2518] mb-1">
-                    Origin — Central Java, Indonesia
+                    Origin — Java, Indonesia
                   </p>
                   <p className="text-sm text-[#6B6358]">
-                    Our vanilla comes from the highlands of Central Java, where rich volcanic soil and tropical climate create ideal growing conditions.
+                    Our vanilla comes from the highlands of Java, where rich volcanic soil and tropical climate create ideal growing conditions.
                   </p>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
@@ -376,7 +376,7 @@ export default function AboutPage() {
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Surakarta",
-                addressRegion: "Central Java",
+                addressRegion: "Java",
                 addressCountry: "ID",
               },
               contactPoint: {
