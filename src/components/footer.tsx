@@ -1,34 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
-import { getTranslations, type Locale } from "@/i18n";
+import { useLocaleContext } from "./locale-provider";
 
-interface FooterProps {
-  locale?: Locale;
-}
-
-export function Footer({ locale = "en" }: FooterProps) {
-  const t = getTranslations(locale);
+export function Footer() {
+  const { locale, t } = useLocaleContext();
 
   const footerLinks = {
     products: [
-      { name: t.products.vanillaBeans, href: "/products/vanilla-beans" },
-      { name: t.products.vanillaPaste, href: "/products/vanilla-paste" },
-      { name: t.products.vanillaPowder, href: "/products/vanilla-powder" },
-      { name: t.nav.wholesale, href: "/wholesale" },
+      { name: t.products.vanillaBeans, href: `/${locale === "en" ? "" : locale}/products/vanilla-beans` },
+      { name: t.products.vanillaPaste, href: `/${locale === "en" ? "" : locale}/products/vanilla-paste` },
+      { name: t.products.vanillaPowder, href: `/${locale === "en" ? "" : locale}/products/vanilla-powder` },
+      { name: t.nav.wholesale, href: `/${locale === "en" ? "" : locale}/wholesale` },
     ],
     company: [
-      { name: "About Us", href: "/about" },
-      { name: t.quality.title, href: "/quality" },
-      { name: t.nav.blog, href: "/blog" },
-      { name: t.nav.faq, href: "/faq" },
+      { name: "About Us", href: `/${locale === "en" ? "" : locale}/about` },
+      { name: t.quality.title, href: `/${locale === "en" ? "" : locale}/quality` },
+      { name: t.nav.blog, href: `/${locale === "en" ? "" : locale}/blog` },
+      { name: t.nav.faq, href: `/${locale === "en" ? "" : locale}/faq` },
     ],
     regions: [
-      { name: "Dubai, UAE", href: "/regions/uae" },
-      { name: "Sydney, Australia", href: "/regions/australia" },
-      { name: "New York, USA", href: "/regions/usa" },
-      { name: "Europe", href: "/regions/europe" },
+      { name: "Dubai, UAE", href: `/${locale === "en" ? "" : locale}/regions/uae` },
+      { name: "Sydney, Australia", href: `/${locale === "en" ? "" : locale}/regions/australia` },
+      { name: "New York, USA", href: `/${locale === "en" ? "" : locale}/regions/usa` },
+      { name: "Europe", href: `/${locale === "en" ? "" : locale}/regions/europe` },
     ],
   };
 
@@ -69,7 +67,7 @@ export function Footer({ locale = "en" }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href={`/${locale === "en" ? "" : locale}`} className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 relative flex-shrink-0">
                 <Image
                   src="/logo.png"
@@ -179,7 +177,7 @@ export function Footer({ locale = "en" }: FooterProps) {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="/quality"
+                href={`/${locale === "en" ? "" : locale}/quality`}
                 className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 {t.footer.qualityPolicy}

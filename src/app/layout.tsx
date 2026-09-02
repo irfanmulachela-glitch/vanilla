@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { OverlayScrollbar } from "@/components/scrollbar";
+import { LocaleProvider } from "@/components/locale-provider";
 import { siteConfig } from "@/lib/config";
-import { type Locale, getDirection } from "@/i18n";
 import "./globals.css";
 
 const inter = Inter({
@@ -63,19 +63,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params?: Promise<{ [key: string]: string | string[] }>;
 }>) {
-  const resolvedParams = await params;
-  const locale = (resolvedParams?.locale as string) || "en";
-  const direction = getDirection(locale as Locale);
-
   return (
-    <html lang={locale} dir={direction} className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon-32x32.png" type="image/png" />
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -95,9 +89,11 @@ export default async function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900 overflow-x-hidden">
         <OverlayScrollbar />
-        <Navigation locale={locale as Locale} />
-        <main className="flex-1">{children}</main>
-        <Footer locale={locale as Locale} />
+        <LocaleProvider>
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LocaleProvider>
       </body>
     </html>
   );

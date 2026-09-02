@@ -6,25 +6,21 @@ import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { LanguageSwitcher } from "./language-switcher";
-import { getTranslations, type Locale } from "@/i18n";
+import { useLocaleContext } from "./locale-provider";
 
-interface NavigationProps {
-  locale?: Locale;
-}
-
-export function Navigation({ locale = "en" }: NavigationProps) {
+export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const t = getTranslations(locale);
+  const { locale, t } = useLocaleContext();
 
   const navigation = [
-    { name: t.nav.home, href: "/" },
-    { name: t.nav.products, href: "/products" },
-    { name: t.nav.wholesale, href: "/wholesale" },
-    { name: t.nav.ourStandard, href: "/la-vanilla-standard" },
-    { name: t.nav.blog, href: "/blog" },
-    { name: t.nav.faq, href: "/faq" },
-    { name: t.nav.contact, href: "/contact" },
+    { name: t.nav.home, href: `/${locale === "en" ? "" : locale}` },
+    { name: t.nav.products, href: `/${locale === "en" ? "" : locale}/products` },
+    { name: t.nav.wholesale, href: `/${locale === "en" ? "" : locale}/wholesale` },
+    { name: t.nav.ourStandard, href: `/${locale === "en" ? "" : locale}/la-vanilla-standard` },
+    { name: t.nav.blog, href: `/${locale === "en" ? "" : locale}/blog` },
+    { name: t.nav.faq, href: `/${locale === "en" ? "" : locale}/faq` },
+    { name: t.nav.contact, href: `/${locale === "en" ? "" : locale}/contact` },
   ];
 
   useEffect(() => {
@@ -47,7 +43,7 @@ export function Navigation({ locale = "en" }: NavigationProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-14 lg:h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group mr-auto">
+            <Link href={`/${locale === "en" ? "" : locale}`} className="flex items-center gap-3 group mr-auto">
               <div className="w-12 h-12 lg:w-14 lg:h-14 relative transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
@@ -99,7 +95,7 @@ export function Navigation({ locale = "en" }: NavigationProps) {
               {/* CTA buttons */}
               <div className="flex items-center gap-2.5">
                 <Link
-                  href="/contact"
+                  href={`/${locale === "en" ? "" : locale}/contact`}
                   className={`inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
                     !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
@@ -200,7 +196,7 @@ export function Navigation({ locale = "en" }: NavigationProps) {
 
               <div className="pt-3 space-y-2">
                 <Link
-                  href="/contact"
+                  href={`/${locale === "en" ? "" : locale}/contact`}
                   className={`flex items-center justify-center gap-1.5 w-full px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
                     !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"
