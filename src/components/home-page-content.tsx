@@ -393,14 +393,11 @@ export function HomePageContent() {
               ))}
             </div>
             <blockquote className="text-xl lg:text-2xl font-medium text-white mb-8 leading-relaxed">
-              &ldquo;The vanillin content and aroma were exactly as promised.
-              Our pastry chef baked a batch of vanilla bean canelés with their
-              pods. Customers were literally asking if we changed the recipe.
-              Safe to say we are hooked.&rdquo;
+              &ldquo;We&apos;ve been sourcing vanilla beans from La Vanilla Supplier for over 3 years. The quality has been consistently excellent — the aroma, the moisture content, and the vanillin levels are always on point. Their documentation is always complete and shipments arrive on time. They&apos;re our trusted partner for European distribution.&rdquo;
             </blockquote>
             <div>
-              <p className="font-semibold text-white">Sophie</p>
-              <p className="text-[#B5A37A]">Budapest, Hungary</p>
+              <p className="font-semibold text-white">Marco Bellini</p>
+              <p className="text-[#B5A37A]">Procurement Director, Milan, Italy</p>
             </div>
           </div>
         </div>
