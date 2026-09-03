@@ -108,19 +108,19 @@ export default function VanillaGradingChart() {
                 >
                   {/* Bean SVG */}
                   <svg
-                    width="16"
+                    width="20"
                     height={bean.height}
-                    viewBox={`0 0 16 ${bean.height}`}
+                    viewBox={`0 0 20 ${bean.height}`}
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="lg:w-5"
+                    className="lg:w-6"
                   >
                     <defs>
                       <linearGradient
                         id={`bean-${index}`}
-                        x1="8"
+                        x1="10"
                         y1="0"
-                        x2="8"
+                        x2="10"
                         y2={bean.height}
                         gradientUnits="userSpaceOnUse"
                       >
@@ -128,21 +128,14 @@ export default function VanillaGradingChart() {
                         <stop
                           offset="50%"
                           stopColor={grades[bean.grade].color}
-                          stopOpacity="0.9"
+                          stopOpacity="0.95"
                         />
                         <stop offset="100%" stopColor={grades[bean.grade].color} />
                       </linearGradient>
                     </defs>
                     <path
-                      d={`M8 0 C8 0, 12 ${bean.height * 0.05}, 13 ${bean.height * 0.15} C14 ${bean.height * 0.25}, 14 ${bean.height * 0.75}, 13 ${bean.height * 0.85} C12 ${bean.height * 0.95}, 8 ${bean.height}, 8 ${bean.height} C8 ${bean.height}, 4 ${bean.height * 0.95}, 3 ${bean.height * 0.85} C2 ${bean.height * 0.75}, 2 ${bean.height * 0.25}, 3 ${bean.height * 0.15} C4 ${bean.height * 0.05}, 8 0, 8 0 Z`}
+                      d={`M10 0 C10 0, 14 ${bean.height * 0.08}, 16 ${bean.height * 0.2} C18 ${bean.height * 0.35}, 18 ${bean.height * 0.65}, 16 ${bean.height * 0.8} C14 ${bean.height * 0.92}, 10 ${bean.height}, 10 ${bean.height} C10 ${bean.height}, 6 ${bean.height * 0.92}, 4 ${bean.height * 0.8} C2 ${bean.height * 0.65}, 2 ${bean.height * 0.35}, 4 ${bean.height * 0.2} C6 ${bean.height * 0.08}, 10 0, 10 0 Z`}
                       fill={`url(#bean-${index})`}
-                    />
-                    <path
-                      d={`M8 ${bean.height * 0.1} C8 ${bean.height * 0.1}, 9 ${bean.height * 0.3}, 9 ${bean.height * 0.5} C9 ${bean.height * 0.7}, 8 ${bean.height * 0.9}, 8 ${bean.height * 0.9}`}
-                      stroke={grades[bean.grade].color}
-                      strokeWidth="0.5"
-                      strokeOpacity="0.3"
-                      fill="none"
                     />
                   </svg>
                   
