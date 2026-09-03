@@ -201,13 +201,13 @@ export default function GradeSelector() {
 
       {/* Product + Quick Info */}
       <section className="bg-white py-12 lg:py-16">
-        <div className="px-10 lg:px-20">
+        <div className="px-4 sm:px-6 lg:px-20">
           {/* Grade Selector - Above the grid */}
           <div className="mb-8">
             <div className="inline-flex bg-[#F8F6F2] rounded-xl p-1 border border-[#E5E0D8]">
               <button
                 onClick={() => setSelectedGrade("a")}
-                className={`px-6 py-3 rounded-lg text-sm font-semibold transition-all ${
+                className={`px-4 sm:px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                   selectedGrade === "a"
                     ? "bg-[#2C2518] text-white shadow-md"
                     : "text-[#6B6358] hover:text-[#2C2518]"
@@ -217,7 +217,7 @@ export default function GradeSelector() {
               </button>
               <button
                 onClick={() => setSelectedGrade("b")}
-                className={`px-6 py-3 rounded-lg text-sm font-semibold transition-all ${
+                className={`px-4 sm:px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
                   selectedGrade === "b"
                     ? "bg-[#2C2518] text-white shadow-md"
                     : "text-[#6B6358] hover:text-[#2C2518]"
@@ -228,7 +228,7 @@ export default function GradeSelector() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             {/* Product Image */}
             <div className="sticky top-24 h-full">
               <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#F8F6F2] h-full">

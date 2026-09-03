@@ -47,13 +47,13 @@ const grades = {
 };
 
 const beans = [
-  { height: 352, label: "22 cm", grade: "gourmet" as const },
-  { height: 288, label: "18 cm", grade: "gourmet" as const },
-  { height: 272, label: "17 cm", grade: "a" as const },
-  { height: 240, label: "15 cm", grade: "a" as const },
-  { height: 224, label: "14 cm", grade: "b" as const },
-  { height: 192, label: "12 cm", grade: "b" as const },
-  { height: 160, label: "10 cm", grade: "b" as const },
+  { height: 264, label: "22 cm", grade: "gourmet" as const },
+  { height: 216, label: "18 cm", grade: "gourmet" as const },
+  { height: 204, label: "17 cm", grade: "a" as const },
+  { height: 180, label: "15 cm", grade: "a" as const },
+  { height: 168, label: "14 cm", grade: "b" as const },
+  { height: 144, label: "12 cm", grade: "b" as const },
+  { height: 120, label: "10 cm", grade: "b" as const },
 ];
 
 export default function VanillaGradingChart() {
@@ -73,10 +73,10 @@ export default function VanillaGradingChart() {
       </div>
 
       {/* Visual Chart */}
-      <div className="relative mb-8">
-        <div className="flex">
+      <div className="relative mb-8 overflow-x-auto">
+        <div className="flex min-w-[500px]">
           {/* Scale ruler */}
-          <div className="relative w-16 flex-shrink-0">
+          <div className="relative w-12 lg:w-16 flex-shrink-0">
             <div className="absolute left-0 top-0 bottom-0 border-l-2 border-[#B5A37A]/30" />
             {[0, 5, 10, 15, 20].map((cm) => (
               <div
@@ -84,19 +84,19 @@ export default function VanillaGradingChart() {
                 className="absolute left-0 flex items-center"
                 style={{ top: `${(cm / 22) * 100}%` }}
               >
-                <div className="w-4 h-px bg-[#B5A37A]" />
-                <span className="ml-2 text-xs text-[#B5A37A] font-medium">
+                <div className="w-3 lg:w-4 h-px bg-[#B5A37A]" />
+                <span className="ml-1.5 lg:ml-2 text-[10px] lg:text-xs text-[#B5A37A] font-medium">
                   {cm}
                 </span>
               </div>
             ))}
-            <div className="absolute left-0 bottom-0 text-xs text-[#B5A37A] font-medium mt-2">
+            <div className="absolute left-0 bottom-0 text-[10px] lg:text-xs text-[#B5A37A] font-medium mt-2">
               CM
             </div>
           </div>
 
           {/* Beans container */}
-          <div className="flex-1 flex items-start justify-center gap-4 lg:gap-8 pt-0">
+          <div className="flex-1 flex items-start justify-center gap-3 lg:gap-8 pt-0 pb-4">
             {beans.map((bean, index) => {
               const isActive = selectedGrade === bean.grade;
               return (
@@ -108,7 +108,7 @@ export default function VanillaGradingChart() {
                 >
                   {/* Bean SVG */}
                   <svg
-                    width="20"
+                    width="16"
                     height={bean.height}
                     viewBox={`0 0 20 ${bean.height}`}
                     fill="none"
@@ -141,8 +141,8 @@ export default function VanillaGradingChart() {
                   
                   {/* Dashed line and label */}
                   <div className="mt-2 text-center">
-                    <div className="w-12 border-t border-dashed border-[#B5A37A]/50 mx-auto mb-1" />
-                    <p className="text-xs font-medium text-[#2C2518]">
+                    <div className="w-8 lg:w-12 border-t border-dashed border-[#B5A37A]/50 mx-auto mb-1" />
+                    <p className="text-[10px] lg:text-xs font-medium text-[#2C2518]">
                       {bean.label}
                     </p>
                   </div>
@@ -154,7 +154,7 @@ export default function VanillaGradingChart() {
       </div>
 
       {/* Grade Selector */}
-      <div className="flex justify-center gap-8 lg:gap-16 mb-8">
+      <div className="flex justify-center gap-6 lg:gap-16 mb-8">
         {(Object.keys(grades) as Grade[]).map((key) => (
           <button
             key={key}
@@ -170,10 +170,10 @@ export default function VanillaGradingChart() {
                 selectedGrade === key ? "bg-[#B5A37A]" : "bg-[#E5E0D8]"
               }`}
             />
-            <p className="text-sm font-bold text-[#2C2518] tracking-wider">
+            <p className="text-xs lg:text-sm font-bold text-[#2C2518] tracking-wider">
               {grades[key].label}
             </p>
-            <p className="text-xs text-[#6B6358] mt-1">{grades[key].range}</p>
+            <p className="text-[10px] lg:text-xs text-[#6B6358] mt-1">{grades[key].range}</p>
           </button>
         ))}
       </div>
