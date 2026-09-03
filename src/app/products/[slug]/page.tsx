@@ -141,7 +141,7 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* Product + Quick Info */}
       <section className="bg-white py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-10 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Product Image */}
             <div className="sticky top-24 h-full">
