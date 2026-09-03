@@ -104,7 +104,7 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Video Section - Vanilla Paste Only */}
       {slug === "vanilla-paste" && (
         <section className="grid lg:grid-cols-2">
-          <div className="relative bg-[#2C2518] h-[600px] lg:h-[700px]">
+          <div className="relative bg-[#2C2518] h-[400px] lg:h-[500px]">
             <video
               autoPlay
               loop
