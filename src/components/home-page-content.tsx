@@ -393,7 +393,7 @@ export function HomePageContent() {
               ))}
             </div>
             <blockquote className="text-xl lg:text-2xl font-medium text-white mb-8 leading-relaxed">
-              &ldquo;Honestly, we had a bad experience with another supplier before finding La Vanilla. The beans were dry, half of them smelled like nothing. La Vanilla was recommended by a friend in the industry and we haven&apos;t looked back. The quality speaks for itself — our clients keep coming back for more.&rdquo;
+              &ldquo;Honestly, we had a bad experience with another supplier before finding La Vanilla. The beans were dry, half of them smelled like nothing. La Vanilla was recommended by a friend in the industry and we haven&apos;t looked back. The quality speaks for itself, our clients keep coming back for more.&rdquo;
             </blockquote>
             <div>
               <p className="font-semibold text-white">Ahmed Al-Rashid</p>
