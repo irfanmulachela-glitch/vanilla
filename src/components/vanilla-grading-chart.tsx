@@ -48,11 +48,11 @@ const grades = {
 
 const beans = [
   { height: 352, label: "22 cm", grade: "gourmet" as const },
-  { height: 304, label: "18 cm", grade: "gourmet" as const },
+  { height: 288, label: "18 cm", grade: "gourmet" as const },
   { height: 272, label: "17 cm", grade: "a" as const },
   { height: 240, label: "15 cm", grade: "a" as const },
-  { height: 208, label: "14 cm", grade: "b" as const },
-  { height: 176, label: "12 cm", grade: "b" as const },
+  { height: 224, label: "14 cm", grade: "b" as const },
+  { height: 192, label: "12 cm", grade: "b" as const },
   { height: 160, label: "10 cm", grade: "b" as const },
 ];
 
@@ -96,7 +96,7 @@ export default function VanillaGradingChart() {
           </div>
 
           {/* Beans container */}
-          <div className="flex-1 flex items-end justify-center gap-4 lg:gap-8 pb-16">
+          <div className="flex-1 flex items-start justify-center gap-4 lg:gap-8 pt-0">
             {beans.map((bean, index) => {
               const isActive = selectedGrade === bean.grade;
               return (
@@ -108,19 +108,19 @@ export default function VanillaGradingChart() {
                 >
                   {/* Bean SVG */}
                   <svg
-                    width="32"
+                    width="16"
                     height={bean.height}
-                    viewBox={`0 0 32 ${bean.height}`}
+                    viewBox={`0 0 16 ${bean.height}`}
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="lg:w-10"
+                    className="lg:w-5"
                   >
                     <defs>
                       <linearGradient
                         id={`bean-${index}`}
-                        x1="16"
+                        x1="8"
                         y1="0"
-                        x2="16"
+                        x2="8"
                         y2={bean.height}
                         gradientUnits="userSpaceOnUse"
                       >
@@ -134,8 +134,15 @@ export default function VanillaGradingChart() {
                       </linearGradient>
                     </defs>
                     <path
-                      d={`M16 0 C16 0, 28 ${bean.height * 0.1}, 30 ${bean.height * 0.3} C32 ${bean.height * 0.5}, 30 ${bean.height * 0.8}, 16 ${bean.height} C0 ${bean.height * 0.8}, -2 ${bean.height * 0.5}, 2 ${bean.height * 0.3} C4 ${bean.height * 0.1}, 16 0, 16 0 Z`}
+                      d={`M8 0 C8 0, 12 ${bean.height * 0.05}, 13 ${bean.height * 0.15} C14 ${bean.height * 0.25}, 14 ${bean.height * 0.75}, 13 ${bean.height * 0.85} C12 ${bean.height * 0.95}, 8 ${bean.height}, 8 ${bean.height} C8 ${bean.height}, 4 ${bean.height * 0.95}, 3 ${bean.height * 0.85} C2 ${bean.height * 0.75}, 2 ${bean.height * 0.25}, 3 ${bean.height * 0.15} C4 ${bean.height * 0.05}, 8 0, 8 0 Z`}
                       fill={`url(#bean-${index})`}
+                    />
+                    <path
+                      d={`M8 ${bean.height * 0.1} C8 ${bean.height * 0.1}, 9 ${bean.height * 0.3}, 9 ${bean.height * 0.5} C9 ${bean.height * 0.7}, 8 ${bean.height * 0.9}, 8 ${bean.height * 0.9}`}
+                      stroke={grades[bean.grade].color}
+                      strokeWidth="0.5"
+                      strokeOpacity="0.3"
+                      fill="none"
                     />
                   </svg>
                   
