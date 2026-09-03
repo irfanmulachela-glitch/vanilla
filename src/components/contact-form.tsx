@@ -14,6 +14,8 @@ import { siteConfig } from "@/lib/config";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,9 +29,26 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add Supabase integration
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or contact us via WhatsApp.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -310,12 +329,24 @@ export function ContactForm() {
                     />
                   </div>
                 </div>
+                {error && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                    {error}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="mt-6 w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#A08C5A] text-white font-semibold rounded-lg hover:bg-[#8B7D50] transition-colors"
+                  disabled={loading}
+                  className="mt-6 w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#A08C5A] text-white font-semibold rounded-lg hover:bg-[#8B7D50] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Inquiry
+                  {loading ? (
+                    <>Submitting...</>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Inquiry
+                    </>
+                  )}
                 </button>
               </form>
             )}

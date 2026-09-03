@@ -30,9 +30,20 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24 overflow-hidden">
+        {/* Charcoal accent */}
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-[#2C2518] opacity-90" />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-[#2C2518]/30" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#2C2518]/20 via-transparent to-[#2C2518]/40" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-px bg-[#2C2518]" />
+              <span className="text-xs font-semibold text-[#2C2518] uppercase tracking-[0.2em]">
+                We&apos;re Here to Help
+              </span>
+            </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Get in Touch
             </h1>

@@ -165,15 +165,26 @@ export default function GradeSelector() {
 
   return (
     <>
-      {/* Hero - Concise, impactful */}
-      <section className="bg-[#2C2518] text-white py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero - Distinctive with charcoal accent */}
+      <section className="relative bg-[#2C2518] text-white py-12 lg:py-16 overflow-hidden">
+        {/* Charcoal geometric accent */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#1a1410] opacity-60" />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-[#B5A37A]/20" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#B5A37A]/40 via-[#B5A37A]/10 to-transparent" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
             className="inline-flex items-center text-[#B5A37A] hover:text-white mb-4 text-sm transition-colors"
           >
             ← Back to Products
           </Link>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-px bg-[#B5A37A]" />
+            <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
+              Indonesian Origin
+            </span>
+          </div>
           <h1 className="text-3xl lg:text-4xl font-bold mb-3">
             {grade.heroTitle}
           </h1>
