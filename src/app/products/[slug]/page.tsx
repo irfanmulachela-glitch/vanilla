@@ -127,7 +127,7 @@ export default async function ProductPage({ params }: PageProps) {
                 "Vanilla beans ground in-house for maximum freshness",
                 "Consistent texture across every batch",
                 "Halal certified production facility",
-                "Ready for export in food-grade packaging",
+                "Ready for export",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-base text-[#2C2518]">
                   <CheckCircle2 className="w-5 h-5 text-[#B5A37A] flex-shrink-0 mt-0.5" />
