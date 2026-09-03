@@ -103,37 +103,38 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* Video Section - Vanilla Paste Only */}
       {slug === "vanilla-paste" && (
-        <section className="bg-[#F8F6F2] py-10 lg:py-12">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="relative rounded-xl overflow-hidden border border-[#E5E0D8] bg-[#2C2518]">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto aspect-video object-cover"
-                >
-                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-xs">
-                  Our Process
-                </h2>
-                <p className="text-sm text-[#6B6358] leading-relaxed mb-4">
-                  Every batch of our vanilla paste is carefully crafted using traditional Indonesian methods combined with modern quality control. From selecting the finest cured beans to the final packaging, we ensure consistency in every jar.
-                </p>
-                <ul className="space-y-2">
-                  {["Hand-selected premium beans", "Traditional sun-curing process", "Lab-tested for vanillin content", "Custom formulations available"].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-[#2C2518]">
-                      <CheckCircle2 className="w-4 h-4 text-[#B5A37A] flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+        <section className="grid lg:grid-cols-2">
+          <div className="relative bg-[#2C2518] h-[500px] lg:h-[600px]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="flex flex-col justify-center px-10 lg:px-20 py-16 lg:py-20 bg-[#F8F6F2]">
+            <h2 className="text-xs font-semibold text-[#B5A37A] uppercase tracking-wider mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-[#2C2518] leading-relaxed mb-8">
+              We produce vanilla paste in small batches to maintain quality. Our team blends ground vanilla beans with natural sugar and glycerin to create a smooth, spreadable paste that holds up during baking and cooking.
+            </p>
+            <ul className="space-y-4">
+              {[
+                "Vanilla beans ground in-house for maximum freshness",
+                "Consistent texture across every batch",
+                "No artificial flavors or preservatives",
+                "Packaged in food-grade containers for export",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-base text-[#2C2518]">
+                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] flex-shrink-0 mt-0.5" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}
