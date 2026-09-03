@@ -201,7 +201,7 @@ export default function GradeSelector() {
 
       {/* Product + Quick Info */}
       <section className="bg-white py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-10 lg:px-20">
           {/* Grade Selector - Above the grid */}
           <div className="mb-8">
             <div className="inline-flex bg-[#F8F6F2] rounded-xl p-1 border border-[#E5E0D8]">
