@@ -103,21 +103,36 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* Video Section - Vanilla Paste Only */}
       {slug === "vanilla-paste" && (
-        <section className="bg-[#F8F6F2] py-12 lg:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
-              Our Vanilla Paste Process
-            </h2>
-            <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#2C2518]">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto aspect-video object-cover"
-              >
-                <source src="/vanilla-paste-process.mp4" type="video/mp4" />
-              </video>
+        <section className="bg-[#F8F6F2] py-10 lg:py-12">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-xl overflow-hidden border border-[#E5E0D8] bg-[#2C2518]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto aspect-video object-cover"
+                >
+                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-xs">
+                  Our Process
+                </h2>
+                <p className="text-sm text-[#6B6358] leading-relaxed mb-4">
+                  Every batch of our vanilla paste is carefully crafted using traditional Indonesian methods combined with modern quality control. From selecting the finest cured beans to the final packaging, we ensure consistency in every jar.
+                </p>
+                <ul className="space-y-2">
+                  {["Hand-selected premium beans", "Traditional sun-curing process", "Lab-tested for vanillin content", "Custom formulations available"].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm text-[#2C2518]">
+                      <CheckCircle2 className="w-4 h-4 text-[#B5A37A] flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
