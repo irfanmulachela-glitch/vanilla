@@ -101,6 +101,28 @@ export default async function ProductPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Video Section - Vanilla Paste Only */}
+      {slug === "vanilla-paste" && (
+        <section className="bg-[#F8F6F2] py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl font-semibold text-[#2C2518] mb-6 uppercase tracking-wider text-sm">
+              Our Vanilla Paste Process
+            </h2>
+            <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#2C2518]">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto aspect-video object-cover"
+              >
+                <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Product + Quick Info */}
       <section className="bg-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
