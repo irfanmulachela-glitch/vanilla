@@ -19,6 +19,7 @@ import { useLocaleContext } from "@/components/locale-provider";
 
 export function HomePageContent() {
   const { locale, t } = useLocaleContext();
+  const prefix = locale === "en" ? "" : `/${locale}`;
 
   return (
     <>
@@ -41,14 +42,14 @@ export function HomePageContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href={`/${locale === "en" ? "" : locale}/contact`}
+                href={`${prefix}/contact`}
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
               >
                 {t.common.requestSample}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
-                href={`/${locale === "en" ? "" : locale}/products`}
+                href={`${prefix}/products`}
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2C2518] text-sm font-medium rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
               >
                 {t.common.learnMore}
@@ -137,7 +138,7 @@ export function HomePageContent() {
             {siteConfig.products.map((product) => (
               <Link
                 key={product.id}
-                href={`/${locale === "en" ? "" : locale}/products/${product.slug}`}
+                href={`${prefix}/products/${product.slug}`}
                 className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
               >
                 <div className="relative h-64">
@@ -339,25 +340,25 @@ export function HomePageContent() {
             {[
               {
                 region: "UAE & Middle East",
-                href: `/${locale === "en" ? "" : locale}/regions/uae`,
+                href: `${prefix}/regions/uae`,
                 description:
                   "Dubai, Abu Dhabi, and across the GCC. Halal certified. Fast air freight.",
               },
               {
                 region: "Australia",
-                href: `/${locale === "en" ? "" : locale}/regions/australia`,
+                href: `${prefix}/regions/australia`,
                 description:
                   "Sydney, Melbourne, Perth. US Import Ready. 5-7 day delivery.",
               },
               {
                 region: "USA",
-                href: `/${locale === "en" ? "" : locale}/regions/usa`,
+                href: `${prefix}/regions/usa`,
                 description:
                   "US Import Ready. East and West coast. DHL and FedEx shipping.",
               },
               {
                 region: "Europe",
-                href: `/${locale === "en" ? "" : locale}/regions/europe`,
+                href: `${prefix}/regions/europe`,
                 description:
                   "EU food safety standards. Netherlands, France, Germany, and more.",
               },
@@ -411,7 +412,7 @@ export function HomePageContent() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
-              href={`/${locale === "en" ? "" : locale}/wholesale`}
+              href={`${prefix}/wholesale`}
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Package className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -419,7 +420,7 @@ export function HomePageContent() {
               <p className="text-sm text-[#6B6358]">Bulk orders from 25kg</p>
             </Link>
             <Link
-              href={`/${locale === "en" ? "" : locale}/regions/uae`}
+              href={`${prefix}/regions/uae`}
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -427,7 +428,7 @@ export function HomePageContent() {
               <p className="text-sm text-[#6B6358]">Halal certified supply</p>
             </Link>
             <Link
-              href={`/${locale === "en" ? "" : locale}/regions/australia`}
+              href={`${prefix}/regions/australia`}
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -435,7 +436,7 @@ export function HomePageContent() {
               <p className="text-sm text-[#6B6358]">Food safety compliant</p>
             </Link>
             <Link
-              href={`/${locale === "en" ? "" : locale}/regions/usa`}
+              href={`${prefix}/regions/usa`}
               className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
             >
               <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
@@ -458,7 +459,7 @@ export function HomePageContent() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href={`/${locale === "en" ? "" : locale}/contact`}
+              href={`${prefix}/contact`}
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg hover:bg-[#F8F6F2] transition-colors"
             >
               {t.common.requestSample}

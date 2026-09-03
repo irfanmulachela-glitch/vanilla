@@ -13,14 +13,16 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const { locale, t } = useLocaleContext();
 
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
   const navigation = [
-    { name: t.nav.home, href: `/${locale === "en" ? "" : locale}` },
-    { name: t.nav.products, href: `/${locale === "en" ? "" : locale}/products` },
-    { name: t.nav.wholesale, href: `/${locale === "en" ? "" : locale}/wholesale` },
-    { name: t.nav.ourStandard, href: `/${locale === "en" ? "" : locale}/la-vanilla-standard` },
-    { name: t.nav.blog, href: `/${locale === "en" ? "" : locale}/blog` },
-    { name: t.nav.faq, href: `/${locale === "en" ? "" : locale}/faq` },
-    { name: t.nav.contact, href: `/${locale === "en" ? "" : locale}/contact` },
+    { name: t.nav.home, href: `${prefix}/` },
+    { name: t.nav.products, href: `${prefix}/products` },
+    { name: t.nav.wholesale, href: `${prefix}/wholesale` },
+    { name: t.nav.ourStandard, href: `${prefix}/la-vanilla-standard` },
+    { name: t.nav.blog, href: `${prefix}/blog` },
+    { name: t.nav.faq, href: `${prefix}/faq` },
+    { name: t.nav.contact, href: `${prefix}/contact` },
   ];
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-14 lg:h-16">
             {/* Logo */}
-            <Link href={`/${locale === "en" ? "" : locale}`} className="flex items-center gap-3 group mr-auto">
+            <Link href={`${prefix}/`} className="flex items-center gap-3 group mr-auto">
               <div className="w-12 h-12 lg:w-14 lg:h-14 relative transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/logo.png"
@@ -95,7 +97,7 @@ export function Navigation() {
               {/* CTA buttons */}
               <div className="flex items-center gap-2.5">
                 <Link
-                  href={`/${locale === "en" ? "" : locale}/contact`}
+                  href={`${prefix}/contact`}
                   className={`inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
                     !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425] hover:shadow-lg hover:shadow-[#2C2518]/20"
@@ -196,7 +198,7 @@ export function Navigation() {
 
               <div className="pt-3 space-y-2">
                 <Link
-                  href={`/${locale === "en" ? "" : locale}/contact`}
+                  href={`${prefix}/contact`}
                   className={`flex items-center justify-center gap-1.5 w-full px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
                     !scrolled
                       ? "bg-[#2C2518] text-white hover:bg-[#3D3425]"

@@ -9,24 +9,26 @@ import { useLocaleContext } from "./locale-provider";
 export function Footer() {
   const { locale, t } = useLocaleContext();
 
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
   const footerLinks = {
     products: [
-      { name: t.products.vanillaBeans, href: `/${locale === "en" ? "" : locale}/products/vanilla-beans` },
-      { name: t.products.vanillaPaste, href: `/${locale === "en" ? "" : locale}/products/vanilla-paste` },
-      { name: t.products.vanillaPowder, href: `/${locale === "en" ? "" : locale}/products/vanilla-powder` },
-      { name: t.nav.wholesale, href: `/${locale === "en" ? "" : locale}/wholesale` },
+      { name: t.products.vanillaBeans, href: `${prefix}/products/vanilla-beans` },
+      { name: t.products.vanillaPaste, href: `${prefix}/products/vanilla-paste` },
+      { name: t.products.vanillaPowder, href: `${prefix}/products/vanilla-powder` },
+      { name: t.nav.wholesale, href: `${prefix}/wholesale` },
     ],
     company: [
-      { name: "About Us", href: `/${locale === "en" ? "" : locale}/about` },
-      { name: t.quality.title, href: `/${locale === "en" ? "" : locale}/quality` },
-      { name: t.nav.blog, href: `/${locale === "en" ? "" : locale}/blog` },
-      { name: t.nav.faq, href: `/${locale === "en" ? "" : locale}/faq` },
+      { name: "About Us", href: `${prefix}/about` },
+      { name: t.quality.title, href: `${prefix}/quality` },
+      { name: t.nav.blog, href: `${prefix}/blog` },
+      { name: t.nav.faq, href: `${prefix}/faq` },
     ],
     regions: [
-      { name: "Dubai, UAE", href: `/${locale === "en" ? "" : locale}/regions/uae` },
-      { name: "Sydney, Australia", href: `/${locale === "en" ? "" : locale}/regions/australia` },
-      { name: "New York, USA", href: `/${locale === "en" ? "" : locale}/regions/usa` },
-      { name: "Europe", href: `/${locale === "en" ? "" : locale}/regions/europe` },
+      { name: "Dubai, UAE", href: `${prefix}/regions/uae` },
+      { name: "Sydney, Australia", href: `${prefix}/regions/australia` },
+      { name: "New York, USA", href: `${prefix}/regions/usa` },
+      { name: "Europe", href: `${prefix}/regions/europe` },
     ],
   };
 
@@ -67,7 +69,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company info */}
           <div className="lg:col-span-1">
-            <Link href={`/${locale === "en" ? "" : locale}`} className="flex items-center gap-3 mb-4">
+            <Link href={`${prefix}/`} className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 relative flex-shrink-0">
                 <Image
                   src="/logo.png"
@@ -177,7 +179,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href={`/${locale === "en" ? "" : locale}/quality`}
+                href={`${prefix}/quality`}
                 className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 {t.footer.qualityPolicy}
