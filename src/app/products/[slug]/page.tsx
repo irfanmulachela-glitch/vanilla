@@ -104,7 +104,7 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Video Section - Vanilla Paste Only */}
       {slug === "vanilla-paste" && (
         <section className="grid lg:grid-cols-2">
-          <div className="relative bg-[#2C2518] h-[500px] lg:h-[600px]">
+          <div className="relative bg-[#2C2518] h-[600px] lg:h-[700px]">
             <video
               autoPlay
               loop
@@ -120,14 +120,14 @@ export default async function ProductPage({ params }: PageProps) {
               Our Process
             </h2>
             <p className="text-xl text-[#2C2518] leading-relaxed mb-8">
-              We produce vanilla paste in small batches to maintain quality. Our team blends ground vanilla beans with natural sugar and glycerin to create a smooth, spreadable paste that holds up during baking and cooking.
+              We produce vanilla paste at scale to meet B2B demand. Our team blends ground vanilla beans with natural sugar and glycerin to create a smooth, spreadable paste that holds up during baking and cooking.
             </p>
             <ul className="space-y-4">
               {[
                 "Vanilla beans ground in-house for maximum freshness",
                 "Consistent texture across every batch",
-                "No artificial flavors or preservatives",
-                "Packaged in food-grade containers for export",
+                "Halal certified production facility",
+                "Ready for export in food-grade packaging",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-base text-[#2C2518]">
                   <CheckCircle2 className="w-5 h-5 text-[#B5A37A] flex-shrink-0 mt-0.5" />
