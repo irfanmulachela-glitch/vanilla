@@ -30,24 +30,22 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24 overflow-hidden">
-        {/* Charcoal accent */}
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-[#2C2518] opacity-90" />
-        <div className="absolute top-0 right-1/4 w-px h-full bg-[#2C2518]/30" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#2C2518]/20 via-transparent to-[#2C2518]/40" />
+      <section className="relative bg-[#2C2518] text-white py-16 lg:py-24 overflow-hidden">
+        {/* Gold vertical line on right */}
+        <div className="absolute top-0 right-16 lg:right-24 w-px h-full bg-[#B5A37A]" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#2C2518]" />
-              <span className="text-xs font-semibold text-[#2C2518] uppercase tracking-[0.2em]">
+              <div className="w-8 h-px bg-[#B5A37A]" />
+              <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
                 We&apos;re Here to Help
               </span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Get in Touch
             </h1>
-            <p className="text-lg text-stone-700">
+            <p className="text-lg text-stone-300">
               Ready to start your vanilla journey? Request a quote, ask
               questions, or schedule a facility visit. We respond within 24
               hours.
