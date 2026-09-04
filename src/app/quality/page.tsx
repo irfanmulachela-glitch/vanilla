@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   CheckCircle2,
   Shield,
@@ -11,13 +12,14 @@ import {
   FileText,
   Stamp,
   Leaf,
+  ArrowRight,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Quality & Certifications - Food Safety Standards, Halal, Phytosanitary",
+  title: "Quality & Certifications | Halal Vanilla Supplier Indonesia",
   description:
-    "Our commitment to quality: Food Safety Standards processing, Halal certified, Phytosanitary compliance. Full documentation for every shipment.",
+    "Food Safety Standards vanilla supplier with Halal certification, Phytosanitary compliance, and full export documentation. Every shipment verified by lab testing.",
   keywords: [
     "vanilla quality certifications",
     "halal vanilla supplier",
@@ -416,6 +418,60 @@ export default function QualityPage() {
           <p className="text-sm text-gray-500 text-center mt-8">
             Contact us for additional documentation or certified copies.
           </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-[#2C2518]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+            Ready to Order?
+          </h2>
+          <p className="text-stone-300 mb-8 max-w-2xl mx-auto">
+            All certifications and documentation included with every shipment.
+            Request a quote today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-xl hover:bg-[#F8F6F2] transition-colors"
+            >
+              Request Quote
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
+            >
+              View Products
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages */}
+      <section className="py-12 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-lg font-semibold text-[#2C2518] mb-6">Related Pages</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: "/products/vanilla-beans", label: "Vanilla Beans", desc: "Grade A & B beans" },
+              { href: "/wholesale", label: "Wholesale", desc: "Bulk orders & pricing" },
+              { href: "/la-vanilla-standard", label: "Our Standard", desc: "Quality framework" },
+              { href: "/comparison", label: "Grade Comparison", desc: "A vs B specs" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A]/50 transition-colors group"
+              >
+                <p className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
+                  {link.label}
+                </p>
+                <p className="text-sm text-[#6B6358] mt-1">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

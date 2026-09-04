@@ -139,6 +139,17 @@ export function ContactForm() {
                 </div>
               </div>
             </div>
+
+            {/* Quick Links */}
+            <div className="mt-8">
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Explore</h3>
+              <div className="space-y-2">
+                <a href="/products" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ View All Products</a>
+                <a href="/wholesale" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Wholesale Orders</a>
+                <a href="/quality" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Quality & Certifications</a>
+                <a href="/faq" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Frequently Asked Questions</a>
+              </div>
+            </div>
           </div>
 
           {/* Contact Form */}

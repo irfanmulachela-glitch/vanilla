@@ -4,9 +4,9 @@ import { CheckCircle2, Users, Globe, Award, Leaf, ArrowRight, MapPin, Handshake,
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "About Us - Our Story & Mission",
+  title: "About La Vanilla Supplier | Indonesian Vanilla Exporter Since 2015",
   description:
-    "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier based in Java. Premium natural vanilla for global markets.",
+    "PT Penta Pelita Semesta - Indonesia's trusted vanilla supplier based in Java. Premium Grade A & B vanilla beans exported to 20+ countries.",
   alternates: {
     canonical: "/about",
   },

@@ -4,9 +4,9 @@ import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "FAQ - Frequently Asked Questions",
+  title: "FAQ - Vanilla Beans Wholesale | MOQ, Shipping, Payment Terms",
   description:
-    "Answers to common questions about ordering vanilla beans, paste, and powder. MOQ, shipping, certifications, payment terms, and more.",
+    "Answers to common questions about ordering wholesale vanilla beans from Indonesia. MOQ 25kg, FOB shipping, Halal certified, payment terms for B2B buyers.",
   keywords: [
     "vanilla supplier FAQ",
     "vanilla beans ordering",

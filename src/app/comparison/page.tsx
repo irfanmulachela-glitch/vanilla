@@ -4,9 +4,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Indonesian Vanilla Bean Comparison | Grade A vs Grade B Specs",
+  title: "Vanilla Bean Grade Comparison | Grade A vs Grade B - Specs & Pricing",
   description:
-    "Technical comparison of Grade A gourmet vs Grade B extraction vanilla beans. Moisture content, vanillin levels, bean length, and pricing. Direct from Indonesia.",
+    "Compare Grade A gourmet vs Grade B extraction vanilla beans. Vanillin content, moisture, bean length, and use cases. Direct from Indonesian source.",
   keywords: [
     "vanilla bean comparison",
     "Grade A vs Grade B vanilla",

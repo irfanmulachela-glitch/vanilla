@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Our Products - Vanilla Beans, Paste & Powder",
+  title: "Vanilla Products | Beans, Paste & Powder - Wholesale Indonesia",
   description:
-    "Explore our range of premium Indonesian vanilla products. Grade A & B beans, custom vanilla paste, and pure vanilla powder. Food Safety Standards. MOQ 25kg.",
+    "Premium Indonesian vanilla products for B2B buyers. Grade A & B beans, custom vanilla paste, pure vanilla powder. MOQ 25kg, FOB shipping.",
   keywords: [
     "vanilla beans Indonesia",
     "vanilla paste manufacturer",
