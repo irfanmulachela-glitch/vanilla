@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
+import { sendInquiryEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,6 +38,21 @@ export async function POST(request: NextRequest) {
         { error: "Failed to save inquiry" },
         { status: 500 }
       );
+    }
+
+    try {
+      await sendInquiryEmail({
+        name,
+        email,
+        company,
+        phone,
+        product,
+        quantity,
+        region,
+        message,
+      });
+    } catch (emailError) {
+      console.error("Email error:", emailError);
     }
 
     return NextResponse.json({ success: true, data });
