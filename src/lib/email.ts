@@ -41,7 +41,8 @@ export async function sendInquiryEmail(inquiry: InquiryEmail) {
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background-color: #2C2518; padding: 20px; text-align: center;">
-        <h1 style="color: #B5A37A; margin: 0; font-size: 20px;">New Inquiry</h1>
+        <img src="https://www.lavanillasupplier.com/logo-text.png" alt="La Vanilla Supplier" style="height: 40px;" />
+        <h1 style="color: #B5A37A; margin: 10px 0 0 0; font-size: 20px;">New Inquiry</h1>
       </div>
       <div style="padding: 20px; background-color: #f9f9f9;">
         <table style="width: 100%; border-collapse: collapse;">
@@ -105,7 +106,8 @@ export async function sendConfirmationEmail(inquiry: InquiryEmail) {
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background-color: #2C2518; padding: 20px; text-align: center;">
-        <h1 style="color: #B5A37A; margin: 0; font-size: 20px;">Thank You for Your Inquiry</h1>
+        <img src="https://www.lavanillasupplier.com/logo-text.png" alt="La Vanilla Supplier" style="height: 40px;" />
+        <h1 style="color: #B5A37A; margin: 10px 0 0 0; font-size: 20px;">Thank You for Your Inquiry</h1>
       </div>
       <div style="padding: 20px; background-color: #f9f9f9;">
         <p style="color: #333; font-size: 16px;">Hi ${inquiry.name},</p>
