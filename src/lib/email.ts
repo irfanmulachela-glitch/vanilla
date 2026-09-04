@@ -84,3 +84,58 @@ export async function sendInquiryEmail(inquiry: InquiryEmail) {
     html,
   });
 }
+
+export async function sendConfirmationEmail(inquiry: InquiryEmail) {
+  const productLabels: Record<string, string> = {
+    "vanilla-beans": "Vanilla Beans",
+    "vanilla-paste": "Vanilla Paste",
+    "vanilla-powder": "Vanilla Powder",
+    custom: "Custom Formulation",
+  };
+
+  const regionLabels: Record<string, string> = {
+    uae: "UAE / Middle East",
+    australia: "Australia",
+    usa: "USA",
+    europe: "Europe",
+    asia: "Asia Pacific",
+    other: "Other",
+  };
+
+  const html = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+      <div style="background-color: #2C2518; padding: 20px; text-align: center;">
+        <h1 style="color: #B5A37A; margin: 0; font-size: 20px;">Thank You for Your Inquiry</h1>
+      </div>
+      <div style="padding: 20px; background-color: #f9f9f9;">
+        <p style="color: #333; font-size: 16px;">Hi ${inquiry.name},</p>
+        <p style="color: #555; line-height: 1.6;">We've received your inquiry and will respond within 24 hours. Here's a summary of what you submitted:</p>
+        <div style="background-color: #fff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 16px; margin: 16px 0;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; color: #333;">Product:</td>
+              <td style="padding: 6px 0; color: #555;">${productLabels[inquiry.product] || inquiry.product}</td>
+            </tr>
+            ${inquiry.quantity ? `<tr><td style="padding: 6px 0; font-weight: bold; color: #333;">Quantity:</td><td style="padding: 6px 0; color: #555;">${inquiry.quantity}</td></tr>` : ""}
+            <tr>
+              <td style="padding: 6px 0; font-weight: bold; color: #333;">Region:</td>
+              <td style="padding: 6px 0; color: #555;">${regionLabels[inquiry.region] || inquiry.region}</td>
+            </tr>
+          </table>
+        </div>
+        <p style="color: #555; line-height: 1.6;">If you need immediate assistance, reach us on <a href="https://wa.me/6287835756945" style="color: #B5A37A;">WhatsApp</a>.</p>
+        <p style="color: #555; line-height: 1.6;">Best regards,<br/>La Vanilla Supplier Team</p>
+      </div>
+      <div style="padding: 10px 20px; background-color: #2C2518; text-align: center;">
+        <p style="color: #B5A37A; margin: 0; font-size: 12px;">La Vanilla Supplier — Premium Indonesian Vanilla</p>
+      </div>
+    </div>
+  `;
+
+  await transporter.sendMail({
+    from: '"La Vanilla Supplier" <admin@lavanillasupplier.com>',
+    to: inquiry.email,
+    subject: `We received your inquiry — La Vanilla Supplier`,
+    html,
+  });
+}

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
-import { sendInquiryEmail } from "@/lib/email";
+import { sendInquiryEmail, sendConfirmationEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,6 +42,16 @@ export async function POST(request: NextRequest) {
 
     try {
       await sendInquiryEmail({
+        name,
+        email,
+        company,
+        phone,
+        product,
+        quantity,
+        region,
+        message,
+      });
+      await sendConfirmationEmail({
         name,
         email,
         company,
