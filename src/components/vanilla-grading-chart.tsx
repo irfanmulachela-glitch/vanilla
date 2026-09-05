@@ -79,7 +79,7 @@ export default function VanillaGradingChart() {
       <div className="relative mb-8 overflow-x-auto">
         <div className="flex min-w-[500px]">
           {/* Scale ruler */}
-          <div className="relative w-12 lg:w-16 flex-shrink-0" style={{ height: `${MAX_CM * SCALE + 24}px` }}>
+          <div className="relative w-12 lg:w-16 flex-shrink-0" style={{ height: `${MAX_CM * SCALE + 80}px` }}>
             <div className="absolute left-0 top-6 bottom-0 border-l-2 border-[#B5A37A]/30" />
             {[0, 5, 10, 15, 20].map((cm) => (
               <div
@@ -99,7 +99,7 @@ export default function VanillaGradingChart() {
           </div>
 
           {/* Beans container */}
-          <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE + 24}px` }}>
+          <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE + 80}px` }}>
             <div className="absolute inset-0 flex items-start justify-center gap-3 lg:gap-8 pt-6 pb-16">
               {beans.map((bean, index) => {
                 const isActive = selectedGrade === bean.grade;
