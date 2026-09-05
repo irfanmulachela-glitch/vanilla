@@ -100,7 +100,7 @@ export default function VanillaGradingChart() {
 
           {/* Beans container */}
           <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE + 24}px` }}>
-            <div className="absolute inset-0 flex items-end justify-center gap-3 lg:gap-8 pt-6 pb-4">
+            <div className="absolute inset-0 flex items-start justify-center gap-3 lg:gap-8 pt-6 pb-16">
               {beans.map((bean, index) => {
                 const isActive = selectedGrade === bean.grade;
                 const beanHeight = bean.cm * SCALE;
