@@ -46,14 +46,17 @@ const grades = {
   },
 };
 
+const SCALE = 12; // pixels per cm
+const MAX_CM = 22;
+
 const beans = [
-  { height: 264, label: "22 cm", grade: "gourmet" as const },
-  { height: 216, label: "18 cm", grade: "gourmet" as const },
-  { height: 204, label: "17 cm", grade: "a" as const },
-  { height: 180, label: "15 cm", grade: "a" as const },
-  { height: 168, label: "14 cm", grade: "b" as const },
-  { height: 144, label: "12 cm", grade: "b" as const },
-  { height: 120, label: "10 cm", grade: "b" as const },
+  { cm: 22, label: "22 cm", grade: "gourmet" as const },
+  { cm: 18, label: "18 cm", grade: "gourmet" as const },
+  { cm: 17, label: "17 cm", grade: "a" as const },
+  { cm: 15, label: "15 cm", grade: "a" as const },
+  { cm: 14, label: "14 cm", grade: "b" as const },
+  { cm: 12, label: "12 cm", grade: "b" as const },
+  { cm: 10, label: "10 cm", grade: "b" as const },
 ];
 
 export default function VanillaGradingChart() {
@@ -76,13 +79,13 @@ export default function VanillaGradingChart() {
       <div className="relative mb-8 overflow-x-auto">
         <div className="flex min-w-[500px]">
           {/* Scale ruler */}
-          <div className="relative w-12 lg:w-16 flex-shrink-0">
+          <div className="relative w-12 lg:w-16 flex-shrink-0" style={{ height: `${MAX_CM * SCALE}px` }}>
             <div className="absolute left-0 top-0 bottom-0 border-l-2 border-[#B5A37A]/30" />
             {[0, 5, 10, 15, 20].map((cm) => (
               <div
                 key={cm}
                 className="absolute left-0 flex items-center"
-                style={{ top: `${(cm / 22) * 100}%` }}
+                style={{ top: `${cm * SCALE}px` }}
               >
                 <div className="w-3 lg:w-4 h-px bg-[#B5A37A]" />
                 <span className="ml-1.5 lg:ml-2 text-[10px] lg:text-xs text-[#B5A37A] font-medium">
@@ -96,59 +99,62 @@ export default function VanillaGradingChart() {
           </div>
 
           {/* Beans container */}
-          <div className="flex-1 flex items-start justify-center gap-3 lg:gap-8 pt-0 pb-4">
-            {beans.map((bean, index) => {
-              const isActive = selectedGrade === bean.grade;
-              return (
-                <div
-                  key={index}
-                  className={`flex flex-col items-center transition-opacity duration-300 ${
-                    isActive ? "opacity-100" : "opacity-30"
-                  }`}
-                >
-                  {/* Bean SVG */}
-                  <svg
-                    width="16"
-                    height={bean.height}
-                    viewBox={`0 0 20 ${bean.height}`}
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="lg:w-6"
+          <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE}px` }}>
+            <div className="absolute inset-0 flex items-end justify-center gap-3 lg:gap-8 pb-4">
+              {beans.map((bean, index) => {
+                const isActive = selectedGrade === bean.grade;
+                const beanHeight = bean.cm * SCALE;
+                return (
+                  <div
+                    key={index}
+                    className={`flex flex-col items-center transition-opacity duration-300 ${
+                      isActive ? "opacity-100" : "opacity-30"
+                    }`}
                   >
-                    <defs>
-                      <linearGradient
-                        id={`bean-${index}`}
-                        x1="10"
-                        y1="0"
-                        x2="10"
-                        y2={bean.height}
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0%" stopColor={grades[bean.grade].color} />
-                        <stop
-                          offset="50%"
-                          stopColor={grades[bean.grade].color}
-                          stopOpacity="0.95"
-                        />
-                        <stop offset="100%" stopColor={grades[bean.grade].color} />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d={`M10 0 C10 0, 14 ${bean.height * 0.08}, 16 ${bean.height * 0.2} C18 ${bean.height * 0.35}, 18 ${bean.height * 0.65}, 16 ${bean.height * 0.8} C14 ${bean.height * 0.92}, 10 ${bean.height}, 10 ${bean.height} C10 ${bean.height}, 6 ${bean.height * 0.92}, 4 ${bean.height * 0.8} C2 ${bean.height * 0.65}, 2 ${bean.height * 0.35}, 4 ${bean.height * 0.2} C6 ${bean.height * 0.08}, 10 0, 10 0 Z`}
-                      fill={`url(#bean-${index})`}
-                    />
-                  </svg>
-                  
-                  {/* Dashed line and label */}
-                  <div className="mt-2 text-center">
-                    <div className="w-8 lg:w-12 border-t border-dashed border-[#B5A37A]/50 mx-auto mb-1" />
-                    <p className="text-[10px] lg:text-xs font-medium text-[#2C2518]">
-                      {bean.label}
-                    </p>
+                    {/* Bean SVG */}
+                    <svg
+                      width="16"
+                      height={beanHeight}
+                      viewBox={`0 0 20 ${beanHeight}`}
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="lg:w-6"
+                    >
+                      <defs>
+                        <linearGradient
+                          id={`bean-${index}`}
+                          x1="10"
+                          y1="0"
+                          x2="10"
+                          y2={beanHeight}
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0%" stopColor={grades[bean.grade].color} />
+                          <stop
+                            offset="50%"
+                            stopColor={grades[bean.grade].color}
+                            stopOpacity="0.95"
+                          />
+                          <stop offset="100%" stopColor={grades[bean.grade].color} />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d={`M10 0 C10 0, 14 ${beanHeight * 0.08}, 16 ${beanHeight * 0.2} C18 ${beanHeight * 0.35}, 18 ${beanHeight * 0.65}, 16 ${beanHeight * 0.8} C14 ${beanHeight * 0.92}, 10 ${beanHeight}, 10 ${beanHeight} C10 ${beanHeight}, 6 ${beanHeight * 0.92}, 4 ${beanHeight * 0.8} C2 ${beanHeight * 0.65}, 2 ${beanHeight * 0.35}, 4 ${beanHeight * 0.2} C6 ${beanHeight * 0.08}, 10 0, 10 0 Z`}
+                        fill={`url(#bean-${index})`}
+                      />
+                    </svg>
+                    
+                    {/* Dashed line and label */}
+                    <div className="mt-2 text-center">
+                      <div className="w-8 lg:w-12 border-t border-dashed border-[#B5A37A]/50 mx-auto mb-1" />
+                      <p className="text-[10px] lg:text-xs font-medium text-[#2C2518]">
+                        {bean.label}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
