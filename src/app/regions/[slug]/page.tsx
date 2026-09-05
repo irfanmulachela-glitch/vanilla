@@ -253,75 +253,91 @@ export default async function RegionPage({
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white py-12 lg:py-16 overflow-hidden">
-        {/* Charcoal geometric accent */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#1a1410] opacity-60" />
-        <div className="absolute top-0 right-1/4 w-px h-full bg-[#B5A37A]/20" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#B5A37A]/40 via-[#B5A37A]/10 to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#F8F6F2] py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/wholesale"
-            className="inline-flex items-center text-[#B5A37A] hover:text-white mb-4 text-sm transition-colors"
+            className="inline-flex items-center text-[#B5A37A] hover:text-[#2C2518] mb-6 text-sm transition-colors"
           >
             ← Back to Wholesale
           </Link>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-px bg-[#B5A37A]" />
-            <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
-              Export Region
-            </span>
-          </div>
-          <div className="text-4xl mb-4">{region.flag}</div>
-          <h1 className="text-3xl lg:text-4xl font-bold mb-3">
-            Vanilla Supplier in{" "}
-            <span className="text-[#B5A37A]">{region.name}</span>
-          </h1>
-          <p className="text-[#B5A37A] text-lg font-medium mb-4">
-            Delivery: {region.shippingTime} | Port: {region.port}
-          </p>
-          <p className="text-stone-300 max-w-2xl mb-6 leading-relaxed">
-            {region.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
-            >
-              Get Quote for {region.name}
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
-            <Link
-              href={`https://wa.me/${siteConfig.social.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-colors"
-            >
-              Chat on WhatsApp
-            </Link>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-px bg-[#B5A37A]" />
+                <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
+                  Export Region
+                </span>
+              </div>
+              <div className="text-5xl mb-4">{region.flag}</div>
+              <h1 className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-4">
+                Vanilla Supplier in{" "}
+                <span className="text-[#B5A37A]">{region.name}</span>
+              </h1>
+              <p className="text-[#B5A37A] text-lg font-medium mb-4">
+                Delivery: {region.shippingTime} | Port: {region.port}
+              </p>
+              <p className="text-[#6B6358] max-w-xl mb-8 leading-relaxed">
+                {region.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
+                >
+                  Get Quote for {region.name}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                >
+                  Chat on WhatsApp
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative hidden lg:block">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src={region.image}
+                  alt={`${region.name} vanilla supplier`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-[#B5A37A] text-white px-6 py-4 rounded-2xl">
+                <p className="text-sm font-medium opacity-90">Shipping to</p>
+                <p className="text-xl font-bold">{region.name}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-white border-b border-[#E5E0D8]">
+      <section className="bg-[#2C2518] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#E5E0D8]">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#2C2518]">10+</p>
-              <p className="text-sm text-[#6B6358] mt-1">Years Experience</p>
+              <p className="text-3xl font-bold text-[#B5A37A]">10+</p>
+              <p className="text-sm text-stone-400 mt-1">Years Experience</p>
             </div>
             <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#2C2518]">20+</p>
-              <p className="text-sm text-[#6B6358] mt-1">Countries Served</p>
+              <p className="text-3xl font-bold text-[#B5A37A]">20+</p>
+              <p className="text-sm text-stone-400 mt-1">Countries Served</p>
             </div>
             <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#2C2518]">30+</p>
-              <p className="text-sm text-[#6B6358] mt-1">Happy Clients</p>
+              <p className="text-3xl font-bold text-[#B5A37A]">30+</p>
+              <p className="text-sm text-stone-400 mt-1">Happy Clients</p>
             </div>
             <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#2C2518]">500+</p>
-              <p className="text-sm text-[#6B6358] mt-1">Tons Exported</p>
+              <p className="text-3xl font-bold text-[#B5A37A]">500+</p>
+              <p className="text-sm text-stone-400 mt-1">Tons Exported</p>
             </div>
           </div>
         </div>
