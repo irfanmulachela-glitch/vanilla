@@ -79,13 +79,13 @@ export default function VanillaGradingChart() {
       <div className="relative mb-8 overflow-x-auto">
         <div className="flex min-w-[500px]">
           {/* Scale ruler */}
-          <div className="relative w-12 lg:w-16 flex-shrink-0" style={{ height: `${MAX_CM * SCALE}px` }}>
-            <div className="absolute left-0 top-0 bottom-0 border-l-2 border-[#B5A37A]/30" />
+          <div className="relative w-12 lg:w-16 flex-shrink-0" style={{ height: `${MAX_CM * SCALE + 24}px` }}>
+            <div className="absolute left-0 top-6 bottom-0 border-l-2 border-[#B5A37A]/30" />
             {[0, 5, 10, 15, 20].map((cm) => (
               <div
                 key={cm}
                 className="absolute left-0 flex items-center"
-                style={{ top: `${cm * SCALE}px` }}
+                style={{ top: `${6 + cm * SCALE}px` }}
               >
                 <div className="w-3 lg:w-4 h-px bg-[#B5A37A]" />
                 <span className="ml-1.5 lg:ml-2 text-[10px] lg:text-xs text-[#B5A37A] font-medium">
@@ -93,14 +93,14 @@ export default function VanillaGradingChart() {
                 </span>
               </div>
             ))}
-            <div className="absolute left-0 bottom-0 text-[10px] lg:text-xs text-[#B5A37A] font-medium mt-2">
+            <div className="absolute left-0 bottom-0 text-[10px] lg:text-xs text-[#B5A37A] font-medium">
               CM
             </div>
           </div>
 
           {/* Beans container */}
-          <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE}px` }}>
-            <div className="absolute inset-0 flex items-end justify-center gap-3 lg:gap-8 pb-4">
+          <div className="flex-1 relative" style={{ height: `${MAX_CM * SCALE + 24}px` }}>
+            <div className="absolute inset-0 flex items-end justify-center gap-3 lg:gap-8 pt-6 pb-4">
               {beans.map((bean, index) => {
                 const isActive = selectedGrade === bean.grade;
                 const beanHeight = bean.cm * SCALE;
