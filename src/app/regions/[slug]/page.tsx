@@ -253,80 +253,52 @@ export default async function RegionPage({
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#2C2518] text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Image
-            src={region.image}
-            alt=""
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518] via-[#2C2518]/95 to-[#2C2518]/80" />
+      <section className="relative bg-[#2C2518] text-white py-12 lg:py-16 overflow-hidden">
+        {/* Charcoal geometric accent */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#1a1410] opacity-60" />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-[#B5A37A]/20" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#B5A37A]/40 via-[#B5A37A]/10 to-transparent" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/wholesale"
-            className="inline-flex items-center text-[#B5A37A] hover:text-white mb-6 text-sm transition-colors"
+            className="inline-flex items-center text-[#B5A37A] hover:text-white mb-4 text-sm transition-colors"
           >
             ← Back to Wholesale
           </Link>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="text-6xl mb-6">{region.flag}</div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Vanilla Supplier in{" "}
-                <span className="text-[#B5A37A]">{region.name}</span>
-              </h1>
-              <p className="text-lg text-stone-300 mb-8 leading-relaxed">
-                {region.description}
-              </p>
-              
-              <div className="flex items-center gap-6 mb-8 text-sm">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#B5A37A]" />
-                  <span className="text-stone-300">Delivery: {region.shippingTime}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#B5A37A]" />
-                  <span className="text-stone-300">Port: {region.port}</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
-                >
-                  Get Quote for {region.name}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-colors"
-                >
-                  Chat on WhatsApp
-                </Link>
-              </div>
-            </div>
-            
-            <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                <Image
-                  src={region.image}
-                  alt={`${region.name} vanilla supplier`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-[#B5A37A] text-white px-6 py-3 rounded-xl font-semibold">
-                Export to {region.name}
-              </div>
-            </div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-px bg-[#B5A37A]" />
+            <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
+              Export Region
+            </span>
+          </div>
+          <div className="text-4xl mb-4">{region.flag}</div>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-3">
+            Vanilla Supplier in{" "}
+            <span className="text-[#B5A37A]">{region.name}</span>
+          </h1>
+          <p className="text-[#B5A37A] text-lg font-medium mb-4">
+            Delivery: {region.shippingTime} | Port: {region.port}
+          </p>
+          <p className="text-stone-300 max-w-2xl mb-6 leading-relaxed">
+            {region.description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
+            >
+              Get Quote for {region.name}
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+            <Link
+              href={`https://wa.me/${siteConfig.social.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-colors"
+            >
+              Chat on WhatsApp
+            </Link>
           </div>
         </div>
       </section>
