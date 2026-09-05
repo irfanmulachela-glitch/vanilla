@@ -72,7 +72,7 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* Hero - Clean, minimal */}
+      {/* Hero */}
       <section className="bg-[#2C2518] text-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
@@ -81,9 +81,20 @@ export default async function ProductPage({ params }: PageProps) {
           >
             ← Back to Products
           </Link>
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-px bg-[#B5A37A]" />
+            <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
+              Indonesian Origin
+            </span>
+          </div>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-3">
             {product.name} — Premium Indonesian {product.category === "beans" ? "Vanilla Beans" : product.category === "paste" ? "Vanilla Paste" : "Vanilla Powder"} for Wholesale & B2B
           </h1>
+          <p className="text-[#B5A37A] text-lg font-medium mb-4">
+            {product.category === "paste" 
+              ? "Custom formulations. Adjustable vanillin concentration. Halal certified production."
+              : "100% pure vanilla. Finely ground. No fillers. No additives."}
+          </p>
           <p className="text-stone-300 max-w-2xl mb-6 leading-relaxed">
             {product.description}
           </p>

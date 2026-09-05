@@ -165,14 +165,9 @@ export default function GradeSelector() {
 
   return (
     <>
-      {/* Hero - Distinctive with charcoal accent */}
-      <section className="relative bg-[#2C2518] text-white py-12 lg:py-16 overflow-hidden">
-        {/* Charcoal geometric accent */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#1a1410] opacity-60" />
-        <div className="absolute top-0 right-1/4 w-px h-full bg-[#B5A37A]/20" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#B5A37A]/40 via-[#B5A37A]/10 to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero */}
+      <section className="bg-[#2C2518] text-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
             className="inline-flex items-center text-[#B5A37A] hover:text-white mb-4 text-sm transition-colors"
