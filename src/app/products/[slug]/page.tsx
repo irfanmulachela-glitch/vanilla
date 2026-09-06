@@ -174,7 +174,15 @@ export default async function ProductPage({ params }: PageProps) {
                 Quick Overview
               </h2>
               <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
-                La Vanilla Supplier provides <strong className="text-[#2C2518]">{product.name}</strong> sourced directly from Indonesian smallholder farmers. Every batch is quality-tested for vanillin content and moisture, with full documentation included. Minimum order quantity is 25 kg, shipping FOB from Semarang, Jakarta, or Surabaya.
+                {product.category === "beans" && (
+                  <>La Vanilla Supplier is a leading <strong className="text-[#2C2518]">Indonesian vanilla bean supplier</strong> offering Grade A gourmet and Grade B extraction beans directly from Java. Our vanilla beans are sun-cured for 6-9 months, lab-tested for vanillin content (1.3-2.7%), and shipped FOB from Semarang, Jakarta, or Surabaya. MOQ 25 kg with full export documentation including Certificate of Analysis and Phytosanitary Certificate.</>
+                )}
+                {product.category === "paste" && (
+                  <>La Vanilla Supplier manufactures <strong className="text-[#2C2518]">bulk vanilla paste</strong> for food manufacturers worldwide. Made from 100% Indonesian vanilla beans with no synthetic additives. Custom formulations available with adjustable vanillin concentration (1.3-2.7%). Halal certified production. MOQ 25 kg, shipping FOB from Indonesian ports.</>
+                )}
+                {product.category === "powder" && (
+                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">pure vanilla powder</strong> from 100% cured Indonesian vanilla beans. Finely ground to 40-80 mesh with no fillers or additives. Ideal for dry mixes, baking blends, and beverage applications. MOQ 25 kg, FOB shipping from Semarang, Jakarta, or Surabaya.</>
+                )}
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
