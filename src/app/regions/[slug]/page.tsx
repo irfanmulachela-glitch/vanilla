@@ -380,55 +380,112 @@ export default async function RegionPage({
             <h2 className="text-3xl font-bold text-[#2C2518] mt-3 mb-4">
               Vanilla Products for {region.name}
             </h2>
+            <p className="text-[#6B6358] max-w-2xl mx-auto">
+              Premium Indonesian vanilla products available for export to {region.name}
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <Link
               href="/products/vanilla-beans"
-              className="group bg-[#F8F6F2] rounded-2xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-all"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
             >
-              <div className="w-14 h-14 bg-[#F0ECE4] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#B5A37A] transition-colors">
-                <Leaf className="w-7 h-7 text-[#B5A37A] group-hover:text-white transition-colors" />
+              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
+                <Image
+                  src="/vanilla-beans.jpg"
+                  alt="Vanilla Beans"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
+                    Grade A & B
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#2C2518] mb-2">Vanilla Beans</h3>
-              <p className="text-[#6B6358] text-sm mb-4">
-                Grade A gourmet and Grade B extraction beans. Direct from Indonesian farmers.
-              </p>
-              <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                View Products <ArrowRight className="w-4 h-4" />
-              </span>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
+                  Vanilla Beans
+                </h3>
+                <p className="text-[#6B6358] text-sm mb-4">
+                  Premium Grade A gourmet and Grade B extraction beans. Sun-cured 6-9 months, 1.3-2.7% vanillin.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
+                    View Product <ArrowRight className="w-4 h-4" />
+                  </span>
+                  <span className="text-xs text-[#6B6358]">MOQ 25 kg</span>
+                </div>
+              </div>
             </Link>
             
             <Link
               href="/products/vanilla-paste"
-              className="group bg-[#F8F6F2] rounded-2xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-all"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
             >
-              <div className="w-14 h-14 bg-[#F0ECE4] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#B5A37A] transition-colors">
-                <Package className="w-7 h-7 text-[#B5A37A] group-hover:text-white transition-colors" />
+              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
+                <Image
+                  src="/vanilla-paste.jpg"
+                  alt="Vanilla Paste"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
+                    Custom Formulas
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#2C2518] mb-2">Vanilla Paste</h3>
-              <p className="text-[#6B6358] text-sm mb-4">
-                Custom formulations, standard to triple concentration. No synthetic additives.
-              </p>
-              <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                View Products <ArrowRight className="w-4 h-4" />
-              </span>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
+                  Vanilla Paste
+                </h3>
+                <p className="text-[#6B6358] text-sm mb-4">
+                  Bulk vanilla paste with adjustable vanillin concentration. Halal certified, no synthetic additives.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
+                    View Product <ArrowRight className="w-4 h-4" />
+                  </span>
+                  <span className="text-xs text-[#6B6358]">MOQ 25 kg</span>
+                </div>
+              </div>
             </Link>
             
             <Link
               href="/products/vanilla-powder"
-              className="group bg-[#F8F6F2] rounded-2xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-all"
+              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
             >
-              <div className="w-14 h-14 bg-[#F0ECE4] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#B5A37A] transition-colors">
-                <Star className="w-7 h-7 text-[#B5A37A] group-hover:text-white transition-colors" />
+              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
+                <Image
+                  src="/vanilla-powder.jpg"
+                  alt="Vanilla Powder"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
+                    100% Pure
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-[#2C2518] mb-2">Vanilla Powder</h3>
-              <p className="text-[#6B6358] text-sm mb-4">
-                Spray-dried pure vanilla powder. Instant dissolve, long shelf life.
-              </p>
-              <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                View Products <ArrowRight className="w-4 h-4" />
-              </span>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
+                  Vanilla Powder
+                </h3>
+                <p className="text-[#6B6358] text-sm mb-4">
+                  Spray-dried pure vanilla powder. 40-80 mesh, no fillers, ideal for dry mixes and baking.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
+                    View Product <ArrowRight className="w-4 h-4" />
+                  </span>
+                  <span className="text-xs text-[#6B6358]">MOQ 25 kg</span>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
