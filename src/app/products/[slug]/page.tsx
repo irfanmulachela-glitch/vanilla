@@ -175,13 +175,13 @@ export default async function ProductPage({ params }: PageProps) {
               </h2>
               <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
                 {product.category === "beans" && (
-                  <>La Vanilla Supplier is a leading <strong className="text-[#2C2518]">Indonesian vanilla bean supplier</strong> offering Grade A gourmet and Grade B extraction beans directly from Java. Our vanilla beans are sun-cured for 6-9 months, lab-tested for vanillin content (1.3-2.7%), and shipped FOB from Semarang, Jakarta, or Surabaya. MOQ 25 kg with full export documentation including Certificate of Analysis and Phytosanitary Certificate.</>
+                  <>La Vanilla Supplier is a trusted <strong className="text-[#2C2518]">wholesale vanilla bean supplier from Indonesia</strong>, offering premium Grade A gourmet and Grade B extraction beans sourced directly from Javanese farmers. Our <strong className="text-[#2C2518]">V. planifolia vanilla beans</strong> are sun-cured for 6-9 months, achieving 1.3-2.7% vanillin content. Every batch is lab-tested with Certificate of Analysis. We export to 20+ countries with MOQ 25 kg, shipping FOB from Semarang, Jakarta, or Surabaya. Halal certified, Phytosanitary compliant.</>
                 )}
                 {product.category === "paste" && (
-                  <>La Vanilla Supplier manufactures <strong className="text-[#2C2518]">bulk vanilla paste</strong> for food manufacturers worldwide. Made from 100% Indonesian vanilla beans with no synthetic additives. Custom formulations available with adjustable vanillin concentration (1.3-2.7%). Halal certified production. MOQ 25 kg, shipping FOB from Indonesian ports.</>
+                  <>La Vanilla Supplier is a <strong className="text-[#2C2518]">bulk vanilla paste manufacturer</strong> serving food producers worldwide. Our vanilla paste is made from 100% Indonesian vanilla beans with no synthetic additives or fillers. We offer <strong className="text-[#2C2518]">custom vanilla paste formulations</strong> with adjustable vanillin concentration (1.3-2.7%), sugar content, and viscosity. Perfect for ice cream, bakery, confectionery, and beverage production. Halal certified facility. MOQ 25 kg, FOB Indonesian ports.</>
                 )}
                 {product.category === "powder" && (
-                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">pure vanilla powder</strong> from 100% cured Indonesian vanilla beans. Finely ground to 40-80 mesh with no fillers or additives. Ideal for dry mixes, baking blends, and beverage applications. MOQ 25 kg, FOB shipping from Semarang, Jakarta, or Surabaya.</>
+                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">100% pure vanilla powder</strong> from premium cured Indonesian vanilla beans. Our spray-dried vanilla powder is finely ground to 40-80 mesh with zero fillers, zero additives, and less than 5% moisture. Ideal for <strong className="text-[#2C2518]">dry baking mixes, instant beverages, confectionery, and dairy applications</strong>. Long shelf life, consistent flavor. MOQ 25 kg, FOB shipping from Semarang, Jakarta, or Surabaya.</>
                 )}
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
