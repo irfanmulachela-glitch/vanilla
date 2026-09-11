@@ -443,6 +443,34 @@ export default function GradeSelector() {
           </div>
         </div>
       </section>
+
+      {/* Product JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Vanilla Beans",
+            description: gradeData.a.description,
+            image: `${siteConfig.url}/vanilla-beans.jpg`,
+            brand: {
+              "@type": "Brand",
+              name: siteConfig.name,
+            },
+            manufacturer: {
+              "@type": "Organization",
+              name: siteConfig.name,
+            },
+            category: "Vanilla Beans",
+            additionalProperty: gradeData.a.specs.map((s) => ({
+              "@type": "PropertyValue",
+              name: s.spec,
+              value: s.value,
+            })),
+          }),
+        }}
+      />
     </>
   );
 }

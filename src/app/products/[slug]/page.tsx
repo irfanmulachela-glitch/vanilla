@@ -391,6 +391,32 @@ export default async function ProductPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.name,
+            description: product.description,
+            image: `${siteConfig.url}${product.image}`,
+            brand: {
+              "@type": "Brand",
+              name: siteConfig.name,
+            },
+            manufacturer: {
+              "@type": "Organization",
+              name: siteConfig.name,
+            },
+            category: product.category === "beans" ? "Vanilla Beans" : product.category === "paste" ? "Vanilla Paste" : "Vanilla Powder",
+            additionalProperty: Object.entries(product.specifications).map(([key, value]) => ({
+              "@type": "PropertyValue",
+              name: key.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase()),
+              value: value,
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: "/" },

@@ -67,8 +67,8 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             breadcrumbSchema([
-              { name: "Home", url: siteConfig.url },
-              { name: "Contact", url: `${siteConfig.url}/contact` },
+              { name: "Home", url: "/" },
+              { name: "Contact", url: "/contact" },
             ])
           ),
         }}
