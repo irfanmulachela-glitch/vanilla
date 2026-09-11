@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Indonesian Vanilla Bean Comparison | Grade A vs Grade B",
     description: "Technical comparison of Grade A gourmet vs Grade B extraction vanilla beans.",
-    url: "https://lavanillasupplier.com/comparison",
+    url: `${siteConfig.url}/comparison`,
     type: "website",
   },
 };

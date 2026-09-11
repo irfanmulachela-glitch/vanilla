@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vanilla Supplier Dubai | Wholesale Vanilla Beans UAE",
     description: "Premium Indonesian vanilla supplier in Dubai, UAE. Halal certified.",
-    url: "https://lavanillasupplier.com/suppliers/dubai",
+    url: `${siteConfig.url}/suppliers/dubai`,
     type: "website",
   },
 };

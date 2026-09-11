@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wholesale Vanilla Beans Indonesia | Bulk Supplier",
     description: "Premium wholesale vanilla beans from Indonesia. MOQ 25kg. Direct from source.",
-    url: "https://lavanillasupplier.com/wholesale",
+    url: `${siteConfig.url}/wholesale`,
     type: "website",
   },
 };

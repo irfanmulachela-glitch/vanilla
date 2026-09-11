@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quality & Certifications - La Vanilla Supplier",
     description: "Food Safety Standards, Halal certified, Phytosanitary compliance. Full documentation.",
-    url: "https://lavanillasupplier.com/quality",
+    url: `${siteConfig.url}/quality`,
     type: "website",
   },
 };

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
     description: "Indonesia's trusted vanilla supplier. Grade A & B beans, vanilla paste, powder. Export to 20+ countries.",
-    url: "https://lavanillasupplier.com",
+    url: `${siteConfig.url}`,
     siteName: "La Vanilla Supplier",
     type: "website",
   },

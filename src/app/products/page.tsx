@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Our Products - La Vanilla Supplier",
     description: "Premium Indonesian vanilla products including beans, paste, and powder.",
-    url: "https://lavanillasupplier.com/products",
+    url: `${siteConfig.url}/products`,
     type: "website",
   },
 };

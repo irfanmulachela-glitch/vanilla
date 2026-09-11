@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vanilla Supplier New York | Wholesale Vanilla Beans USA",
     description: "Premium Indonesian vanilla supplier in New York, USA.",
-    url: "https://lavanillasupplier.com/suppliers/new-york",
+    url: `${siteConfig.url}/suppliers/new-york`,
     type: "website",
   },
 };

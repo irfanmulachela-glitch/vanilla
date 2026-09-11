@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vanilla Supplier Sydney | Wholesale Vanilla Beans Australia",
     description: "Premium Indonesian vanilla supplier in Sydney, Australia.",
-    url: "https://lavanillasupplier.com/suppliers/sydney",
+    url: `${siteConfig.url}/suppliers/sydney`,
     type: "website",
   },
 };
