@@ -139,7 +139,7 @@ export function HomePageContent() {
               <Link
                 key={product.id}
                 href={`${prefix}/products/${product.slug}`}
-                className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <div className="relative h-64">
                   <Image
@@ -158,7 +158,7 @@ export function HomePageContent() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
                     {product.name}
                   </h3>
@@ -173,7 +173,7 @@ export function HomePageContent() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center text-[#B5A37A] font-medium">
+                  <div className="flex items-center text-[#B5A37A] font-medium mt-auto">
                     {t.products.whyChoose}
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
