@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
+import OrderingLadder from "@/components/ordering-ladder";
 
 type Grade = "a" | "b";
 
@@ -74,7 +75,7 @@ const gradeData = {
         icon: Package,
         label: "Minimum Order",
         value: "25 kg",
-        desc: "Flexible for trial orders",
+        desc: "5 kg trial orders available",
       },
       {
         icon: Truck,
@@ -301,6 +302,9 @@ export default function GradeSelector() {
           </div>
         </div>
       </section>
+
+      {/* How to Start Ordering */}
+      <OrderingLadder />
 
       {/* Specifications */}
       <section className="bg-[#F8F6F2] py-12 lg:py-16">

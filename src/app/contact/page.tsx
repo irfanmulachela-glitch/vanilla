@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { ContactForm } from "@/components/contact-form";
+import OrderingLadder from "@/components/ordering-ladder";
 
 export const metadata: Metadata = {
   title: "Contact Us | Vanilla Supplier Indonesia",
@@ -56,6 +57,9 @@ export default function ContactPage() {
 
       {/* Contact Form & Info (client) */}
       <ContactForm />
+
+      {/* How to Start Ordering */}
+      <OrderingLadder />
 
       {/* BreadcrumbList JSON-LD */}
       <script

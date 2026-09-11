@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import GradeSelector from "@/components/grade-selector";
+import OrderingLadder from "@/components/ordering-ladder";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -187,7 +188,7 @@ export default async function ProductPage({ params }: PageProps) {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: Shield, label: "Quality Assured", value: "Lab-Tested", desc: "Third-party vanillin verification" },
-                  { icon: Package, label: "Minimum Order", value: "25 kg", desc: "Flexible for trial orders" },
+                  { icon: Package, label: "Minimum Order", value: "25 kg", desc: "5 kg trial orders available" },
                   { icon: Truck, label: "Shipping Terms", value: "FOB/CIF/DDP", desc: "Semarang, Jakarta, Surabaya" },
                   { icon: FileCheck, label: "Documents", value: "All Included", desc: "CoA, Phytosanitary, COO" },
                 ].map((stat) => (
@@ -231,6 +232,9 @@ export default async function ProductPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* How to Start Ordering */}
+      <OrderingLadder />
 
       {/* Specifications */}
       <section className="bg-[#F8F6F2] py-12 lg:py-16">

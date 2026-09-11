@@ -31,7 +31,7 @@ const faqs = [
     questions: [
       {
         q: "What is the minimum order quantity (MOQ)?",
-        a: "Our MOQ is 25 kg for all products. We believe in building long-term partnerships with serious buyers.",
+        a: "Our MOQ is 25 kg for all products. Free samples are available, and 5 kg trial orders can be placed at wholesale pricing. We believe in building long-term partnerships with serious buyers.",
       },
       {
         q: "Can I order samples before placing a bulk order?",

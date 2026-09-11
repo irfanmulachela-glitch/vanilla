@@ -187,7 +187,8 @@ export default function NewYorkPage() {
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
             Get a free sample and quote within 24 hours. US Import Ready. Minimum
-            order 25 kg.
+            order 25 kg. Free samples available. 5 kg trial orders at wholesale
+            pricing.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
