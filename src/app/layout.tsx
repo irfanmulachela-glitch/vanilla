@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
@@ -86,6 +87,20 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="tr" href={`${siteConfig.url}/tr`} />
         <link rel="alternate" hrefLang="ar" href={`${siteConfig.url}/ar`} />
         <link rel="alternate" hrefLang="x-default" href={`${siteConfig.url}`} />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M5ZETTBC79"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-M5ZETTBC79');
+          `}
+        </Script>
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-white text-stone-900 overflow-x-hidden">
         <OverlayScrollbar />
