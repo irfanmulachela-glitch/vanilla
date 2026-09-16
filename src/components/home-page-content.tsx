@@ -447,6 +447,87 @@ export function HomePageContent() {
         </div>
       </section>
 
+      {/* Blog Features */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10">
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold text-[#2C2518] mb-3">
+                Vanilla Industry Insights
+              </h2>
+              <p className="text-[#6B6358] max-w-xl">
+                Expert guides on sourcing, quality, and export from Indonesia.
+              </p>
+            </div>
+            <Link
+              href={`${prefix}/blog`}
+              className="mt-4 sm:mt-0 inline-flex items-center text-[#B5A37A] font-semibold hover:text-[#A8956A] transition-colors text-sm"
+            >
+              Read All Articles
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                slug: "halal-vanilla-supplier-middle-east",
+                title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
+                date: "April 15, 2026",
+                category: "Market Guide",
+                image: "/vanilla-beans.jpg",
+              },
+              {
+                slug: "vanilla-paste-bulk-order",
+                title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
+                date: "April 12, 2026",
+                category: "Product Guide",
+                image: "/vanilla-paste.jpg",
+              },
+              {
+                slug: "wholesale-vanilla-beans-indonesia",
+                title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
+                date: "April 10, 2026",
+                category: "Wholesale Guide",
+                image: "/vanilla-beans.jpg",
+              },
+            ].map((post) => (
+              <Link
+                key={post.slug}
+                href={`${prefix}/blog/${post.slug}`}
+                className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-[#2C2518]/0 group-hover:bg-[#2C2518]/20 transition-colors duration-300 flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2 bg-white/95 text-[#2C2518] text-sm font-semibold rounded-lg">
+                      Read Article
+                    </span>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center gap-2 text-xs text-[#6B6358] mb-3">
+                    <span>{post.date}</span>
+                    <span className="w-1 h-1 bg-[#D8D3C9] rounded-full" />
+                    <span className="font-medium text-[#B5A37A] uppercase tracking-wider">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
