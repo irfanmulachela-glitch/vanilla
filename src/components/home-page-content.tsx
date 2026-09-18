@@ -216,14 +216,6 @@ export function HomePageContent() {
                 Download Company Profile
               </a>
             </div>
-            <div className="mt-10 relative rounded-xl overflow-hidden h-48 sm:h-56">
-              <Image
-                src="/why-choose-us.jpg"
-                alt="Vanilla beans being sorted and prepared for export at our facility in Java, Indonesia"
-                fill
-                className="object-cover"
-              />
-            </div>
           </div>
 
           {/* Right panel — numbered proof rows */}
