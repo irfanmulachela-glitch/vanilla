@@ -12,9 +12,6 @@ import {
   Star,
   Package,
   MapPin,
-  Leaf,
-  FlaskConical,
-  Truck,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { AnimatedCounter } from "@/components/animated-counter";
@@ -478,30 +475,46 @@ export function HomePageContent() {
                 title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
                 date: "April 15, 2026",
                 category: "Market Guide",
-                icon: Globe,
               },
               {
                 slug: "vanilla-paste-bulk-order",
                 title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
                 date: "April 12, 2026",
                 category: "Product Guide",
-                icon: FlaskConical,
               },
               {
                 slug: "wholesale-vanilla-beans-indonesia",
                 title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
                 date: "April 10, 2026",
                 category: "Wholesale Guide",
-                icon: Truck,
               },
-            ].map((post) => (
+            ].map((post, i) => (
               <Link
                 key={post.slug}
                 href={`${prefix}/blog/${post.slug}`}
                 className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                <div className="h-40 bg-[#2C2518] flex items-center justify-center">
-                  <post.icon className="w-12 h-12 text-[#B5A37A] group-hover:scale-110 transition-transform duration-300" />
+                <div className="h-40 bg-[#F8F6F2] flex items-center justify-center p-6">
+                  <svg viewBox="0 0 200 140" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="10" width="140" height="120" rx="6" fill="white" stroke="#E5E0D8" strokeWidth="1.5" />
+                    <rect x="30" y="10" width="140" height="24" rx="6" fill="#2C2518" />
+                    <rect x="30" y="28" width="140" height="6" fill="#2C2518" />
+                    <rect x="42" y="18" width="40" height="4" rx="2" fill="#B5A37A" />
+                    <rect x="42" y="46" width="90" height="3" rx="1.5" fill="#D8D3C9" />
+                    <rect x="42" y="54" width="116" height="3" rx="1.5" fill="#E5E0D8" />
+                    <rect x="42" y="62" width="100" height="3" rx="1.5" fill="#E5E0D8" />
+                    <rect x="42" y="70" width="110" height="3" rx="1.5" fill="#E5E0D8" />
+                    <rect x="42" y="78" width="80" height="3" rx="1.5" fill="#E5E0D8" />
+                    <rect x="42" y="90" width="50" height="8" rx="4" fill="#B5A37A" opacity="0.2" />
+                    <rect x="42" y="90" width="50" height="8" rx="4" stroke="#B5A37A" strokeWidth="1" fill="none" />
+                    <text x="67" y="96" fontSize="5" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif" fontWeight="600">READ</text>
+                    {i === 0 && <circle cx="155" cy="105" r="12" fill="#B5A37A" opacity="0.15" />}
+                    {i === 0 && <text x="155" y="108" fontSize="8" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">halal</text>}
+                    {i === 1 && <rect x="120" y="86" width="40" height="30" rx="4" fill="#B5A37A" opacity="0.15" />}
+                    {i === 1 && <text x="140" y="105" fontSize="7" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">paste</text>}
+                    {i === 2 && <path d="M130 90 L155 90 L155 120 L130 120 Z" fill="#B5A37A" opacity="0.15" rx="4" />}
+                    {i === 2 && <text x="142" y="108" fontSize="6" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">B2B</text>}
+                  </svg>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-xs text-[#6B6358] mb-3">
