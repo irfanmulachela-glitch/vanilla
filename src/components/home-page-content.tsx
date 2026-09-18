@@ -475,21 +475,21 @@ export function HomePageContent() {
                 title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
                 date: "April 15, 2026",
                 category: "Market Guide",
-                image: "/vanilla-beans.jpg",
+                image: "/wholesale-hero.jpeg",
               },
               {
                 slug: "vanilla-paste-bulk-order",
                 title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
                 date: "April 12, 2026",
                 category: "Product Guide",
-                image: "/vanilla-paste.jpg",
+                image: "/vanilla-powder.jpg",
               },
               {
                 slug: "wholesale-vanilla-beans-indonesia",
                 title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
                 date: "April 10, 2026",
                 category: "Wholesale Guide",
-                image: "/vanilla-beans.jpg",
+                image: "/why-choose-us.jpg",
               },
             ].map((post) => (
               <Link
