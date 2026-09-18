@@ -12,6 +12,9 @@ import {
   Star,
   Package,
   MapPin,
+  Leaf,
+  FlaskConical,
+  Truck,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { AnimatedCounter } from "@/components/animated-counter";
@@ -475,21 +478,21 @@ export function HomePageContent() {
                 title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
                 date: "April 15, 2026",
                 category: "Market Guide",
-                image: "/wholesale-hero.jpeg",
+                icon: Globe,
               },
               {
                 slug: "vanilla-paste-bulk-order",
                 title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
                 date: "April 12, 2026",
                 category: "Product Guide",
-                image: "/vanilla-powder.jpg",
+                icon: FlaskConical,
               },
               {
                 slug: "wholesale-vanilla-beans-indonesia",
                 title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
                 date: "April 10, 2026",
                 category: "Wholesale Guide",
-                image: "/why-choose-us.jpg",
+                icon: Truck,
               },
             ].map((post) => (
               <Link
@@ -497,18 +500,8 @@ export function HomePageContent() {
                 href={`${prefix}/blog/${post.slug}`}
                 className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-[#2C2518]/0 group-hover:bg-[#2C2518]/20 transition-colors duration-300 flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2 bg-white/95 text-[#2C2518] text-sm font-semibold rounded-lg">
-                      Read Article
-                    </span>
-                  </div>
+                <div className="h-40 bg-[#2C2518] flex items-center justify-center">
+                  <post.icon className="w-12 h-12 text-[#B5A37A] group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-xs text-[#6B6358] mb-3">
