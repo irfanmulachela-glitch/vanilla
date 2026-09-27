@@ -85,7 +85,7 @@ const steps = [
       "FOB from three Indonesian ports",
       "CIF and DDP terms available",
       "Temperature-controlled packaging",
-      "25kg MOQ for wholesale orders",
+      "Flexible order quantities for wholesale",
     ],
   },
 ];

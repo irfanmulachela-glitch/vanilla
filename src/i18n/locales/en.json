@@ -33,7 +33,7 @@
   "home": {
     "heroTitle": "Premium Indonesian Vanilla",
     "heroSubtitle": "for Global B2B Buyers",
-    "heroDescription": "Direct from Java. Sun-cured 6-9 months. Grade A & B vanilla beans, paste, and powder. MOQ 25 kg. Shipping FOB from Semarang, Jakarta, or Surabaya.",
+    "heroDescription": "Direct from Java. Sun-cured 6-9 months. Grade A & B vanilla beans, paste, and powder. Flexible order quantities. Shipping FOB from Semarang, Jakarta, or Surabaya.",
     "whyChooseUs": "Why Choose La Vanilla Supplier",
     "qualityAssured": "Quality Assured",
     "qualityAssuredDesc": "Every batch lab-tested with Certificate of Analysis. Third-party vanillin verification.",
@@ -195,8 +195,8 @@
   "wholesale": {
     "title": "Wholesale Orders",
     "subtitle": "Bulk pricing for B2B buyers",
-    "moq": "Minimum Order Quantity",
-    "moqDesc": "Our MOQ is 25 kg for all products. We believe in building long-term partnerships with serious buyers.",
+    "moq": "Order Quantities",
+    "moqDesc": "We offer flexible order quantities to suit your needs. Free samples are available, and we believe in building long-term partnerships with our buyers.",
     "volumePricing": "Volume Pricing",
     "volumePricingDesc": "The more you order, the better the per-kg rate. Contact us for custom pricing.",
     "paymentTerms": "Payment Terms",

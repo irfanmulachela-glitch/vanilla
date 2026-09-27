@@ -20,7 +20,7 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Indonesia | Bulk Vanilla Supplier",
   description:
-    "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder. MOQ 25kg. Direct from source. Export to 20+ countries.",
+    "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder. Direct from source. Export to 20+ countries.",
   keywords: [
     "wholesale vanilla beans",
     "bulk vanilla supplier",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Wholesale Vanilla Beans Indonesia | Bulk Supplier",
-    description: "Premium wholesale vanilla beans from Indonesia. MOQ 25kg. Direct from source.",
+    description: "Premium wholesale vanilla beans from Indonesia. Direct from source.",
     url: `${siteConfig.url}/wholesale`,
     type: "website",
   },
@@ -62,7 +62,7 @@ export default function WholesalePage() {
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed mb-8">
               Premium Indonesian vanilla beans, paste, and powder at wholesale
-              prices. Direct from source, no middlemen. MOQ 25kg. Export to 20+
+              prices. Direct from source, no middlemen. Flexible order quantities. Export to 20+
               countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -89,7 +89,7 @@ export default function WholesalePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "25kg", label: "Minimum Order" },
+              { value: "Flexible", label: "Order Quantity" },
               { value: "20+", label: "Countries Served" },
               { value: "10+", label: "Years Experience" },
               { value: "500+", label: "Tons Exported" },
@@ -338,8 +338,8 @@ export default function WholesalePage() {
             Ready to Buy Wholesale Vanilla?
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
-            Get a free sample and quote within 24 hours. Minimum order 25 kg.
-            Free samples available. 5 kg trial orders at wholesale pricing.
+            Get a free sample and quote within 24 hours. Flexible order quantities.
+            Free samples available. Trial orders welcome.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

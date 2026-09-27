@@ -178,7 +178,7 @@ export default function HalalVanillaSupplierMiddleEast() {
               <li>MUI Halal certified — recognized globally</li>
               <li>10+ years export experience to Middle East</li>
               <li>Complete documentation for customs clearance</li>
-              <li>Flexible MOQ starting at 25 kg</li>
+              <li>Flexible order quantities</li>
               <li>FOB shipping from Indonesian ports</li>
               <li>Responsive communication in English and Arabic</li>
             </ul>

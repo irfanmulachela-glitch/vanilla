@@ -21,7 +21,7 @@ const tiers = [
   {
     icon: Package,
     title: "Standard Order",
-    quantity: "25 kg minimum",
+    quantity: "Flexible quantities",
     description:
       "The normal wholesale minimum with full documentation package: CoA, Phytosanitary Certificate, and Certificate of Origin.",
     highlight: true,

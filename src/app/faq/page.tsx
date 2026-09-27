@@ -4,9 +4,9 @@ import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "FAQ - Vanilla Beans Wholesale | MOQ, Shipping, Payment Terms",
+  title: "FAQ - Vanilla Beans Wholesale | Shipping, Payment Terms",
   description:
-    "Answers to common questions about ordering wholesale vanilla beans from Indonesia. MOQ 25kg, FOB shipping, Halal certified, payment terms for B2B buyers.",
+    "Answers to common questions about ordering wholesale vanilla beans from Indonesia. FOB shipping, Halal certified, payment terms for B2B buyers.",
   keywords: [
     "vanilla supplier FAQ",
     "vanilla beans ordering",
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    category: "Ordering & MOQ",
+    category: "Ordering",
     questions: [
       {
-        q: "What is the minimum order quantity (MOQ)?",
-        a: "Our MOQ is 25 kg for all products. Free samples are available, and 5 kg trial orders can be placed at wholesale pricing. We believe in building long-term partnerships with serious buyers.",
+        q: "What are the order quantities?",
+        a: "We offer flexible order quantities to suit your needs. Free samples are available for evaluation, and trial orders are welcome. We believe in building long-term partnerships, so we're happy to start with whatever quantity works for you.",
       },
       {
         q: "Can I order samples before placing a bulk order?",

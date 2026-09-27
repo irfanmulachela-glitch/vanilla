@@ -35,8 +35,8 @@ const blogPosts = {
         <li>Sample beans for quality verification</li>
       </ul>
 
-      <h2>MOQ and Pricing Considerations</h2>
-      <p>Most Indonesian vanilla suppliers offer MOQs ranging from 1 kg for samples to 25 kg for wholesale orders. Pricing varies based on grade, vanillin content, and order volume. Request quotes from multiple suppliers to compare pricing structures.</p>
+      <h2>Order Considerations</h2>
+      <p>Most Indonesian vanilla suppliers offer flexible order quantities ranging from 1 kg for samples to wholesale orders. Pricing varies based on grade, vanillin content, and order volume. Request quotes from multiple suppliers to compare pricing structures.</p>
 
       <h2>Shipping and Logistics</h2>
       <p>Indonesian vanilla exports typically ship from Semarang, Jakarta, or Surabaya. Air freight delivery takes 3-7 days globally, while sea freight options are available for larger shipments. Ensure your supplier provides complete export documentation.</p>
@@ -283,7 +283,7 @@ const blogPosts = {
       <h2>Getting the Best Prices</h2>
       <p>To optimize your vanilla procurement costs:</p>
       <ul>
-        <li>Order in bulk (25kg+ for wholesale pricing)</li>
+        <li>Order in bulk for wholesale pricing</li>
         <li>Establish long-term supplier relationships</li>
         <li>Consider Grade B for extract applications</li>
         <li>Request quotes from multiple suppliers</li>
@@ -520,20 +520,20 @@ const blogPosts = {
   "bulk-vanilla-ordering-guide": {
     title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
     excerpt:
-      "Everything food manufacturers need to know about ordering vanilla in bulk — MOQ, logistics, documentation, and cost optimization.",
+      "Everything food manufacturers need to know about ordering vanilla in bulk — order quantities, logistics, documentation, and cost optimization.",
     category: "Sourcing Guide",
     date: "2026-02-15",
     readTime: "9 min read",
     content: `
-      <p>La Vanilla Supplier offers MOQs starting at 1–5 kg for samples, 25 kg for small wholesale, and 100 kg+ for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping FOB from Indonesian ports with CIF and DDP door-to-door options available for bulk vanilla orders worldwide.</p>
+      <p>La Vanilla Supplier offers flexible order quantities starting at 1–5 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping FOB from Indonesian ports with CIF and DDP door-to-door options available for bulk vanilla orders worldwide.</p>
 
-      <h2>Understanding MOQ Requirements</h2>
-      <p>Minimum Order Quantities (MOQ) vary by supplier and product:</p>
+      <h2>Understanding Order Quantities</h2>
+      <p>Order quantities vary by supplier and product:</p>
       <ul>
         <li><strong>Sample orders:</strong> 1-5 kg for quality evaluation</li>
-        <li><strong>Small wholesale:</strong> 25 kg minimum for most suppliers</li>
-        <li><strong>Standard wholesale:</strong> 50-100 kg for better pricing</li>
-        <li><strong>Bulk orders:</strong> 100kg+ for maximum cost savings</li>
+        <li><strong>Small wholesale:</strong> flexible quantities for most suppliers</li>
+        <li><strong>Standard wholesale:</strong> larger quantities for better pricing</li>
+        <li><strong>Bulk orders:</strong> maximum cost savings</li>
       </ul>
 
       <h2>Cost Optimization Strategies</h2>
@@ -672,7 +672,7 @@ const blogPosts = {
     date: "2026-03-01",
     readTime: "7 min read",
     content: `
-      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.3%–2.7% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping from Semarang, Jakarta, and Surabaya with flexible MOQs from 25 kg, making it the most cost-effective origin for B2B vanilla buyers.</p>
+      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.3%–2.7% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping from Semarang, Jakarta, and Surabaya with flexible order quantities, making it the most cost-effective origin for B2B vanilla buyers.</p>
 
       <h2>Competitive Pricing</h2>
       <p>Indonesian vanilla offers significant cost advantages:</p>
@@ -698,7 +698,7 @@ const blogPosts = {
         <li>Year-round production (not seasonal like some origins)</li>
         <li>Established export infrastructure</li>
         <li>Multiple shipping ports (Semarang, Jakarta, Surabaya)</li>
-        <li>Flexible MOQs from 25kg to 100kg+</li>
+        <li>Flexible order quantities</li>
       </ul>
 
       <h2>Strategic Location</h2>

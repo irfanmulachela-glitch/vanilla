@@ -138,7 +138,7 @@ const blogPosts = [
     title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
     slug: "bulk-vanilla-ordering-guide",
     excerpt:
-      "Everything food manufacturers need to know about ordering vanilla in bulk — MOQ, logistics, documentation, and cost optimization.",
+      "Everything food manufacturers need to know about ordering vanilla in bulk — order quantities, logistics, documentation, and cost optimization.",
     category: "Sourcing Guide",
     date: "2026-02-15",
     readTime: "9 min read",

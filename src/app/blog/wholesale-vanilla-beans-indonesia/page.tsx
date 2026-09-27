@@ -6,7 +6,7 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
   description:
-    "Complete guide to buying wholesale vanilla beans from Indonesia. MOQ, grading, FOB shipping, documentation, and pricing for B2B importers and food manufacturers.",
+    "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, FOB shipping, documentation, and pricing for B2B importers and food manufacturers.",
   keywords: [
     "wholesale vanilla beans Indonesia",
     "buy vanilla beans bulk Indonesia",
@@ -94,7 +94,7 @@ export default function WholesaleVanillaBeansIndonesia() {
       <article className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-            La Vanilla Supplier exports wholesale vanilla beans from Indonesia to 20+ countries. This guide covers everything B2B buyers need to know: grading systems, MOQ requirements, FOB shipping terms, documentation, and how to evaluate Indonesian vanilla suppliers.
+            La Vanilla Supplier exports wholesale vanilla beans from Indonesia to 20+ countries. This guide covers everything B2B buyers need to know: grading systems, order quantities, FOB shipping terms, documentation, and how to evaluate Indonesian vanilla suppliers.
           </p>
 
           <div className="prose prose-lg max-w-none">
@@ -133,10 +133,10 @@ export default function WholesaleVanillaBeansIndonesia() {
             </div>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">
-              MOQ and Pricing Structure
+              Order Quantities and Pricing Structure
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Wholesale vanilla bean orders typically require a minimum order quantity (MOQ). At La Vanilla Supplier, our MOQ is 25 kg — low enough for trial orders while supporting volume scaling for established buyers.
+              Wholesale vanilla bean orders have flexible order quantities. At La Vanilla Supplier, we offer low minimums for trial orders while supporting volume scaling for established buyers.
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-8 pl-4">
               <li>Trial orders: 25-50 kg</li>
@@ -175,7 +175,7 @@ export default function WholesaleVanillaBeansIndonesia() {
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-8 pl-4">
               <li>Quality testing: Vanillin content via GC analysis, moisture testing</li>
               <li>Documentation: Full export documentation with every shipment</li>
-              <li>MOQ flexibility: Willingness to start with trial orders</li>
+              <li>Order flexibility: Willingness to start with trial orders</li>
               <li>Communication: Response time and clarity</li>
               <li>Track record: Export experience to your destination country</li>
             </ul>
@@ -208,7 +208,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               Ready to Order Wholesale Vanilla Beans?
             </h3>
             <p className="text-[#6B6358] mb-6">
-              La Vanilla Supplier offers Grade A and B vanilla beans with MOQ 25kg. Export to 20+ countries with full documentation.
+              La Vanilla Supplier offers Grade A and B vanilla beans with flexible order quantities. Export to 20+ countries with full documentation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors">

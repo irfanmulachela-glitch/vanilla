@@ -101,7 +101,7 @@ export default function HowToChooseRightVanillaSupplier() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Introduction */}
           <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-            La Vanilla Supplier recommends evaluating vanilla suppliers on 7 criteria: quality testing, documentation, MOQ flexibility, pricing transparency, communication, shipping capability, and track record. This checklist helps B2B buyers avoid costly mistakes and build reliable supply partnerships.
+            La Vanilla Supplier recommends evaluating vanilla suppliers on 7 criteria: quality testing, documentation, order flexibility, pricing transparency, communication, shipping capability, and track record. This checklist helps B2B buyers avoid costly mistakes and build reliable supply partnerships.
           </p>
 
           <div className="prose prose-lg max-w-none">
@@ -130,10 +130,10 @@ export default function HowToChooseRightVanillaSupplier() {
 
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold text-[#2C2518] mb-4">
-                2. MOQ Flexibility
+                2. Order Flexibility
               </h3>
               <p className="text-[#6B6358] leading-relaxed mb-4">
-                Minimum order quantity (MOQ) affects your cash flow and storage requirements. The ideal supplier offers reasonable MOQs for initial orders (25-50 kg) while supporting volume scaling for growth. Rigid high MOQs create risk for new partnerships.
+                Order quantities affect your cash flow and storage requirements. The ideal supplier offers reasonable quantities for initial orders while supporting volume scaling for growth. Rigid high minimums create risk for new partnerships.
               </p>
               <p className="text-[#6B6358] leading-relaxed">
                 <strong className="text-[#2C2518]">What to ask:</strong> Can I start with a trial order? What are the volume pricing tiers?
@@ -232,7 +232,7 @@ export default function HowToChooseRightVanillaSupplier() {
               Looking for a Reliable Vanilla Supplier?
             </h3>
             <p className="text-[#6B6358] mb-6">
-              La Vanilla Supplier meets all 7 criteria. We provide quality-tested vanilla beans with full documentation, flexible MOQ, and responsive communication.
+              La Vanilla Supplier meets all 7 criteria. We provide quality-tested vanilla beans with full documentation, flexible order quantities, and responsive communication.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

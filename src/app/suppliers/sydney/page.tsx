@@ -92,8 +92,8 @@ export default function SydneyPage() {
                 },
                 {
                   icon: Package,
-                  title: "MOQ 25kg",
-                  desc: "Flexible order quantities",
+                  title: "Flexible MOQ",
+                  desc: "Sample orders available",
                 },
               ].map((item) => (
                 <div
@@ -187,8 +187,7 @@ export default function SydneyPage() {
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
             Get a free sample and quote within 24 hours. Food safety compliant.
-            Minimum order 25 kg. Free samples available. 5 kg trial orders at
-            wholesale pricing.
+            Flexible order quantities. Free samples available.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

@@ -30,7 +30,7 @@ const gradeData = {
     heroTitle: "Indonesian Vanilla Beans — Grade A Gourmet",
     heroTagline: "Direct from Java. Sun-cured 6-9 months. 15-20 cm. 1.3-2.7% vanillin.",
     description:
-      "La Vanilla Supplier sources Grade A Gourmet vanilla beans directly from Indonesian smallholder farmers in Central Java. Every batch is lab-tested for vanillin content and moisture, with full documentation included. MOQ 25 kg, shipping FOB from Semarang, Jakarta, or Surabaya.",
+      "La Vanilla Supplier sources Grade A Gourmet vanilla beans directly from Indonesian smallholder farmers in Central Java. Every batch is lab-tested for vanillin content and moisture, with full documentation included. Flexible order quantities, shipping FOB from Semarang, Jakarta, or Surabaya.",
     heroDescription:
       "Premium Grade A vanilla beans for retail, pastry, ice cream, and culinary applications. Hand-picked at peak maturity, sun-cured for 6-9 months, and graded to international standards.",
     specs: [
@@ -43,7 +43,7 @@ const gradeData = {
       { spec: "Appearance", value: "Black, oily, flexible, full pod" },
       { spec: "Best For", value: "Retail, pastry, ice cream, culinary" },
       { spec: "Packaging", value: "Vacuum-sealed, 1 kg per bundle" },
-      { spec: "MOQ", value: "25 kg" },
+      { spec: "MOQ", value: "Flexible" },
       { spec: "HS Code", value: "0905.10" },
       { spec: "Incoterms", value: "FOB / CIF / DDP" },
     ],
@@ -73,9 +73,9 @@ const gradeData = {
       },
       {
         icon: Package,
-        label: "Minimum Order",
-        value: "25 kg",
-        desc: "5 kg trial orders available",
+        label: "Order Quantity",
+        value: "Flexible",
+        desc: "Sample orders available",
       },
       {
         icon: Truck,
@@ -97,7 +97,7 @@ const gradeData = {
     heroTitle: "Indonesian Vanilla Beans — Grade B Extraction",
     heroTagline: "Cost-effective for manufacturing. 10-15 cm. 1.3-2.2% vanillin. Lower moisture.",
     description:
-      "La Vanilla Supplier provides Grade B Extraction vanilla beans optimized for extract manufacturing and industrial applications. Cost-effective pricing with consistent quality. MOQ 25 kg, shipping FOB from Semarang, Jakarta, or Surabaya.",
+      "La Vanilla Supplier provides Grade B Extraction vanilla beans optimized for extract manufacturing and industrial applications. Cost-effective pricing with consistent quality. Flexible order quantities, shipping FOB from Semarang, Jakarta, or Surabaya.",
     heroDescription:
       "Grade B vanilla beans for extract manufacturing, industrial flavoring, and large-scale production. Lower moisture content enables efficient vanillin extraction.",
     specs: [
@@ -110,7 +110,7 @@ const gradeData = {
       { spec: "Appearance", value: "Dry, thinner, may have split ends" },
       { spec: "Best For", value: "Extract manufacturing, industrial flavoring" },
       { spec: "Packaging", value: "Vacuum-sealed, 1 kg per bundle" },
-      { spec: "MOQ", value: "25 kg" },
+      { spec: "MOQ", value: "Flexible" },
       { spec: "HS Code", value: "0905.10" },
       { spec: "Incoterms", value: "FOB / CIF / DDP" },
     ],
@@ -140,8 +140,8 @@ const gradeData = {
       },
       {
         icon: Package,
-        label: "Minimum Order",
-        value: "25 kg",
+        label: "Order Quantity",
+        value: "Flexible",
         desc: "Volume discounts available",
       },
       {

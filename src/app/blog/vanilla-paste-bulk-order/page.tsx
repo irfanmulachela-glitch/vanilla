@@ -6,7 +6,7 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
   description:
-    "Bulk vanilla paste for food manufacturers. Custom formulations, concentration levels, packaging options, and MOQ. Direct from Indonesian producer.",
+    "Bulk vanilla paste for food manufacturers. Custom formulations, concentration levels, packaging options, and flexible order quantities. Direct from Indonesian producer.",
   keywords: [
     "vanilla paste bulk",
     "vanilla paste manufacturer",
@@ -184,10 +184,10 @@ export default function VanillaPasteBulkOrder() {
             </div>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">
-              MOQ and Lead Time
+              Order Quantities and Lead Time
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Our MOQ for bulk vanilla paste is 25 kg. Standard lead time is 7-14 days for stock formulations and 21-30 days for custom orders. We ship FOB from Semarang, Jakarta, or Surabaya.
+              Our order quantities for bulk vanilla paste are flexible. Standard lead time is 7-14 days for stock formulations and 21-30 days for custom orders. We ship FOB from Semarang, Jakarta, or Surabaya.
             </p>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">
@@ -203,7 +203,7 @@ export default function VanillaPasteBulkOrder() {
               Need Bulk Vanilla Paste?
             </h3>
             <p className="text-[#6B6358] mb-6">
-              Request samples or discuss custom formulations with our team. MOQ 25kg, export to 20+ countries.
+              Request samples or discuss custom formulations with our team. Flexible order quantities, export to 20+ countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors">
