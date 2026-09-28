@@ -3,9 +3,9 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { HomePageContent } from "@/components/home-page-content";
 
 export const metadata: Metadata = {
-  title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
+  title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
   description:
-    "La Vanilla Supplier - Indonesia's trusted vanilla supplier. Food Safety Standards. Grade A & B beans, custom vanilla paste, pure vanilla powder. Export to 20+ countries.",
+    "Premium Indonesian vanilla beans, paste, and powder. Sun-cured 6-9 months. Lab-tested. Export to 20+ countries. Flexible order quantities. FOB from Java.",
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
