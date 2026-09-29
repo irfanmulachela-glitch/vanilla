@@ -31,7 +31,7 @@ export function HomePageContent() {
             src="/hero-vanilla-farm.jpg"
             alt="Vanilla beans growing on vines in a Javanese plantation"
             fill
-            className="object-cover"
+            className="object-cover object-[center_30%]"
             priority
           />
           {/* Gradient Overlay */}
