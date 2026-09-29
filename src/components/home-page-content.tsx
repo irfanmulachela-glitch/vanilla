@@ -161,11 +161,11 @@ export function HomePageContent() {
               {/* Java waypoint marker */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 792.54596 316.66394">
                 {/* Vertical line */}
-                <line x1="255" y1="230" x2="255" y2="270" stroke="#B5A37A" strokeWidth="2" />
+                <line x1="255" y1="200" x2="255" y2="250" stroke="#B5A37A" strokeWidth="2" />
                 {/* Dot at bottom */}
-                <circle cx="255" cy="270" r="4" fill="#B5A37A" />
+                <circle cx="255" cy="250" r="6" fill="#B5A37A" />
                 {/* "Java" label above */}
-                <text x="255" y="222" fill="#B5A37A" fontSize="14" fontWeight="600" textAnchor="middle" fontFamily="sans-serif">Java</text>
+                <text x="255" y="190" fill="#B5A37A" fontSize="18" fontWeight="600" textAnchor="middle" fontFamily="sans-serif">Java</text>
               </svg>
             </div>
           </div>
