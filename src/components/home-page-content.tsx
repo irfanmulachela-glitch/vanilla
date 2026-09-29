@@ -170,79 +170,12 @@ export function HomePageContent() {
 
             {/* Indonesian Map - Zoomed on Java */}
             <div className="relative">
-              <svg viewBox="0 0 1000 500" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
-                {/* Sumatra - accurate shape */}
-                <path
-                  d="M120 80 Q140 70 160 85 L180 120 Q200 160 190 200 L170 240 Q150 280 130 300 L100 290 Q80 260 70 220 L60 180 Q50 140 60 110 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="120" y="190" fill="#B5A37A" fontSize="14" fontWeight="500">Sumatra</text>
-
-                {/* Kalimantan - accurate shape */}
-                <path
-                  d="M300 60 Q350 40 400 60 L420 100 Q440 140 430 180 L400 220 Q360 240 320 230 L290 200 Q270 160 280 120 L290 80 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="355" y="150" fill="#B5A37A" fontSize="14" textAnchor="middle">Kalimantan</text>
-
-                {/* Sulawesi - accurate K-shape */}
-                <path
-                  d="M520 70 Q540 50 560 70 L570 100 Q580 130 560 160 L540 180 Q520 200 500 190 L490 160 Q480 130 490 100 L510 80 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="530" y="130" fill="#B5A37A" fontSize="14" textAnchor="middle">Sulawesi</text>
-
-                {/* Java - Highlighted, elongated island */}
-                <path
-                  d="M350 280 Q400 260 460 270 L520 280 Q580 290 640 310 L700 330 Q740 345 760 360 L750 380 Q720 390 680 385 L620 370 Q560 355 500 345 L440 335 Q380 325 350 310 Z"
-                  fill="#B5A37A"
-                  stroke="#D4C48A"
-                  strokeWidth="2"
-                />
-                <text x="560" y="335" fill="#2C2518" fontSize="18" fontWeight="bold" textAnchor="middle">Java</text>
-
-                {/* Marker on Java - Central Java */}
-                <circle cx="540" cy="310" r="10" fill="#2C2518" />
-                <circle cx="540" cy="310" r="16" fill="none" stroke="#2C2518" strokeWidth="2" opacity="0.4" />
-                <circle cx="540" cy="310" r="22" fill="none" stroke="#2C2518" strokeWidth="1" opacity="0.2" />
-
-                {/* Bali - small island east of Java */}
-                <ellipse cx="790" cy="370" rx="20" ry="15" fill="#3D3425" stroke="#B5A37A" strokeWidth="1.5" />
-                <text x="790" y="395" fill="#B5A37A" fontSize="12" textAnchor="middle">Bali</text>
-
-                {/* Nusa Tenggara */}
-                <path
-                  d="M820 380 Q850 375 880 385 L900 400 Q910 415 890 420 L860 415 Q830 405 820 390 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="860" y="440" fill="#B5A37A" fontSize="12" textAnchor="middle">Nusa Tenggara</text>
-
-                {/* Papua - easternmost */}
-                <path
-                  d="M850 80 Q900 60 950 80 L980 120 Q1000 160 980 200 L940 230 Q900 250 860 240 L840 210 Q820 170 830 130 L840 90 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="910" y="160" fill="#B5A37A" fontSize="14" textAnchor="middle">Papua</text>
-
-                {/* Maluku */}
-                <path
-                  d="M700 150 Q730 140 760 155 L770 180 Q780 210 760 230 L730 240 Q700 235 690 215 L685 185 Q690 165 700 150 Z"
-                  fill="#3D3425"
-                  stroke="#B5A37A"
-                  strokeWidth="1.5"
-                />
-                <text x="730" y="200" fill="#B5A37A" fontSize="12" textAnchor="middle">Maluku</text>
-              </svg>
+              <img
+                src="/indonesia-map.svg"
+                alt="Map of Indonesia highlighting Java island"
+                className="w-full h-auto"
+                style={{ filter: "invert(89%) sepia(8%) saturate(444%) hue-rotate(346deg) brightness(90%) contrast(85%)" }}
+              />
 
               {/* Floating label */}
               <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
