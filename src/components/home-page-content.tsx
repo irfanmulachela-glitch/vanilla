@@ -72,148 +72,6 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Origin Section - Where Our Vanilla Comes From */}
-      <section className="py-24 bg-[#2C2518] relative overflow-hidden">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B5A37A' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Text Content */}
-            <div>
-              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
-                Our Source
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                Pure Indonesian Vanilla,<br />Direct from Java
-              </h2>
-              <p className="text-white/70 mb-6 leading-relaxed text-lg">
-                Our vanilla beans are sourced exclusively from the lush plantations of Java, Indonesia.
-                Working directly with local farmers who have mastered the art of vanilla cultivation
-                over generations, we ensure every bean carries the authentic character of this
-                volcanic island.
-              </p>
-              <p className="text-white/70 mb-8 leading-relaxed">
-                Java's unique climate and rich volcanic soil create the perfect conditions for
-                growing premium V. planifolia vanilla. This direct relationship means
-                better quality, fair prices, and complete traceability from farm to your facility.
-              </p>
-
-              {/* Origin Points */}
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { location: "Central Java", desc: "Primary sourcing region" },
-                  { location: "East Java", desc: "Highland plantations" },
-                  { location: "West Java", desc: "Sustainable farms" },
-                  { location: "Multiple Islands", desc: "Backup supply chains" },
-                ].map((item) => (
-                  <div key={item.location} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#B5A37A] rounded-full mt-2 flex-shrink-0" />
-                    <div>
-                      <p className="text-white font-medium text-sm">{item.location}</p>
-                      <p className="text-white/50 text-xs">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Map Visualization */}
-            <div className="relative">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                {/* Simplified Indonesia Map SVG */}
-                <svg viewBox="0 0 500 400" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  {/* Background glow */}
-                  <defs>
-                    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#B5A37A" stopOpacity="0.15" />
-                      <stop offset="100%" stopColor="#B5A37A" stopOpacity="0" />
-                    </radialGradient>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="4" stdDeviation="8" floodColor="#B5A37A" floodOpacity="0.3"/>
-                    </filter>
-                  </defs>
-
-                  {/* Glow background */}
-                  <ellipse cx="250" cy="200" rx="200" ry="180" fill="url(#glow)" />
-
-                  {/* Sumatra */}
-                  <path
-                    d="M80 80 Q120 60 140 100 Q160 140 140 180 Q120 220 100 260 Q80 280 60 260 Q40 220 60 180 Q50 140 70 100 Z"
-                    fill="#3D3425"
-                    stroke="#B5A37A"
-                    strokeWidth="1"
-                    opacity="0.6"
-                  />
-                  <text x="90" y="170" fill="#B5A37A" fontSize="12" fontWeight="500" textAnchor="middle">Sumatra</text>
-
-                  {/* Java - Highlighted */}
-                  <path
-                    d="M280 240 Q320 230 360 240 Q400 250 420 270 Q440 290 420 300 Q380 310 340 300 Q300 290 280 270 Z"
-                    fill="#B5A37A"
-                    stroke="#D4C48A"
-                    strokeWidth="2"
-                    filter="url(#shadow)"
-                  />
-                  <text x="350" y="275" fill="#2C2518" fontSize="14" fontWeight="bold" textAnchor="middle">Java</text>
-
-                  {/* Bali */}
-                  <ellipse cx="440" cy="280" rx="20" ry="15" fill="#3D3425" stroke="#B5A37A" strokeWidth="1" opacity="0.6" />
-                  <text x="440" y="310" fill="#B5A37A" fontSize="10" textAnchor="middle">Bali</text>
-
-                  {/* Kalimantan */}
-                  <path
-                    d="M180 100 Q220 80 260 100 Q280 140 260 180 Q240 220 200 220 Q160 200 160 160 Q160 120 180 100 Z"
-                    fill="#3D3425"
-                    stroke="#B5A37A"
-                    strokeWidth="1"
-                    opacity="0.6"
-                  />
-                  <text x="210" y="155" fill="#B5A37A" fontSize="12" textAnchor="middle">Kalimantan</text>
-
-                  {/* Sulawesi */}
-                  <path
-                    d="M340 100 Q360 80 380 100 Q400 140 380 180 Q360 220 340 200 Q320 160 340 120 Z"
-                    fill="#3D3425"
-                    stroke="#B5A37A"
-                    strokeWidth="1"
-                    opacity="0.6"
-                  />
-                  <text x="360" y="150" fill="#B5A37A" fontSize="12" textAnchor="middle">Sulawesi</text>
-
-                  {/* Papua */}
-                  <path
-                    d="M420 80 Q460 60 480 100 Q500 140 480 180 Q460 200 420 180 Q400 140 420 100 Z"
-                    fill="#3D3425"
-                    stroke="#B5A37A"
-                    strokeWidth="1"
-                    opacity="0.6"
-                  />
-                  <text x="450" y="130" fill="#B5A37A" fontSize="12" textAnchor="middle">Papua</text>
-
-                  {/* Marker line to Java */}
-                  <line x1="350" y1="200" x2="350" y2="240" stroke="#B5A37A" strokeWidth="2" strokeDasharray="4" />
-                  <circle cx="350" cy="200" r="6" fill="#B5A37A" />
-                  <circle cx="350" cy="200" r="10" fill="none" stroke="#B5A37A" strokeWidth="2" opacity="0.5" />
-                </svg>
-
-                {/* Floating label */}
-                <div className="absolute top-8 right-8 bg-[#B5A37A] text-[#2C2518] px-4 py-2 rounded-lg font-medium text-sm shadow-lg">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-[#2C2518] rounded-full animate-pulse" />
-                    Our Sourcing Region
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -262,6 +120,119 @@ export function HomePageContent() {
                 {badge}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Origin Section - Clean Indonesian Map */}
+      <section className="py-24 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Content */}
+            <div>
+              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+                Our Source
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
+                Where Our Vanilla<br />Comes From
+              </h2>
+              <p className="text-[#6B6358] mb-6 leading-relaxed text-lg">
+                Our vanilla beans are proudly sourced from the lush plantations of Java, Indonesia.
+                We work directly with local farmers who have perfected the art of vanilla cultivation
+                over generations, ensuring every bean carries the authentic character of this
+                volcanic island.
+              </p>
+              <p className="text-[#6B6358] mb-8 leading-relaxed">
+                Java's unique climate and rich volcanic soil create the perfect conditions for
+                growing premium V. planifolia vanilla. This direct partnership means
+                better quality, fair prices, and complete traceability from farm to your facility.
+              </p>
+
+              {/* Key Points */}
+              <div className="space-y-4">
+                {[
+                  { title: "Central Java", desc: "Primary sourcing region" },
+                  { title: "East Java", desc: "Highland plantations" },
+                  { title: "Direct Farmer Partnerships", desc: "Fair trade practices" },
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-[#B5A37A]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-[#B5A37A] rounded-full" />
+                    </div>
+                    <div>
+                      <p className="text-[#2C2518] font-medium">{item.title}</p>
+                      <p className="text-[#6B6358] text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Indonesian Map - Zoomed on Java */}
+            <div className="relative">
+              <svg viewBox="0 0 600 400" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                {/* Sumatra */}
+                <path
+                  d="M50 50 Q80 40 100 70 Q120 100 110 140 Q100 180 80 220 Q60 250 40 240 Q20 220 30 180 Q25 140 40 100 Z"
+                  fill="#E5E0D8"
+                  stroke="#D4C48A"
+                  strokeWidth="1"
+                />
+                <text x="65" y="145" fill="#6B6358" fontSize="11" fontWeight="500">Sumatra</text>
+
+                {/* Java - Highlighted */}
+                <path
+                  d="M280 200 Q320 190 370 200 Q420 210 460 230 Q500 250 520 270 Q530 285 510 290 Q470 300 420 295 Q370 290 320 280 Q290 270 270 250 Z"
+                  fill="#B5A37A"
+                  stroke="#A8956A"
+                  strokeWidth="2"
+                />
+                <text x="395" y="250" fill="#2C2518" fontSize="14" fontWeight="bold">Java</text>
+
+                {/* Marker on Java */}
+                <circle cx="380" cy="230" r="8" fill="#2C2518" />
+                <circle cx="380" cy="230" r="12" fill="none" stroke="#2C2518" strokeWidth="2" opacity="0.3" />
+
+                {/* Bali */}
+                <ellipse cx="545" cy="280" rx="18" ry="14" fill="#E5E0D8" stroke="#D4C48A" strokeWidth="1" />
+                <text x="545" y="305" fill="#6B6358" fontSize="10" textAnchor="middle">Bali</text>
+
+                {/* Kalimantan */}
+                <path
+                  d="M180 60 Q230 40 280 60 Q310 90 300 130 Q280 170 240 180 Q200 175 175 150 Q155 120 165 80 Z"
+                  fill="#E5E0D8"
+                  stroke="#D4C48A"
+                  strokeWidth="1"
+                />
+                <text x="235" y="120" fill="#6B6358" fontSize="11" textAnchor="middle">Kalimantan</text>
+
+                {/* Sulawesi */}
+                <path
+                  d="M380 50 Q400 35 420 55 Q440 85 430 120 Q420 155 400 170 Q380 165 370 140 Q365 110 375 75 Z"
+                  fill="#E5E0D8"
+                  stroke="#D4C48A"
+                  strokeWidth="1"
+                />
+                <text x="400" y="110" fill="#6B6358" fontSize="11" textAnchor="middle">Sulawesi</text>
+
+                {/* Papua */}
+                <path
+                  d="M500 40 Q540 25 570 55 Q590 85 580 120 Q560 150 520 145 Q490 130 495 95 Q500 65 500 40 Z"
+                  fill="#E5E0D8"
+                  stroke="#D4C48A"
+                  strokeWidth="1"
+                />
+                <text x="535" y="90" fill="#6B6358" fontSize="11" textAnchor="middle">Papua</text>
+              </svg>
+
+              {/* Floating label */}
+              <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-sm border border-[#E5E0D8]">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-[#B5A37A] rounded-full" />
+                  <span className="text-sm font-medium text-[#2C2518]">Our Sourcing Region</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
