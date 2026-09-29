@@ -92,7 +92,7 @@ export default function WholesalePage() {
               { value: "Flexible", label: "Order Quantity" },
               { value: "20+", label: "Countries Served" },
               { value: "10+", label: "Years Experience" },
-              { value: "500+", label: "Tons Exported" },
+              { value: "150+", label: "Tons Exported" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>

@@ -275,7 +275,7 @@ export default async function RegionPage({
               <p className="text-sm text-stone-400 mt-1">Happy Clients</p>
             </div>
             <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#B5A37A]">500+</p>
+              <p className="text-3xl font-bold text-[#B5A37A]">150+</p>
               <p className="text-sm text-stone-400 mt-1">Tons Exported</p>
             </div>
           </div>

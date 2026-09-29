@@ -86,7 +86,7 @@ export const siteConfig = {
     countriesServed: "20+",
     yearsExperience: "10+",
     happyClients: "30+",
-    tonsExported: "500+",
+    tonsExported: "150+",
   },
 } as const;
 

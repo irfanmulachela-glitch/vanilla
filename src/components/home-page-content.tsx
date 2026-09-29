@@ -92,7 +92,7 @@ export function HomePageContent() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {[
               { value: 10, suffix: "+", label: t.home.yearsExperience },
-              { value: 500, suffix: "+", label: t.home.tonsExported },
+              { value: 150, suffix: "+", label: t.home.tonsExported },
               { value: 20, suffix: "+", label: t.home.countriesServed },
               { value: 30, suffix: "+", label: t.home.happyClients },
             ].map((stat) => (
