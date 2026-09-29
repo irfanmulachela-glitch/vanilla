@@ -4,15 +4,22 @@ import { CheckCircle2, Users, Globe, Award, Leaf, ArrowRight, MapPin, Handshake,
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "About La Vanilla Supplier | Indonesian Vanilla Exporter Since 2015",
+  title: "About La Vanilla Supplier | Our Philosophy & Standards",
   description:
-    "PT Penta Pelita Semesta - Indonesia's trusted vanilla supplier based in Java. Premium Grade A & B vanilla beans exported to 20+ countries.",
+    "Learn about La Vanilla Supplier's three core principles: consistent quality, patient sun-curing, and flexible partnerships. Indonesian vanilla exporter based in Java.",
+  keywords: [
+    "La Vanilla Supplier philosophy",
+    "vanilla supplier standards",
+    "Indonesian vanilla quality",
+    "vanilla curing process",
+    "vanilla supplier Java",
+  ],
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About La Vanilla Supplier",
-    description: "Indonesia's trusted vanilla supplier based in Java. Premium natural vanilla for global markets.",
+    title: "About La Vanilla Supplier | Our Philosophy & Standards",
+    description: "Three principles that guide every batch: consistency, patient curing, and flexible partnerships. Indonesian vanilla exporter based in Java.",
     url: `${siteConfig.url}/about`,
     type: "website",
   },
@@ -124,43 +131,49 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
+      <section className="py-16 lg:py-24 bg-[#F8F6F2]" aria-labelledby="philosophy-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
-                Our Philosophy
+              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
+                The La Vanilla Standard
+              </p>
+              <h2 id="philosophy-heading" className="text-3xl font-bold text-[#2C2518] mb-6">
+                Three Principles That Guide Every Batch
               </h2>
-              <div className="space-y-6">
+              <p className="text-[#6B6358] mb-8 leading-relaxed">
+                Not promises on a website — principles we actually operate by. From consistency to curing to flexibility, these standards define how we work with every buyer.
+              </p>
+              <div className="space-y-8">
                 {[
                   {
-                    icon: Target,
-                    title: "Quality First",
+                    num: "01",
+                    title: "Consistency You Can Formula For",
                     description:
-                      "We focus on delivering consistent, high-quality vanilla that meets international standards.",
+                      "Your product depends on the same vanillin content, moisture level, and aroma — shipment after shipment. We maintain strict grading standards and lab-test every batch. Not because the industry requires it, but because your formula demands it.",
                   },
                   {
-                    icon: Handshake,
-                    title: "Long-Term Reliability",
+                    num: "02",
+                    title: "Cured by Clock, Not by Calendar",
                     description:
-                      "We build lasting partnerships based on trust, transparency, and consistent supply.",
+                      "Most suppliers rush the cure — 2-3 months, done. We cure for 6-9 months under the Javanese sun. Vanilla doesn't develop flavor on a deadline. The longer it cures, the deeper the aroma, the higher the vanillin.",
                   },
                   {
-                    icon: Leaf,
-                    title: "Indonesian Excellence",
+                    num: "03",
+                    title: "Flexible by Default",
                     description:
-                      "We are committed to showcasing the best of Indonesian vanilla to the world.",
+                      "Some buyers need 25 kg. Others need 250 kg. Some want to start with samples. We don't lock you into rigid minimums. We build relationships, not requirements. Start where you're comfortable. Scale when you're ready.",
                   },
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-[#B5A37A]" />
+                  <div key={item.num} className="flex gap-4">
+                    <div className="text-[#B5A37A] text-2xl font-bold opacity-40 flex-shrink-0 w-10">
+                      {item.num}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#2C2518] mb-1">
+                      <h3 className="font-semibold text-[#2C2518] mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[#6B6358]">{item.description}</p>
+                      <p className="text-[#6B6358] text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -170,8 +183,8 @@ export default function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-12 flex items-center justify-center min-h-[400px]">
                 <div className="text-center">
                   <Leaf className="w-20 h-20 text-[#B5A37A] mx-auto mb-6" />
-                  <p className="text-stone-300 text-lg">Premium Indonesian Vanilla</p>
-                  <p className="text-stone-400 text-sm mt-2">Sustainably Sourced</p>
+                  <p className="text-white text-xl font-medium mb-2">The La Vanilla Standard</p>
+                  <p className="text-stone-400 text-sm max-w-xs mx-auto">Consistency. Patience. Flexibility. — Every batch, every time.</p>
                 </div>
               </div>
             </div>
