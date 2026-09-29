@@ -69,7 +69,7 @@ export default function AboutPage() {
                   <strong className="text-[#2C2518]">Muhammad Irfan</strong> is the Founder &amp; Director of La Vanilla Supplier (PT Penta Pelita Semesta). Based in Java, Irfan has established direct relationships with smallholder farmers across the region, ensuring fair trade practices and full traceability from farm to shipment.
                 </p>
                 <p className="text-[#6B6358] leading-relaxed">
-                  His deep knowledge of vanilla curing, grading, and export logistics has helped food manufacturers and distributors in 20+ countries source consistent, high-quality Indonesian vanilla. Irfan personally oversees quality control and maintains the relationships that make La Vanilla Supplier a trusted partner for B2B buyers worldwide.
+                  His deep knowledge of vanilla curing, grading, and export logistics has helped food manufacturers and distributors in 20+ countries source consistent, high-quality Indonesian vanilla. Irfan personally oversees quality control and maintains the relationships that make La Vanilla Supplier a trusted partner for buyers worldwide.
                 </p>
                 <div className="flex items-center gap-3 pt-2">
                   <a
@@ -111,7 +111,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-[#2C2518]">20+ Countries Served</p>
-                      <p className="text-sm text-[#6B6358]">Global B2B vanilla supply network</p>
+                      <p className="text-sm text-[#6B6358]">Global vanilla supply network</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
