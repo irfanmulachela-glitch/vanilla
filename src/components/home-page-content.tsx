@@ -60,8 +60,8 @@ export function HomePageContent() {
           {/* Image - 60%, full bleed, no outline */}
           <div className="relative min-h-[400px] lg:min-h-full lg:col-span-3">
             <Image
-              src="/wholesale-hero.jpeg"
-              alt="Premium Indonesian vanilla beans being sorted at our facility in Java"
+              src="/hero-vanilla-farm.jpg"
+              alt="Vanilla beans growing on vines in a Javanese plantation"
               fill
               className="object-cover"
               priority
