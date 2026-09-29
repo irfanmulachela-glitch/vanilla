@@ -23,49 +23,51 @@ export function HomePageContent() {
 
   return (
     <>
-      {/* Hero Section - Light, clean, side by side */}
-      <section className="bg-[#F8F6F2]">
-        <div className="grid lg:grid-cols-5 min-h-[550px]">
-          {/* Text Content - 40% */}
-          <div className="flex flex-col justify-center px-6 sm:px-10 lg:px-14 py-16 lg:py-20 lg:col-span-2">
-            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-3">
+      {/* Hero Section - Full bleed with overlay */}
+      <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/hero-vanilla-farm.jpg"
+            alt="Vanilla beans growing on vines in a Javanese plantation"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/70 to-transparent" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+          <div className="max-w-xl">
+            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C2518] mb-3 leading-[1.1]">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.1]">
               {t.home.heroTitle}
             </h1>
-            <p className="text-lg text-[#B5A37A] font-medium mb-5 italic">
+            <p className="text-lg text-[#D4C48A] font-medium mb-5 italic">
               {t.home.heroSubtitle}
             </p>
-            <p className="text-[#6B6358] mb-3 leading-relaxed">
+            <p className="text-white/80 mb-6 leading-relaxed text-lg">
               {t.home.heroDescription}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={`${prefix}/contact`}
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
               >
                 {t.common.requestSample}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
                 href={`${prefix}/products`}
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2C2518] text-sm font-medium rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white text-sm font-medium rounded-lg border border-white/30 hover:bg-white/20 transition-colors backdrop-blur-sm"
               >
                 {t.common.learnMore}
               </Link>
             </div>
-          </div>
-
-          {/* Image - 60%, full bleed, no outline */}
-          <div className="relative min-h-[400px] lg:min-h-full lg:col-span-3">
-            <Image
-              src="/hero-vanilla-farm.jpg"
-              alt="Vanilla beans growing on vines in a Javanese plantation"
-              fill
-              className="object-cover"
-              priority
-            />
           </div>
         </div>
       </section>
