@@ -125,7 +125,7 @@ export function HomePageContent() {
       </section>
 
       {/* Origin Section - Clean Indonesian Map */}
-      <section className="py-24 bg-[#F8F6F2]">
+      <section className="py-24 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Content */}
@@ -133,16 +133,16 @@ export function HomePageContent() {
               <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
                 Our Source
               </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                 Where Our Vanilla<br />Comes From
               </h2>
-              <p className="text-[#6B6358] mb-6 leading-relaxed text-lg">
+              <p className="text-white/70 mb-6 leading-relaxed text-lg">
                 Our vanilla beans are proudly sourced from the lush plantations of Java, Indonesia.
                 We work directly with local farmers who have perfected the art of vanilla cultivation
                 over generations, ensuring every bean carries the authentic character of this
                 volcanic island.
               </p>
-              <p className="text-[#6B6358] mb-8 leading-relaxed">
+              <p className="text-white/70 mb-8 leading-relaxed">
                 Java's unique climate and rich volcanic soil create the perfect conditions for
                 growing premium V. planifolia vanilla. This direct partnership means
                 better quality, fair prices, and complete traceability from farm to your facility.
@@ -156,12 +156,12 @@ export function HomePageContent() {
                   { title: "Direct Farmer Partnerships", desc: "Fair trade practices" },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-[#B5A37A]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 bg-[#B5A37A]/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-[#B5A37A] rounded-full" />
                     </div>
                     <div>
-                      <p className="text-[#2C2518] font-medium">{item.title}</p>
-                      <p className="text-[#6B6358] text-sm">{item.desc}</p>
+                      <p className="text-white font-medium">{item.title}</p>
+                      <p className="text-white/60 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -170,66 +170,85 @@ export function HomePageContent() {
 
             {/* Indonesian Map - Zoomed on Java */}
             <div className="relative">
-              <svg viewBox="0 0 600 400" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
-                {/* Sumatra */}
+              <svg viewBox="0 0 1000 500" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                {/* Sumatra - accurate shape */}
                 <path
-                  d="M50 50 Q80 40 100 70 Q120 100 110 140 Q100 180 80 220 Q60 250 40 240 Q20 220 30 180 Q25 140 40 100 Z"
-                  fill="#E5E0D8"
-                  stroke="#D4C48A"
-                  strokeWidth="1"
+                  d="M120 80 Q140 70 160 85 L180 120 Q200 160 190 200 L170 240 Q150 280 130 300 L100 290 Q80 260 70 220 L60 180 Q50 140 60 110 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
                 />
-                <text x="65" y="145" fill="#6B6358" fontSize="11" fontWeight="500">Sumatra</text>
+                <text x="120" y="190" fill="#B5A37A" fontSize="14" fontWeight="500">Sumatra</text>
 
-                {/* Java - Highlighted */}
+                {/* Kalimantan - accurate shape */}
                 <path
-                  d="M280 200 Q320 190 370 200 Q420 210 460 230 Q500 250 520 270 Q530 285 510 290 Q470 300 420 295 Q370 290 320 280 Q290 270 270 250 Z"
+                  d="M300 60 Q350 40 400 60 L420 100 Q440 140 430 180 L400 220 Q360 240 320 230 L290 200 Q270 160 280 120 L290 80 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
+                />
+                <text x="355" y="150" fill="#B5A37A" fontSize="14" textAnchor="middle">Kalimantan</text>
+
+                {/* Sulawesi - accurate K-shape */}
+                <path
+                  d="M520 70 Q540 50 560 70 L570 100 Q580 130 560 160 L540 180 Q520 200 500 190 L490 160 Q480 130 490 100 L510 80 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
+                />
+                <text x="530" y="130" fill="#B5A37A" fontSize="14" textAnchor="middle">Sulawesi</text>
+
+                {/* Java - Highlighted, elongated island */}
+                <path
+                  d="M350 280 Q400 260 460 270 L520 280 Q580 290 640 310 L700 330 Q740 345 760 360 L750 380 Q720 390 680 385 L620 370 Q560 355 500 345 L440 335 Q380 325 350 310 Z"
                   fill="#B5A37A"
-                  stroke="#A8956A"
+                  stroke="#D4C48A"
                   strokeWidth="2"
                 />
-                <text x="395" y="250" fill="#2C2518" fontSize="14" fontWeight="bold">Java</text>
+                <text x="560" y="335" fill="#2C2518" fontSize="18" fontWeight="bold" textAnchor="middle">Java</text>
 
-                {/* Marker on Java */}
-                <circle cx="380" cy="230" r="8" fill="#2C2518" />
-                <circle cx="380" cy="230" r="12" fill="none" stroke="#2C2518" strokeWidth="2" opacity="0.3" />
+                {/* Marker on Java - Central Java */}
+                <circle cx="540" cy="310" r="10" fill="#2C2518" />
+                <circle cx="540" cy="310" r="16" fill="none" stroke="#2C2518" strokeWidth="2" opacity="0.4" />
+                <circle cx="540" cy="310" r="22" fill="none" stroke="#2C2518" strokeWidth="1" opacity="0.2" />
 
-                {/* Bali */}
-                <ellipse cx="545" cy="280" rx="18" ry="14" fill="#E5E0D8" stroke="#D4C48A" strokeWidth="1" />
-                <text x="545" y="305" fill="#6B6358" fontSize="10" textAnchor="middle">Bali</text>
+                {/* Bali - small island east of Java */}
+                <ellipse cx="790" cy="370" rx="20" ry="15" fill="#3D3425" stroke="#B5A37A" strokeWidth="1.5" />
+                <text x="790" y="395" fill="#B5A37A" fontSize="12" textAnchor="middle">Bali</text>
 
-                {/* Kalimantan */}
+                {/* Nusa Tenggara */}
                 <path
-                  d="M180 60 Q230 40 280 60 Q310 90 300 130 Q280 170 240 180 Q200 175 175 150 Q155 120 165 80 Z"
-                  fill="#E5E0D8"
-                  stroke="#D4C48A"
-                  strokeWidth="1"
+                  d="M820 380 Q850 375 880 385 L900 400 Q910 415 890 420 L860 415 Q830 405 820 390 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
                 />
-                <text x="235" y="120" fill="#6B6358" fontSize="11" textAnchor="middle">Kalimantan</text>
+                <text x="860" y="440" fill="#B5A37A" fontSize="12" textAnchor="middle">Nusa Tenggara</text>
 
-                {/* Sulawesi */}
+                {/* Papua - easternmost */}
                 <path
-                  d="M380 50 Q400 35 420 55 Q440 85 430 120 Q420 155 400 170 Q380 165 370 140 Q365 110 375 75 Z"
-                  fill="#E5E0D8"
-                  stroke="#D4C48A"
-                  strokeWidth="1"
+                  d="M850 80 Q900 60 950 80 L980 120 Q1000 160 980 200 L940 230 Q900 250 860 240 L840 210 Q820 170 830 130 L840 90 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
                 />
-                <text x="400" y="110" fill="#6B6358" fontSize="11" textAnchor="middle">Sulawesi</text>
+                <text x="910" y="160" fill="#B5A37A" fontSize="14" textAnchor="middle">Papua</text>
 
-                {/* Papua */}
+                {/* Maluku */}
                 <path
-                  d="M500 40 Q540 25 570 55 Q590 85 580 120 Q560 150 520 145 Q490 130 495 95 Q500 65 500 40 Z"
-                  fill="#E5E0D8"
-                  stroke="#D4C48A"
-                  strokeWidth="1"
+                  d="M700 150 Q730 140 760 155 L770 180 Q780 210 760 230 L730 240 Q700 235 690 215 L685 185 Q690 165 700 150 Z"
+                  fill="#3D3425"
+                  stroke="#B5A37A"
+                  strokeWidth="1.5"
                 />
-                <text x="535" y="90" fill="#6B6358" fontSize="11" textAnchor="middle">Papua</text>
+                <text x="730" y="200" fill="#B5A37A" fontSize="12" textAnchor="middle">Maluku</text>
               </svg>
 
               {/* Floating label */}
-              <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-lg shadow-sm border border-[#E5E0D8]">
+              <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-[#B5A37A] rounded-full" />
-                  <span className="text-sm font-medium text-[#2C2518]">Our Sourcing Region</span>
+                  <span className="text-sm font-medium text-white">Our Sourcing Region</span>
                 </div>
               </div>
             </div>
