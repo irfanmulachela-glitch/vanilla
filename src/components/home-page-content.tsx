@@ -125,9 +125,9 @@ export function HomePageContent() {
       </section>
 
       {/* Origin Section - Clean Indonesian Map */}
-      <section className="py-24 bg-[#2C2518]">
+      <section className="py-16 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div>
               <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
@@ -142,33 +142,14 @@ export function HomePageContent() {
                 over generations, ensuring every bean carries the authentic character of this
                 volcanic island.
               </p>
-              <p className="text-white/70 mb-8 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Java's unique climate and rich volcanic soil create the perfect conditions for
                 growing premium V. planifolia vanilla. This direct partnership means
                 better quality, fair prices, and complete traceability from farm to your facility.
               </p>
-
-              {/* Key Points */}
-              <div className="space-y-4">
-                {[
-                  { title: "Central Java", desc: "Primary sourcing region" },
-                  { title: "East Java", desc: "Highland plantations" },
-                  { title: "Direct Farmer Partnerships", desc: "Fair trade practices" },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-[#B5A37A]/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-[#B5A37A] rounded-full" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">{item.title}</p>
-                      <p className="text-white/60 text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Indonesian Map - Zoomed on Java */}
+            {/* Indonesian Map with Java waypoint */}
             <div className="relative">
               <img
                 src="/indonesia-map.svg"
@@ -177,13 +158,15 @@ export function HomePageContent() {
                 style={{ filter: "invert(89%) sepia(8%) saturate(444%) hue-rotate(346deg) brightness(90%) contrast(85%)" }}
               />
 
-              {/* Floating label */}
-              <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-[#B5A37A] rounded-full" />
-                  <span className="text-sm font-medium text-white">Our Sourcing Region</span>
-                </div>
-              </div>
+              {/* Java waypoint marker */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 792.54596 316.66394">
+                {/* Vertical line */}
+                <line x1="255" y1="230" x2="255" y2="270" stroke="#B5A37A" strokeWidth="2" />
+                {/* Dot at bottom */}
+                <circle cx="255" cy="270" r="4" fill="#B5A37A" />
+                {/* "Java" label above */}
+                <text x="255" y="222" fill="#B5A37A" fontSize="14" fontWeight="600" textAnchor="middle" fontFamily="sans-serif">Java</text>
+              </svg>
             </div>
           </div>
         </div>
