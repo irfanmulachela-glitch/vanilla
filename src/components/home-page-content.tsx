@@ -44,9 +44,9 @@ export function HomePageContent() {
             <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] tracking-tight font-[family-name:var(--font-jakarta)]">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.15] tracking-tight font-[family-name:var(--font-lora)]">
               <span className="font-normal italic">Stop Worrying</span>{" "}
-              <span className="font-medium">About Vanilla Supply</span>
+              <span className="font-semibold">About Vanilla Supply</span>
             </h1>
             <p className="text-lg text-[#D4C48A] font-medium mb-5 italic">
               {t.home.heroSubtitle}

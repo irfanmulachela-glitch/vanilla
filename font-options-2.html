@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 New Font Options - La Vanilla Supplier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1.page-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #B5A37A;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 1024px) {
+            .options-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .option-card {
+            background: #2C2518;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            border: 2px solid #3a3225;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+            border-color: #B5A37A;
+        }
+
+        .option-card.selected {
+            border-color: #B5A37A;
+            box-shadow: 0 0 30px rgba(181, 163, 122, 0.3);
+        }
+
+        /* Hero mockup section */
+        .hero-mockup {
+            position: relative;
+            min-height: 280px;
+            background: linear-gradient(135deg, #2C2518 0%, #1a1510 100%);
+            overflow: hidden;
+        }
+
+        .hero-mockup::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect fill="%232C2518" width="800" height="400"/><g fill="%23B5A37A" opacity="0.1"><ellipse cx="600" cy="200" rx="80" ry="200"/><ellipse cx="650" cy="200" rx="60" ry="180"/><ellipse cx="700" cy="200" rx="40" ry="160"/></g></svg>') right center / 60% auto no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 48px 40px;
+            max-width: 600px;
+        }
+
+        .hero-label {
+            color: #B5A37A;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            color: #D4C48A;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #B5A37A;
+            color: #2C2518;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Option info */
+        .option-info {
+            padding: 24px 28px;
+        }
+
+        .option-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .option-number {
+            color: #B5A37A;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .option-badge {
+            background: #B5A37A;
+            color: #2C2518;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .option-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .option-description {
+            color: #a09888;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .font-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .spec-item {
+            background: #241f15;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .spec-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #B5A37A;
+            margin-bottom: 4px;
+        }
+
+        .spec-value {
+            font-size: 14px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Font-specific styles */
+        .font-lora {
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+        }
+
+        .font-newsreader {
+            font-family: 'Newsreader', serif;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+        }
+
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+
+        .font-dm-serif {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .font-libre-baskerville {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-title.text-4xl {
+            font-size: 36px;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title.text-4xl {
+                font-size: 42px;
+            }
+        }
+
+        /* Selection button */
+        .select-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: transparent;
+            border: 2px solid #B5A37A;
+            color: #B5A37A;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .select-btn:hover {
+            background: #B5A37A;
+            color: #2C2518;
+        }
+
+        .option-card.selected .select-btn {
+            background: #B5A37A;
+            color: #2C2518;
+        }
+
+        /* Brand fit note */
+        .brand-fit {
+            background: rgba(181, 163, 122, 0.1);
+            border-left: 3px solid #B5A37A;
+            padding: 12px 16px;
+            margin-top: 16px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .brand-fit-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #B5A37A;
+            margin-bottom: 4px;
+        }
+
+        .brand-fit-text {
+            font-size: 13px;
+            color: #c0b8a8;
+            line-height: 1.5;
+        }
+
+        /* Comparison note */
+        .comparison-note {
+            background: linear-gradient(135deg, #2C2518 0%, #1a1510 100%);
+            border: 1px solid #B5A37A;
+            border-radius: 12px;
+            padding: 24px 32px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .comparison-note h3 {
+            color: #B5A37A;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .comparison-note p {
+            color: #a09888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .comparison-note strong {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">5 New Font Options for La Vanilla Supplier</h1>
+        <p class="page-subtitle">Handpicked for premium vanilla B2B branding — warm, professional, and sophisticated</p>
+
+        <div class="options-grid">
+            <!-- Option 1: Lora -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-lora">
+                            <span style="font-style: italic; font-weight: 400;">Stop Worrying</span>{" "}
+                            <span style="font-weight: 600;">About Vanilla Supply</span>
+                        </h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 05</span>
+                    </div>
+                    <h2 class="option-name">Lora</h2>
+                    <p class="option-description">Contemporary serif with calligraphic roots. Warm, trustworthy, and professional — strikes a balance between tradition and modernity.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Contemporary Serif</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Medium / SemiBold</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Warm, Trustworthy</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Food, Editorial, B2B</div>
+                        </div>
+                    </div>
+                    <div class="brand-fit">
+                        <div class="brand-fit-label">Brand Fit</div>
+                        <div class="brand-fit-text">Perfect for premium food brands — the calligraphic warmth suggests artisanal quality while maintaining B2B professionalism.</div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 2: Newsreader -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-newsreader">
+                            <span style="font-style: italic; font-weight: 350;">Stop Worrying</span>{" "}
+                            <span style="font-weight: 550;">About Vanilla Supply</span>
+                        </h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 06</span>
+                    </div>
+                    <h2 class="option-name">Newsreader</h2>
+                    <p class="option-description">Roman serif designed for news and editorial content. Optical sizing ensures readability at any scale — authoritative and refined.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Roman Serif</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Light / Medium</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Authoritative, Refined</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Editorial, Publishing, B2B</div>
+                        </div>
+                    </div>
+                    <div class="brand-fit">
+                        <div class="brand-fit-label">Brand Fit</div>
+                        <div class="brand-fit-text">Signals expertise and credibility — ideal for a supplier positioning as an authority in vanilla sourcing and quality.</div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 3: Manrope -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-manrope">
+                            <span style="font-weight: 400;">Stop Worrying</span>{" "}
+                            <span style="font-weight: 700;">About Vanilla Supply</span>
+                        </h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 07</span>
+                    </div>
+                    <h2 class="option-name">Manrope</h2>
+                    <p class="option-description">Modern geometric sans-serif with semi-packed letterforms. Engineered precision meets approachable warmth — quiet confidence in a room full of noise.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Geometric Sans</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Regular / Bold</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Modern, Approachable</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">SaaS, Modern B2B, Tech</div>
+                        </div>
+                    </div>
+                    <div class="brand-fit">
+                        <div class="brand-fit-label">Brand Fit</div>
+                        <div class="brand-fit-text">Balances innovation with trust — great if you want to appear modern and forward-thinking while staying professional.</div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 4: DM Serif Display -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-dm-serif">
+                            <span style="font-style: italic;">Stop Worrying</span>{" "}
+                            <span>About Vanilla Supply</span>
+                        </h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 08</span>
+                    </div>
+                    <h2 class="option-name">DM Serif Display</h2>
+                    <p class="option-description">High-contrast display serif with bracketed serifs. Feels printed and editorial — designed for headlines that need authority and elegance.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Display Serif</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Regular</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Editorial, Premium</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Luxury, Editorial, Headlines</div>
+                        </div>
+                    </div>
+                    <div class="brand-fit">
+                        <div class="brand-fit-label">Brand Fit</div>
+                        <div class="brand-fit-text">Premium editorial feel — positions your brand as high-end and established, perfect for gourmet vanilla positioning.</div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 5: Libre Baskerville -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-libre-baskerville">
+                            <span style="font-style: italic;">Stop Worrying</span>{" "}
+                            <span style="font-weight: 700;">About Vanilla Supply</span>
+                        </h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 09</span>
+                    </div>
+                    <h2 class="option-name">Libre Baskerville</h2>
+                    <p class="option-description">Classic transitional serif with generous proportions. Authoritative and grounded — conveys heritage, stability, and established expertise.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Transitional Serif</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Regular / Bold</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Authoritative, Heritage</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Premium, Established Brands</div>
+                        </div>
+                    </div>
+                    <div class="brand-fit">
+                        <div class="brand-fit-label">Brand Fit</div>
+                        <div class="brand-fit-text">Signals tradition and reliability — ideal if you want to emphasize your 10+ years of experience and established supply chain.</div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-note">
+            <h3>Recommendation for La Vanilla Supplier</h3>
+            <p><strong>Option 05 (Lora)</strong> for warm artisanal feel • <strong>Option 06 (Newsreader)</strong> for editorial authority • <strong>Option 08 (DM Serif Display)</strong> for premium gourmet positioning • <strong>Option 09 (Libre Baskerville)</strong> for heritage and established trust. All pair well with Inter body text.</p>
+        </div>
+    </div>
+
+    <script>
+        function selectOption(card) {
+            document.querySelectorAll('.option-card').forEach(c => {
+                c.classList.remove('selected');
+            });
+            card.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
