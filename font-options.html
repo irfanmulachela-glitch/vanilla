@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Font Options - La Vanilla Supplier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1.page-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #B5A37A;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-card {
+            background: #2C2518;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            border: 2px solid #3a3225;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+            border-color: #B5A37A;
+        }
+
+        .option-card.selected {
+            border-color: #B5A37A;
+            box-shadow: 0 0 30px rgba(181, 163, 122, 0.3);
+        }
+
+        /* Hero mockup section */
+        .hero-mockup {
+            position: relative;
+            min-height: 280px;
+            background: linear-gradient(135deg, #2C2518 0%, #1a1510 100%);
+            overflow: hidden;
+        }
+
+        .hero-mockup::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect fill="%232C2518" width="800" height="400"/><g fill="%23B5A37A" opacity="0.1"><ellipse cx="600" cy="200" rx="80" ry="200"/><ellipse cx="650" cy="200" rx="60" ry="180"/><ellipse cx="700" cy="200" rx="40" ry="160"/></g></svg>') right center / 60% auto no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 48px 40px;
+            max-width: 600px;
+        }
+
+        .hero-label {
+            color: #B5A37A;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            color: #D4C48A;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #B5A37A;
+            color: #2C2518;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Option info */
+        .option-info {
+            padding: 24px 28px;
+        }
+
+        .option-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .option-number {
+            color: #B5A37A;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .option-badge {
+            background: #B5A37A;
+            color: #2C2518;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .option-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .option-description {
+            color: #a09888;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .font-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .spec-item {
+            background: #241f15;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .spec-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #B5A37A;
+            margin-bottom: 4px;
+        }
+
+        .spec-value {
+            font-size: 14px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Font-specific styles */
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+        }
+
+        .font-plus-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-title.text-4xl {
+            font-size: 36px;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title.text-4xl {
+                font-size: 44px;
+            }
+        }
+
+        /* Selection button */
+        .select-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: transparent;
+            border: 2px solid #B5A37A;
+            color: #B5A37A;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .select-btn:hover {
+            background: #B5A37A;
+            color: #2C2518;
+        }
+
+        .option-card.selected .select-btn {
+            background: #B5A37A;
+            color: #2C2518;
+        }
+
+        /* Comparison note */
+        .comparison-note {
+            background: linear-gradient(135deg, #2C2518 0%, #1a1510 100%);
+            border: 1px solid #B5A37A;
+            border-radius: 12px;
+            padding: 24px 32px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .comparison-note h3 {
+            color: #B5A37A;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .comparison-note p {
+            color: #a09888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Hero Title Font Options</h1>
+        <p class="page-subtitle">Select one option — I'll deploy your choice</p>
+
+        <div class="options-grid">
+            <!-- Option 1: Outfit (Current) -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-outfit">Stop Worrying About Vanilla Supply</h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 01</span>
+                        <span class="option-badge">Currently Live</span>
+                    </div>
+                    <h2 class="option-name">Outfit</h2>
+                    <p class="option-description">Clean geometric sans-serif with a modern, professional feel. Minimalist and understated — pairs naturally with Inter for a cohesive B2B aesthetic.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Geometric Sans</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Medium (500)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Minimal, Modern</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">B2B SaaS, Tech</div>
+                        </div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 2: Space Grotesk -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-space-grotesk">Stop Worrying About Vanilla Supply</h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 02</span>
+                    </div>
+                    <h2 class="option-name">Space Grotesk</h2>
+                    <p class="option-description">Geometric grotesque with subtle character and technical precision. Slightly quirky letterforms add personality while maintaining professionalism.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Geometric Grotesque</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Medium (500)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Technical, Confident</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Modern B2B, Startups</div>
+                        </div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 3: Plus Jakarta Sans -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-plus-jakarta">Stop Worrying About Vanilla Supply</h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 03</span>
+                    </div>
+                    <h2 class="option-name">Plus Jakarta Sans</h2>
+                    <p class="option-description">Modern typeface with wider proportions and open apertures. More personality than Inter — sophisticated balance of character and readability.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Humanist Sans</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">SemiBold (600)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Sophisticated, Warm</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Premium B2B, Enterprise</div>
+                        </div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+
+            <!-- Option 4: Cormorant Garamond -->
+            <div class="option-card" onclick="selectOption(this)">
+                <div class="hero-mockup">
+                    <div class="hero-content">
+                        <p class="hero-label">Indonesia's #1 Vanilla Supplier</p>
+                        <h1 class="hero-title text-4xl font-cormorant">Stop Worrying About Vanilla Supply</h1>
+                        <p class="hero-subtitle">Direct from Java. Flexible orders. Full documentation.</p>
+                        <span class="hero-cta">Request a Sample</span>
+                    </div>
+                </div>
+                <div class="option-info">
+                    <div class="option-header">
+                        <span class="option-number">OPTION 04</span>
+                    </div>
+                    <h2 class="option-name">Cormorant Garamond</h2>
+                    <p class="option-description">Classical high-contrast serif with refined, elegant strokes. Luxury register — signals premium quality and editorial sophistication.</p>
+                    <div class="font-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Style</div>
+                            <div class="spec-value">Classical Serif</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Weight</div>
+                            <div class="spec-value">Medium (500)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Personality</div>
+                            <div class="spec-value">Luxury, Editorial</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Best For</div>
+                            <div class="spec-value">Luxury, Fine Foods</div>
+                        </div>
+                    </div>
+                    <button class="select-btn">Select This Option</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-note">
+            <h3>Recommendation</h3>
+            <p>For a premium B2B vanilla brand: <strong>Option 1 (Outfit)</strong> for maximum minimalism, <strong>Option 2 (Space Grotesk)</strong> for modern technical edge, or <strong>Option 4 (Cormorant Garamond)</strong> for luxury editorial feel. All pair well with Inter body text.</p>
+        </div>
+    </div>
+
+    <script>
+        function selectOption(card) {
+            // Remove selected from all cards
+            document.querySelectorAll('.option-card').forEach(c => {
+                c.classList.remove('selected');
+            });
+            // Add selected to clicked card
+            card.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
