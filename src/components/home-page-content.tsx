@@ -45,8 +45,8 @@ export function HomePageContent() {
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.1] tracking-tight font-[family-name:var(--font-jakarta)]">
-              <span className="font-light italic">Stop Worrying</span>{" "}
-              <span className="font-bold">About Vanilla Supply</span>
+              <span className="font-normal italic">Stop Worrying</span>{" "}
+              <span className="font-medium">About Vanilla Supply</span>
             </h1>
             <p className="text-lg text-[#D4C48A] font-medium mb-5 italic">
               {t.home.heroSubtitle}
