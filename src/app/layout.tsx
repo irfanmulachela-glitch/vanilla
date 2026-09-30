@@ -18,7 +18,7 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  axes: ["opsz", "wght", "SOFT", "WONK"],
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
 export async function generateStaticParams() {
