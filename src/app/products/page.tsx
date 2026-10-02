@@ -7,12 +7,14 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Vanilla Products | Beans, Paste & Powder - Wholesale Indonesia",
   description:
-    "Premium Indonesian vanilla products for B2B buyers. Grade A & B beans, custom vanilla paste, pure vanilla powder. MOQ 25kg, FOB shipping.",
+    "Premium Indonesian vanilla products for B2B buyers. Grade A & B beans, custom vanilla paste, pure vanilla powder. Flexible order quantities. Air freight from Indonesia.",
   keywords: [
     "vanilla beans Indonesia",
     "vanilla paste manufacturer",
     "vanilla powder supplier",
     "wholesale vanilla products",
+    "Grade A vanilla beans",
+    "vanilla powder bulk",
   ],
   alternates: {
     canonical: "/products",

@@ -5,7 +5,7 @@ import { HomePageContent } from "@/components/home-page-content";
 export const metadata: Metadata = {
   title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
   description:
-    "Premium Indonesian vanilla beans, paste, and powder. Sun-cured 6-9 months. Lab-tested. Export to 20+ countries. Flexible order quantities. FOB from Java.",
+    "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil. Lab-tested Grade A & B. Export to 20+ countries. Flexible orders. Air freight from Indonesia.",
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     "Indonesian vanilla beans",
     "best vanilla supplier",
     "bulk vanilla beans",
+    "Java vanilla exporter",
+    "air freight vanilla",
   ],
   alternates: {
     canonical: "/",
@@ -30,7 +32,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
-    description: "Indonesia's trusted vanilla supplier. Grade A & B beans, vanilla paste, powder. Export to 20+ countries.",
+    description:
+      "Indonesia's trusted vanilla supplier. Grade A & B beans, paste, powder. Sun-cured on volcanic soil. Export to 20+ countries. Flexible orders.",
     url: `${siteConfig.url}`,
     siteName: "La Vanilla Supplier",
     type: "website",
@@ -55,7 +58,7 @@ export default function HomePage() {
             url: "https://www.lavanillasupplier.com",
             logo: "https://www.lavanillasupplier.com/logo.png",
             description:
-              "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Flexible order quantities. FOB Semarang, Jakarta or Surabaya.",
+              "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Sun-cured on volcanic soil. Flexible order quantities. Air freight from Indonesia.",
             email: "admin@lavanillasupplier.com",
             telephone: "+62-878-3575-6945",
             address: {
