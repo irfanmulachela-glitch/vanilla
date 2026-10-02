@@ -95,13 +95,15 @@ export default function LaVanillaStandardPage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1600"
-            alt=""
+            src="/la-vanilla-standard-hero.webp"
+            alt="Premium Indonesian vanilla beans cured to perfection"
             fill
             className="object-cover"
+            priority
           />
+          <div className="absolute inset-0 bg-[#2C2518]/70" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
