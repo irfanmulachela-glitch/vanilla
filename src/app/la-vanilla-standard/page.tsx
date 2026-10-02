@@ -100,10 +100,10 @@ export default function LaVanillaStandardPage() {
             src="/la-vanilla-standard-hero.webp"
             alt="Premium Indonesian vanilla beans cured to perfection"
             fill
-            className="object-cover"
+            className="object-cover blur-[2px] scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-[#2C2518]/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/75 to-[#2C2518]/40" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
