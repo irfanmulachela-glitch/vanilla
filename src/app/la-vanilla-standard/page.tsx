@@ -140,50 +140,106 @@ export default function LaVanillaStandardPage() {
         </div>
       </section>
 
-      {/* Framework Steps */}
+      {/* Framework Steps - Horizontal Progress Flow */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em] mb-3">
+              Our Process
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              5 Steps to Perfect Vanilla
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              From farm to your facility — every step is documented, verified, and optimized for quality.
+            </p>
+          </div>
+
+          {/* Horizontal Flow */}
+          <div className="relative mb-16">
+            {/* Connecting Line */}
+            <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#B5A37A]/30 via-[#B5A37A]/60 to-[#B5A37A]/30" />
+            
+            {/* Steps Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+              {steps.map((step, index) => (
+                <div
+                  key={step.number}
+                  className="group relative flex flex-col items-center text-center"
+                >
+                  {/* Number + Icon Circle */}
+                  <div className="relative z-10 w-[80px] h-[80px] bg-white border-2 border-[#E5E0D8] rounded-full flex flex-col items-center justify-center mb-4 group-hover:border-[#B5A37A] group-hover:shadow-lg transition-all duration-300">
+                    <span className="text-xs font-bold text-[#B5A37A] mb-0.5">
+                      {step.number}
+                    </span>
+                    <step.icon className="w-6 h-6 text-[#B5A37A]" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-sm font-semibold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
+                    {step.title}
+                  </h3>
+                  
+                  {/* Key Points (abbreviated) */}
+                  <ul className="space-y-1">
+                    {step.details.slice(0, 2).map((detail) => (
+                      <li key={detail} className="text-xs text-[#6B6358] leading-tight">
+                        {detail.length > 40 ? detail.substring(0, 40) + '...' : detail}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Connector Arrow (between cards) */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:flex absolute top-[36px] -right-2 w-4 h-4 items-center justify-center">
+                      <div className="w-2 h-2 bg-[#B5A37A]/50 rounded-full" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Detailed Steps */}
           <div className="space-y-8">
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className="group relative bg-[#F8F6F2] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-[#E5E0D8]"
+                className="group grid lg:grid-cols-[auto_1fr_1fr] gap-6 lg:gap-10 items-start bg-[#F8F6F2] rounded-2xl p-6 lg:p-8 border border-[#E5E0D8] hover:border-[#B5A37A]/50 transition-all duration-300"
               >
-                <div className="grid lg:grid-cols-3 gap-0">
-                  {/* Left: Number + Icon */}
-                  <div className="bg-[#2C2518] p-8 lg:p-12 flex flex-col justify-center items-center text-center">
-                    <span className="text-6xl font-bold text-[#B5A37A]/30 mb-4">
-                      {step.number}
-                    </span>
-                    <div className="w-16 h-16 bg-[#B5A37A]/20 rounded-2xl flex items-center justify-center">
-                      <step.icon className="w-8 h-8 text-[#B5A37A]" />
-                    </div>
+                {/* Left: Number + Icon */}
+                <div className="flex lg:flex-col items-center gap-4 lg:gap-2 lg:w-[100px]">
+                  <span className="text-4xl font-bold text-[#B5A37A]/20 lg:text-[#B5A37A]/30">
+                    {step.number}
+                  </span>
+                  <div className="w-12 h-12 bg-[#B5A37A]/15 rounded-xl flex items-center justify-center">
+                    <step.icon className="w-6 h-6 text-[#B5A37A]" />
                   </div>
+                </div>
 
-                  {/* Middle: Description */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <h2 className="text-2xl font-bold text-[#2C2518] mb-4">
-                      {step.title}
-                    </h2>
-                    <p className="text-[#6B6358] leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                {/* Middle: Title + Description */}
+                <div>
+                  <h3 className="text-xl font-bold text-[#2C2518] mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-[#6B6358] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
 
-                  {/* Right: Details */}
-                  <div className="p-8 lg:p-12 bg-white border-l border-[#E5E0D8]">
-                    <h3 className="font-semibold text-[#2C2518] mb-4 text-sm uppercase tracking-wider">
-                      Key Requirements
-                    </h3>
-                    <ul className="space-y-3">
-                      {step.details.map((detail) => (
-                        <li key={detail} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                          <span className="text-[#6B6358] text-sm">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {/* Right: Key Details */}
+                <div className="bg-white rounded-xl p-5 border border-[#E5E0D8]">
+                  <h4 className="font-semibold text-[#2C2518] mb-3 text-xs uppercase tracking-wider">
+                    What's Included
+                  </h4>
+                  <ul className="space-y-2">
+                    {step.details.map((detail) => (
+                      <li key={detail} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#B5A37A] mt-0.5 flex-shrink-0" />
+                        <span className="text-[#6B6358] text-sm">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
