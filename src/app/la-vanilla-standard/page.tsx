@@ -79,10 +79,10 @@ const steps = [
     title: "Reliable Delivery",
     icon: Truck,
     description:
-      "We ship FOB from Semarang, Jakarta, or Surabaya with flexible terms (CIF, DDP). Temperature-controlled packaging preserves bean quality during transit.",
+      "We ship air freight from Indonesia with flexible options to meet your needs. Temperature-controlled packaging preserves bean quality during transit.",
     details: [
-      "FOB from three Indonesian ports",
-      "CIF and DDP terms available",
+      "Air freight from Indonesia",
+      "Flexible shipping options",
       "Temperature-controlled packaging",
       "Flexible order quantities for wholesale",
     ],
