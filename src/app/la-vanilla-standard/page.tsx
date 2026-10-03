@@ -31,9 +31,8 @@ const steps = [
       "Every batch originates from verified farms in Central Java, Indonesia. We maintain direct relationships with farming communities, ensuring traceability from harvest to shipment.",
     details: [
       "Direct farm relationships in Central Java",
-      "Harvest date and origin tracking",
       "Bean variety verification (V. planifolia)",
-      "Soil and climate condition documentation",
+      "Full traceability from harvest to shipment",
     ],
   },
   {
