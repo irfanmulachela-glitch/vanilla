@@ -68,8 +68,8 @@ const steps = [
     description:
       "Every shipment includes complete documentation: Phytosanitary Certificate, Certificate of Origin, and batch-specific quality testing results. No exceptions.",
     details: [
-      "Phytosanitary Certificate (IQFAST system)",
-      "Certificate of Origin (Ministry of Trade)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
       "Batch-specific Certificate of Analysis",
       "Full export documentation package",
     ],
