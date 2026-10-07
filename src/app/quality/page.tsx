@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Quality & Certifications | Halal Vanilla Supplier Indonesia",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/quality",
+    languages: languageAlternates("quality"),
   },
   openGraph: {
     title: "Quality & Certifications - La Vanilla Supplier",

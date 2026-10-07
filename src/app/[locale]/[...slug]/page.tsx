@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/config";
 import { type Locale, locales, getTranslations } from "@/i18n";
+import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -9,6 +10,25 @@ import { AnimatedCounter } from "@/components/animated-counter";
 
 interface LocaleSlugPageProps {
   params: Promise<{ locale: string; slug: string[] }>;
+}
+
+export async function generateMetadata({ params }: LocaleSlugPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  if (!locales.includes(locale as Locale)) return {};
+  const path = slug?.join("/") || "";
+  const isEn = locale === "en";
+  const canonical = isEn ? (path ? `/${path}` : "/") : `/${locale}${path ? `/${path}` : ""}`;
+
+  if (!isTranslatedPath(path)) {
+    return { alternates: { canonical } };
+  }
+
+  return {
+    alternates: {
+      canonical,
+      languages: languageAlternates(path),
+    },
+  };
 }
 
 export async function generateStaticParams() {
@@ -39,7 +59,8 @@ export async function generateStaticParams() {
 
 export default async function LocaleSlugPage({ params }: LocaleSlugPageProps) {
   const { locale: localeParam, slug } = await params;
-  const locale = locales.includes(localeParam as Locale) ? (localeParam as Locale) : "en";
+  if (!locales.includes(localeParam as Locale)) notFound();
+  const locale = localeParam as Locale;
   const t = getTranslations(locale);
   
   const path = slug?.join("/") || "";

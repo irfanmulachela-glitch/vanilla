@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       es: "/es",
       tr: "/tr",
       ar: "/ar",
+      "x-default": "/",
     },
   },
   openGraph: {

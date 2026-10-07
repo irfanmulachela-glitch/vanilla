@@ -16,6 +16,7 @@ import {
   Award,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
 import GradeSelector from "@/components/grade-selector";
 import OrderingLadder from "@/components/ordering-ladder";
 
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ],
     alternates: {
       canonical: `/products/${slug}`,
+      ...(isTranslatedPath(`products/${slug}`) ? { languages: languageAlternates(`products/${slug}`) } : {}),
     },
     openGraph: {
       title: `${product.name} - La Vanilla Supplier`,

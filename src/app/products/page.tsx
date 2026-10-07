@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Vanilla Products | Beans, Paste & Powder - Wholesale Indonesia",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/products",
+    languages: languageAlternates("products"),
   },
   openGraph: {
     title: "Our Products - La Vanilla Supplier",

@@ -16,6 +16,7 @@ import {
   Handshake,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Indonesia | Bulk Vanilla Supplier",
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/wholesale",
+    languages: languageAlternates("wholesale"),
   },
   openGraph: {
     title: "Wholesale Vanilla Beans Indonesia | Bulk Supplier",

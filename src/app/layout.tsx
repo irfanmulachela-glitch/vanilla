@@ -86,14 +86,12 @@ export default function RootLayout({
         <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
         
-        {/* Hreflang tags for SEO */}
-        <link rel="alternate" hrefLang="en" href={`${siteConfig.url}`} />
-        <link rel="alternate" hrefLang="fr" href={`${siteConfig.url}/fr`} />
-        <link rel="alternate" hrefLang="de" href={`${siteConfig.url}/de`} />
-        <link rel="alternate" hrefLang="es" href={`${siteConfig.url}/es`} />
-        <link rel="alternate" hrefLang="tr" href={`${siteConfig.url}/tr`} />
-        <link rel="alternate" hrefLang="ar" href={`${siteConfig.url}/ar`} />
-        <link rel="alternate" hrefLang="x-default" href={`${siteConfig.url}`} />
+        {/* Set document lang/dir from locale path before paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=location.pathname.split("/")[1];if(l==="fr"||l==="de"||l==="es"||l==="tr"||l==="ar"){document.documentElement.lang=l;if(l==="ar")document.documentElement.dir="rtl";}})();`,
+          }}
+        />
 
         {/* Google Analytics */}
         <Script

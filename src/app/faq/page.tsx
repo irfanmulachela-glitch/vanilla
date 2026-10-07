@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "FAQ - Vanilla Beans Wholesale | Shipping, Payment Terms",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/faq",
+    languages: languageAlternates("faq"),
   },
   openGraph: {
     title: "FAQ - La Vanilla Supplier",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Shield, Leaf, Award, FileCheck, Truck } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     "The La Vanilla Standard is our 5-step quality framework for vanilla sourcing, grading, and export. Learn how we ensure consistent quality for B2B buyers worldwide.",
   alternates: {
     canonical: "/la-vanilla-standard",
+    languages: languageAlternates("la-vanilla-standard"),
   },
   openGraph: {
     title: "The La Vanilla Standard | La Vanilla Supplier",

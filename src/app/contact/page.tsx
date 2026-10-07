@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 import { ContactForm } from "@/components/contact-form";
 import OrderingLadder from "@/components/ordering-ladder";
 
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/contact",
+    languages: languageAlternates("contact"),
   },
   openGraph: {
     title: "Contact Us | La Vanilla Supplier",

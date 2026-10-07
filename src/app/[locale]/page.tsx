@@ -1,35 +1,53 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { HomePageContent } from "@/components/home-page-content";
+import { type Locale, locales } from "@/i18n";
+import { languageAlternates } from "@/lib/hreflang";
 
-export const metadata: Metadata = {
-  title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
-  description:
-    "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil. Lab-tested Grade A & B. Export to 20+ countries. Flexible orders. Air freight from Indonesia.",
-  keywords: [
-    "vanilla supplier Indonesia",
-    "wholesale vanilla beans",
-    "vanilla paste manufacturer",
-    "vanilla powder supplier",
-    "B2B vanilla exporter",
-    "Quality Assured vanilla",
-    "Indonesian vanilla beans",
-    "best vanilla supplier",
-    "bulk vanilla beans",
-    "Java vanilla exporter",
-    "air freight vanilla",
-  ],
-  openGraph: {
-    title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
+interface LocaleHomePageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: LocaleHomePageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const prefix = locale === "en" ? "" : `/${locale}`;
+  return {
+    title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
     description:
-      "Indonesia's trusted vanilla supplier. Grade A & B beans, paste, powder. Sun-cured on volcanic soil. Export to 20+ countries. Flexible orders.",
-    url: `${siteConfig.url}`,
-    siteName: "La Vanilla Supplier",
-    type: "website",
-  },
-};
+      "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil. Lab-tested Grade A & B. Export to 20+ countries. Flexible orders. Air freight from Indonesia.",
+    keywords: [
+      "vanilla supplier Indonesia",
+      "wholesale vanilla beans",
+      "vanilla paste manufacturer",
+      "vanilla powder supplier",
+      "B2B vanilla exporter",
+      "Quality Assured vanilla",
+      "Indonesian vanilla beans",
+      "best vanilla supplier",
+      "bulk vanilla beans",
+      "Java vanilla exporter",
+      "air freight vanilla",
+    ],
+    alternates: {
+      canonical: prefix || "/",
+      languages: languageAlternates(""),
+    },
+    openGraph: {
+      title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
+      description:
+        "Indonesia's trusted vanilla supplier. Grade A & B beans, paste, powder. Sun-cured on volcanic soil. Export to 20+ countries. Flexible orders.",
+      url: `${siteConfig.url}${prefix}`,
+      siteName: "La Vanilla Supplier",
+      type: "website",
+    },
+  };
+}
 
-export default function LocaleHomePage() {
+export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
+  const { locale } = await params;
+  if (!locales.includes(locale as Locale)) notFound();
+
   return (
     <>
       <HomePageContent />

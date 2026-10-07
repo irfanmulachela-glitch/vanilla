@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, Users, Globe, Award, Leaf, ArrowRight, MapPin, Handshake, Target } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { languageAlternates } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "About La Vanilla Supplier | Our Philosophy & Standards",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/about",
+    languages: languageAlternates("about"),
   },
   openGraph: {
     title: "About La Vanilla Supplier | Our Philosophy & Standards",
