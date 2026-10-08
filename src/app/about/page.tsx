@@ -3,11 +3,14 @@ import Link from "next/link";
 import { CheckCircle2, Users, Globe, Award, Leaf, ArrowRight, MapPin, Handshake, Target } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Learn about La Vanilla Supplier's three core principles: consistent quality, patient sun-curing, and flexible partnerships. Indonesian vanilla exporter.";
 
 export const metadata: Metadata = {
-  title: "About La Vanilla Supplier | Our Philosophy & Standards",
-  description:
-    "Learn about La Vanilla Supplier's three core principles: consistent quality, patient sun-curing, and flexible partnerships. Indonesian vanilla exporter based in Java.",
+  title: "About Us: Our Vanilla Philosophy",
+  description: DESCRIPTION,
   keywords: [
     "La Vanilla Supplier philosophy",
     "vanilla supplier standards",
@@ -20,11 +23,13 @@ export const metadata: Metadata = {
     languages: languageAlternates("about"),
   },
   openGraph: {
-    title: "About La Vanilla Supplier | Our Philosophy & Standards",
-    description: "Three principles that guide every batch: consistency, patient curing, and flexible partnerships. Indonesian vanilla exporter based in Java.",
+    images: ogImages,
+    title: "About Us: Our Vanilla Philosophy",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/about`,
     type: "website",
   },
+  twitter: twitterCard("About Us: Our Vanilla Philosophy | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function AboutPage() {

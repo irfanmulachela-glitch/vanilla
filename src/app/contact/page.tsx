@@ -1,13 +1,16 @@
 import { Metadata } from "next";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
 import { ContactForm } from "@/components/contact-form";
 import OrderingLadder from "@/components/ordering-ladder";
 
+const DESCRIPTION =
+  "Get in touch for vanilla bean quotes, wholesale inquiries, and custom formulations. We respond within 24 hours via WhatsApp, email, or our Central Java office.";
+
 export const metadata: Metadata = {
-  title: "Contact Us | Vanilla Supplier Indonesia",
-  description:
-    "Get in touch with La Vanilla Supplier for vanilla bean quotes, wholesale inquiries, and custom formulations. We respond within 24 hours. WhatsApp, email, or visit our office in Central Java.",
+  title: "Contact Us for Vanilla Quotes",
+  description: DESCRIPTION,
   keywords: [
     "contact vanilla supplier",
     "vanilla bean quote",
@@ -20,13 +23,14 @@ export const metadata: Metadata = {
     languages: languageAlternates("contact"),
   },
   openGraph: {
-    title: "Contact Us | La Vanilla Supplier",
-    description:
-      "Get in touch for vanilla bean quotes, wholesale inquiries, and custom formulations. We respond within 24 hours.",
+    images: ogImages,
+    title: "Contact Us for Vanilla Quotes",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/contact`,
     siteName: siteConfig.name,
     type: "website",
   },
+  twitter: twitterCard("Contact Us for Vanilla Quotes | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function ContactPage() {

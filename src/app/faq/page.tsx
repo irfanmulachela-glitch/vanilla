@@ -3,11 +3,14 @@ import Link from "next/link";
 import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Answers to common questions about ordering wholesale vanilla beans from Indonesia, including shipping, payment terms, certifications, and lead times for buyers.";
 
 export const metadata: Metadata = {
-  title: "FAQ - Vanilla Beans Wholesale | Shipping, Payment Terms",
-  description:
-    "Answers to common questions about ordering wholesale vanilla beans from Indonesia. FOB shipping, Halal certified, payment terms for B2B buyers.",
+  title: "FAQ: Orders, Shipping & Payment",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier FAQ",
     "vanilla beans ordering",
@@ -20,11 +23,13 @@ export const metadata: Metadata = {
     languages: languageAlternates("faq"),
   },
   openGraph: {
-    title: "FAQ - La Vanilla Supplier",
-    description: "Answers to common questions about ordering vanilla beans, paste, and powder.",
+    images: ogImages,
+    title: "FAQ: Orders, Shipping & Payment",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/faq`,
     type: "website",
   },
+  twitter: twitterCard("FAQ: Orders, Shipping & Payment | La Vanilla Supplier", DESCRIPTION),
 };
 
 const faqs = [

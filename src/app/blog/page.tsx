@@ -2,23 +2,27 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
 import { siteConfig } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
 import BlogGrid from "@/components/blog-grid";
 
+const DESCRIPTION =
+  "Expert insights on vanilla sourcing, quality testing, export documentation, and market trends. Practical guides for B2B buyers in the global vanilla trade.";
+
 export const metadata: Metadata = {
-  title: "Blog - Vanilla Industry Insights & Guides",
-  description:
-    "Expert insights on vanilla sourcing, quality testing, export documentation, and market trends. Your guide to the global vanilla trade.",
+  title: "Vanilla Industry Blog & Guides",
+  description: DESCRIPTION,
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Blog | La Vanilla Supplier",
-    description:
-      "Expert insights on vanilla sourcing, quality testing, export documentation, and market trends.",
+    images: ogImages,
+    title: "Vanilla Industry Blog & Guides",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog`,
     siteName: siteConfig.name,
     type: "website",
   },
+  twitter: twitterCard("Vanilla Industry Blog & Guides | La Vanilla Supplier", DESCRIPTION),
 };
 
 const blogPosts = [

@@ -1,11 +1,14 @@
 import { Metadata } from "next";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
 import { HomePageContent } from "@/components/home-page-content";
 
+const DESCRIPTION =
+  "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil and lab-tested Grade A & B. Exporting to 20+ countries with flexible orders.";
+
 export const metadata: Metadata = {
-  title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
-  description:
-    "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil. Lab-tested Grade A & B. Export to 20+ countries. Flexible orders. Air freight from Indonesia.",
+  title: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier Indonesia",
     "wholesale vanilla beans",
@@ -32,13 +35,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
-    description:
-      "Indonesia's trusted vanilla supplier. Grade A & B beans, paste, powder. Sun-cured on volcanic soil. Export to 20+ countries. Flexible orders.",
+    images: ogImages,
+    title: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+    description: DESCRIPTION,
     url: `${siteConfig.url}`,
     siteName: "La Vanilla Supplier",
     type: "website",
   },
+  twitter: twitterCard(
+    "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+    DESCRIPTION,
+  ),
 };
 
 export default function HomePage() {

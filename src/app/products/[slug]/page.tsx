@@ -17,8 +17,27 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
 import GradeSelector from "@/components/grade-selector";
 import OrderingLadder from "@/components/ordering-ladder";
+
+const SEO: Record<string, { title: string; description: string }> = {
+  "vanilla-beans": {
+    title: "Indonesian Vanilla Beans: Grade A & B",
+    description:
+      "Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months. Lab-tested and vacuum-sealed, shipped from Indonesia with flexible bulk quantities.",
+  },
+  "vanilla-paste": {
+    title: "Vanilla Paste - 28% Bean Solids",
+    description:
+      "Custom-composition vanilla paste tailored to your exact specifications. 28% bean solids, 24-month shelf life, and flexible bulk formats shipped from Indonesia.",
+  },
+  "vanilla-powder": {
+    title: "Pure Vanilla Powder - 40-60 Mesh",
+    description:
+      "100% pure vanilla powder, finely ground from premium cured beans. 40-60 mesh and under 5% moisture, ideal for bakery mixes. Shipped direct from Indonesia.",
+  },
+};
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -38,9 +57,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Product Not Found" };
   }
 
+  const seo = SEO[slug];
+  const title = seo?.title ?? product.name;
+  const description = seo?.description ?? product.shortDescription;
+
   return {
-    title: `${product.name} - Premium Indonesian Vanilla`,
-    description: product.shortDescription,
+    title,
+    description,
     keywords: [
       product.name.toLowerCase(),
       "vanilla supplier Indonesia",
@@ -52,11 +75,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ...(isTranslatedPath(`products/${slug}`) ? { languages: languageAlternates(`products/${slug}`) } : {}),
     },
     openGraph: {
-      title: `${product.name} - La Vanilla Supplier`,
-      description: product.shortDescription,
+      images: ogImages,
+      title,
+      description,
       url: `${siteConfig.url}/products/${slug}`,
       type: "website",
     },
+    twitter: twitterCard(`${title} | La Vanilla Supplier`, description),
   };
 }
 

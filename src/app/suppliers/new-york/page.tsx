@@ -10,11 +10,14 @@ import {
   FileCheck,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Indonesian vanilla supplier for New York, Los Angeles, Chicago, and across the USA. Full export documentation, lab-tested grades, and flexible bulk orders.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Supplier New York | Wholesale Vanilla Beans USA",
-  description:
-    "Premium Indonesian vanilla supplier in New York, USA. US Import Ready vanilla beans, paste, and powder. Fast delivery to East and West coast.",
+  title: "Vanilla Supplier New York, USA",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier New York",
     "wholesale vanilla beans USA",
@@ -27,11 +30,13 @@ export const metadata: Metadata = {
     canonical: "/suppliers/new-york",
   },
   openGraph: {
-    title: "Vanilla Supplier New York | Wholesale Vanilla Beans USA",
-    description: "Premium Indonesian vanilla supplier in New York, USA.",
+    images: ogImages,
+    title: "Vanilla Supplier New York, USA",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/suppliers/new-york`,
     type: "website",
   },
+  twitter: twitterCard("Vanilla Supplier New York, USA | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function NewYorkPage() {

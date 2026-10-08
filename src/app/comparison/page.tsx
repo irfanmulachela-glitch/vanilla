@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Compare Grade A gourmet vs Grade B extraction vanilla beans: vanillin content, moisture, bean length, pricing, and use cases. Sourced direct from Indonesia.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Bean Grade Comparison | Grade A vs Grade B - Specs & Pricing",
-  description:
-    "Compare Grade A gourmet vs Grade B extraction vanilla beans. Vanillin content, moisture, bean length, and use cases. Direct from Indonesian source.",
+  title: "Grade A vs Grade B Vanilla Beans",
+  description: DESCRIPTION,
   keywords: [
     "vanilla bean comparison",
     "Grade A vs Grade B vanilla",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/comparison",
   },
   openGraph: {
-    title: "Indonesian Vanilla Bean Comparison | Grade A vs Grade B",
-    description: "Technical comparison of Grade A gourmet vs Grade B extraction vanilla beans.",
+    images: ogImages,
+    title: "Grade A vs Grade B Vanilla Beans",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/comparison`,
     type: "website",
   },
+  twitter: twitterCard("Grade A vs Grade B Vanilla Beans | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function ComparisonPage() {

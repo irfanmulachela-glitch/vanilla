@@ -10,11 +10,14 @@ import {
   FileCheck,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Premium Indonesian vanilla supplier for Dubai, Abu Dhabi, and the GCC. Halal certified beans, paste, and powder with fast air freight and flexible quantities.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Supplier Dubai | Wholesale Vanilla Beans UAE",
-  description:
-    "Premium Indonesian vanilla supplier in Dubai, UAE. Halal certified vanilla beans, paste, and powder. Fast air freight to Dubai, Abu Dhabi, and across GCC.",
+  title: "Vanilla Supplier Dubai, UAE | Bulk",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier Dubai",
     "wholesale vanilla beans UAE",
@@ -27,11 +30,13 @@ export const metadata: Metadata = {
     canonical: "/suppliers/dubai",
   },
   openGraph: {
-    title: "Vanilla Supplier Dubai | Wholesale Vanilla Beans UAE",
-    description: "Premium Indonesian vanilla supplier in Dubai, UAE. Halal certified.",
+    images: ogImages,
+    title: "Vanilla Supplier Dubai, UAE | Bulk",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/suppliers/dubai`,
     type: "website",
   },
+  twitter: twitterCard("Vanilla Supplier Dubai, UAE | Bulk | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function DubaiPage() {

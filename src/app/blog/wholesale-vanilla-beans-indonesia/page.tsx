@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, FOB shipping, documentation, and pricing for B2B importers and food manufacturers.";
 
 export const metadata: Metadata = {
-  title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
-  description:
-    "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, FOB shipping, documentation, and pricing for B2B importers and food manufacturers.",
+  title: "Wholesale Vanilla Beans Guide",
+  description: DESCRIPTION,
   keywords: [
     "wholesale vanilla beans Indonesia",
     "buy vanilla beans bulk Indonesia",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/wholesale-vanilla-beans-indonesia",
   },
   openGraph: {
-    title: "Wholesale Vanilla Beans from Indonesia | La Vanilla Supplier",
-    description: "Complete guide to buying wholesale vanilla beans from Indonesia for B2B buyers.",
+    images: ogImages,
+    title: "Wholesale Vanilla Beans Guide | La Vanilla Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/wholesale-vanilla-beans-indonesia`,
     type: "article",
   },
+  twitter: twitterCard("Wholesale Vanilla Beans Guide | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function WholesaleVanillaBeansIndonesia() {

@@ -14,6 +14,23 @@ import {
   Leaf,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const META_DESCRIPTIONS: Record<string, string> = {
+  uae: "Premium Indonesian vanilla supplier for Dubai, Abu Dhabi, and the GCC. Halal certified beans, paste, and powder with fast air freight and flexible quantities.",
+  australia:
+    "Quality assured Indonesian vanilla supplier for Sydney, Melbourne, and Perth, compliant with Australian food standards. Samples and pricing on request.",
+  usa: "US import-ready Indonesian vanilla supplier for New York, Los Angeles, and Chicago. Full export documentation, lab-tested grades, and flexible bulk orders.",
+  europe:
+    "EU compliant Indonesian vanilla supplier for the Netherlands, France, and Germany. Full traceability, lab-tested grades, and flexible bulk order quantities.",
+};
+
+const REGION_TITLES: Record<string, string> = {
+  uae: "Vanilla Supplier UAE & Middle East",
+  australia: "Vanilla Supplier Australia | Bulk",
+  usa: "Vanilla Supplier USA | Wholesale",
+  europe: "Vanilla Supplier Europe | Bulk",
+};
 
 type RegionConfig = {
   name: string;
@@ -153,19 +170,24 @@ export async function generateMetadata({
     return { title: "Region Not Found" };
   }
 
+  const title = REGION_TITLES[slug] ?? `Vanilla Supplier ${region.name}`;
+  const description = META_DESCRIPTIONS[slug] ?? region.description;
+
   return {
-    title: `Vanilla Supplier ${region.name} | Indonesian Vanilla Export`,
-    description: region.description,
+    title,
+    description,
     keywords: region.keywords,
     alternates: {
       canonical: `/regions/${slug}`,
     },
     openGraph: {
-      title: `Vanilla Supplier ${region.name} | La Vanilla Supplier`,
-      description: region.description,
+      images: ogImages,
+      title,
+      description,
       url: `${siteConfig.url}/regions/${slug}`,
       type: "website",
     },
+    twitter: twitterCard(`${title} | La Vanilla Supplier`, description),
   };
 }
 

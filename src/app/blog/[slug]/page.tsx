@@ -2,12 +2,15 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, User, ArrowLeft, Clock, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
 const blogPosts = {
   "sourcing-vanilla-beans-indonesia": {
     title: "How to Source High-Quality Vanilla Beans from Indonesia",
+    seoTitle: "Sourcing Vanilla Beans Indonesia",
+    seoDescription: "Learn how to source high-quality vanilla beans from Indonesia: grading, lab testing, supplier vetting, and export documentation for first-time importers.",
     excerpt:
       "A comprehensive guide for B2B buyers on evaluating vanilla bean quality, understanding grades, and finding reliable Indonesian suppliers.",
     category: "Sourcing Guide",
@@ -44,6 +47,8 @@ const blogPosts = {
   },
   "vanilla-bean-grading": {
     title: "Understanding Vanilla Bean Grading: Grade A vs Grade B",
+    seoTitle: "Vanilla Bean Grading: A vs B",
+    seoDescription: "Understand vanilla bean grading from Grade A gourmet to Grade B extract: moisture, vanillin content, appearance, and which grade fits your application best.",
     excerpt:
       "Learn the differences between Grade A gourmet beans and Grade B extraction beans, and which is right for your application.",
     category: "Quality",
@@ -85,6 +90,8 @@ const blogPosts = {
   },
   "export-documentation-guide": {
     title: "Export Documentation Guide: What You Need to Import Vanilla",
+    seoTitle: "Vanilla Export Documentation",
+    seoDescription: "The complete export documentation guide for importing vanilla: phytosanitary certificates, certificate of origin, lab reports, and customs requirements.",
     excerpt:
       "Complete guide to phytosanitary certificates, certificate of origin, and other documentation required for vanilla imports.",
     category: "Export Guide",
@@ -126,6 +133,8 @@ const blogPosts = {
   },
   "vanilla-paste-vs-extract": {
     title: "Vanilla Paste vs Vanilla Extract: Which Should You Use?",
+    seoTitle: "Vanilla Paste vs Extract Guide",
+    seoDescription: "Vanilla paste vs vanilla extract: flavor strength, ingredients, cost, and best uses. A practical comparison for food manufacturers choosing between the two.",
     excerpt:
       "A detailed comparison of vanilla paste and vanilla extract for food manufacturers, including cost analysis and application guide.",
     category: "Product Guide",
@@ -167,6 +176,8 @@ const blogPosts = {
   },
   "vanilla-market-trends-2026": {
     title: "Global Vanilla Market Trends 2026",
+    seoTitle: "Global Vanilla Market Trends 2026",
+    seoDescription: "Global vanilla market outlook for 2026: supply shifts from Madagascar and Indonesia, price trends, and what B2B buyers should expect when contracting volume.",
     excerpt:
       "Analysis of current vanilla pricing, supply chain dynamics, and forecasts for the coming year.",
     category: "Market Analysis",
@@ -213,6 +224,8 @@ const blogPosts = {
   },
   "food-safety-standards-vanilla": {
     title: "Food Safety Standards: Why They Matter for Vanilla Buyers",
+    seoTitle: "Vanilla Food Safety Standards",
+    seoDescription: "Why food safety standards matter for vanilla buyers: halal certification, pesticide residue limits, heavy metal testing, and supplier audit checkpoints.",
     excerpt:
       "Understanding food safety standards and why they're critical for food safety in vanilla processing and export.",
     category: "Quality",
@@ -254,6 +267,8 @@ const blogPosts = {
   },
   "vanilla-bean-prices-indonesia": {
     title: "Vanilla Bean Prices Indonesia 2026",
+    seoTitle: "Vanilla Bean Prices Indonesia 2026",
+    seoDescription: "Current vanilla bean prices in Indonesia for 2026: Grade A and B pricing drivers, market factors, and how to secure stable bulk pricing from suppliers.",
     excerpt:
       "Current wholesale vanilla bean prices from Indonesian suppliers, factors affecting pricing, and how to get the best deals.",
     category: "Market Analysis",
@@ -295,6 +310,8 @@ const blogPosts = {
   },
   "indonesian-vanilla-vs-madagascar": {
     title: "Indonesian Vanilla vs Madagascar Vanilla",
+    seoTitle: "Indonesian vs Madagascar Vanilla",
+    seoDescription: "Indonesian vs Madagascar vanilla compared: flavor profile, vanillin content, pricing, and supply reliability to help B2B buyers choose the right origin.",
     excerpt:
       "Comparing the two largest vanilla origins: flavor profiles, pricing, quality characteristics, and best applications.",
     category: "Product Guide",
@@ -334,6 +351,8 @@ const blogPosts = {
   },
   "halal-vanilla-supplier": {
     title: "Finding a Halal Vanilla Supplier",
+    seoTitle: "Finding a Halal Vanilla Supplier",
+    seoDescription: "How to find a reliable halal vanilla supplier: certification checks, documentation, production audits, and questions every B2B buyer should ask first.",
     excerpt:
       "Guide to sourcing halal-certified vanilla products for Middle Eastern and Muslim-majority markets.",
     category: "Sourcing Guide",
@@ -383,6 +402,8 @@ const blogPosts = {
   },
   "vanilla-bean-storage-shelf-life": {
     title: "How to Store Vanilla Beans: Shelf Life & Best Practices",
+    seoTitle: "Vanilla Storage & Shelf Life",
+    seoDescription: "How to store vanilla beans for maximum shelf life: temperature, humidity, vacuum sealing, and handling best practices for retailers and food manufacturers.",
     excerpt:
       "Learn how to properly store vanilla beans to maximize shelf life, preserve flavor, and maintain quality for food manufacturers and retailers.",
     category: "Quality",
@@ -447,6 +468,8 @@ const blogPosts = {
   },
   "real-vs-fake-vanilla-beans": {
     title: "Real vs Fake Vanilla Beans: How to Identify Authentic Vanilla",
+    seoTitle: "Real vs Fake Vanilla Beans: A Guide",
+    seoDescription: "How to identify real vs fake vanilla beans: visual cues, smell tests, vanillin checks, and lab verification to avoid adulterated or synthetic vanilla products.",
     excerpt:
       "A practical guide to identifying genuine vanilla beans from synthetic alternatives, including visual, tactile, and aroma tests.",
     category: "Quality",
@@ -519,6 +542,8 @@ const blogPosts = {
   },
   "bulk-vanilla-ordering-guide": {
     title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
+    seoTitle: "B2B Bulk Vanilla Ordering Guide",
+    seoDescription: "A practical bulk vanilla ordering guide for food manufacturers: specifications, sampling, order sizes, payment terms, logistics, and quality acceptance criteria",
     excerpt:
       "Everything food manufacturers need to know about ordering vanilla in bulk — order quantities, logistics, documentation, and cost optimization.",
     category: "Sourcing Guide",
@@ -593,6 +618,8 @@ const blogPosts = {
   },
   "indonesian-vanilla-processing": {
     title: "Indonesian Vanilla Processing: From Harvest to Export",
+    seoTitle: "Indonesian Vanilla Processing",
+    seoDescription: "Indonesian vanilla processing from harvest to export: polling, killing, sweating, drying, grading, and conditioning steps that define final bean quality.",
     excerpt:
       "A step-by-step look at how Indonesian vanilla beans are harvested, cured, graded, and prepared for global export.",
     category: "Industry",
@@ -666,6 +693,8 @@ const blogPosts = {
   },
   "indonesian-vanilla-best-choice": {
     title: "Why Indonesian Vanilla Is the Best Choice for B2B Buyers",
+    seoTitle: "Why Choose Indonesian Vanilla",
+    seoDescription: "Why Indonesian vanilla is the best choice for B2B buyers: competitive pricing, consistent quality, large supply, and flexible terms from a trusted exporter.",
     excerpt:
       "Discover why Indonesian vanilla offers the best value for B2B buyers — competitive pricing, consistent quality, and reliable supply.",
     category: "Market Analysis",
@@ -753,17 +782,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle,
+    description: post.seoDescription,
     alternates: {
       canonical: `/blog/${slug}`,
     },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      images: ogImages,
+      title: post.seoTitle,
+      description: post.seoDescription,
       type: "article",
       url: `${siteConfig.url}/blog/${slug}`,
     },
+    twitter: twitterCard(
+      `${post.seoTitle} | La Vanilla Supplier`,
+      post.seoDescription,
+    ),
   };
 }
 

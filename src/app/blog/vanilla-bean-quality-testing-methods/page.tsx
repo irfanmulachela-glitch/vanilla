@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag, ChevronRight } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Learn the essential quality testing methods for vanilla beans, from gas chromatography and moisture analysis to sensory evaluation, for confident B2B buying.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Bean Quality Testing Methods: Complete Guide for B2B Buyers",
-  description:
-    "Learn the essential quality testing methods for vanilla beans including gas chromatography, moisture analysis, and sensory evaluation. Lab testing standards for B2B buyers.",
+  title: "Vanilla Bean Testing Methods",
+  description: DESCRIPTION,
   keywords: [
     "vanilla bean quality testing",
     "vanilla lab testing methods",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/vanilla-bean-quality-testing-methods",
   },
   openGraph: {
-    title: "Vanilla Bean Quality Testing Methods | La Vanilla Supplier",
-    description: "Essential quality testing methods for vanilla beans for B2B buyers.",
+    images: ogImages,
+    title: "Vanilla Bean Testing Methods | La Vanilla Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/vanilla-bean-quality-testing-methods`,
     type: "article",
   },
+  twitter: twitterCard("Vanilla Bean Testing Methods | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function VanillaBeanQualityTestingMethods() {

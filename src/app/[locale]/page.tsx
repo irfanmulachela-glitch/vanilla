@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
 import { HomePageContent } from "@/components/home-page-content";
 import { type Locale, locales } from "@/i18n";
 import { languageAlternates } from "@/lib/hreflang";
@@ -9,13 +10,17 @@ interface LocaleHomePageProps {
   params: Promise<{ locale: string }>;
 }
 
+const DESCRIPTION =
+  "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil and lab-tested Grade A & B. Exporting to 20+ countries with flexible orders.";
+
 export async function generateMetadata({ params }: LocaleHomePageProps): Promise<Metadata> {
   const { locale } = await params;
   const prefix = locale === "en" ? "" : `/${locale}`;
   return {
-    title: "Indonesian Vanilla Supplier — Beans, Paste & Powder | La Vanilla",
-    description:
-      "Premium Indonesian vanilla beans, paste, and powder. Sun-cured on volcanic soil. Lab-tested Grade A & B. Export to 20+ countries. Flexible orders. Air freight from Indonesia.",
+    title: {
+      absolute: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+    },
+    description: DESCRIPTION,
     keywords: [
       "vanilla supplier Indonesia",
       "wholesale vanilla beans",
@@ -34,13 +39,17 @@ export async function generateMetadata({ params }: LocaleHomePageProps): Promise
       languages: languageAlternates(""),
     },
     openGraph: {
-      title: "Premium Vanilla Supplier Indonesia | B2B Wholesale Export",
-      description:
-        "Indonesia's trusted vanilla supplier. Grade A & B beans, paste, powder. Sun-cured on volcanic soil. Export to 20+ countries. Flexible orders.",
+      images: ogImages,
+      title: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+      description: DESCRIPTION,
       url: `${siteConfig.url}${prefix}`,
       siteName: "La Vanilla Supplier",
       type: "website",
     },
+    twitter: twitterCard(
+      "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
+      DESCRIPTION,
+    ),
   };
 }
 

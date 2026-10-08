@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Learn the 7 essential criteria for selecting a reliable vanilla supplier. Due diligence checklist for B2B buyers including quality, documentation, and pricing.";
 
 export const metadata: Metadata = {
-  title: "How to Choose the Right Vanilla Supplier: 7 Essential Criteria",
-  description:
-    "Learn the 7 essential criteria for selecting a reliable vanilla supplier. Due diligence checklist for B2B buyers including quality, documentation, and pricing.",
+  title: "How to Choose a Vanilla Supplier",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier selection",
     "choosing vanilla supplier",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/how-to-choose-right-vanilla-supplier",
   },
   openGraph: {
-    title: "How to Choose the Right Vanilla Supplier | La Vanilla Supplier",
-    description: "7 essential criteria for selecting a reliable vanilla supplier.",
+    images: ogImages,
+    title: "How to Choose a Vanilla Supplier | La Vanilla Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/how-to-choose-right-vanilla-supplier`,
     type: "article",
   },
+  twitter: twitterCard("How to Choose a Vanilla Supplier | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function HowToChooseRightVanillaSupplier() {

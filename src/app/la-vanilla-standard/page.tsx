@@ -4,24 +4,28 @@ import Image from "next/image";
 import { CheckCircle2, ArrowRight, Shield, Leaf, Award, FileCheck, Truck } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
+const DESCRIPTION =
+  "The La Vanilla Standard is our 5-step quality framework for vanilla sourcing, grading, and export, ensuring consistent quality for B2B buyers worldwide.";
+
 export const metadata: Metadata = {
-  title: "The La Vanilla Standard | Quality Framework for Vanilla Supply",
-  description:
-    "The La Vanilla Standard is our 5-step quality framework for vanilla sourcing, grading, and export. Learn how we ensure consistent quality for B2B buyers worldwide.",
+  title: "The La Vanilla 5-Step Standard",
+  description: DESCRIPTION,
   alternates: {
     canonical: "/la-vanilla-standard",
     languages: languageAlternates("la-vanilla-standard"),
   },
   openGraph: {
-    title: "The La Vanilla Standard | La Vanilla Supplier",
-    description:
-      "Our 5-step quality framework for vanilla sourcing, grading, and export.",
+    images: ogImages,
+    title: "The La Vanilla 5-Step Standard",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/la-vanilla-standard`,
     siteName: siteConfig.name,
     type: "website",
   },
+  twitter: twitterCard("The La Vanilla 5-Step Standard | La Vanilla Supplier", DESCRIPTION),
 };
 
 const steps = [

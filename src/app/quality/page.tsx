@@ -16,11 +16,14 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Food safety standards vanilla supplier with Halal certification, Phytosanitary compliance, and export documentation. Every batch lab tested before shipment.";
 
 export const metadata: Metadata = {
-  title: "Quality & Certifications | Halal Vanilla Supplier Indonesia",
-  description:
-    "Food Safety Standards vanilla supplier with Halal certification, Phytosanitary compliance, and full export documentation. Every shipment verified by lab testing.",
+  title: "Quality Control & Certifications",
+  description: DESCRIPTION,
   keywords: [
     "vanilla quality certifications",
     "halal vanilla supplier",
@@ -32,11 +35,13 @@ export const metadata: Metadata = {
     languages: languageAlternates("quality"),
   },
   openGraph: {
-    title: "Quality & Certifications - La Vanilla Supplier",
-    description: "Food Safety Standards, Halal certified, Phytosanitary compliance. Full documentation.",
+    images: ogImages,
+    title: "Quality Control & Certifications",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/quality`,
     type: "website",
   },
+  twitter: twitterCard("Quality Control & Certifications | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function QualityPage() {

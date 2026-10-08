@@ -4,11 +4,14 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Premium Indonesian vanilla products for B2B buyers: Grade A & B beans, custom vanilla paste, pure vanilla powder. Flexible orders shipped by air from Indonesia.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Products | Beans, Paste & Powder - Wholesale Indonesia",
-  description:
-    "Premium Indonesian vanilla products for B2B buyers. Grade A & B beans, custom vanilla paste, pure vanilla powder. Flexible order quantities. Air freight from Indonesia.",
+  title: "Vanilla Beans, Paste & Powder",
+  description: DESCRIPTION,
   keywords: [
     "vanilla beans Indonesia",
     "vanilla paste manufacturer",
@@ -22,11 +25,13 @@ export const metadata: Metadata = {
     languages: languageAlternates("products"),
   },
   openGraph: {
-    title: "Our Products - La Vanilla Supplier",
-    description: "Premium Indonesian vanilla products including beans, paste, and powder.",
+    images: ogImages,
+    title: "Vanilla Beans, Paste & Powder",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/products`,
     type: "website",
   },
+  twitter: twitterCard("Vanilla Beans, Paste & Powder | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function ProductsPage() {

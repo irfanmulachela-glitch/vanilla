@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Learn how to store vanilla beans properly to maximize shelf life, preserve flavor, and maintain quality. Storage guidelines for retailers and manufacturers.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Bean Storage Best Practices: Extending Shelf Life for Retailers",
-  description:
-    "Learn how to store vanilla beans properly to maximize shelf life, preserve flavor, and maintain quality. Storage guidelines for retailers and food manufacturers.",
+  title: "Vanilla Bean Storage Best Practices",
+  description: DESCRIPTION,
   keywords: [
     "vanilla bean storage",
     "vanilla shelf life",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/vanilla-bean-storage-best-practices",
   },
   openGraph: {
+    images: ogImages,
     title: "Vanilla Bean Storage Best Practices | La Vanilla Supplier",
-    description: "How to store vanilla beans properly to maximize shelf life and flavor.",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/vanilla-bean-storage-best-practices`,
     type: "article",
   },
+  twitter: twitterCard("Vanilla Bean Storage Best Practices | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function VanillaBeanStorageBestPractices() {

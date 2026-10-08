@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Halal certified vanilla beans and paste from Indonesia. MUI certified and compliant with Gulf standards. Export to UAE, Saudi Arabia, and Middle East markets.";
 
 export const metadata: Metadata = {
-  title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
-  description:
-    "Halal certified vanilla beans and paste from Indonesia. MUI certified, compliant with Gulf Cooperation Council standards. Export to UAE, Saudi Arabia, and beyond.",
+  title: "Halal Vanilla Supplier - Middle East",
+  description: DESCRIPTION,
   keywords: [
     "halal vanilla supplier",
     "halal vanilla beans Indonesia",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/halal-vanilla-supplier-middle-east",
   },
   openGraph: {
-    title: "Halal Certified Vanilla Supplier | La Vanilla Supplier",
-    description: "Halal certified vanilla beans and paste for Middle East and global markets.",
+    images: ogImages,
+    title: "Halal Vanilla Supplier - Middle East | La Vanilla Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/halal-vanilla-supplier-middle-east`,
     type: "article",
   },
+  twitter: twitterCard("Halal Vanilla Supplier - Middle East | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function HalalVanillaSupplierMiddleEast() {

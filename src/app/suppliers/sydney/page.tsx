@@ -10,11 +10,14 @@ import {
   FileCheck,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Indonesian vanilla supplier for Sydney, Melbourne, and Perth, compliant with Australian food standards. Quality assured with flexible bulk order quantities.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Supplier Sydney | Wholesale Vanilla Beans Australia",
-  description:
-    "Premium Indonesian vanilla supplier in Sydney, Australia. Food safety compliant vanilla beans, paste, and powder. Fast delivery to Sydney, Melbourne, Perth.",
+  title: "Vanilla Supplier Sydney, Australia",
+  description: DESCRIPTION,
   keywords: [
     "vanilla supplier Sydney",
     "wholesale vanilla beans Australia",
@@ -27,11 +30,13 @@ export const metadata: Metadata = {
     canonical: "/suppliers/sydney",
   },
   openGraph: {
-    title: "Vanilla Supplier Sydney | Wholesale Vanilla Beans Australia",
-    description: "Premium Indonesian vanilla supplier in Sydney, Australia.",
+    images: ogImages,
+    title: "Vanilla Supplier Sydney, Australia",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/suppliers/sydney`,
     type: "website",
   },
+  twitter: twitterCard("Vanilla Supplier Sydney, Australia | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function SydneyPage() {

@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Bulk vanilla paste for food manufacturers: custom formulations, concentration levels, packaging, and flexible quantities direct from Indonesian producer.";
 
 export const metadata: Metadata = {
-  title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
-  description:
-    "Bulk vanilla paste for food manufacturers. Custom formulations, concentration levels, packaging options, and flexible order quantities. Direct from Indonesian producer.",
+  title: "Vanilla Paste Bulk Order Specs",
+  description: DESCRIPTION,
   keywords: [
     "vanilla paste bulk",
     "vanilla paste manufacturer",
@@ -18,11 +21,13 @@ export const metadata: Metadata = {
     canonical: "/blog/vanilla-paste-bulk-order",
   },
   openGraph: {
-    title: "Vanilla Paste Bulk Order | La Vanilla Supplier",
-    description: "Bulk vanilla paste specifications for food manufacturers and B2B buyers.",
+    images: ogImages,
+    title: "Vanilla Paste Bulk Order Specs | La Vanilla Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/blog/vanilla-paste-bulk-order`,
     type: "article",
   },
+  twitter: twitterCard("Vanilla Paste Bulk Order Specs | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function VanillaPasteBulkOrder() {

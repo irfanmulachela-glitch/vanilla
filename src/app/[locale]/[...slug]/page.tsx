@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/config";
 import { type Locale, locales, getTranslations } from "@/i18n";
 import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -11,6 +12,59 @@ import { AnimatedCounter } from "@/components/animated-counter";
 interface LocaleSlugPageProps {
   params: Promise<{ locale: string; slug: string[] }>;
 }
+
+const PAGE_META: Record<string, { title: string; description: string }> = {
+  products: {
+    title: "Vanilla Beans, Paste & Powder",
+    description:
+      "Premium Indonesian vanilla products for B2B buyers: Grade A & B beans, custom vanilla paste, pure vanilla powder. Flexible orders shipped by air from Indonesia.",
+  },
+  "products/vanilla-beans": {
+    title: "Indonesian Vanilla Beans: Grade A & B",
+    description:
+      "Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months. Lab-tested and vacuum-sealed, shipped from Indonesia with flexible bulk quantities.",
+  },
+  "products/vanilla-paste": {
+    title: "Vanilla Paste - 28% Bean Solids",
+    description:
+      "Custom-composition vanilla paste tailored to your exact specifications. 28% bean solids, 24-month shelf life, and flexible bulk formats shipped from Indonesia.",
+  },
+  "products/vanilla-powder": {
+    title: "Pure Vanilla Powder - 40-60 Mesh",
+    description:
+      "100% pure vanilla powder, finely ground from premium cured beans. 40-60 mesh and under 5% moisture, ideal for bakery mixes. Shipped direct from Indonesia.",
+  },
+  about: {
+    title: "About Us: Our Vanilla Philosophy",
+    description:
+      "Learn about La Vanilla Supplier's three core principles: consistent quality, patient sun-curing, and flexible partnerships. Indonesian vanilla exporter.",
+  },
+  contact: {
+    title: "Contact Us for Vanilla Quotes",
+    description:
+      "Get in touch for vanilla bean quotes, wholesale inquiries, and custom formulations. We respond within 24 hours via WhatsApp, email, or our Central Java office.",
+  },
+  quality: {
+    title: "Quality Control & Certifications",
+    description:
+      "Food safety standards vanilla supplier with Halal certification, Phytosanitary compliance, and export documentation. Every batch lab tested before shipment.",
+  },
+  faq: {
+    title: "FAQ: Orders, Shipping & Payment",
+    description:
+      "Answers to common questions about ordering wholesale vanilla beans from Indonesia, including shipping, payment terms, certifications, and lead times for buyers.",
+  },
+  wholesale: {
+    title: "Wholesale Vanilla Beans Supplier",
+    description:
+      "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder from source. Export to 20+ countries with flexible order sizes.",
+  },
+  "la-vanilla-standard": {
+    title: "The La Vanilla 5-Step Standard",
+    description:
+      "The La Vanilla Standard is our 5-step quality framework for vanilla sourcing, grading, and export, ensuring consistent quality for B2B buyers worldwide.",
+  },
+};
 
 export async function generateMetadata({ params }: LocaleSlugPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -23,11 +77,28 @@ export async function generateMetadata({ params }: LocaleSlugPageProps): Promise
     return { alternates: { canonical } };
   }
 
+  const meta = PAGE_META[path];
+
   return {
+    title: meta?.title,
+    description: meta?.description,
     alternates: {
       canonical,
       languages: languageAlternates(path),
     },
+    ...(meta
+      ? {
+          openGraph: {
+            images: ogImages,
+            title: meta.title,
+            description: meta.description,
+            url: `${siteConfig.url}${canonical}`,
+            siteName: siteConfig.name,
+            type: "website" as const,
+          },
+          twitter: twitterCard(`${meta.title} | La Vanilla Supplier`, meta.description),
+        }
+      : {}),
   };
 }
 

@@ -17,11 +17,14 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
+import { twitterCard, ogImages } from "@/lib/seo";
+
+const DESCRIPTION =
+  "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder from source. Export to 20+ countries with flexible order sizes.";
 
 export const metadata: Metadata = {
-  title: "Wholesale Vanilla Beans Indonesia | Bulk Vanilla Supplier",
-  description:
-    "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder. Direct from source. Export to 20+ countries.",
+  title: "Wholesale Vanilla Beans Supplier",
+  description: DESCRIPTION,
   keywords: [
     "wholesale vanilla beans",
     "bulk vanilla supplier",
@@ -35,11 +38,13 @@ export const metadata: Metadata = {
     languages: languageAlternates("wholesale"),
   },
   openGraph: {
-    title: "Wholesale Vanilla Beans Indonesia | Bulk Supplier",
-    description: "Premium wholesale vanilla beans from Indonesia. Direct from source.",
+    images: ogImages,
+    title: "Wholesale Vanilla Beans Supplier",
+    description: DESCRIPTION,
     url: `${siteConfig.url}/wholesale`,
     type: "website",
   },
+  twitter: twitterCard("Wholesale Vanilla Beans Supplier | La Vanilla Supplier", DESCRIPTION),
 };
 
 export default function WholesalePage() {
