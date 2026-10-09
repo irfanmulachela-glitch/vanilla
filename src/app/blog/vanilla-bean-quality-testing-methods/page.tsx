@@ -46,6 +46,7 @@ export default function VanillaBeanQualityTestingMethods() {
               url: `${siteConfig.url}/blog/vanilla-bean-quality-testing-methods`,
               datePublished: "2026-03-15",
               dateModified: "2026-03-15",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -55,6 +56,10 @@ export default function VanillaBeanQualityTestingMethods() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([

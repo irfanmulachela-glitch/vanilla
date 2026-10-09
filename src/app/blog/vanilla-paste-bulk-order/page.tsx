@@ -45,6 +45,7 @@ export default function VanillaPasteBulkOrder() {
               url: `${siteConfig.url}/blog/vanilla-paste-bulk-order`,
               datePublished: "2026-04-12",
               dateModified: "2026-04-12",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -54,6 +55,10 @@ export default function VanillaPasteBulkOrder() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([

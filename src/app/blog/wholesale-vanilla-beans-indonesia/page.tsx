@@ -45,6 +45,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               url: `${siteConfig.url}/blog/wholesale-vanilla-beans-indonesia`,
               datePublished: "2026-04-10",
               dateModified: "2026-04-10",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -54,6 +55,10 @@ export default function WholesaleVanillaBeansIndonesia() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([

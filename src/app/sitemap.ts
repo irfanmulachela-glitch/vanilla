@@ -46,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "bulk-vanilla-ordering-guide",
     "indonesian-vanilla-processing",
     "indonesian-vanilla-best-choice",
+    "wholesale-vanilla-beans-indonesia",
+    "vanilla-paste-bulk-order",
+    "how-to-choose-right-vanilla-supplier",
+    "halal-vanilla-supplier-middle-east",
+    "vanilla-bean-storage-best-practices",
+    "vanilla-bean-quality-testing-methods",
   ];
 
   const blogPages = blogSlugs.map((slug) => ({

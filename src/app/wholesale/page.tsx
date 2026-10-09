@@ -469,6 +469,13 @@ export default function WholesalePage() {
             name: "La Vanilla Supplier",
             description: "Wholesale vanilla beans supplier from Indonesia",
             url: `${siteConfig.url}/wholesale`,
+            logo: `${siteConfig.url}/logo.png`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Surakarta",
+              addressRegion: "Central Java",
+              addressCountry: "ID",
+            },
             offers: {
               "@type": "AggregateOffer",
               priceCurrency: "USD",

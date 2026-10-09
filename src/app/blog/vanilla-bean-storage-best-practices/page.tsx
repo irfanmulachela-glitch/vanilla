@@ -46,6 +46,7 @@ export default function VanillaBeanStorageBestPractices() {
               url: `${siteConfig.url}/blog/vanilla-bean-storage-best-practices`,
               datePublished: "2026-03-25",
               dateModified: "2026-03-25",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -55,6 +56,10 @@ export default function VanillaBeanStorageBestPractices() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([

@@ -46,6 +46,7 @@ export default function HowToChooseRightVanillaSupplier() {
               url: `${siteConfig.url}/blog/how-to-choose-right-vanilla-supplier`,
               datePublished: "2026-03-20",
               dateModified: "2026-03-20",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -55,6 +56,10 @@ export default function HowToChooseRightVanillaSupplier() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([

@@ -349,6 +349,9 @@ export default function LaVanillaStandardPage() {
             headline: "The La Vanilla Standard: Quality Framework for Vanilla Supply",
             description:
               "A 5-step quality framework for vanilla sourcing, grading, and export",
+            image: `${siteConfig.url}/og-image.png`,
+            datePublished: "2026-08-26",
+            dateModified: "2026-08-26",
             author: {
               "@type": "Organization",
               name: siteConfig.name,

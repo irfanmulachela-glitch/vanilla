@@ -197,6 +197,36 @@ const blogPosts = [
     date: "2026-03-25",
     readTime: "8 min read",
   },
+  {
+    id: "18",
+    title: "Wholesale Vanilla Beans Guide",
+    slug: "wholesale-vanilla-beans-indonesia",
+    excerpt:
+      "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, shipping terms, documentation, and pricing for B2B importers and food manufacturers.",
+    category: "Sourcing Guide",
+    date: "2026-04-10",
+    readTime: "12 min read",
+  },
+  {
+    id: "19",
+    title: "Vanilla Paste Bulk Order Specs",
+    slug: "vanilla-paste-bulk-order",
+    excerpt:
+      "Bulk vanilla paste for food manufacturers: custom formulations, concentration levels, packaging, and flexible quantities direct from an Indonesian producer.",
+    category: "Product Guide",
+    date: "2026-04-12",
+    readTime: "10 min read",
+  },
+  {
+    id: "20",
+    title: "Halal Vanilla Supplier - Middle East",
+    slug: "halal-vanilla-supplier-middle-east",
+    excerpt:
+      "Halal certified vanilla beans and paste from Indonesia. MUI certified and compliant with Gulf standards. Export to UAE, Saudi Arabia, and Middle East markets.",
+    category: "Export Guide",
+    date: "2026-04-15",
+    readTime: "9 min read",
+  },
 ];
 
 export default function BlogPage() {

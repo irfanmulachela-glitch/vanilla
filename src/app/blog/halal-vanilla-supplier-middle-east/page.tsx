@@ -45,6 +45,7 @@ export default function HalalVanillaSupplierMiddleEast() {
               url: `${siteConfig.url}/blog/halal-vanilla-supplier-middle-east`,
               datePublished: "2026-04-15",
               dateModified: "2026-04-15",
+              image: [`${siteConfig.url}/og-image.png`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -54,6 +55,10 @@ export default function HalalVanillaSupplierMiddleEast() {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",
                 url: siteConfig.url,
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${siteConfig.url}/logo.png`,
+                },
               },
             },
             breadcrumbSchema([
