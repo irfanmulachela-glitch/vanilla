@@ -3,10 +3,10 @@
 ## Company Profile (Copy-Paste Ready)
 
 ### Short Description (50 words)
-PT Penta Pelita Semesta (La Vanilla Supplier) is an Indonesian vanilla exporter based in Java. We supply Grade A gourmet and Grade B extraction vanilla beans, custom vanilla paste, and pure vanilla powder to 20+ countries. MOQ 25 kg, FOB shipping from Semarang, Jakarta, or Surabaya. Halal certified (MUI).
+PT Penta Pelita Semesta (La Vanilla Supplier) is an Indonesian vanilla exporter based in Surakarta, Central Java. We supply Grade A gourmet and Grade B extraction vanilla beans, custom vanilla paste, and pure vanilla powder to 20+ countries. Flexible MOQ, FOB shipping from Semarang, Jakarta, or Surabaya. Halal certified (MUI).
 
 ### Long Description (150 words)
-PT Penta Pelita Semesta, operating as La Vanilla Supplier, is a premium Indonesian vanilla exporter based in Surakarta, Java. With over a decade of experience, we specialize in V. planifolia vanilla beans sourced directly from Indonesian farmers.
+PT Penta Pelita Semesta, operating as La Vanilla Supplier, is a premium Indonesian vanilla exporter based in Surakarta, Central Java. With over a decade of experience, we specialize in V. planifolia vanilla beans sourced directly from Indonesian farmers.
 
 Our product range includes:
 - Grade A (Gourmet) Vanilla Beans: 15-22 cm, 25-35% moisture, vanillin 1.8-2.7%
@@ -14,7 +14,7 @@ Our product range includes:
 - Custom Vanilla Paste: Standard, double, and triple concentration
 - Pure Vanilla Powder: Spray-dried, instant dissolve
 
-We export to 20+ countries with full documentation including Certificate of Analysis, Phytosanitary Certificate, and Halal Certification (MUI). MOQ starts at 25 kg with FOB shipping from Indonesian ports.
+We export to 20+ countries with full documentation including Certificate of Analysis, Phytosanitary Certificate, and Halal Certification (MUI). Flexible MOQ with FOB shipping from Indonesian ports.
 
 ### Keywords/Tags
 vanilla beans, vanilla supplier, Indonesian vanilla, wholesale vanilla, vanilla paste, vanilla powder, Grade A vanilla, Grade B vanilla, halal vanilla, vanilla exporter, B2B vanilla, food ingredients, natural vanilla, vanilla extract
@@ -87,7 +87,7 @@ vanilla beans, vanilla supplier, Indonesian vanilla, wholesale vanilla, vanilla 
 ### Product 1: Grade A Vanilla Beans
 - Name: Grade A Gourmet Vanilla Beans (V. planifolia)
 - Description: Premium whole vanilla beans, 15-22 cm length, 25-35% moisture, vanillin content 1.8-2.7%. Dark brown, oily surface, flexible. Ideal for gourmet cooking, premium retail, and extraction.
-- MOQ: 25 kg
+- MOQ: Flexible
 - FOB Price: Contact for current pricing
 - Shipping: FOB Semarang/Jakarta/Surabaya
 - Certification: Halal (MUI)
@@ -95,7 +95,7 @@ vanilla beans, vanilla supplier, Indonesian vanilla, wholesale vanilla, vanilla 
 ### Product 2: Grade B Vanilla Beans
 - Name: Grade B Extraction Vanilla Beans (V. planifolia)
 - Description: Cost-effective vanilla beans for industrial extraction, 10-15 cm length, 15-25% moisture, vanillin content 1.3-2.0%. Darker, drier appearance. Ideal for extract manufacturing, vanilla paste production.
-- MOQ: 25 kg
+- MOQ: Flexible
 - FOB Price: Contact for current pricing
 - Shipping: FOB Semarang/Jakarta/Surabaya
 - Certification: Halal (MUI)
@@ -103,7 +103,7 @@ vanilla beans, vanilla supplier, Indonesian vanilla, wholesale vanilla, vanilla 
 ### Product 3: Vanilla Paste
 - Name: Natural Vanilla Paste
 - Description: Concentrated vanilla paste made from 100% Indonesian vanilla beans. Available in standard (1x), double (2x), and triple (3x) concentration. Visible bean specks, no synthetic additives. Custom formulations available.
-- MOQ: 25 kg
+- MOQ: Flexible
 - Packaging: 1kg, 5kg, 10kg, 20kg
 - Shipping: FOB Semarang/Jakarta/Surabaya
 - Certification: Halal (MUI)
@@ -111,7 +111,7 @@ vanilla beans, vanilla supplier, Indonesian vanilla, wholesale vanilla, vanilla 
 ### Product 4: Vanilla Powder
 - Name: Pure Vanilla Powder
 - Description: Spray-dried pure vanilla powder. Instant dissolve, long shelf life. Ideal for dry mixes, bakery, and beverage applications.
-- MOQ: 25 kg
+- MOQ: Flexible
 - Shipping: FOB Semarang/Jakarta/Surabaya
 - Certification: Halal (MUI)
 

@@ -262,6 +262,39 @@ export default function VanillaBeanQualityTestingMethods() {
             </div>
           </div>
 
+          {/* Further Reading */}
+          <div className="mt-12 p-6 bg-white rounded-2xl border border-[#E5E0D8]">
+            <h3 className="text-lg font-bold text-[#2C2518] mb-3">
+              Further Reading
+            </h3>
+            <ul className="space-y-3 text-[#6B6358] text-sm leading-relaxed">
+              <li>
+                <a
+                  href="https://www.fao.org/fao-who-codexalimentarius/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#B5A37A] hover:underline font-medium"
+                >
+                  FAO/WHO Codex Alimentarius
+                </a>{" "}
+                sets the international food standards referenced for spices and
+                vanilla composition and hygiene.
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Vanilla"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#B5A37A] hover:underline font-medium"
+                >
+                  Vanilla
+                </a>{" "}
+                gives a useful overview of Vanilla planifolia, the curing
+                process, and vanillin chemistry.
+              </li>
+            </ul>
+          </div>
+
           {/* Author */}
           <div className="mt-12 pt-8 border-t border-[#E5E0D8]">
             <div className="flex items-center gap-4">

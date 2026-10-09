@@ -34,7 +34,7 @@ const blogPosts = {
       <ul>
         <li>Certificate of Analysis (CoA) with vanillin content testing</li>
         <li>Phytosanitary certificate for export compliance</li>
-        <li>HACCP or food safety certification</li>
+        <li>Third-party food safety certification</li>
         <li>Sample beans for quality verification</li>
       </ul>
 
@@ -98,7 +98,7 @@ const blogPosts = {
     date: "2026-01-05",
     readTime: "10 min read",
     content: `
-      <p>Every vanilla shipment from Indonesia must include a phytosanitary certificate, Certificate of Origin, Certificate of Analysis, commercial invoice, and packing list. La Vanilla Supplier handles all export documentation, shipping FOB from Semarang, Jakarta, or Surabaya via air freight (3–7 days) or sea freight, with country-specific compliance for USA FDA, EU MRLs, UAE Halal, and Australian biosecurity requirements.</p>
+      <p>Every vanilla shipment from Indonesia must include a phytosanitary certificate, Certificate of Origin, Certificate of Analysis, commercial invoice, and packing list. La Vanilla Supplier handles all export documentation, shipping FOB from Semarang, Jakarta, or Surabaya via air freight (3–7 days) or sea freight, with country-specific compliance for USA import rules, EU MRLs, UAE Halal, and Australian biosecurity requirements.</p>
 
       <h2>Essential Export Documents</h2>
       <p>Every vanilla shipment from Indonesia should include:</p>
@@ -113,7 +113,7 @@ const blogPosts = {
       <h2>Country-Specific Requirements</h2>
       <p>Different countries have varying import requirements:</p>
       <ul>
-        <li><strong>USA:</strong> FDA registration may be required for food products. Prior notice must be filed with FDA before arrival.</li>
+        <li><strong>USA:</strong> Import registration may be required for food products. Prior notice must be filed before arrival.</li>
         <li><strong>EU:</strong> EU food safety regulations apply. Ensure compliance with EU Maximum Residue Limits (MRLs).</li>
         <li><strong>UAE:</strong> Halal certification is often required. ESMA standards may apply.</li>
         <li><strong>Australia:</strong> Strict biosecurity requirements. BICON database should be checked for import conditions.</li>
@@ -129,6 +129,11 @@ const blogPosts = {
 
       <h2>Working with Your Supplier</h2>
       <p>Choose a supplier experienced in international export who can provide complete documentation and guide you through the import process. Request documentation samples before placing orders.</p>
+
+      <div class="mt-12 p-6 bg-white rounded-2xl border border-[#E5E0D8]">
+        <h3 class="text-lg font-bold text-[#2C2518] mb-3">Further Reading</h3>
+        <p class="text-[#6B6358] text-sm leading-relaxed"><a href="https://www.fao.org/fao-who-codexalimentarius/en/" target="_blank" rel="noopener noreferrer" class="text-[#B5A37A] hover:underline font-medium">FAO/WHO Codex Alimentarius</a> publishes international food standards and guidance referenced by spice import regimes worldwide.</p>
+      </div>
     `,
   },
   "vanilla-paste-vs-extract": {
@@ -247,7 +252,6 @@ const blogPosts = {
       <p>Several standards apply to vanilla processing and export:</p>
       <ul>
         <li><strong>Good Manufacturing Practices (GMP):</strong> Basic hygiene and processing standards</li>
-        <li><strong>Hazard Analysis Critical Control Points (HACCP):</strong> Systematic approach to food safety</li>
         <li><strong>ISO 22000:</strong> Food safety management systems</li>
         <li><strong>Halal Certification:</strong> Required for markets with Muslim-majority populations</li>
       </ul>

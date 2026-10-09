@@ -63,12 +63,13 @@ export default function HomePage() {
             "@id": "https://www.lavanillasupplier.com/#organization",
             name: "La Vanilla Supplier",
             legalName: "PT Penta Pelita Semesta",
+            foundingDate: "2014",
             url: "https://www.lavanillasupplier.com",
             logo: "https://www.lavanillasupplier.com/logo.png",
             description:
               "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Sun-cured on volcanic soil. Flexible order quantities. Air freight from Indonesia.",
             email: "admin@lavanillasupplier.com",
-            telephone: "+62-878-3575-6945",
+            telephone: "+6287835756945",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Surakarta",
@@ -77,7 +78,7 @@ export default function HomePage() {
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+62-878-3575-6945",
+              telephone: "+6287835756945",
               email: "admin@lavanillasupplier.com",
               contactType: "sales",
               availableLanguage: ["English", "French", "German", "Spanish", "Turkish", "Arabic"],

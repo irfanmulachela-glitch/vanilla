@@ -139,7 +139,7 @@ export default function NewYorkPage() {
                 icon: FileCheck,
                 title: "Import Documentation",
                 description:
-                  "Complete documentation including FDA prior notice, phytosanitary certificate, and analysis reports.",
+                  "Complete documentation including import filings, phytosanitary certificate, and analysis reports.",
               },
             ].map((item) => (
               <div

@@ -146,7 +146,7 @@ export default function VanillaPasteBulkOrder() {
               <li>Custom carrier bases (glycerin, propylene glycol, sugar syrup)</li>
               <li>Seed-speck density adjustments</li>
               <li>Flavor profile modifications (bold, smooth, creamy)</li>
-              <li>Organic-certified formulations on request</li>
+              <li>Custom formulations for specific applications</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">

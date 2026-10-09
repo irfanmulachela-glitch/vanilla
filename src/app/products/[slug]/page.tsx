@@ -33,9 +33,9 @@ const SEO: Record<string, { title: string; description: string }> = {
       "Custom-composition vanilla paste tailored to your exact specifications. 28% bean solids, 24-month shelf life, and flexible bulk formats shipped from Indonesia.",
   },
   "vanilla-powder": {
-    title: "Pure Vanilla Powder - 40-60 Mesh",
+    title: "Pure Vanilla Powder - 40-80 Mesh",
     description:
-      "100% pure vanilla powder, finely ground from premium cured beans. 40-60 mesh and under 5% moisture, ideal for bakery mixes. Shipped direct from Indonesia.",
+      "100% pure vanilla powder, finely ground from premium cured beans. 40-80 mesh and under 5% moisture, ideal for bakery mixes. Shipped direct from Indonesia.",
   },
 };
 

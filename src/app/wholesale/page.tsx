@@ -4,6 +4,7 @@ import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
+  ChevronDown,
   Globe,
   Package,
   FileCheck,
@@ -21,6 +22,29 @@ import { twitterCard, ogImages } from "@/lib/seo";
 
 const DESCRIPTION =
   "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder from source. Export to 20+ countries with flexible order sizes.";
+
+const faqs = [
+  {
+    q: "What are wholesale vanilla prices?",
+    a: "Pricing depends on grade, volume, and contract terms. Send us your grade, quantity, and destination for a competitive FOB or CIF quote within 24 hours. Volume pricing improves with larger orders, and long-term contracts receive additional discounts.",
+  },
+  {
+    q: "What is the minimum order quantity?",
+    a: "Order quantities are flexible. Free samples are available for evaluation, trial orders are welcome, and we can supply consistent monthly volumes well beyond 100 kg for established partners.",
+  },
+  {
+    q: "Can I order samples before a bulk order?",
+    a: "Yes. We offer free samples for serious buyers, shipped via DHL or FedEx within 3-5 days, so your team can verify quality before committing to a full shipment.",
+  },
+  {
+    q: "How are bulk shipments delivered?",
+    a: "We ship via DHL, FedEx, or air cargo for smaller orders and sea freight for larger shipments. Air freight takes 3-7 days worldwide and sea freight 2-4 weeks. FOB from Semarang, Jakarta, or Surabaya, with CIF and DDP options available.",
+  },
+  {
+    q: "What are your payment terms?",
+    a: "We accept T/T (bank transfer), L/C (Letter of Credit), and PayPal for smaller orders. Standard terms are a 30-50% deposit with the balance due before shipping.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Supplier",
@@ -87,6 +111,25 @@ export default function WholesalePage() {
                 View Products
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Answer */}
+      <section className="py-10 bg-white border-b border-[#E5E0D8]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-l-4 border-[#B5A37A] bg-[#F8F6F2] rounded-r-2xl p-6">
+            <p className="font-bold text-[#2C2518] mb-2">
+              Quick answer: What is wholesale vanilla from La Vanilla Supplier?
+            </p>
+            <p className="text-[#6B6358] leading-relaxed">
+              We produce and export wholesale vanilla directly from Surakarta,
+              Central Java: Grade A and Grade B vanilla beans, custom vanilla
+              paste, and 100% pure vanilla powder. Every order is lab-tested
+              with a Certificate of Analysis, flexible in quantity, Halal
+              certified, and shipped with full export documentation to 20+
+              countries.
+            </p>
           </div>
         </div>
       </section>
@@ -338,6 +381,35 @@ export default function WholesalePage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#2C2518] mb-3 text-center">
+            Wholesale Vanilla FAQ
+          </h2>
+          <p className="text-[#6B6358] text-center mb-10 max-w-2xl mx-auto">
+            Answers to the questions buyers ask most before placing a wholesale
+            order.
+          </p>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:border-[#B5A37A]/50 transition-colors"
+              >
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors list-none">
+                  <span className="pr-4">{faq.q}</span>
+                  <ChevronDown className="w-5 h-5 text-[#6B6358] group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
+                </summary>
+                <div className="px-6 pb-6 text-[#6B6358] leading-relaxed border-t border-[#E5E0D8] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -367,6 +439,25 @@ export default function WholesalePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a,
+              },
+            })),
+          }),
+        }}
+      />
 
       {/* JSON-LD */}
       <script

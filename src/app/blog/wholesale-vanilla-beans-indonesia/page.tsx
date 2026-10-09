@@ -5,7 +5,7 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { twitterCard, ogImages } from "@/lib/seo";
 
 const DESCRIPTION =
-  "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, FOB shipping, documentation, and pricing for B2B importers and food manufacturers.";
+  "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, shipping terms, documentation, and pricing for B2B importers and food manufacturers.";
 
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Guide",
@@ -224,6 +224,38 @@ export default function WholesaleVanillaBeansIndonesia() {
                 View Products
               </Link>
             </div>
+          </div>
+
+          <div className="mt-12 p-6 bg-white rounded-2xl border border-[#E5E0D8]">
+            <h3 className="text-lg font-bold text-[#2C2518] mb-3">
+              Further Reading
+            </h3>
+            <ul className="space-y-3 text-[#6B6358] text-sm leading-relaxed">
+              <li>
+                <a
+                  href="https://www.trademap.org/Index.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#B5A37A] hover:underline font-medium"
+                >
+                  ITC Trade Map
+                </a>{" "}
+                provides global vanilla trade statistics by country, useful for
+                benchmarking suppliers and market prices.
+              </li>
+              <li>
+                <a
+                  href="https://www.fao.org/fao-who-codexalimentarius/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#B5A37A] hover:underline font-medium"
+                >
+                  FAO/WHO Codex Alimentarius
+                </a>{" "}
+                publishes the international food standards that shape export
+                requirements for spices and vanilla.
+              </li>
+            </ul>
           </div>
 
           <div className="mt-12 pt-8 border-t border-[#E5E0D8]">

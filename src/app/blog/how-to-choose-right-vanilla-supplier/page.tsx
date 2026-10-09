@@ -183,7 +183,7 @@ export default function HowToChooseRightVanillaSupplier() {
                 6. Certifications & Compliance
               </h3>
               <p className="text-[#6B6358] leading-relaxed mb-4">
-                Verify certifications relevant to your market: Halal for Middle East, phytosanitary for all exports, organic if required. Certifications should be current and verifiable through issuing bodies.
+                Verify certifications relevant to your market: Halal for Middle East, phytosanitary for all exports, plus any market-specific requirements. Certifications should be current and verifiable through issuing bodies.
               </p>
             </div>
 

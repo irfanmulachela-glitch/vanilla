@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle2,
+  ChevronDown,
   Shield,
   FileCheck,
   Award,
@@ -20,6 +21,25 @@ import { twitterCard, ogImages } from "@/lib/seo";
 
 const DESCRIPTION =
   "Food safety standards vanilla supplier with Halal certification, Phytosanitary compliance, and export documentation. Every batch lab tested before shipment.";
+
+const faqs = [
+  {
+    q: "How do you test vanilla quality?",
+    a: "Every batch undergoes gas chromatography testing for vanillin content, moisture analysis, sensory evaluation, and microbiological testing. We provide a Certificate of Analysis with every shipment.",
+  },
+  {
+    q: "What certifications come with your products?",
+    a: "All products are Halal certified by MUI (Majelis Ulama Indonesia). Every export includes a phytosanitary certificate, Certificate of Origin, and Certificate of Analysis.",
+  },
+  {
+    q: "Can I get a sample before ordering?",
+    a: "Yes. Free samples are available for serious buyers so your lab can verify quality before a bulk order. Samples are shipped via DHL or FedEx within 3-5 days.",
+  },
+  {
+    q: "Is your vanilla traceable?",
+    a: "Yes. Batch records follow the La Vanilla 5-Step Standard from sourcing to shipment, so every lot can be traced back to its origin and processing history.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Quality Control & Certifications",
@@ -58,6 +78,25 @@ export default function QualityPage() {
               Our commitment to quality is backed by international certifications
               and rigorous testing protocols. Every product meets the highest
               global standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Answer */}
+      <section className="py-10 bg-white border-b border-[#E5E0D8]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-l-4 border-[#B5A37A] bg-[#F8F6F2] rounded-r-2xl p-6">
+            <p className="font-bold text-[#2C2518] mb-2">
+              Quick answer: How does La Vanilla Supplier control quality?
+            </p>
+            <p className="text-[#6B6358] leading-relaxed">
+              Every batch is tested for vanillin content, moisture, sensory
+              quality, and microbiology before shipment, and ships with a
+              Certificate of Analysis. Products are Halal certified by MUI,
+              every export includes a phytosanitary certificate and Certificate
+              of Origin, and batch records follow the La Vanilla 5-Step
+              Standard from sourcing to shipment.
             </p>
           </div>
         </div>
@@ -428,6 +467,34 @@ export default function QualityPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#2C2518] mb-3 text-center">
+            Quality & Certifications FAQ
+          </h2>
+          <p className="text-[#6B6358] text-center mb-10 max-w-2xl mx-auto">
+            How we test, certify, and document every vanilla shipment.
+          </p>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:border-[#B5A37A]/50 transition-colors"
+              >
+                <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors list-none">
+                  <span className="pr-4">{faq.q}</span>
+                  <ChevronDown className="w-5 h-5 text-[#6B6358] group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
+                </summary>
+                <div className="px-6 pb-6 text-[#6B6358] leading-relaxed border-t border-[#E5E0D8] pt-4">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-[#2C2518]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -516,6 +583,25 @@ export default function QualityPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a,
+              },
+            })),
+          }),
+        }}
+      />
 
       {/* JSON-LD */}
       <script

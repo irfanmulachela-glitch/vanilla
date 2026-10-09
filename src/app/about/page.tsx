@@ -420,7 +420,7 @@ export default function AboutPage() {
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Surakarta",
-                addressRegion: "Java",
+                addressRegion: "Central Java",
                 addressCountry: "ID",
               },
               contactPoint: {
