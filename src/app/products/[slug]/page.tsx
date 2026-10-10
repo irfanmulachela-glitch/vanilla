@@ -21,6 +21,11 @@ import { twitterCard, ogImages } from "@/lib/seo";
 import GradeSelector from "@/components/grade-selector";
 import OrderingLadder from "@/components/ordering-ladder";
 
+const SPEC_LABELS: Record<string, string> = {
+  moq: "MOQ",
+  hsCode: "HS Code",
+};
+
 const SEO: Record<string, { title: string; description: string }> = {
   "vanilla-beans": {
     title: "Indonesian Vanilla Beans: Grade A & B",
@@ -289,9 +294,10 @@ export default async function ProductPage({ params }: PageProps) {
                       className="border-b border-[#E5E0D8]/50 last:border-0 hover:bg-[#F8F6F2]/50 transition-colors"
                     >
                       <td className="px-6 py-4 text-sm font-medium text-[#2C2518]">
-                        {key
-                          .replace(/([A-Z])/g, " $1")
-                          .replace(/^./, (str) => str.toUpperCase())}
+                        {SPEC_LABELS[key] ??
+                          key
+                            .replace(/([A-Z])/g, " $1")
+                            .replace(/^./, (str) => str.toUpperCase())}
                       </td>
                       <td className="px-6 py-4 text-sm text-[#6B6358]">
                         {value}
@@ -435,7 +441,9 @@ export default async function ProductPage({ params }: PageProps) {
             category: product.category === "beans" ? "Vanilla Beans" : product.category === "paste" ? "Vanilla Paste" : "Vanilla Powder",
             additionalProperty: Object.entries(product.specifications).map(([key, value]) => ({
               "@type": "PropertyValue",
-              name: key.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase()),
+              name:
+                SPEC_LABELS[key] ??
+                key.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase()),
               value: value,
             })),
           }),
