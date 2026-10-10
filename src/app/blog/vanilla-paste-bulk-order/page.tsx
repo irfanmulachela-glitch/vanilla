@@ -197,7 +197,7 @@ export default function VanillaPasteBulkOrder() {
               Order Quantities and Lead Time
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Our order quantities for bulk vanilla paste are flexible. Standard lead time is 7-14 days for stock formulations and 21-30 days for custom orders. We ship FOB from Semarang, Jakarta, or Surabaya.
+              Our order quantities for bulk vanilla paste are flexible. Standard lead time is 7-14 days for stock formulations and 21-30 days for custom orders. We ship by air freight from Indonesia, with DDP delivery available.
             </p>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">

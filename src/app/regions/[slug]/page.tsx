@@ -348,7 +348,7 @@ export default async function RegionPage({
                   </div>
                   <div>
                     <p className="font-semibold text-lg">{region.shippingTime}</p>
-                    <p className="text-sm text-stone-400">From Indonesian ports</p>
+                    <p className="text-sm text-stone-400">Air freight worldwide</p>
                   </div>
                 </div>
                 <p className="text-stone-300 text-sm">
@@ -359,7 +359,7 @@ export default async function RegionPage({
               <div className="flex items-center gap-4 text-sm text-stone-400">
                 <div className="flex items-center gap-2">
                   <Package className="w-4 h-4 text-[#B5A37A]" />
-                  <span>FOB / CIF / DDP terms</span>
+                  <span>FCA / CPT / DDP terms</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-[#B5A37A]" />

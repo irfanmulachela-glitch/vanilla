@@ -84,11 +84,11 @@ const faqs = [
     questions: [
       {
         q: "What shipping methods do you offer?",
-        a: "We ship via DHL, FedEx, or air cargo for smaller orders. For larger shipments, we offer sea freight options. FOB Semarang, Jakarta, or Surabaya, CIF, and DDP incoterms are available.",
+        a: "Air freight is our standard shipping method — via DHL, FedEx, or air cargo — with delivery in 3-7 days worldwide. DDP door delivery is available, and sea freight can be arranged on request for very large orders.",
       },
       {
         q: "How long does shipping take?",
-        a: "Air freight typically takes 3-7 days worldwide. Sea freight takes 2-4 weeks depending on destination. Express courier (DHL/FedEx) can deliver in 3-5 days.",
+        a: "Air freight typically takes 3-7 days worldwide, and express courier (DHL/FedEx) can deliver in 3-5 days. For very large orders, sea freight can be arranged on request (2-4 weeks).",
       },
       {
         q: "What documents are included with shipments?",
@@ -113,7 +113,7 @@ const faqs = [
       },
       {
         q: "Do prices include shipping?",
-        a: "Our quoted prices are typically FOB Semarang, Jakarta, or Surabaya. Shipping costs depend on your location, order volume, and preferred shipping method. We'll provide a detailed quote including all costs.",
+        a: "Our quoted prices are typically air freight (FCA Surakarta). Shipping costs depend on your location, order volume, and preferred shipping method. We'll provide a detailed quote including all costs.",
       },
       {
         q: "Is there a price match guarantee?",

@@ -208,20 +208,20 @@ export default async function ProductPage({ params }: PageProps) {
               </h2>
               <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
                 {product.category === "beans" && (
-                  <>La Vanilla Supplier is a trusted <strong className="text-[#2C2518]">wholesale vanilla bean supplier from Indonesia</strong>, offering premium Grade A gourmet and Grade B extraction beans sourced directly from Javanese farmers. Our <strong className="text-[#2C2518]">V. planifolia vanilla beans</strong> are sun-cured for 6-9 months, achieving 1.3-2.7% vanillin content. Every batch is lab-tested with Certificate of Analysis. We export to 20+ countries with flexible order quantities, shipping FOB from Semarang, Jakarta, or Surabaya. Halal certified, Phytosanitary compliant.</>
+                  <>La Vanilla Supplier is a trusted <strong className="text-[#2C2518]">wholesale vanilla bean supplier from Indonesia</strong>, offering premium Grade A gourmet and Grade B extraction beans sourced directly from Javanese farmers. Our <strong className="text-[#2C2518]">V. planifolia vanilla beans</strong> are sun-cured for 6-9 months, achieving 1.3-2.7% vanillin content. Every batch is lab-tested with Certificate of Analysis. We export to 20+ countries with order quantities from 1 kg, shipping air freight from Indonesia. Halal certified, Phytosanitary compliant.</>
                 )}
                 {product.category === "paste" && (
-                  <>La Vanilla Supplier is a <strong className="text-[#2C2518]">bulk vanilla paste manufacturer</strong> serving food producers worldwide. Our vanilla paste is made from 100% Indonesian vanilla beans with no synthetic additives or fillers. We offer <strong className="text-[#2C2518]">custom vanilla paste formulations</strong> with adjustable vanillin concentration (1.3-2.7%), sugar content, and viscosity. Perfect for ice cream, bakery, confectionery, and beverage production. Halal certified facility. Order quantities from 1 kg, FOB Indonesian ports.</>
+                  <>La Vanilla Supplier is a <strong className="text-[#2C2518]">bulk vanilla paste manufacturer</strong> serving food producers worldwide. Our vanilla paste is made from 100% Indonesian vanilla beans with no synthetic additives or fillers. We offer <strong className="text-[#2C2518]">custom vanilla paste formulations</strong> with adjustable vanillin concentration (1.3-2.7%), sugar content, and viscosity. Perfect for ice cream, bakery, confectionery, and beverage production. Halal certified facility. Order quantities from 1 kg, air freight from Indonesia.</>
                 )}
                 {product.category === "powder" && (
-                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">100% pure vanilla powder</strong> from premium cured Indonesian vanilla beans. Our spray-dried vanilla powder is finely ground to 40-80 mesh with zero fillers, zero additives, and less than 5% moisture. Ideal for <strong className="text-[#2C2518]">dry baking mixes, instant beverages, confectionery, and dairy applications</strong>. Long shelf life, consistent flavor. Order quantities from 1 kg, FOB shipping from Semarang, Jakarta, or Surabaya.</>
+                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">100% pure vanilla powder</strong> from premium cured Indonesian vanilla beans. Our spray-dried vanilla powder is finely ground to 40-80 mesh with zero fillers, zero additives, and less than 5% moisture. Ideal for <strong className="text-[#2C2518]">dry baking mixes, instant beverages, confectionery, and dairy applications</strong>. Long shelf life, consistent flavor. Order quantities from 1 kg, air freight from Indonesia.</>
                 )}
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
                   { icon: Shield, label: "Quality Assured", value: "Lab-Tested", desc: "Third-party vanillin verification" },
                   { icon: Package, label: "Order Quantity", value: "From 1 kg", desc: "Sample orders available" },
-                  { icon: Truck, label: "Shipping Terms", value: "FOB/CIF/DDP", desc: "Semarang, Jakarta, Surabaya" },
+                  { icon: Truck, label: "Shipping Terms", value: "FCA / CPT / DDP", desc: "Air freight worldwide" },
                   { icon: FileCheck, label: "Documents", value: "All Included", desc: "CoA, Phytosanitary, COO" },
                 ].map((stat) => (
                   <div

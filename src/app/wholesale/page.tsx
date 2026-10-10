@@ -26,7 +26,7 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "What are wholesale vanilla prices?",
-    a: "Pricing depends on grade, volume, and contract terms. Send us your grade, quantity, and destination for a competitive FOB or CIF quote within 24 hours. Volume pricing improves with larger orders, and long-term contracts receive additional discounts.",
+    a: "Pricing depends on grade, volume, and contract terms. Send us your grade, quantity, and destination for a competitive air freight quote within 24 hours. Volume pricing improves with larger orders, and long-term contracts receive additional discounts.",
   },
   {
     q: "What is the minimum order quantity?",
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: "How are bulk shipments delivered?",
-    a: "We ship via DHL, FedEx, or air cargo for smaller orders and sea freight for larger shipments. Air freight takes 3-7 days worldwide and sea freight 2-4 weeks. FOB from Semarang, Jakarta, or Surabaya, with CIF and DDP options available.",
+    a: "Air freight is our standard: DHL, FedEx, or air cargo worldwide in 3-7 days, with DDP delivery available. Sea freight can be arranged on request for very large orders.",
   },
   {
     q: "What are your payment terms?",
@@ -191,8 +191,8 @@ export default function WholesalePage() {
                 icon: Truck,
                 title: "Global Shipping",
                 description:
-                  "FOB Semarang, Jakarta, or Surabaya. Air freight or sea freight options.",
-                highlight: "3 ports available",
+                  "Air freight worldwide in 3-7 days. DDP delivery available.",
+                highlight: "Worldwide in 3-7 days",
               },
             ].map((item) => (
               <div

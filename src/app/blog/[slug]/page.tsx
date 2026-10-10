@@ -42,7 +42,7 @@ const blogPosts = {
       <p>Most Indonesian vanilla suppliers offer flexible order quantities ranging from 1 kg for samples to wholesale orders. Pricing varies based on grade, vanillin content, and order volume. Request quotes from multiple suppliers to compare pricing structures.</p>
 
       <h2>Shipping and Logistics</h2>
-      <p>Indonesian vanilla exports typically ship from Semarang, Jakarta, or Surabaya. Air freight delivery takes 3-7 days globally, while sea freight options are available for larger shipments. Ensure your supplier provides complete export documentation.</p>
+      <p>Indonesian vanilla exports typically ship by air freight, with delivery in 3-7 days globally. Sea freight can be arranged on request for larger shipments. Ensure your supplier provides complete export documentation.</p>
     `,
   },
   "vanilla-bean-grading": {
@@ -98,7 +98,7 @@ const blogPosts = {
     date: "2026-01-05",
     readTime: "10 min read",
     content: `
-      <p>Every vanilla shipment from Indonesia must include a phytosanitary certificate, Certificate of Origin, Certificate of Analysis, commercial invoice, and packing list. La Vanilla Supplier handles all export documentation, shipping FOB from Semarang, Jakarta, or Surabaya via air freight (3–7 days) or sea freight, with country-specific compliance for USA import rules, EU MRLs, UAE Halal, and Australian biosecurity requirements.</p>
+      <p>Every vanilla shipment from Indonesia must include a phytosanitary certificate, Certificate of Origin, Certificate of Analysis, commercial invoice, and packing list. La Vanilla Supplier handles all export documentation, shipping by air freight (3–7 days), with country-specific compliance for USA import rules, EU MRLs, UAE Halal, and Australian biosecurity requirements.</p>
 
       <h2>Essential Export Documents</h2>
       <p>Every vanilla shipment from Indonesia should include:</p>
@@ -554,7 +554,7 @@ const blogPosts = {
     date: "2026-02-15",
     readTime: "9 min read",
     content: `
-      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping FOB from Indonesian ports with CIF and DDP door-to-door options available for bulk vanilla orders worldwide.</p>
+      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping air freight from Indonesia with DDP door-to-door options available for bulk vanilla orders worldwide.</p>
 
       <h2>Understanding Order Quantities</h2>
       <p>Order quantities vary by supplier and product:</p>
@@ -596,10 +596,10 @@ const blogPosts = {
       <h2>Shipping and Logistics</h2>
       <p>For bulk vanilla orders:</p>
       <ul>
-        <li><strong>Air freight:</strong> Faster (3-7 days), higher cost</li>
-        <li><strong>Sea freight:</strong> More economical (2-4 weeks)</li>
-        <li><strong>FOB terms:</strong> Semarang, Jakarta, or Surabaya</li>
-        <li><strong>CIF/DDP:</strong> Door-to-door delivery options</li>
+        <li><strong>Air freight:</strong> Standard method, 3-7 days worldwide</li>
+        <li><strong>DDP:</strong> Door-to-door delivery with duties paid</li>
+        <li><strong>Air cargo terms:</strong> FCA (Surakarta) / CPT</li>
+        <li><strong>Sea freight:</strong> Available on request for very large orders (2-4 weeks)</li>
       </ul>
 
       <h2>Payment Terms</h2>
@@ -691,7 +691,7 @@ const blogPosts = {
         <li>Beans vacuum-sealed or packed in airtight containers</li>
         <li>Labeled with grade, weight, and origin</li>
         <li>Stored in climate-controlled environment</li>
-        <li>Exported via air or sea freight from Indonesian ports</li>
+        <li>Exported via air freight from Indonesia</li>
       </ul>
     `,
   },
@@ -705,7 +705,7 @@ const blogPosts = {
     date: "2026-03-01",
     readTime: "7 min read",
     content: `
-      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.3%–2.7% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping from Semarang, Jakarta, and Surabaya with flexible order quantities, making it the most cost-effective origin for B2B vanilla buyers.</p>
+      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.3%–2.7% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping by air freight worldwide with flexible order quantities, making it the most cost-effective origin for B2B vanilla buyers.</p>
 
       <h2>Competitive Pricing</h2>
       <p>Indonesian vanilla offers significant cost advantages:</p>
@@ -730,7 +730,7 @@ const blogPosts = {
       <ul>
         <li>Year-round production (not seasonal like some origins)</li>
         <li>Established export infrastructure</li>
-        <li>Multiple shipping ports (Semarang, Jakarta, Surabaya)</li>
+        <li>Air freight worldwide (FCA / CPT / DDP)</li>
         <li>Order quantities from 1 kg</li>
       </ul>
 

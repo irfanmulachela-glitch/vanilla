@@ -104,7 +104,7 @@ export default function WholesaleVanillaBeansIndonesia() {
       <article className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-            La Vanilla Supplier exports wholesale vanilla beans from Indonesia to 20+ countries. This guide covers everything B2B buyers need to know: grading systems, order quantities, FOB shipping terms, documentation, and how to evaluate Indonesian vanilla suppliers.
+            La Vanilla Supplier exports wholesale vanilla beans from Indonesia to 20+ countries. This guide covers everything B2B buyers need to know: grading systems, order quantities, shipping terms, documentation, and how to evaluate Indonesian vanilla suppliers.
           </p>
 
           <div className="prose prose-lg max-w-none">
@@ -154,14 +154,14 @@ export default function WholesaleVanillaBeansIndonesia() {
               <li>Volume contracts: 500+ kg with custom pricing</li>
             </ul>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Pricing is quoted FOB (Free on Board) from Indonesian ports: Semarang, Jakarta, or Surabaya. Contact us for current pricing based on your grade and volume requirements.
+              Pricing is quoted air freight (FCA Surakarta). Contact us for current pricing based on your grade and volume requirements.
             </p>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">
               Shipping and Logistics
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Indonesian vanilla beans ship via major container lines from three primary ports. FOB terms mean you control the shipping from port of origin. We also offer CIF pricing for destinations where we arrange freight.
+              Indonesian vanilla beans ship by air freight worldwide, typically in 3-7 days. DDP door-to-door delivery is available, and sea freight can be arranged on request for very large orders.
             </p>
 
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">

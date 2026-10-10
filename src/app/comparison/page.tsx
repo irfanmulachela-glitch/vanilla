@@ -128,7 +128,7 @@ export default function ComparisonPage() {
                     gradeB: "Extract manufacturing, industrial",
                   },
                   {
-                    spec: "Price Range (FOB)",
+                    spec: "Price Range (per kg)",
                     gradeA: "Premium pricing",
                     gradeB: "More economical",
                   },
@@ -234,7 +234,7 @@ export default function ComparisonPage() {
                     madagascar: "1.5–2.2%",
                   },
                   {
-                    factor: "Price (FOB)",
+                    factor: "Price (per kg)",
                     indonesia: "More competitive",
                     madagascar: "Premium pricing",
                   },
