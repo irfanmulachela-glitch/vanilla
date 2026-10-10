@@ -69,13 +69,13 @@ export default function QualityPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#D8C393] to-[#C4B07A] text-stone-900 py-16 lg:py-24">
+      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Quality & Certifications
+              Quality & <span className="text-[#B5A37A]">Certifications</span>
             </h1>
-            <p className="text-lg text-stone-700">
+            <p className="text-lg text-stone-300 leading-relaxed">
               Our commitment to quality is backed by international certifications
               and rigorous testing protocols. Every product meets the highest
               global standards.
@@ -93,32 +93,32 @@ export default function QualityPage() {
       {/* Certifications */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl font-bold text-[#2C2518] mb-12 text-center">
             International Certifications
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Halal Certification */}
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Award className="w-8 h-8 text-[#8B7D50]" />
+                <div className="w-16 h-16 bg-[#F8F6F2] border border-[#E5E0D8] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Award className="w-8 h-8 text-[#B5A37A]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-[#2C2518] mb-1">
                     Halal Certification
                   </h3>
-                  <p className="text-sm text-[#8B7D50] font-medium">
+                  <p className="text-sm text-[#B5A37A] font-medium">
                     MUI (Majelis Ulama Indonesia)
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#6B6358] mb-4">
                 Certified Halal by the Indonesian Ulema Council, ensuring full compliance
                 with Islamic dietary laws for Muslim consumers worldwide.
               </p>
-              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
-                <p className="text-xs text-gray-500 mb-1">Certificate Number</p>
-                <p className="text-sm font-mono font-semibold text-gray-900">
+              <div className="bg-[#F8F6F2] rounded-lg p-3 mb-4">
+                <p className="text-xs text-[#6B6358] mb-1">Certificate Number</p>
+                <p className="text-sm font-mono font-semibold text-[#2C2518]">
                   123.1/ID-00123456789012
                 </p>
               </div>
@@ -130,38 +130,38 @@ export default function QualityPage() {
                   "Certificate available on request",
                 ].map((detail) => (
                   <li key={detail} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
-                    <span className="text-sm text-gray-700">{detail}</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
+                    <span className="text-sm text-[#2C2518]">{detail}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Phytosanitary Certificate */}
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Leaf className="w-8 h-8 text-[#8B7D50]" />
+                <div className="w-16 h-16 bg-[#F8F6F2] border border-[#E5E0D8] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Leaf className="w-8 h-8 text-[#B5A37A]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-[#2C2518] mb-1">
                     Phytosanitary Certificate
                   </h3>
-                  <p className="text-sm text-[#8B7D50] font-medium">
+                  <p className="text-sm text-[#B5A37A] font-medium">
                     Indonesian Ministry of Agriculture
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#6B6358] mb-4">
                 Official phytosanitary certificate issued by the Indonesian Plant Protection
                 Agency under the Ministry of Agriculture, verifying pest-free status.
               </p>
-              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
-                <p className="text-xs text-gray-500 mb-1">Issuing Authority</p>
-                <p className="text-sm font-semibold text-gray-900">
+              <div className="bg-[#F8F6F2] rounded-lg p-3 mb-4">
+                <p className="text-xs text-[#6B6358] mb-1">Issuing Authority</p>
+                <p className="text-sm font-semibold text-[#2C2518]">
                   Direktorat Jenderal Perlindungan Tanaman
                 </p>
-                <p className="text-xs text-gray-500 mt-1">Kementerian Pertanian RI</p>
+                <p className="text-xs text-[#6B6358] mt-1">Kementerian Pertanian RI</p>
               </div>
               <ul className="space-y-2">
                 {[
@@ -171,38 +171,38 @@ export default function QualityPage() {
                   "Issued per shipment",
                 ].map((detail) => (
                   <li key={detail} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
-                    <span className="text-sm text-gray-700">{detail}</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
+                    <span className="text-sm text-[#2C2518]">{detail}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Certificate of Origin */}
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Stamp className="w-8 h-8 text-[#8B7D50]" />
+                <div className="w-16 h-16 bg-[#F8F6F2] border border-[#E5E0D8] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Stamp className="w-8 h-8 text-[#B5A37A]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-[#2C2518] mb-1">
                     Certificate of Origin
                   </h3>
-                  <p className="text-sm text-[#8B7D50] font-medium">
+                  <p className="text-sm text-[#B5A37A] font-medium">
                     KADIN (Kamar Dagang Indonesia)
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#6B6358] mb-4">
                 Verified Certificate of Origin issued by the local Chamber of Commerce (KADIN),
                 confirming Indonesian origin of all vanilla products.
               </p>
-              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
-                <p className="text-xs text-gray-500 mb-1">Issuing Body</p>
-                <p className="text-sm font-semibold text-gray-900">
+              <div className="bg-[#F8F6F2] rounded-lg p-3 mb-4">
+                <p className="text-xs text-[#6B6358] mb-1">Issuing Body</p>
+                <p className="text-sm font-semibold text-[#2C2518]">
                   Kamar Dagang dan Industri Indonesia
                 </p>
-                <p className="text-xs text-gray-500 mt-1">Indonesia Chamber of Commerce</p>
+                <p className="text-xs text-[#6B6358] mt-1">Indonesia Chamber of Commerce</p>
               </div>
               <ul className="space-y-2">
                 {[
@@ -212,38 +212,38 @@ export default function QualityPage() {
                   "Indonesian export validated",
                 ].map((detail) => (
                   <li key={detail} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
-                    <span className="text-sm text-gray-700">{detail}</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
+                    <span className="text-sm text-[#2C2518]">{detail}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Grade A Certificate */}
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-[#D8C393] shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-2xl p-8 border border-[#E5E0D8] shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-[#E8DCC0] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-8 h-8 text-[#8B7D50]" />
+                <div className="w-16 h-16 bg-[#F8F6F2] border border-[#E5E0D8] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-8 h-8 text-[#B5A37A]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-[#2C2518] mb-1">
                     Grade A Certificate
                   </h3>
-                  <p className="text-sm text-[#8B7D50] font-medium">
+                  <p className="text-sm text-[#B5A37A] font-medium">
                     Issued by In-House QC Team
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#6B6358] mb-4">
                 Internal quality certificate issued by our certified QC team, verifying vanillin
                 content, moisture levels, and sensory evaluation results.
               </p>
-              <div className="bg-[#F5F0E3] rounded-lg p-3 mb-4">
-                <p className="text-xs text-gray-500 mb-1">Vanillin Content Verification</p>
-                <p className="text-sm font-mono font-semibold text-gray-900">
+              <div className="bg-[#F8F6F2] rounded-lg p-3 mb-4">
+                <p className="text-xs text-[#6B6358] mb-1">Vanillin Content Verification</p>
+                <p className="text-sm font-mono font-semibold text-[#2C2518]">
                   1.3% - 2.7% (Grade A Standard)
                 </p>
-                <p className="text-xs text-gray-500 mt-1">Gas Chromatography Verified</p>
+                <p className="text-xs text-[#6B6358] mt-1">Gas Chromatography Verified</p>
               </div>
               <ul className="space-y-2">
                 {[
@@ -253,8 +253,8 @@ export default function QualityPage() {
                   "Batch traceability confirmed",
                 ].map((detail) => (
                   <li key={detail} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#8B7D50]" />
-                    <span className="text-sm text-gray-700">{detail}</span>
+                    <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" />
+                    <span className="text-sm text-[#2C2518]">{detail}</span>
                   </li>
                 ))}
               </ul>
@@ -264,9 +264,9 @@ export default function QualityPage() {
       </section>
 
       {/* Quality Process */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl font-bold text-[#2C2518] mb-12 text-center">
             Our Quality Control Process
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -300,15 +300,15 @@ export default function QualityPage() {
                 icon: FileCheck,
               },
             ].map((item) => (
-              <div key={item.step} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div key={item.step} className="bg-white rounded-xl p-6 shadow-sm border border-[#E5E0D8]">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl font-bold text-[#8B7D50]">
+                  <span className="text-2xl font-bold text-[#B5A37A]">
                     {item.step}
                   </span>
-                  <item.icon className="w-6 h-6 text-[#8B7D50]" />
+                  <item.icon className="w-6 h-6 text-[#B5A37A]" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <h3 className="font-bold text-[#2C2518] mb-2">{item.title}</h3>
+                <p className="text-sm text-[#6B6358]">{item.description}</p>
               </div>
             ))}
           </div>
@@ -320,10 +320,10 @@ export default function QualityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
                 Rigorous Testing Protocol
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-[#6B6358] mb-6">
                 Our quality assurance process includes comprehensive testing at
                 multiple stages. We use advanced analytical equipment to verify
                 every specification we promise.
@@ -352,10 +352,10 @@ export default function QualityPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#8B7D50] mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-gray-900">{item.title}</p>
-                      <p className="text-sm text-gray-600">
+                      <p className="font-medium text-[#2C2518]">{item.title}</p>
+                      <p className="text-sm text-[#6B6358]">
                         {item.description}
                       </p>
                     </div>
@@ -379,12 +379,12 @@ export default function QualityPage() {
       </section>
 
       {/* Downloadable Documents */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl font-bold text-[#2C2518] mb-4 text-center">
             Downloadable Documents
           </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-[#6B6358] text-center mb-12 max-w-2xl mx-auto">
             Access our certifications and documentation. All documents are available
             for download to verify our compliance and quality standards.
           </p>
@@ -396,7 +396,7 @@ export default function QualityPage() {
                 description:
                   "Official MUI Halal certification with certificate number 123.1/ID-00123456789012",
                 filename: "halal-certificate-mui.pdf",
-                color: "bg-[#E8DCC0]",
+                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
               },
               {
                 icon: Leaf,
@@ -404,7 +404,7 @@ export default function QualityPage() {
                 description:
                   "Issued by Indonesian Ministry of Agriculture (Direktorat Jenderal Perlindungan Tanaman)",
                 filename: "phytosanitary-certificate.pdf",
-                color: "bg-[#E8DCC0]",
+                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
               },
               {
                 icon: Stamp,
@@ -412,7 +412,7 @@ export default function QualityPage() {
                 description:
                   "Verified by KADIN (Kamar Dagang dan Industri Indonesia)",
                 filename: "certificate-of-origin.pdf",
-                color: "bg-[#E8DCC0]",
+                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
               },
               {
                 icon: FileText,
@@ -420,26 +420,26 @@ export default function QualityPage() {
                 description:
                   "In-house QC verification with vanillin content analysis (1.3-2.7%)",
                 filename: "certificate-of-analysis.pdf",
-                color: "bg-[#E8DCC0]",
+                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
               },
             ].map((doc) => (
               <div
                 key={doc.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#D8C393] transition-colors"
+                className="bg-white rounded-xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
               >
                 <div className="flex items-start gap-4">
                   <div
                     className={`w-12 h-12 ${doc.color} rounded-lg flex items-center justify-center flex-shrink-0`}
                   >
-                    <doc.icon className="w-6 h-6 text-[#8B7D50]" />
+                    <doc.icon className="w-6 h-6 text-[#B5A37A]" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 mb-1">{doc.title}</h3>
-                    <p className="text-sm text-gray-600 mb-4">{doc.description}</p>
+                    <h3 className="font-bold text-[#2C2518] mb-1">{doc.title}</h3>
+                    <p className="text-sm text-[#6B6358] mb-4">{doc.description}</p>
                     <a
                       href={`/documents/${doc.filename}`}
                       download
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#8B7D50] text-white rounded-lg text-sm font-medium hover:bg-[#7A6E45] transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#2C2518] text-white rounded-lg text-sm font-medium hover:bg-[#3D3425] transition-colors"
                     >
                       <Download className="w-4 h-4" />
                       Download PDF
@@ -449,7 +449,7 @@ export default function QualityPage() {
               </div>
             ))}
           </div>
-          <p className="text-sm text-gray-500 text-center mt-8">
+          <p className="text-sm text-[#6B6358] text-center mt-8">
             Contact us for additional documentation or certified copies.
           </p>
         </div>
@@ -538,13 +538,13 @@ export default function QualityPage() {
       </section>
 
       {/* Documentation With Every Shipment */}
-      <section className="py-16 bg-[#D8C393] text-stone-900">
+      <section className="py-16 bg-white text-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Complete Documentation With Every Shipment
             </h2>
-            <p className="text-stone-700 text-lg max-w-2xl mx-auto">
+            <p className="text-[#6B6358] text-lg max-w-2xl mx-auto">
               We provide all necessary export documentation to ensure smooth
               customs clearance in your country.
             </p>
@@ -562,9 +562,9 @@ export default function QualityPage() {
             ].map((doc) => (
               <div
                 key={doc}
-                className="bg-[#C4B07A]/50 rounded-xl p-4 text-center border border-[#C4B07A]/50"
+                className="bg-[#F8F6F2] rounded-xl p-4 text-center border border-[#E5E0D8]"
               >
-                <FileCheck className="w-6 h-6 mx-auto mb-2 text-[#C4B07A]" />
+                <FileCheck className="w-6 h-6 mx-auto mb-2 text-[#B5A37A]" />
                 <p className="text-sm font-medium">{doc}</p>
               </div>
             ))}
