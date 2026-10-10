@@ -19,6 +19,7 @@ import {
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
+import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
   "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder from source. Export to 20+ countries with flexible order sizes.";
@@ -116,23 +117,10 @@ export default function WholesalePage() {
       </section>
 
       {/* Quick Answer */}
-      <section className="py-10 bg-white border-b border-[#E5E0D8]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-l-4 border-[#B5A37A] bg-[#F8F6F2] rounded-r-2xl p-6">
-            <p className="font-bold text-[#2C2518] mb-2">
-              Quick answer: What is wholesale vanilla from La Vanilla Supplier?
-            </p>
-            <p className="text-[#6B6358] leading-relaxed">
-              We produce and export wholesale vanilla directly from Surakarta,
-              Central Java: Grade A and Grade B vanilla beans, custom vanilla
-              paste, and 100% pure vanilla powder. Every order is lab-tested
-              with a Certificate of Analysis, flexible in quantity, Halal
-              certified, and shipped with full export documentation to 20+
-              countries.
-            </p>
-          </div>
-        </div>
-      </section>
+      <QuickAnswer
+        question="What is wholesale vanilla from La Vanilla Supplier?"
+        answer="We produce and export wholesale vanilla directly from Surakarta, Central Java: Grade A and Grade B vanilla beans, custom vanilla paste, and 100% pure vanilla powder. Every order is lab-tested with a Certificate of Analysis, flexible in quantity, Halal certified, and shipped with full export documentation to 20+ countries."
+      />
 
       {/* Stats Bar */}
       <section className="py-12 bg-[#F8F6F2] border-b border-[#E5E0D8]">

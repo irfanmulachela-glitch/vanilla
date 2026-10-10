@@ -18,6 +18,7 @@ import {
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
+import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
   "Food safety standards vanilla supplier with Halal certification, Phytosanitary compliance, and export documentation. Every batch lab tested before shipment.";
@@ -84,23 +85,10 @@ export default function QualityPage() {
       </section>
 
       {/* Quick Answer */}
-      <section className="py-10 bg-white border-b border-[#E5E0D8]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-l-4 border-[#B5A37A] bg-[#F8F6F2] rounded-r-2xl p-6">
-            <p className="font-bold text-[#2C2518] mb-2">
-              Quick answer: How does La Vanilla Supplier control quality?
-            </p>
-            <p className="text-[#6B6358] leading-relaxed">
-              Every batch is tested for vanillin content, moisture, sensory
-              quality, and microbiology before shipment, and ships with a
-              Certificate of Analysis. Products are Halal certified by MUI,
-              every export includes a phytosanitary certificate and Certificate
-              of Origin, and batch records follow the La Vanilla 5-Step
-              Standard from sourcing to shipment.
-            </p>
-          </div>
-        </div>
-      </section>
+      <QuickAnswer
+        question="How does La Vanilla Supplier control quality?"
+        answer="Every batch is tested for vanillin content, moisture, sensory quality, and microbiology before shipment, and ships with a Certificate of Analysis. Products are Halal certified by MUI, every export includes a phytosanitary certificate and Certificate of Origin, and batch records follow the La Vanilla 5-Step Standard from sourcing to shipment."
+      />
 
       {/* Certifications */}
       <section className="py-16 lg:py-24 bg-white">

@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
+import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
   "Premium Indonesian vanilla products for B2B buyers: Grade A & B beans, custom vanilla paste, pure vanilla powder. Flexible orders shipped by air from Indonesia.";
@@ -73,23 +74,10 @@ export default function ProductsPage() {
       </section>
 
       {/* Quick Answer */}
-      <section className="py-10 bg-white border-b border-[#E5E0D8]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-l-4 border-[#B5A37A] bg-[#F8F6F2] rounded-r-2xl p-6">
-            <p className="font-bold text-[#2C2518] mb-2">
-              Quick answer: What vanilla products can I buy from La Vanilla
-              Supplier?
-            </p>
-            <p className="text-[#6B6358] leading-relaxed">
-              Three product lines, shipped direct from Indonesia: Grade A and
-              Grade B V. planifolia vanilla beans, custom vanilla bean paste,
-              and 100% pure vanilla powder. All are lab-tested with a
-              Certificate of Analysis, available with flexible order
-              quantities, and exported with full documentation to 20+ countries.
-            </p>
-          </div>
-        </div>
-      </section>
+      <QuickAnswer
+        question="What vanilla products can I buy from La Vanilla Supplier?"
+        answer="Three product lines, shipped direct from Indonesia: Grade A and Grade B V. planifolia vanilla beans, custom vanilla bean paste, and 100% pure vanilla powder. All are lab-tested with a Certificate of Analysis, available with flexible order quantities, and exported with full documentation to 20+ countries."
+      />
 
       {/* Products */}
       <section className="py-16 lg:py-24 bg-white">
