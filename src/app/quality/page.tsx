@@ -9,11 +9,8 @@ import {
   Award,
   FlaskConical,
   Microscope,
-  Download,
-  FileText,
-  Stamp,
   Leaf,
-  ArrowRight,
+  Stamp,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
@@ -375,83 +372,6 @@ export default function QualityPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Downloadable Documents */}
-      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#2C2518] mb-4 text-center">
-            Downloadable Documents
-          </h2>
-          <p className="text-[#6B6358] text-center mb-12 max-w-2xl mx-auto">
-            Access our certifications and documentation. All documents are available
-            for download to verify our compliance and quality standards.
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Award,
-                title: "Halal Certificate (MUI)",
-                description:
-                  "Official MUI Halal certification with certificate number 123.1/ID-00123456789012",
-                filename: "halal-certificate-mui.pdf",
-                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
-              },
-              {
-                icon: Leaf,
-                title: "Phytosanitary Certificate",
-                description:
-                  "Issued by Indonesian Ministry of Agriculture (Direktorat Jenderal Perlindungan Tanaman)",
-                filename: "phytosanitary-certificate.pdf",
-                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
-              },
-              {
-                icon: Stamp,
-                title: "Certificate of Origin",
-                description:
-                  "Verified by KADIN (Kamar Dagang dan Industri Indonesia)",
-                filename: "certificate-of-origin.pdf",
-                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
-              },
-              {
-                icon: FileText,
-                title: "Certificate of Analysis (Grade A)",
-                description:
-                  "In-house QC verification with vanillin content analysis (1.3-2.7%)",
-                filename: "certificate-of-analysis.pdf",
-                color: "bg-[#F8F6F2] border border-[#E5E0D8]",
-              },
-            ].map((doc) => (
-              <div
-                key={doc.title}
-                className="bg-white rounded-xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className={`w-12 h-12 ${doc.color} rounded-lg flex items-center justify-center flex-shrink-0`}
-                  >
-                    <doc.icon className="w-6 h-6 text-[#B5A37A]" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-[#2C2518] mb-1">{doc.title}</h3>
-                    <p className="text-sm text-[#6B6358] mb-4">{doc.description}</p>
-                    <a
-                      href={`/documents/${doc.filename}`}
-                      download
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#2C2518] text-white rounded-lg text-sm font-medium hover:bg-[#3D3425] transition-colors"
-                    >
-                      <Download className="w-4 h-4" />
-                      Download PDF
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-[#6B6358] text-center mt-8">
-            Contact us for additional documentation or certified copies.
-          </p>
         </div>
       </section>
 
