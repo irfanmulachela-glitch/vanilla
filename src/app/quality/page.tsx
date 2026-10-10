@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -316,62 +315,56 @@ export default function QualityPage() {
       {/* Testing Protocol */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
-                Rigorous Testing Protocol
-              </h2>
-              <p className="text-[#6B6358] mb-6">
-                Our quality assurance process includes comprehensive testing at
-                multiple stages. We use advanced analytical equipment to verify
-                every specification we promise.
-              </p>
-              <div className="space-y-4">
-                {[
-                  {
-                    title: "Vanillin Content Analysis",
-                    description:
-                      "Gas chromatography testing to verify vanillin concentration meets specifications (1.3-2.7%).",
-                  },
-                  {
-                    title: "Moisture Content Testing",
-                    description:
-                      "Precise moisture measurement to ensure optimal preservation and quality (25-35% for Grade A).",
-                  },
-                  {
-                    title: "Sensory Evaluation",
-                    description:
-                      "Expert panel evaluation for aroma, flavor complexity, and overall quality assessment.",
-                  },
-                  {
-                    title: "Microbiological Testing",
-                    description:
-                      "Testing for harmful microorganisms to ensure food safety compliance.",
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-[#2C2518]">{item.title}</p>
-                      <p className="text-sm text-[#6B6358]">
-                        {item.description}
-                      </p>
-                    </div>
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
+              Rigorous Testing Protocol
+            </h2>
+            <p className="text-[#6B6358] leading-relaxed">
+              Our quality assurance process includes comprehensive testing at
+              multiple stages. We use advanced analytical equipment to verify
+              every specification we promise.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Vanillin Content Analysis",
+                description:
+                  "Gas chromatography testing to verify vanillin concentration meets specifications (1.3-2.7%).",
+              },
+              {
+                title: "Moisture Content Testing",
+                description:
+                  "Precise moisture measurement to ensure optimal preservation and quality (25-35% for Grade A).",
+              },
+              {
+                title: "Sensory Evaluation",
+                description:
+                  "Expert panel evaluation for aroma, flavor complexity, and overall quality assessment.",
+              },
+              {
+                title: "Microbiological Testing",
+                description:
+                  "Testing for harmful microorganisms to ensure food safety compliance.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+              >
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#B5A37A] mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-[#2C2518] mb-1">
+                      {item.title}
+                    </p>
+                    <p className="text-sm text-[#6B6358] leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600"
-                  alt="Quality testing laboratory"
-                  width={600}
-                  height={400}
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
