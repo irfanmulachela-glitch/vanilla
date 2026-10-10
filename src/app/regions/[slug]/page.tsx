@@ -431,7 +431,7 @@ export default async function RegionPage({
                   <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
                     View Product <ArrowRight className="w-4 h-4" />
                   </span>
-                  <span className="text-xs text-[#6B6358]">Flexible MOQ</span>
+                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
                 </div>
               </div>
             </Link>
@@ -465,7 +465,7 @@ export default async function RegionPage({
                   <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
                     View Product <ArrowRight className="w-4 h-4" />
                   </span>
-                  <span className="text-xs text-[#6B6358]">Flexible MOQ</span>
+                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
                 </div>
               </div>
             </Link>
@@ -499,7 +499,7 @@ export default async function RegionPage({
                   <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
                     View Product <ArrowRight className="w-4 h-4" />
                   </span>
-                  <span className="text-xs text-[#6B6358]">Flexible MOQ</span>
+                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
                 </div>
               </div>
             </Link>

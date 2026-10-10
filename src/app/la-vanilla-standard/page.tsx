@@ -90,7 +90,7 @@ const steps = [
       "Air freight from Indonesia",
       "Flexible shipping options",
       "Temperature-controlled packaging",
-      "Flexible order quantities for wholesale",
+      "Order quantities from 1 kg for wholesale",
     ],
   },
 ];

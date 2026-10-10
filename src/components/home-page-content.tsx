@@ -354,7 +354,7 @@ export function HomePageContent() {
                     { spec: "Vanillin Content", gradeA: "1.3–2.7%", gradeB: "1.3–2.2%" },
                     { spec: "Bean Length", gradeA: "15–20 cm", gradeB: "10–15 cm" },
                     { spec: "Curing Period", gradeA: "6–9 months", gradeB: "6–9 months" },
-                    { spec: "MOQ", gradeA: "Flexible", gradeB: "Flexible" },
+                    { spec: "MOQ", gradeA: "From 1 kg", gradeB: "From 1 kg" },
                     { spec: "HS Code", gradeA: "0905.10", gradeB: "0905.10" },
                   ].map((row, index) => (
                     <tr key={row.spec} className={index % 2 === 0 ? "bg-white" : "bg-[#F8F6F2]"}>
@@ -470,7 +470,7 @@ export function HomePageContent() {
             >
               <Package className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
               <h3 className="font-semibold text-[#2C2518]">{t.nav.wholesale}</h3>
-              <p className="text-sm text-[#6B6358]">Flexible order quantities</p>
+              <p className="text-sm text-[#6B6358]">Orders from 1 kg</p>
             </Link>
             <Link
               href={`${prefix}/regions/uae`}
@@ -594,8 +594,8 @@ export function HomePageContent() {
             Ready to Start Your Vanilla Journey?
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
-              Get a free sample and quote within 24 hours. Flexible order quantities available.
-            Free samples available. 5 kg trial orders at wholesale pricing.
+              Get a free sample and quote within 24 hours.
+              Free samples available. Orders from 1 kg at wholesale pricing.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

@@ -74,7 +74,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
             url: "https://www.lavanillasupplier.com",
             logo: "https://www.lavanillasupplier.com/logo.png",
             description:
-              "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Sun-cured on volcanic soil. Flexible order quantities. Air freight from Indonesia.",
+              "Indonesian vanilla supplier exporting Vanilla planifolia beans, vanilla paste and vanilla powder to food manufacturers and distributors. Sun-cured on volcanic soil. Order quantities from 1 kg. Air freight from Indonesia.",
             email: "admin@lavanillasupplier.com",
             telephone: "+6287835756945",
             address: {

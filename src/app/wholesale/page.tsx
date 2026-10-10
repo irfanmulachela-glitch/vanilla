@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "What is the minimum order quantity?",
-    a: "Order quantities are flexible. Free samples are available for evaluation, trial orders are welcome, and we can supply consistent monthly volumes well beyond 100 kg for established partners.",
+    a: "Order quantities start from 1 kg. Free samples are available for evaluation, and we supply consistent monthly volumes well beyond 100 kg for established partners.",
   },
   {
     q: "Can I order samples before a bulk order?",
@@ -93,7 +93,7 @@ export default function WholesalePage() {
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed mb-8">
               Premium Indonesian vanilla beans, paste, and powder at wholesale
-              prices. Direct from source, no middlemen. Flexible order quantities. Export to 20+
+              prices. Direct from source, no middlemen. Order quantities from 1 kg. Export to 20+
               countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -139,7 +139,7 @@ export default function WholesalePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "Flexible", label: "Order Quantity" },
+              { value: "1 kg", label: "Minimum Order" },
               { value: "20+", label: "Countries Served" },
               { value: "10+", label: "Years Experience" },
               { value: "150+", label: "Tons Exported" },
@@ -417,8 +417,8 @@ export default function WholesalePage() {
             Ready to Buy Wholesale Vanilla?
           </h2>
           <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
-            Get a free sample and quote within 24 hours. Flexible order quantities.
-            Free samples available. Trial orders welcome.
+            Get a free sample and quote within 24 hours.
+            Free samples available. Orders start from 1 kg.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

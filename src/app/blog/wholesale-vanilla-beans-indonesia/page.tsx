@@ -146,10 +146,10 @@ export default function WholesaleVanillaBeansIndonesia() {
               Order Quantities and Pricing Structure
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Wholesale vanilla bean orders have flexible order quantities. At La Vanilla Supplier, we offer low minimums for trial orders while supporting volume scaling for established buyers.
+              Wholesale vanilla bean orders start from as little as 1 kg at La Vanilla Supplier, while we support volume scaling for established buyers.
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-8 pl-4">
-              <li>Trial orders: 25-50 kg</li>
+              <li>Starter orders: from 1 kg</li>
               <li>Standard wholesale: 100-500 kg</li>
               <li>Volume contracts: 500+ kg with custom pricing</li>
             </ul>
@@ -185,7 +185,7 @@ export default function WholesaleVanillaBeansIndonesia() {
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-8 pl-4">
               <li>Quality testing: Vanillin content via GC analysis, moisture testing</li>
               <li>Documentation: Full export documentation with every shipment</li>
-              <li>Order flexibility: Willingness to start with trial orders</li>
+              <li>Order flexibility: Willingness to accept small starting orders</li>
               <li>Communication: Response time and clarity</li>
               <li>Track record: Export experience to your destination country</li>
             </ul>
@@ -209,7 +209,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               Getting Started
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Start by requesting samples to evaluate quality firsthand. Then place a trial order of 25-50 kg before committing to larger volumes. This approach minimizes risk while building a reliable supply relationship.
+              Start by requesting samples to evaluate quality firsthand. Then place a small starter order — from 1 kg — before committing to larger volumes. This approach minimizes risk while building a reliable supply relationship.
             </p>
           </div>
 

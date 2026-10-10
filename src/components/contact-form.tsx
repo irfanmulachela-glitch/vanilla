@@ -291,7 +291,7 @@ export function ContactForm() {
                       type="text"
                       id="quantity"
                       name="quantity"
-                      placeholder="e.g., 50 kg"
+                      placeholder="e.g., 1 kg"
                       value={formData.quantity}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"

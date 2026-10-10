@@ -211,7 +211,7 @@ export default function HowToChooseRightVanillaSupplier() {
               <li>Request and review Certificate of Analysis from recent batches</li>
               <li>Verify company registration and business license</li>
               <li>Check certifications against issuing body databases</li>
-              <li>Request sample order (25-50 kg) before bulk commitment</li>
+              <li>Request a small starter order before bulk commitment</li>
               <li>Confirm payment terms and escrow options for first orders</li>
               <li>Verify shipping experience with your destination country</li>
               <li>Request customer references in your industry</li>

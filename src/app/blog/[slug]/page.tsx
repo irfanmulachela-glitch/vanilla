@@ -554,12 +554,12 @@ const blogPosts = {
     date: "2026-02-15",
     readTime: "9 min read",
     content: `
-      <p>La Vanilla Supplier offers flexible order quantities starting at 1–5 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping FOB from Indonesian ports with CIF and DDP door-to-door options available for bulk vanilla orders worldwide.</p>
+      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping FOB from Indonesian ports with CIF and DDP door-to-door options available for bulk vanilla orders worldwide.</p>
 
       <h2>Understanding Order Quantities</h2>
       <p>Order quantities vary by supplier and product:</p>
       <ul>
-        <li><strong>Sample orders:</strong> 1-5 kg for quality evaluation</li>
+        <li><strong>Sample orders:</strong> from 1 kg for quality evaluation</li>
         <li><strong>Small wholesale:</strong> flexible quantities for most suppliers</li>
         <li><strong>Standard wholesale:</strong> larger quantities for better pricing</li>
         <li><strong>Bulk orders:</strong> maximum cost savings</li>
@@ -613,7 +613,7 @@ const blogPosts = {
       <h2>Tips for First-Time Buyers</h2>
       <p>Start your bulk vanilla procurement right:</p>
       <ul>
-        <li>Begin with a trial order to verify quality</li>
+        <li>Begin with a small order to verify quality</li>
         <li>Get all specifications in writing</li>
         <li>Establish clear communication channels</li>
         <li>Build a relationship with your supplier</li>
@@ -731,7 +731,7 @@ const blogPosts = {
         <li>Year-round production (not seasonal like some origins)</li>
         <li>Established export infrastructure</li>
         <li>Multiple shipping ports (Semarang, Jakarta, Surabaya)</li>
-        <li>Flexible order quantities</li>
+        <li>Order quantities from 1 kg</li>
       </ul>
 
       <h2>Strategic Location</h2>
@@ -766,7 +766,7 @@ const blogPosts = {
       <ul>
         <li>Request samples from multiple suppliers</li>
         <li>Compare pricing and quality specifications</li>
-        <li>Start with a trial order to verify quality</li>
+        <li>Start with a small order to verify quality</li>
         <li>Build a long-term supplier relationship</li>
       </ul>
     `,

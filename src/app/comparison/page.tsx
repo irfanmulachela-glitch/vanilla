@@ -114,8 +114,8 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "MOQ",
-                    gradeA: "Flexible",
-                    gradeB: "Flexible",
+                    gradeA: "From 1 kg",
+                    gradeB: "From 1 kg",
                   },
                   {
                     spec: "HS Code",

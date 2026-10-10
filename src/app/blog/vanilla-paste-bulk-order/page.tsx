@@ -213,7 +213,7 @@ export default function VanillaPasteBulkOrder() {
               Need Bulk Vanilla Paste?
             </h3>
             <p className="text-[#6B6358] mb-6">
-              Request samples or discuss custom formulations with our team. Flexible order quantities, export to 20+ countries.
+              Request samples or discuss custom formulations with our team. Order quantities from 1 kg, export to 20+ countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors">

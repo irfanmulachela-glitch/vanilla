@@ -38,7 +38,7 @@ const faqs = [
     questions: [
       {
         q: "What are the order quantities?",
-        a: "We offer flexible order quantities to suit your needs. Free samples are available for evaluation, and trial orders are welcome. We believe in building long-term partnerships, so we're happy to start with whatever quantity works for you.",
+        a: "Order quantities start from as little as 1 kg. Free samples are available for evaluation, and we're happy to start with whatever quantity works for you — we believe in building long-term partnerships.",
       },
       {
         q: "Can I order samples before placing a bulk order?",

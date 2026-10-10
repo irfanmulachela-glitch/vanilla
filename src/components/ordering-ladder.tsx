@@ -12,10 +12,10 @@ const tiers = [
   },
   {
     icon: FlaskConical,
-    title: "Trial Order",
-    quantity: "5 kg",
+    title: "Small Order",
+    quantity: "From 1 kg",
     description:
-      "Large enough for your QC team to lab-test and run through your process. Priced at wholesale rates.",
+      "Enough for your QC team to lab-test and run through your process. Priced at wholesale rates.",
     highlight: false,
   },
   {
@@ -38,8 +38,8 @@ export default function OrderingLadder() {
           </h2>
           <p className="text-sm text-[#6B6358] max-w-2xl mx-auto">
             Three ways to begin, each with zero risk. Start with a free sample to
-            assess quality, or go straight to a 5 kg trial before committing to
-            a standard order.
+            assess quality, or order from just 1 kg before committing to
+            standard volume.
           </p>
         </div>
 
