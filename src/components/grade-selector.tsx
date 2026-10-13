@@ -243,7 +243,7 @@ export default function GradeSelector() {
                   src="/vanilla-beans.jpg"
                   alt={grade.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[60%_50%]"
                   priority
                 />
               </div>

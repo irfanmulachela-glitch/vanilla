@@ -194,11 +194,7 @@ export default async function ProductPage({ params }: PageProps) {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className={
-                    product.slug === "vanilla-beans"
-                      ? "object-cover object-[60%_50%]"
-                      : "object-cover"
-                  }
+                  className="object-cover"
                   priority
                 />
               </div>
