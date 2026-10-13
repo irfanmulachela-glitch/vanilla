@@ -297,9 +297,9 @@ export default function QualityPage() {
                 icon: FileCheck,
               },
             ].map((item) => (
-              <div key={item.step} className="bg-white rounded-xl p-6 shadow-sm border border-[#E5E0D8]">
+              <div key={item.step} className="bg-white rounded-xl p-6 shadow-sm border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl font-bold text-[#B5A37A]">
+                  <span className="w-11 h-11 rounded-lg bg-[#2C2518] text-[#B5A37A] text-lg font-bold flex items-center justify-center flex-shrink-0">
                     {item.step}
                   </span>
                   <item.icon className="w-6 h-6 text-[#B5A37A]" />
