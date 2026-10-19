@@ -58,8 +58,18 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-[#2C2518] text-white py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/la-vanilla-standard-hero.webp"
+            alt="Indonesian vanilla beans drying on traditional curing racks"
+            fill
+            className="object-cover object-[50%_55%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/80 to-[#2C2518]/45" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Our Vanilla <span className="text-[#B5A37A]">Products</span>
