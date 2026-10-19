@@ -71,7 +71,7 @@ export default function ProductsPage() {
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
               Our Vanilla <span className="text-[#B5A37A]">Products</span>
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed">
