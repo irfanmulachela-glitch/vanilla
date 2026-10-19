@@ -99,7 +99,7 @@ export default function LaVanillaStandardPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden flex items-center min-h-[590px]">
+      <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden flex items-center min-h-[565px] sm:min-h-[390px] md:min-h-[376px] lg:min-h-[455px] xl:min-h-[545px]">
         <div className="absolute inset-0">
           <Image
             src="/la-vanilla-standard-hero.webp"
