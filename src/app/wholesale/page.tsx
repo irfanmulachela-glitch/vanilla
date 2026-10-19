@@ -116,12 +116,6 @@ export default function WholesalePage() {
         </div>
       </section>
 
-      {/* Quick Answer */}
-      <QuickAnswer
-        question="What is wholesale vanilla from La Vanilla Supplier?"
-        answer="We produce and export wholesale vanilla directly from Surakarta, Central Java: Grade A and Grade B vanilla beans, custom vanilla paste, and 100% pure vanilla powder. Every order is lab-tested with a Certificate of Analysis, flexible in quantity, Halal certified, and shipped with full export documentation to 20+ countries."
-      />
-
       {/* Stats Bar */}
       <section className="py-12 bg-[#F8F6F2] border-b border-[#E5E0D8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,6 +134,12 @@ export default function WholesalePage() {
           </div>
         </div>
       </section>
+
+      {/* Quick Answer */}
+      <QuickAnswer
+        question="What is wholesale vanilla from La Vanilla Supplier?"
+        answer="Buying wholesale means ordering vanilla in larger volumes directly from us in Indonesia, where the price per kilo drops as your order grows compared to small-quantity buying. If you purchase regularly, we can also set up a supply contract that holds your volume and pricing steady across shipments, so your costs stay predictable throughout the year."
+      />
 
       {/* Benefits */}
       <section className="py-16 lg:py-24 bg-white">
