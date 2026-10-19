@@ -21,14 +21,14 @@ const tiers = [
 
 export default function OrderingLadder() {
   return (
-    <section className="bg-[#F8F6F2] py-12 lg:py-16">
+    <section className="bg-[#2C2518] py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="w-10 h-0.5 bg-[#B5A37A] mx-auto mb-4" />
-          <h2 className="text-xl font-semibold uppercase tracking-wider text-[#2C2518] mb-3">
+          <h2 className="text-xl font-semibold uppercase tracking-wider text-[#F8F6F2] mb-3">
             How to Start Ordering
           </h2>
-          <p className="text-sm text-[#6B6358] max-w-2xl mx-auto">
+          <p className="text-sm text-stone-300 max-w-2xl mx-auto">
             Three ways to begin, each with zero risk. Start with a free sample to
             assess quality, or order from just 1 kg before committing to
             standard volume.
