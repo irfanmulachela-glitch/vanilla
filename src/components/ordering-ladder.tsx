@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { FlaskConical, Package, Gift, ArrowRight } from "lucide-react";
+import { FlaskConical, Package, Gift } from "lucide-react";
 
 const tiers = [
   {
@@ -33,7 +32,8 @@ export default function OrderingLadder() {
     <section className="bg-[#F8F6F2] py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-xl font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-sm">
+          <div className="w-10 h-0.5 bg-[#B5A37A] mx-auto mb-4" />
+          <h2 className="text-xl font-semibold uppercase tracking-wider text-[#2C2518] mb-3">
             How to Start Ordering
           </h2>
           <p className="text-sm text-[#6B6358] max-w-2xl mx-auto">
@@ -47,12 +47,15 @@ export default function OrderingLadder() {
           {tiers.map((tier, i) => (
             <div
               key={tier.title}
-              className={`p-6 rounded-xl border ${
+              className={`relative p-6 rounded-xl border transition-all ${
                 tier.highlight
-                  ? "border-[#B5A37A] bg-white"
-                  : "border-[#D8D3C9] bg-white hover:border-[#B5A37A]/50"
-              } transition-colors`}
+                  ? "border-[#B5A37A] bg-[#B5A37A]/[0.07]"
+                  : "border-[#D8D3C9] bg-white hover:border-[#B5A37A]/60 hover:-translate-y-0.5 hover:shadow-md"
+              }`}
             >
+              <span className="absolute top-5 right-5 text-xs font-bold tracking-widest text-[#B5A37A]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center">
                   <tier.icon className="w-5 h-5 text-[#B5A37A]" />
@@ -67,21 +70,8 @@ export default function OrderingLadder() {
               <p className="text-sm text-[#6B6358] leading-relaxed">
                 {tier.description}
               </p>
-              {i < tiers.length - 1 && (
-                <div className="mt-6 pt-4 border-t border-[#E5E0D8]" />
-              )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors text-sm"
-          >
-            Request a Sample
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
         </div>
       </div>
     </section>
