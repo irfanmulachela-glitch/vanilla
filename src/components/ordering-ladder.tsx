@@ -42,8 +42,8 @@ export default function OrderingLadder() {
               className="p-6 rounded-xl border-2 border-[#B5A37A] bg-white"
             >
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-4xl leading-none font-normal text-[#B5A37A] font-[family-name:var(--font-libre)]">
-                  {String(i + 1).padStart(2, "0")}
+                <span className="text-4xl leading-none font-light tracking-wide text-[#B5A37A]">
+                  {i + 1}
                 </span>
                 <div>
                   <p className="font-semibold text-[#2C2518]">{tier.title}</p>
