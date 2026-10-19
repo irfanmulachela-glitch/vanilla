@@ -39,14 +39,12 @@ export default function OrderingLadder() {
           {tiers.map((tier, i) => (
             <div
               key={tier.title}
-              className="p-6 rounded-xl border border-[#B5A37A] bg-white"
+              className="p-6 rounded-xl border-2 border-[#B5A37A] bg-white"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center shrink-0">
-                  <span className="text-sm font-bold tracking-wider text-[#B5A37A]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl leading-none font-normal text-[#B5A37A] font-[family-name:var(--font-libre)]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <div>
                   <p className="font-semibold text-[#2C2518]">{tier.title}</p>
                   <p className="text-xs font-medium text-[#B5A37A]">
