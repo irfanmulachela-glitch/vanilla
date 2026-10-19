@@ -1,29 +1,21 @@
-import { FlaskConical, Package, Gift } from "lucide-react";
-
 const tiers = [
   {
-    icon: Gift,
     title: "Free Sample",
     quantity: "Small sample",
     description:
       "Assess bean length, colour, oiliness, and aroma by hand before committing.",
-    highlight: false,
   },
   {
-    icon: FlaskConical,
     title: "Small Order",
     quantity: "From 1 kg",
     description:
       "Enough for your QC team to lab-test and run through your process. Priced at wholesale rates.",
-    highlight: false,
   },
   {
-    icon: Package,
     title: "Standard Order",
     quantity: "Flexible quantities",
     description:
       "The normal wholesale minimum with full documentation package: CoA, Phytosanitary Certificate, and Certificate of Origin.",
-    highlight: true,
   },
 ];
 
@@ -47,18 +39,13 @@ export default function OrderingLadder() {
           {tiers.map((tier, i) => (
             <div
               key={tier.title}
-              className={`relative p-6 rounded-xl border transition-all ${
-                tier.highlight
-                  ? "border-[#B5A37A] bg-[#B5A37A]/[0.07]"
-                  : "border-[#D8D3C9] bg-white hover:border-[#B5A37A]/60 hover:-translate-y-0.5 hover:shadow-md"
-              }`}
+              className="p-6 rounded-xl border border-[#B5A37A] bg-white"
             >
-              <span className="absolute top-5 right-5 text-xs font-bold tracking-widest text-[#B5A37A]">
-                {String(i + 1).padStart(2, "0")}
-              </span>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center">
-                  <tier.icon className="w-5 h-5 text-[#B5A37A]" />
+                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center shrink-0">
+                  <span className="text-sm font-bold tracking-wider text-[#B5A37A]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
                 </div>
                 <div>
                   <p className="font-semibold text-[#2C2518]">{tier.title}</p>
