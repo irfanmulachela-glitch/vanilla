@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inter, Libre_Baskerville } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { FloatingButtons } from "@/components/floating-buttons";
 import { OverlayScrollbar } from "@/components/scrollbar";
 import { LocaleProvider } from "@/components/locale-provider";
 import { siteConfig } from "@/lib/config";
@@ -113,6 +114,7 @@ export default function RootLayout({
           <Navigation />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingButtons />
         </LocaleProvider>
       </body>
     </html>
