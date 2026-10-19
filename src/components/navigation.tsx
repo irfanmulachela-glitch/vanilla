@@ -11,20 +11,13 @@ import { useLocaleContext } from "./locale-provider";
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [megaOpen, setMegaOpen] = useState(false);
   const { locale, t } = useLocaleContext();
 
   const prefix = locale === "en" ? "" : `/${locale}`;
 
-  const megaDescriptions: Record<string, string> = {
-    "vanilla-beans": "Grade A gourmet & Grade B extraction, sun-cured 6-9 months",
-    "vanilla-paste": "Custom vanillin, sugar & viscosity for your formulation",
-    "vanilla-powder": "40-80 mesh, 100% pure, no fillers or additives",
-  };
-
   const navigation: { name: string; href: string; mega?: boolean }[] = [
     { name: t.nav.home, href: `${prefix}/` },
-    { name: t.nav.products, href: `${prefix}/products`, mega: true },
+    { name: t.nav.products, href: `${prefix}/products` },
     { name: t.nav.wholesale, href: `${prefix}/wholesale` },
     { name: t.nav.ourStandard, href: `${prefix}/la-vanilla-standard` },
     { name: t.nav.blog, href: `${prefix}/blog` },
@@ -78,98 +71,24 @@ export function Navigation() {
             {/* Desktop navigation + CTA grouped right */}
             <div className="hidden lg:flex items-center gap-6">
               <nav className="flex items-center gap-1">
-                {navigation.map((item) =>
-                  item.mega ? (
-                    <div
-                      key={item.name}
-                      className="relative"
-                      onMouseEnter={() => setMegaOpen(true)}
-                      onMouseLeave={() => setMegaOpen(false)}
-                    >
-                      <Link
-                        href={item.href}
-                        className={`relative block px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
-                          !scrolled
-                            ? "text-[#2C2518]/60 hover:text-[#2C2518]"
-                            : "text-white/60 hover:text-white"
-                        }`}
-                      >
-                        {item.name}
-                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full bg-[#B5A37A] transition-all duration-300 group-hover:w-5" />
-                      </Link>
-
-                      {/* Mega menu panel */}
-                      <div
-                        className={`absolute left-1/2 -translate-x-1/2 top-full z-50 transition-all duration-300 ${
-                          megaOpen
-                            ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-2 pointer-events-none"
-                        }`}
-                      >
-                        <div className="pt-3">
-                          <div className="w-[620px] bg-white border border-[#E5E0D8] rounded-2xl shadow-2xl shadow-[#2C2518]/15 overflow-hidden">
-                            <div className="grid grid-cols-[210px_1fr]">
-                              <div className="relative m-4 rounded-xl overflow-hidden bg-[#F8F6F2]">
-                                <Image
-                                  src="/vanilla-beans.jpg"
-                                  alt="Indonesian vanilla beans"
-                                  fill
-                                  sizes="210px"
-                                  className="object-cover"
-                                />
-                              </div>
-                              <div className="p-4 pr-5">
-                                <Link
-                                  href={`${prefix}/products`}
-                                  className="flex items-center justify-between px-4 py-2.5 mb-1 border-b border-[#E5E0D8] text-[11px] font-semibold tracking-widest uppercase text-[#2C2518] hover:text-[#B5A37A] transition-colors"
-                                  onClick={() => setMegaOpen(false)}
-                                >
-                                  All Products
-                                  <ArrowRight className="w-3.5 h-3.5 text-[#B5A37A]" />
-                                </Link>
-                                {siteConfig.products.map((product) => (
-                                  <Link
-                                    key={product.slug}
-                                    href={`${prefix}/products/${product.slug}`}
-                                    className="group flex items-start justify-between gap-3 px-4 py-3 rounded-xl hover:bg-[#F8F6F2] transition-colors"
-                                    onClick={() => setMegaOpen(false)}
-                                  >
-                                    <div>
-                                      <p className="text-sm font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
-                                        {product.name}
-                                      </p>
-                                      <p className="text-[13px] text-[#6B6358] leading-snug mt-0.5">
-                                        {megaDescriptions[product.slug]}
-                                      </p>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 text-[#B5A37A] opacity-0 group-hover:opacity-100 transition-opacity mt-1 flex-shrink-0" />
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={`relative px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
-                        !scrolled
-                          ? "text-[#2C2518]/60 hover:text-[#2C2518]"
-                          : "text-white/60 hover:text-white"
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase transition-colors duration-300 group ${
+                      !scrolled
+                        ? "text-[#2C2518]/60 hover:text-[#2C2518]"
+                        : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    {item.name}
+                    <span
+                      className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full transition-all duration-300 group-hover:w-5 ${
+                        !scrolled ? "bg-[#B5A37A]" : "bg-[#B5A37A]"
                       }`}
-                    >
-                      {item.name}
-                      <span
-                        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] rounded-full transition-all duration-300 group-hover:w-5 ${
-                          !scrolled ? "bg-[#B5A37A]" : "bg-[#B5A37A]"
-                        }`}
-                      />
-                    </Link>
-                  )
-                )}
+                    />
+                  </Link>
+                ))}
               </nav>
 
               {/* Language Switcher */}
