@@ -58,7 +58,7 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white py-16 lg:py-24 overflow-hidden">
+      <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden flex items-center min-h-[590px]">
         <div className="absolute inset-0">
           <Image
             src="/la-vanilla-standard-hero.webp"
@@ -69,7 +69,7 @@ export default function ProductsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/80 to-[#2C2518]/45" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Our Vanilla <span className="text-[#B5A37A]">Products</span>
