@@ -6,14 +6,20 @@ import {
   ArrowRight,
   CheckCircle2,
   FileCheck,
-  Truck,
-  Shield,
   MessageSquare,
   Star,
   Package,
   Leaf,
   Clock,
   Award,
+  Plane,
+  IceCreamCone,
+  Croissant,
+  Coffee,
+  Candy,
+  Milk,
+  Wheat,
+  CupSoda,
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
@@ -24,6 +30,32 @@ import OrderingLadder from "@/components/ordering-ladder";
 const SPEC_LABELS: Record<string, string> = {
   moq: "MOQ",
   hsCode: "HS Code",
+};
+
+const usesByCategory: Record<string, { icon: typeof Plane; label: string }[]> = {
+  beans: [
+    { icon: IceCreamCone, label: "Ice Cream & Gelato" },
+    { icon: Croissant, label: "Bakery & Pastry" },
+    { icon: Coffee, label: "Coffee & Beverages" },
+    { icon: Candy, label: "Chocolate & Confectionery" },
+    { icon: Milk, label: "Dairy & Yogurt" },
+    { icon: Wheat, label: "Retail & Culinary" },
+  ],
+  paste: [
+    { icon: IceCreamCone, label: "Ice Cream & Gelato" },
+    { icon: Croissant, label: "Bakery & Pastry" },
+    { icon: Coffee, label: "Coffee & Beverages" },
+    { icon: Candy, label: "Confectionery" },
+    { icon: CupSoda, label: "Beverage Production" },
+    { icon: Milk, label: "Dairy & Yogurt" },
+  ],
+  powder: [
+    { icon: Wheat, label: "Dry Baking Mixes" },
+    { icon: CupSoda, label: "Instant Beverages" },
+    { icon: Candy, label: "Confectionery" },
+    { icon: Milk, label: "Dairy Applications" },
+    { icon: Croissant, label: "Bakery Manufacturing" },
+  ],
 };
 
 const SEO: Record<string, { title: string; description: string }> = {
@@ -102,6 +134,8 @@ export default async function ProductPage({ params }: PageProps) {
   if (slug === "vanilla-beans") {
     return <GradeSelector />;
   }
+
+  const uses = usesByCategory[product.category] ?? [];
 
   return (
     <>
@@ -203,26 +237,40 @@ export default async function ProductPage({ params }: PageProps) {
             {/* Quick Info */}
             <div className="flex flex-col justify-between h-full">
               <div>
-              <h2 className="text-xl font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-sm">
+              <h2 className="text-xl font-semibold uppercase tracking-wider text-[#2C2518] mb-3">
                 Quick Overview
               </h2>
               <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
                 {product.category === "beans" && (
-                  <>La Vanilla Supplier is a trusted <strong className="text-[#2C2518]">wholesale vanilla bean supplier from Indonesia</strong>, offering premium Grade A gourmet and Grade B extraction beans sourced directly from Javanese farmers. Our <strong className="text-[#2C2518]">V. planifolia vanilla beans</strong> are sun-cured for 6-9 months, achieving 1.3-2.7% vanillin content. Every batch is lab-tested with Certificate of Analysis. We export to 20+ countries with order quantities from 1 kg, shipping air freight from Indonesia. Halal certified, Phytosanitary compliant.</>
+                  <>These are big, oily, flexible <strong className="text-[#2C2518]">V. planifolia vanilla beans</strong>, hand-picked at peak maturity from Javanese farmers and sun-cured for 6-9 months until the aroma turns deep and sweet. As a <strong className="text-[#2C2518]">wholesale vanilla bean supplier from Indonesia</strong>, we ship every batch with a Certificate of Analysis, from just 1 kg, air freight from Indonesia in 4-7 days. Halal certified, Phytosanitary compliant.</>
                 )}
                 {product.category === "paste" && (
-                  <>La Vanilla Supplier is a <strong className="text-[#2C2518]">bulk vanilla paste manufacturer</strong> serving food producers worldwide. Our vanilla paste is made from 100% Indonesian vanilla beans with no synthetic additives or fillers. We offer <strong className="text-[#2C2518]">custom vanilla paste formulations</strong> with adjustable vanillin concentration (1.3-2.7%), sugar content, and viscosity. Perfect for ice cream, bakery, confectionery, and beverage production. Halal certified facility. Order quantities from 1 kg, air freight from Indonesia.</>
+                  <>Our vanilla paste is thick, glossy, and flecked with real bean seeds, the kind that makes a kitchen smell like fresh-ground vanilla the moment you open the tub. Made from 100% Indonesian vanilla beans with no fillers, and as your <strong className="text-[#2C2518]">bulk vanilla paste manufacturer</strong> we tune every batch to your line: strength (1.3-2.7%), sugar, and viscosity. <strong className="text-[#2C2518]">Custom vanilla paste formulations</strong> stay simple to order, from just 1 kg. Halal certified facility, air freight from Indonesia in 4-7 days.</>
                 )}
                 {product.category === "powder" && (
-                  <>La Vanilla Supplier produces <strong className="text-[#2C2518]">100% pure vanilla powder</strong> from premium cured Indonesian vanilla beans. Our spray-dried vanilla powder is finely ground to 40-80 mesh with zero fillers, zero additives, and less than 5% moisture. Ideal for <strong className="text-[#2C2518]">dry baking mixes, instant beverages, confectionery, and dairy applications</strong>. Long shelf life, consistent flavor. Order quantities from 1 kg, air freight from Indonesia.</>
+                  <>Our <strong className="text-[#2C2518]">100% pure vanilla powder</strong> is milled from premium cured Indonesian beans to a fine 40-80 mesh: no fillers, no additives, under 5% moisture. It smells warm and sweet the moment you open the bag, and keeps that character for a long shelf life. It works anywhere liquid extract won't: <strong className="text-[#2C2518]">dry baking mixes, instant beverages, confectionery, and dairy applications</strong>. Consistent flavor batch after batch, from just 1 kg, air freight from Indonesia in 4-7 days.</>
                 )}
               </p>
+              <div className="mb-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#B5A37A] mb-3">
+                  What buyers use it for
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {uses.map((use) => (
+                    <span
+                      key={use.label}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#E5E0D8] bg-[#F8F6F2] text-xs font-medium text-[#2C2518]"
+                    >
+                      <use.icon className="w-3.5 h-3.5 text-[#B5A37A]" />
+                      {use.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { icon: Shield, label: "Quality Assured", value: "Lab-Tested", desc: "Third-party vanillin verification" },
-                  { icon: Package, label: "Order Quantity", value: "From 1 kg", desc: "Sample orders available" },
-                  { icon: Truck, label: "Shipping Terms", value: "FCA / CPT / DDP", desc: "Air freight worldwide" },
-                  { icon: FileCheck, label: "Documents", value: "All Included", desc: "CoA, Phytosanitary, COO" },
+                  { icon: Plane, label: "Air Freight", value: "4-7 Days", desc: "Direct from Indonesia, tracked worldwide" },
+                  { icon: Package, label: "Minimum Order", value: "From 1 kg", desc: "Samples available before you commit" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
