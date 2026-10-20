@@ -31,6 +31,7 @@ type Grade = "a" | "b";
 const gradeData = {
   a: {
     title: "Grade A Gourmet Vanilla Beans",
+    image: "/vanilla-beans.jpg",
     subtitle: "Grade A Gourmet Vanilla Beans",
     heroTitle: "Indonesian Vanilla Beans — Grade A Gourmet",
     heroTagline: "Direct from Java. Sun-cured 6-9 months. 15-20 cm. 1.3-2.7% vanillin.",
@@ -94,6 +95,7 @@ const gradeData = {
   },
   b: {
     title: "Grade B Extraction Vanilla Beans",
+    image: "/vanilla-beans-grade-b.webp",
     subtitle: "Grade B Extraction Vanilla Beans",
     heroTitle: "Indonesian Vanilla Beans — Grade B Extraction",
     heroTagline: "Cost-effective for manufacturing. 10-15 cm. 1.3-2.2% vanillin. Lower moisture.",
@@ -235,7 +237,7 @@ export default function GradeSelector() {
             <div className="sticky top-24 h-full">
               <div className="relative rounded-2xl overflow-hidden border border-[#E5E0D8] bg-[#F8F6F2] h-full">
                 <Image
-                  src="/vanilla-beans.jpg"
+                  src={grade.image}
                   alt={grade.title}
                   fill
                   className="object-cover"
