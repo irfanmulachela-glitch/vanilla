@@ -83,6 +83,25 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Stats Bar */}
+      <section aria-label="Key figures" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "1 kg", label: "Minimum Order" },
+              { value: "3-7 Days", label: "Air Freight" },
+              { value: "10+", label: "Years Experience" },
+              { value: "20+", label: "Countries Served" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p className="text-sm text-[#6B6358]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quick Answer */}
       <QuickAnswer
         question="What vanilla products can I buy from La Vanilla Supplier?"
