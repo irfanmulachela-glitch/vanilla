@@ -211,7 +211,7 @@ export default function ProductsPage() {
               <div className="relative hidden lg:block">
                 <div className="aspect-square rounded-2xl overflow-hidden border border-[#E5E0D8]">
                   <Image
-                    src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=600"
+                    src="/vanilla-paste.jpg"
                     alt="Custom vanilla paste formulation"
                     width={500}
                     height={500}
