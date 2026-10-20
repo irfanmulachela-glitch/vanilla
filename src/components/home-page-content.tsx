@@ -3,17 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ShieldCheck,
   Globe,
-  Award,
   Users,
   ArrowRight,
   CheckCircle2,
   Star,
   Package,
   MapPin,
-  FileCheck,
-  Truck,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { AnimatedCounter } from "@/components/animated-counter";
@@ -75,26 +71,22 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Trust Badge Strip */}
-      <section aria-label="Trust indicators" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-4">
-          {[
-            { icon: Award, label: "10+ Years Experience" },
-            { icon: ShieldCheck, label: "Halal Certified" },
-            { icon: FileCheck, label: "Full Documentation" },
-            { icon: Truck, label: "Air Freight 3-7 Days" },
-            { icon: Package, label: "MOQ from 1 kg" },
-          ].map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center justify-center gap-2.5 last:col-span-2 md:last:col-span-1"
-            >
-              <Icon className="w-5 h-5 text-[#B5A37A] flex-shrink-0" aria-hidden="true" />
-              <span className="text-[13px] sm:text-sm font-medium text-[#2C2518] text-left leading-tight">
-                {label}
-              </span>
-            </div>
-          ))}
+      {/* Stats Bar */}
+      <section aria-label="Key figures" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "1 kg", label: "Minimum Order" },
+              { value: "3-7 Days", label: "Air Freight" },
+              { value: "10+", label: "Years Experience" },
+              { value: "20+", label: "Countries Served" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p className="text-sm text-[#6B6358]">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
