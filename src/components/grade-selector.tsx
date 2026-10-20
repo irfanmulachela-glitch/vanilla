@@ -6,9 +6,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
-  FileCheck,
-  Truck,
-  Shield,
   MessageSquare,
   Package,
   Star,
@@ -16,6 +13,14 @@ import {
   Award,
   FlaskConical,
   Factory,
+  Plane,
+  IceCreamCone,
+  Croissant,
+  Coffee,
+  Candy,
+  Milk,
+  Bean,
+  CupSoda,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
@@ -30,7 +35,7 @@ const gradeData = {
     heroTitle: "Indonesian Vanilla Beans — Grade A Gourmet",
     heroTagline: "Direct from Java. Sun-cured 6-9 months. 15-20 cm. 1.3-2.7% vanillin.",
     description:
-      "La Vanilla Supplier sources Grade A Gourmet vanilla beans directly from Indonesian smallholder farmers in Central Java. Every batch is lab-tested for vanillin content and moisture, with full documentation included. Order quantities from 1 kg, shipping air freight from Indonesia.",
+      "These are big, oily, flexible beans with vanillin crystals visible on the pod, the ones you pick when vanilla is the star of the dish. We hand-pick them at peak maturity from smallholder farms across Central Java, then sun-cure them slowly for 6-9 months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm, and unmistakably real. Every batch is lab-tested, and orders start from just 1 kg.",
     heroDescription:
       "Premium Grade A vanilla beans for retail, pastry, ice cream, and culinary applications. Hand-picked at peak maturity, sun-cured for 6-9 months, and graded to international standards.",
     specs: [
@@ -66,29 +71,25 @@ const gradeData = {
     ],
     quickStats: [
       {
-        icon: Shield,
-        label: "Quality Assured",
-        value: "Lab-Tested",
-        desc: "Third-party vanillin verification",
+        icon: Plane,
+        label: "Air Freight",
+        value: "4-7 Days",
+        desc: "Direct from Indonesia, tracked worldwide",
       },
       {
         icon: Package,
-        label: "Order Quantity",
+        label: "Minimum Order",
         value: "From 1 kg",
-        desc: "Sample orders available",
+        desc: "Samples available before you commit",
       },
-      {
-        icon: Truck,
-        label: "Shipping Terms",
-        value: "FCA / CPT / DDP",
-        desc: "Air freight worldwide",
-      },
-      {
-        icon: FileCheck,
-        label: "Documents",
-        value: "All Included",
-        desc: "CoA, Phytosanitary, COO",
-      },
+    ],
+    uses: [
+      { icon: IceCreamCone, label: "Ice Cream & Gelato" },
+      { icon: Croissant, label: "Bakery & Pastry" },
+      { icon: Coffee, label: "Coffee & Beverages" },
+      { icon: Candy, label: "Chocolate & Confectionery" },
+      { icon: Milk, label: "Dairy & Yogurt" },
+      { icon: Bean, label: "Culinary & Plating" },
     ],
   },
   b: {
@@ -97,7 +98,7 @@ const gradeData = {
     heroTitle: "Indonesian Vanilla Beans — Grade B Extraction",
     heroTagline: "Cost-effective for manufacturing. 10-15 cm. 1.3-2.2% vanillin. Lower moisture.",
     description:
-      "La Vanilla Supplier provides Grade B Extraction vanilla beans optimized for extract manufacturing and industrial applications. Cost-effective pricing with consistent quality. Order quantities from 1 kg, shipping air freight from Indonesia.",
+      "Grade B beans are drier and slimmer, often with split ends, but they carry the same real vanilla character at a lower price per kilo. They cure for the same 6-9 months, then go to work where vanilla is an ingredient rather than the star: extracts, syrups, and large-batch flavoring. Lab-tested like everything we ship, with order quantities from 1 kg.",
     heroDescription:
       "Grade B vanilla beans for extract manufacturing, industrial flavoring, and large-scale production. Lower moisture content enables efficient vanillin extraction.",
     specs: [
@@ -133,29 +134,23 @@ const gradeData = {
     ],
     quickStats: [
       {
-        icon: FlaskConical,
-        label: "Best For",
-        value: "Extract Manufacturing",
-        desc: "Industrial flavoring production",
+        icon: Plane,
+        label: "Air Freight",
+        value: "4-7 Days",
+        desc: "Direct from Indonesia, tracked worldwide",
       },
       {
         icon: Package,
-        label: "Order Quantity",
+        label: "Minimum Order",
         value: "From 1 kg",
-        desc: "Volume discounts available",
+        desc: "Volume discounts from 100 kg",
       },
-      {
-        icon: Truck,
-        label: "Shipping Terms",
-        value: "FCA / CPT / DDP",
-        desc: "Air freight worldwide",
-      },
-      {
-        icon: FileCheck,
-        label: "Documents",
-        value: "All Included",
-        desc: "CoA, Phytosanitary, COO",
-      },
+    ],
+    uses: [
+      { icon: FlaskConical, label: "Vanilla Extract" },
+      { icon: Factory, label: "Industrial Flavoring" },
+      { icon: CupSoda, label: "Beverage Production" },
+      { icon: Candy, label: "Confectionery Syrups" },
     ],
   },
 };
@@ -252,12 +247,28 @@ export default function GradeSelector() {
             {/* Quick Info */}
             <div className="flex flex-col justify-between h-full">
               <div>
-                <h2 className="text-xl font-semibold text-[#2C2518] mb-3 uppercase tracking-wider text-sm">
+                <h2 className="text-xl font-semibold uppercase tracking-wider text-[#2C2518] mb-3">
                   Quick Overview
                 </h2>
                 <p className="text-sm text-[#6B6358] mb-6 leading-relaxed">
                   {grade.description}
                 </p>
+                <div className="mb-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#B5A37A] mb-3">
+                    What buyers use it for
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {grade.uses.map((use) => (
+                      <span
+                        key={use.label}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#E5E0D8] bg-[#F8F6F2] text-xs font-medium text-[#2C2518]"
+                      >
+                        <use.icon className="w-3.5 h-3.5 text-[#B5A37A]" />
+                        {use.label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {grade.quickStats.map((stat) => (
                     <div
