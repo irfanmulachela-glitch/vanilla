@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Libre_Baskerville, Cormorant_Garamond } from "next/font/google";
+import { Inter, Libre_Baskerville, Outfit } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { FloatingButtons } from "@/components/floating-buttons";
@@ -22,8 +22,8 @@ const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
 });
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600"],
@@ -85,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable} ${cormorantGaramond.variable} scroll-smooth`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${libreBaskerville.variable} ${outfit.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon-32x32.png" type="image/png" />
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />

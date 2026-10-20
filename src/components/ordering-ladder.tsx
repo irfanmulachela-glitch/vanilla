@@ -41,8 +41,8 @@ export default function OrderingLadder() {
               key={tier.title}
               className="p-6 rounded-xl border border-[#B5A37A] bg-white"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <span className="text-6xl leading-none font-medium text-[#B5A37A] font-[family-name:var(--font-cormorant)]">
+              <div className="flex items-start gap-4 mb-4">
+                <span className="text-6xl leading-none font-medium text-[#B5A37A] font-[family-name:var(--font-outfit)] -mt-1">
                   {i + 1}
                 </span>
                 <div>
