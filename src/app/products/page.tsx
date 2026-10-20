@@ -83,20 +83,22 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section aria-label="Key figures" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
+      {/* Product Jump Strip */}
+      <section aria-label="Product lines" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "1 kg", label: "Minimum Order" },
-              { value: "3-7 Days", label: "Air Freight" },
-              { value: "10+", label: "Years Experience" },
-              { value: "20+", label: "Countries Served" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
-                <p className="text-sm text-[#6B6358]">{stat.label}</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-center">
+            {siteConfig.products.map((product) => (
+              <a
+                key={product.id}
+                href={`#${product.id}`}
+                className="text-2xl sm:text-3xl font-bold text-[#B5A37A] hover:text-[#2C2518] transition-colors"
+              >
+                {product.category === "beans"
+                  ? "Vanilla Beans"
+                  : product.category === "paste"
+                  ? "Vanilla Paste"
+                  : "Vanilla Powder"}
+              </a>
             ))}
           </div>
         </div>
@@ -115,7 +117,8 @@ export default function ProductsPage() {
             {siteConfig.products.map((product, index) => (
               <div
                 key={product.id}
-                className={`grid lg:grid-cols-2 gap-12 items-center`}
+                id={product.id}
+                className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-24`}
               >
                 {/* Image */}
                 <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
