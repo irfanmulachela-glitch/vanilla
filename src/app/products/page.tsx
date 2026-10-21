@@ -61,10 +61,10 @@ export default function ProductsPage() {
       <section className="relative bg-[#2C2518] text-white py-20 lg:py-28 overflow-hidden flex items-center min-h-[565px] sm:min-h-[390px] md:min-h-[376px] lg:min-h-[455px] xl:min-h-[545px]">
         <div className="absolute inset-0">
           <Image
-            src="/la-vanilla-standard-hero.webp"
-            alt="Indonesian vanilla beans drying on traditional curing racks"
+            src="/products-hero.webp"
+            alt="Cured Indonesian vanilla beans ready for export"
             fill
-            className="object-cover object-[50%_55%]"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/80 to-[#2C2518]/45" />
