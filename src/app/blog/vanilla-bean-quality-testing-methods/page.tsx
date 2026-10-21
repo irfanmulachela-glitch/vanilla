@@ -144,7 +144,7 @@ export default function VanillaBeanQualityTestingMethods() {
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-6 pl-4">
               <li>Grade A vanilla: 1.1-2.5% vanillin</li>
-              <li>Grade B vanilla: 1.3-2.2% vanillin</li>
+              <li>Grade B vanilla: 1.0-2.0% vanillin</li>
               <li>Results should appear on the Certificate of Analysis (CoA)</li>
             </ul>
             <p className="text-[#6B6358] leading-relaxed mb-6">

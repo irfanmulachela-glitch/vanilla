@@ -90,7 +90,7 @@ export default function ComparisonPage() {
                   {
                     spec: "Vanillin Content",
                     gradeA: "1.1–2.5%",
-                    gradeB: "1.3–2.2%",
+                    gradeB: "1.0–2.0%",
                   },
                   {
                     spec: "Appearance",

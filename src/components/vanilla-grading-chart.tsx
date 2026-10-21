@@ -40,7 +40,7 @@ const grades = {
     specs: {
       length: "10-14 cm",
       moisture: "15-25%",
-      vanillin: "1.3-2.2%",
+      vanillin: "1.0-2.0%",
       appearance: "Dry, thinner, may have split ends",
     },
   },

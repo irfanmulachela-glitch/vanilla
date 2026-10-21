@@ -98,7 +98,7 @@ const gradeData = {
     image: "/vanilla-beans-grade-b.webp",
     subtitle: "Grade B Extraction Vanilla Beans",
     heroTitle: "Indonesian Vanilla Beans — Grade B Extraction",
-    heroTagline: "Cost-effective for manufacturing. 10-15 cm. 1.3-2.2% vanillin. Lower moisture.",
+    heroTagline: "Cost-effective for manufacturing. 10-15 cm. 1.0-2.0% vanillin. Lower moisture.",
     description:
       "Grade B beans are drier and slimmer, often with split ends, but they carry the same real vanilla character at a lower price per kilo. They cure for the same 6-9 months, then go to work where vanilla is an ingredient rather than the star: extracts, syrups, and large-batch flavoring. Lab-tested like everything we ship, with order quantities from 1 kg.",
     heroDescription:
@@ -108,7 +108,7 @@ const gradeData = {
       { spec: "Grade", value: "B — Extraction" },
       { spec: "Bean Length", value: "10-15 cm" },
       { spec: "Moisture Content", value: "Less than 25%" },
-      { spec: "Vanillin Content", value: "1.3-2.2%" },
+      { spec: "Vanillin Content", value: "1.0-2.0%" },
       { spec: "Curing Period", value: "6-9 months, sun-dried" },
       { spec: "Appearance", value: "Dry, thinner, may have split ends" },
       { spec: "Best For", value: "Extract manufacturing, industrial flavoring" },
