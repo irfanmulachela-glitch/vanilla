@@ -84,7 +84,7 @@ export default function WholesalePage() {
             fill
             className="object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/90 via-[#2C2518]/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/70 via-[#2C2518]/45 to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
