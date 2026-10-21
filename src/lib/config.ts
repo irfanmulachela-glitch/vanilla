@@ -26,13 +26,13 @@ export const siteConfig = {
       name: "Vanilla Beans",
       slug: "vanilla-beans",
       shortDescription: "Premium Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months.",
-      description: "Our vanilla beans are sourced directly from Indonesian smallholder farmers and carefully cured using traditional methods. Each bean is hand-picked at peak maturity and sun-dried for 6-9 months to develop optimal vanillin content (1.3-2.7%). Available in Grade A Gourmet and Grade B Extraction grades.",
+      description: "Our vanilla beans are sourced directly from Indonesian smallholder farmers and carefully cured using traditional methods. Each bean is hand-picked at peak maturity and sun-dried for 6-9 months to develop optimal vanillin content (1.1-2.5%). Available in Grade A Gourmet and Grade B Extraction grades.",
       category: "beans" as const,
       image: "/vanilla-beans.jpg",
       specifications: {
         species: "V. planifolia",
         moistureContent: "25-35%",
-        vanillinContent: "1.3-2.7%",
+        vanillinContent: "1.1-2.5%",
         beanLength: "15-20 cm (Grade A) / 10-15 cm (Grade B)",
         curing: "6-9 months, sun-dried + sweat-box",
         moq: "From 1 kg",
@@ -50,7 +50,7 @@ export const siteConfig = {
       category: "paste" as const,
       image: "/vanilla-paste.jpg",
       specifications: {
-        vanillinContent: "Custom (1.3-2.7%)",
+        vanillinContent: "Custom (1.1-2.5%)",
         sugarContent: "Custom (0-65%)",
         viscosity: "Adjustable",
         shelfLife: "24 months",
@@ -71,7 +71,7 @@ export const siteConfig = {
       image: "/vanilla-powder.jpg",
       specifications: {
         meshSize: "40-80 mesh (customizable)",
-        vanillinContent: "1.3-2.7%",
+        vanillinContent: "1.1-2.5%",
         moisture: "< 5%",
         purity: "100% pure vanilla",
         packaging: "Bulk bags / Retail containers",

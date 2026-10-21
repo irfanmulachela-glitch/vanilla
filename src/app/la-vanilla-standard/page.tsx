@@ -61,7 +61,7 @@ const steps = [
     description:
       "Each bean undergoes multi-stage inspection for length, moisture content, and vanillin concentration. Only beans meeting our strict specifications receive the La Vanilla Standard designation.",
     details: [
-      "Grade A: 15-20 cm, 25-35% moisture, 1.3-2.7% vanillin",
+      "Grade A: 15-20 cm, 25-35% moisture, 1.1-2.5% vanillin",
       "Grade B: 10-15 cm, less than 25% moisture, 1.3-2.2% vanillin",
       "Visual inspection for defects",
       "Batch-specific Certificates of Analysis",

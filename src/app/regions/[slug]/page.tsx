@@ -425,7 +425,7 @@ export default async function RegionPage({
                   Vanilla Beans
                 </h3>
                 <p className="text-[#6B6358] text-sm mb-4">
-                  Premium Grade A gourmet and Grade B extraction beans. Sun-cured 6-9 months, 1.3-2.7% vanillin.
+                  Premium Grade A gourmet and Grade B extraction beans. Sun-cured 6-9 months, 1.1-2.5% vanillin.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">

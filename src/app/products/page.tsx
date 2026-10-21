@@ -13,7 +13,7 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "Which vanilla bean grade should I buy?",
-    a: "Choose Grade A for retail and gourmet use — 15-20 cm beans with 25-35% moisture and 1.3-2.7% vanillin. Choose Grade B for extract production — 10-15 cm beans with less than 25% moisture. Both grades share the same 6-9 month curing process.",
+    a: "Choose Grade A for retail and gourmet use — 15-20 cm beans with 25-35% moisture and 1.1-2.5% vanillin. Choose Grade B for extract production — 10-15 cm beans with less than 25% moisture. Both grades share the same 6-9 month curing process.",
   },
   {
     q: "Can you customize vanilla paste?",

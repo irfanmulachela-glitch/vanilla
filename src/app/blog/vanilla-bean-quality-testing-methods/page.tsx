@@ -111,7 +111,7 @@ export default function VanillaBeanQualityTestingMethods() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Introduction */}
           <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-            La Vanilla Supplier uses gas chromatography, moisture analysis, and sensory evaluation to test every batch of vanilla beans. These three methods ensure consistent vanillin content (1.3-2.7%), proper moisture levels, and the rich aroma profile B2B buyers require. This guide explains each testing method and why it matters for your procurement decisions.
+            La Vanilla Supplier uses gas chromatography, moisture analysis, and sensory evaluation to test every batch of vanilla beans. These three methods ensure consistent vanillin content (1.1-2.5%), proper moisture levels, and the rich aroma profile B2B buyers require. This guide explains each testing method and why it matters for your procurement decisions.
           </p>
 
           <div className="prose prose-lg max-w-none">
@@ -143,7 +143,7 @@ export default function VanillaBeanQualityTestingMethods() {
               <strong className="text-[#2C2518]">What to look for:</strong>
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-6 pl-4">
-              <li>Grade A vanilla: 1.3-2.7% vanillin</li>
+              <li>Grade A vanilla: 1.1-2.5% vanillin</li>
               <li>Grade B vanilla: 1.3-2.2% vanillin</li>
               <li>Results should appear on the Certificate of Analysis (CoA)</li>
             </ul>

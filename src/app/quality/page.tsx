@@ -244,7 +244,7 @@ export default function QualityPage() {
               </div>
               <ul className="space-y-2">
                 {[
-                  "Vanillin content: 1.3-2.7%",
+                  "Vanillin content: 1.1-2.5%",
                   "Moisture: 25-35%",
                   "Expert sensory panel approved",
                   "Batch traceability confirmed",
@@ -330,7 +330,7 @@ export default function QualityPage() {
               {
                 title: "Vanillin Content Analysis",
                 description:
-                  "Gas chromatography testing to verify vanillin concentration meets specifications (1.3-2.7%).",
+                  "Gas chromatography testing to verify vanillin concentration meets specifications (1.1-2.5%).",
               },
               {
                 title: "Moisture Content Testing",

@@ -375,7 +375,7 @@ export function HomePageContent() {
                   {[
                     { spec: "Species", gradeA: "V. planifolia", gradeB: "V. planifolia" },
                     { spec: "Moisture Content", gradeA: "25–35%", gradeB: "< 25%" },
-                    { spec: "Vanillin Content", gradeA: "1.3–2.7%", gradeB: "1.3–2.2%" },
+                    { spec: "Vanillin Content", gradeA: "1.1–2.5%", gradeB: "1.3–2.2%" },
                     { spec: "Bean Length", gradeA: "15–20 cm", gradeB: "10–15 cm" },
                     { spec: "Curing Period", gradeA: "6–9 months", gradeB: "6–9 months" },
                     { spec: "MOQ", gradeA: "From 1 kg", gradeB: "From 1 kg" },

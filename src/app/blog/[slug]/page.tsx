@@ -25,7 +25,7 @@ const blogPosts = {
       <h2>Understanding Vanilla Bean Grades</h2>
       <p>Indonesian vanilla beans come in two primary grades:</p>
       <ul>
-        <li><strong>Grade A (Gourmet):</strong> 15-20 cm length, 25-35% moisture, 1.3-2.7% vanillin. Perfect for retail, pastry, and culinary applications.</li>
+        <li><strong>Grade A (Gourmet):</strong> 15-20 cm length, 25-35% moisture, 1.1-2.5% vanillin. Perfect for retail, pastry, and culinary applications.</li>
         <li><strong>Grade B (Extract):</strong> 10-16 cm length, less than 25% moisture, 1.3-2.2% vanillin. Ideal for extract manufacturing and industrial use.</li>
       </ul>
 
@@ -55,14 +55,14 @@ const blogPosts = {
     date: "2026-01-10",
     readTime: "6 min read",
     content: `
-      <p>Grade A Indonesian vanilla beans measure 15–20 cm with 25–35% moisture and 1.3–2.7% vanillin, designed for retail and culinary use. Grade B beans measure 10–16 cm with under 25% moisture and 1.3–2.2% vanillin, optimized for extract manufacturing. La Vanilla Supplier provides both grades with Certificate of Analysis documentation for every shipment.</p>
+      <p>Grade A Indonesian vanilla beans measure 15–20 cm with 25–35% moisture and 1.1–2.5% vanillin, designed for retail and culinary use. Grade B beans measure 10–16 cm with under 25% moisture and 1.3–2.2% vanillin, optimized for extract manufacturing. La Vanilla Supplier provides both grades with Certificate of Analysis documentation for every shipment.</p>
 
       <h2>Grade A: Gourmet Vanilla Beans</h2>
       <p>Grade A beans are premium quality, designed for direct culinary use. Key characteristics include:</p>
       <ul>
         <li><strong>Length:</strong> 15-20 cm</li>
         <li><strong>Moisture Content:</strong> 25-35%</li>
-        <li><strong>Vanillin Content:</strong> 1.3-2.7%</li>
+        <li><strong>Vanillin Content:</strong> 1.1-2.5%</li>
         <li><strong>Appearance:</strong> Plump, oily, with visible vanillin crystals</li>
         <li><strong>Applications:</strong> Retail, pastry, ice cream, culinary</li>
       </ul>
@@ -332,7 +332,7 @@ const blogPosts = {
 
       <h2>Quality Characteristics</h2>
       <ul>
-        <li><strong>Indonesian:</strong> V. planifolia, vanillin 1.3-2.7%, thicker beans, higher moisture</li>
+        <li><strong>Indonesian:</strong> V. planifolia, vanillin 1.1-2.5%, thicker beans, higher moisture</li>
         <li><strong>Madagascar:</strong> V. planifolia, vanillin 1.5-2.2%, thinner beans, more uniform</li>
       </ul>
 
@@ -679,7 +679,7 @@ const blogPosts = {
       <h2>Grading</h2>
       <p>Quality classification:</p>
       <ul>
-        <li><strong>Grade A:</strong> 15-20 cm, 25-35% moisture, 1.3-2.7% vanillin</li>
+        <li><strong>Grade A:</strong> 15-20 cm, 25-35% moisture, 1.1-2.5% vanillin</li>
         <li><strong>Grade B:</strong> 10-16 cm, less than 25% moisture, 1.3-2.2% vanillin</li>
         <li>Visual inspection for defects</li>
         <li>Moisture and vanillin testing</li>
@@ -719,7 +719,7 @@ const blogPosts = {
       <h2>Consistent Quality</h2>
       <p>Indonesian vanilla maintains high quality standards:</p>
       <ul>
-        <li>Vanillin content: 1.3-2.7% (Grade A)</li>
+        <li>Vanillin content: 1.1-2.5% (Grade A)</li>
         <li>Consistent bean size and moisture levels</li>
         <li>Strict grading and quality control processes</li>
         <li>Certificate of Analysis (CoA) with every shipment</li>

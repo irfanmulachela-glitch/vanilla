@@ -34,7 +34,7 @@ const gradeData = {
     image: "/vanilla-beans.jpg",
     subtitle: "Grade A Gourmet Vanilla Beans",
     heroTitle: "Indonesian Vanilla Beans — Grade A Gourmet",
-    heroTagline: "Direct from Java. Sun-cured 6-9 months. 15-20 cm. 1.3-2.7% vanillin.",
+    heroTagline: "Direct from Java. Sun-cured 6-9 months. 15-20 cm. 1.1-2.5% vanillin.",
     description:
       "These are big, oily, flexible beans with vanillin crystals visible on the pod, the ones you pick when vanilla is the star of the dish. We hand-pick them at peak maturity from smallholder farms across Central Java, then sun-cure them slowly for 6-9 months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm, and unmistakably real. Every batch is lab-tested, and orders start from just 1 kg.",
     heroDescription:
@@ -44,7 +44,7 @@ const gradeData = {
       { spec: "Grade", value: "A — Gourmet" },
       { spec: "Bean Length", value: "15-20 cm" },
       { spec: "Moisture Content", value: "25-35%" },
-      { spec: "Vanillin Content", value: "1.3-2.7%" },
+      { spec: "Vanillin Content", value: "1.1-2.5%" },
       { spec: "Curing Period", value: "6-9 months, sun-dried" },
       { spec: "Appearance", value: "Black, oily, flexible, full pod" },
       { spec: "Best For", value: "Retail, pastry, ice cream, culinary" },
@@ -62,7 +62,7 @@ const gradeData = {
       {
         icon: Leaf,
         title: "Maximum Vanillin",
-        desc: "Higher vanillin content (1.3-2.7%) delivers richer flavor and aroma in finished products.",
+        desc: "Higher vanillin content (1.1-2.5%) delivers richer flavor and aroma in finished products.",
       },
       {
         icon: Award,

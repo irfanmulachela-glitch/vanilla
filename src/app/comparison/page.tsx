@@ -89,7 +89,7 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "Vanillin Content",
-                    gradeA: "1.3–2.7%",
+                    gradeA: "1.1–2.5%",
                     gradeB: "1.3–2.2%",
                   },
                   {
@@ -230,7 +230,7 @@ export default function ComparisonPage() {
                   },
                   {
                     factor: "Vanillin Content",
-                    indonesia: "1.3–2.7%",
+                    indonesia: "1.1–2.5%",
                     madagascar: "1.5–2.2%",
                   },
                   {
