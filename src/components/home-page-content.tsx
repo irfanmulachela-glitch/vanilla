@@ -255,20 +255,27 @@ export function HomePageContent() {
       {/* Why Choose Us */}
       <section className="bg-[#F8F6F2]" aria-labelledby="why-choose-heading">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
-          {/* Left panel — dark with heading + image */}
-          <div className="bg-[#2C2518] flex flex-col justify-between p-8 sm:p-12 lg:p-16">
-            <div>
+          {/* Left panel — photo with heading */}
+          <div className="relative overflow-hidden flex flex-col justify-between p-8 sm:p-12 lg:p-16">
+            <Image
+              src="/why-choose-us.webp"
+              alt="Fresh vanilla pods growing on the vine in Java"
+              fill
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[#2C2518]/75" aria-hidden="true" />
+            <div className="relative z-10">
               <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-6">
                 {t.home.whyChooseUs}
               </p>
-              <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white/90 leading-[1.15] mb-8">
+              <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-8">
                 There are hundreds of vanilla suppliers in Indonesia.
               </h2>
-              <p className="text-xl sm:text-2xl font-medium text-white/40 leading-snug mb-8">
+              <p className="text-xl sm:text-2xl font-medium text-white/80 leading-snug mb-8">
                 Finding one that consistently delivers quality — that&apos;s the hard part.
               </p>
               <div className="w-12 h-[2px] bg-[#B5A37A] mb-8" />
-              <p className="text-white/60 text-sm leading-relaxed max-w-md">
+              <p className="text-white/85 text-sm leading-relaxed max-w-md">
                 There are hundreds of vanilla suppliers in Indonesia. Very few
                 have the consistency, transparency, and long-term commitment
                 that serious importers need.
