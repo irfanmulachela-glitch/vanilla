@@ -322,6 +322,7 @@ export default function WholesalePage() {
       <section className="py-16 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <div className="w-10 h-[2px] bg-[#B5A37A] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
               Wholesale Pricing
             </h2>
@@ -329,7 +330,7 @@ export default function WholesalePage() {
               Competitive pricing based on your specific requirements.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {[
               {
                 icon: Tag,
@@ -354,14 +355,14 @@ export default function WholesalePage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="group bg-white p-6 rounded-2xl border border-[#D8D3C9] flex items-start gap-4 hover:border-[#B5A37A]/60 hover:shadow-lg transition-all duration-300"
+                className="group bg-white p-7 rounded-2xl border border-[#D8D3C9] flex items-center gap-5 hover:border-[#B5A37A] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-[#F0ECE4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A]/15 transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-[#B5A37A]" />
+                <div className="w-14 h-14 bg-[#F0ECE4] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#B5A37A]/15 transition-colors duration-300">
+                  <item.icon className="w-7 h-7 text-[#B5A37A]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#2C2518] mb-1">{item.title}</h3>
-                  <p className="text-[#6B6358] text-sm">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-[#2C2518] mb-1.5">{item.title}</h3>
+                  <p className="text-[#6B6358] leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
