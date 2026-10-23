@@ -347,9 +347,9 @@ export function HomePageContent() {
 
       {/* Process Video Split — 70% video / 30% text */}
       <section className="bg-white" aria-labelledby="process-video-heading">
-        <div className="grid lg:grid-cols-[7fr_3fr]">
-          {/* Video panel (70%) */}
-          <div className="relative bg-[#2C2518] aspect-video lg:aspect-auto lg:min-h-[560px] group">
+        <div className="grid lg:grid-cols-[3fr_7fr]">
+          {/* Video panel (70%, right on desktop) */}
+          <div className="relative bg-[#2C2518] aspect-video lg:aspect-auto lg:min-h-[560px] group lg:order-2">
             <video
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
@@ -381,8 +381,8 @@ export function HomePageContent() {
             )}
           </div>
 
-          {/* Text panel (30%) */}
-          <div className="flex flex-col justify-center p-8 sm:p-12 lg:px-10 xl:px-14">
+          {/* Text panel (30%, left on desktop) */}
+          <div className="flex flex-col justify-center p-8 sm:p-12 lg:px-10 xl:px-14 lg:order-1">
             <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
             <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
               Our Process
