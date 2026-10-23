@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import {
   Globe,
   Users,
@@ -18,6 +19,8 @@ import { useLocaleContext } from "@/components/locale-provider";
 export function HomePageContent() {
   const { locale, t } = useLocaleContext();
   const prefix = locale === "en" ? "" : `/${locale}`;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoStarted, setVideoStarted] = useState(false);
 
   return (
     <>
@@ -339,6 +342,64 @@ export function HomePageContent() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Process Video Band */}
+      <section className="bg-[#2C2518] text-white py-20 lg:py-28" aria-labelledby="process-video-heading">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="w-10 h-[2px] bg-[#B5A37A] mx-auto mb-6" />
+          <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
+            Our Process
+          </p>
+          <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold mb-4">
+            See how the paste is made
+          </h2>
+          <p className="text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Watch our team grind and blend real vanilla beans into smooth,
+            spreadable paste, done the same way every batch, from cured bean
+            to export-ready tub.
+          </p>
+          <div className="relative rounded-2xl overflow-hidden border border-[#B5A37A]/30 shadow-2xl group">
+            <video
+              ref={videoRef}
+              className="w-full aspect-video bg-black"
+              controls
+              preload="metadata"
+              playsInline
+              onPlay={() => setVideoStarted(true)}
+              onEnded={() => setVideoStarted(false)}
+            >
+              <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {!videoStarted && (
+              <button
+                type="button"
+                onClick={() => {
+                  videoRef.current?.play();
+                  setVideoStarted(true);
+                }}
+                aria-label="Play process video"
+                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors duration-300"
+              >
+                <span className="w-20 h-20 rounded-full bg-[#B5A37A] text-[#2C2518] flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-300">
+                  <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </button>
+            )}
+          </div>
+          <Link
+            href={`${prefix}/products/vanilla-paste`}
+            className="mt-10 inline-flex items-center gap-2 px-6 py-3 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors duration-200"
+          >
+            View vanilla paste
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 
