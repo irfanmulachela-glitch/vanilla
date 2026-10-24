@@ -91,6 +91,34 @@
       "beans": "Bundle of cured Indonesian vanilla beans (Vanilla planifolia) from Java",
       "paste": "Jar of Indonesian vanilla bean paste with visible vanilla seeds",
       "powder": "Pure Indonesian vanilla powder ground from cured vanilla beans"
+    },
+    "why": {
+      "title": "Plenty of suppliers can sell you vanilla.",
+      "subtitle": "Few can send you the same quality twice.",
+      "intro": "We built La Vanilla Supplier for buyers who are tired of surprises: beans drier than the sample, missing paperwork, or a supplier who goes quiet after payment. Here is what we do differently.",
+      "download": "Download Company Profile",
+      "points": [
+        {
+          "title": "Straight from Java's growers",
+          "body": "We work hand in hand with smallholder farmers and the curing houses that prepare their beans, with no traders in between. Fewer hands means fresher beans and honest prices."
+        },
+        {
+          "title": "Approve a sample first",
+          "body": "Start with a free sample (you only cover shipping). Once you approve it, your order is graded and packed to match, so what you tested is what arrives."
+        },
+        {
+          "title": "Paperwork done right",
+          "body": "Phytosanitary certificate, commercial invoice, packing list and air waybill with every shipment, plus a Certificate of Analysis for each batch on request."
+        },
+        {
+          "title": "Private label, under your brand",
+          "body": "Launch your own vanilla line without building a supply chain. We pack beans, paste and powder under your label, ready for your shelves or your customers."
+        },
+        {
+          "title": "Fast air freight worldwide",
+          "body": "Shipped to 20+ countries in 3–7 days on FCA, CPT or DDP terms, from 1 kg up to regular production volumes."
+        }
+      ]
     }
   },
   "products": {

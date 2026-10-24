@@ -91,6 +91,34 @@
       "beans": "Java'dan kürlenmiş Endonezya vanilya çubukları (Vanilla planifolia) demeti",
       "paste": "Tohumları görünen Endonezya vanilya macunu kavanozu",
       "powder": "Kürlenmiş çubuklardan öğütülmüş saf Endonezya vanilya tozu"
+    },
+    "why": {
+      "title": "Size vanilya satabilecek çok tedarikçi var.",
+      "subtitle": "Aynı kaliteyi iki kez gönderebilen ise az.",
+      "intro": "La Vanilla Supplier'ı sürprizlerden yorulan alıcılar için kurduk: numuneden daha kuru çubuklar, eksik belgeler ya da ödemeden sonra sessizleşen tedarikçiler. Farklı yaptığımız şeyler şunlar.",
+      "download": "Şirket Profilini İndir",
+      "points": [
+        {
+          "title": "Doğrudan Java'nın üreticilerinden",
+          "body": "Küçük üreticiler ve çubuklarını hazırlayan kürleme atölyeleriyle, arada aracı olmadan el ele çalışıyoruz. Daha az el, daha taze çubuk ve dürüst fiyat demektir."
+        },
+        {
+          "title": "Önce numuneyi onaylayın",
+          "body": "Ücretsiz bir numuneyle başlayın (yalnızca kargo ücretini siz ödersiniz). Onayladıktan sonra siparişiniz numuneyle aynı şekilde sınıflandırılır ve paketlenir; test ettiğiniz ürün size ulaşır."
+        },
+        {
+          "title": "Eksiksiz belgeler",
+          "body": "Her sevkiyatta bitki sağlık sertifikası, ticari fatura, çeki listesi ve hava konşimentosu; talep üzerine her parti için analiz sertifikası."
+        },
+        {
+          "title": "Kendi markanızla özel etiket",
+          "body": "Tedarik zinciri kurmadan kendi vanilya serinizi başlatın. Çubuk, macun ve tozu kendi etiketinizle paketliyor, raflarınıza veya müşterilerinize hazır hale getiriyoruz."
+        },
+        {
+          "title": "Dünya çapında hızlı hava kargo",
+          "body": "FCA, CPT veya DDP şartlarıyla 3–7 günde 20'den fazla ülkeye; 1 kg'dan düzenli üretim hacimlerine kadar."
+        }
+      ]
     }
   },
   "products": {

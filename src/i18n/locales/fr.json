@@ -91,6 +91,34 @@
       "beans": "Botte de gousses de vanille indonésiennes (Vanilla planifolia) de Java",
       "paste": "Pot de pâte de vanille indonésienne aux graines visibles",
       "powder": "Poudre de vanille indonésienne pure issue de gousses séchées"
+    },
+    "why": {
+      "title": "Beaucoup de fournisseurs peuvent vous vendre de la vanille.",
+      "subtitle": "Peu savent livrer deux fois la même qualité.",
+      "intro": "Nous avons créé La Vanilla Supplier pour les acheteurs lassés des mauvaises surprises : des gousses plus sèches que l'échantillon, des documents manquants ou un fournisseur qui ne répond plus après le paiement. Voici ce que nous faisons autrement.",
+      "download": "Télécharger la présentation",
+      "points": [
+        {
+          "title": "Directement des producteurs de Java",
+          "body": "Nous travaillons main dans la main avec de petits producteurs et les ateliers de séchage qui préparent leurs gousses, sans intermédiaires. Moins de mains, des gousses plus fraîches et des prix justes."
+        },
+        {
+          "title": "Validez d'abord un échantillon",
+          "body": "Commencez par un échantillon gratuit (seuls les frais d'envoi sont à votre charge). Une fois validé, votre commande est classée et conditionnée à l'identique : ce que vous avez testé est ce que vous recevez."
+        },
+        {
+          "title": "Des documents en règle",
+          "body": "Certificat phytosanitaire, facture commerciale, liste de colisage et lettre de transport aérien avec chaque envoi, ainsi qu'un certificat d'analyse par lot sur demande."
+        },
+        {
+          "title": "Marque blanche, sous votre marque",
+          "body": "Lancez votre propre gamme de vanille sans bâtir de chaîne d'approvisionnement. Nous conditionnons gousses, pâte et poudre sous votre marque, prêtes pour vos rayons ou vos clients."
+        },
+        {
+          "title": "Fret aérien rapide dans le monde",
+          "body": "Expédiée vers plus de 20 pays en 3 à 7 jours en FCA, CPT ou DDP, d'1 kg jusqu'à des volumes de production réguliers."
+        }
+      ]
     }
   },
   "products": {

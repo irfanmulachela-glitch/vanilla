@@ -91,6 +91,34 @@
       "beans": "Manojo de vainas de vainilla indonesias (Vanilla planifolia) de Java",
       "paste": "Frasco de pasta de vainilla indonesia con semillas visibles",
       "powder": "Vainilla en polvo indonesia pura, molida de vainas curadas"
+    },
+    "why": {
+      "title": "Muchos proveedores pueden venderle vainilla.",
+      "subtitle": "Pocos pueden enviarle la misma calidad dos veces.",
+      "intro": "Creamos La Vanilla Supplier para compradores cansados de las sorpresas: vainas más secas que la muestra, documentos que faltan o un proveedor que deja de responder después del pago. Esto es lo que hacemos diferente.",
+      "download": "Descargar perfil de la empresa",
+      "points": [
+        {
+          "title": "Directo de los productores de Java",
+          "body": "Trabajamos de la mano con pequeños productores y los centros de curado que preparan sus vainas, sin intermediarios. Menos manos significa vainas más frescas y precios justos."
+        },
+        {
+          "title": "Apruebe primero una muestra",
+          "body": "Empiece con una muestra gratuita (solo cubre el envío). Una vez aprobada, su pedido se clasifica y empaca igual, para que lo que probó sea lo que llega."
+        },
+        {
+          "title": "Documentación en regla",
+          "body": "Certificado fitosanitario, factura comercial, lista de empaque y guía aérea con cada envío, además de un certificado de análisis por lote bajo solicitud."
+        },
+        {
+          "title": "Marca blanca, con su marca",
+          "body": "Lance su propia línea de vainilla sin construir una cadena de suministro. Envasamos vainas, pasta y polvo con su etiqueta, listos para sus estantes o sus clientes."
+        },
+        {
+          "title": "Flete aéreo rápido a todo el mundo",
+          "body": "Enviamos a más de 20 países en 3 a 7 días bajo términos FCA, CPT o DDP, desde 1 kg hasta volúmenes regulares de producción."
+        }
+      ]
     }
   },
   "products": {

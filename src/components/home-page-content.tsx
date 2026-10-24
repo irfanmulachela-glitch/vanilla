@@ -170,9 +170,9 @@ export function HomePageContent() {
               </h2>
               <p className="text-white/70 leading-relaxed text-lg mb-10">
                 Our vanilla grows on smallholder plantations across Java, where rich volcanic
-                soil and a tropical climate give V. planifolia its deep, creamy character. We buy
-                directly from the farmers who grow it, so you get fresher beans, fair prices and
-                a supply you can rely on.
+                soil and a tropical climate give V. planifolia its deep, creamy character. We work
+                hand in hand with the farmers who grow it, so you get fresher beans, fair prices
+                and a supply you can rely on.
               </p>
 
               <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
@@ -330,90 +330,67 @@ export function HomePageContent() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-[#F8F6F2]" aria-labelledby="why-choose-heading">
-        <div className="grid lg:grid-cols-2 min-h-[600px]">
-          {/* Left panel — photo with heading */}
-          <div className="relative overflow-hidden flex flex-col justify-between p-8 sm:p-12 lg:p-16">
+      <section className="bg-white" aria-labelledby="why-choose-heading">
+        <div className="grid lg:grid-cols-2">
+          {/* Left panel: photo with the promise */}
+          <div className="relative overflow-hidden flex flex-col justify-center p-8 sm:p-12 lg:p-16 min-h-[520px]">
             <Image
               src="/why-choose-us.webp"
               alt="Fresh vanilla pods growing on the vine in Java"
               fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#2C2518]/75" aria-hidden="true" />
-            <div className="relative z-10">
-              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-6">
+            <div className="absolute inset-0 bg-[#2C2518]/80" aria-hidden="true" />
+            <div className="relative z-10 max-w-lg">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-6">
                 {t.home.whyChooseUs}
               </p>
-              <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-medium text-white leading-[1.15] mb-8">
-                There are hundreds of vanilla suppliers in Indonesia.
+              <h2 id="why-choose-heading" className="text-3xl sm:text-4xl lg:text-[2.6rem] font-medium text-white leading-[1.15] mb-4">
+                {t.home.why.title}
               </h2>
-              <p className="text-xl sm:text-2xl font-medium text-white/80 leading-snug mb-8">
-                Finding one that consistently delivers quality is the hard part.
+              <p className="text-2xl sm:text-3xl lg:text-[2.1rem] text-[#D4C48A] leading-snug mb-8 italic rtl:not-italic font-[family-name:var(--font-libre)]">
+                {t.home.why.subtitle}
               </p>
-              <div className="w-12 h-[2px] bg-[#B5A37A] mb-8" />
-              <p className="text-white/85 text-sm leading-relaxed max-w-md">
-                Very few have the consistency, transparency, and long-term
-                commitment that serious importers need.
+              <div className="w-12 h-[2px] bg-[#B5A37A] mb-6" aria-hidden="true" />
+              <p className="text-white/80 leading-relaxed mb-8">
+                {t.home.why.intro}
               </p>
               <a
                 href="/La Vanilla Supplier - Company Profile.pdf"
                 download
-                className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors duration-200"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Download Company Profile
+                {t.home.why.download}
               </a>
             </div>
           </div>
 
-          {/* Right panel — numbered proof rows */}
-          <div className="bg-white p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
-            <div className="space-y-0">
-              {[
-                {
-                  num: "01",
-                  title: t.home.directFromSource,
-                  body: t.home.directFromSourceDesc,
-                },
-                {
-                  num: "02",
-                  title: "Verified Physical Stock",
-                  body: "No middlemen. We maintain our own inventory with video call verification available for all wholesale partners.",
-                },
-                {
-                  num: "03",
-                  title: t.products.fullDocumentation,
-                  body: t.products.fullDocumentationDesc,
-                },
-                {
-                  num: "04",
-                  title: t.home.globalSupply,
-                  body: t.home.globalSupplyDesc,
-                },
-              ].map((item, i) => (
-                <div
-                  key={item.num}
-                  className={`flex gap-5 sm:gap-6 py-7 ${
-                    i < 3 ? "border-b border-[#E5E0D8]" : ""
-                  }`}
+          {/* Right panel: what we do differently */}
+          <div className="bg-white px-8 sm:px-12 lg:px-16 py-10 lg:py-14 flex flex-col justify-center">
+            <ol>
+              {t.home.why.points.map((item, i) => (
+                <li
+                  key={item.title}
+                  className={`flex gap-5 sm:gap-6 py-6 ${i < t.home.why.points.length - 1 ? "border-b border-[#EEE9E1]" : ""}`}
                 >
-                  <span className="text-2xl sm:text-3xl font-medium text-[#B5A37A] leading-none pt-0.5 w-8 sm:w-10 flex-shrink-0">
-                    {item.num}
+                  <span className="text-2xl sm:text-[1.7rem] font-medium text-[#B5A37A] leading-none pt-0.5 w-9 sm:w-10 flex-shrink-0 tabular-nums" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0">
-                    <h3 className="text-base sm:text-lg font-medium text-[#2C2518] mb-2">
+                    <h3 className="text-base sm:text-lg font-semibold text-[#2C2518] mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-[#6B6358] leading-relaxed">
+                    <p className="text-sm sm:text-[15px] text-[#6B6358] leading-relaxed">
                       {item.body}
                     </p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </div>
       </section>

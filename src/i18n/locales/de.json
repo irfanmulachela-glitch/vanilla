@@ -91,6 +91,34 @@
       "beans": "Bündel indonesischer Vanilleschoten (Vanilla planifolia) aus Java",
       "paste": "Glas indonesische Vanillepaste mit sichtbaren Vanillesamen",
       "powder": "Reines indonesisches Vanillepulver aus fermentierten Schoten"
+    },
+    "why": {
+      "title": "Vanille verkaufen Ihnen viele Lieferanten.",
+      "subtitle": "Zweimal dieselbe Qualität liefern nur wenige.",
+      "intro": "Wir haben La Vanilla Supplier für Einkäufer aufgebaut, die keine Überraschungen mehr wollen: Schoten, die trockener ankommen als das Muster, fehlende Dokumente oder ein Lieferant, der nach der Zahlung nicht mehr antwortet. Das machen wir anders.",
+      "download": "Unternehmensprofil herunterladen",
+      "points": [
+        {
+          "title": "Direkt von Javas Erzeugern",
+          "body": "Wir arbeiten Hand in Hand mit Kleinbauern und den Betrieben, die ihre Schoten aufbereiten, ganz ohne Zwischenhändler. Weniger Stationen bedeuten frischere Schoten und faire Preise."
+        },
+        {
+          "title": "Erst das Muster freigeben",
+          "body": "Starten Sie mit einem kostenlosen Muster (Sie tragen nur die Versandkosten). Nach Ihrer Freigabe wird Ihre Bestellung passend dazu sortiert und verpackt: Was Sie getestet haben, kommt bei Ihnen an."
+        },
+        {
+          "title": "Dokumente ohne Lücken",
+          "body": "Pflanzengesundheitszeugnis, Handelsrechnung, Packliste und Luftfrachtbrief bei jeder Sendung, dazu auf Wunsch ein Analysezertifikat pro Charge."
+        },
+        {
+          "title": "Private Label unter Ihrer Marke",
+          "body": "Starten Sie Ihre eigene Vanillelinie, ohne eine Lieferkette aufzubauen. Wir verpacken Schoten, Paste und Pulver unter Ihrem Label, bereit für Ihr Regal oder Ihre Kunden."
+        },
+        {
+          "title": "Schnelle Luftfracht weltweit",
+          "body": "Versand in über 20 Länder in 3–7 Tagen zu FCA-, CPT- oder DDP-Bedingungen, ab 1 kg bis zu regelmäßigen Produktionsmengen."
+        }
+      ]
     }
   },
   "products": {
