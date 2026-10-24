@@ -46,9 +46,11 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-medium tracking-widest uppercase text-[#B5A37A] hover:text-[#D4C48A] transition-colors duration-300 group"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        className="flex items-center gap-1.5 px-2 py-1.5 text-[13px] font-medium text-[#2C2518]/65 hover:text-[#2C2518] transition-colors duration-200 group"
       >
-        <Globe className="w-3.5 h-3.5" />
+        <Globe className="w-4 h-4 text-[#B5A37A]" />
         <span>{localeShortNames[currentLocale]}</span>
         <ChevronDown
           className={`w-3 h-3 transition-transform duration-200 ${
@@ -63,19 +65,19 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 top-full mt-1 z-50 w-48 bg-[#2C2518] border border-[#3D3425] rounded-lg shadow-xl overflow-hidden">
+          <div className="absolute end-0 top-full mt-2 z-50 w-52 bg-white border border-[#EEE9E1] rounded-xl shadow-[0_16px_40px_-12px_rgba(44,37,24,0.25)] overflow-hidden py-1">
             {locales.map((locale) => (
               <button
                 key={locale}
                 onClick={() => handleLanguageChange(locale)}
                 className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-all duration-200 ${
                   currentLocale === locale
-                    ? "bg-[#B5A37A]/20 text-[#B5A37A]"
-                    : "text-white/70 hover:bg-white/10 hover:text-white"
+                    ? "bg-[#F8F6F2] text-[#2C2518]"
+                    : "text-[#2C2518]/75 hover:bg-[#F8F6F2] hover:text-[#2C2518]"
                 }`}
               >
-                <span className="font-medium">{localeShortNames[locale]}</span>
-                <span className="text-white/50">{localeNames[locale]}</span>
+                <span className="font-semibold w-6 text-[#B5A37A]">{localeShortNames[locale]}</span>
+                <span>{localeNames[locale]}</span>
               </button>
             ))}
           </div>

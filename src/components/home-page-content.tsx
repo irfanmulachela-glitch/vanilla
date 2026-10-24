@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { ArrowRight, CheckCircle2, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star, Package, Plane, Boxes, Globe } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { useLocaleContext } from "@/components/locale-provider";
 
@@ -86,55 +86,73 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Key figures (single set of numbers for the page) */}
+      {/* Key figures */}
       <section aria-label="Key figures" className="bg-white border-y border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x divide-[#EEE9E1] text-center">
-            {[
-              { value: "1 kg", label: "Minimum order" },
-              { value: "3-7 days", label: "Air freight" },
-              { value: "150+ tons", label: "Exported" },
-              { value: "20+", label: "Countries served" },
-            ].map((stat) => (
-              <div key={stat.label} className="py-8 md:py-10">
-                <p dir="ltr" className="text-2xl lg:text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
-                <p className="text-sm text-[#6B6358] mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
+            {t.home.figures.map((fig, i) => {
+              const Icon = [Package, Plane, Boxes, Globe][i] ?? Package;
+              return (
+                <div key={fig.label} className="flex items-start gap-3.5 lg:gap-4 lg:px-8 lg:py-10 first:lg:ps-0 last:lg:pe-0">
+                  <Icon className="w-5 h-5 mt-1 flex-shrink-0 text-[#B5A37A]" strokeWidth={1.6} aria-hidden="true" />
+                  <div className="min-w-0">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
+                    <dd className="mt-1.5">
+                      <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
+                        <span dir="ltr">{fig.value}</span>
+                        {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
+                      </span>
+                      <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>
+                    </dd>
+                  </div>
+                </div>
+              );
+            })}
+          </dl>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            About Us · Since 2014
-          </p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
-            {t.common.tagline}
-          </h2>
-          <p className="text-lg text-[#6B6358] mb-6 max-w-3xl mx-auto leading-relaxed">
-            {t.about.description}
-          </p>
-          <p className="text-sm text-[#6B6358]/70 mb-10">
-            {t.about.operatedBy} {t.about.registeredCompany}
-          </p>
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">About Us</p>
+              <h2 className="text-3xl lg:text-[2.6rem] font-bold text-[#2C2518] leading-[1.15] mb-6">
+                {t.common.tagline}
+              </h2>
+              <div className="w-12 h-[2px] bg-[#B5A37A] mb-6" aria-hidden="true" />
+              <p className="text-sm text-[#9A9187]">
+                {t.about.operatedBy} {t.about.registeredCompany}
+              </p>
+            </div>
 
-          {/* Trust points */}
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {[
-              t.quality.qualityAssured,
-              t.quality.halalCertified,
-              t.products.fullDocumentation,
-              t.quality.phytosanitary,
-            ].map((badge) => (
-              <li key={badge} className="flex items-center gap-2 text-sm font-medium text-[#2C2518]">
-                <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" aria-hidden="true" />
-                {badge}
-              </li>
-            ))}
-          </ul>
+            <div className="lg:col-span-7">
+              <p className="text-xl lg:text-[1.35rem] leading-relaxed text-[#2C2518] mb-6">
+                {t.about.description}
+              </p>
+              <p className="text-base lg:text-lg leading-relaxed text-[#6B6358] mb-5">
+                {t.home.aboutMore1}
+              </p>
+              <p className="text-base lg:text-lg leading-relaxed text-[#6B6358] mb-10">
+                {t.home.aboutMore2}
+              </p>
+
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 pt-8 border-t border-[#EEE9E1]">
+                {[
+                  t.quality.qualityAssured,
+                  t.quality.halalCertified,
+                  t.products.fullDocumentation,
+                  t.quality.phytosanitary,
+                ].map((badge) => (
+                  <li key={badge} className="flex items-center gap-2.5 text-sm font-medium text-[#2C2518]">
+                    <CheckCircle2 className="w-4 h-4 text-[#B5A37A] flex-shrink-0" aria-hidden="true" />
+                    {badge}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

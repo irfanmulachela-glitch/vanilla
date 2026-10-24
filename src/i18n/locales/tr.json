@@ -22,13 +22,13 @@
     "viewLinkedInProfile": "LinkedIn Profilini Gör →"
   },
   "nav": {
-    "home": "ANA SAYFA",
-    "products": "ÜRÜNLER",
-    "wholesale": "TOPTAN",
-    "ourStandard": "STANDARTLARIMIZ",
-    "blog": "BLOG",
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "wholesale": "Toptan",
+    "ourStandard": "Standartlarımız",
+    "blog": "Blog",
     "faq": "SSS",
-    "contact": "İLETİŞİM"
+    "contact": "İletişim"
   },
   "home": {
     "heroTitle": "Premium Endonezya Vanilyası",
@@ -51,7 +51,35 @@
     "recentArticles": "Son Makaleler",
     "stayUpdated": "Vanilya Piyasasından Haberdar Olun",
     "stayUpdatedDesc": "Fiyatlar, kalite ve ihracat fırsatları hakkında bilgi edinin.",
-    "emailPlaceholder": "E-posta adresinizi girin"
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "figures": [
+      {
+        "value": "1",
+        "unit": "kg",
+        "label": "Minimum sipariş",
+        "note": "Ücretsiz numune"
+      },
+      {
+        "value": "3–7",
+        "unit": "gün",
+        "label": "Hava kargo",
+        "note": "FCA, CPT veya DDP"
+      },
+      {
+        "value": "150+",
+        "unit": "ton",
+        "label": "İhraç edildi",
+        "note": "Çubuk, macun ve toz"
+      },
+      {
+        "value": "20+",
+        "unit": "",
+        "label": "Hizmet verilen ülke",
+        "note": "Asya, Avrupa, Amerika ve Orta Doğu"
+      }
+    ],
+    "aboutMore1": "Java'daki küçük üreticilerle doğrudan çalışıyor, çubuklarını hazırlayan kürleme atölyeleriyle yakın iş birliği yapıyoruz. Her parti sevk edilmeden önce seçilir, sınıflandırılır ve kontrol edilir; böylece tesisinize ulaşan ürün, söz verdiğimiz ürünle aynıdır.",
+    "aboutMore2": "Ürün geliştirme için tek bir kilo ya da üretim için düzenli hacimler gereksin, numuneleri, belgeleri ve hava kargoyu biz üstleniyoruz. Siparişten siparişe tutarlı vanilya ve hızlı yanıt veren bir ekip sizi bekliyor."
   },
   "products": {
     "title": "Ürünlerimiz",

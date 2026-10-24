@@ -4,7 +4,7 @@
     "tagline": "Votre Formule. Notre Vanille.",
     "companyName": "PT Penta Pelita Semesta",
     "whatsapp": "Discuter sur WhatsApp",
-    "getQuote": "Demander un Devis",
+    "getQuote": "Demander un devis",
     "requestQuote": "Demander un Devis",
     "contactUs": "Contactez-nous",
     "learnMore": "En Savoir Plus",
@@ -22,13 +22,13 @@
     "viewLinkedInProfile": "Voir le Profil LinkedIn →"
   },
   "nav": {
-    "home": "ACCUEIL",
-    "products": "PRODUITS",
-    "wholesale": "GROSSISTE",
-    "ourStandard": "NOTRE STANDARD",
-    "blog": "BLOG",
+    "home": "Accueil",
+    "products": "Produits",
+    "wholesale": "Grossiste",
+    "ourStandard": "Notre standard",
+    "blog": "Blog",
     "faq": "FAQ",
-    "contact": "CONTACT"
+    "contact": "Contact"
   },
   "home": {
     "heroTitle": "Vanille Indonésienne Premium",
@@ -51,7 +51,35 @@
     "recentArticles": "Articles Récents",
     "stayUpdated": "Restez Informé du Marché de la Vanille",
     "stayUpdatedDesc": "Obtenez des informations sur les prix, la qualité et les opportunités d'exportation.",
-    "emailPlaceholder": "Entrez votre email"
+    "emailPlaceholder": "Entrez votre email",
+    "figures": [
+      {
+        "value": "1",
+        "unit": "kg",
+        "label": "Commande minimum",
+        "note": "Échantillons gratuits"
+      },
+      {
+        "value": "3–7",
+        "unit": "jours",
+        "label": "Fret aérien",
+        "note": "FCA, CPT ou DDP"
+      },
+      {
+        "value": "150+",
+        "unit": "tonnes",
+        "label": "Exportées",
+        "note": "Gousses, pâte et poudre"
+      },
+      {
+        "value": "20+",
+        "unit": "",
+        "label": "Pays desservis",
+        "note": "Asie, Europe, Amériques et Moyen-Orient"
+      }
+    ],
+    "aboutMore1": "Nous travaillons directement avec de petits producteurs de Java et collaborons étroitement avec les ateliers de séchage qui préparent leurs gousses. Chaque lot est sélectionné, classé et contrôlé avant son expédition, pour que ce qui arrive chez vous corresponde à ce que nous avons promis.",
+    "aboutMore2": "Qu'il vous faille un seul kilo pour le développement produit ou des volumes réguliers pour la production, nous nous occupons des échantillons, des documents et du fret aérien. Vous recevez une vanille constante d'une commande à l'autre, avec une équipe qui répond rapidement."
   },
   "products": {
     "title": "Nos Produits",

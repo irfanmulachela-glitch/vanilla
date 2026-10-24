@@ -22,13 +22,13 @@
     "viewLinkedInProfile": "LinkedIn-Profil ansehen →"
   },
   "nav": {
-    "home": "STARTSEITE",
-    "products": "PRODUKTE",
-    "wholesale": "GROSSHANDEL",
-    "ourStandard": "UNSER STANDARD",
-    "blog": "BLOG",
+    "home": "Startseite",
+    "products": "Produkte",
+    "wholesale": "Großhandel",
+    "ourStandard": "Unser Standard",
+    "blog": "Blog",
     "faq": "FAQ",
-    "contact": "KONTAKT"
+    "contact": "Kontakt"
   },
   "home": {
     "heroTitle": "Premium Indonesische Vanille",
@@ -51,7 +51,35 @@
     "recentArticles": "Aktuelle Artikel",
     "stayUpdated": "Bleiben Sie über den Vanillemarkt informiert",
     "stayUpdatedDesc": "Erhalten Sie Einblicke in Preise, Qualität und Exportmöglichkeiten.",
-    "emailPlaceholder": "Ihre E-Mail-Adresse"
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "figures": [
+      {
+        "value": "1",
+        "unit": "kg",
+        "label": "Mindestbestellmenge",
+        "note": "Kostenlose Muster"
+      },
+      {
+        "value": "3–7",
+        "unit": "Tage",
+        "label": "Luftfracht",
+        "note": "FCA, CPT oder DDP"
+      },
+      {
+        "value": "150+",
+        "unit": "Tonnen",
+        "label": "Exportiert",
+        "note": "Schoten, Paste und Pulver"
+      },
+      {
+        "value": "20+",
+        "unit": "",
+        "label": "Belieferte Länder",
+        "note": "Asien, Europa, Amerika und Nahost"
+      }
+    ],
+    "aboutMore1": "Wir arbeiten direkt mit Kleinbauern auf Java zusammen und stimmen uns eng mit den Betrieben ab, die ihre Schoten fermentieren und trocknen. Jede Partie wird ausgewählt, sortiert und geprüft, bevor sie versendet wird, damit bei Ihnen genau das ankommt, was wir versprochen haben.",
+    "aboutMore2": "Ob Sie ein einzelnes Kilo für die Produktentwicklung oder regelmäßige Mengen für die Produktion benötigen: Wir kümmern uns um Muster, Dokumente und Luftfracht. Sie erhalten Vanille in gleichbleibender Qualität von Bestellung zu Bestellung und ein Team, das schnell antwortet."
   },
   "products": {
     "title": "Unsere Produkte",

@@ -4,7 +4,7 @@
     "tagline": "Tu Fórmula. Nuestra Vainilla.",
     "companyName": "PT Penta Pelita Semesta",
     "whatsapp": "Chatear por WhatsApp",
-    "getQuote": "Obtener Cotización",
+    "getQuote": "Obtener cotización",
     "requestQuote": "Solicitar Cotización",
     "contactUs": "Contáctenos",
     "learnMore": "Saber Más",
@@ -22,13 +22,13 @@
     "viewLinkedInProfile": "Ver Perfil de LinkedIn →"
   },
   "nav": {
-    "home": "INICIO",
-    "products": "PRODUCTOS",
-    "wholesale": "MAYORISTA",
-    "ourStandard": "NUESTRO ESTÁNDAR",
-    "blog": "BLOG",
-    "faq": "PREGUNTAS",
-    "contact": "CONTACTO"
+    "home": "Inicio",
+    "products": "Productos",
+    "wholesale": "Mayorista",
+    "ourStandard": "Nuestro estándar",
+    "blog": "Blog",
+    "faq": "Preguntas",
+    "contact": "Contacto"
   },
   "home": {
     "heroTitle": "Vainilla Indonesa Premium",
@@ -51,7 +51,35 @@
     "recentArticles": "Artículos Recientes",
     "stayUpdated": "Manténgase Informado del Mercado de Vainilla",
     "stayUpdatedDesc": "Obtenga información sobre precios, calidad y oportunidades de exportación.",
-    "emailPlaceholder": "Ingrese su correo electrónico"
+    "emailPlaceholder": "Ingrese su correo electrónico",
+    "figures": [
+      {
+        "value": "1",
+        "unit": "kg",
+        "label": "Pedido mínimo",
+        "note": "Muestras gratuitas"
+      },
+      {
+        "value": "3–7",
+        "unit": "días",
+        "label": "Flete aéreo",
+        "note": "FCA, CPT o DDP"
+      },
+      {
+        "value": "150+",
+        "unit": "toneladas",
+        "label": "Exportadas",
+        "note": "Vainas, pasta y polvo"
+      },
+      {
+        "value": "20+",
+        "unit": "",
+        "label": "Países atendidos",
+        "note": "Asia, Europa, América y Oriente Medio"
+      }
+    ],
+    "aboutMore1": "Trabajamos directamente con pequeños productores de Java y coordinamos de cerca con los centros de curado que preparan sus vainas. Cada lote se selecciona, clasifica y revisa antes de su envío, para que lo que llega a sus instalaciones coincida con lo prometido.",
+    "aboutMore2": "Tanto si necesita un solo kilo para desarrollo de producto como volúmenes regulares para producción, nos encargamos de las muestras, la documentación y el flete aéreo. Recibe una vainilla constante de un pedido a otro, con un equipo que responde rápido."
   },
   "products": {
     "title": "Nuestros Productos",
