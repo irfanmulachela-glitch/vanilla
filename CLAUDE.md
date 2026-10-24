@@ -39,6 +39,7 @@ food manufacturers and distributors. Owner: Muhammad Irfan (Export Director). Mi
 ## Business facts to keep consistent sitewide
 - MOQ: **from 1 kg** (no trial tiers). Free samples available.
 - Shipping: **air freight first**, 3-7 days. Incoterms FCA (Surakarta) / CPT / DDP. Do not claim FOB/CIF; sea freight only on request.
+- Two grades only: Grade A = Gourmet, Grade B = Extraction (no separate third "Gourmet" tier). Gourmet/Grade A must always show higher vanillin than Grade B.
 - Vanillin: 1.1-2.5% overall; Grade A 1.1-2.5%, Grade B 1.0-2.0%. Moisture Grade A 25-35%, Grade B < 25%. Length Grade A 15-20 cm, Grade B 10-15 cm. Curing 6-9 months. HS code 0905.10. Species V. planifolia.
 - 10+ years experience, 150+ tons exported, 20+ countries, 30+ clients, founded 2014. Halal certified (MUI).
 - Contact: admin@lavanillasupplier.com, WhatsApp +62 878-3575-6945.

@@ -26,7 +26,7 @@ const blogPosts = {
       <p>Indonesian vanilla beans come in two primary grades:</p>
       <ul>
         <li><strong>Grade A (Gourmet):</strong> 15-20 cm length, 25-35% moisture, 1.1-2.5% vanillin. Perfect for retail, pastry, and culinary applications.</li>
-        <li><strong>Grade B (Extract):</strong> 10-16 cm length, less than 25% moisture, 1.0-2.0% vanillin. Ideal for extract manufacturing and industrial use.</li>
+        <li><strong>Grade B (Extract):</strong> 10-15 cm length, less than 25% moisture, 1.0-2.0% vanillin. Ideal for extract manufacturing and industrial use.</li>
       </ul>
 
       <h2>Evaluating Supplier Quality</h2>
@@ -55,7 +55,7 @@ const blogPosts = {
     date: "2026-01-10",
     readTime: "6 min read",
     content: `
-      <p>Grade A Indonesian vanilla beans measure 15–20 cm with 25–35% moisture and 1.1–2.5% vanillin, designed for retail and culinary use. Grade B beans measure 10–16 cm with under 25% moisture and 1.0–2.0% vanillin, optimized for extract manufacturing. La Vanilla Supplier provides both grades with Certificate of Analysis documentation for every shipment.</p>
+      <p>Grade A Indonesian vanilla beans measure 15–20 cm with 25–35% moisture and 1.1–2.5% vanillin, designed for retail and culinary use. Grade B beans measure 10–15 cm with under 25% moisture and 1.0–2.0% vanillin, optimized for extract manufacturing. La Vanilla Supplier provides both grades with Certificate of Analysis documentation for every shipment.</p>
 
       <h2>Grade A: Gourmet Vanilla Beans</h2>
       <p>Grade A beans are premium quality, designed for direct culinary use. Key characteristics include:</p>
@@ -70,7 +70,7 @@ const blogPosts = {
       <h2>Grade B: Extraction Vanilla Beans</h2>
       <p>Grade B beans are designed for extract manufacturing and industrial applications. Key characteristics include:</p>
       <ul>
-        <li><strong>Length:</strong> 10-16 cm</li>
+        <li><strong>Length:</strong> 10-15 cm</li>
         <li><strong>Moisture Content:</strong> Less than 25%</li>
         <li><strong>Vanillin Content:</strong> 1.0-2.0%</li>
         <li><strong>Appearance:</strong> Thinner, drier, more economical</li>
@@ -495,7 +495,7 @@ const blogPosts = {
       <ul>
         <li><strong>Color:</strong> Dark brown to black, never light brown or green</li>
         <li><strong>Texture:</strong> Oily, plump, flexible — not dry or brittle</li>
-        <li><strong>Length:</strong> Grade A: 15-20 cm, Grade B: 10-16 cm</li>
+        <li><strong>Length:</strong> Grade A: 15-20 cm, Grade B: 10-15 cm</li>
         <li><strong>Seeds:</strong> Tiny black seeds visible when split open</li>
       </ul>
 
@@ -680,7 +680,7 @@ const blogPosts = {
       <p>Quality classification:</p>
       <ul>
         <li><strong>Grade A:</strong> 15-20 cm, 25-35% moisture, 1.1-2.5% vanillin</li>
-        <li><strong>Grade B:</strong> 10-16 cm, less than 25% moisture, 1.0-2.0% vanillin</li>
+        <li><strong>Grade B:</strong> 10-15 cm, less than 25% moisture, 1.0-2.0% vanillin</li>
         <li>Visual inspection for defects</li>
         <li>Moisture and vanillin testing</li>
       </ul>
