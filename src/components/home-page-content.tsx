@@ -3,17 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import {
-  Globe,
-  Users,
-  ArrowRight,
-  CheckCircle2,
-  Star,
-  Package,
-  MapPin,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Star } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { AnimatedCounter } from "@/components/animated-counter";
 import { useLocaleContext } from "@/components/locale-provider";
 
 export function HomePageContent() {
@@ -37,6 +28,7 @@ export function HomePageContent() {
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/70 to-transparent" />
+          <div className="absolute inset-0 bg-[#2C2518]/45 lg:hidden" aria-hidden="true" />
         </div>
 
         {/* Content */}
@@ -74,19 +66,19 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section aria-label="Key figures" className="bg-[#F8F6F2] border-b border-[#E5E0D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {/* Key figures (single set of numbers for the page) */}
+      <section aria-label="Key figures" className="bg-white border-b border-[#EEE9E1]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x divide-[#EEE9E1] text-center">
             {[
-              { value: "1 kg", label: "Minimum Order" },
-              { value: "3-7 Days", label: "Air Freight" },
-              { value: "10+", label: "Years Experience" },
-              { value: "20+", label: "Countries Served" },
+              { value: "1 kg", label: "Minimum order" },
+              { value: "3-7 days", label: "Air freight" },
+              { value: "150+ tons", label: "Exported" },
+              { value: "20+", label: "Countries served" },
             ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
-                <p className="text-sm text-[#6B6358]">{stat.label}</p>
+              <div key={stat.label} className="py-8 md:py-10">
+                <p className="text-2xl lg:text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p className="text-sm text-[#6B6358] mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -96,8 +88,8 @@ export function HomePageContent() {
       {/* About Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
-            About Us
+          <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+            About Us · Since 2014
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6 leading-tight">
             {t.common.tagline}
@@ -105,43 +97,24 @@ export function HomePageContent() {
           <p className="text-lg text-[#6B6358] mb-6 max-w-3xl mx-auto leading-relaxed">
             {t.about.description}
           </p>
-          <p className="text-sm text-[#6B6358]/70 mb-12">
+          <p className="text-sm text-[#6B6358]/70 mb-10">
             {t.about.operatedBy} {t.about.registeredCompany}
           </p>
 
-          {/* Animated Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            {[
-              { value: 10, suffix: "+", label: t.home.yearsExperience },
-              { value: 150, suffix: "+", label: t.home.tonsExported },
-              { value: 20, suffix: "+", label: t.home.countriesServed },
-              { value: 30, suffix: "+", label: t.home.happyClients },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-2">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </p>
-                <p className="text-sm text-[#6B6358]">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Certification Badges */}
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* Trust points */}
+          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3">
             {[
               t.quality.qualityAssured,
               t.quality.halalCertified,
               t.products.fullDocumentation,
               t.quality.phytosanitary,
             ].map((badge) => (
-              <span
-                key={badge}
-                className="px-5 py-2.5 bg-[#F8F6F2] text-[#2C2518] text-sm font-medium rounded-full border border-[#E5E0D8]"
-              >
+              <li key={badge} className="flex items-center gap-2 text-sm font-medium text-[#2C2518]">
+                <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" aria-hidden="true" />
                 {badge}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -151,7 +124,7 @@ export function HomePageContent() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div>
-              <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                 Our Source
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
@@ -164,7 +137,7 @@ export function HomePageContent() {
                 volcanic island.
               </p>
               <p className="text-white/70 leading-relaxed">
-                Java's unique climate and rich volcanic soil create the perfect conditions for
+                Java&apos;s unique climate and rich volcanic soil create the perfect conditions for
                 growing premium V. planifolia vanilla. This direct partnership means
                 better quality, fair prices, and complete traceability from farm to your facility.
               </p>
@@ -197,6 +170,7 @@ export function HomePageContent() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">What We Supply</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
               {t.products.title}
             </h2>
@@ -219,33 +193,14 @@ export function HomePageContent() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-sm font-medium text-[#B5A37A] rounded-full border border-[#E5E0D8]">
-                      {product.category === "beans"
-                        ? "Beans"
-                        : product.category === "paste"
-                        ? "Paste"
-                        : "Powder"}
-                    </span>
-                  </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-[#6B6358] mb-4">{product.shortDescription}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {product.certifications.map((cert) => (
-                      <span
-                        key={cert}
-                        className="px-2 py-1 bg-[#F8F6F2] text-[#6B6358] text-xs font-medium rounded"
-                      >
-                        {cert}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-[#6B6358] mb-6">{product.shortDescription}</p>
                   <div className="flex items-center text-[#B5A37A] font-medium mt-auto">
-                    {t.products.whyChoose}
+                    {t.products.viewProduct}
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -256,7 +211,7 @@ export function HomePageContent() {
       </section>
 
       {/* Process Video — contained 16:9 frame, sits right after Products */}
-      <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="process-video-heading">
+      <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]" aria-labelledby="process-video-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Text (left on desktop, above video on mobile) */}
@@ -306,10 +261,10 @@ export function HomePageContent() {
                       setVideoStarted(true);
                     }}
                     aria-label="Play process video"
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/10 transition-colors duration-300"
+                    className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/5 transition-colors duration-300"
                   >
-                    <span className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-[#B5A37A] text-[#2C2518] flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-300">
-                      <svg className="w-6 h-6 sm:w-8 sm:h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <span className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B5A37A]/50 backdrop-blur-md ring-1 ring-white/40 text-white flex items-center justify-center shadow-lg group-hover:bg-[#B5A37A] group-hover:scale-105 transition-all duration-300">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </span>
@@ -344,13 +299,12 @@ export function HomePageContent() {
                 There are hundreds of vanilla suppliers in Indonesia.
               </h2>
               <p className="text-xl sm:text-2xl font-medium text-white/80 leading-snug mb-8">
-                Finding one that consistently delivers quality — that&apos;s the hard part.
+                Finding one that consistently delivers quality is the hard part.
               </p>
               <div className="w-12 h-[2px] bg-[#B5A37A] mb-8" />
               <p className="text-white/85 text-sm leading-relaxed max-w-md">
-                There are hundreds of vanilla suppliers in Indonesia. Very few
-                have the consistency, transparency, and long-term commitment
-                that serious importers need.
+                Very few have the consistency, transparency, and long-term
+                commitment that serious importers need.
               </p>
               <a
                 href="/La Vanilla Supplier - Company Profile.pdf"
@@ -418,6 +372,7 @@ export function HomePageContent() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Specifications</p>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
               Product Specifications
             </h2>
@@ -427,7 +382,7 @@ export function HomePageContent() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl border border-[#D8D3C9] overflow-hidden">
+          <div className="max-w-5xl mx-auto bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-[#2C2518]">
@@ -473,59 +428,69 @@ export function HomePageContent() {
       </section>
 
       {/* Export Regions */}
-      <section className="py-20 bg-[#F8F6F2]">
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-              Serving Buyers Worldwide
-            </h2>
-            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
-              From the Middle East to North America, we deliver premium
-              Indonesian vanilla with full export documentation.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                region: "UAE & Middle East",
-                href: `${prefix}/regions/uae`,
-                description:
-                  "Dubai, Abu Dhabi, and across the GCC. Halal certified. Fast air freight.",
-              },
-              {
-                region: "Australia",
-                href: `${prefix}/regions/australia`,
-                description:
-                  "Sydney, Melbourne, Perth. US Import Ready. 5-7 day delivery.",
-              },
-              {
-                region: "USA",
-                href: `${prefix}/regions/usa`,
-                description:
-                  "US Import Ready. East and West coast. DHL and FedEx shipping.",
-              },
-              {
-                region: "Europe",
-                href: `${prefix}/regions/europe`,
-                description:
-                  "EU food safety standards. Netherlands, France, Germany, and more.",
-              },
-            ].map((item) => (
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Where We Ship</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4 leading-tight">
+                Serving Buyers Worldwide
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                From the Middle East to North America, we deliver premium
+                Indonesian vanilla with full export documentation.
+              </p>
               <Link
-                key={item.region}
-                href={item.href}
-                className="group p-6 bg-white rounded-xl border border-[#D8D3C9] hover:border-[#B5A37A]/60 hover:shadow-lg transition-all duration-300"
+                href={`${prefix}/wholesale`}
+                className="group inline-flex items-center text-sm font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors"
               >
-                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#B5A37A] transition-colors duration-300">
-                  <MapPin className="w-5 h-5 text-[#B5A37A] group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="font-semibold text-[#2C2518] mb-1 group-hover:text-[#B5A37A] transition-colors">
-                  {item.region}
-                </h3>
-                <p className="text-sm text-[#6B6358]">{item.description}</p>
+                See wholesale pricing and terms
+                <ArrowRight className="ml-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
               </Link>
-            ))}
+            </div>
+
+            <ul className="lg:col-span-7 border-t border-[#E5E0D8]">
+              {[
+                {
+                  region: "UAE & Middle East",
+                  href: `${prefix}/regions/uae`,
+                  description: "Dubai, Abu Dhabi, and across the GCC. Halal certified. Fast air freight.",
+                },
+                {
+                  region: "Australia",
+                  href: `${prefix}/regions/australia`,
+                  description: "Sydney, Melbourne, Perth. Food safety compliant. Fast air freight.",
+                },
+                {
+                  region: "USA",
+                  href: `${prefix}/regions/usa`,
+                  description: "US Import Ready. East and West coast. DHL and FedEx shipping.",
+                },
+                {
+                  region: "Europe",
+                  href: `${prefix}/regions/europe`,
+                  description: "EU food safety standards. Netherlands, France, Germany, and more.",
+                },
+              ].map((item) => (
+                <li key={item.region} className="border-b border-[#E5E0D8]">
+                  <Link
+                    href={item.href}
+                    className="group flex items-center gap-6 py-6"
+                  >
+                    <div className="flex-1 sm:flex sm:items-baseline sm:gap-8">
+                      <h3 className="sm:w-48 flex-shrink-0 text-lg font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-1 sm:mb-0">
+                        {item.region}
+                      </h3>
+                      <p className="text-sm text-[#6B6358] leading-relaxed">{item.description}</p>
+                    </div>
+                    <ArrowRight
+                      className="w-5 h-5 flex-shrink-0 text-[#B5A37A] group-hover:translate-x-1 transition-transform"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -553,68 +518,17 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Internal Links for SEO */}
-      <section className="py-16 bg-[#F8F6F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#2C2518] mb-8 text-center">
-            Explore Our Vanilla Solutions
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link
-              href={`${prefix}/wholesale`}
-              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
-            >
-              <Package className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
-              <h3 className="font-semibold text-[#2C2518]">{t.nav.wholesale}</h3>
-              <p className="text-sm text-[#6B6358]">Orders from 1 kg</p>
-            </Link>
-            <Link
-              href={`${prefix}/regions/uae`}
-              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
-            >
-              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
-              <h3 className="font-semibold text-[#2C2518]">Dubai & UAE</h3>
-              <p className="text-sm text-[#6B6358]">Halal certified supply</p>
-            </Link>
-            <Link
-              href={`${prefix}/regions/australia`}
-              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
-            >
-              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
-              <h3 className="font-semibold text-[#2C2518]">Sydney, Australia</h3>
-              <p className="text-sm text-[#6B6358]">Food safety compliant</p>
-            </Link>
-            <Link
-              href={`${prefix}/regions/usa`}
-              className="p-4 bg-white rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors text-center"
-            >
-              <Globe className="w-8 h-8 text-[#B5A37A] mx-auto mb-2" />
-              <h3 className="font-semibold text-[#2C2518]">New York, USA</h3>
-              <p className="text-sm text-[#6B6358]">US Import Ready supply</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Blog Features */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10">
-            <div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-[#2C2518] mb-3">
-                Vanilla Industry Insights
-              </h2>
-              <p className="text-[#6B6358] max-w-xl">
-                Expert guides on sourcing, quality, and export from Indonesia.
-              </p>
-            </div>
-            <Link
-              href={`${prefix}/blog`}
-              className="mt-4 sm:mt-0 inline-flex items-center text-[#B5A37A] font-semibold hover:text-[#A8956A] transition-colors text-sm"
-            >
-              Read All Articles
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
+          <div className="text-center mb-12">
+            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Insights</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Vanilla Industry Insights
+            </h2>
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Expert guides on sourcing, quality, and export from Indonesia.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -637,66 +551,55 @@ export function HomePageContent() {
                 date: "April 10, 2026",
                 category: "Wholesale Guide",
               },
-            ].map((post, i) => (
+            ].map((post) => (
               <Link
                 key={post.slug}
                 href={`${prefix}/blog/${post.slug}`}
-                className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="group flex flex-col p-7 bg-white rounded-2xl border border-[#E5E0D8] hover:border-[#B5A37A]/60 hover:shadow-md transition-all duration-300"
               >
-                <div className="h-40 bg-[#F8F6F2] flex items-center justify-center p-6">
-                  <svg viewBox="0 0 200 140" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="30" y="10" width="140" height="120" rx="6" fill="white" stroke="#E5E0D8" strokeWidth="1.5" />
-                    <rect x="30" y="10" width="140" height="24" rx="6" fill="#2C2518" />
-                    <rect x="30" y="28" width="140" height="6" fill="#2C2518" />
-                    <rect x="42" y="18" width="40" height="4" rx="2" fill="#B5A37A" />
-                    <rect x="42" y="46" width="90" height="3" rx="1.5" fill="#D8D3C9" />
-                    <rect x="42" y="54" width="116" height="3" rx="1.5" fill="#E5E0D8" />
-                    <rect x="42" y="62" width="100" height="3" rx="1.5" fill="#E5E0D8" />
-                    <rect x="42" y="70" width="110" height="3" rx="1.5" fill="#E5E0D8" />
-                    <rect x="42" y="78" width="80" height="3" rx="1.5" fill="#E5E0D8" />
-                    <rect x="42" y="90" width="50" height="8" rx="4" fill="#B5A37A" opacity="0.2" />
-                    <rect x="42" y="90" width="50" height="8" rx="4" stroke="#B5A37A" strokeWidth="1" fill="none" />
-                    <text x="67" y="96" fontSize="5" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif" fontWeight="600">READ</text>
-                    {i === 0 && <circle cx="155" cy="105" r="12" fill="#B5A37A" opacity="0.15" />}
-                    {i === 0 && <text x="155" y="108" fontSize="8" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">halal</text>}
-                    {i === 1 && <rect x="120" y="86" width="40" height="30" rx="4" fill="#B5A37A" opacity="0.15" />}
-                    {i === 1 && <text x="140" y="105" fontSize="7" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">paste</text>}
-                    {i === 2 && <path d="M130 90 L155 90 L155 120 L130 120 Z" fill="#B5A37A" opacity="0.15" rx="4" />}
-                    {i === 2 && <text x="142" y="108" fontSize="6" fill="#B5A37A" textAnchor="middle" fontFamily="sans-serif">B2B</text>}
-                  </svg>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 text-xs text-[#6B6358] mb-3">
-                    <span>{post.date}</span>
-                    <span className="w-1 h-1 bg-[#D8D3C9] rounded-full" />
-                    <span className="font-medium text-[#B5A37A] uppercase tracking-wider">
-                      {post.category}
-                    </span>
-                  </div>
-                  <h3 className="font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-3">
+                  {post.category}
+                </p>
+                <h3 className="text-lg font-semibold leading-snug text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-6">
+                  {post.title}
+                </h3>
+                <div className="mt-auto flex items-center justify-between text-sm">
+                  <span className="text-[#9A9187]">{post.date}</span>
+                  <span className="inline-flex items-center font-medium text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
+                    Read
+                    <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href={`${prefix}/blog`}
+              className="inline-flex items-center text-sm font-semibold text-[#B5A37A] hover:text-[#A8956A] transition-colors"
+            >
+              Read all articles
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#2C2518]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Free Samples</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
             Ready to Start Your Vanilla Journey?
           </h2>
-          <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
-              Get a free sample and quote within 24 hours.
-              Free samples available. Orders from 1 kg at wholesale pricing.
+          <p className="text-lg text-[#6B6358] mb-8">
+            Get a free sample and a quote within 24 hours. Orders from 1 kg at wholesale pricing.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
               href={`${prefix}/contact`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg hover:bg-[#F8F6F2] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
             >
               {t.common.requestSample}
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -705,7 +608,7 @@ export function HomePageContent() {
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
             >
               {t.common.whatsapp}
             </Link>

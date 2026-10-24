@@ -50,11 +50,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder={t.home.emailPlaceholder}
-                className="flex-1 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
+                className="flex-1 min-w-0 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors flex items-center gap-2"
+                className="flex-shrink-0 px-4 sm:px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors flex items-center gap-2"
               >
                 {t.common.subscribe}
                 <ArrowRight className="w-4 h-4" />
