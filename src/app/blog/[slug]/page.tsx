@@ -176,7 +176,7 @@ const blogPosts = {
       </ul>
 
       <h2>Custom Formulations</h2>
-      <p>Many manufacturers offer custom vanilla paste formulations with adjustable vanillin concentration, sugar content, and viscosity. This allows optimization for specific applications and cost requirements.</p>
+      <p>Many manufacturers offer custom vanilla paste formulations with adjustable strength (fold), sugar content, and viscosity. This allows optimization for specific applications and cost requirements.</p>
     `,
   },
   "vanilla-market-trends-2026": {

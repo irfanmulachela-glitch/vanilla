@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Can you customize vanilla paste?",
-    a: "Yes. Specify vanillin concentration (1.0-3.0%), sugar content (0-65%), and viscosity. We create a sample for your approval before production starts.",
+    a: "Yes. Specify strength (single, double or triple fold), sugar content (0-65%), and viscosity. We create a sample for your approval before production starts.",
   },
   {
     q: "What is in your vanilla powder?",
@@ -206,12 +206,12 @@ export default function ProductsPage() {
                 <p className="text-[#6B6358] mb-6 leading-relaxed">
                   We specialize in creating custom vanilla paste compositions
                   tailored to your exact specifications. Whether you need a
-                  specific vanillin concentration, sugar content, or viscosity —
+                  specific strength, sugar content, or viscosity —
                   we can develop it for you.
                 </p>
                 <ul className="space-y-3 mb-6">
                   {[
-                    "Adjustable vanillin concentration (1.0-3.0%)",
+                    "Strength: single, double or triple fold",
                     "Custom sugar content (0-65%)",
                     "Various viscosity options",
                     "Small batch prototyping available",

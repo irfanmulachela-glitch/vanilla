@@ -67,7 +67,7 @@ const faqs = [
       },
       {
         q: "Can you customize vanilla paste composition?",
-        a: "Absolutely! We specialize in custom formulations. You can specify vanillin concentration (1.0-3.0%), sugar content (0-65%), viscosity, and other parameters. We'll create a sample for your approval before production.",
+        a: "Absolutely! We specialize in custom formulations. You can specify strength (single, double or triple fold), sugar content (0-65%), viscosity, and other parameters. We'll create a sample for your approval before production.",
       },
       {
         q: "How do you ensure consistent quality across orders?",

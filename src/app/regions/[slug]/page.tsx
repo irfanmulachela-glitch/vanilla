@@ -459,7 +459,7 @@ export default async function RegionPage({
                   Vanilla Paste
                 </h3>
                 <p className="text-[#6B6358] text-sm mb-4">
-                  Bulk vanilla paste with adjustable vanillin concentration. Halal certified, no synthetic additives.
+                  Bulk vanilla paste in single, double or triple fold strength. Halal certified, no synthetic additives.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">

@@ -122,9 +122,9 @@ export default function VanillaPasteBulkOrder() {
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold text-[#2C2518] mb-4">Standard Formulation</h3>
               <ul className="list-disc list-inside text-[#6B6358] space-y-2 pl-4">
-                <li>Base: 100% Indonesian Vanilla Beans (V. planifolia)</li>
+                <li>Base: 100% Indonesian Vanilla Beans (V. planifolia, 1.1-2.5% vanillin)</li>
                 <li>Carrier: Food-grade glycerin</li>
-                <li>Vanillin content: 1.5-2.5% (customizable)</li>
+                <li>Strength: single fold as standard (double and triple fold below)</li>
                 <li>Appearance: Dark brown with visible bean specks</li>
                 <li>Shelf life: 24 months (unopened)</li>
                 <li>Storage: Cool, dry place. Refrigerate after opening.</li>
@@ -147,7 +147,7 @@ export default function VanillaPasteBulkOrder() {
               Food manufacturers often require specific formulations to match their product profiles. We offer custom vanilla paste formulations including:
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-8 pl-4">
-              <li>Adjustable vanillin concentration</li>
+              <li>Adjustable strength (single, double or triple fold)</li>
               <li>Custom carrier bases (glycerin, propylene glycol, sugar syrup)</li>
               <li>Seed-speck density adjustments</li>
               <li>Flavor profile modifications (bold, smooth, creamy)</li>
