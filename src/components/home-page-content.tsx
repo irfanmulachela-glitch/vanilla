@@ -15,59 +15,79 @@ export function HomePageContent() {
 
   return (
     <>
-      {/* Hero Section - Full bleed with overlay */}
-      <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      {/* Hero Section - light, product-forward (studio photo blends into the page) */}
+      <section className="relative bg-[#FCFCFC] overflow-hidden">
+        {/* Photo (desktop): right side, white studio background melts into the section */}
+        <div className="hidden lg:block absolute inset-y-0 end-0 w-[56%]" aria-hidden="true">
           <Image
-            src="/hero-vanilla-farm.jpg"
-            alt="Vanilla beans growing on vines in a Javanese plantation"
+            src="/hero-vanilla-beans-studio.jpg"
+            alt=""
             fill
-            className="object-cover object-[center_15%]"
             priority
+            sizes="56vw"
+            className="object-cover object-left rtl:-scale-x-100"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/70 to-transparent" />
-          <div className="absolute inset-0 bg-[#2C2518]/45 lg:hidden" aria-hidden="true" />
+          <div className="absolute inset-y-0 start-0 w-1/5 bg-gradient-to-r rtl:bg-gradient-to-l from-[#FCFCFC] to-transparent" />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-          <div className="max-w-xl">
-            <p className="text-[#B5A37A] text-sm font-semibold uppercase tracking-wider mb-4">
+        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-6 pb-14 lg:py-24 lg:min-h-[660px] lg:flex lg:items-center">
+          <div className="w-full lg:max-w-[520px]">
+            {/* Photo (mobile) */}
+            <div className="lg:hidden relative -mx-6 sm:-mx-8 mb-6 aspect-[16/11]">
+              <Image
+                src="/hero-vanilla-beans-studio-mobile.jpg"
+                alt="Cured Indonesian vanilla beans from Java"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover rtl:-scale-x-100"
+              />
+            </div>
+
+            <p className="flex items-center gap-3 text-[#9A8457] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
+              <span className="w-8 h-px bg-[#B5A37A]" aria-hidden="true" />
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl text-white mb-4 leading-[1.05] tracking-tight font-[family-name:var(--font-libre)]">
+            <h1 className="text-4xl sm:text-5xl xl:text-[3.75rem] text-[#2C2518] mb-5 leading-[1.05] tracking-tight font-[family-name:var(--font-libre)]">
               <span className="font-normal italic">Stop Worrying</span>{" "}
               <span className="font-bold">About Vanilla Supply</span>
             </h1>
-            <p className="text-lg text-[#D4C48A] font-medium mb-5 italic">
+            <p className="text-lg text-[#8C7A4F] font-medium mb-4 italic">
               {t.home.heroSubtitle}
             </p>
-            <p className="text-white/80 mb-6 leading-relaxed text-lg">
+            <p className="text-[#6B6358] mb-8 leading-relaxed text-base sm:text-lg">
               {t.home.heroDescription}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href={`${prefix}/contact`}
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white text-sm font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
               >
                 {t.common.requestSample}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
                 href={`${prefix}/products`}
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white text-sm font-medium rounded-lg border border-white/30 hover:bg-white/20 transition-colors backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] text-sm font-medium rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
               >
                 {t.common.learnMore}
               </Link>
             </div>
+
+            <ul className="mt-9 pt-6 border-t border-[#EEE9E1] flex flex-wrap gap-x-6 gap-y-2.5">
+              {[t.quality.halalCertified, t.quality.phytosanitary, t.products.fullDocumentation].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-[#6B6358]">
+                  <CheckCircle2 className="w-4 h-4 text-[#B5A37A]" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       {/* Key figures (single set of numbers for the page) */}
-      <section aria-label="Key figures" className="bg-white border-b border-[#EEE9E1]">
+      <section aria-label="Key figures" className="bg-white border-y border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x divide-[#EEE9E1] text-center">
             {[
@@ -77,7 +97,7 @@ export function HomePageContent() {
               { value: "20+", label: "Countries served" },
             ].map((stat) => (
               <div key={stat.label} className="py-8 md:py-10">
-                <p className="text-2xl lg:text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
+                <p dir="ltr" className="text-2xl lg:text-3xl font-bold text-[#B5A37A]">{stat.value}</p>
                 <p className="text-sm text-[#6B6358] mt-1">{stat.label}</p>
               </div>
             ))}
