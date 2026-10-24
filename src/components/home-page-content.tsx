@@ -156,49 +156,61 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Origin Section - Clean Indonesian Map */}
-      <section className="py-16 bg-[#2C2518]">
+      {/* Origin Section */}
+      <section className="py-20 lg:py-24 bg-[#2C2518] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            {/* Text */}
+            <div className="lg:col-span-5">
               <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
                 Our Source
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                Where Our Vanilla<br />Comes From
+                Where Our Vanilla<br className="hidden sm:block" /> Comes From
               </h2>
-              <p className="text-white/70 mb-6 leading-relaxed text-lg">
-                Our vanilla beans are proudly sourced from the lush plantations of Java, Indonesia.
-                We work directly with local farmers who have perfected the art of vanilla cultivation
-                over generations, ensuring every bean carries the authentic character of this
-                volcanic island.
+              <p className="text-white/70 leading-relaxed text-lg mb-10">
+                Our vanilla grows on smallholder plantations across Java, where rich volcanic
+                soil and a tropical climate give V. planifolia its deep, creamy character. We buy
+                directly from the farmers who grow it, so you get fresher beans, fair prices and
+                a supply you can rely on.
               </p>
-              <p className="text-white/70 leading-relaxed">
-                Java&apos;s unique climate and rich volcanic soil create the perfect conditions for
-                growing premium V. planifolia vanilla. This direct partnership means
-                better quality, fair prices, and complete traceability from farm to your facility.
-              </p>
+
+              <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                {[
+                  { label: "Species", value: "V. planifolia" },
+                  { label: "Curing", value: "Sun-cured 6–9 months" },
+                  { label: "Soil", value: "Volcanic, Java" },
+                ].map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-sm font-medium text-white/90 leading-snug">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
 
-            {/* Indonesian Map with Java waypoint */}
-            <div className="relative">
-              <img
-                src="/indonesia-map.svg"
-                alt="Map of Indonesia highlighting Java island"
-                className="w-full h-auto"
-                style={{ filter: "invert(89%) sepia(8%) saturate(444%) hue-rotate(346deg) brightness(90%) contrast(85%)" }}
-              />
-
-              {/* Java waypoint marker */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 792.54596 316.66394">
-                {/* Vertical line */}
-                <line x1="255" y1="200" x2="255" y2="250" stroke="#B5A37A" strokeWidth="2" />
-                {/* Dot at bottom */}
-                <circle cx="255" cy="250" r="6" fill="#B5A37A" />
-                {/* "Java" label above */}
-                <text x="255" y="190" fill="#B5A37A" fontSize="18" fontWeight="600" textAnchor="middle" fontFamily="sans-serif">Java</text>
-              </svg>
+            {/* Map: Java highlighted, eastern edge fades out at the PNG border */}
+            <div className="lg:col-span-7">
+              <div className="relative lg:w-[118%] rtl:lg:-ms-[18%]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/indonesia-map-java.svg"
+                  alt="Map of Indonesia with Java highlighted"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                {/* Java marker */}
+                <div className="absolute" style={{ left: "32.8%", top: "78.5%" }} aria-hidden="true">
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#B5A37A]/30 animate-ping" />
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#E8D9B0] ring-4 ring-[#B5A37A]/40" />
+                  <span className="absolute left-0 bottom-2 w-px h-8 sm:h-11 bg-gradient-to-t from-[#B5A37A] to-transparent" />
+                  <span className="absolute left-0 bottom-[2.6rem] sm:bottom-[3.4rem] -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B5A37A]/40 bg-[#2C2518]/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D9B0]">
+                    Java
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
