@@ -261,7 +261,7 @@ export function HomePageContent() {
       </section>
 
       {/* Process Video — contained 16:9 frame, sits right after Products */}
-      <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]" aria-labelledby="process-video-heading">
+      <section className="pt-20 pb-24 lg:pt-24 lg:pb-36 bg-white border-t border-[#EEE9E1]" aria-labelledby="process-video-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Text (left on desktop, above video on mobile) */}
