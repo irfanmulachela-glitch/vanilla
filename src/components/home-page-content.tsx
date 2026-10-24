@@ -255,6 +255,75 @@ export function HomePageContent() {
         </div>
       </section>
 
+      {/* Process Video — contained 16:9 frame, sits right after Products */}
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="process-video-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Text (left on desktop, above video on mobile) */}
+            <div className="lg:col-span-4">
+              <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
+              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
+                Our Process
+              </p>
+              <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-5 leading-tight">
+                See how the paste is made
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                Watch our team grind and blend real vanilla beans into smooth,
+                spreadable paste, done the same way every batch, from cured bean
+                to export-ready tub.
+              </p>
+              <Link
+                href={`${prefix}/products/vanilla-paste`}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
+              >
+                View vanilla paste
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Video — true 16:9 so nothing is cropped */}
+            <div className="lg:col-span-8">
+              <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#2C2518] shadow-xl ring-1 ring-[#2C2518]/10 group">
+                <video
+                  ref={videoRef}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  controls={videoStarted}
+                  poster="/process-poster.jpg"
+                  preload="metadata"
+                  playsInline
+                  onPlay={() => setVideoStarted(true)}
+                  onEnded={() => setVideoStarted(false)}
+                >
+                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {!videoStarted && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      videoRef.current?.play();
+                      setVideoStarted(true);
+                    }}
+                    aria-label="Play process video"
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/10 transition-colors duration-300"
+                  >
+                    <span className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-[#B5A37A] text-[#2C2518] flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-300">
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                    <span className="absolute bottom-4 right-4 px-2.5 py-1 rounded-md bg-black/50 text-white text-xs font-medium">
+                      0:29
+                    </span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="bg-[#F8F6F2]" aria-labelledby="why-choose-heading">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
@@ -457,72 +526,6 @@ export function HomePageContent() {
                 <p className="text-sm text-[#6B6358]">{item.description}</p>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Video Split — 70% video / 30% text */}
-      <section className="bg-white" aria-labelledby="process-video-heading">
-        <div className="grid lg:grid-cols-[3fr_7fr]">
-          {/* Video panel (70%, right on desktop) */}
-          <div className="relative bg-[#2C2518] aspect-video lg:aspect-auto lg:min-h-[560px] group lg:order-2">
-            <video
-              ref={videoRef}
-              className="absolute inset-0 w-full h-full object-cover"
-              controls
-              poster="/process-poster.jpg"
-              preload="metadata"
-              playsInline
-              onPlay={() => setVideoStarted(true)}
-              onEnded={() => setVideoStarted(false)}
-            >
-              <source src="/vanilla-paste-process.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {!videoStarted && (
-              <button
-                type="button"
-                onClick={() => {
-                  videoRef.current?.play();
-                  setVideoStarted(true);
-                }}
-                aria-label="Play process video"
-                className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/10 transition-colors duration-300"
-              >
-                <span className="w-20 h-20 rounded-full bg-[#B5A37A] text-[#2C2518] flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-              </button>
-            )}
-          </div>
-
-          {/* Text panel (30%, left on desktop) */}
-          <div className="flex flex-col justify-center p-8 sm:p-12 lg:px-10 xl:px-14 lg:order-1">
-            <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
-            <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
-              Our Process
-            </p>
-            <h2 id="process-video-heading" className="text-3xl lg:text-[2rem] font-bold text-[#2C2518] mb-5 leading-tight">
-              See how the paste is made
-            </h2>
-            <p className="text-[#6B6358] leading-relaxed mb-8">
-              Watch our team grind and blend real vanilla beans into smooth,
-              spreadable paste, done the same way every batch, from cured bean
-              to export-ready tub.
-            </p>
-            <div>
-              <Link
-                href={`${prefix}/products/vanilla-paste`}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
-              >
-                View vanilla paste
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
