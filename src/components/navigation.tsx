@@ -61,7 +61,7 @@ export function Navigation() {
       <header
         className={`fixed top-0 inset-x-0 z-[70] transition-[background-color,box-shadow,border-color] duration-300 ${
           scrolled || mobileMenuOpen
-            ? "bg-white/90 backdrop-blur-md border-b border-[#EEE9E1] shadow-[0_8px_24px_-16px_rgba(44,37,24,0.25)]"
+            ? "bg-white/[0.97] backdrop-blur-md border-b border-[#EEE9E1] shadow-[0_8px_24px_-16px_rgba(44,37,24,0.25)]"
             : "bg-[#FCFCFC] border-b border-transparent"
         }`}
       >

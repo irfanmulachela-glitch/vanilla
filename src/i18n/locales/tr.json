@@ -79,11 +79,23 @@
       }
     ],
     "aboutMore1": "Java'daki küçük üreticilerle doğrudan çalışıyor, çubuklarını hazırlayan kürleme atölyeleriyle yakın iş birliği yapıyoruz. Her parti sevk edilmeden önce seçilir, sınıflandırılır ve kontrol edilir; böylece tesisinize ulaşan ürün, söz verdiğimiz ürünle aynıdır.",
-    "aboutMore2": "Ürün geliştirme için tek bir kilo ya da üretim için düzenli hacimler gereksin, numuneleri, belgeleri ve hava kargoyu biz üstleniyoruz. Siparişten siparişe tutarlı vanilya ve hızlı yanıt veren bir ekip sizi bekliyor."
+    "aboutMore2": "Ürün geliştirme için tek bir kilo ya da üretim için düzenli hacimler gereksin, numuneleri, belgeleri ve hava kargoyu biz üstleniyoruz. Siparişten siparişe tutarlı vanilya ve hızlı yanıt veren bir ekip sizi bekliyor.",
+    "productsEyebrow": "Ürünlerimiz",
+    "productsTitle": "Endonezya Vanilya Çubuğu, Macunu ve Tozu",
+    "productTags": {
+      "beans": "Ekstrakt, unlu mamul ve perakende için",
+      "paste": "Fırınlar, dondurma ve tatlılar için",
+      "powder": "Kuru karışımlar, içecekler ve unlu mamuller için"
+    },
+    "productAlts": {
+      "beans": "Java'dan kürlenmiş Endonezya vanilya çubukları (Vanilla planifolia) demeti",
+      "paste": "Tohumları görünen Endonezya vanilya macunu kavanozu",
+      "powder": "Kürlenmiş çubuklardan öğütülmüş saf Endonezya vanilya tozu"
+    }
   },
   "products": {
     "title": "Ürünlerimiz",
-    "subtitle": "B2B alıcılar için premium Endonezya vanilya ürünleri",
+    "subtitle": "Java'da yetiştirilir; 20'den fazla ülkedeki gıda üreticilerine, distribütörlere ve ithalatçılara toptan ihraç edilir. 1 kg'dan başlayan siparişler.",
     "vanillaBeans": "Vanilya Fasulyeleri",
     "vanillaPaste": "Vanilya Macunu",
     "vanillaPowder": "Vanilya Tozu",

@@ -79,11 +79,23 @@
       }
     ],
     "aboutMore1": "Trabajamos directamente con pequeños productores de Java y coordinamos de cerca con los centros de curado que preparan sus vainas. Cada lote se selecciona, clasifica y revisa antes de su envío, para que lo que llega a sus instalaciones coincida con lo prometido.",
-    "aboutMore2": "Tanto si necesita un solo kilo para desarrollo de producto como volúmenes regulares para producción, nos encargamos de las muestras, la documentación y el flete aéreo. Recibe una vainilla constante de un pedido a otro, con un equipo que responde rápido."
+    "aboutMore2": "Tanto si necesita un solo kilo para desarrollo de producto como volúmenes regulares para producción, nos encargamos de las muestras, la documentación y el flete aéreo. Recibe una vainilla constante de un pedido a otro, con un equipo que responde rápido.",
+    "productsEyebrow": "Nuestros productos",
+    "productsTitle": "Vainas, pasta y polvo de vainilla de Indonesia",
+    "productTags": {
+      "beans": "Para extractos, repostería y retail",
+      "paste": "Para panaderías, helados y postres",
+      "powder": "Para mezclas secas, bebidas y repostería"
+    },
+    "productAlts": {
+      "beans": "Manojo de vainas de vainilla indonesias (Vanilla planifolia) de Java",
+      "paste": "Frasco de pasta de vainilla indonesia con semillas visibles",
+      "powder": "Vainilla en polvo indonesia pura, molida de vainas curadas"
+    }
   },
   "products": {
     "title": "Nuestros Productos",
-    "subtitle": "Productos de vainilla indonesa premium para compradores B2B",
+    "subtitle": "Cultivada en Java y exportada al por mayor a fabricantes de alimentos, distribuidores e importadores en más de 20 países. Pedidos desde 1 kg.",
     "vanillaBeans": "Vainas de Vainilla",
     "vanillaPaste": "Pasta de Vainilla",
     "vanillaPowder": "Polvo de Vainilla",

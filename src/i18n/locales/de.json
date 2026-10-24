@@ -79,11 +79,23 @@
       }
     ],
     "aboutMore1": "Wir arbeiten direkt mit Kleinbauern auf Java zusammen und stimmen uns eng mit den Betrieben ab, die ihre Schoten fermentieren und trocknen. Jede Partie wird ausgewählt, sortiert und geprüft, bevor sie versendet wird, damit bei Ihnen genau das ankommt, was wir versprochen haben.",
-    "aboutMore2": "Ob Sie ein einzelnes Kilo für die Produktentwicklung oder regelmäßige Mengen für die Produktion benötigen: Wir kümmern uns um Muster, Dokumente und Luftfracht. Sie erhalten Vanille in gleichbleibender Qualität von Bestellung zu Bestellung und ein Team, das schnell antwortet."
+    "aboutMore2": "Ob Sie ein einzelnes Kilo für die Produktentwicklung oder regelmäßige Mengen für die Produktion benötigen: Wir kümmern uns um Muster, Dokumente und Luftfracht. Sie erhalten Vanille in gleichbleibender Qualität von Bestellung zu Bestellung und ein Team, das schnell antwortet.",
+    "productsEyebrow": "Unsere Produkte",
+    "productsTitle": "Indonesische Vanilleschoten, -paste und -pulver",
+    "productTags": {
+      "beans": "Für Extrakte, Backwaren & Einzelhandel",
+      "paste": "Für Bäckereien, Eiscreme & Desserts",
+      "powder": "Für Trockenmischungen, Getränke & Backwaren"
+    },
+    "productAlts": {
+      "beans": "Bündel indonesischer Vanilleschoten (Vanilla planifolia) aus Java",
+      "paste": "Glas indonesische Vanillepaste mit sichtbaren Vanillesamen",
+      "powder": "Reines indonesisches Vanillepulver aus fermentierten Schoten"
+    }
   },
   "products": {
     "title": "Unsere Produkte",
-    "subtitle": "Premium indonesische Vanilleprodukte für B2B-Einkäufer",
+    "subtitle": "Auf Java angebaut und im Großhandel an Lebensmittelhersteller, Händler und Importeure in über 20 Ländern exportiert. Bestellungen ab 1 kg.",
     "vanillaBeans": "Vanilleschoten",
     "vanillaPaste": "Vanillemasse",
     "vanillaPowder": "Vanillepulver",

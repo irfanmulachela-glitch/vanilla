@@ -217,42 +217,42 @@ export function HomePageContent() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 lg:py-28 bg-white" aria-labelledby="products-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">What We Supply</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-              {t.products.title}
+          <div className="text-center mb-12 lg:mb-16">
+            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">{t.home.productsEyebrow}</p>
+            <h2 id="products-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4 text-balance">
+              {t.home.productsTitle}
             </h2>
-            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto text-balance">
               {t.products.subtitle}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {siteConfig.products.map((product) => (
-              <Link
-                key={product.id}
-                href={`${prefix}/products/${product.slug}`}
-                className="group bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
-              >
-                <div className="relative h-64">
+              <Link key={product.id} href={`${prefix}/products/${product.slug}`} className="group flex flex-col">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#F4F2EE]">
                   <Image
                     src={product.image}
-                    alt={product.name}
+                    alt={t.home.productAlts[product.category]}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-[#6B6358] mb-6">{product.shortDescription}</p>
-                  <div className="flex items-center text-[#B5A37A] font-medium mt-auto">
-                    {t.products.viewProduct}
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                <div className="pt-6 flex flex-col flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-2">
+                    {t.home.productTags[product.category]}
+                  </p>
+                  <h3 className="text-xl font-semibold text-[#2C2518] mb-2">{product.name}</h3>
+                  <p className="text-[#6B6358] leading-relaxed mb-5">{product.shortDescription}</p>
+                  <span className="mt-auto inline-flex items-center text-sm font-semibold text-[#2C2518]">
+                    <span className="border-b border-[#B5A37A]/0 group-hover:border-[#B5A37A] transition-colors">
+                      {t.products.viewProduct}
+                    </span>
+                    <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 transition-transform" />
+                  </span>
                 </div>
               </Link>
             ))}
