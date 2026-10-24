@@ -297,9 +297,9 @@ export default function VanillaGradingChart({ showTitle = false }: { showTitle?:
         </div>
       )}
 
-      <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-10 lg:gap-16 xl:gap-20">
         {/* Figure: ruler + beans */}
-        <figure className="lg:col-span-7 flex justify-center lg:justify-end lg:pr-8">
+        <figure className="flex justify-center lg:flex-shrink-0">
           <div className="relative w-fit">
             {/* faint 5 cm guide lines across the beans */}
             {[0, 5, 10, 15, 20].map((cm) => (
@@ -353,7 +353,9 @@ export default function VanillaGradingChart({ showTitle = false }: { showTitle?:
                       onClick={() => setSelectedGrade(key)}
                       aria-pressed={active}
                       aria-label={`Show ${grades[key].name} specifications`}
-                      className="group flex flex-col items-stretch focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5A37A]/50 rounded-md"
+                      className={`group flex flex-col items-stretch rounded-md transition-opacity duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5A37A]/50 ${
+                        active ? "opacity-100" : "opacity-30 hover:opacity-60"
+                      }`}
                     >
                       <div className="flex items-start gap-1 sm:gap-2.5" style={{ height: plotHeight, paddingTop: TOP - HOOK }}>
                         {items.map((bean) => (
@@ -401,7 +403,7 @@ export default function VanillaGradingChart({ showTitle = false }: { showTitle?:
         </figure>
 
         {/* Details */}
-        <div className="lg:col-span-5">
+        <div className="w-full lg:max-w-md">
           <div role="tablist" aria-label="Vanilla bean grade" className="inline-flex p-1 rounded-full border border-[#E5E0D8] mb-7">
             {(Object.keys(grades) as Grade[]).map((key) => (
               <button
