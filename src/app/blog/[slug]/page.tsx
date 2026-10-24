@@ -898,7 +898,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Grading Chart for vanilla-bean-grading post */}
           {slug === "vanilla-bean-grading" && (
             <div className="mt-12">
-              <VanillaGradingChart />
+              <VanillaGradingChart showTitle />
             </div>
           )}
         </div>

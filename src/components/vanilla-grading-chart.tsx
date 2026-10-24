@@ -33,11 +33,11 @@ const grades = {
   },
 } as const;
 
-const SCALE = 12; // pixels per cm
+const SCALE = 16; // pixels per cm
 const MAX_CM = 20;
 const TOP = 28; // y position of the 0 cm mark (px)
 const HOOK = 10; // room above the pod for the stem hook (px)
-const BEAN_W = 36; // svg width (px)
+const BEAN_W = 40; // svg width (px)
 
 const beans: { cm: number; grade: Grade }[] = [
   { cm: 20, grade: "a" },
@@ -84,7 +84,7 @@ function smoothPath(pts: Pt[], closed = false) {
 function beanGeometry(lengthPx: number, seed: number, grade: Grade) {
   const r = rng(seed);
   const cx = BEAN_W / 2;
-  const maxHalf = grade === "a" ? 7.4 : 5.9;
+  const maxHalf = (grade === "a" ? 7.4 : 5.9) * (SCALE / 12);
   const amp = grade === "a" ? 2.2 + r() * 1.4 : 2.8 + r() * 1.8;
   const phase = r() * Math.PI;
   const bulgePhase = r() * Math.PI * 2;
@@ -275,116 +275,163 @@ function VanillaBean({ cm, grade, seed, uid }: { cm: number; grade: Grade; seed:
 
 /* ------------------------------- chart -------------------------------- */
 
-export default function VanillaGradingChart() {
+const RULER_W = 34; // px
+
+export default function VanillaGradingChart({ showTitle = false }: { showTitle?: boolean }) {
   const [selectedGrade, setSelectedGrade] = useState<Grade>("a");
   const grade = grades[selectedGrade];
   const uid = useId().replace(/:/g, "");
-  const chartHeight = TOP + MAX_CM * SCALE + 56;
+  const plotHeight = TOP + MAX_CM * SCALE + 6;
+
+  const groups: { key: Grade; items: typeof beans }[] = [
+    { key: "a", items: beans.filter((b) => b.grade === "a") },
+    { key: "b", items: beans.filter((b) => b.grade === "b") },
+  ];
 
   return (
-    <div className="bg-[#F8F6F2] rounded-2xl px-4 py-8 sm:p-8 lg:p-12 border border-[#E5E0D8]">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <p className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em] mb-3">
-          Grading · Drawn to Scale
-        </p>
-        <h3 className="text-2xl lg:text-3xl font-bold text-[#2C2518]">
-          Our two grades, side by side
-        </h3>
-      </div>
+    <div className="not-prose">
+      {showTitle && (
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em] mb-3">Grading Chart</p>
+          <h3 className="text-2xl lg:text-3xl font-bold text-[#2C2518]">Our two grades, drawn to scale</h3>
+        </div>
+      )}
 
-      {/* Visual Chart */}
-      <div className="relative mb-8 overflow-x-auto">
-        <div className="flex min-w-[340px]">
-          {/* Scale ruler */}
-          <div className="relative w-9 sm:w-12 lg:w-16 flex-shrink-0" style={{ height: `${chartHeight}px` }}>
-            <div
-              className="absolute left-0 border-l-2 border-[#B5A37A]/30"
-              style={{ top: `${TOP}px`, height: `${MAX_CM * SCALE}px` }}
-            />
+      <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        {/* Figure: ruler + beans */}
+        <figure className="lg:col-span-7 flex justify-center lg:justify-end lg:pr-8">
+          <div className="relative w-fit">
+            {/* faint 5 cm guide lines across the beans */}
             {[0, 5, 10, 15, 20].map((cm) => (
               <div
                 key={cm}
-                className="absolute left-0 flex items-center -translate-y-1/2"
-                style={{ top: `${TOP + cm * SCALE}px` }}
+                aria-hidden="true"
+                className="absolute right-0 h-px bg-[#EEE9E1]"
+                style={{ top: `${TOP + cm * SCALE}px`, left: `${RULER_W}px` }}
+              />
+            ))}
+
+            <div className="relative flex items-start">
+              {/* Ruler */}
+              <div aria-hidden="true" className="relative flex-shrink-0" style={{ width: RULER_W, height: plotHeight }}>
+                <div
+                  className="absolute right-0 w-px bg-[#B5A37A]/60"
+                  style={{ top: `${TOP}px`, height: `${MAX_CM * SCALE}px` }}
+                />
+                {Array.from({ length: MAX_CM + 1 }, (_, cm) => (
+                  <div
+                    key={cm}
+                    className={`absolute right-0 h-px bg-[#B5A37A] ${cm % 5 === 0 ? "w-2.5" : "w-1.5 opacity-50"}`}
+                    style={{ top: `${TOP + cm * SCALE}px` }}
+                  />
+                ))}
+                {[0, 5, 10, 15, 20].map((cm) => (
+                  <span
+                    key={cm}
+                    className="absolute right-4 -translate-y-1/2 text-[10px] font-medium text-[#B5A37A] tabular-nums"
+                    style={{ top: `${TOP + cm * SCALE}px` }}
+                  >
+                    {cm}
+                  </span>
+                ))}
+                <span
+                  className="absolute right-4 text-[9px] font-semibold tracking-wider text-[#B5A37A]"
+                  style={{ top: `${TOP + MAX_CM * SCALE + 12}px` }}
+                >
+                  CM
+                </span>
+              </div>
+
+              {/* Bean groups */}
+              <div className="flex items-start gap-5 sm:gap-8 pl-3 sm:pl-5">
+                {groups.map(({ key, items }) => {
+                  const active = selectedGrade === key;
+                  return (
+                    <button
+                      type="button"
+                      key={key}
+                      onClick={() => setSelectedGrade(key)}
+                      aria-pressed={active}
+                      aria-label={`Show ${grades[key].name} specifications`}
+                      className="group flex flex-col items-stretch focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5A37A]/50 rounded-md"
+                    >
+                      <div className="flex items-start gap-1 sm:gap-2.5" style={{ height: plotHeight, paddingTop: TOP - HOOK }}>
+                        {items.map((bean) => (
+                          <VanillaBean
+                            key={bean.cm}
+                            cm={bean.cm}
+                            grade={bean.grade}
+                            seed={beans.indexOf(bean) * 7919 + 13}
+                            uid={uid}
+                          />
+                        ))}
+                      </div>
+                      {/* lengths */}
+                      <div className="flex gap-1 sm:gap-2.5 mt-3">
+                        {items.map((bean) => (
+                          <span
+                            key={bean.cm}
+                            className="text-center text-[10px] text-[#9A9187] tabular-nums"
+                            style={{ width: BEAN_W }}
+                          >
+                            {bean.cm}
+                          </span>
+                        ))}
+                      </div>
+                      {/* bracket + label */}
+                      <div
+                        className={`mt-2 h-2 border-x border-b transition-colors ${
+                          active ? "border-[#B5A37A]" : "border-[#DDD6CB] group-hover:border-[#B5A37A]/60"
+                        }`}
+                      />
+                      <p
+                        className={`mt-3 text-center text-[11px] sm:text-xs font-bold tracking-[0.14em] transition-colors ${
+                          active ? "text-[#2C2518]" : "text-[#9A9187] group-hover:text-[#6B6358]"
+                        }`}
+                      >
+                        {grades[key].label}
+                      </p>
+                      <p className="text-center text-[10px] sm:text-[11px] text-[#9A9187] mt-0.5">{grades[key].range}</p>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        {/* Details */}
+        <div className="lg:col-span-5">
+          <div role="tablist" aria-label="Vanilla bean grade" className="inline-flex p-1 rounded-full border border-[#E5E0D8] mb-7">
+            {(Object.keys(grades) as Grade[]).map((key) => (
+              <button
+                type="button"
+                role="tab"
+                aria-selected={selectedGrade === key}
+                key={key}
+                onClick={() => setSelectedGrade(key)}
+                className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider transition-colors ${
+                  selectedGrade === key ? "bg-[#2C2518] text-white" : "text-[#6B6358] hover:text-[#2C2518]"
+                }`}
               >
-                <div className="w-3 lg:w-4 h-px bg-[#B5A37A]" />
-                <span className="ml-1.5 lg:ml-2 text-[10px] lg:text-xs text-[#B5A37A] font-medium">{cm}</span>
+                {grades[key].label}
+              </button>
+            ))}
+          </div>
+
+          <h4 className="text-2xl font-bold text-[#2C2518] mb-3">{grade.name}</h4>
+          <p className="text-[#6B6358] leading-relaxed mb-7">{grade.description}</p>
+
+          <dl className="border-t border-[#EEE9E1]">
+            {Object.entries(grade.specs).map(([key, value]) => (
+              <div key={key} className="flex items-baseline justify-between gap-6 py-3.5 border-b border-[#EEE9E1]">
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A] flex-shrink-0">
+                  {key.replace(/([A-Z])/g, " $1").trim()}
+                </dt>
+                <dd className="text-sm font-medium text-[#2C2518] text-right">{value}</dd>
               </div>
             ))}
-            <div
-              className="absolute left-0 text-[10px] lg:text-xs text-[#B5A37A] font-medium"
-              style={{ top: `${TOP + MAX_CM * SCALE + 14}px` }}
-            >
-              CM
-            </div>
-          </div>
-
-          {/* Beans */}
-          <div className="flex-1 relative" style={{ height: `${chartHeight}px` }}>
-            <div className="absolute inset-0 flex items-start justify-center gap-1.5 sm:gap-6 lg:gap-10">
-              {beans.map((bean, index) => {
-                const isActive = selectedGrade === bean.grade;
-                return (
-                  <button
-                    type="button"
-                    key={index}
-                    onClick={() => setSelectedGrade(bean.grade)}
-                    aria-label={`Show ${grades[bean.grade].name}`}
-                    className={`flex flex-col items-center transition-opacity duration-300 ${
-                      isActive ? "opacity-100" : "opacity-35 hover:opacity-60"
-                    }`}
-                    style={{ marginTop: `${TOP - HOOK}px` }}
-                  >
-                    <VanillaBean cm={bean.cm} grade={bean.grade} seed={index * 7919 + 13} uid={uid} />
-                    <div className="mt-2 text-center">
-                      <div className="w-8 lg:w-12 border-t border-dashed border-[#B5A37A]/50 mx-auto mb-1" />
-                      <p className="text-[10px] lg:text-xs font-medium text-[#2C2518]">{bean.cm} cm</p>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Grade Selector */}
-      <div className="flex justify-center gap-8 lg:gap-16 mb-8">
-        {(Object.keys(grades) as Grade[]).map((key) => (
-          <button
-            type="button"
-            key={key}
-            onClick={() => setSelectedGrade(key)}
-            className={`text-center transition-all ${
-              selectedGrade === key ? "opacity-100" : "opacity-40 hover:opacity-70"
-            }`}
-          >
-            <div
-              className={`w-full h-0.5 rounded-full mb-3 ${
-                selectedGrade === key ? "bg-[#B5A37A]" : "bg-[#E5E0D8]"
-              }`}
-            />
-            <p className="text-xs lg:text-sm font-bold text-[#2C2518] tracking-wider">{grades[key].label}</p>
-            <p className="text-[10px] lg:text-xs text-[#6B6358] mt-1">{grades[key].range}</p>
-          </button>
-        ))}
-      </div>
-
-      {/* Grade Details */}
-      <div className="bg-white rounded-xl p-6 lg:p-8 border border-[#E5E0D8]">
-        <h4 className="text-lg font-bold text-[#2C2518] mb-2">{grade.name} Vanilla Beans</h4>
-        <p className="text-[#6B6358] mb-6">{grade.description}</p>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {Object.entries(grade.specs).map(([key, value]) => (
-            <div key={key} className="bg-[#F8F6F2] rounded-lg p-4">
-              <p className="text-xs font-semibold text-[#B5A37A] uppercase tracking-wider mb-1">
-                {key.replace(/([A-Z])/g, " $1").trim()}
-              </p>
-              <p className="text-sm font-medium text-[#2C2518]">{value}</p>
-            </div>
-          ))}
+          </dl>
         </div>
       </div>
     </div>
