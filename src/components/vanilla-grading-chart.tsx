@@ -27,7 +27,7 @@ const grades = {
     specs: {
       length: "15-17 cm",
       moisture: "25-35%",
-      vanillin: "1.3-2.5%",
+      vanillin: "1.1-2.5%",
       appearance: "Black, oily, flexible, full pod",
     },
   },

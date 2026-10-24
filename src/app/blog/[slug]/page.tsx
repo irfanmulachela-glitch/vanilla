@@ -20,7 +20,7 @@ const blogPosts = {
       <p>Indonesia is the world's second-largest vanilla producer, offering exceptional quality beans at competitive prices. For B2B buyers, sourcing vanilla from Indonesia requires understanding local markets, quality standards, and supplier verification processes.</p>
 
       <h2>Why Source Vanilla from Indonesia?</h2>
-      <p>Indonesian vanilla, primarily <em>Vanilla planifolia</em>, is known for its rich, creamy flavor profile with notes of caramel and dried fruit. The country's tropical climate and volcanic soil create ideal growing conditions, resulting in beans with vanillin content ranging from 1.3% to 2.7%.</p>
+      <p>Indonesian vanilla, primarily <em>Vanilla planifolia</em>, is known for its rich, creamy flavor profile with notes of caramel and dried fruit. The country's tropical climate and volcanic soil create ideal growing conditions, resulting in beans with vanillin content ranging from 1.1% to 2.5%.</p>
 
       <h2>Understanding Vanilla Bean Grades</h2>
       <p>Indonesian vanilla beans come in two primary grades:</p>
@@ -705,7 +705,7 @@ const blogPosts = {
     date: "2026-03-01",
     readTime: "7 min read",
     content: `
-      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.3%–2.7% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping by air freight worldwide with flexible order quantities, making it the most cost-effective origin for B2B vanilla buyers.</p>
+      <p>La Vanilla Supplier sources Grade A Indonesian vanilla beans at $300–500/kg, compared to Madagascar's $500–800/kg, with vanillin content of 1.1%–2.5% and consistent year-round supply. Indonesia is the world's second-largest vanilla producer, shipping by air freight worldwide with flexible order quantities, making it the most cost-effective origin for B2B vanilla buyers.</p>
 
       <h2>Competitive Pricing</h2>
       <p>Indonesian vanilla offers significant cost advantages:</p>

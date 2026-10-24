@@ -238,7 +238,7 @@ export default function QualityPage() {
               <div className="bg-[#F8F6F2] rounded-lg p-3 mb-4">
                 <p className="text-xs text-[#6B6358] mb-1">Vanillin Content Verification</p>
                 <p className="text-sm font-mono font-semibold text-[#2C2518]">
-                  1.3% - 2.7% (Grade A Standard)
+                  1.1% - 2.5% (Grade A Standard)
                 </p>
                 <p className="text-xs text-[#6B6358] mt-1">Gas Chromatography Verified</p>
               </div>
@@ -550,7 +550,7 @@ export default function QualityPage() {
                   name: "In-House QC Team",
                 },
                 description:
-                  "Vanillin content verification: 1.3% - 2.7% (Grade A Standard)",
+                  "Vanillin content verification: 1.1% - 2.5% (Grade A Standard)",
               },
             ],
           }),

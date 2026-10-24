@@ -112,7 +112,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               Why Indonesia for Wholesale Vanilla Beans
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Indonesia is the world&apos;s second-largest vanilla producer after Madagascar. Indonesian vanilla beans offer competitive pricing, consistent supply, and distinct flavor profiles prized by food manufacturers worldwide. The country&apos;s tropical climate and generations of farming expertise produce beans with vanillin content ranging from 1.3% to 2.7%.
+              Indonesia is the world&apos;s second-largest vanilla producer after Madagascar. Indonesian vanilla beans offer competitive pricing, consistent supply, and distinct flavor profiles prized by food manufacturers worldwide. The country&apos;s tropical climate and generations of farming expertise produce beans with vanillin content ranging from 1.1% to 2.5%.
             </p>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">

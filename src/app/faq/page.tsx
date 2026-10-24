@@ -75,7 +75,7 @@ const faqs = [
       },
       {
         q: "What is the vanillin content of your vanilla beans?",
-        a: "Our Grade A vanilla beans have vanillin content ranging from 1.3% to 2.7%. Grade B beans range from 1.3% to 2.2%. We can provide lab test results for every batch.",
+        a: "Our Grade A vanilla beans have vanillin content ranging from 1.1% to 2.5%. Grade B beans range from 1.0% to 2.0%. We can provide lab test results for every batch.",
       },
     ],
   },
