@@ -83,14 +83,10 @@ export default function ProductsPage() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/80 to-[#2C2518]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/75 to-[#2C2518]/30" />
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-2xl">
-            <p className="flex items-center gap-3 text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-5">
-              <span className="w-8 h-px bg-[#B5A37A]" aria-hidden="true" />
-              Our Products
-            </p>
             <h1 className="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-5">
               Vanilla Beans, Paste &amp; Powder <span className="text-[#B5A37A]">from Java</span>
             </h1>
@@ -122,10 +118,10 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#EEE9E1]">
             {siteConfig.products.map((product) => (
-              <li key={product.id}>
+              <li key={product.id} className="sm:px-6 lg:px-8 first:sm:ps-0 last:sm:pe-0">
                 <a
                   href={`#${product.id}`}
-                  className="group flex items-center gap-4 py-5 sm:px-6 first:sm:ps-0 lg:py-6"
+                  className="group flex items-center gap-4 py-5 lg:py-6"
                 >
                   <span className="relative w-14 h-14 rounded-xl overflow-hidden bg-[#F4F2EE] flex-shrink-0">
                     <Image src={product.image} alt="" fill sizes="56px" className="object-cover" />
