@@ -65,7 +65,7 @@ export default function ContactPage() {
       <ContactForm />
 
       {/* How to Start Ordering */}
-      <OrderingLadder />
+      <OrderingLadder tone="light" showCta={false} />
 
       {/* BreadcrumbList JSON-LD */}
       <script
