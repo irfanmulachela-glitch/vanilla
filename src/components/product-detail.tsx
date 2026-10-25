@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ChevronRight,
   IceCreamCone,
+  IceCreamBowl,
   Croissant,
   Coffee,
   Candy,
@@ -17,7 +18,21 @@ import {
   CupSoda,
   FlaskConical,
   Factory,
-  UtensilsCrossed,
+  Cake,
+  CakeSlice,
+  Cookie,
+  Gift,
+  ChefHat,
+  Martini,
+  Wine,
+  Beer,
+  Droplets,
+  Sparkles,
+  Flower2,
+  Flame,
+  Dumbbell,
+  Soup,
+  Dessert,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
@@ -27,22 +42,35 @@ import OrderingLadder from "@/components/ordering-ladder";
 /* Content                                                             */
 /* ------------------------------------------------------------------ */
 
-type UseKey =
-  | "iceCream" | "bakery" | "coffee" | "confectionery" | "dairy" | "culinary"
-  | "extract" | "industrial" | "beverages" | "dryMixes";
-
-const USE_ICONS: Record<UseKey, typeof Coffee> = {
+const USE_ICONS = {
   iceCream: IceCreamCone,
-  bakery: Croissant,
+  frozen: IceCreamBowl,
+  pastry: Croissant,
   coffee: Coffee,
   confectionery: Candy,
   dairy: Milk,
-  culinary: UtensilsCrossed,
+  dryMixes: Wheat,
+  beverages: CupSoda,
   extract: FlaskConical,
   industrial: Factory,
-  beverages: CupSoda,
-  dryMixes: Wheat,
-};
+  frosting: Cake,
+  cheesecake: CakeSlice,
+  cookies: Cookie,
+  retail: Gift,
+  chef: ChefHat,
+  cocktails: Martini,
+  spirits: Wine,
+  brewing: Beer,
+  syrups: Droplets,
+  sugar: Sparkles,
+  cosmetics: Flower2,
+  candles: Flame,
+  nutrition: Dumbbell,
+  spices: Soup,
+  custard: Dessert,
+} as const;
+
+type UseKey = keyof typeof USE_ICONS;
 
 type Variant = {
   key: string;
@@ -106,11 +134,13 @@ const CONTENT: Record<string, ProductContent> = {
         ],
         uses: [
           { icon: "iceCream", label: "Ice cream & gelato" },
-          { icon: "bakery", label: "Bakery & pastry" },
-          { icon: "coffee", label: "Coffee & beverages" },
+          { icon: "pastry", label: "Pastry & fine baking" },
+          { icon: "custard", label: "Custards & crème brûlée" },
           { icon: "confectionery", label: "Chocolate & confectionery" },
-          { icon: "dairy", label: "Dairy & yogurt" },
-          { icon: "culinary", label: "Retail & fine dining" },
+          { icon: "coffee", label: "Coffee & specialty drinks" },
+          { icon: "cocktails", label: "Cocktails & liqueurs" },
+          { icon: "chef", label: "Fine dining & sauces" },
+          { icon: "retail", label: "Retail & gift packs" },
         ],
         reasons: [
           { title: "Gourmet look and aroma", body: "Plump, oily pods that look the part on a shelf or a pastry counter, with a deep, sweet aroma." },
@@ -155,9 +185,13 @@ const CONTENT: Record<string, ProductContent> = {
         ],
         uses: [
           { icon: "extract", label: "Vanilla extract" },
-          { icon: "industrial", label: "Industrial flavouring" },
-          { icon: "beverages", label: "Beverage production" },
-          { icon: "confectionery", label: "Syrups & confectionery" },
+          { icon: "syrups", label: "Syrups & flavourings" },
+          { icon: "industrial", label: "Food manufacturing" },
+          { icon: "spirits", label: "Spirits & liqueurs" },
+          { icon: "brewing", label: "Craft beer & brewing" },
+          { icon: "sugar", label: "Vanilla sugar & salt" },
+          { icon: "cosmetics", label: "Perfume & cosmetics" },
+          { icon: "candles", label: "Candles & home fragrance" },
         ],
         reasons: [
           { title: "Made for extraction", body: "Lower moisture means more vanillin per kilo goes into your extract, not water weight." },
@@ -194,11 +228,13 @@ const CONTENT: Record<string, ProductContent> = {
         specs: [],
         uses: [
           { icon: "iceCream", label: "Ice cream & gelato" },
-          { icon: "bakery", label: "Bakery & pastry" },
-          { icon: "coffee", label: "Coffee & beverages" },
-          { icon: "confectionery", label: "Confectionery" },
-          { icon: "dairy", label: "Dairy & yogurt" },
-          { icon: "culinary", label: "Desserts & retail" },
+          { icon: "custard", label: "Crème brûlée & panna cotta" },
+          { icon: "frosting", label: "Frosting & buttercream" },
+          { icon: "cheesecake", label: "Cheesecake & mousse" },
+          { icon: "cookies", label: "Cakes & cookies" },
+          { icon: "dairy", label: "Whipped cream & yogurt" },
+          { icon: "coffee", label: "Lattes & coffee syrups" },
+          { icon: "confectionery", label: "White chocolate & confectionery" },
         ],
         reasons: [
           { title: "Made to your recipe", body: "Choose the strength, sugar content and viscosity that fit your production line." },
@@ -229,11 +265,14 @@ const CONTENT: Record<string, ProductContent> = {
         ],
         specs: [],
         uses: [
-          { icon: "dryMixes", label: "Dry baking mixes" },
-          { icon: "beverages", label: "Instant beverages" },
-          { icon: "confectionery", label: "Confectionery" },
-          { icon: "dairy", label: "Dairy powders" },
-          { icon: "bakery", label: "Bakery manufacturing" },
+          { icon: "dryMixes", label: "Baking & pancake mixes" },
+          { icon: "beverages", label: "Instant drinks & latte mixes" },
+          { icon: "nutrition", label: "Protein & nutrition powders" },
+          { icon: "confectionery", label: "Chocolate & confectionery" },
+          { icon: "cookies", label: "Macarons & delicate pastry" },
+          { icon: "frozen", label: "Ice cream & dairy powders" },
+          { icon: "spices", label: "Spice blends & dry rubs" },
+          { icon: "pastry", label: "Bakery manufacturing" },
         ],
         reasons: [
           { title: "Nothing but vanilla", body: "Ground from cured beans only, with no sugar, fillers or carriers added." },
@@ -498,28 +537,35 @@ export default function ProductDetail({ slug }: { slug: string }) {
       {/* Overview + uses */}
       <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-            <div className="lg:col-span-7">
-              <p className={EYEBROW}>Overview</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] leading-tight mb-6">
-                {multiVariant ? `About ${v.tabLabel?.split(" · ")[0]} beans` : `About our ${content.name.toLowerCase()}`}
-              </h2>
-              <p className="text-lg text-[#6B6358] leading-relaxed">{v.overview}</p>
+          <div className="max-w-3xl">
+            <p className={EYEBROW}>Overview</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] leading-tight mb-6">
+              {multiVariant ? `About ${v.tabLabel?.split(" · ")[0]} beans` : `About our ${content.name.toLowerCase()}`}
+            </h2>
+            <p className="text-lg text-[#6B6358] leading-relaxed">{v.overview}</p>
+          </div>
+
+          <div className="mt-16">
+            <div className="flex items-end justify-between gap-6 mb-8">
+              <div>
+                <p className={EYEBROW}>Applications</p>
+                <h3 className="text-2xl lg:text-[1.7rem] font-bold text-[#2C2518]">What buyers use it for</h3>
+              </div>
             </div>
-            <div className="lg:col-span-5">
-              <p className={EYEBROW}>What buyers use it for</p>
-              <ul className="grid grid-cols-2 gap-x-6 border-t border-[#EEE9E1]">
-                {v.uses.map((use) => {
-                  const Icon = USE_ICONS[use.icon];
-                  return (
-                    <li key={use.label} className="flex items-center gap-3 py-4 border-b border-[#EEE9E1] text-sm font-medium text-[#2C2518]">
-                      <Icon className="w-5 h-5 text-[#B5A37A] flex-shrink-0" strokeWidth={1.6} aria-hidden="true" />
-                      {use.label}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-x-6">
+              {v.uses.map((use) => {
+                const Icon = USE_ICONS[use.icon];
+                return (
+                  <li key={use.label} className="group flex flex-col items-center text-center">
+                    <span className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-[#F8F6F2] flex items-center justify-center mb-4 ring-1 ring-[#EEE9E1] transition-colors group-hover:bg-[#F1EBDD]">
+                      <span className="absolute inset-2 rounded-full border border-dashed border-[#B5A37A]/35" aria-hidden="true" />
+                      <Icon className="relative w-8 h-8 lg:w-9 lg:h-9 text-[#9A8457]" strokeWidth={1.4} aria-hidden="true" />
+                    </span>
+                    <span className="text-sm font-medium text-[#2C2518] leading-snug max-w-[11rem]">{use.label}</span>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </section>
