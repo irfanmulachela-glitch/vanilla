@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ProcessSteps } from "./process-steps";
 
 const tiers = [
   {
@@ -60,61 +61,11 @@ export default function OrderingLadder({
           </p>
         </div>
 
-        <ol className="grid md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 max-w-xl md:max-w-none mx-auto">
-          {tiers.map((tier, i) => {
-            const first = i === 0;
-            const last = i === tiers.length - 1;
-            return (
-              <li key={tier.title} className="relative flex gap-5 md:block">
-                {/* Step marker + line to the next step (down on phones, across on wider screens) */}
-                <div className="flex flex-col md:flex-row items-center md:mb-7">
-                  <span
-                    className={`relative z-10 flex items-center justify-center w-12 h-12 rounded-full text-lg font-semibold tabular-nums shrink-0 ${
-                      first
-                        ? "bg-[#B5A37A] text-[#2C2518]"
-                        : dark
-                          ? "border border-[#B5A37A]/70 text-[#D4C48A]"
-                          : "border border-[#B5A37A] text-[#9A8457] bg-white"
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {i + 1}
-                  </span>
-                  {!last && (
-                    <span
-                      className={`md:hidden w-px flex-1 mt-3 -mb-7 ${dark ? "bg-[#B5A37A]/30" : "bg-[#D8D3C9]"}`}
-                      aria-hidden="true"
-                    />
-                  )}
-                  {!last && (
-                    <span
-                      className={`hidden md:block flex-1 h-px ms-4 -me-8 lg:-me-12 ${
-                        dark ? "bg-[#B5A37A]/30" : "bg-[#D8D3C9]"
-                      }`}
-                      aria-hidden="true"
-                    />
-                  )}
-                </div>
-
-                <div className="pt-1 md:pt-0">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-2">
-                    {tier.quantity}
-                  </p>
-                  <h3
-                    className={`text-xl font-semibold mb-3 ${dark ? "text-[#F8F6F2]" : "text-[#2C2518]"}`}
-                  >
-                    {tier.title}
-                  </h3>
-                  <p
-                    className={`leading-relaxed ${dark ? "text-stone-300" : "text-[#6B6358]"}`}
-                  >
-                    {tier.description}
-                  </p>
-                </div>
-              </li>
-            );
-          })}
-        </ol>
+        <ProcessSteps
+          tone={dark ? "dark" : "light"}
+          columns={3}
+          steps={tiers.map((t) => ({ eyebrow: t.quantity, title: t.title, description: t.description }))}
+        />
 
         {showCta && (
           <div

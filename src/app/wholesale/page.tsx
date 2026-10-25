@@ -16,6 +16,7 @@ import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
 import { QuickAnswer } from "@/components/quick-answer";
+import { ProcessSteps } from "@/components/process-steps";
 
 const DESCRIPTION =
   "Premium wholesale vanilla beans from Indonesia. Grade A & B beans, vanilla paste, and powder from source. Export to 20+ countries with flexible order sizes.";
@@ -279,32 +280,7 @@ export default function WholesalePage() {
             </h2>
             <p className="text-lg text-[#6B6358]">Four simple steps, with a clear quote before you commit.</p>
           </div>
-          <ol className="grid md:grid-cols-4 gap-10 md:gap-6 lg:gap-10 max-w-xl md:max-w-none mx-auto">
-            {steps.map((step, i) => {
-              const first = i === 0;
-              const last = i === steps.length - 1;
-              return (
-                <li key={step.title} className="relative flex gap-5 md:block">
-                  <div className="flex flex-col md:flex-row items-center md:mb-7">
-                    <span
-                      className={`relative z-10 flex items-center justify-center w-12 h-12 rounded-full text-lg font-semibold tabular-nums shrink-0 ${
-                        first ? "bg-[#B5A37A] text-[#2C2518]" : "border border-[#B5A37A] text-[#9A8457] bg-white"
-                      }`}
-                      aria-hidden="true"
-                    >
-                      {i + 1}
-                    </span>
-                    {!last && <span className="md:hidden w-px flex-1 mt-3 -mb-7 bg-[#D8D3C9]" aria-hidden="true" />}
-                    {!last && <span className="hidden md:block flex-1 h-px ms-4 -me-6 lg:-me-10 bg-[#D8D3C9]" aria-hidden="true" />}
-                  </div>
-                  <div className="pt-2 md:pt-0">
-                    <h3 className="text-lg font-semibold text-[#2C2518] mb-2">{step.title}</h3>
-                    <p className="text-[#6B6358] leading-relaxed">{step.description}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
+          <ProcessSteps steps={steps} />
         </div>
       </section>
 
