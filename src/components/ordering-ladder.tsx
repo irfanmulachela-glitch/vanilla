@@ -3,7 +3,7 @@ const tiers = [
     title: "Free Sample",
     quantity: "Small sample",
     description:
-      "Assess bean length, colour, oiliness, and aroma by hand before committing.",
+      "Check the colour, aroma and texture yourself before committing. You only cover shipping.",
   },
   {
     title: "Small Order",
@@ -15,7 +15,7 @@ const tiers = [
     title: "Standard Order",
     quantity: "Flexible quantities",
     description:
-      "The normal wholesale minimum with full documentation package: CoA, Phytosanitary Certificate, and Certificate of Origin.",
+      "Regular wholesale volumes with full export documents. A Certificate of Analysis is available for every batch on request.",
   },
 ];
 
