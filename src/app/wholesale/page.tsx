@@ -247,13 +247,13 @@ export default function WholesalePage() {
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
             {siteConfig.products.map((product) => (
               <Link key={product.id} href={`/products/${product.slug}`} className="group flex flex-col">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#EEE9E1]">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#EFEBE4]">
                   <Image
                     src={product.image}
                     alt={`Indonesian ${product.name.toLowerCase()} for wholesale from La Vanilla Supplier`}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mt-6 mb-2">
