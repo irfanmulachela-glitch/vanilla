@@ -91,8 +91,8 @@ export default function ProductsPage() {
               Vanilla Beans, Paste &amp; Powder <span className="text-[#B5A37A]">from Java</span>
             </h1>
             <p className="text-lg text-white/75 leading-relaxed mb-8">
-              Three product lines from one source: Grade A and B beans, paste made to your
-              spec, and 100% pure powder. Shipped by air to 20+ countries, from 1 kg.
+              Real Java vanilla for food makers and importers, consistent from your first
+              kilo to your hundredth order.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
