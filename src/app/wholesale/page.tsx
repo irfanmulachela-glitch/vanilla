@@ -4,10 +4,11 @@ import Image from "next/image";
 import {
   ArrowRight,
   Plus,
-  Package,
   Plane,
   TrendingDown,
   Clock,
+  Layers,
+  Handshake,
   Sprout,
   ShieldCheck,
   FileCheck,
@@ -78,10 +79,10 @@ const TAGS: Record<string, string> = {
 };
 
 const figures = [
-  { icon: Package, label: "Minimum order", value: "1", unit: "kg", note: "Start small, scale up anytime" },
   { icon: TrendingDown, label: "Volume pricing", value: "100+", unit: "kg", note: "Better rates per kilo" },
   { icon: Clock, label: "Quote in", value: "24", unit: "hours", note: "Priced for your exact order" },
-  { icon: Plane, label: "Air freight", value: "3–7", unit: "days", note: "On FCA, CPT or DDP terms" },
+  { icon: Layers, label: "Mixed orders", value: "3", unit: "products", note: "Beans, paste and powder together" },
+  { icon: Handshake, label: "Supply contracts", value: "Fixed", unit: "pricing", note: "Steady volume and price all year" },
 ];
 
 const benefits = [
