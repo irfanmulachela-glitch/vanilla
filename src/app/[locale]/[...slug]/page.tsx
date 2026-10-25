@@ -195,7 +195,7 @@ function HomePage({ locale, t }: { locale: Locale; t: ReturnType<typeof getTrans
             </div>
           </div>
           <div className="relative min-h-[400px] lg:min-h-full lg:col-span-3">
-            <Image src="/wholesale-hero.jpeg" alt="Premium Indonesian vanilla beans" fill className="object-cover" priority />
+            <Image src="/wholesale-hero.webp" alt="Premium Indonesian vanilla beans" fill className="object-cover" priority />
           </div>
         </div>
       </section>

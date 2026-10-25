@@ -4,10 +4,10 @@ import Image from "next/image";
 import {
   ArrowRight,
   Plus,
-  Globe,
   Package,
   Plane,
-  Boxes,
+  TrendingDown,
+  Clock,
   Sprout,
   ShieldCheck,
   FileCheck,
@@ -78,10 +78,10 @@ const TAGS: Record<string, string> = {
 };
 
 const figures = [
-  { icon: Package, label: "Minimum order", value: "1", unit: "kg", note: "Free samples to start" },
-  { icon: Plane, label: "Air freight", value: "3–7", unit: "days", note: "Door to door worldwide" },
-  { icon: Boxes, label: "Exported", value: "150+", unit: "tons", note: "Beans, paste and powder" },
-  { icon: Globe, label: "Countries", value: "20+", unit: "", note: "Buyers served since 2014" },
+  { icon: Package, label: "Minimum order", value: "1", unit: "kg", note: "Start small, scale up anytime" },
+  { icon: TrendingDown, label: "Volume pricing", value: "100+", unit: "kg", note: "Better rates per kilo" },
+  { icon: Clock, label: "Quote in", value: "24", unit: "hours", note: "Priced for your exact order" },
+  { icon: Plane, label: "Air freight", value: "3–7", unit: "days", note: "On FCA, CPT or DDP terms" },
 ];
 
 const benefits = [
@@ -139,14 +139,14 @@ export default function WholesalePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white overflow-hidden flex items-center min-h-[520px] sm:min-h-[420px] lg:min-h-[500px] xl:min-h-[560px]">
+      <section className="relative bg-[#2C2518] text-white overflow-hidden flex items-center min-h-[560px] sm:min-h-[480px] lg:min-h-[640px] xl:min-h-[700px]">
         <div className="absolute inset-0">
           <Image
-            src="/wholesale-hero.jpeg"
+            src="/wholesale-hero.webp"
             alt="Vanilla vines growing on a farm in Java, Indonesia"
             fill
             sizes="100vw"
-            className="object-cover object-[70%_center]"
+            className="object-cover object-[65%_45%]"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/75 to-[#2C2518]/25 rtl:bg-gradient-to-l" />
