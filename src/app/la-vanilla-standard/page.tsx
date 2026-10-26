@@ -195,7 +195,7 @@ export default function LaVanillaStandardPage() {
       />
 
       {/* The five checks */}
-      <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="steps-heading">
+      <section className="pt-12 pb-20 lg:pt-16 lg:pb-24 bg-white" aria-labelledby="steps-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
             <p className={EYEBROW}>The Five Checks</p>
@@ -207,11 +207,11 @@ export default function LaVanillaStandardPage() {
             </p>
           </div>
 
-          <ol className="border-t border-[#E5E0D8]">
+          <ol className="border-t border-[#EEE9E1]">
             {steps.map((step, i) => (
               <li
                 key={step.title}
-                className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)_minmax(0,5fr)] gap-x-12 gap-y-5 py-10 lg:py-12 border-b border-[#E5E0D8]"
+                className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)_minmax(0,5fr)] gap-x-12 gap-y-5 py-10 lg:py-12 border-b border-[#EEE9E1]"
               >
                 <div className="flex gap-5 lg:gap-6">
                   <span className="text-[2.25rem] lg:text-[2.75rem] font-medium text-[#B5A37A] leading-none tabular-nums" aria-hidden="true">
@@ -238,7 +238,7 @@ export default function LaVanillaStandardPage() {
       </section>
 
       {/* Grading chart */}
-      <section id="grades" className="py-20 lg:py-24 bg-white scroll-mt-20">
+      <section id="grades" className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className={EYEBROW}>Grading</p>
