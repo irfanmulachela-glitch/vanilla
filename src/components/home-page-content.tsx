@@ -335,8 +335,8 @@ export function HomePageContent() {
           {/* Left panel: photo with the promise */}
           <div className="relative overflow-hidden flex flex-col justify-center p-8 sm:p-12 lg:p-16 min-h-[520px]">
             <Image
-              src="/why-choose-us.webp"
-              alt="Fresh vanilla pods growing on the vine in Java"
+              src="/why-choose-us-hand.webp"
+              alt="A hand holding green vanilla pods still growing on the vine in Java"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
