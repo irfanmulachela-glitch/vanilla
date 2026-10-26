@@ -297,7 +297,7 @@ export default function LaVanillaStandardPage() {
       </section>
 
       {/* Certification & documents */}
-      <section id="certification" className="py-20 lg:py-24 bg-[#F8F6F2] scroll-mt-20" aria-labelledby="cert-heading">
+      <section id="certification" className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1] scroll-mt-20" aria-labelledby="cert-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-14">
             <p className={EYEBROW}>Certification &amp; Documents</p>
@@ -311,7 +311,7 @@ export default function LaVanillaStandardPage() {
 
           <ul className="grid md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
             {certifications.map((c) => (
-              <li key={c.title} className="pt-6 border-t border-[#E5E0D8]">
+              <li key={c.title} className="pt-6 border-t border-[#EEE9E1]">
                 <c.icon className="w-7 h-7 text-[#B5A37A] mb-5" strokeWidth={1.5} aria-hidden="true" />
                 <h3 className="text-lg font-semibold text-[#2C2518] mb-1">{c.title}</h3>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-3">{c.issuer}</p>
@@ -324,9 +324,9 @@ export default function LaVanillaStandardPage() {
             {documents.map(([heading, items]) => (
               <div key={heading}>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187] mb-3">{heading}</p>
-                <ul className="border-t border-[#E5E0D8]">
+                <ul className="border-t border-[#EEE9E1]">
                   {items.map((d) => (
-                    <li key={d} className="flex items-center gap-3 py-3 border-b border-[#E5E0D8] text-[#2C2518]">
+                    <li key={d} className="flex items-center gap-3 py-3 border-b border-[#EEE9E1] text-[#2C2518]">
                       <Check className="w-4 h-4 flex-shrink-0 text-[#B5A37A]" strokeWidth={2.5} aria-hidden="true" />
                       {d}
                     </li>
