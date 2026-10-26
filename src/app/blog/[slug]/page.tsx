@@ -877,7 +877,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div>
               <p className="text-sm font-semibold text-[#2C2518]">Muhammad Irfan</p>
               <p className="text-xs text-[#6B6358]">
-                Founder &amp; Director, La Vanilla Supplier
+                Export Director, La Vanilla Supplier
               </p>
               <p className="text-xs text-[#6B6358]">
                 10+ years in the Indonesian vanilla industry
@@ -1038,7 +1038,7 @@ export default async function BlogPostPage({ params }: Props) {
             author: {
               "@type": "Person",
               name: "Muhammad Irfan",
-              jobTitle: "Founder & Director",
+              jobTitle: "Export Director",
               worksFor: {
                 "@type": "Organization",
                 name: "La Vanilla Supplier",

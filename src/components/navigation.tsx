@@ -32,6 +32,7 @@ export function Navigation() {
     { name: t.nav.products, path: "/products" },
     { name: t.nav.wholesale, path: "/wholesale" },
     { name: t.nav.ourStandard, path: "/la-vanilla-standard" },
+    { name: t.nav.about, path: "/about" },
     { name: t.nav.blog, path: "/blog" },
     { name: t.nav.faq, path: "/faq" },
     { name: t.nav.contact, path: "/contact" },

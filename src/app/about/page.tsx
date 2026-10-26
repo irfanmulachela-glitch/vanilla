@@ -1,22 +1,24 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2, Users, Globe, Award, Leaf, ArrowRight, MapPin, Handshake, Target } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, CalendarDays, Users, Globe, BadgeCheck } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
+import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
-  "Learn about La Vanilla Supplier's three core principles: consistent quality, patient sun-curing, and flexible partnerships. Indonesian vanilla exporter.";
+  "About La Vanilla Supplier: an Indonesian vanilla exporter in Java supplying vanilla beans, paste and powder to food makers, importers and distributors in 20+ countries.";
 
 export const metadata: Metadata = {
-  title: "About Us: Our Vanilla Philosophy",
+  title: "About Us: Indonesian Vanilla Exporter in Java",
   description: DESCRIPTION,
   keywords: [
-    "La Vanilla Supplier philosophy",
-    "vanilla supplier standards",
-    "Indonesian vanilla quality",
-    "vanilla curing process",
+    "about La Vanilla Supplier",
+    "Indonesian vanilla exporter",
     "vanilla supplier Java",
+    "PT Penta Pelita Semesta",
+    "Indonesian vanilla quality",
   ],
   alternates: {
     canonical: "/about",
@@ -24,379 +26,303 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: ogImages,
-    title: "About Us: Our Vanilla Philosophy",
+    title: "About Us: Indonesian Vanilla Exporter in Java",
     description: DESCRIPTION,
     url: `${siteConfig.url}/about`,
     type: "website",
   },
-  twitter: twitterCard("About Us: Our Vanilla Philosophy | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("About Us | La Vanilla Supplier", DESCRIPTION),
 };
 
+const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
+
+const figures = [
+  { icon: CalendarDays, label: "Experience", value: siteConfig.stats.yearsExperience, unit: "years", note: "In Indonesian vanilla" },
+  { icon: Users, label: "Clients", value: siteConfig.stats.happyClients, unit: "", note: "Food makers, importers and distributors" },
+  { icon: Globe, label: "Countries", value: siteConfig.stats.countriesServed, unit: "", note: "Asia, Europe, the Americas and the Middle East" },
+  { icon: BadgeCheck, label: "Certification", value: "Halal", unit: "MUI", note: "Certified by MUI, Indonesia" },
+];
+
+const beliefs = [
+  {
+    title: "Vanilla is grown, not manufactured.",
+    body: "A vanilla vine takes years to flower, and every flower is pollinated by hand. We respect the time the plant and the farmer need, and we never promise what nature cannot deliver.",
+  },
+  {
+    title: "Farmers are partners, not a supply line.",
+    body: "Our vanilla is only as good as the people who grow and cure it. We work hand in hand with farming families in Java, because when they do well, the vanilla does too.",
+  },
+  {
+    title: "Honesty is part of the product.",
+    body: "If a grade is not right for your product, we will tell you. Clear specs and straight answers matter more to us than a quick sale.",
+  },
+];
+
+const founderFacts: [string, string][] = [
+  ["Based in", "Java, Indonesia"],
+  ["Works with", "Vanilla farmers across Java"],
+  ["Oversees", "Grading and quality before every export"],
+  ["Speaks", "English and Indonesian"],
+];
+
+const company: [string, string][] = [
+  ["Company", "PT Penta Pelita Semesta, a registered Indonesian company"],
+  ["Brand", "La Vanilla Supplier"],
+  ["Based in", "Central Java, Indonesia"],
+  ["Products", "Vanilla beans (Grade A and Grade B), vanilla paste, vanilla powder"],
+  ["Species", "Vanilla planifolia"],
+  ["Certification", "Halal certified (MUI)"],
+  ["Markets", "20+ countries, shipped by air"],
+  ["Contact", `${siteConfig.social.email} · WhatsApp +62 878-3575-6945`],
+];
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
+  );
+}
+
 export default function AboutPage() {
+  const whatsapp = `https://wa.me/${siteConfig.social.whatsapp}`;
+
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Link
-              href="/"
-              className="inline-flex items-center text-[#B5A37A] hover:text-white mb-6 text-sm transition-colors"
-            >
-              ← Back to Home
-            </Link>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-              About La Vanilla Supplier
+      <section className="relative bg-[#2C2518] text-white overflow-hidden flex items-center min-h-[565px] sm:min-h-[390px] md:min-h-[376px] lg:min-h-[455px] xl:min-h-[545px]">
+        <div className="absolute inset-0">
+          <Image
+            src="/about-hero.webp"
+            alt="Green vanilla pods growing on the vine in Java"
+            fill
+            sizes="100vw"
+            className="object-cover object-[65%_50%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/95 via-[#2C2518]/75 to-[#2C2518]/25 rtl:bg-gradient-to-l" />
+          <div className="absolute inset-0 bg-[#2C2518]/40 sm:hidden" />
+        </div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-4 lg:whitespace-nowrap">
+              About La Vanilla <span className="text-[#B5A37A]">Supplier</span>
             </h1>
-            <p className="text-[#B5A37A] text-lg font-medium mb-4">
+            <p className="font-[family-name:var(--font-libre)] italic text-xl lg:text-2xl text-[#D4C48A] mb-5">
               Your Formula. Our Vanilla.
             </p>
-            <p className="text-lg text-stone-300 leading-relaxed">
-              Indonesian vanilla supplier based in Java, providing
-              premium natural vanilla to global markets with consistent quality
-              and reliable supply.
+            <p className="text-lg text-white/75 leading-relaxed mb-8">
+              An Indonesian vanilla exporter in Java, supplying vanilla beans, paste and powder to
+              food makers, importers and distributors in 20+ countries.
             </p>
-            <p className="text-sm text-stone-400 mt-4">
-              Operated by PT Penta Pelita Semesta — Registered Indonesian Company
-            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
+              >
+                Get in Touch
+                <ArrowRight className="ms-2 w-4 h-4 rtl:rotate-180" />
+              </Link>
+              <Link
+                href="/la-vanilla-standard"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-white text-sm font-medium rounded-lg border border-white/30 hover:bg-white/10 transition-colors"
+              >
+                See Our Standard
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* Key figures */}
+      <section aria-label="Key figures" className="bg-white border-b border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
-                Meet Our Founder
-              </h2>
-              <div className="space-y-4">
-                <p className="text-[#6B6358] leading-relaxed">
-                  <strong className="text-[#2C2518]">Muhammad Irfan</strong> is the Founder &amp; Director of La Vanilla Supplier (PT Penta Pelita Semesta). Based in Java, Irfan has established direct relationships with smallholder farmers across the region, ensuring fair trade practices and full traceability from farm to shipment.
-                </p>
-                <p className="text-[#6B6358] leading-relaxed">
-                  His deep knowledge of vanilla curing, grading, and export logistics has helped food manufacturers and distributors in 20+ countries source consistent, high-quality Indonesian vanilla. Irfan personally oversees quality control and maintains the relationships that make La Vanilla Supplier a trusted partner for buyers worldwide.
-                </p>
-                <div className="flex items-center gap-3 pt-2">
-                  <a
-                    href="https://www.linkedin.com/in/muhammad-irfan-601756367"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-[#B5A37A] hover:text-[#A8956A] font-medium flex items-center gap-1"
-                  >
-                    View LinkedIn Profile
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
+            {figures.map((fig) => (
+              <div key={fig.label} className="flex items-start gap-3.5 lg:gap-4 lg:px-8 lg:py-10 first:lg:ps-0 last:lg:pe-0">
+                <fig.icon className="w-5 h-5 mt-1 flex-shrink-0 text-[#B5A37A]" strokeWidth={1.6} aria-hidden="true" />
+                <div className="min-w-0">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
+                  <dd className="mt-1.5">
+                    <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
+                      <span dir="ltr">{fig.value}</span>
+                      {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
+                    </span>
+                    <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>
+                  </dd>
                 </div>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* Quick Answer */}
+      <QuickAnswer
+        question="Who is La Vanilla Supplier?"
+        answer="La Vanilla Supplier is an Indonesian vanilla exporter based in Java, operated by PT Penta Pelita Semesta. We supply Grade A and Grade B Vanilla planifolia beans, vanilla paste and vanilla powder to buyers in 20+ countries, with free samples, orders from 1 kg, private label and air freight in 3 to 7 days."
+      />
+
+      {/* Who we are */}
+      <section className="pt-12 pb-20 lg:pt-16 lg:pb-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-20 items-center">
+            <div>
+              <p className={EYEBROW}>Who We Are</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-6">
+                Real Java vanilla, from people who know it
+              </h2>
+              <div className="space-y-5 text-lg text-[#6B6358] leading-relaxed">
+                <p>
+                  La Vanilla Supplier exports Indonesian vanilla from Java: Grade A and Grade B
+                  vanilla beans, vanilla paste and pure vanilla powder. We work hand in hand with
+                  vanilla farmers across the island, coordinating curing, grading and packing so
+                  every batch matches the grade our buyers approved.
+                </p>
+                <p>
+                  Our buyers are food manufacturers, bakeries, ice cream makers, importers and
+                  distributors. Some order a single kilo to test, others need hundreds of kilos a
+                  month. We supply both, and offer private label for buyers who want our vanilla
+                  under their own brand.
+                </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-[#F8F6F2] p-8 border border-[#E5E0D8]">
-                <div className="space-y-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-[#B5A37A]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#2C2518]">Based in Java</p>
-                      <p className="text-sm text-[#6B6358]">Heart of Indonesian vanilla production</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Handshake className="w-5 h-5 text-[#B5A37A]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#2C2518]">Direct Farmer Partnerships</p>
-                      <p className="text-sm text-[#6B6358]">Fair trade practices with full traceability</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-5 h-5 text-[#B5A37A]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#2C2518]">20+ Countries Served</p>
-                      <p className="text-sm text-[#6B6358]">Global vanilla supply network</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Target className="w-5 h-5 text-[#B5A37A]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#2C2518]">Quality Oversight</p>
-                      <p className="text-sm text-[#6B6358]">Personally oversees every batch</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/about-bundle-cutout.webp"
+                alt="A tied bundle of cured Indonesian vanilla beans"
+                width={1400}
+                height={753}
+                sizes="(min-width: 1024px) 40vw, 90vw"
+                className="w-full max-w-lg h-auto drop-shadow-[0_24px_30px_rgba(44,37,24,0.18)]"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Philosophy */}
-      <section className="py-16 lg:py-24 bg-[#F8F6F2]" aria-labelledby="philosophy-heading">
+      <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]" aria-labelledby="philosophy-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
-                The La Vanilla Standard
-              </p>
-              <h2 id="philosophy-heading" className="text-3xl font-bold text-[#2C2518] mb-6">
-                Three Principles That Guide Every Batch
-              </h2>
-              <p className="text-[#6B6358] mb-8 leading-relaxed">
-                Not promises on a website — principles we actually operate by. From consistency to curing to flexibility, these standards define how we work with every buyer.
-              </p>
-              <div className="space-y-8">
-                {[
-                  {
-                    num: "01",
-                    title: "Consistency You Can Formula For",
-                    description:
-                      "Your product depends on the same vanillin content, moisture level, and aroma — shipment after shipment. We maintain strict grading standards and lab-test every batch. Not because the industry requires it, but because your formula demands it.",
-                  },
-                  {
-                    num: "02",
-                    title: "Cured by Clock, Not by Calendar",
-                    description:
-                      "Most suppliers rush the cure — 2-3 months, done. We cure for 6-9 months under the Javanese sun. Vanilla doesn't develop flavor on a deadline. The longer it cures, the deeper the aroma, the higher the vanillin.",
-                  },
-                  {
-                    num: "03",
-                    title: "Flexible by Default",
-                    description:
-                      "Some buyers need 25 kg. Others need 250 kg. Some want to start with samples. We don't lock you into rigid minimums. We build relationships, not requirements. Start where you're comfortable. Scale when you're ready.",
-                  },
-                ].map((item) => (
-                  <div key={item.num} className="flex gap-4">
-                    <div className="text-[#B5A37A] text-2xl font-bold opacity-40 flex-shrink-0 w-10">
-                      {item.num}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#2C2518] mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-[#6B6358] text-sm leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-12 flex items-center justify-center min-h-[400px]">
-                <div className="text-center">
-                  <Leaf className="w-20 h-20 text-[#B5A37A] mx-auto mb-6" />
-                  <p className="text-white text-xl font-medium mb-2">The La Vanilla Standard</p>
-                  <p className="text-stone-400 text-sm max-w-xs mx-auto">Consistency. Patience. Flexibility. — Every batch, every time.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#2C2518] mb-4">
-              Our Mission
+          <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+            <p className={EYEBROW}>Our Philosophy</p>
+            <h2 id="philosophy-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518]">
+              What we believe
             </h2>
-            <p className="text-[#6B6358] max-w-2xl mx-auto">
-              We are committed to delivering the highest quality Indonesian vanilla while building sustainable partnerships with buyers worldwide.
-            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Globe,
-                title: "Global Quality Standards",
-                description:
-                  "Deliver high-quality natural vanilla to global markets through reliable supply and consistent standards.",
-              },
-              {
-                icon: Users,
-                title: "Trusted Partnerships",
-                description:
-                  "Build long-term partnerships based on trust, transparency, and mutual growth.",
-              },
-              {
-                icon: Award,
-                title: "Integrity & Compliance",
-                description:
-                  "Uphold integrity, compliance, and professionalism in every aspect of our operations.",
-              },
-              {
-                icon: Leaf,
-                title: "Continuous Improvement",
-                description:
-                  "Continuously improve processes to ensure efficiency, quality assurance, and customer satisfaction.",
-              },
-              {
-                icon: CheckCircle2,
-                title: "Sustainable Practices",
-                description:
-                  "Maintain sustainable practices throughout our operations to support environmental responsibility.",
-              },
-              {
-                icon: Globe,
-                title: "Indonesian Heritage",
-                description:
-                  "Represent the rich tradition of Indonesian vanilla cultivation with pride and excellence.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="p-6 rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A]/50 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-[#2C2518] rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-[#B5A37A]" />
-                </div>
-                <h3 className="font-semibold text-[#2C2518] mb-2">
-                  {item.title}
+          <ol className="grid md:grid-cols-3 gap-12 md:gap-10 lg:gap-14">
+            {beliefs.map((b, i) => (
+              <li key={b.title} className="text-center md:text-start">
+                <span className="block text-xs font-semibold tracking-[0.2em] text-[#B5A37A] mb-5 tabular-nums" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-[family-name:var(--font-libre)] italic text-2xl lg:text-[1.65rem] leading-snug text-[#2C2518] mb-4">
+                  {b.title}
                 </h3>
-                <p className="text-[#6B6358] text-sm">{item.description}</p>
-              </div>
+                <span className="block w-10 h-px bg-[#B5A37A] mb-4 mx-auto md:mx-0" aria-hidden="true" />
+                <p className="text-[#6B6358] leading-relaxed">{b.body}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* Vanilla Origin */}
-      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
+      {/* Founder */}
+      <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]" aria-labelledby="founder-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden bg-[#2C2518] p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl">
-                    <div className="w-12 h-12 bg-[#B5A37A] rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#2C2518]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-white">Java, Indonesia</p>
-                      <p className="text-sm text-stone-300">Heart of vanilla cultivation</p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 bg-white/5 rounded-xl text-center">
-                      <p className="text-2xl font-bold text-[#B5A37A]">0-1200m</p>
-                      <p className="text-xs text-stone-300 mt-1">Altitude Range</p>
-                    </div>
-                    <div className="p-4 bg-white/5 rounded-xl text-center">
-                      <p className="text-2xl font-bold text-[#B5A37A]">27°C</p>
-                      <p className="text-xs text-stone-300 mt-1">Avg Temperature</p>
-                    </div>
-                    <div className="p-4 bg-white/5 rounded-xl text-center">
-                      <p className="text-2xl font-bold text-[#B5A37A]">80%</p>
-                      <p className="text-xs text-stone-300 mt-1">Humidity Level</p>
-                    </div>
-                    <div className="p-4 bg-white/5 rounded-xl text-center">
-                      <p className="text-2xl font-bold text-[#B5A37A]">Volcanic</p>
-                      <p className="text-xs text-stone-300 mt-1">Rich Soil Type</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-bold text-[#2C2518] mb-6">
-                Our Vanilla Origin
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className={EYEBROW}>Who You Will Work With</p>
+              <h2 id="founder-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-2">
+                Muhammad Irfan
               </h2>
-              <p className="text-[#6B6358] mb-6 leading-relaxed">
-                Our vanilla is cultivated in the rich volcanic soil of Java,
-                where the tropical climate produces beans of exceptional quality.
+              <p className="font-[family-name:var(--font-libre)] italic text-lg text-[#8C7A4F] mb-6">
+                Export Director, La Vanilla Supplier
               </p>
-              <div className="space-y-4">
-                <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
-                  <p className="font-semibold text-[#2C2518] mb-1">
-                    Origin — Java, Indonesia
-                  </p>
-                  <p className="text-sm text-[#6B6358]">
-                    Our vanilla comes from the highlands of Java, where rich volcanic soil and tropical climate create ideal growing conditions.
-                  </p>
-                </div>
-                <div className="bg-white rounded-xl p-6 border border-[#E5E0D8]">
-                  <p className="font-semibold text-[#2C2518] mb-1">
-                    Processing — Indonesia
-                  </p>
-                  <p className="text-sm text-[#6B6358]">
-                    We handle curing, grading, and packaging at our facility, ensuring quality control from harvest to shipment.
-                  </p>
-                </div>
+              <div className="space-y-5 text-[#6B6358] leading-relaxed">
+                <p>
+                  Irfan leads La Vanilla Supplier from Java. He works hand in hand with the farmers
+                  who grow and cure our vanilla, and oversees grading and quality before every batch
+                  is exported.
+                </p>
+                <p>
+                  His focus is simple: give buyers vanilla they can rely on, with clear specs, honest
+                  answers and a reply within 24 hours.
+                </p>
               </div>
+              <a
+                href="https://www.linkedin.com/in/muhammad-irfan-601756367"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center text-sm font-semibold text-[#2C2518] group"
+              >
+                Connect on LinkedIn
+                <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform rtl:rotate-180" />
+              </a>
             </div>
+            <dl className="border-t border-[#EEE9E1] lg:mt-14">
+              {founderFacts.map(([label, value]) => (
+                <div key={label} className="flex items-baseline justify-between gap-6 py-4 border-b border-[#EEE9E1]">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A] flex-shrink-0">{label}</dt>
+                  <dd className="font-medium text-[#2C2518] text-right">{value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-[#2C2518]">
+      {/* Company at a glance */}
+      <section className="py-20 lg:py-24 bg-[#2C2518]" aria-labelledby="company-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: siteConfig.stats.countriesServed, label: "Countries Served" },
-              { value: siteConfig.stats.yearsExperience, label: "Years in Business" },
-              { value: siteConfig.stats.happyClients, label: "Happy Clients" },
-              { value: siteConfig.stats.tonsExported, label: "Tons Exported" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-4xl font-bold text-white mb-2">{stat.value}</p>
-                <p className="text-[#B5A37A]">{stat.label}</p>
-              </div>
-            ))}
+          <div className="grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20 items-start">
+            <div>
+              <p className={EYEBROW}>The Company</p>
+              <h2 id="company-heading" className="text-3xl lg:text-4xl font-bold text-[#F8F6F2] mb-4">
+                At a glance
+              </h2>
+              <p className="text-lg text-stone-300 leading-relaxed">
+                The essentials about who you are buying from, all in one place.
+              </p>
+            </div>
+            <dl className="border-t border-white/10">
+              {company.map(([label, value]) => (
+                <div key={label} className="grid sm:grid-cols-[10rem_1fr] gap-x-8 gap-y-1 py-5 border-b border-white/10">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] sm:pt-1">{label}</dt>
+                  <dd className="text-[#F8F6F2]">{value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* Factory Visit */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#F8F6F2] rounded-2xl p-8 lg:p-12 border border-[#E5E0D8]">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-[#2C2518] mb-4">
-                  Visit Our Facility
-                </h2>
-                <p className="text-[#6B6358] mb-6 leading-relaxed">
-                  We welcome buyers to visit our processing facility and see how
-                  we maintain the highest quality standards. Schedule a visit to
-                  witness our curing, grading, and packaging operations
-                  firsthand.
-                </p>
-                <div className="space-y-3">
-                  {[
-                    "See our vanilla curing process in action",
-                    "Inspect quality control procedures",
-                    "Meet our team and discuss your requirements",
-                    "Verify our inventory and packaging",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#B5A37A]" />
-                      <span className="text-[#6B6358]">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="text-center lg:text-right">
-                <a
-                  href={`https://wa.me/${siteConfig.social.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
-                >
-                  Schedule a Visit
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <p className="text-sm text-[#6B6358] mt-4">
-                  Contact us to arrange your facility tour
-                </p>
-              </div>
-            </div>
+      {/* Final CTA */}
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className={EYEBROW}>Work With Us</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">Let&apos;s talk about your vanilla</h2>
+          <p className="text-lg text-[#6B6358] mb-8">
+            Tell us what you make and how much you need. We reply within 24 hours, and free samples
+            are always available.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+            >
+              Request Free Sample
+              <ArrowRight className="ms-2 w-5 h-5 rtl:rotate-180" />
+            </Link>
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
+            >
+              <WhatsAppIcon className="w-5 h-5 text-[#25A55F]" />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </section>
@@ -409,7 +335,7 @@ export default function AboutPage() {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             name: "About La Vanilla Supplier",
-            description: "Learn about La Vanilla Supplier - Indonesia's trusted vanilla supplier",
+            description: "About La Vanilla Supplier, an Indonesian vanilla exporter in Java operated by PT Penta Pelita Semesta.",
             url: `${siteConfig.url}/about`,
             mainEntity: {
               "@type": "Organization",
@@ -437,7 +363,7 @@ export default function AboutPage() {
               founder: {
                 "@type": "Person",
                 name: "Muhammad Irfan",
-                jobTitle: "Founder & Director",
+                jobTitle: "Export Director",
                 url: "https://www.linkedin.com/in/muhammad-irfan-601756367",
                 sameAs: [
                   "https://www.linkedin.com/in/muhammad-irfan-601756367",
