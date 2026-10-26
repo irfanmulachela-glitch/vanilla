@@ -22,6 +22,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/quality",
+        destination: "/la-vanilla-standard",
+        permanent: true,
+      },
+      {
+        source: "/:locale(fr|de|es|tr|ar)/quality",
+        destination: "/:locale/la-vanilla-standard",
+        permanent: true,
+      },
+      {
         source: "/suppliers/new-york",
         destination: "/regions/usa",
         permanent: true,

@@ -23,7 +23,6 @@ const TRANSLATED_PATHS = [
   "products/vanilla-powder",
   "about",
   "contact",
-  "quality",
   "faq",
   "wholesale",
   "la-vanilla-standard",

@@ -20,7 +20,7 @@ export function Footer() {
     ],
     company: [
       { name: "About Us", href: `${prefix}/about` },
-      { name: t.quality.title, href: `${prefix}/quality` },
+      { name: t.nav.ourStandard, href: `${prefix}/la-vanilla-standard` },
       { name: t.nav.blog, href: `${prefix}/blog` },
       { name: t.nav.faq, href: `${prefix}/faq` },
     ],
@@ -179,7 +179,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href={`${prefix}/quality`}
+                href={`${prefix}/la-vanilla-standard`}
                 className="text-sm text-stone-500 hover:text-stone-300 transition-colors"
               >
                 {t.footer.qualityPolicy}

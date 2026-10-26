@@ -114,7 +114,6 @@ export async function generateStaticParams() {
     paths.push({ locale, slug: ["products", "vanilla-powder"] });
     paths.push({ locale, slug: ["about"] });
     paths.push({ locale, slug: ["contact"] });
-    paths.push({ locale, slug: ["quality"] });
     paths.push({ locale, slug: ["faq"] });
     paths.push({ locale, slug: ["blog"] });
     paths.push({ locale, slug: ["wholesale"] });

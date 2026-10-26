@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Check, Clock, Ruler, Droplets, FlaskConical } from "lucide-react";
+import { ArrowRight, Check, Clock, Ruler, Droplets, FlaskConical, BadgeCheck, Leaf, FileCheck, Plus } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
@@ -9,10 +9,10 @@ import VanillaGradingChart from "@/components/vanilla-grading-chart";
 import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
-  "The La Vanilla Standard: five checks every batch of our Indonesian vanilla passes, from partner farms in Java to air freight, so every order matches the grade you approved.";
+  "The La Vanilla Standard: the five quality checks every batch of our Indonesian vanilla passes, plus Halal (MUI) certification, phytosanitary certificates and a Certificate of Analysis per batch.";
 
 export const metadata: Metadata = {
-  title: "The La Vanilla Standard: 5 Quality Checks",
+  title: "Our Standard: Quality, Certification & Documents",
   description: DESCRIPTION,
   alternates: {
     canonical: "/la-vanilla-standard",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: ogImages,
-    title: "The La Vanilla Standard: 5 Quality Checks",
+    title: "Our Standard: Quality, Certification & Documents",
     description: DESCRIPTION,
     url: `${siteConfig.url}/la-vanilla-standard`,
     siteName: siteConfig.name,
@@ -93,6 +93,51 @@ const steps = [
       "Air freight in 3–7 days, FCA, CPT or DDP",
       "Phyto certificate, invoice, packing list and air waybill",
     ],
+  },
+];
+
+const certifications = [
+  {
+    icon: BadgeCheck,
+    title: "Halal certified",
+    issuer: "MUI (Majelis Ulama Indonesia)",
+    body: "Our vanilla is certified halal by the Indonesian Ulema Council, suitable for halal markets worldwide.",
+  },
+  {
+    icon: Leaf,
+    title: "Phytosanitary certificate",
+    issuer: "Indonesian plant quarantine authority",
+    body: "Issued for every shipment, confirming the vanilla was inspected for plant health before export. Most importing countries require it at customs.",
+  },
+  {
+    icon: FileCheck,
+    title: "Certificate of Analysis",
+    issuer: "Per batch, on request",
+    body: "Issued for each batch just before it ships, confirming it meets the vanillin, moisture and length specs of the grade you ordered.",
+  },
+];
+
+const documents: [string, string[]][] = [
+  ["With every shipment", ["Phytosanitary certificate", "Commercial invoice", "Packing list", "Air waybill"]],
+  ["On request", ["Certificate of Analysis, per batch"]],
+];
+
+const faqs = [
+  {
+    q: "How do you check vanilla quality?",
+    a: "Every batch is graded by hand for length, moisture, colour and defects, then checked against its grade specs before packing. A Certificate of Analysis is available for each batch on request, issued just before it ships.",
+  },
+  {
+    q: "What certifications and documents come with your vanilla?",
+    a: "Our vanilla is Halal certified by MUI. Every shipment travels with a phytosanitary certificate, commercial invoice, packing list and air waybill. A Certificate of Analysis is available per batch on request.",
+  },
+  {
+    q: "What specs is each batch checked against?",
+    a: "Grade A: 15-20 cm long, 25-35% moisture and 1.1-2.5% vanillin. Grade B: 10-15 cm long, under 25% moisture and 1.0-2.0% vanillin. Every batch is checked against the specs of the grade you ordered.",
+  },
+  {
+    q: "Can I get a sample before ordering?",
+    a: "Yes. Free samples are available so you can check colour, aroma and texture before a larger order. They ship by DHL or FedEx in 3-5 days, and you only cover shipping.",
   },
 ];
 
@@ -251,6 +296,48 @@ export default function LaVanillaStandardPage() {
         </div>
       </section>
 
+      {/* Certification & documents */}
+      <section id="certification" className="py-20 lg:py-24 bg-[#F8F6F2] scroll-mt-20" aria-labelledby="cert-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-14">
+            <p className={EYEBROW}>Certification &amp; Documents</p>
+            <h2 id="cert-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Paperwork you can count on
+            </h2>
+            <p className="text-lg text-[#6B6358]">
+              Certified, documented and ready for customs, so your vanilla clears import without surprises.
+            </p>
+          </div>
+
+          <ul className="grid md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
+            {certifications.map((c) => (
+              <li key={c.title} className="pt-6 border-t border-[#E5E0D8]">
+                <c.icon className="w-7 h-7 text-[#B5A37A] mb-5" strokeWidth={1.5} aria-hidden="true" />
+                <h3 className="text-lg font-semibold text-[#2C2518] mb-1">{c.title}</h3>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-3">{c.issuer}</p>
+                <p className="text-[#6B6358] leading-relaxed">{c.body}</p>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-14 lg:mt-16 grid sm:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
+            {documents.map(([heading, items]) => (
+              <div key={heading}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187] mb-3">{heading}</p>
+                <ul className="border-t border-[#E5E0D8]">
+                  {items.map((d) => (
+                    <li key={d} className="flex items-center gap-3 py-3 border-b border-[#E5E0D8] text-[#2C2518]">
+                      <Check className="w-4 h-4 flex-shrink-0 text-[#B5A37A]" strokeWidth={2.5} aria-hidden="true" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* What it means for you */}
       <section className="py-20 lg:py-24 bg-[#2C2518]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,6 +356,28 @@ export default function LaVanillaStandardPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className={EYEBROW}>FAQ</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">Quality &amp; certification FAQ</h2>
+            <p className="text-lg text-[#6B6358]">How we check, certify and document every batch.</p>
+          </div>
+          <div className="border-t border-[#EEE9E1]">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="group border-b border-[#EEE9E1]">
+                <summary className="flex items-center justify-between gap-6 py-6 cursor-pointer list-none text-lg font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors [&::-webkit-details-marker]:hidden">
+                  <span>{faq.q}</span>
+                  <Plus className="w-5 h-5 text-[#B5A37A] flex-shrink-0 transition-transform duration-200 group-open:rotate-45" aria-hidden="true" />
+                </summary>
+                <p className="pb-6 -mt-1 pe-10 text-[#6B6358] leading-relaxed">{faq.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -301,6 +410,22 @@ export default function LaVanillaStandardPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          }),
+        }}
+      />
 
       {/* JSON-LD */}
       <script

@@ -146,7 +146,7 @@ export function ContactForm() {
               <div className="space-y-2">
                 <a href="/products" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ View All Products</a>
                 <a href="/wholesale" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Wholesale Orders</a>
-                <a href="/quality" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Quality & Certifications</a>
+                <a href="/la-vanilla-standard" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Our Standard: Quality &amp; Certification</a>
                 <a href="/faq" className="block text-sm text-gray-700 hover:text-[#A08C5A] transition-colors">→ Frequently Asked Questions</a>
               </div>
             </div>

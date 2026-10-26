@@ -253,7 +253,7 @@ export default function HowToChooseRightVanillaSupplier() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
               <Link
-                href="/quality"
+                href="/la-vanilla-standard"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2C2518] font-semibold rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
               >
                 View Our Standards
