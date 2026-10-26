@@ -141,6 +141,12 @@ const faqs = [
   },
 ];
 
+const journey = [
+  { src: "/standard-harvest-g.webp", step: "02", label: "Curing", caption: "Freshly harvested pods", alt: "A pile of freshly harvested green vanilla pods in Java", fit: "object-cover" },
+  { src: "/standard-grading-g.webp", step: "03", label: "Grading", caption: "Checked by hand", alt: "A gloved hand holding cured vanilla beans during grading", fit: "object-cover" },
+  { src: "/standard-pack-oak.webp", step: "05", label: "Packing", caption: "Vacuum-sealed", alt: "A vacuum-sealed pack of cured vanilla beans on a light wooden table", fit: "object-cover" },
+];
+
 const promises = [
   {
     title: "Your 100th order matches your first",
@@ -250,6 +256,26 @@ export default function LaVanillaStandardPage() {
             <p className="text-lg text-[#6B6358]">
               Every batch goes through the same five steps, in the same order, every time.
             </p>
+          </div>
+
+          <div className="mb-14 lg:mb-16">
+            <div className="grid grid-cols-3 gap-1 sm:gap-1.5 rounded-2xl overflow-hidden">
+              {journey.map((j) => (
+                <div key={j.label} className="relative aspect-[4/3] bg-white">
+                  <Image src={j.src} alt={j.alt} fill sizes="(min-width: 1280px) 420px, 33vw" className={j.fit} />
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-3 gap-1 sm:gap-1.5 mt-4">
+              {journey.map((j) => (
+                <p key={j.label} className="text-[13px] sm:text-sm leading-snug text-[#6B6358]">
+                  <span className="font-semibold text-[#B5A37A] tabular-nums">{j.step}</span>
+                  <span className="text-[#B5A37A]"> · </span>
+                  <span className="font-semibold text-[#2C2518]">{j.label}</span>
+                  <span className="hidden sm:inline">: {j.caption}</span>
+                </p>
+              ))}
+            </div>
           </div>
 
           <ol className="border-t border-[#EEE9E1]">
