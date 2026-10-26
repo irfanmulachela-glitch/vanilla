@@ -189,7 +189,7 @@ export default function WholesalePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white overflow-hidden flex items-center min-h-[560px] sm:min-h-[480px] lg:min-h-[640px] xl:min-h-[700px]">
+      <section className="relative bg-[#2C2518] text-white overflow-hidden flex items-center min-h-[565px] sm:min-h-[390px] md:min-h-[376px] lg:min-h-[455px] xl:min-h-[545px]">
         <div className="absolute inset-0">
           <Image
             src="/wholesale-hero.webp"
@@ -208,8 +208,8 @@ export default function WholesalePage() {
               <span className="text-[#B5A37A]">from Indonesia</span>
             </h1>
             <p className="text-lg text-white/75 leading-relaxed mb-8">
-              Beans, paste and powder at wholesale prices, shipped by air from Java. Order from
-              1 kg and start with a free sample.
+              Volume pricing, steady monthly supply and flexible terms for importers,
+              distributors and food manufacturers, shipped by air from Java.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
