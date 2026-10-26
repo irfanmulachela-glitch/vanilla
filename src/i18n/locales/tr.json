@@ -269,7 +269,7 @@
     "volumePricing": " hacim Fiyatlandırması",
     "volumePricingDesc": "Ne kadar çok sipariş verirseniz, kg başına fiyat o kadar iyi olur.",
     "paymentTerms": "Ödeme Koşulları",
-    "paymentTermsDesc": "T/T, L/C ve PayPal kabul ediyoruz."
+    "paymentTermsDesc": "T/T, Wise ve PayPal kabul ediyoruz. Büyük siparişler ve tedarik sözleşmeleri için peşinatlı ödeme ve görüldüğünde ödemeli L/C seçenekleri mevcuttur."
   },
   "footer": {
     "tagline": "Sizin Formülünüz. Bizim Vanilyamız. 20'den fazla ülkeye ihraç edilen premium Endonezya vanilyası.",

@@ -105,7 +105,7 @@ const faqs = [
     questions: [
       {
         q: "What are your payment terms?",
-        a: "We accept T/T (bank transfer), L/C (Letter of Credit), and PayPal for smaller orders. Standard terms are 30-50% deposit with balance before shipping. New customers may be required full upfront payment.",
+        a: "We accept T/T (bank transfer), Wise and PayPal. Standard orders are paid 100% before dispatch. For larger or scheduled orders we offer deposit terms, and L/C at sight for long-term supply contracts, agreed per order.",
       },
       {
         q: "How do you handle pricing for large orders?",

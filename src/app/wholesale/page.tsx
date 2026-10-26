@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "What are your payment terms?",
-    a: "We accept T/T (bank transfer), L/C (Letter of Credit), and PayPal for smaller orders. Standard terms are a 30-50% deposit with the balance due before shipping.",
+    a: "We accept T/T (bank transfer), Wise and PayPal. Standard orders are paid 100% before dispatch. For larger or scheduled orders we offer deposit terms, and L/C at sight for long-term supply contracts, agreed per order.",
   },
 ];
 
@@ -124,6 +124,55 @@ const priceFactors = [
   { title: "Vanillin content", description: "Beans with higher vanillin command a higher price." },
   { title: "Volume", description: "Larger orders, from 100 kg up, get better rates per kilo." },
   { title: "Contract", description: "Long-term supply contracts receive additional discounts." },
+];
+
+const terms: { label: string; value: string; detail?: string; list?: [string, string][] }[] = [
+  {
+    label: "Minimum order",
+    value: "From 1 kg",
+    detail: "Free samples available. You only cover shipping.",
+  },
+  {
+    label: "Payment",
+    value: "T/T (bank transfer), Wise or PayPal",
+    detail:
+      "Standard orders are paid 100% before dispatch. Deposit terms for larger or scheduled orders, and L/C at sight for long-term supply contracts, agreed per order.",
+  },
+  {
+    label: "Packaging",
+    value: "Packed to suit your use",
+    list: [
+      ["Vanilla beans", "Vacuum-sealed, 1 kg or 2.5 kg packs"],
+      ["Vanilla paste", "1 kg plastic jars, or glass jars for private label"],
+      ["Vanilla powder", "Vacuum-sealed packs"],
+    ],
+    detail: "Need a different pack size or format? Tell us how you want it packed and we will work it out together.",
+  },
+  {
+    label: "Supply capacity",
+    value: "Hundreds of kilos per month",
+    detail: "For regular buyers, we can schedule shipments around your production.",
+  },
+  {
+    label: "Shipping",
+    value: "Air freight, 3–7 days",
+    detail: "FCA (Surakarta), CPT or DDP. Sea freight on request for very large orders.",
+  },
+  {
+    label: "Documents",
+    value: "Full export paperwork",
+    detail:
+      "Phytosanitary certificate, commercial invoice, packing list and air waybill. A Certificate of Analysis is available per batch on request.",
+  },
+  {
+    label: "Certification",
+    value: "Halal certified (MUI)",
+  },
+  {
+    label: "Private label",
+    value: "Available",
+    detail: "Your brand on our vanilla, from the jar to the label.",
+  },
 ];
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -282,6 +331,52 @@ export default function WholesalePage() {
             <p className="text-lg text-[#6B6358]">Four simple steps, with a clear quote before you commit.</p>
           </div>
           <ProcessSteps steps={steps} />
+        </div>
+      </section>
+
+      {/* Wholesale terms */}
+      <section className="py-20 lg:py-24 bg-[#2C2518]" aria-labelledby="terms-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20 items-start">
+            <div className="lg:sticky lg:top-28">
+              <p className={EYEBROW}>Wholesale Terms</p>
+              <h2 id="terms-heading" className="text-3xl lg:text-4xl font-bold text-[#F8F6F2] mb-4">
+                Our terms at a glance
+              </h2>
+              <p className="text-lg text-stone-300 leading-relaxed mb-8">
+                The essentials buyers ask about before their first order. For larger or regular
+                orders, almost everything here can be tailored.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-[#B5A37A] text-[#2C2518] text-sm font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
+              >
+                Discuss your order
+                <ArrowRight className="ms-2 w-4 h-4 rtl:rotate-180" />
+              </Link>
+            </div>
+            <dl className="border-t border-white/10">
+              {terms.map((t) => (
+                <div key={t.label} className="grid sm:grid-cols-[11rem_1fr] gap-x-8 gap-y-1.5 py-6 border-b border-white/10">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] sm:pt-1">{t.label}</dt>
+                  <dd>
+                    <p className="font-semibold text-[#F8F6F2]">{t.value}</p>
+                    {t.list && (
+                      <ul className="mt-3 space-y-2">
+                        {t.list.map(([name, pack]) => (
+                          <li key={name} className="flex flex-col sm:flex-row sm:gap-3 text-stone-300">
+                            <span className="text-[#D4C48A] sm:w-32 shrink-0">{name}</span>
+                            <span>{pack}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {t.detail && <p className={`text-stone-400 leading-relaxed ${t.list ? "mt-3 text-sm" : "mt-1"}`}>{t.detail}</p>}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </section>
 
