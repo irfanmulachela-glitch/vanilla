@@ -341,7 +341,8 @@ export function HomePageContent() {
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#2C2518]/80" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2C2518]/75 via-[#2C2518]/60 to-[#2C2518]/40 rtl:bg-gradient-to-l" aria-hidden="true" />
+            <div className="absolute inset-0 bg-[#2C2518]/25 lg:hidden" aria-hidden="true" />
             <div className="relative z-10 max-w-lg">
               <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-6">
                 {t.home.whyChooseUs}
