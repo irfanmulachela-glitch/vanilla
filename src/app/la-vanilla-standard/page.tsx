@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
 
 const figures = [
-  { icon: Clock, label: "Curing", value: "6–9", unit: "months", note: "Slow-cured by partner farmers" },
+  { icon: Clock, label: "Curing", value: "6–9", unit: "months", note: "Slow, traditional curing" },
   { icon: FlaskConical, label: "Vanillin, Grade A", value: "1.1–2.5", unit: "%", note: "Grade B 1.0–2.0%" },
   { icon: Droplets, label: "Moisture, Grade A", value: "25–35", unit: "%", note: "Grade B under 25%" },
   { icon: Ruler, label: "Length, Grade A", value: "15–20", unit: "cm", note: "Grade B 10–15 cm" },
