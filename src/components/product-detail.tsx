@@ -148,10 +148,10 @@ const CONTENT: Record<string, ProductContent> = {
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [
-          { src: "/vanilla-beans-a-p1.webp", alt: "Bundle of long Grade A gourmet Indonesian vanilla beans tied with twine" },
-          { src: "/vanilla-beans-a-p2.webp", alt: "Plump, oily Grade A V. planifolia vanilla beans from Java" },
-          { src: "/vanilla-beans-a-p3.webp", alt: "Close-up of a Grade A vanilla bean bundle tied with twine" },
-          { src: "/vanilla-beans-a-p4.webp", alt: "Grade A vanilla pods standing upright, showing their oily sheen" },
+          { src: "/vanilla-beans-a-s1.webp", alt: "Bundle of plump Grade A gourmet Indonesian vanilla beans tied with twine" },
+          { src: "/vanilla-beans-a-s2.webp", alt: "Close-up of supple, oily Grade A V. planifolia vanilla beans from Java" },
+          { src: "/vanilla-beans-a-s3.webp", alt: "Grade A gourmet vanilla bean bundle on a white background" },
+          { src: "/vanilla-beans-a-s4.webp", alt: "Grade A vanilla pods standing upright, showing their satin sheen" },
         ],
       },
       {
@@ -199,8 +199,8 @@ const CONTENT: Record<string, ProductContent> = {
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [
-          { src: "/vanilla-beans-b-q1.webp", alt: "Bundle of shorter Grade B extraction vanilla beans, drier with reddish-brown streaks" },
-          { src: "/vanilla-beans-b-q2.webp", alt: "Close-up of drier Grade B Indonesian vanilla beans tied with twine" },
+          { src: "/vanilla-beans-b-t1.webp", alt: "Bundle of Grade B extraction vanilla beans, drier with reddish-brown streaks" },
+          { src: "/vanilla-beans-b-t2.webp", alt: "Close-up of drier, slimmer Grade B Indonesian vanilla beans tied with twine" },
         ],
       },
     ],
