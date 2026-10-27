@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { twitterCard, ogImages } from "@/lib/seo";
 import BlogGrid from "@/components/blog-grid";
@@ -229,86 +230,91 @@ const blogPosts = [
   },
 ];
 
+const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
+
+// Short "start here" path for buyers who are new to sourcing vanilla
+const START_HERE: { slug: string; label: string }[] = [
+  { slug: "sourcing-vanilla-beans-indonesia", label: "How to source vanilla beans from Indonesia" },
+  { slug: "vanilla-bean-grading", label: "Grade A vs Grade B, explained" },
+  { slug: "wholesale-vanilla-beans-indonesia", label: "Buying vanilla wholesale" },
+];
+
+const formatDate = (d: string) =>
+  new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+
 export default function BlogPage() {
   const featuredPost = blogPosts.find((post) => post.featured);
+  const startHere = START_HERE.filter((item) => blogPosts.some((p) => p.slug === item.slug));
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Link
-              href="/"
-              className="inline-flex items-center text-[#B5A37A] hover:text-white mb-6 text-sm transition-colors"
-            >
-              ← Back to Home
-            </Link>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Vanilla Industry Insights
-            </h1>
-            <p className="text-lg text-stone-300 leading-relaxed">
-              Expert guides on sourcing, quality, export documentation, and
-              market trends. Stay informed about the global vanilla trade.
-            </p>
+      {/* Masthead: type-led, no photo (posts have no imagery of their own) */}
+      <section className="bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 lg:pt-24 lg:pb-20">
+          <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-24 items-end">
+            <div>
+              <p className={EYEBROW}>The La Vanilla Journal</p>
+              <h1 className="text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
+                <span className="font-bold">Guides for buying vanilla</span>{" "}
+                <span className="italic font-normal text-[#8C7A4F]">with confidence</span>
+              </h1>
+              <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
+                Plain-English guides on sourcing, grading, documents and pricing, written by our
+                team in Java.
+              </p>
+            </div>
+
+            <nav aria-label="Start here">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1">Start here</p>
+              <ol className="border-b border-[#E5E0D8]">
+                {startHere.map((post, i) => (
+                  <li key={post.slug} className="border-t border-[#E5E0D8] first:border-t-0">
+                    <Link href={`/blog/${post.slug}`} className="group flex items-baseline gap-4 py-4">
+                      <span className="font-[family-name:var(--font-libre)] text-lg text-[#B5A37A] tabular-nums">{i + 1}</span>
+                      <span className="flex-1 font-medium text-[#2C2518] leading-snug group-hover:text-[#8C7A4F] transition-colors">
+                        {post.label}
+                      </span>
+                      <ArrowRight className="w-4 h-4 shrink-0 self-center text-[#B5A37A] group-hover:translate-x-1 transition-transform rtl:rotate-180" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </nav>
           </div>
         </div>
       </section>
 
-      {/* Featured Post */}
+      {/* Featured article */}
       {featuredPost && (
-        <section className="py-12 lg:py-16 bg-white">
+        <section className="bg-white py-16 lg:py-20" aria-labelledby="featured-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-[#B5A37A] rounded-lg flex items-center justify-center">
-                <BookOpen className="w-4 h-4 text-white" />
+            <Link href={`/blog/${featuredPost.slug}`} className="group grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#F4F2EE]">
+                <Image
+                  src="/blog-featured-v3.webp"
+                  alt="A tied bundle of cured Indonesian vanilla beans"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
               </div>
-              <span className="text-sm font-semibold text-[#B5A37A] uppercase tracking-wider">
-                Featured Article
-              </span>
-            </div>
-            <Link
-              href={`/blog/${featuredPost.slug}`}
-              className="group block bg-[#F8F6F2] rounded-2xl border border-[#E5E0D8] overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
-              <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className="flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-white text-[#B5A37A] text-xs font-medium rounded-full border border-[#E5E0D8] flex items-center gap-1.5">
-                      <BookOpen className="w-3 h-3" />
-                      {featuredPost.category}
-                    </span>
-                    <span className="flex items-center gap-1 text-xs text-[#6B6358]">
-                      <BookOpen className="w-3 h-3" />
-                      {featuredPost.readTime}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl lg:text-3xl font-bold text-[#2C2518] mb-4 group-hover:text-[#B5A37A] transition-colors">
-                    {featuredPost.title}
-                  </h2>
-                  <p className="text-[#6B6358] mb-6 leading-relaxed">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-sm text-[#6B6358]">
-                      <BookOpen className="w-4 h-4" />
-                      {new Date(featuredPost.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </div>
-                    <span className="text-[#B5A37A] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Read Article
-                      <BookOpen className="w-5 h-5" />
-                    </span>
-                  </div>
-                </div>
-                <div className="bg-[#2C2518] rounded-xl flex items-center justify-center p-8 min-h-[300px]">
-                  <div className="text-center">
-                    <BookOpen className="w-16 h-16 text-[#B5A37A] mx-auto mb-4" />
-                    <p className="text-stone-400 text-sm">Read the full guide</p>
-                  </div>
+              <div>
+                <p className={EYEBROW}>Featured guide</p>
+                <h2
+                  id="featured-heading"
+                  className="text-3xl lg:text-[2.4rem] font-bold leading-tight text-[#2C2518] mb-5 group-hover:text-[#8C7A4F] transition-colors"
+                >
+                  {featuredPost.title}
+                </h2>
+                <p className="text-lg text-[#6B6358] leading-relaxed mb-8">{featuredPost.excerpt}</p>
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <span className="inline-flex items-center px-6 py-3 bg-[#2C2518] text-white text-sm font-semibold rounded-lg group-hover:bg-[#3D3425] transition-colors">
+                    Read the guide
+                    <ArrowRight className="ms-2 w-4 h-4 rtl:rotate-180" />
+                  </span>
+                  <span className="text-sm text-[#9A9187]">
+                    {featuredPost.category} · {featuredPost.readTime} · {formatDate(featuredPost.date)}
+                  </span>
                 </div>
               </div>
             </Link>
@@ -316,32 +322,37 @@ export default function BlogPage() {
         </section>
       )}
 
-      {/* Interactive Blog Grid */}
+      {/* All articles with topic filter */}
       <BlogGrid posts={blogPosts} />
 
-      {/* Newsletter CTA */}
-      <section className="py-16 bg-[#2C2518]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Stay Updated on Vanilla Market
+      {/* Closing CTA: honest alternative to a newsletter we don't send */}
+      <section className="py-20 lg:py-24 bg-[#2C2518]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className={EYEBROW}>Ask Us Directly</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#F8F6F2] mb-4">
+            Have a question these guides don&apos;t answer?
           </h2>
-          <p className="text-stone-300 mb-8 max-w-2xl mx-auto">
-            Get the latest insights on vanilla pricing, quality trends, and
-            export opportunities delivered to your inbox.
+          <p className="text-lg text-stone-300 mb-8">
+            Tell us what you make and what you need. We reply within 24 hours, and free samples
+            are always available.
           </p>
-          <form className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-xl text-white placeholder-stone-500 focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-[#2C2518] font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
             >
-              Subscribe
-            </button>
-          </form>
+              Ask a question
+              <ArrowRight className="ms-2 w-5 h-5 rtl:rotate-180" />
+            </Link>
+            <a
+              href={`https://wa.me/${siteConfig.social.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border border-white/30 hover:bg-white/10 transition-colors"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
