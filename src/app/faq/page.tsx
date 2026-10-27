@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
@@ -38,11 +38,11 @@ const faqs = [
     questions: [
       {
         q: "What are the order quantities?",
-        a: "Order quantities start from as little as 1 kg. Free samples are available for evaluation, and we're happy to start with whatever quantity works for you — we believe in building long-term partnerships.",
+        a: "Orders start from 1 kg. Free samples are available so you can check the quality first, and we are happy to start with whatever quantity suits you, then grow from there.",
       },
       {
         q: "Can I order samples before placing a bulk order?",
-        a: "Yes! We offer free samples for serious buyers. Simply fill out our contact form or message us on WhatsApp with your requirements. Samples are shipped via DHL or FedEx within 3-5 days.",
+        a: "Yes. Samples are free; you only cover shipping. Fill in our contact form or message us on WhatsApp with your requirements, and samples are shipped by DHL or FedEx, usually arriving in 3-5 days.",
       },
       {
         q: "How do I place an order?",
@@ -50,7 +50,7 @@ const faqs = [
       },
       {
         q: "Do you offer white-label or private-label services?",
-        a: "Yes, we offer complete white-label services including custom packaging, labeling, and formulation. Contact us to discuss your branding requirements.",
+        a: "Yes. We supply vanilla beans, paste and powder packed under your own brand: vacuum packs for beans and powder, glass jars for paste, with your label. Paste can also be made to your recipe. Tell us what you have in mind and we will prepare a sample for your approval.",
       },
     ],
   },
@@ -59,7 +59,7 @@ const faqs = [
     questions: [
       {
         q: "What is the difference between Grade A and Grade B vanilla beans?",
-        a: "Grade A beans are 15-20 cm long with 25-35% moisture content and 1.1-2.5% vanillin — ideal for gourmet culinary use. Grade B beans are 10-15 cm with less than 25% moisture — perfect for extract production. Both grades undergo the same 6-9 month curing process.",
+        a: "Grade A (Gourmet) beans are 15-20 cm long with 25-35% moisture and 1.1-2.5% vanillin, ideal for pastry, ice cream and retail. Grade B (Extraction) beans are 10-15 cm long with under 25% moisture and 1.0-2.0% vanillin, ideal for extracts and syrups. Both are cured for 6-9 months.",
       },
       {
         q: "What vanilla species do you supply?",
@@ -67,15 +67,15 @@ const faqs = [
       },
       {
         q: "Can you customize vanilla paste composition?",
-        a: "Absolutely! We specialize in custom formulations. You can specify strength (single, double or triple fold), sugar content (0-65%), viscosity, and other parameters. We'll create a sample for your approval before production.",
+        a: "Yes. You can choose the strength (single, double or triple fold), sweetness and viscosity. We prepare a sample for your approval before production.",
       },
       {
         q: "How do you ensure consistent quality across orders?",
-        a: "Every batch undergoes gas chromatography testing for vanillin content, moisture analysis, and sensory evaluation. We maintain detailed batch records and can provide Certificate of Analysis with every shipment.",
+        a: "Every batch is graded by hand for length, moisture, colour and defects, then checked against the specs of the grade you ordered before packing. A Certificate of Analysis is available for each batch on request.",
       },
       {
         q: "What is the vanillin content of your vanilla beans?",
-        a: "Our Grade A vanilla beans have vanillin content ranging from 1.1% to 2.5%. Grade B beans range from 1.0% to 2.0%. We can provide lab test results for every batch.",
+        a: "Grade A beans range from 1.1% to 2.5% vanillin, and Grade B beans from 1.0% to 2.0%. A Certificate of Analysis is available for each batch on request.",
       },
     ],
   },
@@ -84,7 +84,7 @@ const faqs = [
     questions: [
       {
         q: "What shipping methods do you offer?",
-        a: "Air freight is our standard shipping method — via DHL, FedEx, or air cargo — with delivery in 3-7 days worldwide. DDP door delivery is available, and sea freight can be arranged on request for very large orders.",
+        a: "Air freight is our standard, by DHL, FedEx or air cargo, arriving in 3-7 days worldwide. We ship on FCA (Surakarta), CPT or DDP terms, and sea freight can be arranged on request for very large orders.",
       },
       {
         q: "How long does shipping take?",
@@ -92,7 +92,7 @@ const faqs = [
       },
       {
         q: "What documents are included with shipments?",
-        a: "Every shipment includes: Certificate of Analysis (CoA), Phytosanitary Certificate, Certificate of Origin (COO), Quality Statement Letter, Halal Certificate, Packing List, and Commercial Invoice.",
+        a: "Every shipment travels with a phytosanitary certificate, commercial invoice, packing list and air waybill. A Certificate of Analysis is available for each batch on request.",
       },
       {
         q: "Do you ship to my country?",
@@ -109,15 +109,15 @@ const faqs = [
       },
       {
         q: "How do you handle pricing for large orders?",
-        a: "We offer competitive volume pricing. The more you order, the better the per-kg rate. Contact us with your estimated annual volume for a custom pricing proposal.",
+        a: "The more you order, the better the rate per kilo, with better pricing from 100 kg. Send us your estimated volume and we will put together a quote for you.",
       },
       {
         q: "Do prices include shipping?",
-        a: "Our quoted prices are typically air freight (FCA Surakarta). Shipping costs depend on your location, order volume, and preferred shipping method. We'll provide a detailed quote including all costs.",
+        a: "Quotes are usually FCA Surakarta, so shipping is added on top. Shipping depends on your destination, volume and method. If you prefer, we can quote CPT or DDP so the price includes delivery.",
       },
       {
-        q: "Is there a price match guarantee?",
-        a: "We guarantee that our quality-to-price ratio is competitive. If you find a certified supplier with equivalent quality and documentation at a lower price, we'll match it.",
+        q: "How quickly will I get a quote?",
+        a: "Within 24 hours. Tell us the product, grade, quantity and destination, and we will send a quote priced for your exact order.",
       },
     ],
   },
@@ -126,15 +126,15 @@ const faqs = [
     questions: [
       {
         q: "What certifications do you have?",
-        a: "Our facilities follow Food Safety Standards. All products are Halal certified. We provide phytosanitary certificates for all exports. Additional documentation available upon request.",
+        a: "Our vanilla is Halal certified by MUI (Majelis Ulama Indonesia). Every shipment comes with a phytosanitary certificate, and a Certificate of Analysis is available for each batch on request.",
       },
       {
-        q: "Are your products Sustainably Sourced?",
-        a: "Some of our products are available in Sustainably Sourced certified variants. Contact us to discuss certification requirements for your specific market.",
+        q: "How do you work with farmers?",
+        a: "We work hand in hand with smallholder farmers across Java, with no traders in between. Our vanilla is only as good as the people who grow it, so we stay close to them season after season.",
       },
       {
         q: "Are your products US Import Ready?",
-        a: "Yes, our products meet US import requirements. We can provide additional documentation as needed for US import compliance.",
+        a: "We regularly ship to the US by air with a phytosanitary certificate, commercial invoice, packing list and air waybill. Tell us your requirements and we will confirm what we can provide for your import.",
       },
     ],
   },
@@ -143,126 +143,160 @@ const faqs = [
     questions: [
       {
         q: "How much do wholesale vanilla beans cost?",
-        a: "Pricing depends on grade, volume, and contract terms. Contact us with your requirements for a competitive quote within 24 hours.",
+        a: "Pricing depends on grade, volume and destination. Send us your requirements and we will reply with a quote within 24 hours.",
       },
       {
         q: "Can you supply 100kg or more per month?",
-        a: "Yes, we can supply consistent monthly volumes well beyond 100kg. We maintain inventory to ensure year-round availability. Contact us to discuss your volume requirements.",
+        a: "Yes. We can supply hundreds of kilos per month, and for regular buyers we schedule shipments around your production. Tell us your volumes and timing.",
       },
       {
         q: "Do you offer long-term supply contracts?",
-        a: "Yes, we offer quarterly and annual supply contracts with fixed pricing and priority allocation. Long-term partners receive preferential pricing and guaranteed supply.",
+        a: "Yes. For regular buyers we offer supply contracts that keep your volume and pricing steady across shipments, with additional discounts. Payment can be agreed per contract, including L/C at sight.",
       },
     ],
   },
 ];
 
+const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
+
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+const QUICK_FACTS: [string, string][] = [
+  ["Minimum order", "From 1 kg"],
+  ["Samples", "Free, you cover shipping"],
+  ["Shipping", "By air, 3–7 days"],
+  ["Payment", "T/T, Wise or PayPal"],
+];
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
+  );
+}
+
 export default function FAQPage() {
+  const total = faqs.reduce((n, c) => n + c.questions.length, 0);
+
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[#2C2518] text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Link
-              href="/"
-              className="inline-flex items-center text-[#B5A37A] hover:text-white mb-6 text-sm transition-colors"
-            >
-              ← Back to Home
-            </Link>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-lg text-stone-300 leading-relaxed">
-              Find answers to common questions about our products, ordering,
-              shipping, and certifications.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Masthead: type-led with the four answers buyers ask first */}
+      <section className="bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 lg:pt-24 lg:pb-20">
+          <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-24 items-end">
+            <div>
+              <p className={EYEBROW}>FAQ</p>
+              <h1 className="text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
+                <span className="font-bold">Questions buyers ask</span>{" "}
+                <br className="hidden sm:block" />
+                <span className="italic font-normal text-[#8C7A4F]">before ordering</span>
+              </h1>
+              <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
+                Straight answers on ordering, quality, shipping, payment and documents. If yours
+                isn&apos;t here, we reply within 24 hours.
+              </p>
+            </div>
 
-      {/* Quick Navigation */}
-      <section className="bg-white border-b border-[#E5E0D8] py-6 sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2">
-            {faqs.map((category) => (
-              <a
-                key={category.category}
-                href={`#${category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                className="px-4 py-2 text-sm font-medium text-[#6B6358] bg-[#F8F6F2] rounded-full border border-[#E5E0D8] hover:bg-[#2C2518] hover:text-white hover:border-[#2C2518] transition-all"
-              >
-                {category.category}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="py-16 lg:py-24 bg-[#F8F6F2]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {faqs.map((category) => (
-            <div
-              key={category.category}
-              id={category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
-              className="mb-16 last:mb-0 scroll-mt-24"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 bg-[#2C2518] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#B5A37A] font-bold text-sm">
-                    {category.category.charAt(0)}
-                  </span>
-                </div>
-                <h2 className="text-xl font-bold text-[#2C2518]">
-                  {category.category}
-                </h2>
-              </div>
-              <div className="space-y-4">
-                {category.questions.map((faq) => (
-                  <details
-                    key={faq.q}
-                    className="group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden hover:border-[#B5A37A]/50 transition-colors"
-                  >
-                    <summary className="flex items-center justify-between p-6 cursor-pointer font-semibold text-[#2C2518] hover:text-[#B5A37A] transition-colors list-none">
-                      <span className="pr-4">{faq.q}</span>
-                      <ChevronDown className="w-5 h-5 text-[#6B6358] group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
-                    </summary>
-                    <div className="px-6 pb-6 text-[#6B6358] leading-relaxed border-t border-[#E5E0D8] pt-4">
-                      {faq.a}
-                    </div>
-                  </details>
+            <dl aria-label="Quick answers">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1">In short</p>
+              <div className="border-b border-[#E5E0D8]">
+                {QUICK_FACTS.map(([k, v], i) => (
+                  <div key={k} className={`flex items-baseline justify-between gap-6 py-3.5 ${i ? "border-t border-[#E5E0D8]" : ""}`}>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">{k}</dt>
+                    <dd className="font-medium text-[#2C2518] text-right">{v}</dd>
+                  </div>
                 ))}
               </div>
-            </div>
-          ))}
+            </dl>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-[#2C2518] mb-4">
-            Still Have Questions?
-          </h2>
-          <p className="text-[#6B6358] mb-8 max-w-2xl mx-auto">
-            Can&apos;t find the answer you&apos;re looking for? Our team is
-            ready to help. Chat with us on WhatsApp for instant response.
+      {/* Topic tabs (phone and tablet) */}
+      <nav aria-label="FAQ topics" className="lg:hidden sticky top-16 z-20 bg-white/[0.97] backdrop-blur-md border-b border-[#EEE9E1]">
+        <div className="px-4 sm:px-6 flex gap-6 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {faqs.map((c) => (
+            <a key={c.category} href={`#${slug(c.category)}`} className="shrink-0 py-4 text-sm font-medium text-[#6B6358] hover:text-[#2C2518]">
+              {c.category}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      {/* Questions */}
+      <section className="bg-white py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[16rem_1fr] gap-12 lg:gap-20">
+            {/* Topic sidebar (desktop) */}
+            <aside className="hidden lg:block">
+              <nav aria-label="FAQ topics" className="sticky top-28">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-3">
+                  {faqs.length} topics · {total} questions
+                </p>
+                <ul className="border-t border-[#EEE9E1]">
+                  {faqs.map((c, i) => (
+                    <li key={c.category} className="border-b border-[#EEE9E1]">
+                      <a href={`#${slug(c.category)}`} className="group flex items-baseline gap-3 py-3 text-[15px] text-[#6B6358] hover:text-[#2C2518] transition-colors">
+                        <span className="text-xs text-[#B5A37A] tabular-nums w-5">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="flex-1">{c.category}</span>
+                        <span className="text-xs text-[#C9C1B4] tabular-nums">{c.questions.length}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </aside>
+
+            <div className="max-w-3xl">
+              {faqs.map((c, i) => (
+                <div key={c.category} id={slug(c.category)} className="scroll-mt-32 lg:scroll-mt-28 mb-16 last:mb-0">
+                  <div className="flex items-baseline gap-4 mb-2">
+                    <span className="font-[family-name:var(--font-libre)] text-2xl text-[#B5A37A] tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                    <h2 className="text-2xl lg:text-[1.75rem] font-bold text-[#2C2518]">{c.category}</h2>
+                  </div>
+                  <div className="border-t border-[#E5E0D8] mt-4">
+                    {c.questions.map((faq) => (
+                      <details key={faq.q} className="group border-b border-[#EEE9E1]">
+                        <summary className="flex items-center justify-between gap-6 py-5 cursor-pointer list-none text-[17px] font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors [&::-webkit-details-marker]:hidden">
+                          <span>{faq.q}</span>
+                          <Plus className="w-5 h-5 text-[#B5A37A] flex-shrink-0 transition-transform duration-200 group-open:rotate-45" aria-hidden="true" />
+                        </summary>
+                        <p className="pb-6 -mt-1 pe-10 text-[#6B6358] leading-relaxed">{faq.a}</p>
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className={EYEBROW}>Still Have Questions?</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">Ask us directly</h2>
+          <p className="text-lg text-[#6B6358] mb-8">
+            Tell us what you make and what you need. We reply within 24 hours, and free samples are
+            always available.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
             >
               Contact Us
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ms-2 w-5 h-5 rtl:rotate-180" />
             </Link>
             <a
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-xl hover:bg-[#A8956A] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
             >
-              <MessageSquare className="mr-2 w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5 text-[#25A55F]" />
               Chat on WhatsApp
             </a>
           </div>
