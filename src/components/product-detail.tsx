@@ -148,10 +148,10 @@ const CONTENT: Record<string, ProductContent> = {
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [
-          { src: "/vanilla-beans-a-m1.webp", alt: "Bundle of long Grade A gourmet Indonesian vanilla beans tied with twine" },
-          { src: "/vanilla-beans-a-m2.webp", alt: "Plump, oily Grade A V. planifolia vanilla beans from Java" },
-          { src: "/vanilla-beans-a-m3.webp", alt: "Close-up of a Grade A vanilla bean bundle tied with twine" },
-          { src: "/vanilla-beans-a-m4.webp", alt: "Grade A vanilla pods standing upright, showing their oily sheen" },
+          { src: "/vanilla-beans-a-p1.webp", alt: "Bundle of long Grade A gourmet Indonesian vanilla beans tied with twine" },
+          { src: "/vanilla-beans-a-p2.webp", alt: "Plump, oily Grade A V. planifolia vanilla beans from Java" },
+          { src: "/vanilla-beans-a-p3.webp", alt: "Close-up of a Grade A vanilla bean bundle tied with twine" },
+          { src: "/vanilla-beans-a-p4.webp", alt: "Grade A vanilla pods standing upright, showing their oily sheen" },
         ],
       },
       {
