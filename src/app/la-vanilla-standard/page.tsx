@@ -47,7 +47,7 @@ const steps = [
     checks: [
       "Partner farmers across Java",
       "Vanilla planifolia only",
-      "Cured at the farmers' own facilities, coordinated with us",
+      "Hand-picked at peak maturity",
     ],
   },
   {

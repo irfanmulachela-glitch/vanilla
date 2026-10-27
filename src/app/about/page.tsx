@@ -50,7 +50,7 @@ const beliefs = [
   },
   {
     title: "Farmers are partners, not a supply line.",
-    body: "Our vanilla is only as good as the people who grow and cure it. We work hand in hand with farming families in Java, because when they do well, the vanilla does too.",
+    body: "Our vanilla is only as good as the people who grow it. We work hand in hand with farming families in Java, because when they do well, the vanilla does too.",
   },
   {
     title: "Honesty is part of the product.",
@@ -176,7 +176,7 @@ export default function AboutPage() {
                 <p>
                   La Vanilla Supplier exports Indonesian vanilla from Java: Grade A and Grade B
                   vanilla beans, vanilla paste and pure vanilla powder. We work hand in hand with
-                  vanilla farmers across the island, coordinating curing, grading and packing so
+                  vanilla farmers across the island, following every lot through curing, grading and packing so
                   every batch matches the grade our buyers approved.
                 </p>
                 <p>
@@ -242,7 +242,7 @@ export default function AboutPage() {
               <div className="space-y-5 text-[#6B6358] leading-relaxed">
                 <p>
                   Irfan leads La Vanilla Supplier from Java. He works hand in hand with the farmers
-                  who grow and cure our vanilla, and oversees grading and quality before every batch
+                  who grow our vanilla, and oversees grading and quality before every batch
                   is exported.
                 </p>
                 <p>
