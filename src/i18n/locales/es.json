@@ -64,7 +64,7 @@
         "value": "3–7",
         "unit": "días",
         "label": "Flete aéreo",
-        "note": "FCA, CPT o DDP"
+        "note": "FCA o CPT"
       },
       {
         "value": "150+",
@@ -117,7 +117,7 @@
         },
         {
           "title": "Flete aéreo rápido a todo el mundo",
-          "body": "Enviamos a más de 20 países en 3 a 7 días bajo términos FCA, CPT o DDP, desde 1 kg hasta volúmenes regulares de producción."
+          "body": "Enviamos a más de 20 países en 3 a 7 días bajo términos FCA o CPT, desde 1 kg hasta volúmenes regulares de producción."
         }
       ]
     }
@@ -146,7 +146,7 @@
     "minimumOrder": "Cantidad Mínima",
     "minimumOrderDesc": "Pedidos desde 1 kg",
     "shippingTerms": "Términos de Envío",
-    "shippingTermsDesc": "Envío aéreo mundial (FCA / CPT / DDP)",
+    "shippingTermsDesc": "Envío aéreo mundial (FCA / CPT)",
     "documents": "Todo Incluido",
     "documentsDesc": "CoA, Fitosanitario, COO",
     "premiumQuality": "Calidad Premium",

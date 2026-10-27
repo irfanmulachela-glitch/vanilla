@@ -64,7 +64,7 @@
         "value": "3–7",
         "unit": "gün",
         "label": "Hava kargo",
-        "note": "FCA, CPT veya DDP"
+        "note": "FCA veya CPT"
       },
       {
         "value": "150+",
@@ -117,7 +117,7 @@
         },
         {
           "title": "Dünya çapında hızlı hava kargo",
-          "body": "FCA, CPT veya DDP şartlarıyla 3–7 günde 20'den fazla ülkeye; 1 kg'dan düzenli üretim hacimlerine kadar."
+          "body": "FCA veya CPT şartlarıyla 3–7 günde 20'den fazla ülkeye; 1 kg'dan düzenli üretim hacimlerine kadar."
         }
       ]
     }
@@ -146,7 +146,7 @@
     "minimumOrder": "Minimum Sipariş Miktarı",
     "minimumOrderDesc": "1 kg'den başlayan siparişler",
     "shippingTerms": "Teslimat Koşulları",
-    "shippingTermsDesc": "Dünya çapında hava kargo (FCA / CPT / DDP)",
+    "shippingTermsDesc": "Dünya çapında hava kargo (FCA / CPT)",
     "documents": "Her Şey Dahil",
     "documentsDesc": "CoA, Bitki Sağlığı, COO",
     "premiumQuality": "Premium Kalite",

@@ -189,7 +189,7 @@ export default function HalalVanillaSupplierMiddleEast() {
               <li>10+ years export experience to Middle East</li>
               <li>Complete documentation for customs clearance</li>
               <li>Order quantities from 1 kg</li>
-              <li>Air freight worldwide with DDP delivery available</li>
+              <li>Air freight worldwide on FCA or CPT terms</li>
               <li>Responsive communication in English and Arabic</li>
             </ul>
 

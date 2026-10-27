@@ -84,7 +84,7 @@ const faqs = [
     questions: [
       {
         q: "What shipping methods do you offer?",
-        a: "Air freight is our standard, by DHL, FedEx or air cargo, arriving in 3-7 days worldwide. We ship on FCA (Surakarta), CPT or DDP terms, and sea freight can be arranged on request for very large orders.",
+        a: "Air freight is our standard, by DHL, FedEx or air cargo, arriving in 3-7 days worldwide. We ship on FCA (Surakarta) or CPT terms, and sea freight can be arranged on request for very large orders.",
       },
       {
         q: "How long does shipping take?",
@@ -117,7 +117,7 @@ const faqs = [
       },
       {
         q: "Do prices include shipping?",
-        a: "Quotes are usually FCA Surakarta, so shipping is added on top. Shipping depends on your destination, volume and method. If you prefer, we can quote CPT or DDP so the price includes delivery.",
+        a: "Quotes are usually FCA Surakarta, so shipping is added on top. Shipping depends on your destination, volume and method. If you prefer, we can quote CPT so the price includes air freight to your destination airport.",
       },
       {
         q: "How quickly will I get a quote?",

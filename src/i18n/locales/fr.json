@@ -64,7 +64,7 @@
         "value": "3–7",
         "unit": "jours",
         "label": "Fret aérien",
-        "note": "FCA, CPT ou DDP"
+        "note": "FCA ou CPT"
       },
       {
         "value": "150+",
@@ -117,7 +117,7 @@
         },
         {
           "title": "Fret aérien rapide dans le monde",
-          "body": "Expédiée vers plus de 20 pays en 3 à 7 jours en FCA, CPT ou DDP, d'1 kg jusqu'à des volumes de production réguliers."
+          "body": "Expédiée vers plus de 20 pays en 3 à 7 jours en FCA ou CPT, d'1 kg jusqu'à des volumes de production réguliers."
         }
       ]
     }
@@ -146,7 +146,7 @@
     "minimumOrder": "Quantité Minimum",
     "minimumOrderDesc": "Commandes dès 1 kg",
     "shippingTerms": "Conditions d'Expédition",
-    "shippingTermsDesc": "Fret aérien mondial (FCA / CPT / DDP)",
+    "shippingTermsDesc": "Fret aérien mondial (FCA / CPT)",
     "documents": "Tout Inclus",
     "documentsDesc": "CoA, Phytosanitaire, COO",
     "premiumQuality": "Qualité Premium",

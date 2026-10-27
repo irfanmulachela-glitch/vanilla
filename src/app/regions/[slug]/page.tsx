@@ -62,7 +62,7 @@ const regions: Record<string, RegionConfig> = {
     highlights: [
       "Halal certified for all products",
       "Fast air freight to Dubai (3-5 days)",
-      "DDP delivery available",
+      "FCA or CPT shipping terms",
       "Customs documentation included",
     ],
     cities: ["Dubai", "Abu Dhabi", "Sharjah", "Doha", "Riyadh", "Jeddah"],
@@ -362,7 +362,7 @@ export default async function RegionPage({
               <div className="flex items-center gap-4 text-sm text-stone-400">
                 <div className="flex items-center gap-2">
                   <Package className="w-4 h-4 text-[#B5A37A]" />
-                  <span>FCA / CPT / DDP terms</span>
+                  <span>FCA / CPT terms</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-[#B5A37A]" />

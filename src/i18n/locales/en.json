@@ -64,7 +64,7 @@
         "value": "3–7",
         "unit": "days",
         "label": "Air freight",
-        "note": "FCA, CPT or DDP"
+        "note": "FCA or CPT"
       },
       {
         "value": "150+",
@@ -117,7 +117,7 @@
         },
         {
           "title": "Fast air freight worldwide",
-          "body": "Shipped to 20+ countries in 3–7 days on FCA, CPT or DDP terms, from 1 kg up to regular production volumes."
+          "body": "Shipped to 20+ countries in 3–7 days on FCA or CPT terms, from 1 kg up to regular production volumes."
         }
       ]
     }
@@ -146,7 +146,7 @@
     "minimumOrder": "Minimum Order",
     "minimumOrderDesc": "Orders start from 1 kg",
     "shippingTerms": "Shipping Terms",
-    "shippingTermsDesc": "Air freight worldwide (FCA / CPT / DDP)",
+    "shippingTermsDesc": "Air freight worldwide (FCA / CPT)",
     "documents": "All Included",
     "documentsDesc": "CoA, Phytosanitary, COO",
     "premiumQuality": "Premium Quality",

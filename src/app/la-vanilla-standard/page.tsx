@@ -90,7 +90,7 @@ const steps = [
       "Beans are vacuum-sealed to lock in moisture and aroma, then shipped by air with full export paperwork. Your vanilla arrives the way it left Java.",
     checks: [
       "Vacuum-sealed, 1 kg or 2.5 kg packs",
-      "Air freight in 3–7 days, FCA, CPT or DDP",
+      "Air freight in 3–7 days, FCA or CPT",
       "Phyto certificate, invoice, packing list and air waybill",
     ],
   },

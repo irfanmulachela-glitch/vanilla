@@ -130,7 +130,7 @@ const CONTENT: Record<string, ProductContent> = {
           ["Packaging", "Vacuum-sealed, 1 kg per bundle"],
           ["Minimum order", "From 1 kg"],
           ["HS code", "0905.10"],
-          ["Incoterms", "FCA (Surakarta) / CPT / DDP"],
+          ["Incoterms", "FCA (Surakarta) / CPT"],
         ],
         uses: [
           { icon: "iceCream", label: "Ice cream & gelato" },
@@ -181,7 +181,7 @@ const CONTENT: Record<string, ProductContent> = {
           ["Packaging", "Vacuum-sealed, 1 kg per bundle"],
           ["Minimum order", "From 1 kg"],
           ["HS code", "0905.10"],
-          ["Incoterms", "FCA (Surakarta) / CPT / DDP"],
+          ["Incoterms", "FCA (Surakarta) / CPT"],
         ],
         uses: [
           { icon: "extract", label: "Vanilla extract" },

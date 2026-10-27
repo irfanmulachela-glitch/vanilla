@@ -161,7 +161,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               Shipping and Logistics
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Indonesian vanilla beans ship by air freight worldwide, typically in 3-7 days. DDP door-to-door delivery is available, and sea freight can be arranged on request for very large orders.
+              Indonesian vanilla beans ship by air freight worldwide, typically in 3-7 days on FCA or CPT terms, and sea freight can be arranged on request for very large orders.
             </p>
 
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">

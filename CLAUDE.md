@@ -38,7 +38,7 @@ food manufacturers and distributors. Owner: Muhammad Irfan (Export Director). Mi
 
 ## Business facts to keep consistent sitewide
 - MOQ: **from 1 kg** (no trial tiers). Free samples available.
-- Shipping: **air freight first**, 3-7 days. Incoterms FCA (Surakarta) / CPT / DDP. Do not claim FOB/CIF; sea freight only on request.
+- Shipping: **air freight first**, 3-7 days. Incoterms FCA (Surakarta) / CPT only. Do not offer DDP (removed 2026-10-27) or claim FOB/CIF; sea freight only on request.
 - Two grades only: Grade A = Gourmet, Grade B = Extraction (no separate third "Gourmet" tier). Gourmet/Grade A must always show higher vanillin than Grade B.
 - Vanillin: 1.1-2.5% overall; Grade A 1.1-2.5%, Grade B 1.0-2.0%.
 - Vanilla paste: never state a vanillin % for the paste itself. Describe strength as single, double or triple fold; the vanillin % refers only to the beans used (1.1-2.5%).

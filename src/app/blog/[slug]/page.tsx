@@ -124,7 +124,6 @@ const blogPosts = {
       <ul>
         <li><strong>FOB (Free On Board):</strong> Seller delivers to port, buyer assumes risk and cost from there.</li>
         <li><strong>CIF (Cost, Insurance, Freight):</strong> Seller covers cost, insurance, and freight to destination port.</li>
-        <li><strong>DDP (Delivered Duty Paid):</strong> Seller handles all costs including import duties.</li>
       </ul>
 
       <h2>Working with Your Supplier</h2>
@@ -554,7 +553,7 @@ const blogPosts = {
     date: "2026-02-15",
     readTime: "9 min read",
     content: `
-      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping air freight from Indonesia with DDP door-to-door options available for bulk vanilla orders worldwide.</p>
+      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping by air freight from Indonesia on FCA or CPT terms for bulk vanilla orders worldwide.</p>
 
       <h2>Understanding Order Quantities</h2>
       <p>Order quantities vary by supplier and product:</p>
@@ -597,7 +596,6 @@ const blogPosts = {
       <p>For bulk vanilla orders:</p>
       <ul>
         <li><strong>Air freight:</strong> Standard method, 3-7 days worldwide</li>
-        <li><strong>DDP:</strong> Door-to-door delivery with duties paid</li>
         <li><strong>Air cargo terms:</strong> FCA (Surakarta) / CPT</li>
         <li><strong>Sea freight:</strong> Available on request for very large orders (2-4 weeks)</li>
       </ul>
@@ -730,7 +728,7 @@ const blogPosts = {
       <ul>
         <li>Year-round production (not seasonal like some origins)</li>
         <li>Established export infrastructure</li>
-        <li>Air freight worldwide (FCA / CPT / DDP)</li>
+        <li>Air freight worldwide (FCA / CPT)</li>
         <li>Order quantities from 1 kg</li>
       </ul>
 

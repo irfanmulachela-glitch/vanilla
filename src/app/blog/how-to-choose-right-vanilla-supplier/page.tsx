@@ -176,7 +176,7 @@ export default function HowToChooseRightVanillaSupplier() {
                 5. Shipping Capability
               </h3>
               <p className="text-[#6B6358] leading-relaxed mb-4">
-                Verify the supplier offers shipping methods that match your needs: FOB, CIF, or DDP. Check which ports they ship from and confirm experience with your destination country. Import requirements vary — a supplier experienced with your market saves you headaches.
+                Verify the supplier offers shipping methods and terms (Incoterms) that match your needs. Check which ports they ship from and confirm experience with your destination country. Import requirements vary — a supplier experienced with your market saves you headaches.
               </p>
               <p className="text-[#6B6358] leading-relaxed">
                 <strong className="text-[#2C2518]">Key question:</strong> How many shipments have you completed to [your country]?

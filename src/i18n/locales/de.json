@@ -64,7 +64,7 @@
         "value": "3–7",
         "unit": "Tage",
         "label": "Luftfracht",
-        "note": "FCA, CPT oder DDP"
+        "note": "FCA oder CPT"
       },
       {
         "value": "150+",
@@ -117,7 +117,7 @@
         },
         {
           "title": "Schnelle Luftfracht weltweit",
-          "body": "Versand in über 20 Länder in 3–7 Tagen zu FCA-, CPT- oder DDP-Bedingungen, ab 1 kg bis zu regelmäßigen Produktionsmengen."
+          "body": "Versand in über 20 Länder in 3–7 Tagen zu FCA- oder CPT-Bedingungen, ab 1 kg bis zu regelmäßigen Produktionsmengen."
         }
       ]
     }
@@ -146,7 +146,7 @@
     "minimumOrder": "Mindestbestellmenge",
     "minimumOrderDesc": "Bestellungen ab 1 kg",
     "shippingTerms": "Versandbedingungen",
-    "shippingTermsDesc": "Luftfracht weltweit (FCA / CPT / DDP)",
+    "shippingTermsDesc": "Luftfracht weltweit (FCA / CPT)",
     "documents": "Alles enthalten",
     "documentsDesc": "CoA, Pflanzengesundheitszeugnis, COO",
     "premiumQuality": "Premiumqualität",

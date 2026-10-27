@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "How are bulk shipments delivered?",
-    a: "Air freight is our standard: DHL, FedEx, or air cargo worldwide in 3-7 days, with DDP delivery available. Sea freight can be arranged on request for very large orders.",
+    a: "Air freight is our standard: DHL, FedEx, or air cargo worldwide in 3-7 days, on FCA or CPT terms. Sea freight can be arranged on request for very large orders.",
   },
   {
     q: "What are your payment terms?",
@@ -108,7 +108,7 @@ const benefits = [
     icon: Plane,
     title: "Fast air freight",
     description:
-      "Air freight worldwide in 3–7 days, on FCA, CPT or DDP terms to suit how you import.",
+      "Air freight worldwide in 3–7 days, on FCA or CPT terms to suit how you import.",
   },
 ];
 
@@ -156,7 +156,7 @@ const terms: { label: string; value: string; detail?: string; list?: [string, st
   {
     label: "Shipping",
     value: "Air freight, 3–7 days",
-    detail: "FCA (Surakarta), CPT or DDP. Sea freight on request for very large orders.",
+    detail: "FCA (Surakarta) or CPT. Sea freight on request for very large orders.",
   },
   {
     label: "Documents",
