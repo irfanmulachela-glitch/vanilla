@@ -36,27 +36,52 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-[#2C2518] text-white py-16 lg:py-24 overflow-hidden">
-        {/* Gold vertical line on right */}
-        <div className="absolute top-0 right-16 lg:right-24 w-px h-full bg-[#B5A37A]" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#B5A37A]" />
-              <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
-                We&apos;re Here to Help
-              </span>
+      {/* Masthead: type-led, the fastest ways to reach us on the right */}
+      <section className="bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 lg:pt-24 lg:pb-20">
+          <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-24 items-end">
+            <div>
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Contact</p>
+              <h1 className="text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
+                <span className="font-bold">Let&apos;s talk about</span>{" "}
+                <br className="hidden sm:block" />
+                <span className="italic font-normal text-[#8C7A4F]">your vanilla</span>
+              </h1>
+              <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
+                Ask for a quote, request a free sample or just ask a question. We reply within
+                24 hours.
+              </p>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Get in Touch
-            </h1>
-            <p className="text-lg text-stone-300">
-              Ready to start your vanilla journey? Request a quote, ask
-              questions, or schedule a facility visit. We respond within 24
-              hours.
-            </p>
+
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1">Reach us directly</p>
+              <dl className="border-b border-[#E5E0D8]">
+                <div className="flex items-baseline justify-between gap-6 py-3.5">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">WhatsApp</dt>
+                  <dd>
+                    <a href={`https://wa.me/${siteConfig.social.whatsapp}`} target="_blank" rel="noopener noreferrer" className="font-medium text-[#2C2518] hover:text-[#8C7A4F] transition-colors">
+                      +62 878-3575-6945
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-6 py-3.5 border-t border-[#E5E0D8]">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">Email</dt>
+                  <dd>
+                    <a href={`mailto:${siteConfig.social.email}`} className="font-medium text-[#2C2518] hover:text-[#8C7A4F] transition-colors break-all">
+                      {siteConfig.social.email}
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-6 py-3.5 border-t border-[#E5E0D8]">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">Office</dt>
+                  <dd className="font-medium text-[#2C2518] text-right">Surakarta, Central Java</dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-6 py-3.5 border-t border-[#E5E0D8]">
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">Hours</dt>
+                  <dd className="font-medium text-[#2C2518] text-right">Mon–Sat, 08:00–17:00 WIB</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
       </section>
