@@ -48,24 +48,61 @@ function Badge() {
   );
 }
 
-/** Highlighted callout: homepage regions, contact page. */
-export function UsAgentCallout({ className = "" }: { className?: string }) {
+function AgentLinks({ className = "" }: { className?: string }) {
   return (
-    <aside
-      aria-label="Authorized US agent"
-      className={`relative rounded-2xl border border-[#E5DCC5] bg-white p-6 sm:p-7 before:absolute before:left-0 before:top-6 before:bottom-6 before:w-[3px] before:rounded-full before:bg-[#B5A37A] ${className}`}
-    >
-      <Badge />
-      <h3 className="mt-4 text-xl font-bold text-[#2C2518] leading-snug">
-        In the US? Talk to <span className="whitespace-nowrap">{agent.name}</span>
+    <div className={`flex flex-wrap gap-x-7 gap-y-2 text-sm ${className}`}>
+      <a
+        href={`https://wa.me/${agent.whatsapp}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 font-medium text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+      >
+        <WhatsAppIcon className="w-4 h-4 text-[#B5A37A]" />
+        {agent.whatsappDisplay}
+      </a>
+      <a
+        href={`mailto:${agent.email}`}
+        className="inline-flex items-center gap-2 font-medium text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+      >
+        <Mail className="w-4 h-4 text-[#B5A37A]" aria-hidden="true" />
+        {agent.email}
+      </a>
+    </div>
+  );
+}
+
+/** Homepage feature, left column of "Where we ship": stands out without a box. */
+export function UsAgentFeature({ className = "" }: { className?: string }) {
+  return (
+    <div className={className}>
+      <span className="block w-10 h-px bg-[#B5A37A] mb-6" aria-hidden="true" />
+      <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-3">{agent.title}</p>
+      <h3 className="font-[family-name:var(--font-libre)] text-2xl lg:text-[1.75rem] font-bold text-[#2C2518] leading-snug">
+        Buying in the US? <span className="italic font-normal text-[#8C7A4F]">Meet us there.</span>
       </h3>
-      <p className="mt-2 text-[#6B6358] leading-relaxed">
-        Our authorized US agent sends samples within the US, meets buyers in person and handles quotes and orders locally.
+      <p className="mt-3 text-[#6B6358] leading-relaxed max-w-md">
+        <span className="font-semibold text-[#2C2518]">{agent.name}</span>, our authorized agent in the United States,
+        sends samples within the US, meets you in person, and handles quotes and orders locally.
       </p>
-      <div className="mt-5">
-        <AgentContacts size="sm" />
+      <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a
+          href={`https://wa.me/${agent.whatsapp}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg bg-[#2C2518] px-5 py-3 text-sm font-semibold text-white hover:bg-[#3D3425] transition-colors"
+        >
+          <WhatsAppIcon className="w-4 h-4" />
+          WhatsApp {agent.whatsappDisplay}
+        </a>
+        <a
+          href={`mailto:${agent.email}`}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+        >
+          <Mail className="w-4 h-4 text-[#B5A37A]" aria-hidden="true" />
+          {agent.email}
+        </a>
       </div>
-    </aside>
+    </div>
   );
 }
 
@@ -114,24 +151,23 @@ export function UsAgentSection() {
   );
 }
 
-/** Horizontal strip: contact page, between masthead and form. */
+/** Clean divider strip: contact page, between masthead and form. */
 export function UsAgentStrip() {
   return (
-    <section className="bg-white pt-12 lg:pt-16" aria-label="Authorized US agent">
+    <section className="bg-white pt-14 lg:pt-16" aria-label="Authorized US agent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-2xl border border-[#E5DCC5] bg-white px-6 py-6 sm:px-8 lg:flex lg:items-center lg:justify-between lg:gap-10 before:absolute before:left-0 before:top-6 before:bottom-6 before:w-[3px] before:rounded-full before:bg-[#B5A37A]">
-          <div className="max-w-2xl">
-            <Badge />
-            <p className="mt-3 text-lg font-semibold text-[#2C2518]">
-              In the United States? Talk to <span className="whitespace-nowrap">{agent.name}</span>, our authorized US agent.
+        <div className="border-y border-[#E5E0D8] py-6 lg:flex lg:items-center lg:justify-between lg:gap-12">
+          <div className="sm:flex sm:items-baseline sm:gap-8">
+            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] shrink-0">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B5A37A]" aria-hidden="true" />
+              {agent.title}
             </p>
-            <p className="mt-1 text-[#6B6358] leading-relaxed">
-              Samples sent within the US, meetings in person, and quotes and orders handled locally.
+            <p className="mt-2 sm:mt-0 text-[#6B6358] leading-relaxed">
+              <span className="font-semibold text-[#2C2518]">In the US? Talk to <span className="whitespace-nowrap">{agent.name}</span></span>{" "}
+              for samples within the US, meetings in person, and local quotes and orders.
             </p>
           </div>
-          <div className="mt-5 lg:mt-0 shrink-0">
-            <AgentContacts size="sm" />
-          </div>
+          <AgentLinks className="mt-4 lg:mt-0 shrink-0" />
         </div>
       </div>
     </section>

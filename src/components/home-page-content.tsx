@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { UsAgentCallout } from "./us-agent";
+import { UsAgentFeature } from "./us-agent";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2, Star, Package, Plane, Boxes, Globe } from "lucide-react";
@@ -457,7 +457,7 @@ export function HomePageContent() {
       </section>
 
       {/* Export Regions */}
-      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
+      <section className="py-20 lg:py-24 bg-white border-t border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5">
@@ -476,7 +476,7 @@ export function HomePageContent() {
                 See wholesale pricing and terms
                 <ArrowRight className="ml-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
               </Link>
-              <UsAgentCallout className="mt-10" />
+              <UsAgentFeature className="mt-12" />
             </div>
 
             <ul className="lg:col-span-7 border-t border-[#E5E0D8]">
@@ -494,7 +494,8 @@ export function HomePageContent() {
                 {
                   region: "USA",
                   href: `${prefix}/regions/usa`,
-                  description: "US Import Ready. DHL and FedEx shipping, plus an authorized US agent for samples and meetings.",
+                  description: "US Import Ready. DHL and FedEx shipping, with a local agent for samples and meetings.",
+                  agent: true,
                 },
                 {
                   region: "Europe",
@@ -510,6 +511,11 @@ export function HomePageContent() {
                     <div className="flex-1 sm:flex sm:items-baseline sm:gap-8">
                       <h3 className="sm:w-48 flex-shrink-0 text-lg font-semibold text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-1 sm:mb-0">
                         {item.region}
+                        {"agent" in item && item.agent && (
+                          <span className="ms-2 align-middle inline-flex items-center rounded-full border border-[#E5DCC5] bg-white px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#8C7A4F]">
+                            US agent
+                          </span>
+                        )}
                       </h3>
                       <p className="text-sm text-[#6B6358] leading-relaxed">{item.description}</p>
                     </div>
