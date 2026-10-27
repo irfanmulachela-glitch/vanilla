@@ -148,10 +148,10 @@ const CONTENT: Record<string, ProductContent> = {
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [
-          { src: "/vanilla-beans-a-1.webp", alt: "Bundle of Grade A gourmet Indonesian vanilla beans tied with twine" },
-          { src: "/vanilla-beans-a-2.webp", alt: "Grade A vanilla pods standing upright, showing their oily sheen" },
-          { src: "/vanilla-beans-a-3.webp", alt: "Plump Grade A V. planifolia vanilla beans from Java" },
-          { src: "/hero-vanilla-beans-studio.jpg", alt: "Close-up of two cured Grade A vanilla pods with curled stems" },
+          { src: "/vanilla-beans-a-p1.webp", alt: "Bundle of long Grade A gourmet Indonesian vanilla beans tied with twine" },
+          { src: "/vanilla-beans-a-p2.webp", alt: "Plump, oily Grade A V. planifolia vanilla beans from Java" },
+          { src: "/vanilla-beans-a-p3.webp", alt: "Close-up of a Grade A vanilla bean bundle tied with twine" },
+          { src: "/vanilla-beans-a-p4.webp", alt: "Grade A vanilla pods standing upright, showing their oily sheen" },
         ],
       },
       {
@@ -199,9 +199,8 @@ const CONTENT: Record<string, ProductContent> = {
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [
-          { src: "/vanilla-beans-b-1.webp", alt: "Bundle of Grade B extraction vanilla beans, drier and lighter brown" },
-          { src: "/vanilla-beans-b-2.webp", alt: "Grade B Indonesian vanilla beans for extract production" },
-          { src: "/la-vanilla-standard-hero.webp", alt: "Vanilla beans drying on racks in Java during curing" },
+          { src: "/vanilla-beans-b-q1.webp", alt: "Bundle of shorter Grade B extraction vanilla beans, drier with reddish-brown streaks" },
+          { src: "/vanilla-beans-b-q2.webp", alt: "Close-up of drier Grade B Indonesian vanilla beans tied with twine" },
         ],
       },
     ],
