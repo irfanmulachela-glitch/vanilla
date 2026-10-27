@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useLocaleContext } from "./locale-provider";
 
 export function Footer() {
@@ -34,36 +34,6 @@ export function Footer() {
 
   return (
     <footer className="bg-[#2C2518] text-stone-300">
-      {/* Newsletter section */}
-      <div className="border-b border-[#3D3425]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-xl font-bold text-white">
-                {t.home.stayUpdated}
-              </h3>
-              <p className="text-stone-400 mt-1">
-                {t.home.stayUpdatedDesc}
-              </p>
-            </div>
-            <form className="flex w-full lg:w-auto gap-2">
-              <input
-                type="email"
-                placeholder={t.home.emailPlaceholder}
-                className="flex-1 min-w-0 lg:w-72 px-4 py-3 bg-[#3D3425] border border-[#4D4435] rounded-lg text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#B5A37A] focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="flex-shrink-0 px-4 sm:px-6 py-3 bg-[#B5A37A] text-white font-medium rounded-lg hover:bg-[#A8956A] transition-colors flex items-center gap-2"
-              >
-                {t.common.subscribe}
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

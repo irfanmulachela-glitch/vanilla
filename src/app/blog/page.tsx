@@ -326,20 +326,20 @@ export default function BlogPage() {
       <BlogGrid posts={blogPosts} />
 
       {/* Closing CTA: honest alternative to a newsletter we don't send */}
-      <section className="py-20 lg:py-24 bg-[#2C2518]">
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className={EYEBROW}>Ask Us Directly</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#F8F6F2] mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
             Have a question these guides don&apos;t answer?
           </h2>
-          <p className="text-lg text-stone-300 mb-8">
+          <p className="text-lg text-[#6B6358] mb-8">
             Tell us what you make and what you need. We reply within 24 hours, and free samples
             are always available.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-[#2C2518] font-semibold rounded-lg hover:bg-[#D4C48A] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
             >
               Ask a question
               <ArrowRight className="ms-2 w-5 h-5 rtl:rotate-180" />
@@ -348,7 +348,7 @@ export default function BlogPage() {
               href={`https://wa.me/${siteConfig.social.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg border border-white/30 hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
             >
               Chat on WhatsApp
             </a>

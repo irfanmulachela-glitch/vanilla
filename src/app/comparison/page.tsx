@@ -273,26 +273,26 @@ export default function ComparisonPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#2C2518]">
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
             Need Help Choosing the Right Grade?
           </h2>
-          <p className="text-[#B5A37A] text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-[#6B6358] text-lg mb-8 max-w-2xl mx-auto">
             Our team can help you select the perfect vanilla grade for your
             application. Get a free sample and quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg hover:bg-[#F8F6F2] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
             >
               Request Free Sample
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               href="/products"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#B5A37A] text-white font-semibold rounded-lg hover:bg-[#A8956A] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
             >
               View Products
             </Link>
