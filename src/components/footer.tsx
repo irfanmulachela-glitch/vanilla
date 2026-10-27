@@ -82,6 +82,25 @@ export function Footer() {
                 <MapPin className="w-4 h-4" />
                 Surakarta, Central Java, Indonesia
               </div>
+              <div className="pt-3 mt-3 border-t border-[#3D3425]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
+                  {siteConfig.usAgent.title}
+                </p>
+                <a
+                  href={`mailto:${siteConfig.usAgent.email}`}
+                  className="block text-sm hover:text-[#B5A37A] transition-colors"
+                >
+                  {siteConfig.usAgent.name} · {siteConfig.usAgent.email}
+                </a>
+                <a
+                  href={`https://wa.me/${siteConfig.usAgent.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm hover:text-[#B5A37A] transition-colors"
+                >
+                  {siteConfig.usAgent.whatsappDisplay}
+                </a>
+              </div>
             </div>
           </div>
 

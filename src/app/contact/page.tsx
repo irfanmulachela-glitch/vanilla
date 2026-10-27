@@ -4,6 +4,7 @@ import { languageAlternates } from "@/lib/hreflang";
 import { twitterCard, ogImages } from "@/lib/seo";
 import { ContactForm } from "@/components/contact-form";
 import OrderingLadder from "@/components/ordering-ladder";
+import { UsAgentStrip } from "@/components/us-agent";
 
 const DESCRIPTION =
   "Get in touch for vanilla bean quotes, wholesale inquiries, and custom formulations. We respond within 24 hours via WhatsApp, email, or our Central Java office.";
@@ -85,6 +86,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Authorized US agent */}
+      <UsAgentStrip />
 
       {/* Contact Form & Info (client) */}
       <ContactForm />

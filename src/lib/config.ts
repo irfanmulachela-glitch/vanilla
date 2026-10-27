@@ -19,6 +19,13 @@ export const siteConfig = {
     whatsapp: "+6287835756945",
     email: "admin@lavanillasupplier.com",
   },
+  usAgent: {
+    name: "Aldo M.",
+    title: "Authorized US Agent",
+    email: "aldo@lavanillasupplier.com",
+    whatsapp: "19803783881",
+    whatsappDisplay: "+1 (980) 378-3881",
+  },
   regions: ["UAE", "Australia", "USA", "Europe"] as const,
   products: [
     {

@@ -98,6 +98,10 @@ const faqs = [
         q: "Do you ship to my country?",
         a: "We export to 20+ countries including UAE, Australia, USA, UK, France, Germany, Japan, Singapore, and many more. Contact us to confirm availability for your specific location.",
       },
+      {
+        q: "Do you have a representative in the United States?",
+        a: "Yes. Aldo M. is our authorized US agent. US buyers can get samples sent within the US, meet him in person, and get quotes and place orders through him. Email aldo@lavanillasupplier.com or WhatsApp +1 (980) 378-3881.",
+      },
     ],
   },
   {

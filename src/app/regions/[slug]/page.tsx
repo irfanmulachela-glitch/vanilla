@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { UsAgentSection } from "@/components/us-agent";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -106,7 +107,7 @@ const regions: Record<string, RegionConfig> = {
     flag: "🇺🇸",
     highlights: [
       "US Import Ready products",
-      "CoA provided with every order",
+      "Authorized US agent for samples and meetings",
       "DHL/FedEx express shipping",
       "East and West coast delivery",
     ],
@@ -297,6 +298,8 @@ export default async function RegionPage({
           </div>
         </div>
       </section>
+
+      {slug === "usa" && <UsAgentSection />}
 
       {/* Why Choose Us */}
       <section className="py-16 lg:py-20 bg-[#F8F6F2]">

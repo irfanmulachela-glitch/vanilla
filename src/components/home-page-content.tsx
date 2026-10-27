@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { UsAgentCallout } from "./us-agent";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2, Star, Package, Plane, Boxes, Globe } from "lucide-react";
@@ -475,6 +476,7 @@ export function HomePageContent() {
                 See wholesale pricing and terms
                 <ArrowRight className="ml-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
               </Link>
+              <UsAgentCallout className="mt-10" />
             </div>
 
             <ul className="lg:col-span-7 border-t border-[#E5E0D8]">
@@ -492,7 +494,7 @@ export function HomePageContent() {
                 {
                   region: "USA",
                   href: `${prefix}/regions/usa`,
-                  description: "US Import Ready. East and West coast. DHL and FedEx shipping.",
+                  description: "US Import Ready. DHL and FedEx shipping, plus an authorized US agent for samples and meetings.",
                 },
                 {
                   region: "Europe",
