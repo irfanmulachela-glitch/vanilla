@@ -35,7 +35,7 @@ export const siteConfig = {
       shortDescription: "Premium Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months.",
       description: "Our vanilla beans are sourced directly from Indonesian smallholder farmers and carefully cured using traditional methods. Each bean is hand-picked at peak maturity and sun-dried for 6-9 months to develop optimal vanillin content (1.1-2.5%). Available in Grade A Gourmet and Grade B Extraction grades.",
       category: "beans" as const,
-      image: "/vanilla-beans.jpg",
+      image: "/vanilla-beans-a-s1.webp",
       specifications: {
         species: "V. planifolia",
         moistureContent: "25-35%",

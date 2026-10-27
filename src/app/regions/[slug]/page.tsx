@@ -411,7 +411,7 @@ export default async function RegionPage({
             >
               <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
                 <Image
-                  src="/vanilla-beans.jpg"
+                  src="/vanilla-beans-a-s1.webp"
                   alt="Vanilla Beans"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

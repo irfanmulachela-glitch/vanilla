@@ -189,10 +189,10 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center justify-center">
               <Image
-                src="/about-bundle-cutout.webp"
-                alt="A tied bundle of cured Indonesian vanilla beans"
+                src="/about-bundle-grade-a.webp"
+                alt="A tied bundle of Grade A cured Indonesian vanilla beans"
                 width={1400}
-                height={753}
+                height={906}
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="w-full max-w-lg h-auto drop-shadow-[0_24px_30px_rgba(44,37,24,0.18)]"
               />
