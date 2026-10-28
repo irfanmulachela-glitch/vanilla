@@ -100,7 +100,7 @@ const faqs = [
       },
       {
         q: "Do you have a representative in the United States?",
-        a: "Yes. Aldo M. is our authorized US agent. US buyers can get samples sent within the US, meet him in person, and get quotes and place orders through him. Email aldo@lavanillasupplier.com or WhatsApp +1 (980) 378-3881.",
+        a: "Yes. Aldo M. is our authorized US agent. US buyers can get samples sent within the US, meet him in person, and get quotes and place orders through him. Email aldo@lavanillasupplier.com.",
       },
     ],
   },

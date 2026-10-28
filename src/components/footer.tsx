@@ -92,14 +92,6 @@ export function Footer() {
                 >
                   {siteConfig.usAgent.name} · {siteConfig.usAgent.email}
                 </a>
-                <a
-                  href={`https://wa.me/${siteConfig.usAgent.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-sm hover:text-[#B5A37A] transition-colors"
-                >
-                  {siteConfig.usAgent.whatsappDisplay}
-                </a>
               </div>
             </div>
           </div>
