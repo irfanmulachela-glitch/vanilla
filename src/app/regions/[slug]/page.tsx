@@ -3,27 +3,17 @@ import { UsAgentSection } from "@/components/us-agent";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Truck,
-  Globe,
-  Package,
-  Clock,
-  MapPin,
-  Star,
-  Leaf,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { twitterCard, ogImages } from "@/lib/seo";
 
 const META_DESCRIPTIONS: Record<string, string> = {
   uae: "Premium Indonesian vanilla supplier for Dubai, Abu Dhabi, and the GCC. Halal certified beans, paste, and powder with fast air freight and flexible quantities.",
   australia:
-    "Quality assured Indonesian vanilla supplier for Sydney, Melbourne, and Perth, compliant with Australian food standards. Samples and pricing on request.",
-  usa: "US import-ready Indonesian vanilla supplier for New York, Los Angeles, and Chicago. Full export documentation, lab-tested grades, and flexible bulk orders.",
+    "Indonesian vanilla supplier for Sydney, Melbourne and Perth. Grade A and B beans, paste and powder by air in 3-7 days, with phytosanitary certificates. Free samples.",
+  usa: "Indonesian vanilla supplier for New York, Los Angeles and Chicago. Full export documents, an authorized US agent for samples and meetings, and orders from 1 kg.",
   europe:
-    "EU compliant Indonesian vanilla supplier for the Netherlands, France, and Germany. Full traceability, lab-tested grades, and flexible bulk order quantities.",
+    "Indonesian vanilla supplier for the Netherlands, France and Germany. Grade A and B beans, paste and powder by air in 3-7 days, with full export documents.",
 };
 
 const REGION_TITLES: Record<string, string> = {
@@ -33,127 +23,134 @@ const REGION_TITLES: Record<string, string> = {
   europe: "Vanilla Supplier Europe | Bulk",
 };
 
+type RegionPoint = { title: string; body: string };
+
 type RegionConfig = {
   name: string;
+  /** how the region reads inside a sentence */
+  place: string;
   slug: string;
+  headline: string;
+  intro: string;
   description: string;
   keywords: string[];
-  flag: string;
-  highlights: string[];
+  points: RegionPoint[];
   cities: string[];
-  shippingTime: string;
-  image: string;
-  port: string;
 };
+
+const DOCS =
+  "Phytosanitary certificate, commercial invoice, packing list and air waybill with every shipment, plus a Certificate of Analysis per batch on request.";
 
 const regions: Record<string, RegionConfig> = {
   uae: {
     name: "UAE & Middle East",
+    place: "the UAE and the Gulf",
     slug: "uae",
+    headline: "for Dubai and the GCC",
+    intro:
+      "Halal certified vanilla beans, paste and powder from Java, flown to Dubai, Abu Dhabi and across the Gulf in 3 to 7 days.",
     description:
-      "Premium Indonesian vanilla supplier for Dubai, Abu Dhabi, and the GCC region. Halal certified with fast air freight delivery.",
+      "Indonesian vanilla supplier for Dubai, Abu Dhabi and the GCC. Halal certified beans, paste and powder by air in 3-7 days.",
     keywords: [
       "vanilla supplier UAE",
       "vanilla beans Dubai",
       "wholesale vanilla Middle East",
       "vanilla paste supplier Abu Dhabi",
     ],
-    flag: "🇦🇪",
-    highlights: [
-      "Halal certified for all products",
-      "Fast air freight to Dubai (3-5 days)",
-      "FCA or CPT shipping terms",
-      "Customs documentation included",
+    points: [
+      { title: "Halal certified by MUI", body: "Every product we supply is Halal certified by MUI, Indonesia's Halal authority." },
+      { title: "Air freight to the Gulf", body: "Shipped by DHL, FedEx or air cargo to Dubai, Abu Dhabi, Riyadh and Doha in 3 to 7 days." },
+      { title: "Documents ready for customs", body: DOCS },
+      { title: "Private label for your brand", body: "Beans, paste and powder packed under your own label, ready for shelves across the region." },
     ],
     cities: ["Dubai", "Abu Dhabi", "Sharjah", "Doha", "Riyadh", "Jeddah"],
-    shippingTime: "3-5 days (air freight)",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
-    port: "Jebel Ali, Dubai",
   },
   australia: {
     name: "Australia",
+    place: "Australia",
     slug: "australia",
+    headline: "for buyers across Australia",
+    intro:
+      "Gourmet and extraction grade vanilla from Java, flown to Sydney, Melbourne, Perth and beyond in 3 to 7 days, with the paperwork ready.",
     description:
-      "Quality Assured Indonesian vanilla supplier for Sydney, Melbourne, Perth, and across Australia. Compliant with Australian food standards.",
+      "Indonesian vanilla supplier for Sydney, Melbourne, Perth and across Australia, with a phytosanitary certificate on every shipment.",
     keywords: [
       "vanilla supplier Australia",
       "vanilla beans Sydney",
       "wholesale vanilla Melbourne",
       "vanilla paste supplier Perth",
     ],
-    flag: "🇦🇺",
-    highlights: [
-      "Quality-controlled processing",
-      "Compliant with FSANZ standards",
-      "Fast delivery to major cities",
-      "Full phytosanitary documentation",
+    points: [
+      { title: "Phytosanitary certificate every time", body: "Australia checks plant products closely, so every shipment travels with a phytosanitary certificate." },
+      { title: "Air freight to major cities", body: "Delivered to Sydney, Melbourne, Brisbane, Perth and Adelaide in 3 to 7 days." },
+      { title: "Certificate of Analysis on request", body: "A CoA per batch confirms the specs of the grade you ordered." },
+      { title: "Start from 1 kg", body: "Test with a small order and a free sample before you commit to regular supply." },
     ],
-    cities: ["Sydney", "Melbourne", "Perth", "Brisbane", "Adelaide"],
-    shippingTime: "5-7 days (air freight)",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800",
-    port: "Sydney / Melbourne",
+    cities: ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide"],
   },
   usa: {
     name: "USA",
+    place: "the US",
     slug: "usa",
+    headline: "for buyers across the US",
+    intro:
+      "Vanilla beans, paste and powder from Java, shipped to both coasts in 3 to 7 days, with an authorized agent on the ground in the US.",
     description:
-      "US Import Ready Indonesian vanilla supplier for New York, Los Angeles, Chicago, and across the United States. Full export documentation.",
+      "Indonesian vanilla supplier for buyers across the United States, with full export documents and an authorized US agent.",
     keywords: [
       "vanilla supplier USA",
       "vanilla beans New York",
       "wholesale vanilla California",
       "vanilla paste supplier Texas",
     ],
-    flag: "🇺🇸",
-    highlights: [
-      "US Import Ready products",
-      "Authorized US agent for samples and meetings",
-      "DHL/FedEx express shipping",
-      "East and West coast delivery",
+    points: [
+      { title: "Regular US shipments", body: "DHL, FedEx or air cargo to the East and West coast in 3 to 7 days." },
+      { title: "Import paperwork in order", body: DOCS },
+      { title: "Private label for your brand", body: "Beans, paste and powder packed under your own label, from glass jars to vacuum packs." },
+      { title: "Start from 1 kg", body: "Test with a small order and a free sample before you commit to regular supply." },
     ],
-    cities: [
-      "New York",
-      "Los Angeles",
-      "Chicago",
-      "Houston",
-      "San Francisco",
-      "Miami",
-    ],
-    shippingTime: "5-7 days (air freight)",
-    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?w=800",
-    port: "Los Angeles / New York",
+    cities: ["New York", "Los Angeles", "Chicago", "Houston", "San Francisco", "Miami"],
   },
   europe: {
     name: "Europe",
+    place: "Europe",
     slug: "europe",
+    headline: "for buyers across Europe",
+    intro:
+      "Gourmet and extraction grade vanilla from Java, flown to Europe's main cities in 3 to 7 days, with every document your importer needs.",
     description:
-      "EU food safety compliant Indonesian vanilla supplier for Netherlands, France, Germany, and across Europe. Full traceability.",
+      "Indonesian vanilla supplier for the Netherlands, France, Germany and across Europe, with full export documents.",
     keywords: [
       "vanilla supplier Europe",
       "vanilla beans Netherlands",
       "wholesale vanilla France",
       "vanilla paste supplier Germany",
     ],
-    flag: "🇪🇺",
-    highlights: [
-      "EU food safety standards",
-      "Full traceability from farm to shipment",
-      "Quality Assured and Halal certified",
-      "Competitive pricing for EU buyers",
+    points: [
+      { title: "Documents for import", body: DOCS },
+      { title: "Air freight to main hubs", body: "Delivered to Amsterdam, Paris, Berlin, London, Milan and Barcelona in 3 to 7 days." },
+      { title: "Two clear grades", body: "Grade A gourmet for retail and pastry, Grade B extraction for extract and flavour makers." },
+      { title: "Halal certified by MUI", body: "Every product we supply is Halal certified by MUI, Indonesia's Halal authority." },
     ],
-    cities: [
-      "Amsterdam",
-      "Paris",
-      "Berlin",
-      "London",
-      "Milan",
-      "Barcelona",
-    ],
-    shippingTime: "5-10 days (air freight)",
-    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800",
-    port: "Rotterdam / Hamburg",
+    cities: ["Amsterdam", "Paris", "Berlin", "London", "Milan", "Barcelona"],
   },
 };
+
+const PRODUCT_TAGS: Record<string, string> = {
+  beans: "For extracts, baking & retail",
+  paste: "For bakeries, ice cream & desserts",
+  powder: "For dry mixes, beverages & baking",
+};
+
+const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
+  );
+}
 
 export async function generateStaticParams() {
   return Object.keys(regions).map((slug) => ({ slug }));
@@ -206,94 +203,63 @@ export default async function RegionPage({
 
   const otherRegions = Object.values(regions).filter((r) => r.slug !== slug);
 
+  const glance: [string, string][] = [
+    ["Transit", "3–7 days by air"],
+    ["Terms", "FCA Surakarta or CPT"],
+    ["Minimum order", "From 1 kg"],
+    ["Samples", "Free, you cover shipping"],
+    ["Certification", "Halal (MUI)"],
+  ];
+
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[#F8F6F2] py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/wholesale"
-            className="inline-flex items-center text-[#B5A37A] hover:text-[#2C2518] mb-6 text-sm transition-colors"
-          >
-            ← Back to Wholesale
-          </Link>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Masthead: type-led on cream, the key terms on the right */}
+      <section className="bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-14 lg:pt-16 lg:pb-20">
+          <nav aria-label="Breadcrumb" className="mb-10 lg:mb-14 text-sm text-[#9A9187]">
+            <Link href="/wholesale" className="hover:text-[#2C2518] transition-colors">Wholesale</Link>
+            <span className="mx-2" aria-hidden="true">/</span>
+            <span className="text-[#2C2518]">{region.name}</span>
+          </nav>
+          <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-24 items-end">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-px bg-[#B5A37A]" />
-                <span className="text-xs font-semibold text-[#B5A37A] uppercase tracking-[0.2em]">
-                  Export Region
-                </span>
-              </div>
-              <div className="text-5xl mb-4">{region.flag}</div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#2C2518] mb-4">
-                Vanilla Supplier in{" "}
-                <span className="text-[#B5A37A]">{region.name}</span>
+              <p className={EYEBROW}>Export region · {region.name}</p>
+              <h1 className="text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
+                <span className="font-bold">Indonesian vanilla</span>{" "}
+                <br className="hidden sm:block" />
+                <span className="italic font-normal text-[#8C7A4F]">{region.headline}</span>
               </h1>
-              <p className="text-[#B5A37A] text-lg font-medium mb-4">
-                Delivery: {region.shippingTime} | Port: {region.port}
-              </p>
-              <p className="text-[#6B6358] max-w-xl mb-8 leading-relaxed">
-                {region.description}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg mb-8">{region.intro}</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
+                  className="inline-flex items-center justify-center px-7 py-3.5 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
                 >
-                  Get Quote for {region.name}
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  Get a quote
+                  <ArrowRight className="ms-2 w-5 h-5" />
                 </Link>
-                <Link
+                <a
                   href={`https://wa.me/${siteConfig.social.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
                 >
+                  <WhatsAppIcon className="w-5 h-5 text-[#25A55F]" />
                   Chat on WhatsApp
-                </Link>
+                </a>
               </div>
             </div>
-            
-            <div className="relative hidden lg:block">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src={region.image}
-                  alt={`${region.name} vanilla supplier`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-[#B5A37A] text-white px-6 py-4 rounded-2xl">
-                <p className="text-sm font-medium opacity-90">Shipping to</p>
-                <p className="text-xl font-bold">{region.name}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Bar */}
-      <section className="bg-[#2C2518] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#B5A37A]">10+</p>
-              <p className="text-sm text-stone-400 mt-1">Years Experience</p>
-            </div>
-            <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#B5A37A]">20+</p>
-              <p className="text-sm text-stone-400 mt-1">Countries Served</p>
-            </div>
-            <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#B5A37A]">30+</p>
-              <p className="text-sm text-stone-400 mt-1">Happy Clients</p>
-            </div>
-            <div className="py-8 px-6 text-center">
-              <p className="text-3xl font-bold text-[#B5A37A]">150+</p>
-              <p className="text-sm text-stone-400 mt-1">Tons Exported</p>
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1">At a glance</p>
+              <dl className="border-b border-[#E5E0D8]">
+                {glance.map(([k, v], i) => (
+                  <div key={k} className={`flex items-baseline justify-between gap-6 py-3.5 ${i ? "border-t border-[#E5E0D8]" : ""}`}>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">{k}</dt>
+                    <dd className="font-medium text-[#2C2518] text-right">{v}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </div>
@@ -301,266 +267,146 @@ export default async function RegionPage({
 
       {slug === "usa" && <UsAgentSection />}
 
-      {/* Why Choose Us */}
-      <section className="py-16 lg:py-20 bg-[#F8F6F2]">
+      {/* What buyers in this region get */}
+      <section className={`py-20 lg:py-24 bg-white ${slug === "usa" ? "border-t border-[#EEE9E1]" : ""}`} aria-labelledby="region-points">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-[#B5A37A] text-sm font-semibold tracking-wider uppercase">
-              Why La Vanilla Supplier
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mt-3 mb-4">
-              Why Choose Us for {region.name}
-            </h2>
-            <p className="text-[#6B6358] max-w-2xl mx-auto">
-              We understand the specific requirements for exporting to {region.name} and provide tailored solutions.
-            </p>
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className={EYEBROW}>Why buyers choose us</p>
+              <h2 id="region-points" className="text-3xl lg:text-4xl font-bold text-[#2C2518] leading-tight">
+                What you get in {region.place}
+              </h2>
+            </div>
+            <ol className="lg:col-span-8 grid sm:grid-cols-2 gap-x-12 border-t border-[#E5E0D8] sm:border-t-0">
+              {region.points.map((pt, i) => (
+                <li key={pt.title} className="py-6 border-b border-[#E5E0D8] sm:border-t sm:border-b-0 sm:[&:nth-last-child(-n+2)]:border-b">
+                  <span className="font-[family-name:var(--font-libre)] text-lg text-[#B5A37A]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-2 text-lg font-semibold text-[#2C2518]">{pt.title}</h3>
+                  <p className="mt-1.5 text-[#6B6358] leading-relaxed">{pt.body}</p>
+                </li>
+              ))}
+            </ol>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {region.highlights.map((highlight, index) => (
-              <div
-                key={highlight}
-                className="bg-white rounded-2xl p-6 border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors group"
-              >
-                <div className="w-12 h-12 bg-[#F0ECE4] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#B5A37A] transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-[#B5A37A] group-hover:text-white transition-colors" />
-                </div>
-                <p className="font-semibold text-[#2C2518]">{highlight}</p>
+        </div>
+      </section>
+
+      {/* Shipping */}
+      <section className="py-20 lg:py-24 bg-[#2C2518] text-white" aria-labelledby="region-shipping">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className={EYEBROW}>Shipping</p>
+          <h2 id="region-shipping" className="text-3xl lg:text-4xl font-bold leading-tight mb-12 max-w-2xl">
+            From Java to {region.place}, by air
+          </h2>
+          <dl className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 border-t border-[#4E463A]">
+            {[
+              ["Transit time", "3–7 days", "DHL, FedEx or air cargo. Sea freight on request for very large orders."],
+              ["Terms", "FCA or CPT", "FCA Surakarta, or CPT if you want air freight included in the price."],
+              ["Documents", "Ready for customs", "Phytosanitary certificate, invoice, packing list and air waybill. CoA per batch on request."],
+              ["Delivering to", region.cities.slice(0, 3).join(", "), `And ${region.cities.slice(3).join(", ")}.`],
+            ].map(([k, v, d]) => (
+              <div key={k} className="py-7 border-b border-[#4E463A] lg:border-b-0">
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A]">{k}</dt>
+                <dd className="mt-3">
+                  <p className="text-xl font-semibold text-white">{v}</p>
+                  <p className="mt-2 text-sm text-[#C9C3B8] leading-relaxed">{d}</p>
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
-      {/* Shipping & Cities */}
-      <section className="py-16 lg:py-20 bg-[#2C2518] text-white">
+      {/* Products */}
+      <section className="py-20 lg:py-24 bg-white" aria-labelledby="region-products">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-[#B5A37A] text-sm font-semibold tracking-wider uppercase">
-                Shipping
-              </span>
-              <h2 className="text-2xl lg:text-3xl font-bold mt-3 mb-6">
-                Delivery to {region.name}
-              </h2>
-              
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#B5A37A] rounded-xl flex items-center justify-center">
-                    <Truck className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-lg">{region.shippingTime}</p>
-                    <p className="text-sm text-stone-400">Air freight worldwide</p>
-                  </div>
-                </div>
-                <p className="text-stone-300 text-sm">
-                  We ship via trusted international carriers with full tracking and insurance.
-                </p>
-              </div>
-              
-              <div className="flex items-center gap-4 text-sm text-stone-400">
-                <div className="flex items-center gap-2">
-                  <Package className="w-4 h-4 text-[#B5A37A]" />
-                  <span>FCA / CPT terms</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-[#B5A37A]" />
-                  <span>Port: {region.port}</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Cities We Serve</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {region.cities.map((city) => (
-                  <div
-                    key={city}
-                    className="bg-white/5 border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-colors"
-                  >
-                    <MapPin className="w-5 h-5 text-[#B5A37A] mx-auto mb-2" />
-                    <p className="font-medium">{city}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Available */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-[#B5A37A] text-sm font-semibold tracking-wider uppercase">
-              Products
-            </span>
-            <h2 className="text-3xl font-bold text-[#2C2518] mt-3 mb-4">
-              Vanilla Products for {region.name}
+          <div className="text-center mb-12 lg:mb-16">
+            <p className={EYEBROW}>Our products</p>
+            <h2 id="region-products" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              What we ship to {region.place}
             </h2>
-            <p className="text-[#6B6358] max-w-2xl mx-auto">
-              Premium Indonesian vanilla products available for export to {region.name}
+            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
+              Vanilla beans, paste and powder from Java, all from 1 kg.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link
-              href="/products/vanilla-beans"
-              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
-            >
-              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
-                <Image
-                  src="/vanilla-beans-a-s1.webp"
-                  alt="Vanilla Beans"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
-                    Grade A & B
-                  </span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            {siteConfig.products.map((product) => (
+              <Link key={product.id} href={`/products/${product.slug}`} className="group flex flex-col">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#F4F2EE]">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                  />
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
-                  Vanilla Beans
-                </h3>
-                <p className="text-[#6B6358] text-sm mb-4">
-                  Premium Grade A gourmet and Grade B extraction beans. Sun-cured 6-9 months, 1.1-2.5% vanillin.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                    View Product <ArrowRight className="w-4 h-4" />
+                <div className="pt-6 flex flex-col flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-2">
+                    {PRODUCT_TAGS[product.category]}
+                  </p>
+                  <h3 className="text-xl font-semibold text-[#2C2518] mb-2">{product.name}</h3>
+                  <p className="text-[#6B6358] leading-relaxed mb-5">{product.shortDescription}</p>
+                  <span className="mt-auto inline-flex items-center text-sm font-semibold text-[#2C2518]">
+                    View product
+                    <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link
-              href="/products/vanilla-paste"
-              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
-            >
-              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
-                <Image
-                  src="/vanilla-paste.jpg"
-                  alt="Vanilla Paste"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
-                    Custom Formulas
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
-                  Vanilla Paste
-                </h3>
-                <p className="text-[#6B6358] text-sm mb-4">
-                  Bulk vanilla paste in single, double or triple fold strength. Halal certified, no synthetic additives.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                    View Product <ArrowRight className="w-4 h-4" />
-                  </span>
-                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link
-              href="/products/vanilla-powder"
-              className="group relative bg-white rounded-2xl overflow-hidden border border-[#E5E0D8] hover:border-[#B5A37A] transition-all shadow-sm hover:shadow-xl"
-            >
-              <div className="relative h-48 bg-[#F8F6F2] overflow-hidden">
-                <Image
-                  src="/vanilla-powder.jpg"
-                  alt="Vanilla Powder"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-[#2C2518] text-xs font-semibold rounded-full">
-                    100% Pure
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#2C2518] mb-2 group-hover:text-[#B5A37A] transition-colors">
-                  Vanilla Powder
-                </h3>
-                <p className="text-[#6B6358] text-sm mb-4">
-                  Spray-dried pure vanilla powder. 40-80 mesh, no fillers, ideal for dry mixes and baking.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#B5A37A] font-semibold text-sm flex items-center gap-1">
-                    View Product <ArrowRight className="w-4 h-4" />
-                  </span>
-                  <span className="text-xs text-[#6B6358]">MOQ from 1 kg</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 lg:py-20 bg-[#F8F6F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-            Ready to Source Vanilla for {region.name}?
-          </h2>
-          <p className="text-[#6B6358] text-lg mb-8 max-w-2xl mx-auto">
-            Get a free quote and sample within 24 hours. We understand the
-            requirements for {region.name} and can provide all necessary
-            documentation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-xl hover:bg-[#3D3425] transition-colors"
-            >
-              Request Free Quote
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              href={`https://wa.me/${siteConfig.social.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
-            >
-              Chat on WhatsApp
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Other Regions */}
-      <section className="py-16 lg:py-20 bg-white border-t border-[#E5E0D8]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[#2C2518] mb-8 text-center">
-            Other Export Regions
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherRegions.map((other) => (
-              <Link
-                key={other.slug}
-                href={`/regions/${other.slug}`}
-                className="flex items-center gap-4 p-4 bg-[#F8F6F2] rounded-xl border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
-              >
-                <span className="text-3xl">{other.flag}</span>
-                <div>
-                  <p className="font-semibold text-[#2C2518]">{other.name}</p>
-                  <p className="text-sm text-[#6B6358]">Vanilla supplier →</p>
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA + other regions (cream, so the dark footer follows a light section) */}
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className={EYEBROW}>Next step</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
+              Sourcing vanilla for {region.place}?
+            </h2>
+            <p className="text-lg text-[#6B6358] mb-8">
+              Tell us what you make, the grade and volume you need. We reply within 24 hours, and your
+              first sample is free.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#2C2518] text-white font-semibold rounded-lg hover:bg-[#3D3425] transition-colors"
+              >
+                Request a quote
+                <ArrowRight className="ms-2 w-5 h-5" />
+              </Link>
+              <a
+                href={`https://wa.me/${siteConfig.social.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2C2518] font-semibold rounded-lg border border-[#D8D3C9] hover:border-[#B5A37A] transition-colors"
+              >
+                <WhatsAppIcon className="w-5 h-5 text-[#25A55F]" />
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-16 lg:mt-20 max-w-4xl mx-auto">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1 text-center sm:text-start">
+              Other export regions
+            </p>
+            <ul className="grid sm:grid-cols-3 gap-x-8 border-t border-[#E5E0D8]">
+              {otherRegions.map((other) => (
+                <li key={other.slug} className="border-b border-[#E5E0D8]">
+                  <Link href={`/regions/${other.slug}`} className="group flex items-center justify-between py-4">
+                    <span className="font-semibold text-[#2C2518] group-hover:text-[#8C7A4F] transition-colors">
+                      {other.name}
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
