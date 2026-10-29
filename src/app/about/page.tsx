@@ -105,8 +105,8 @@ export default function AboutPage() {
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-2xl">
-            <h1 className="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-4 lg:whitespace-nowrap">
-              About La Vanilla <span className="text-[#B5A37A]">Supplier</span>
+            <h1 className="sr-headline text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-4 lg:whitespace-nowrap">
+              <span>About La Vanilla</span> <span className="text-[#B5A37A]">Supplier</span>
             </h1>
             <p className="font-[family-name:var(--font-libre)] italic text-xl lg:text-2xl text-[#D4C48A] mb-5">
               Your Formula. Our Vanilla.

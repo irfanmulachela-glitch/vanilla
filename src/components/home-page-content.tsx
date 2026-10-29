@@ -19,7 +19,7 @@ export function HomePageContent() {
       {/* Hero Section - light, product-forward (studio photo blends into the page) */}
       <section className="relative bg-[#FCFCFC] overflow-hidden">
         {/* Photo (desktop): right side, white studio background melts into the section */}
-        <div className="hidden lg:block absolute inset-y-0 end-0 w-[56%]" aria-hidden="true">
+        <div className="hidden lg:block absolute inset-y-0 end-0 w-[56%]" aria-hidden="true" data-parallax="0.18">
           <Image
             src="/hero-vanilla-beans-studio.jpg"
             alt=""
@@ -49,7 +49,7 @@ export function HomePageContent() {
               <span className="w-8 h-px bg-[#B5A37A]" aria-hidden="true" />
               Indonesia&apos;s #1 Vanilla Supplier
             </p>
-            <h1 className="text-4xl sm:text-5xl xl:text-[3.75rem] text-[#2C2518] mb-5 leading-[1.05] tracking-tight font-[family-name:var(--font-libre)]">
+            <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.75rem] text-[#2C2518] mb-5 leading-[1.05] tracking-tight font-[family-name:var(--font-libre)]">
               <span className="font-normal italic">Stop Worrying</span>{" "}
               <span className="font-bold">About Vanilla Supply</span>
             </h1>

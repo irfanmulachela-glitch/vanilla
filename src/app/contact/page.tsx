@@ -43,7 +43,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-24 items-end">
             <div>
               <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Contact</p>
-              <h1 className="text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
+              <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
                 <span className="font-bold">Let&apos;s talk about</span>{" "}
                 <br className="hidden sm:block" />
                 <span className="italic font-normal text-[#8C7A4F]">your vanilla</span>

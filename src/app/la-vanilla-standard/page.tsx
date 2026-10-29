@@ -190,8 +190,8 @@ export default function LaVanillaStandardPage() {
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-2xl">
-            <h1 className="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-5">
-              The La Vanilla <span className="text-[#B5A37A]">Standard</span>
+            <h1 className="sr-headline text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-5">
+              <span>The La Vanilla</span> <span className="text-[#B5A37A]">Standard</span>
             </h1>
             <p className="text-lg text-white/75 leading-relaxed mb-8">
               Five checks every batch passes on its way from Java to your door, so the vanilla

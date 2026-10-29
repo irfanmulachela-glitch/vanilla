@@ -203,8 +203,8 @@ export default function WholesalePage() {
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-2xl">
-            <h1 className="text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-5">
-              Wholesale Vanilla <br className="hidden sm:block" />
+            <h1 className="sr-headline text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.1] mb-5">
+              <span>Wholesale Vanilla</span> <br className="hidden sm:block" />
               <span className="text-[#B5A37A]">from Indonesia</span>
             </h1>
             <p className="text-lg text-white/75 leading-relaxed mb-8">

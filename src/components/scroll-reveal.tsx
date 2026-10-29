@@ -8,7 +8,10 @@ import { usePathname } from "next/navigation";
  * 1. Sections: content fades up as it scrolls into view (staggered).
  * 2. Numbers: elements marked `data-count` count up from zero.
  * 3. Photos: cover images ease from a slight zoom back to normal.
- * 4. Lines: gold accent lines and divider lines draw in from left to right.
+ * 4. Lines: gold accent lines draw in; divider lines sweep in as a gold line
+ *    from left to right, then soften to their normal colour.
+ * 5. Hero photo: elements marked `data-parallax` drift slower than the page
+ *    (large screens only).
  *
  * Anything already on screen when a page loads keeps its final state (except
  * numbers, which are hidden by CSS until this runs). Nothing animates for
@@ -16,7 +19,14 @@ import { usePathname } from "next/navigation";
  */
 const MAX_STAGGER = 6;
 const STEP_MS = 90;
-const DIVIDER_COLORS = new Set(["rgb(229, 224, 216)", "rgb(238, 233, 225)", "rgb(216, 211, 201)", "rgb(181, 163, 122)"]);
+const DIVIDER_COLORS = new Set([
+  "rgb(229, 224, 216)", // #E5E0D8
+  "rgb(238, 233, 225)", // #EEE9E1
+  "rgb(216, 211, 201)", // #D8D3C9
+  "rgb(181, 163, 122)", // #B5A37A
+  "rgb(78, 70, 58)", // #4E463A (dark sections)
+]);
+const GOLD = "#B5A37A";
 
 function targetsFor(section: HTMLElement): HTMLElement[] {
   const direct = Array.from(section.children).filter(
@@ -105,6 +115,7 @@ export function ScrollReveal() {
     }
 
     const observers: IntersectionObserver[] = [];
+    const cleanups: (() => void)[] = [];
     const raf = requestAnimationFrame(() => {
       const main = document.querySelector("main");
       if (!main) return;
@@ -195,18 +206,60 @@ export function ScrollReveal() {
       });
       observers.push(
         onEnter(lines, (el) => {
-          const cls = el.dataset.srLine === "bar" ? ["sr-bar-hidden", "sr-bar-in"] : ["sr-rule-hidden", "sr-rule-in"];
-          el.classList.add(cls[1]);
-          requestAnimationFrame(() => el.classList.remove(cls[0]));
-          const prop = el.dataset.srLine === "bar" ? "transform" : "background-size";
-          const done = () => {
-            el.classList.remove(cls[1]);
+          if (el.dataset.srLine === "bar") {
+            el.classList.add("sr-bar-in");
+            requestAnimationFrame(() => el.classList.remove("sr-bar-hidden"));
+            const done = () => el.classList.remove("sr-bar-in");
+            el.addEventListener("transitionend", (e) => e.propertyName === "transform" && done(), { once: true });
+            window.setTimeout(done, 1700);
+            return;
+          }
+          // Divider: a gold line sweeps across, then the border fades back to its own colour.
+          el.classList.add("sr-rule-in");
+          requestAnimationFrame(() => el.classList.remove("sr-rule-hidden"));
+          let settled = false;
+          const settle = () => {
+            if (settled) return;
+            settled = true;
+            el.style.setProperty("border-top-color", GOLD, "important");
+            el.classList.remove("sr-rule-in");
             el.style.removeProperty("--sr-rule");
+            void el.offsetWidth;
+            el.style.setProperty("transition", "border-top-color 1.1s ease 0.25s");
+            el.style.removeProperty("border-top-color");
+            window.setTimeout(() => el.style.removeProperty("transition"), 1500);
           };
-          el.addEventListener("transitionend", (e) => e.propertyName === prop && done(), { once: true });
-          window.setTimeout(done, 1500);
+          el.addEventListener("transitionend", (e) => e.propertyName === "background-size" && settle(), { once: true });
+          window.setTimeout(settle, 1600);
         }),
       );
+
+      /* 5. Hero photo drift (large screens only) */
+      const drifters = Array.from(main.querySelectorAll<HTMLElement>("[data-parallax]"));
+      if (drifters.length && window.matchMedia("(min-width: 1024px)").matches) {
+        let ticking = false;
+        const update = () => {
+          ticking = false;
+          const y = window.scrollY;
+          for (const el of drifters) {
+            if (y > window.innerHeight * 1.5) continue;
+            const f = parseFloat(el.dataset.parallax ?? "0.15");
+            el.style.transform = `translate3d(0, ${(y * f).toFixed(1)}px, 0)`;
+          }
+        };
+        const onScroll = () => {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+          }
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        cleanups.push(() => {
+          window.removeEventListener("scroll", onScroll);
+          drifters.forEach((el) => el.style.removeProperty("transform"));
+        });
+        update();
+      }
 
       root.classList.add("sr-ready");
     });
@@ -214,6 +267,7 @@ export function ScrollReveal() {
     return () => {
       cancelAnimationFrame(raf);
       observers.forEach((o) => o.disconnect());
+      cleanups.forEach((fn) => fn());
       // Never leave content hidden when navigating away.
       document
         .querySelectorAll<HTMLElement>(".sr-hidden, .sr-img-hidden, .sr-bar-hidden, .sr-rule-hidden")
