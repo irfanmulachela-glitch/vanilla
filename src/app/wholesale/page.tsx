@@ -241,7 +241,7 @@ export default function WholesalePage() {
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
                   <dd className="mt-1.5">
                     <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
-                      <span dir="ltr">{fig.value}</span>
+                      <span dir="ltr" data-count className="tabular-nums">{fig.value}</span>
                       {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
                     </span>
                     <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>

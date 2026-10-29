@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { FloatingButtons } from "@/components/floating-buttons";
 import { OverlayScrollbar } from "@/components/scrollbar";
 import { LocaleProvider } from "@/components/locale-provider";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -97,7 +98,7 @@ export default function RootLayout({
         {/* Set document lang/dir from locale path before paint */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var l=location.pathname.split("/")[1];if(l==="fr"||l==="de"||l==="es"||l==="tr"||l==="ar"){document.documentElement.lang=l;if(l==="ar")document.documentElement.dir="rtl";}})();`,
+            __html: `(function(){var d=document.documentElement;d.classList.add("sr-js");setTimeout(function(){if(!d.classList.contains("sr-ready"))d.classList.add("sr-fallback")},3000);})();(function(){var l=location.pathname.split("/")[1];if(l==="fr"||l==="de"||l==="es"||l==="tr"||l==="ar"){document.documentElement.lang=l;if(l==="ar")document.documentElement.dir="rtl";}})();`,
           }}
         />
 
@@ -122,6 +123,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <FloatingButtons />
+          <ScrollReveal />
         </LocaleProvider>
       </body>
     </html>

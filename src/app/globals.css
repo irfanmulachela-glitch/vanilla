@@ -41,3 +41,75 @@ html {
   background-color: #B5A37A;
   color: white;
 }
+
+/* Scroll animations (src/components/scroll-reveal.tsx). Classes are only added by JS. */
+.sr-hidden {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+.sr-in {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--sr-delay, 0ms);
+}
+
+/* numbers: hidden only until the script has reset them to 0 (fallback after 3s) */
+.sr-js:not(.sr-fallback) [data-count]:not([data-counting]) {
+  opacity: 0;
+}
+
+/* photos settle from a slight zoom */
+.sr-img-hidden {
+  transform: scale(1.08);
+}
+.sr-img-in {
+  transform: scale(1);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* gold accent bars draw in */
+.sr-bar-hidden,
+.sr-bar-in {
+  transform-origin: left center;
+}
+[dir="rtl"] .sr-bar-hidden,
+[dir="rtl"] .sr-bar-in {
+  transform-origin: right center;
+}
+.sr-bar-hidden {
+  transform: scaleX(0);
+}
+.sr-bar-in {
+  transform: scaleX(1);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+/* divider lines draw in (the border hides while a 1px line grows over it) */
+.sr-rule-hidden,
+.sr-rule-in {
+  border-top-color: transparent !important;
+  background-image: linear-gradient(var(--sr-rule), var(--sr-rule));
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: 0 0;
+}
+[dir="rtl"] .sr-rule-hidden,
+[dir="rtl"] .sr-rule-in {
+  background-position: 100% 0;
+}
+.sr-rule-hidden {
+  background-size: 0% 1px;
+}
+.sr-rule-in {
+  background-size: 100% 1px;
+  transition: background-size 1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-hidden, .sr-img-hidden, .sr-bar-hidden { opacity: 1; transform: none; }
+  .sr-rule-hidden { background-size: 100% 1px; }
+  [data-count] { opacity: 1 !important; }
+}
