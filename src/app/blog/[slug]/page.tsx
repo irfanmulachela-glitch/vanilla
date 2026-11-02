@@ -553,7 +553,7 @@ const blogPosts = {
     date: "2026-02-15",
     readTime: "9 min read",
     content: `
-      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment terms include T/T with 30–50% advance and L/C for large orders, shipping by air freight from Indonesia on FCA or CPT terms for bulk vanilla orders worldwide.</p>
+      <p>La Vanilla Supplier offers order quantities starting at 1 kg for samples, with wholesale and bulk options for maximum cost savings on Indonesian vanilla beans. Payment is 100% before dispatch for standard orders, with deposit terms for larger orders and L/C at sight for long-term contracts, shipping by air freight from Indonesia on FCA or CPT terms for bulk vanilla orders worldwide.</p>
 
       <h2>Understanding Order Quantities</h2>
       <p>Order quantities vary by supplier and product:</p>
