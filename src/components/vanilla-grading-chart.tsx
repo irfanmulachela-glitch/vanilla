@@ -8,11 +8,11 @@ const grades = {
   a: {
     name: "Grade A (Gourmet)",
     label: "GRADE A",
-    range: "Gourmet · 15 – 20 cm",
+    range: "Gourmet · 14 – 20 cm",
     description:
       "Plump, supple gourmet beans with the highest vanillin content. Perfect for retail display, pastry, and culinary applications where presentation matters.",
     specs: {
-      length: "15-20 cm",
+      length: "Long 18-20 cm, Standard 14-17 cm",
       moisture: "25-35%",
       vanillin: "1.1-2.5%",
       appearance: "Black-brown, oily, supple, may show vanillin frost",
@@ -21,11 +21,11 @@ const grades = {
   b: {
     name: "Grade B (Extraction)",
     label: "GRADE B",
-    range: "Extraction · 10 – 15 cm",
+    range: "Extraction · 10 – 14 cm",
     description:
       "Cost-effective beans for extract manufacturing and industrial applications. Lower moisture enables efficient extraction.",
     specs: {
-      length: "10-15 cm",
+      length: "10-14 cm",
       moisture: "Below 25%",
       vanillin: "1.0-2.0%",
       appearance: "Drier, reddish-brown, thinner, may have split ends",

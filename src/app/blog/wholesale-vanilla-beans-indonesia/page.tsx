@@ -125,7 +125,7 @@ export default function WholesaleVanillaBeansIndonesia() {
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold text-[#2C2518] mb-4">Grade A (Gourmet)</h3>
               <ul className="list-disc list-inside text-[#6B6358] space-y-2 pl-4">
-                <li>Bean length: 15-20 cm</li>
+                <li>Bean length: Long 18-20 cm, Standard 14-17 cm</li>
                 <li>Moisture content: 25-35%</li>
                 <li>Use: Premium retail, gourmet cooking, extraction</li>
                 <li>Appearance: Dark brown, oily surface, flexible</li>
@@ -135,7 +135,7 @@ export default function WholesaleVanillaBeansIndonesia() {
             <div className="bg-[#F8F6F2] rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold text-[#2C2518] mb-4">Grade B (Extraction)</h3>
               <ul className="list-disc list-inside text-[#6B6358] space-y-2 pl-4">
-                <li>Bean length: 10-15 cm</li>
+                <li>Bean length: 10-14 cm</li>
                 <li>Moisture content: Under 25%</li>
                 <li>Use: Industrial extraction, vanilla paste, flavoring</li>
                 <li>Appearance: Darker, drier, may have surface cracks</li>

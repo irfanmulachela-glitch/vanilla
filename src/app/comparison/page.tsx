@@ -79,8 +79,8 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "Bean Length",
-                    gradeA: "15–20 cm",
-                    gradeB: "10–15 cm",
+                    gradeA: "14–20 cm (Long 18–20, Standard 14–17)",
+                    gradeB: "10–14 cm",
                   },
                   {
                     spec: "Moisture Content",

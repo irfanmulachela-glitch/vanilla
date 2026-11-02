@@ -113,7 +113,7 @@ const CONTENT: Record<string, ProductContent> = {
           "These are big, oily, flexible beans, often with vanillin crystals visible on the pod. They are hand-picked at peak maturity by smallholder farmers across Java, then sun-cured slowly for 6–9 months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm and unmistakably real.",
         facts: [
           ["Vanillin", "1.1–2.5%"],
-          ["Length", "15–20 cm"],
+          ["Length", "14–20 cm"],
           ["Moisture", "25–35%"],
           ["Curing", "Sun-cured 6–9 months"],
           ["Minimum order", "From 1 kg"],
@@ -121,7 +121,7 @@ const CONTENT: Record<string, ProductContent> = {
         specs: [
           ["Species", "Vanilla planifolia (Bourbon)"],
           ["Grade", "A (Gourmet)"],
-          ["Bean length", "15–20 cm"],
+          ["Bean length", "Long 18–20 cm, Standard 14–17 cm"],
           ["Moisture", "25–35%"],
           ["Vanillin", "1.1–2.5%"],
           ["Curing", "6–9 months, sun-dried"],
@@ -164,7 +164,7 @@ const CONTENT: Record<string, ProductContent> = {
           "Grade B beans are drier and slimmer, often with split ends, but they carry the same real vanilla character at a lower price per kilo. They cure for the same 6–9 months, then go to work where vanilla is an ingredient rather than the star: extracts, syrups and large-batch flavouring.",
         facts: [
           ["Vanillin", "1.0–2.0%"],
-          ["Length", "10–15 cm"],
+          ["Length", "10–14 cm"],
           ["Moisture", "Below 25%"],
           ["Curing", "Sun-cured 6–9 months"],
           ["Minimum order", "From 1 kg"],
@@ -172,7 +172,7 @@ const CONTENT: Record<string, ProductContent> = {
         specs: [
           ["Species", "Vanilla planifolia (Bourbon)"],
           ["Grade", "B (Extraction)"],
-          ["Bean length", "10–15 cm"],
+          ["Bean length", "10–14 cm"],
           ["Moisture", "Below 25%"],
           ["Vanillin", "1.0–2.0%"],
           ["Curing", "6–9 months, sun-dried"],
