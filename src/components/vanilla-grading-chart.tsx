@@ -8,7 +8,7 @@ const grades = {
   a: {
     name: "Grade A (Gourmet)",
     label: "GRADE A",
-    range: "Gourmet · 14 – 20 cm",
+    range: "Gourmet · 15 – 20 cm",
     description:
       "Plump, supple gourmet beans with the highest vanillin content. Perfect for retail display, pastry, and culinary applications where presentation matters.",
     specs: {
