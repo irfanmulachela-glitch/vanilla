@@ -136,7 +136,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               <h3 className="text-lg font-bold text-[#2C2518] mb-4">Grade B (Extraction)</h3>
               <ul className="list-disc list-inside text-[#6B6358] space-y-2 pl-4">
                 <li>Bean length: 10-15 cm</li>
-                <li>Moisture content: 15-25%</li>
+                <li>Moisture content: Under 25%</li>
                 <li>Use: Industrial extraction, vanilla paste, flavoring</li>
                 <li>Appearance: Darker, drier, may have surface cracks</li>
               </ul>

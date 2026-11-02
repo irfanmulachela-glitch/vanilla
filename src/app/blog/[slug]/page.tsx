@@ -603,9 +603,9 @@ const blogPosts = {
       <h2>Payment Terms</h2>
       <p>Common payment terms for bulk orders:</p>
       <ul>
-        <li>T/T (Telegraphic Transfer): 30-50% advance, balance before shipment</li>
-        <li>L/C (Letter of Credit): For larger orders</li>
-        <li>Open account: For established relationships</li>
+        <li>T/T, Wise or PayPal: 100% before dispatch for standard orders</li>
+        <li>Deposit terms: For larger or scheduled orders, agreed per order</li>
+        <li>L/C at sight: For long-term supply contracts</li>
       </ul>
 
       <h2>Tips for First-Time Buyers</h2>
