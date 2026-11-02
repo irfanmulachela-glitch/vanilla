@@ -179,7 +179,7 @@ export function HomePageContent() {
               <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
                 {[
                   { label: "Species", value: "V. planifolia" },
-                  { label: "Curing", value: "Sun-cured 6–9 months" },
+                  { label: "Curing", value: "Sun-cured for months" },
                   { label: "Soil", value: "Volcanic, Java" },
                 ].map((fact) => (
                   <div key={fact.label}>
