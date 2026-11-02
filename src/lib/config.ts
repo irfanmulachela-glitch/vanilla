@@ -38,7 +38,7 @@ export const siteConfig = {
         species: "V. planifolia",
         moistureContent: "25-35%",
         vanillinContent: "1.1-2.5%",
-        beanLength: "14-20 cm (Grade A) / 10-14 cm (Grade B)",
+        beanLength: "15-20 cm (Grade A) / 10-14 cm (Grade B)",
         curing: "6-9 months, sun-dried + sweat-box",
         moq: "From 1 kg",
         hsCode: "0905.10",

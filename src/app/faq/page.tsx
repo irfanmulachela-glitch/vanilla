@@ -59,7 +59,7 @@ const faqs = [
     questions: [
       {
         q: "What is the difference between Grade A and Grade B vanilla beans?",
-        a: "Grade A (Gourmet) beans are 14-20 cm long (Long 18-20 cm, Standard 14-17 cm) with 25-35% moisture and 1.1-2.5% vanillin, ideal for pastry, ice cream and retail. Grade B (Extraction) beans are 10-14 cm long with under 25% moisture and 1.0-2.0% vanillin, ideal for extracts and syrups. Both are cured for 6-9 months.",
+        a: "Grade A (Gourmet) beans are 15-20 cm long (Long 18-20 cm, Standard 15-17 cm) with 25-35% moisture and 1.1-2.5% vanillin, ideal for pastry, ice cream and retail. Grade B (Extraction) beans are 10-14 cm long with under 25% moisture and 1.0-2.0% vanillin, ideal for extracts and syrups. Both are cured for 6-9 months.",
       },
       {
         q: "What vanilla species do you supply?",

@@ -42,7 +42,7 @@ food manufacturers and distributors. Owner: Muhammad Irfan (Export Director). Mi
 - Two grades only: Grade A = Gourmet, Grade B = Extraction (no separate third "Gourmet" tier). Gourmet/Grade A must always show higher vanillin than Grade B.
 - Vanillin: 1.1-2.5% overall; Grade A 1.1-2.5%, Grade B 1.0-2.0%.
 - Vanilla paste: never state a vanillin % for the paste itself. Describe strength as single, double or triple fold; the vanillin % refers only to the beans used (1.1-2.5%).
-- Moisture Grade A 25-35%, Grade B < 25%. Length Grade A 14-20 cm (sizes: Long 18-20 cm, Standard 14-17 cm), Grade B 10-14 cm (changed 2026-11-02). Curing 6-9 months. HS code 0905.10. Species V. planifolia.
+- Moisture Grade A 25-35%, Grade B < 25%. Length Grade A 15-20 cm (sizes: Long 18-20 cm, Standard 15-17 cm), Grade B 10-14 cm (changed 2026-11-02). Curing 6-9 months. HS code 0905.10. Species V. planifolia.
 - 10+ years experience, 150+ tons exported, 20+ countries, 30+ clients, founded 2014. Halal certified (MUI).
 - Contact: admin@lavanillasupplier.com, WhatsApp +62 878-3575-6945.
 - The company does NOT sell cocoa; never add cocoa products.

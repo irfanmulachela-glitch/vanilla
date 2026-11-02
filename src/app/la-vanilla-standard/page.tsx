@@ -35,7 +35,7 @@ const figures = [
   { icon: Clock, label: "Curing", value: "6–9", unit: "months", note: "Slow, traditional curing" },
   { icon: FlaskConical, label: "Vanillin, Grade A", value: "1.1–2.5", unit: "%", note: "Grade B 1.0–2.0%" },
   { icon: Droplets, label: "Moisture, Grade A", value: "25–35", unit: "%", note: "Grade B under 25%" },
-  { icon: Ruler, label: "Length, Grade A", value: "14–20", unit: "cm", note: "Grade B 10–14 cm" },
+  { icon: Ruler, label: "Length, Grade A", value: "15–20", unit: "cm", note: "Grade B 10–14 cm" },
 ];
 
 const steps = [
@@ -67,7 +67,7 @@ const steps = [
     description:
       "Beans are sorted by hand for length, moisture, colour and defects, then placed in Grade A (Gourmet) or Grade B (Extraction). Two grades, clearly defined, so you always know what you are getting.",
     checks: [
-      "Grade A: 14–20 cm, 25–35% moisture, 1.1–2.5% vanillin",
+      "Grade A: 15–20 cm, 25–35% moisture, 1.1–2.5% vanillin",
       "Grade B: 10–14 cm, under 25% moisture, 1.0–2.0% vanillin",
       "Sorted by hand for colour and defects",
     ],
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     q: "What specs is each batch checked against?",
-    a: "Grade A: 14-20 cm long, 25-35% moisture and 1.1-2.5% vanillin. Grade B: 10-14 cm long, under 25% moisture and 1.0-2.0% vanillin. Every batch is checked against the specs of the grade you ordered.",
+    a: "Grade A: 15-20 cm long, 25-35% moisture and 1.1-2.5% vanillin. Grade B: 10-14 cm long, under 25% moisture and 1.0-2.0% vanillin. Every batch is checked against the specs of the grade you ordered.",
   },
   {
     q: "Can I get a sample before ordering?",

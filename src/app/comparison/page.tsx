@@ -79,7 +79,7 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "Bean Length",
-                    gradeA: "14–20 cm (Long 18–20, Standard 14–17)",
+                    gradeA: "15–20 cm (Long 18–20, Standard 15–17)",
                     gradeB: "10–14 cm",
                   },
                   {

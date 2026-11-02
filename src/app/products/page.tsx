@@ -13,7 +13,7 @@ const DESCRIPTION =
 const faqs = [
   {
     q: "Which vanilla bean grade should I buy?",
-    a: "Choose Grade A (gourmet) for retail, pastry and culinary use: 14-20 cm beans (Long 18-20 cm, Standard 14-17 cm) with 25-35% moisture and 1.1-2.5% vanillin. Choose Grade B (extraction) for extract production: 10-14 cm beans with less than 25% moisture and 1.0-2.0% vanillin. Both grades are sun-cured for 6-9 months.",
+    a: "Choose Grade A (gourmet) for retail, pastry and culinary use: 15-20 cm beans (Long 18-20 cm, Standard 15-17 cm) with 25-35% moisture and 1.1-2.5% vanillin. Choose Grade B (extraction) for extract production: 10-14 cm beans with less than 25% moisture and 1.0-2.0% vanillin. Both grades are sun-cured for 6-9 months.",
   },
   {
     q: "Can you customize vanilla paste?",

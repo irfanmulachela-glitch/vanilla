@@ -12,7 +12,7 @@ const grades = {
     description:
       "Plump, supple gourmet beans with the highest vanillin content. Perfect for retail display, pastry, and culinary applications where presentation matters.",
     specs: {
-      length: "Long 18-20 cm, Standard 14-17 cm",
+      length: "Long 18-20 cm, Standard 15-17 cm",
       moisture: "25-35%",
       vanillin: "1.1-2.5%",
       appearance: "Black-brown, oily, supple, may show vanillin frost",

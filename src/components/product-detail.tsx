@@ -113,7 +113,7 @@ const CONTENT: Record<string, ProductContent> = {
           "These are big, oily, flexible beans, often with vanillin crystals visible on the pod. They are hand-picked at peak maturity by smallholder farmers across Java, then sun-cured slowly for 6–9 months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm and unmistakably real.",
         facts: [
           ["Vanillin", "1.1–2.5%"],
-          ["Length", "14–20 cm"],
+          ["Length", "15–20 cm"],
           ["Moisture", "25–35%"],
           ["Curing", "Sun-cured 6–9 months"],
           ["Minimum order", "From 1 kg"],
@@ -121,7 +121,7 @@ const CONTENT: Record<string, ProductContent> = {
         specs: [
           ["Species", "Vanilla planifolia (Bourbon)"],
           ["Grade", "A (Gourmet)"],
-          ["Bean length", "Long 18–20 cm, Standard 14–17 cm"],
+          ["Bean length", "Long 18–20 cm, Standard 15–17 cm"],
           ["Moisture", "25–35%"],
           ["Vanillin", "1.1–2.5%"],
           ["Curing", "6–9 months, sun-dried"],
