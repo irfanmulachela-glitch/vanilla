@@ -108,14 +108,14 @@ const CONTENT: Record<string, ProductContent> = {
         tabLabel: "Grade A · Gourmet",
         title: "Indonesian Vanilla Beans, Grade A Gourmet",
         tagline: "Plump, oily and fragrant. The beans you choose when vanilla is the star.",
-        summary: "Grade A V. planifolia from Java for retail, pastry, ice cream and fine dining, sun-cured for 6–9 months.",
+        summary: "Grade A V. planifolia from Java for retail, pastry, ice cream and fine dining, sun-cured for months.",
         overview:
-          "These are big, oily, flexible beans, often with vanillin crystals visible on the pod. They are hand-picked at peak maturity by smallholder farmers across Java, then sun-cured slowly for 6–9 months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm and unmistakably real.",
+          "These are big, oily, flexible beans, often with vanillin crystals visible on the pod. They are hand-picked at peak maturity by smallholder farmers across Java, then sun-cured slowly for months until the aroma turns deep and sweet. Split one open and you can smell it straight away: rich, warm and unmistakably real.",
         facts: [
           ["Vanillin", "1.1–2.5%"],
           ["Length", "15–20 cm"],
           ["Moisture", "25–35%"],
-          ["Curing", "Sun-cured 6–9 months"],
+          ["Curing", "Sun-cured for months"],
           ["Minimum order", "From 1 kg"],
         ],
         specs: [
@@ -124,7 +124,7 @@ const CONTENT: Record<string, ProductContent> = {
           ["Bean length", "Long 18–20 cm, Standard 15–17 cm"],
           ["Moisture", "25–35%"],
           ["Vanillin", "1.1–2.5%"],
-          ["Curing", "6–9 months, sun-dried"],
+          ["Curing", "Sun-cured for months"],
           ["Appearance", "Black-brown, oily, supple, full pod"],
           ["Best for", "Retail, pastry, ice cream, culinary"],
           ["Packaging", "Vacuum-sealed, 1 kg per bundle"],
@@ -160,14 +160,14 @@ const CONTENT: Record<string, ProductContent> = {
         tabLabel: "Grade B · Extraction",
         title: "Indonesian Vanilla Beans, Grade B Extraction",
         tagline: "Real vanilla character at a better price per kilo, made for extraction.",
-        summary: "Grade B V. planifolia from Java for extracts, syrups and large-batch flavouring, with the same 6–9 month cure.",
+        summary: "Grade B V. planifolia from Java for extracts, syrups and large-batch flavouring, with the same slow sun cure.",
         overview:
-          "Grade B beans are drier and slimmer, often with split ends, but they carry the same real vanilla character at a lower price per kilo. They cure for the same 6–9 months, then go to work where vanilla is an ingredient rather than the star: extracts, syrups and large-batch flavouring.",
+          "Grade B beans are drier and slimmer, often with split ends, but they carry the same real vanilla character at a lower price per kilo. They are sun-cured for months, just like Grade A, then go to work where vanilla is an ingredient rather than the star: extracts, syrups and large-batch flavouring.",
         facts: [
           ["Vanillin", "1.0–2.0%"],
           ["Length", "10–14 cm"],
           ["Moisture", "Below 25%"],
-          ["Curing", "Sun-cured 6–9 months"],
+          ["Curing", "Sun-cured for months"],
           ["Minimum order", "From 1 kg"],
         ],
         specs: [
@@ -176,7 +176,7 @@ const CONTENT: Record<string, ProductContent> = {
           ["Bean length", "10–14 cm"],
           ["Moisture", "Below 25%"],
           ["Vanillin", "1.0–2.0%"],
-          ["Curing", "6–9 months, sun-dried"],
+          ["Curing", "Sun-cured for months"],
           ["Appearance", "Drier, reddish-brown, thinner, may have split ends"],
           ["Best for", "Extract manufacturing, industrial flavouring"],
           ["Packaging", "Vacuum-sealed, 1 kg per bundle"],
@@ -196,7 +196,7 @@ const CONTENT: Record<string, ProductContent> = {
         ],
         reasons: [
           { title: "Made for extraction", body: "Lower moisture means more vanillin per kilo goes into your extract, not water weight." },
-          { title: "Lower cost per kilo", body: "The same 6–9 month cure as Grade A at a lower price, for products where vanilla is an ingredient." },
+          { title: "Lower cost per kilo", body: "The same slow sun cure as Grade A at a lower price, for products where vanilla is an ingredient." },
           { title: "Paperwork done right", body: DOCS },
         ],
         slides: [

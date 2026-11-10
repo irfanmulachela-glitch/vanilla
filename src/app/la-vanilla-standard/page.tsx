@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
 
 const figures = [
-  { icon: Clock, label: "Curing", value: "6–9", unit: "months", note: "Slow, traditional curing" },
+  { icon: Clock, label: "Curing", value: "Months", unit: "", note: "Slow, traditional sun curing" },
   { icon: FlaskConical, label: "Vanillin, Grade A", value: "1.1–2.5", unit: "%", note: "Grade B 1.0–2.0%" },
   { icon: Droplets, label: "Moisture, Grade A", value: "25–35", unit: "%", note: "Grade B under 25%" },
   { icon: Ruler, label: "Length, Grade A", value: "15–20", unit: "cm", note: "Grade B 10–14 cm" },
@@ -52,11 +52,11 @@ const steps = [
   },
   {
     title: "Curing",
-    lead: "Six to nine months of slow, traditional curing.",
+    lead: "Months of slow, traditional sun curing.",
     description:
-      "Fresh green pods are blanched, sweated, sun-dried and slowly conditioned. Taking the full six to nine months is what builds the deep aroma and natural oils buyers look for.",
+      "Fresh green pods are blanched, sweated, sun-dried and slowly conditioned. Taking months, not weeks, is what builds the deep aroma and natural oils buyers look for.",
     checks: [
-      "6–9 months from harvest to export-ready",
+      "Sun-cured for months, never rushed",
       "Sun-dried and slowly conditioned",
       "Nothing added, aroma develops naturally",
     ],
@@ -242,7 +242,7 @@ export default function LaVanillaStandardPage() {
       {/* Quick Answer */}
       <QuickAnswer
         question="What is the La Vanilla Standard?"
-        answer="The La Vanilla Standard is the five-step process every batch of our Indonesian vanilla goes through before export: sourcing V. planifolia from partner farmers in Java, curing for 6 to 9 months, hand grading into Grade A or Grade B, a batch check against the grade specs, and vacuum-sealed air shipment with full export documents."
+        answer="The La Vanilla Standard is the five-step process every batch of our Indonesian vanilla goes through before export: sourcing V. planifolia from partner farmers in Java, sun-curing for months, hand grading into Grade A or Grade B, a batch check against the grade specs, and vacuum-sealed air shipment with full export documents."
       />
 
       {/* The five checks */}

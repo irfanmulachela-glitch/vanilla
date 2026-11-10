@@ -22,7 +22,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   "products/vanilla-beans": {
     title: "Indonesian Vanilla Beans: Grade A & B",
     description:
-      "Grade A & Grade B vanilla beans, hand-picked and sun-cured for 6-9 months. Lab-tested and vacuum-sealed, shipped from Indonesia with flexible bulk quantities.",
+      "Grade A & Grade B vanilla beans, hand-picked and sun-cured for months. Lab-tested and vacuum-sealed, shipped from Indonesia with flexible bulk quantities.",
   },
   "products/vanilla-paste": {
     title: "Vanilla Paste - 28% Bean Solids",

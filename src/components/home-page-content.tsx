@@ -433,7 +433,7 @@ export function HomePageContent() {
                     { spec: "Moisture Content", gradeA: "25–35%", gradeB: "< 25%" },
                     { spec: "Vanillin Content", gradeA: "1.1–2.5%", gradeB: "1.0–2.0%" },
                     { spec: "Bean Length", gradeA: "15–20 cm (Long 18–20, Standard 15–17)", gradeB: "10–14 cm" },
-                    { spec: "Curing Period", gradeA: "6–9 months", gradeB: "6–9 months" },
+                    { spec: "Curing Period", gradeA: "Sun-cured for months", gradeB: "Sun-cured for months" },
                     { spec: "MOQ", gradeA: "From 1 kg", gradeB: "From 1 kg" },
                     { spec: "HS Code", gradeA: "0905.10", gradeB: "0905.10" },
                   ].map((row, index) => (

@@ -109,8 +109,8 @@ export default function ComparisonPage() {
                   },
                   {
                     spec: "Curing Period",
-                    gradeA: "6–9 months",
-                    gradeB: "6–9 months",
+                    gradeA: "Sun-cured for months",
+                    gradeB: "Sun-cured for months",
                   },
                   {
                     spec: "MOQ",

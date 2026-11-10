@@ -14,7 +14,7 @@ const SEO: Record<string, { title: string; description: string }> = {
   "vanilla-beans": {
     title: "Indonesian Vanilla Beans: Grade A & B",
     description:
-      "Grade A & Grade B vanilla beans from Java, sun-cured for 6-9 months and vacuum-sealed. Free samples, orders from 1 kg, air freight from Indonesia.",
+      "Grade A & Grade B vanilla beans from Java, sun-cured for months and vacuum-sealed. Free samples, orders from 1 kg, air freight from Indonesia.",
   },
   "vanilla-paste": {
     title: "Vanilla Paste - 28% Bean Solids",
