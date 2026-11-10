@@ -152,6 +152,7 @@ const CONTENT: Record<string, ProductContent> = {
           { src: "/vanilla-beans-a-s2.webp", alt: "Close-up of supple, oily Grade A V. planifolia vanilla beans from Java" },
           { src: "/vanilla-beans-a-s3.webp", alt: "Grade A gourmet vanilla bean bundle on a white background" },
           { src: "/vanilla-beans-a-s4.webp", alt: "Grade A vanilla pods standing upright, showing their satin sheen" },
+          { src: "/vanilla-beans-pack.webp", alt: "Indonesian vanilla beans vacuum-sealed in a La Vanilla Supplier pack, ready to ship" },
         ],
       },
       {
@@ -402,7 +403,7 @@ function Gallery({ slides }: { slides: Slide[] }) {
       </div>
 
       {multi && (
-        <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3">
+        <div className={`mt-3 grid ${slides.length > 4 ? "grid-cols-5" : "grid-cols-4"} gap-2 sm:gap-3`}>
           {slides.map((s, i) => (
             <button
               key={s.src}
