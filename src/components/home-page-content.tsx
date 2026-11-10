@@ -157,8 +157,68 @@ export function HomePageContent() {
         </div>
       </section>
 
+      {/* Origin Section */}
+      <section className="py-20 lg:py-24 bg-[#2C2518] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            {/* Text */}
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                Our Source
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+                Where Our Vanilla<br className="hidden sm:block" /> Comes From
+              </h2>
+              <p className="text-white/70 leading-relaxed text-lg mb-10">
+                Our vanilla grows on smallholder plantations across Java, where rich volcanic
+                soil and a tropical climate give V. planifolia its deep, creamy character. We work
+                hand in hand with the farmers who grow it, so you get fresher beans, fair prices
+                and a supply you can rely on.
+              </p>
+
+              <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                {[
+                  { label: "Species", value: "V. planifolia" },
+                  { label: "Curing", value: "Sun-cured for months" },
+                  { label: "Soil", value: "Volcanic, Java" },
+                ].map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-sm font-medium text-white/90 leading-snug">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {/* Map: Java highlighted, eastern edge fades out at the PNG border */}
+            <div className="lg:col-span-7">
+              <div className="relative lg:w-[118%] rtl:lg:-ms-[18%]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/indonesia-map-java.svg"
+                  alt="Map of Indonesia with Java highlighted"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                {/* Java marker */}
+                <div className="absolute" style={{ left: "32.8%", top: "78.5%" }} aria-hidden="true">
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#B5A37A]/30 animate-ping" />
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#E8D9B0] ring-4 ring-[#B5A37A]/40" />
+                  <span className="absolute left-0 bottom-2 w-px h-8 sm:h-11 bg-gradient-to-t from-[#B5A37A] to-transparent" />
+                  <span className="absolute left-0 bottom-[2.6rem] sm:bottom-[3.4rem] -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B5A37A]/40 bg-[#2C2518]/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D9B0]">
+                    Java
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
-      <section className="py-20 lg:py-28 bg-white border-t border-[#EEE9E1]" aria-labelledby="products-heading">
+      <section className="py-20 lg:py-28 bg-white" aria-labelledby="products-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">{t.home.productsEyebrow}</p>
@@ -197,6 +257,75 @@ export function HomePageContent() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Video — contained 16:9 frame, sits right after Products */}
+      <section className="pt-20 pb-24 lg:pt-24 lg:pb-36 bg-white border-t border-[#EEE9E1]" aria-labelledby="process-video-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Text (left on desktop, above video on mobile) */}
+            <div className="lg:col-span-4">
+              <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
+              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
+                Our Process
+              </p>
+              <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-5 leading-tight">
+                See how the paste is made
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                Watch our team grind and blend real vanilla beans into smooth,
+                spreadable paste, done the same way every batch, from cured bean
+                to export-ready tub.
+              </p>
+              <Link
+                href={`${prefix}/products/vanilla-paste`}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
+              >
+                View vanilla paste
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Video — true 16:9 so nothing is cropped */}
+            <div className="lg:col-span-8">
+              <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#2C2518] shadow-xl ring-1 ring-[#2C2518]/10 group">
+                <video
+                  ref={videoRef}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  controls={videoStarted}
+                  poster="/process-poster.jpg"
+                  preload="metadata"
+                  playsInline
+                  onPlay={() => setVideoStarted(true)}
+                  onEnded={() => setVideoStarted(false)}
+                >
+                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {!videoStarted && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      videoRef.current?.play();
+                      setVideoStarted(true);
+                    }}
+                    aria-label="Play process video"
+                    className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/5 transition-colors duration-300"
+                  >
+                    <span className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B5A37A]/50 backdrop-blur-md ring-1 ring-white/40 text-white flex items-center justify-center shadow-lg group-hover:bg-[#B5A37A] group-hover:scale-105 transition-all duration-300">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                    <span className="absolute bottom-4 right-4 px-2.5 py-1 rounded-md bg-black/50 text-white text-xs font-medium">
+                      0:29
+                    </span>
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -268,64 +397,6 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Origin Section */}
-      <section className="py-20 lg:py-24 bg-[#2C2518] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-            {/* Text */}
-            <div className="lg:col-span-5">
-              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-                Our Source
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                Grown in Java&apos;s <span className="italic font-normal text-[#D4C48A] rtl:not-italic">volcanic soil</span>
-              </h2>
-              <p className="text-white/70 leading-relaxed text-lg mb-10">
-                Our vanilla grows on smallholder farms across Java, and we work hand in hand
-                with the farmers who grow it.
-              </p>
-
-              <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-                {[
-                  { label: "Species", value: "V. planifolia" },
-                  { label: "Curing", value: "Sun-cured for months" },
-                  { label: "Soil", value: "Volcanic, Java" },
-                ].map((fact) => (
-                  <div key={fact.label}>
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
-                      {fact.label}
-                    </dt>
-                    <dd className="text-sm font-medium text-white/90 leading-snug">{fact.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            {/* Map: Java highlighted, eastern edge fades out at the PNG border */}
-            <div className="lg:col-span-7">
-              <div className="relative lg:w-[118%] rtl:lg:-ms-[18%]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/indonesia-map-java.svg"
-                  alt="Map of Indonesia with Java highlighted"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-                {/* Java marker */}
-                <div className="absolute" style={{ left: "32.8%", top: "78.5%" }} aria-hidden="true">
-                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#B5A37A]/30 animate-ping" />
-                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#E8D9B0] ring-4 ring-[#B5A37A]/40" />
-                  <span className="absolute left-0 bottom-2 w-px h-8 sm:h-11 bg-gradient-to-t from-[#B5A37A] to-transparent" />
-                  <span className="absolute left-0 bottom-[2.6rem] sm:bottom-[3.4rem] -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B5A37A]/40 bg-[#2C2518]/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D9B0]">
-                    Java
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Grade comparison (compact; full specifications live on the beans page) */}
       <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="grades-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,75 +440,6 @@ export function HomePageContent() {
                   </div>
                 ))}
               </dl>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Video — contained 16:9 frame */}
-      <section className="pt-20 pb-24 lg:pt-24 lg:pb-36 bg-white" aria-labelledby="process-video-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Text (left on desktop, above video on mobile) */}
-            <div className="lg:col-span-4">
-              <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
-              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
-                Our Process
-              </p>
-              <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-5 leading-tight">
-                See how the paste is made
-              </h2>
-              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-                Watch our team grind and blend real vanilla beans into smooth,
-                spreadable paste, done the same way every batch, from cured bean
-                to export-ready tub.
-              </p>
-              <Link
-                href={`${prefix}/products/vanilla-paste`}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
-              >
-                View vanilla paste
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Video — true 16:9 so nothing is cropped */}
-            <div className="lg:col-span-8">
-              <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#2C2518] shadow-xl ring-1 ring-[#2C2518]/10 group">
-                <video
-                  ref={videoRef}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  controls={videoStarted}
-                  poster="/process-poster.jpg"
-                  preload="metadata"
-                  playsInline
-                  onPlay={() => setVideoStarted(true)}
-                  onEnded={() => setVideoStarted(false)}
-                >
-                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                {!videoStarted && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      videoRef.current?.play();
-                      setVideoStarted(true);
-                    }}
-                    aria-label="Play process video"
-                    className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/5 transition-colors duration-300"
-                  >
-                    <span className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B5A37A]/50 backdrop-blur-md ring-1 ring-white/40 text-white flex items-center justify-center shadow-lg group-hover:bg-[#B5A37A] group-hover:scale-105 transition-all duration-300">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </span>
-                    <span className="absolute bottom-4 right-4 px-2.5 py-1 rounded-md bg-black/50 text-white text-xs font-medium">
-                      0:29
-                    </span>
-                  </button>
-                )}
-              </div>
             </div>
           </div>
         </div>
