@@ -53,7 +53,7 @@ export const siteConfig = {
       shortDescription: "Custom composition vanilla paste tailored to your exact specifications.",
       description: "Our vanilla paste is manufactured to your exact requirements. We offer custom formulations with adjustable strength (single, double or triple fold), sugar content, and viscosity. Perfect for food manufacturers, bakeries, and beverage companies requiring consistent, high-quality vanilla flavoring.",
       category: "paste" as const,
-      image: "/vanilla-paste.jpg",
+      image: "/vanilla-paste-1.webp",
       specifications: {
         strength: "Single, double or triple fold",
         beans: "Cured V. planifolia (1.1-2.5% vanillin)",
@@ -74,7 +74,7 @@ export const siteConfig = {
       shortDescription: "100% pure vanilla powder, finely ground from premium cured beans.",
       description: "Our vanilla powder is made from 100% pure cured vanilla beans, finely ground to a consistent mesh size. No fillers, no additives. Ideal for dry mixes, baking blends, and applications where liquid vanilla is not suitable.",
       category: "powder" as const,
-      image: "/vanilla-powder.jpg",
+      image: "/vanilla-powder-1.webp",
       specifications: {
         meshSize: "40-80 mesh (customizable)",
         vanillinContent: "1.1-2.5%",

@@ -208,7 +208,12 @@ const CONTENT: Record<string, ProductContent> = {
   "vanilla-paste": {
     name: "Vanilla Paste",
     sampleLine: "Request a free paste sample made to your spec. You only cover shipping.",
-    slides: [{ src: "/vanilla-paste.jpg", alt: "Jar of Indonesian vanilla bean paste with visible vanilla seeds" }],
+    slides: [
+      { src: "/vanilla-paste-1.webp", alt: "Glass jar of La Vanilla Supplier Indonesian vanilla bean paste" },
+      { src: "/vanilla-paste-2.webp", alt: "Spoonful of thick, dark vanilla bean paste dripping into the jar" },
+      { src: "/vanilla-paste-3.webp", alt: "Vanilla bean paste jar with gold lid, seen from above" },
+      { src: "/vanilla-paste-4.webp", alt: "Jar of vanilla bean paste lying on its side, showing the label" },
+    ],
     variants: [
       {
         key: "paste",
@@ -246,7 +251,12 @@ const CONTENT: Record<string, ProductContent> = {
   "vanilla-powder": {
     name: "Vanilla Powder",
     sampleLine: "Request a free powder sample. You only cover shipping.",
-    slides: [{ src: "/vanilla-powder.jpg", alt: "Pure Indonesian vanilla powder ground from cured vanilla beans" }],
+    slides: [
+      { src: "/vanilla-powder-1.webp", alt: "Pile of pure Indonesian vanilla powder ground from cured vanilla beans" },
+      { src: "/vanilla-powder-2.webp", alt: "Vacuum-sealed pack of La Vanilla Supplier vanilla powder" },
+      { src: "/vanilla-powder-3.webp", alt: "Vanilla powder seen from above, fine and evenly ground" },
+      { src: "/vanilla-powder-4.webp", alt: "Close-up of the texture of ground vanilla bean powder" },
+    ],
     variants: [
       {
         key: "powder",
