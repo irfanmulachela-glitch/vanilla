@@ -283,8 +283,8 @@ export default function ProductsPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-white">
                 <Image
-                  src="/la-vanilla-standard-hero.webp"
-                  alt="Vanilla beans drying on racks in Java before grading and packing"
+                  src="/private-label-products.webp"
+                  alt="Vanilla beans, vanilla paste and vanilla powder packed with blank Your Brand labels for private label orders"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover"
