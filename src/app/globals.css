@@ -131,3 +131,9 @@ html {
   .sr-rule-hidden { background-size: 100% 1px; }
   [data-count] { opacity: 1 !important; }
 }
+
+/* Section headings share the hero's serif (Libre Baskerville) sitewide */
+main h1,
+main h2 {
+  font-family: var(--font-libre), Georgia, "Times New Roman", serif;
+}

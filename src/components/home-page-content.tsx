@@ -157,68 +157,8 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Origin Section */}
-      <section className="py-20 lg:py-24 bg-[#2C2518] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-            {/* Text */}
-            <div className="lg:col-span-5">
-              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-                Our Source
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                Where Our Vanilla<br className="hidden sm:block" /> Comes From
-              </h2>
-              <p className="text-white/70 leading-relaxed text-lg mb-10">
-                Our vanilla grows on smallholder plantations across Java, where rich volcanic
-                soil and a tropical climate give V. planifolia its deep, creamy character. We work
-                hand in hand with the farmers who grow it, so you get fresher beans, fair prices
-                and a supply you can rely on.
-              </p>
-
-              <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-                {[
-                  { label: "Species", value: "V. planifolia" },
-                  { label: "Curing", value: "Sun-cured for months" },
-                  { label: "Soil", value: "Volcanic, Java" },
-                ].map((fact) => (
-                  <div key={fact.label}>
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
-                      {fact.label}
-                    </dt>
-                    <dd className="text-sm font-medium text-white/90 leading-snug">{fact.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            {/* Map: Java highlighted, eastern edge fades out at the PNG border */}
-            <div className="lg:col-span-7">
-              <div className="relative lg:w-[118%] rtl:lg:-ms-[18%]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/indonesia-map-java.svg"
-                  alt="Map of Indonesia with Java highlighted"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-                {/* Java marker */}
-                <div className="absolute" style={{ left: "32.8%", top: "78.5%" }} aria-hidden="true">
-                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#B5A37A]/30 animate-ping" />
-                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#E8D9B0] ring-4 ring-[#B5A37A]/40" />
-                  <span className="absolute left-0 bottom-2 w-px h-8 sm:h-11 bg-gradient-to-t from-[#B5A37A] to-transparent" />
-                  <span className="absolute left-0 bottom-[2.6rem] sm:bottom-[3.4rem] -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B5A37A]/40 bg-[#2C2518]/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D9B0]">
-                    Java
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Products Section */}
-      <section className="py-20 lg:py-28 bg-white" aria-labelledby="products-heading">
+      <section className="py-20 lg:py-28 bg-white border-t border-[#EEE9E1]" aria-labelledby="products-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">{t.home.productsEyebrow}</p>
@@ -257,75 +197,6 @@ export function HomePageContent() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Video — contained 16:9 frame, sits right after Products */}
-      <section className="pt-20 pb-24 lg:pt-24 lg:pb-36 bg-white border-t border-[#EEE9E1]" aria-labelledby="process-video-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Text (left on desktop, above video on mobile) */}
-            <div className="lg:col-span-4">
-              <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
-              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
-                Our Process
-              </p>
-              <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-5 leading-tight">
-                See how the paste is made
-              </h2>
-              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
-                Watch our team grind and blend real vanilla beans into smooth,
-                spreadable paste, done the same way every batch, from cured bean
-                to export-ready tub.
-              </p>
-              <Link
-                href={`${prefix}/products/vanilla-paste`}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
-              >
-                View vanilla paste
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Video — true 16:9 so nothing is cropped */}
-            <div className="lg:col-span-8">
-              <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#2C2518] shadow-xl ring-1 ring-[#2C2518]/10 group">
-                <video
-                  ref={videoRef}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  controls={videoStarted}
-                  poster="/process-poster.jpg"
-                  preload="metadata"
-                  playsInline
-                  onPlay={() => setVideoStarted(true)}
-                  onEnded={() => setVideoStarted(false)}
-                >
-                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                {!videoStarted && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      videoRef.current?.play();
-                      setVideoStarted(true);
-                    }}
-                    aria-label="Play process video"
-                    className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/5 transition-colors duration-300"
-                  >
-                    <span className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B5A37A]/50 backdrop-blur-md ring-1 ring-white/40 text-white flex items-center justify-center shadow-lg group-hover:bg-[#B5A37A] group-hover:scale-105 transition-all duration-300">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </span>
-                    <span className="absolute bottom-4 right-4 px-2.5 py-1 rounded-md bg-black/50 text-white text-xs font-medium">
-                      0:29
-                    </span>
-                  </button>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -397,60 +268,176 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Specifications Section */}
-      <section className="py-20 bg-white">
+      {/* Origin Section */}
+      <section className="py-20 lg:py-24 bg-[#2C2518] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Specifications</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-              Product Specifications
-            </h2>
-            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
-              Transparent, detailed specifications for every product. What you
-              see is exactly what you get.
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            {/* Text */}
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                Our Source
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+                Grown in Java&apos;s <span className="italic font-normal text-[#D4C48A] rtl:not-italic">volcanic soil</span>
+              </h2>
+              <p className="text-white/70 leading-relaxed text-lg mb-10">
+                Our vanilla grows on smallholder farms across Java, and we work hand in hand
+                with the farmers who grow it.
+              </p>
 
-          <div className="max-w-5xl mx-auto bg-white rounded-2xl border border-[#E5E0D8] overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-[#2C2518]">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
-                      {t.products.specification}
-                    </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
-                      Grade A Beans
-                    </th>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-[#B5A37A]">
-                      Grade B Beans
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#E5E0D8]">
-                  {[
-                    { spec: "Species", gradeA: "V. planifolia", gradeB: "V. planifolia" },
-                    { spec: "Moisture Content", gradeA: "25–35%", gradeB: "< 25%" },
-                    { spec: "Vanillin Content", gradeA: "1.1–2.5%", gradeB: "1.0–2.0%" },
-                    { spec: "Bean Length", gradeA: "15–20 cm (Long 18–20, Standard 15–17)", gradeB: "10–14 cm" },
-                    { spec: "Curing Period", gradeA: "Sun-cured for months", gradeB: "Sun-cured for months" },
-                    { spec: "MOQ", gradeA: "From 1 kg", gradeB: "From 1 kg" },
-                    { spec: "HS Code", gradeA: "0905.10", gradeB: "0905.10" },
-                  ].map((row, index) => (
-                    <tr key={row.spec} className={index % 2 === 0 ? "bg-white" : "bg-[#F8F6F2]"}>
-                      <td className="px-6 py-4 text-sm font-medium text-[#2C2518]">
-                        {row.spec}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-[#6B6358]">
-                        {row.gradeA}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-[#6B6358]">
-                        {row.gradeB}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                {[
+                  { label: "Species", value: "V. planifolia" },
+                  { label: "Curing", value: "Sun-cured for months" },
+                  { label: "Soil", value: "Volcanic, Java" },
+                ].map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-sm font-medium text-white/90 leading-snug">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {/* Map: Java highlighted, eastern edge fades out at the PNG border */}
+            <div className="lg:col-span-7">
+              <div className="relative lg:w-[118%] rtl:lg:-ms-[18%]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/indonesia-map-java.svg"
+                  alt="Map of Indonesia with Java highlighted"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+                {/* Java marker */}
+                <div className="absolute" style={{ left: "32.8%", top: "78.5%" }} aria-hidden="true">
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#B5A37A]/30 animate-ping" />
+                  <span className="absolute -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#E8D9B0] ring-4 ring-[#B5A37A]/40" />
+                  <span className="absolute left-0 bottom-2 w-px h-8 sm:h-11 bg-gradient-to-t from-[#B5A37A] to-transparent" />
+                  <span className="absolute left-0 bottom-[2.6rem] sm:bottom-[3.4rem] -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B5A37A]/40 bg-[#2C2518]/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D9B0]">
+                    Java
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Grade comparison (compact; full specifications live on the beans page) */}
+      <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="grades-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Two Grades</p>
+              <h2 id="grades-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4 leading-tight">
+                Grade A or Grade B?{" "}
+                <span className="block italic font-normal text-[#8C7A4F] rtl:not-italic">Pick by use.</span>
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                Both are V. planifolia from Java, sun-cured for months. The difference is moisture, size and what you make with them.
+              </p>
+              <Link
+                href={`${prefix}/products/vanilla-beans`}
+                className="group inline-flex items-center text-sm font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+              >
+                See full specifications
+                <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 rtl:rotate-180 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-2 gap-x-6 sm:gap-x-10 pb-4 border-b border-[#D8D3C9]">
+                <p className="font-semibold text-[#2C2518]">Grade A <span className="font-normal text-[#8C7A4F]">· Gourmet</span></p>
+                <p className="font-semibold text-[#2C2518]">Grade B <span className="font-normal text-[#8C7A4F]">· Extraction</span></p>
+              </div>
+              <dl>
+                {[
+                  { spec: "Best for", a: "Retail, pastry, ice cream", b: "Extracts, syrups, large batches" },
+                  { spec: "Moisture", a: "25–35%", b: "Under 25%" },
+                  { spec: "Vanillin", a: "1.1–2.5%", b: "1.0–2.0%" },
+                  { spec: "Length", a: "15–20 cm", b: "10–14 cm" },
+                ].map((row) => (
+                  <div key={row.spec} className="py-5 border-b border-[#E5E0D8]">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187] mb-1.5">{row.spec}</dt>
+                    <div className="grid grid-cols-2 gap-x-6 sm:gap-x-10">
+                      <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.a}</dd>
+                      <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.b}</dd>
+                    </div>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Video — contained 16:9 frame */}
+      <section className="pt-20 pb-24 lg:pt-24 lg:pb-36 bg-white" aria-labelledby="process-video-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Text (left on desktop, above video on mobile) */}
+            <div className="lg:col-span-4">
+              <div className="w-10 h-[2px] bg-[#B5A37A] mb-6" />
+              <p className="text-[#B5A37A] text-xs font-medium uppercase tracking-[0.2em] mb-4">
+                Our Process
+              </p>
+              <h2 id="process-video-heading" className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-5 leading-tight">
+                See how the paste is made
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                Watch our team grind and blend real vanilla beans into smooth,
+                spreadable paste, done the same way every batch, from cured bean
+                to export-ready tub.
+              </p>
+              <Link
+                href={`${prefix}/products/vanilla-paste`}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C2518] text-white text-sm font-medium rounded-lg hover:bg-[#3D3425] transition-colors"
+              >
+                View vanilla paste
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Video — true 16:9 so nothing is cropped */}
+            <div className="lg:col-span-8">
+              <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#2C2518] shadow-xl ring-1 ring-[#2C2518]/10 group">
+                <video
+                  ref={videoRef}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  controls={videoStarted}
+                  poster="/process-poster.jpg"
+                  preload="metadata"
+                  playsInline
+                  onPlay={() => setVideoStarted(true)}
+                  onEnded={() => setVideoStarted(false)}
+                >
+                  <source src="/vanilla-paste-process.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                {!videoStarted && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      videoRef.current?.play();
+                      setVideoStarted(true);
+                    }}
+                    aria-label="Play process video"
+                    className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/5 transition-colors duration-300"
+                  >
+                    <span className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#B5A37A]/50 backdrop-blur-md ring-1 ring-white/40 text-white flex items-center justify-center shadow-lg group-hover:bg-[#B5A37A] group-hover:scale-105 transition-all duration-300">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                    <span className="absolute bottom-4 right-4 px-2.5 py-1 rounded-md bg-black/50 text-white text-xs font-medium">
+                      0:29
+                    </span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -463,7 +450,7 @@ export function HomePageContent() {
             <div className="lg:col-span-5">
               <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Where We Ship</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4 leading-tight">
-                Serving Buyers Worldwide
+                Serving buyers <span className="italic font-normal text-[#8C7A4F] rtl:not-italic">worldwide</span>
               </h2>
               <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
                 From the Middle East to North America, we deliver premium
@@ -554,70 +541,59 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Blog Features */}
-      <section className="py-20 bg-white">
+      {/* Buyer guides */}
+      <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Insights</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-              Vanilla Industry Insights
-            </h2>
-            <p className="text-lg text-[#6B6358] max-w-2xl mx-auto">
-              Expert guides on sourcing, quality, and export from Indonesia.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                slug: "halal-vanilla-supplier-middle-east",
-                title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
-                date: "April 15, 2026",
-                category: "Market Guide",
-              },
-              {
-                slug: "vanilla-paste-bulk-order",
-                title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
-                date: "April 12, 2026",
-                category: "Product Guide",
-              },
-              {
-                slug: "wholesale-vanilla-beans-indonesia",
-                title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
-                date: "April 10, 2026",
-                category: "Wholesale Guide",
-              },
-            ].map((post) => (
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5">
+              <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Insights</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4 leading-tight">
+                Guides for <span className="italic font-normal text-[#8C7A4F] rtl:not-italic">vanilla buyers</span>
+              </h2>
+              <p className="text-lg text-[#6B6358] leading-relaxed mb-8">
+                Sourcing, quality and export from Indonesia, explained plainly.
+              </p>
               <Link
-                key={post.slug}
-                href={`${prefix}/blog/${post.slug}`}
-                className="group flex flex-col p-7 bg-white rounded-2xl border border-[#E5E0D8] hover:border-[#B5A37A]/60 hover:shadow-md transition-all duration-300"
+                href={`${prefix}/blog`}
+                className="group inline-flex items-center text-sm font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
               >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-3">
-                  {post.category}
-                </p>
-                <h3 className="text-lg font-semibold leading-snug text-[#2C2518] group-hover:text-[#B5A37A] transition-colors mb-6">
-                  {post.title}
-                </h3>
-                <div className="mt-auto flex items-center justify-between text-sm">
-                  <span className="text-[#9A9187]">{post.date}</span>
-                  <span className="inline-flex items-center font-medium text-[#2C2518] group-hover:text-[#B5A37A] transition-colors">
-                    Read
-                    <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </div>
+                Read all articles
+                <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 rtl:rotate-180 transition-transform" />
               </Link>
-            ))}
-          </div>
+            </div>
 
-          <div className="text-center mt-10">
-            <Link
-              href={`${prefix}/blog`}
-              className="inline-flex items-center text-sm font-semibold text-[#B5A37A] hover:text-[#A8956A] transition-colors"
-            >
-              Read all articles
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Link>
+            <ul className="lg:col-span-7 border-t border-[#E5E0D8]">
+            {[
+                {
+                  slug: "halal-vanilla-supplier-middle-east",
+                  title: "Halal Certified Vanilla Supplier for Middle East & Global Markets",
+                  date: "April 15, 2026",
+                  category: "Market Guide",
+                },
+                {
+                  slug: "vanilla-paste-bulk-order",
+                  title: "Vanilla Paste Bulk Order: Specifications for Food Manufacturers",
+                  date: "April 12, 2026",
+                  category: "Product Guide",
+                },
+                {
+                  slug: "wholesale-vanilla-beans-indonesia",
+                  title: "Wholesale Vanilla Beans from Indonesia: B2B Buyer Guide 2026",
+                  date: "April 10, 2026",
+                  category: "Wholesale Guide",
+                },
+].map((post) => (
+                <li key={post.slug} className="border-b border-[#E5E0D8]">
+                  <Link href={`${prefix}/blog/${post.slug}`} className="group flex items-center gap-6 py-6">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B5A37A] mb-1.5">{post.category}</p>
+                      <h3 className="text-lg font-semibold leading-snug text-[#2C2518] group-hover:text-[#8C7A4F] transition-colors">{post.title}</h3>
+                    </div>
+                    <ArrowRight className="w-5 h-5 flex-shrink-0 text-[#B5A37A] group-hover:translate-x-1 rtl:rotate-180 transition-transform" aria-hidden="true" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -627,7 +603,7 @@ export function HomePageContent() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Free Samples</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] mb-4">
-            Ready to Start Your Vanilla Journey?
+            Start with a <span className="italic font-normal text-[#8C7A4F] rtl:not-italic">free sample</span>
           </h2>
           <p className="text-lg text-[#6B6358] mb-8">
             Get a free sample and a quote within 24 hours. Orders from 1 kg at wholesale pricing.
