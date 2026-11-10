@@ -90,7 +90,7 @@ const benefits = [
     icon: Sprout,
     title: "Direct from Java",
     description:
-      "We work hand in hand with vanilla farmers in Java, so there are no middlemen between their harvest and your order.",
+      "Our vanilla comes straight from the farmers who grow it in Java, so there are no middlemen between their harvest and your order.",
   },
   {
     icon: ShieldCheck,

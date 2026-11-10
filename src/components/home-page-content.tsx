@@ -170,10 +170,9 @@ export function HomePageContent() {
                 Where Our Vanilla<br className="hidden sm:block" /> Comes From
               </h2>
               <p className="text-white/70 leading-relaxed text-lg mb-10">
-                Our vanilla grows on smallholder plantations across Java, where rich volcanic
-                soil and a tropical climate give V. planifolia its deep, creamy character. We work
-                hand in hand with the farmers who grow it, so you get fresher beans, fair prices
-                and a supply you can rely on.
+                Our vanilla grows on smallholder farms across Java, where volcanic soil and a
+                tropical climate give V. planifolia its deep, creamy character. It comes to you
+                straight from the farmers who grow it.
               </p>
 
               <dl className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">

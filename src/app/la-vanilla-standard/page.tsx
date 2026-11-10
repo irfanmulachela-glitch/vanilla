@@ -43,7 +43,7 @@ const steps = [
     title: "Sourcing",
     lead: "Vanilla planifolia from partner farmers in Java.",
     description:
-      "We work hand in hand with vanilla farmers across Java. Every lot is Vanilla planifolia, the classic vanilla species, and we stay in touch with each farm through the season.",
+      "Our vanilla comes straight from farmers across Java. Every lot is Vanilla planifolia, the classic vanilla species, and we stay in touch with each farm through the season.",
     checks: [
       "Partner farmers across Java",
       "Vanilla planifolia only",

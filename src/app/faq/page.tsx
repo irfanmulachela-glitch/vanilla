@@ -134,7 +134,7 @@ const faqs = [
       },
       {
         q: "How do you work with farmers?",
-        a: "We work hand in hand with smallholder farmers across Java, with no traders in between. Our vanilla is only as good as the people who grow it, so we stay close to them season after season.",
+        a: "Our vanilla comes straight from smallholder farmers across Java, with no traders in between. It is only as good as the people who grow it, so we stay close to them season after season.",
       },
       {
         q: "Are your products US Import Ready?",
