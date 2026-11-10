@@ -397,7 +397,7 @@ export function HomePageContent() {
       </section>
 
       {/* Grade comparison (compact; full specifications live on the beans page) */}
-      <section className="py-20 lg:py-24 bg-[#F8F6F2]" aria-labelledby="grades-heading">
+      <section className="py-20 lg:py-24 bg-white" aria-labelledby="grades-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-5">
