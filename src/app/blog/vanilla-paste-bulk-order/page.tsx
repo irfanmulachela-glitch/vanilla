@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Bulk vanilla paste for food manufacturers: custom formulations, concentration levels, packaging, and flexible quantities direct from Indonesian producer.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Vanilla Paste Bulk Order Specs",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla paste bulk",
-    "vanilla paste manufacturer",
-    "bulk vanilla paste order",
-    "vanilla paste supplier",
-    "custom vanilla paste",
-  ],
   alternates: {
     canonical: "/blog/vanilla-paste-bulk-order",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "Vanilla Paste Bulk Order Specs | La Vanilla Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog/vanilla-paste-bulk-order`,
     type: "article",
   },
-  twitter: twitterCard("Vanilla Paste Bulk Order Specs | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Vanilla Paste Bulk Order Specs | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 export default function VanillaPasteBulkOrder() {
@@ -45,7 +38,7 @@ export default function VanillaPasteBulkOrder() {
               url: `${siteConfig.url}/blog/vanilla-paste-bulk-order`,
               datePublished: "2026-04-12",
               dateModified: "2026-04-12",
-              image: [`${siteConfig.url}/og-image.png`],
+              image: [`${siteConfig.url}/blog-featured-v3.webp`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -239,6 +232,39 @@ export default function VanillaPasteBulkOrder() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="bg-[#F8F6F2] py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Related Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/blog/vanilla-paste-vs-extract"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Product Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Vanilla Paste vs Vanilla Extract: Which Should You Use?
+              </h3>
+            </Link>
+            <Link
+              href="/blog/bulk-vanilla-ordering-guide"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Sourcing Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Bulk Vanilla Ordering Guide for Food Manufacturers
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

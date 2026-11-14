@@ -421,7 +421,7 @@ export default function VanillaGradingChart({ showTitle = false }: { showTitle?:
             ))}
           </div>
 
-          <h4 className="text-2xl font-bold text-[#2C2518] mb-3">{grade.name}</h4>
+          <h3 className="text-2xl font-bold text-[#2C2518] mb-3">{grade.name}</h3>
           <p className="text-[#6B6358] leading-relaxed mb-7">{grade.description}</p>
 
           <dl className="border-t border-[#EEE9E1]">

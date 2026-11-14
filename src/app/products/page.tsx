@@ -4,11 +4,11 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, ChevronDown, Plus } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
-  "Indonesian vanilla beans (Grade A & B), custom vanilla paste and 100% pure vanilla powder from Java. Free samples, private label, orders from 1 kg, air freight worldwide.";
+  "Indonesian vanilla beans (Grade A & B), custom paste and 100% pure powder from Java. Free samples, orders from 1 kg, air freight worldwide.";
 
 const faqs = [
   {
@@ -36,26 +36,18 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Vanilla Beans, Paste & Powder",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla beans Indonesia",
-    "vanilla paste manufacturer",
-    "vanilla powder supplier",
-    "wholesale vanilla products",
-    "Grade A vanilla beans",
-    "vanilla powder bulk",
-  ],
   alternates: {
     canonical: "/products",
     languages: languageAlternates("products"),
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/products-hero.webp", "Cured Indonesian vanilla beans drying before export", 1600, 1200),
     title: "Vanilla Beans, Paste & Powder",
     description: DESCRIPTION,
     url: `${siteConfig.url}/products`,
     type: "website",
   },
-  twitter: twitterCard("Vanilla Beans, Paste & Powder | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Vanilla Beans, Paste & Powder | La Vanilla Supplier", DESCRIPTION, "/products-hero.webp"),
 };
 
 export default function ProductsPage() {
@@ -344,33 +336,11 @@ export default function ProductsPage() {
         }}
       />
 
-      {/* ItemList Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            name: "Vanilla Products",
-            itemListElement: siteConfig.products.map((product, index) => ({
-              "@type": "ListItem",
-              position: index + 1,
-              item: {
-                "@type": "Product",
-                name: product.name,
-                description: product.shortDescription,
-                url: `${siteConfig.url}/products/${product.slug}`,
-                image: `${siteConfig.url}${product.image}`,
-                category: product.category,
-                brand: {
-                  "@type": "Brand",
-                  name: "La Vanilla Supplier",
-                },
-              },
-            })),
-          }),
-        }}
-      />
+      {/*
+        TODO (SEO): an ItemList of Product items can return here once real
+        prices are published. The previous list was removed 2026-11-14
+        because Product items without offers were flagged invalid by Google.
+      */}
 
       {/* JSON-LD */}
       <script

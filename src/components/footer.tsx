@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.products}</h4>
+            <h3 className="text-white font-semibold mb-4">{t.footer.products}</h3>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
@@ -115,7 +115,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.company}</h4>
+            <h3 className="text-white font-semibold mb-4">{t.footer.company}</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -132,9 +132,9 @@ export function Footer() {
 
           {/* Regions */}
           <div>
-            <h4 className="text-white font-semibold mb-4">
+            <h3 className="text-white font-semibold mb-4">
               {t.footer.exportRegions}
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {footerLinks.regions.map((link) => (
                 <li key={link.name}>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Plus } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Answers to common questions about ordering wholesale vanilla beans from Indonesia, including shipping, payment terms, certifications, and lead times for buyers.";
@@ -11,25 +11,18 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "FAQ: Orders, Shipping & Payment",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla supplier FAQ",
-    "vanilla beans ordering",
-    "wholesale vanilla MOQ",
-    "vanilla shipping",
-    "vanilla certifications",
-  ],
   alternates: {
     canonical: "/faq",
     languages: languageAlternates("faq"),
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/standard-grading-g.webp", "Grading Indonesian vanilla beans by hand", 1600, 1200),
     title: "FAQ: Orders, Shipping & Payment",
     description: DESCRIPTION,
     url: `${siteConfig.url}/faq`,
     type: "website",
   },
-  twitter: twitterCard("FAQ: Orders, Shipping & Payment | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("FAQ: Orders, Shipping & Payment | La Vanilla Supplier", DESCRIPTION, "/standard-grading-g.webp"),
 };
 
 const faqs = [
@@ -194,7 +187,7 @@ export default function FAQPage() {
               <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
                 <span className="font-bold">Questions buyers ask</span>{" "}
                 <br className="hidden sm:block" />
-                <span className="italic font-normal text-[#8C7A4F]">before ordering</span>
+                <span className="italic font-normal text-[#8C7A4F]">before ordering Indonesian vanilla</span>
               </h1>
               <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
                 Straight answers on ordering, quality, shipping, payment and documents. If yours
@@ -202,17 +195,17 @@ export default function FAQPage() {
               </p>
             </div>
 
-            <dl aria-label="Quick answers">
+            <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9A9187] mb-1">In short</p>
-              <div className="border-b border-[#E5E0D8]">
+              <dl aria-label="Quick answers" className="border-b border-[#E5E0D8]">
                 {QUICK_FACTS.map(([k, v], i) => (
                   <div key={k} className={`flex items-baseline justify-between gap-6 py-3.5 ${i ? "border-t border-[#E5E0D8]" : ""}`}>
                     <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B5A37A]">{k}</dt>
                     <dd className="font-medium text-[#2C2518] text-right">{v}</dd>
                   </div>
                 ))}
-              </div>
-            </dl>
+              </dl>
+            </div>
           </div>
         </div>
       </section>

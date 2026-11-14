@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Learn the 7 essential criteria for selecting a reliable vanilla supplier. Due diligence checklist for B2B buyers including quality, documentation, and pricing.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "How to Choose a Vanilla Supplier",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla supplier selection",
-    "choosing vanilla supplier",
-    "vanilla supplier checklist",
-    "B2B vanilla sourcing",
-    "vanilla supplier evaluation",
-  ],
   alternates: {
     canonical: "/blog/how-to-choose-right-vanilla-supplier",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "How to Choose a Vanilla Supplier | La Vanilla Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog/how-to-choose-right-vanilla-supplier`,
     type: "article",
   },
-  twitter: twitterCard("How to Choose a Vanilla Supplier | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("How to Choose a Vanilla Supplier | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 export default function HowToChooseRightVanillaSupplier() {
@@ -46,7 +39,7 @@ export default function HowToChooseRightVanillaSupplier() {
               url: `${siteConfig.url}/blog/how-to-choose-right-vanilla-supplier`,
               datePublished: "2026-03-20",
               dateModified: "2026-03-20",
-              image: [`${siteConfig.url}/og-image.png`],
+              image: [`${siteConfig.url}/blog-featured-v3.webp`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -275,6 +268,39 @@ export default function HowToChooseRightVanillaSupplier() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="bg-[#F8F6F2] py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Related Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/blog/sourcing-vanilla-beans-indonesia"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Sourcing Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                How to Source High-Quality Vanilla Beans from Indonesia
+              </h3>
+            </Link>
+            <Link
+              href="/blog/vanilla-bean-grading"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Quality
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Understanding Vanilla Bean Grading: Grade A vs Grade B
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

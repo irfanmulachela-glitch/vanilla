@@ -1,11 +1,11 @@
 import { siteConfig } from "./config";
 
-export function twitterCard(title: string, description: string) {
+export function twitterCard(title: string, description: string, image = "/og-image.png") {
   return {
     card: "summary_large_image" as const,
     title,
     description,
-    images: ["/og-image.png"],
+    images: [image],
   };
 }
 
@@ -17,3 +17,19 @@ export const ogImages = [
     alt: siteConfig.name,
   },
 ];
+
+/**
+ * Per-page Open Graph image. Pass the public/ path plus the image's real
+ * dimensions so social crawlers get a correct share card. Every page should
+ * use its own image instead of the generic brand fallback above.
+ */
+export function ogImageFor(src: string, alt: string, width: number, height: number) {
+  return [
+    {
+      url: `${siteConfig.url}${src}`,
+      width,
+      height,
+      alt,
+    },
+  ];
+}

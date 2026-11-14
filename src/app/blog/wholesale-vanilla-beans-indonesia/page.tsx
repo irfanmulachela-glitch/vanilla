@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Complete guide to buying wholesale vanilla beans from Indonesia. Grading, shipping terms, documentation, and pricing for B2B importers and food manufacturers.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Guide",
   description: DESCRIPTION,
-  keywords: [
-    "wholesale vanilla beans Indonesia",
-    "buy vanilla beans bulk Indonesia",
-    "vanilla bean supplier Indonesia",
-    "B2B vanilla beans",
-    "Indonesian vanilla exporter",
-  ],
   alternates: {
     canonical: "/blog/wholesale-vanilla-beans-indonesia",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "Wholesale Vanilla Beans Guide | La Vanilla Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog/wholesale-vanilla-beans-indonesia`,
     type: "article",
   },
-  twitter: twitterCard("Wholesale Vanilla Beans Guide | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Wholesale Vanilla Beans Guide | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 export default function WholesaleVanillaBeansIndonesia() {
@@ -45,7 +38,7 @@ export default function WholesaleVanillaBeansIndonesia() {
               url: `${siteConfig.url}/blog/wholesale-vanilla-beans-indonesia`,
               datePublished: "2026-04-10",
               dateModified: "2026-04-10",
-              image: [`${siteConfig.url}/og-image.png`],
+              image: [`${siteConfig.url}/blog-featured-v3.webp`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -276,6 +269,39 @@ export default function WholesaleVanillaBeansIndonesia() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="bg-[#F8F6F2] py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Related Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/blog/bulk-vanilla-ordering-guide"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Sourcing Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Bulk Vanilla Ordering Guide for Food Manufacturers
+              </h3>
+            </Link>
+            <Link
+              href="/blog/vanilla-bean-prices-indonesia"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Market Analysis
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Vanilla Bean Prices Indonesia 2026
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

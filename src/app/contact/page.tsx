@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { ContactForm } from "@/components/contact-form";
 import OrderingLadder from "@/components/ordering-ladder";
 import { UsAgentStrip } from "@/components/us-agent";
@@ -12,26 +12,19 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Contact Us for Vanilla Quotes",
   description: DESCRIPTION,
-  keywords: [
-    "contact vanilla supplier",
-    "vanilla bean quote",
-    "wholesale vanilla inquiry",
-    "vanilla supplier Indonesia contact",
-    "vanilla export inquiry",
-  ],
   alternates: {
     canonical: "/contact",
     languages: languageAlternates("contact"),
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/hero-vanilla-farm.jpg", "Vanilla farm in Java, Indonesia", 1376, 768),
     title: "Contact Us for Vanilla Quotes",
     description: DESCRIPTION,
     url: `${siteConfig.url}/contact`,
     siteName: siteConfig.name,
     type: "website",
   },
-  twitter: twitterCard("Contact Us for Vanilla Quotes | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Contact Us for Vanilla Quotes | La Vanilla Supplier", DESCRIPTION, "/hero-vanilla-farm.jpg"),
 };
 
 export default function ContactPage() {
@@ -46,7 +39,7 @@ export default function ContactPage() {
               <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
                 <span className="font-bold">Let&apos;s talk about</span>{" "}
                 <br className="hidden sm:block" />
-                <span className="italic font-normal text-[#8C7A4F]">your vanilla</span>
+                <span className="italic font-normal text-[#8C7A4F]">your Indonesian vanilla</span>
               </h1>
               <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
                 Ask for a quote, request a free sample or just ask a question. We reply within
@@ -106,6 +99,31 @@ export default function ContactPage() {
               { name: "Contact", url: "/contact" },
             ])
           ),
+        }}
+      />
+
+      {/* LocalBusiness JSON-LD: only facts stated on this page and the
+          homepage Organization schema. No street address is published, so
+          none is given here. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: siteConfig.name,
+            legalName: "PT Penta Pelita Semesta",
+            url: siteConfig.url,
+            telephone: siteConfig.social.whatsapp,
+            email: siteConfig.social.email,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Surakarta",
+              addressRegion: "Central Java",
+              addressCountry: "ID",
+            },
+            openingHours: "Mo-Sa 08:00-17:00",
+          }),
         }}
       />
 

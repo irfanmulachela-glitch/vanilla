@@ -6,16 +6,17 @@ import { usePathname } from "next/navigation";
 /**
  * Scroll animations for every page, without touching page code:
  * 1. Sections: content fades up as it scrolls into view (staggered).
- * 2. Numbers: elements marked `data-count` count up from zero.
- * 3. Photos: cover images ease from a slight zoom back to normal.
- * 4. Lines: gold accent lines draw in; divider lines sweep in as a gold line
+ * 2. Photos: cover images ease from a slight zoom back to normal.
+ * 3. Lines: gold accent lines draw in; divider lines sweep in as a gold line
  *    from left to right, then soften to their normal colour.
- * 5. Hero photo: elements marked `data-parallax` drift slower than the page
+ * 4. Hero photo: elements marked `data-parallax` drift slower than the page
  *    (large screens only).
  *
- * Anything already on screen when a page loads keeps its final state (except
- * numbers, which are hidden by CSS until this runs). Nothing animates for
- * visitors who ask their device for reduced motion.
+ * Numbers used to count up from zero (see git history), but that left
+ * "0 kg" / "0–0 days" / "0.0–0.0%" on screen at first paint and in
+ * screenshots, so key figures now render their final values directly.
+ * Anything already on screen when a page loads keeps its final state.
+ * Nothing animates for visitors who ask their device for reduced motion.
  */
 const MAX_STAGGER = 6;
 const STEP_MS = 90;
@@ -77,32 +78,6 @@ function finish(el: HTMLElement, classes: string[], prop: string, ms: number) {
   window.setTimeout(done, ms);
 }
 
-/* ---------- numbers ---------- */
-const NUM = /\d+(?:\.\d+)?/g;
-
-function countUp(el: HTMLElement) {
-  const final = el.dataset.countFinal ?? el.textContent ?? "";
-  const nums = final.match(NUM);
-  if (!nums) {
-    el.textContent = final;
-    return;
-  }
-  const dur = 1400;
-  const start = performance.now();
-  const ease = (t: number) => 1 - Math.pow(1 - t, 3);
-  const frame = (now: number) => {
-    const t = Math.min(1, (now - start) / dur);
-    const k = ease(t);
-    el.textContent = final.replace(NUM, (m) => {
-      const dec = m.includes(".") ? m.split(".")[1].length : 0;
-      return (parseFloat(m) * k).toFixed(dec);
-    });
-    if (t < 1) requestAnimationFrame(frame);
-    else el.textContent = final;
-  };
-  requestAnimationFrame(frame);
-}
-
 export function ScrollReveal() {
   const pathname = usePathname();
 
@@ -144,18 +119,7 @@ export function ScrollReveal() {
         }),
       );
 
-      /* 2. Numbers (count up even near the top: they are hidden until now) */
-      const counters = Array.from(main.querySelectorAll<HTMLElement>("[data-count]")).filter(
-        (el) => !el.dataset.countFinal,
-      );
-      for (const el of counters) {
-        el.dataset.countFinal = el.textContent ?? "";
-        if ((el.textContent ?? "").match(NUM)) el.textContent = el.textContent!.replace(NUM, (m) => (m.includes(".") ? "0.0" : "0"));
-        el.dataset.counting = "1";
-      }
-      observers.push(onEnter(counters, (el) => window.setTimeout(() => countUp(el), 150), "0px 0px -5% 0px"));
-
-      /* 3. Photos */
+      /* 2. Photos */
       const photos = Array.from(main.querySelectorAll<HTMLImageElement>("img")).filter((img) => {
         if (!belowFold(img) || img.dataset.srImg) return false;
         const box = img.parentElement;
@@ -175,7 +139,7 @@ export function ScrollReveal() {
         }),
       );
 
-      /* 4. Lines: gold accent bars and top divider lines */
+      /* 3. Lines: gold accent bars and top divider lines */
       const lines: HTMLElement[] = [];
       main.querySelectorAll<HTMLElement>("span, div, li, dl, ol, ul, hr, p").forEach((el) => {
         if (el.dataset.srLine || !belowFold(el)) return;
@@ -234,7 +198,7 @@ export function ScrollReveal() {
         }),
       );
 
-      /* 5. Hero photo drift (large screens only) */
+      /* 4. Hero photo drift (large screens only) */
       const drifters = Array.from(main.querySelectorAll<HTMLElement>("[data-parallax]"));
       if (drifters.length && window.matchMedia("(min-width: 1024px)").matches) {
         let ticking = false;
@@ -272,9 +236,6 @@ export function ScrollReveal() {
       document
         .querySelectorAll<HTMLElement>(".sr-hidden, .sr-img-hidden, .sr-bar-hidden, .sr-rule-hidden")
         .forEach((el) => el.classList.remove("sr-hidden", "sr-img-hidden", "sr-bar-hidden", "sr-rule-hidden"));
-      document.querySelectorAll<HTMLElement>("[data-count-final]").forEach((el) => {
-        el.textContent = el.dataset.countFinal ?? el.textContent;
-      });
     };
   }, [pathname]);
 

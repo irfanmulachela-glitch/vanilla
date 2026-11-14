@@ -36,6 +36,12 @@ const nextConfig: NextConfig = {
         destination: "/regions/usa",
         permanent: true,
       },
+      {
+        // Merged 2026-11-14 into the longer storage guide (duplicate content).
+        source: "/blog/vanilla-bean-storage-shelf-life",
+        destination: "/blog/vanilla-bean-storage-best-practices",
+        permanent: true,
+      },
     ];
   },
   async headers() {

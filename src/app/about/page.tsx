@@ -4,34 +4,27 @@ import Image from "next/image";
 import { ArrowRight, CalendarDays, Users, Globe, BadgeCheck } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { QuickAnswer } from "@/components/quick-answer";
 
 const DESCRIPTION =
-  "About La Vanilla Supplier: an Indonesian vanilla exporter in Java supplying vanilla beans, paste and powder to food makers, importers and distributors in 20+ countries.";
+  "La Vanilla Supplier is an Indonesian vanilla exporter in Java, supplying beans, paste and powder to food makers and importers in 20+ countries.";
 
 export const metadata: Metadata = {
-  title: "About Us: Indonesian Vanilla Exporter in Java",
+  title: "About Us: Indonesian Vanilla Exporter",
   description: DESCRIPTION,
-  keywords: [
-    "about La Vanilla Supplier",
-    "Indonesian vanilla exporter",
-    "vanilla supplier Java",
-    "PT Penta Pelita Semesta",
-    "Indonesian vanilla quality",
-  ],
   alternates: {
     canonical: "/about",
     languages: languageAlternates("about"),
   },
   openGraph: {
-    images: ogImages,
-    title: "About Us: Indonesian Vanilla Exporter in Java",
+    images: ogImageFor("/about-hero.webp", "Green vanilla pods growing on the vine in Java", 2400, 1600),
+    title: "About Us: Indonesian Vanilla Exporter",
     description: DESCRIPTION,
     url: `${siteConfig.url}/about`,
     type: "website",
   },
-  twitter: twitterCard("About Us | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("About Us: Indonesian Vanilla Exporter | La Vanilla Supplier", DESCRIPTION, "/about-hero.webp"),
 };
 
 const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
@@ -137,23 +130,26 @@ export default function AboutPage() {
       {/* Key figures */}
       <section aria-label="Key figures" className="bg-white border-b border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
+          {/* Key figures: plain divs, not a dl — the icon sits beside the
+              text block, which a description list cannot express without
+              nesting dt/dd two divs deep (invalid HTML). */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
             {figures.map((fig) => (
               <div key={fig.label} className="flex items-start gap-3.5 lg:gap-4 lg:px-8 lg:py-10 first:lg:ps-0 last:lg:pe-0">
                 <fig.icon className="w-5 h-5 mt-1 flex-shrink-0 text-[#B5A37A]" strokeWidth={1.6} aria-hidden="true" />
                 <div className="min-w-0">
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
-                  <dd className="mt-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</p>
+                  <p className="mt-1.5">
                     <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
-                      <span dir="ltr" data-count className="tabular-nums">{fig.value}</span>
+                      <span dir="ltr" className="tabular-nums">{fig.value}</span>
                       {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
                     </span>
                     <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>
-                  </dd>
+                  </p>
                 </div>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 

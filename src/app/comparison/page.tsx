@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Compare Grade A gourmet vs Grade B extraction vanilla beans: vanillin content, moisture, bean length, pricing, and use cases. Sourced direct from Indonesia.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Grade A vs Grade B Vanilla Beans",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla bean comparison",
-    "Grade A vs Grade B vanilla",
-    "vanilla bean specifications",
-    "Indonesian vanilla moisture content",
-    "vanilla vanillin content",
-  ],
   alternates: {
     canonical: "/comparison",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/standard-harvest-g.webp", "Harvesting vanilla beans in Java", 1600, 1200),
     title: "Grade A vs Grade B Vanilla Beans",
     description: DESCRIPTION,
     url: `${siteConfig.url}/comparison`,
     type: "website",
   },
-  twitter: twitterCard("Grade A vs Grade B Vanilla Beans | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Grade A vs Grade B Vanilla Beans | La Vanilla Supplier", DESCRIPTION, "/standard-harvest-g.webp"),
 };
 
 export default function ComparisonPage() {

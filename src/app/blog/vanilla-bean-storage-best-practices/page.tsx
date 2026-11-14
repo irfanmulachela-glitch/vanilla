@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Learn how to store vanilla beans properly to maximize shelf life, preserve flavor, and maintain quality. Storage guidelines for retailers and manufacturers.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Vanilla Bean Storage Best Practices",
   description: DESCRIPTION,
-  keywords: [
-    "vanilla bean storage",
-    "vanilla shelf life",
-    "how to store vanilla beans",
-    "vanilla storage temperature",
-    "vanilla bean preservation",
-  ],
   alternates: {
     canonical: "/blog/vanilla-bean-storage-best-practices",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "Vanilla Bean Storage Best Practices | La Vanilla Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog/vanilla-bean-storage-best-practices`,
     type: "article",
   },
-  twitter: twitterCard("Vanilla Bean Storage Best Practices | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Vanilla Bean Storage Best Practices | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 export default function VanillaBeanStorageBestPractices() {
@@ -45,8 +38,8 @@ export default function VanillaBeanStorageBestPractices() {
               description: "Learn how to store vanilla beans properly to maximize shelf life, preserve flavor, and maintain quality.",
               url: `${siteConfig.url}/blog/vanilla-bean-storage-best-practices`,
               datePublished: "2026-03-25",
-              dateModified: "2026-03-25",
-              image: [`${siteConfig.url}/og-image.png`],
+              dateModified: "2026-11-14",
+              image: [`${siteConfig.url}/blog-featured-v3.webp`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -131,7 +124,7 @@ export default function VanillaBeanStorageBestPractices() {
                 Temperature
               </h3>
               <p className="text-[#6B6358] leading-relaxed mb-4">
-                Store vanilla beans at 15-25°C (59-77°F). Avoid temperatures above 30°C (86°F) which accelerate flavor loss. Freezing is possible but can cause texture changes upon thawing.
+                Store vanilla beans at 15-25°C (59-77°F). Avoid temperatures above 30°C (86°F) which accelerate flavor loss. Freezing is possible but can cause texture changes upon thawing, so thaw completely before use.
               </p>
               <ul className="list-disc list-inside text-[#6B6358] space-y-2 pl-4">
                 <li><strong className="text-[#2C2518]">Ideal:</strong> 18-22°C (64-72°F)</li>
@@ -223,6 +216,9 @@ export default function VanillaBeanStorageBestPractices() {
               <li><strong className="text-[#2C2518]">Faded color</strong> — UV damage (flavor likely degraded)</li>
               <li><strong className="text-[#2C2518]">Weak aroma</strong> — vanillin degradation (quality compromised)</li>
             </ul>
+            <p className="text-[#6B6358] leading-relaxed mb-6">
+              Note: fine white crystals on the pod are usually vanillin, a sign of quality, not mold.
+            </p>
 
             <h2 className="text-2xl font-bold text-[#2C2518] mt-12 mb-4">
               Storage Container Options
@@ -231,7 +227,7 @@ export default function VanillaBeanStorageBestPractices() {
               Choose containers based on your storage duration and use case:
             </p>
             <ul className="list-disc list-inside text-[#6B6358] space-y-2 mb-6 pl-4">
-              <li><strong className="text-[#2C2518]">Vacuum-sealed bags</strong> — best for long-term storage (12+ months)</li>
+              <li><strong className="text-[#2C2518]">Vacuum-sealed bags</strong> — best for long-term storage (up to 36 months)</li>
               <li><strong className="text-[#2C2518]">Glass jars with tight lids</strong> — good for retail display and medium-term storage</li>
               <li><strong className="text-[#2C2518]">Food-grade plastic containers</strong> — acceptable for short-term (3-6 months)</li>
               <li><strong className="text-[#2C2518]">Avoid:</strong> Paper bags, open containers, or anything with strong odors (vanilla absorbs smells)</li>
@@ -254,7 +250,7 @@ export default function VanillaBeanStorageBestPractices() {
               Conclusion
             </h2>
             <p className="text-[#6B6358] leading-relaxed mb-6">
-              Proper vanilla bean storage protects your investment and ensures consistent quality for customers. Follow these guidelines to maximize shelf life and maintain the premium characteristics that justify vanilla's value.
+              Proper vanilla bean storage protects your investment and ensures consistent quality for customers. Follow these guidelines to maximize shelf life and maintain the premium characteristics that justify vanilla&apos;s value.
             </p>
           </div>
 
@@ -297,6 +293,39 @@ export default function VanillaBeanStorageBestPractices() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="bg-[#F8F6F2] py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Related Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/blog/vanilla-bean-quality-testing-methods"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Quality
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Vanilla Bean Quality Testing Methods: Complete Guide for B2B Buyers
+              </h3>
+            </Link>
+            <Link
+              href="/blog/vanilla-bean-grading"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Quality
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Understanding Vanilla Bean Grading: Grade A vs Grade B
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

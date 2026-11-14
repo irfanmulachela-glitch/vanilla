@@ -5,7 +5,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const META_DESCRIPTIONS: Record<string, string> = {
   uae: "Premium Indonesian vanilla supplier for Dubai, Abu Dhabi, and the GCC. Halal certified beans, paste, and powder with fast air freight and flexible quantities.",
@@ -33,7 +33,6 @@ type RegionConfig = {
   headline: string;
   intro: string;
   description: string;
-  keywords: string[];
   points: RegionPoint[];
   cities: string[];
 };
@@ -51,12 +50,6 @@ const regions: Record<string, RegionConfig> = {
       "Halal certified vanilla beans, paste and powder from Java, flown to Dubai, Abu Dhabi and across the Gulf in 3 to 7 days.",
     description:
       "Indonesian vanilla supplier for Dubai, Abu Dhabi and the GCC. Halal certified beans, paste and powder by air in 3-7 days.",
-    keywords: [
-      "vanilla supplier UAE",
-      "vanilla beans Dubai",
-      "wholesale vanilla Middle East",
-      "vanilla paste supplier Abu Dhabi",
-    ],
     points: [
       { title: "Halal certified by MUI", body: "Every product we supply is Halal certified by MUI, Indonesia's Halal authority." },
       { title: "Air freight to the Gulf", body: "Shipped by DHL, FedEx or air cargo to Dubai, Abu Dhabi, Riyadh and Doha in 3 to 7 days." },
@@ -74,12 +67,6 @@ const regions: Record<string, RegionConfig> = {
       "Gourmet and extraction grade vanilla from Java, flown to Sydney, Melbourne, Perth and beyond in 3 to 7 days, with the paperwork ready.",
     description:
       "Indonesian vanilla supplier for Sydney, Melbourne, Perth and across Australia, with a phytosanitary certificate on every shipment.",
-    keywords: [
-      "vanilla supplier Australia",
-      "vanilla beans Sydney",
-      "wholesale vanilla Melbourne",
-      "vanilla paste supplier Perth",
-    ],
     points: [
       { title: "Phytosanitary certificate every time", body: "Australia checks plant products closely, so every shipment travels with a phytosanitary certificate." },
       { title: "Air freight to major cities", body: "Delivered to Sydney, Melbourne, Brisbane, Perth and Adelaide in 3 to 7 days." },
@@ -97,12 +84,6 @@ const regions: Record<string, RegionConfig> = {
       "Vanilla beans, paste and powder from Java, shipped to both coasts in 3 to 7 days, with an authorized agent on the ground in the US.",
     description:
       "Indonesian vanilla supplier for buyers across the United States, with full export documents and an authorized US agent.",
-    keywords: [
-      "vanilla supplier USA",
-      "vanilla beans New York",
-      "wholesale vanilla California",
-      "vanilla paste supplier Texas",
-    ],
     points: [
       { title: "Regular US shipments", body: "DHL, FedEx or air cargo to the East and West coast in 3 to 7 days." },
       { title: "Import paperwork in order", body: DOCS },
@@ -120,12 +101,6 @@ const regions: Record<string, RegionConfig> = {
       "Gourmet and extraction grade vanilla from Java, flown to Europe's main cities in 3 to 7 days, with every document your importer needs.",
     description:
       "Indonesian vanilla supplier for the Netherlands, France, Germany and across Europe, with full export documents.",
-    keywords: [
-      "vanilla supplier Europe",
-      "vanilla beans Netherlands",
-      "wholesale vanilla France",
-      "vanilla paste supplier Germany",
-    ],
     points: [
       { title: "Documents for import", body: DOCS },
       { title: "Air freight to main hubs", body: "Delivered to Amsterdam, Paris, Berlin, London, Milan and Barcelona in 3 to 7 days." },
@@ -174,18 +149,17 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: region.keywords,
     alternates: {
       canonical: `/regions/${slug}`,
     },
     openGraph: {
-      images: ogImages,
+      images: ogImageFor("/wholesale-hero.jpeg", "Vanilla vines growing on a farm in Java, Indonesia", 1448, 1086),
       title,
       description,
       url: `${siteConfig.url}/regions/${slug}`,
       type: "website",
     },
-    twitter: twitterCard(`${title} | La Vanilla Supplier`, description),
+    twitter: twitterCard(`${title} | La Vanilla Supplier`, description, "/wholesale-hero.jpeg"),
   };
 }
 

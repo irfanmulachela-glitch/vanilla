@@ -3,18 +3,6 @@ export const siteConfig = {
   description: "Premium Indonesian vanilla supplier for wholesale, B2B, and direct export. Food Safety Standards. 10+ years experience shipping to 20+ countries.",
   url: "https://www.lavanillasupplier.com",
   ogImage: "/og-image.png",
-  keywords: [
-    "vanilla supplier Indonesia",
-    "wholesale vanilla beans",
-    "vanilla paste manufacturer",
-    "vanilla powder supplier",
-    "B2B vanilla exporter",
-    "Quality Assured vanilla",
-    "premium vanilla beans",
-    "vanilla extract supplier",
-    "Sustainably Sourced vanilla Indonesia",
-    "bulk vanilla supplier",
-  ],
   social: {
     whatsapp: "+6287835756945",
     email: "admin@lavanillasupplier.com",

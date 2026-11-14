@@ -51,7 +51,7 @@ export function HomePageContent() {
             </p>
             <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.75rem] text-[#2C2518] mb-5 leading-[1.05] tracking-tight font-[family-name:var(--font-libre)]">
               <span className="font-normal italic">Stop Worrying</span>{" "}
-              <span className="font-bold">About Vanilla Supply</span>
+              <span className="font-bold">About Indonesian Vanilla Supply</span>
             </h1>
             <p className="text-lg text-[#8C7A4F] font-medium mb-4 italic">
               {t.home.heroSubtitle}
@@ -87,29 +87,31 @@ export function HomePageContent() {
         </div>
       </section>
 
-      {/* Key figures */}
+      {/* Key figures: plain divs, not a dl — the icon sits beside the
+          text block, which a description list cannot express without
+          nesting dt/dd two divs deep (invalid HTML). */}
       <section aria-label="Key figures" className="bg-white border-y border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
             {t.home.figures.map((fig, i) => {
               const Icon = [Package, Plane, Boxes, Globe][i] ?? Package;
               return (
                 <div key={fig.label} className="flex items-start gap-3.5 lg:gap-4 lg:px-8 lg:py-10 first:lg:ps-0 last:lg:pe-0">
                   <Icon className="w-5 h-5 mt-1 flex-shrink-0 text-[#B5A37A]" strokeWidth={1.6} aria-hidden="true" />
                   <div className="min-w-0">
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
-                    <dd className="mt-1.5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</p>
+                    <p className="mt-1.5">
                       <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
-                        <span dir="ltr" data-count className="tabular-nums">{fig.value}</span>
+                        <span dir="ltr" className="tabular-nums">{fig.value}</span>
                         {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
                       </span>
                       <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>
-                    </dd>
+                    </p>
                   </div>
                 </div>
               );
             })}
-          </dl>
+          </div>
         </div>
       </section>
 
@@ -198,6 +200,8 @@ export function HomePageContent() {
                 <img
                   src="/indonesia-map-java.svg"
                   alt="Map of Indonesia with Java highlighted"
+                  width={805}
+                  height={330}
                   className="w-full h-auto"
                   loading="lazy"
                 />
@@ -295,7 +299,7 @@ export function HomePageContent() {
                   className="absolute inset-0 w-full h-full object-cover"
                   controls={videoStarted}
                   poster="/process-poster.jpg"
-                  preload="metadata"
+                  preload="none"
                   playsInline
                   onPlay={() => setVideoStarted(true)}
                   onEnded={() => setVideoStarted(false)}
@@ -430,12 +434,10 @@ export function HomePageContent() {
                   { spec: "Vanillin", a: "1.1–2.5%", b: "1.0–2.0%" },
                   { spec: "Length", a: "15–20 cm", b: "10–14 cm" },
                 ].map((row) => (
-                  <div key={row.spec} className="py-5 border-b border-[#E5E0D8]">
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187] mb-1.5">{row.spec}</dt>
-                    <div className="grid grid-cols-2 gap-x-6 sm:gap-x-10">
-                      <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.a}</dd>
-                      <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.b}</dd>
-                    </div>
+                  <div key={row.spec} className="py-5 border-b border-[#E5E0D8] grid grid-cols-2 gap-x-6 sm:gap-x-10">
+                    <dt className="col-span-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187] mb-1.5">{row.spec}</dt>
+                    <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.a}</dd>
+                    <dd className="text-base sm:text-lg font-medium text-[#2C2518]">{row.b}</dd>
                   </div>
                 ))}
               </dl>

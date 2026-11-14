@@ -415,7 +415,7 @@ function Gallery({ slides }: { slides: Slide[] }) {
                 i === index ? "ring-2 ring-[#B5A37A] ring-offset-2" : "opacity-60 hover:opacity-100"
               }`}
             >
-              <Image src={s.src} alt="" fill sizes="120px" className="object-cover" />
+              <Image src={s.src} alt="" fill sizes="120px" loading="eager" className="object-cover" />
             </button>
           ))}
         </div>
@@ -602,7 +602,7 @@ export default function ProductDetail({ slug }: { slug: string }) {
                     className="absolute inset-0 w-full h-full object-cover"
                     controls={videoStarted}
                     poster="/process-poster.jpg"
-                    preload="metadata"
+                    preload="none"
                     playsInline
                     onPlay={() => setVideoStarted(true)}
                     onEnded={() => setVideoStarted(false)}
@@ -640,9 +640,16 @@ export default function ProductDetail({ slug }: { slug: string }) {
             <div className="lg:col-span-4">
               <p className={EYEBROW}>Specifications</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#2C2518] leading-tight mb-4">Technical details</h2>
-              <p className="text-[#6B6358] leading-relaxed">
+              <p className="text-[#6B6358] leading-relaxed mb-6">
                 Everything your QC and import teams need before ordering. Need something different? Ask us.
               </p>
+              <Link
+                href="/la-vanilla-standard"
+                className="group inline-flex items-center text-sm font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+              >
+                How we grade every batch: The La Vanilla Standard
+                <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
             <dl className="lg:col-span-8 grid sm:grid-cols-2 gap-x-10 border-t border-[#E5E0D8]">
               {specs.map(([label, value]) => (
@@ -661,6 +668,15 @@ export default function ProductDetail({ slug }: { slug: string }) {
         <section className="py-20 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <VanillaGradingChart showTitle />
+            <p className="text-center mt-10">
+              <Link
+                href="/comparison"
+                className="group inline-flex items-center text-sm font-semibold text-[#2C2518] hover:text-[#8C7A4F] transition-colors"
+              >
+                Compare Grade A and Grade B side by side
+                <ArrowRight className="ms-2 w-4 h-4 text-[#B5A37A] group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </p>
           </div>
         </section>
       )}

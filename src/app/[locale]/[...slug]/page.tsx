@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/config";
 import { type Locale, locales, getTranslations } from "@/i18n";
 import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImages, ogImageFor } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -66,6 +66,19 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
 };
 
+/** Same per-page share image as the English page. [src, alt, width, height] */
+const PAGE_OG_IMAGE: Record<string, [string, string, number, number]> = {
+  products: ["/products-hero.webp", "Cured Indonesian vanilla beans drying before export", 1600, 1200],
+  "products/vanilla-beans": ["/vanilla-beans-a-s1.webp", "Indonesian vanilla beans from La Vanilla Supplier", 1600, 1200],
+  "products/vanilla-paste": ["/vanilla-paste-1.webp", "Indonesian vanilla paste from La Vanilla Supplier", 1600, 1200],
+  "products/vanilla-powder": ["/vanilla-powder-1.webp", "Indonesian vanilla powder from La Vanilla Supplier", 1600, 1200],
+  about: ["/about-hero.webp", "Green vanilla pods growing on the vine in Java", 2400, 1600],
+  contact: ["/hero-vanilla-farm.jpg", "Vanilla farm in Java, Indonesia", 1376, 768],
+  faq: ["/standard-grading-g.webp", "Grading Indonesian vanilla beans by hand", 1600, 1200],
+  wholesale: ["/wholesale-hero.webp", "Vanilla vines growing on a farm in Java, Indonesia", 2400, 1800],
+  "la-vanilla-standard": ["/la-vanilla-standard-hero.jpg", "Vanilla beans drying on wooden racks at a partner farm in Java", 1920, 1080],
+};
+
 export async function generateMetadata({ params }: LocaleSlugPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!locales.includes(locale as Locale)) return {};
@@ -78,6 +91,7 @@ export async function generateMetadata({ params }: LocaleSlugPageProps): Promise
   }
 
   const meta = PAGE_META[path];
+  const og = PAGE_OG_IMAGE[path];
 
   return {
     title: meta?.title,
@@ -89,14 +103,14 @@ export async function generateMetadata({ params }: LocaleSlugPageProps): Promise
     ...(meta
       ? {
           openGraph: {
-            images: ogImages,
+            images: og ? ogImageFor(...og) : ogImages,
             title: meta.title,
             description: meta.description,
             url: `${siteConfig.url}${canonical}`,
             siteName: siteConfig.name,
             type: "website" as const,
           },
-          twitter: twitterCard(`${meta.title} | La Vanilla Supplier`, meta.description),
+          twitter: twitterCard(`${meta.title} | La Vanilla Supplier`, meta.description, og?.[0]),
         }
       : {}),
   };

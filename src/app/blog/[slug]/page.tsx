@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, User, ArrowLeft, Clock, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import VanillaGradingChart from "@/components/vanilla-grading-chart";
 
@@ -403,72 +404,6 @@ const blogPosts = {
       <p>Indonesia, with its Muslim-majority population, is a natural source for halal vanilla products. Many Indonesian suppliers hold recognized halal certifications.</p>
     `,
   },
-  "vanilla-bean-storage-shelf-life": {
-    title: "How to Store Vanilla Beans: Shelf Life & Best Practices",
-    seoTitle: "Vanilla Storage & Shelf Life",
-    seoDescription: "How to store vanilla beans for maximum shelf life: temperature, humidity, vacuum sealing, and handling best practices for retailers and food manufacturers.",
-    excerpt:
-      "Learn how to properly store vanilla beans to maximize shelf life, preserve flavor, and maintain quality for food manufacturers and retailers.",
-    category: "Quality",
-    date: "2026-02-01",
-    readTime: "6 min read",
-    content: `
-      <p>Proper storage of vanilla beans is essential for maintaining quality, flavor, and shelf life. Whether you're a food manufacturer, retailer, or distributor, understanding storage best practices protects your investment.</p>
-
-      <h2>Shelf Life of Vanilla Beans</h2>
-      <p>When stored properly, vanilla beans can last:</p>
-      <ul>
-        <li><strong>Grade A (Gourmet):</strong> 12-24 months with optimal storage</li>
-        <li><strong>Grade B (Extract):</strong> 18-36 months due to lower moisture</li>
-        <li><strong>Vacuum-sealed:</strong> Up to 36 months for both grades</li>
-      </ul>
-
-      <h2>Optimal Storage Conditions</h2>
-      <p>For maximum shelf life, store vanilla beans in:</p>
-      <ul>
-        <li><strong>Temperature:</strong> 15-25°C (59-77°F) — cool, stable environment</li>
-        <li><strong>Humidity:</strong> 60-70% relative humidity</li>
-        <li><strong>Light:</strong> Dark or opaque containers, away from direct sunlight</li>
-        <li><strong>Air:</strong> Airtight containers to prevent drying</li>
-      </ul>
-
-      <h2>Storage Methods</h2>
-      <p>Choose the right storage method based on your needs:</p>
-      <ul>
-        <li><strong>Refrigeration:</strong> Not recommended — can cause moisture condensation and mold</li>
-        <li><strong>Room temperature:</strong> Best for short-term storage (3-6 months)</li>
-        <li><strong>Freezing:</strong> Acceptable for long-term storage; thaw completely before use</li>
-        <li><strong>Vacuum sealing:</strong> Ideal for preserving flavor and extending shelf life</li>
-      </ul>
-
-      <h2>Signs of Quality Loss</h2>
-      <p>Check for these indicators that beans may be past their prime:</p>
-      <ul>
-        <li>Dry, brittle texture with no flexibility</li>
-        <li>Faded color (from dark brown to light brown)</li>
-        <li>Reduced aroma when split open</li>
-        <li>White crystalline deposits (vanillin) — actually a sign of quality</li>
-      </ul>
-
-      <h2>Best Practices for Retailers</h2>
-      <p>If you're selling vanilla beans retail:</p>
-      <ul>
-        <li>Store in glass jars or vacuum-sealed bags</li>
-        <li>Label with purchase date for FIFO rotation</li>
-        <li>Keep away from strong odors (vanilla absorbs smells)</li>
-        <li>Display away from heat sources and direct light</li>
-      </ul>
-
-      <h2>Storage Tips for Food Manufacturers</h2>
-      <p>For industrial storage:</p>
-      <ul>
-        <li>Use food-grade, airtight containers</li>
-        <li>Implement FIFO (First In, First Out) inventory rotation</li>
-        <li>Monitor temperature and humidity regularly</li>
-        <li>Keep storage area clean and free from pests</li>
-      </ul>
-    `,
-  },
   "real-vs-fake-vanilla-beans": {
     title: "Real vs Fake Vanilla Beans: How to Identify Authentic Vanilla",
     seoTitle: "Real vs Fake Vanilla Beans: A Guide",
@@ -790,7 +725,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `/blog/${slug}`,
     },
     openGraph: {
-      images: ogImages,
+      images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
       title: post.seoTitle,
       description: post.seoDescription,
       type: "article",
@@ -799,6 +734,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: twitterCard(
       `${post.seoTitle} | La Vanilla Supplier`,
       post.seoDescription,
+      "/blog-featured-v3.webp",
     ),
   };
 }
@@ -882,6 +818,21 @@ export default async function BlogPostPage({ params }: Props) {
               </p>
             </div>
           </div>
+
+          {/* Hero image: only the featured post has its own photo; the other
+              posts have no per-post imagery in the repo. */}
+          {slug === "sourcing-vanilla-beans-indonesia" && (
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#F4F2EE] mt-8">
+              <Image
+                src="/blog-featured-v3.webp"
+                alt="A tied bundle of cured Indonesian vanilla beans"
+                fill
+                sizes="(min-width: 896px) 896px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -1054,7 +1005,7 @@ export default async function BlogPostPage({ params }: Props) {
               "@type": "WebPage",
               "@id": `${siteConfig.url}/blog/${slug}`,
             },
-            image: `${siteConfig.url}/og-image.png`,
+            image: `${siteConfig.url}/blog-featured-v3.webp`,
             keywords: [post.category, "vanilla supplier Indonesia", "wholesale vanilla"],
           }),
         }}

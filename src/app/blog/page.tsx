@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import BlogGrid from "@/components/blog-grid";
 
 const DESCRIPTION =
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     canonical: "/blog",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "Vanilla Industry Blog & Guides",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog`,
     siteName: siteConfig.name,
     type: "website",
   },
-  twitter: twitterCard("Vanilla Industry Blog & Guides | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Vanilla Industry Blog & Guides | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 const blogPosts = [
@@ -120,16 +120,6 @@ const blogPosts = [
   },
   {
     id: "10",
-    title: "How to Store Vanilla Beans: Shelf Life & Best Practices",
-    slug: "vanilla-bean-storage-shelf-life",
-    excerpt:
-      "Learn how to properly store vanilla beans to maximize shelf life, preserve flavor, and maintain quality for food manufacturers and retailers.",
-    category: "Quality",
-    date: "2026-02-01",
-    readTime: "6 min read",
-  },
-  {
-    id: "11",
     title: "Real vs Fake Vanilla Beans: How to Identify Authentic Vanilla",
     slug: "real-vs-fake-vanilla-beans",
     excerpt:
@@ -139,7 +129,7 @@ const blogPosts = [
     readTime: "7 min read",
   },
   {
-    id: "12",
+    id: "11",
     title: "Bulk Vanilla Ordering Guide for Food Manufacturers",
     slug: "bulk-vanilla-ordering-guide",
     excerpt:
@@ -149,7 +139,7 @@ const blogPosts = [
     readTime: "9 min read",
   },
   {
-    id: "13",
+    id: "12",
     title: "Indonesian Vanilla Processing: From Harvest to Export",
     slug: "indonesian-vanilla-processing",
     excerpt:
@@ -159,7 +149,7 @@ const blogPosts = [
     readTime: "8 min read",
   },
   {
-    id: "14",
+    id: "13",
     title: "Why Indonesian Vanilla Is the Best Choice for B2B Buyers",
     slug: "indonesian-vanilla-best-choice",
     excerpt:
@@ -169,7 +159,7 @@ const blogPosts = [
     readTime: "7 min read",
   },
   {
-    id: "15",
+    id: "14",
     title: "Vanilla Bean Quality Testing Methods: Complete Guide for B2B Buyers",
     slug: "vanilla-bean-quality-testing-methods",
     excerpt:
@@ -179,7 +169,7 @@ const blogPosts = [
     readTime: "10 min read",
   },
   {
-    id: "16",
+    id: "15",
     title: "How to Choose the Right Vanilla Supplier: 7 Essential Criteria",
     slug: "how-to-choose-right-vanilla-supplier",
     excerpt:
@@ -189,7 +179,7 @@ const blogPosts = [
     readTime: "11 min read",
   },
   {
-    id: "17",
+    id: "16",
     title: "Vanilla Bean Storage Best Practices: Extending Shelf Life for Retailers",
     slug: "vanilla-bean-storage-best-practices",
     excerpt:
@@ -199,7 +189,7 @@ const blogPosts = [
     readTime: "8 min read",
   },
   {
-    id: "18",
+    id: "17",
     title: "Wholesale Vanilla Beans Guide",
     slug: "wholesale-vanilla-beans-indonesia",
     excerpt:
@@ -209,7 +199,7 @@ const blogPosts = [
     readTime: "12 min read",
   },
   {
-    id: "19",
+    id: "18",
     title: "Vanilla Paste Bulk Order Specs",
     slug: "vanilla-paste-bulk-order",
     excerpt:
@@ -219,7 +209,7 @@ const blogPosts = [
     readTime: "10 min read",
   },
   {
-    id: "20",
+    id: "19",
     title: "Halal Vanilla Supplier - Middle East",
     slug: "halal-vanilla-supplier-middle-east",
     excerpt:
@@ -255,7 +245,7 @@ export default function BlogPage() {
             <div>
               <p className={EYEBROW}>The La Vanilla Journal</p>
               <h1 className="sr-headline text-4xl sm:text-5xl xl:text-[3.5rem] leading-[1.08] tracking-tight text-[#2C2518] font-[family-name:var(--font-libre)] mb-6">
-                <span className="font-bold">Guides for buying vanilla</span>{" "}
+                <span className="font-bold">Guides for buying Indonesian vanilla</span>{" "}
                 <span className="italic font-normal text-[#8C7A4F]">with confidence</span>
               </h1>
               <p className="text-lg text-[#6B6358] leading-relaxed max-w-lg">
@@ -366,6 +356,24 @@ export default function BlogPage() {
             name: "Vanilla Industry Insights",
             description: "Expert guides on vanilla sourcing and trade",
             url: `${siteConfig.url}/blog`,
+          }),
+        }}
+      />
+
+      {/* ItemList of all articles */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Vanilla Industry Insights",
+            itemListElement: blogPosts.map((post, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: post.title,
+              url: `${siteConfig.url}/blog/${post.slug}`,
+            })),
           }),
         }}
       />

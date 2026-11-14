@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 
 const DESCRIPTION =
   "Halal certified vanilla beans and paste from Indonesia. MUI certified and compliant with Gulf standards. Export to UAE, Saudi Arabia, and Middle East markets.";
@@ -10,24 +10,17 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "Halal Vanilla Supplier - Middle East",
   description: DESCRIPTION,
-  keywords: [
-    "halal vanilla supplier",
-    "halal vanilla beans Indonesia",
-    "halal certified vanilla",
-    "vanilla supplier Middle East",
-    "MUI certified vanilla",
-  ],
   alternates: {
     canonical: "/blog/halal-vanilla-supplier-middle-east",
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/blog-featured-v3.webp", "A tied bundle of cured Indonesian vanilla beans", 1400, 1050),
     title: "Halal Vanilla Supplier - Middle East | La Vanilla Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/blog/halal-vanilla-supplier-middle-east`,
     type: "article",
   },
-  twitter: twitterCard("Halal Vanilla Supplier - Middle East | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Halal Vanilla Supplier - Middle East | La Vanilla Supplier", DESCRIPTION, "/blog-featured-v3.webp"),
 };
 
 export default function HalalVanillaSupplierMiddleEast() {
@@ -45,7 +38,7 @@ export default function HalalVanillaSupplierMiddleEast() {
               url: `${siteConfig.url}/blog/halal-vanilla-supplier-middle-east`,
               datePublished: "2026-04-15",
               dateModified: "2026-04-15",
-              image: [`${siteConfig.url}/og-image.png`],
+              image: [`${siteConfig.url}/blog-featured-v3.webp`],
               author: {
                 "@type": "Person",
                 name: "La Vanilla Supplier",
@@ -232,6 +225,39 @@ export default function HalalVanillaSupplierMiddleEast() {
           </div>
         </div>
       </article>
+
+      {/* Related Articles */}
+      <section className="bg-[#F8F6F2] py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-bold text-[#2C2518] mb-6">
+            Related Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/blog/halal-vanilla-supplier"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Sourcing Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Finding a Halal Vanilla Supplier
+              </h3>
+            </Link>
+            <Link
+              href="/blog/export-documentation-guide"
+              className="p-4 bg-white rounded-lg border border-[#E5E0D8] hover:border-[#B5A37A] transition-colors"
+            >
+              <span className="text-xs text-[#B5A37A] font-medium">
+                Export Guide
+              </span>
+              <h3 className="font-semibold text-[#2C2518] mt-1">
+                Export Documentation Guide: What You Need to Import Vanilla
+              </h3>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

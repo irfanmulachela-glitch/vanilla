@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { QuickAnswer } from "@/components/quick-answer";
 import { ProcessSteps } from "@/components/process-steps";
 
@@ -48,26 +48,18 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Wholesale Vanilla Beans Supplier",
   description: DESCRIPTION,
-  keywords: [
-    "wholesale vanilla beans",
-    "bulk vanilla supplier",
-    "vanilla beans Indonesia wholesale",
-    "vanilla paste bulk",
-    "vanilla powder wholesale",
-    "Indonesian vanilla supplier",
-  ],
   alternates: {
     canonical: "/wholesale",
     languages: languageAlternates("wholesale"),
   },
   openGraph: {
-    images: ogImages,
+    images: ogImageFor("/wholesale-hero.webp", "Vanilla vines growing on a farm in Java, Indonesia", 2400, 1800),
     title: "Wholesale Vanilla Beans Supplier",
     description: DESCRIPTION,
     url: `${siteConfig.url}/wholesale`,
     type: "website",
   },
-  twitter: twitterCard("Wholesale Vanilla Beans Supplier | La Vanilla Supplier", DESCRIPTION),
+  twitter: twitterCard("Wholesale Vanilla Beans Supplier | La Vanilla Supplier", DESCRIPTION, "/wholesale-hero.webp"),
 };
 
 const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
@@ -233,23 +225,26 @@ export default function WholesalePage() {
       {/* Key figures */}
       <section aria-label="Key figures" className="bg-white border-b border-[#EEE9E1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
+          {/* Key figures: plain divs, not a dl — the icon sits beside the
+              text block, which a description list cannot express without
+              nesting dt/dd two divs deep (invalid HTML). */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-10 lg:py-0 lg:gap-0 lg:divide-x rtl:lg:divide-x-reverse divide-[#EEE9E1]">
             {figures.map((fig) => (
               <div key={fig.label} className="flex items-start gap-3.5 lg:gap-4 lg:px-8 lg:py-10 first:lg:ps-0 last:lg:pe-0">
                 <fig.icon className="w-5 h-5 mt-1 flex-shrink-0 text-[#B5A37A]" strokeWidth={1.6} aria-hidden="true" />
                 <div className="min-w-0">
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</dt>
-                  <dd className="mt-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#9A9187]">{fig.label}</p>
+                  <p className="mt-1.5">
                     <span className="text-[1.65rem] lg:text-[2rem] font-bold leading-none tracking-tight text-[#2C2518]">
-                      <span dir="ltr" data-count className="tabular-nums">{fig.value}</span>
+                      <span dir="ltr" className="tabular-nums">{fig.value}</span>
                       {fig.unit && <span className="ms-1.5 text-base lg:text-lg font-semibold text-[#B5A37A]">{fig.unit}</span>}
                     </span>
                     <span className="block mt-2 text-[13px] leading-snug text-[#6B6358]">{fig.note}</span>
-                  </dd>
+                  </p>
                 </div>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 
@@ -472,6 +467,25 @@ export default function WholesalePage() {
               Chat on WhatsApp
             </a>
           </div>
+          <p className="text-sm text-[#6B6358] mt-8">
+            Shipping to a specific region? See how we deliver to the{" "}
+            <Link href="/regions/usa" className="font-medium text-[#2C2518] underline decoration-[#B5A37A] underline-offset-4 hover:text-[#B5A37A]">
+              USA
+            </Link>
+            ,{" "}
+            <Link href="/regions/uae" className="font-medium text-[#2C2518] underline decoration-[#B5A37A] underline-offset-4 hover:text-[#B5A37A]">
+              UAE &amp; Middle East
+            </Link>
+            ,{" "}
+            <Link href="/regions/australia" className="font-medium text-[#2C2518] underline decoration-[#B5A37A] underline-offset-4 hover:text-[#B5A37A]">
+              Australia
+            </Link>{" "}
+            or{" "}
+            <Link href="/regions/europe" className="font-medium text-[#2C2518] underline decoration-[#B5A37A] underline-offset-4 hover:text-[#B5A37A]">
+              Europe
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

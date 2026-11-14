@@ -2,13 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
 import { isTranslatedPath, languageAlternates } from "@/lib/hreflang";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import ProductDetail from "@/components/product-detail";
-
-const SPEC_LABELS: Record<string, string> = {
-  moq: "MOQ",
-  hsCode: "HS Code",
-};
 
 const SEO: Record<string, { title: string; description: string }> = {
   "vanilla-beans": {
@@ -53,24 +48,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    keywords: [
-      product.name.toLowerCase(),
-      "vanilla supplier Indonesia",
-      "wholesale vanilla",
-      "Indonesian vanilla",
-    ],
     alternates: {
       canonical: `/products/${slug}`,
       ...(isTranslatedPath(`products/${slug}`) ? { languages: languageAlternates(`products/${slug}`) } : {}),
     },
     openGraph: {
-      images: ogImages,
+      // All three product images are 1600x1200.
+      images: ogImageFor(product.image, `Indonesian ${product.name.toLowerCase()} from La Vanilla Supplier`, 1600, 1200),
       title,
       description,
       url: `${siteConfig.url}/products/${slug}`,
       type: "website",
     },
-    twitter: twitterCard(`${title} | La Vanilla Supplier`, description),
+    twitter: twitterCard(`${title} | La Vanilla Supplier`, description, product.image),
   };
 }
 
@@ -86,35 +76,12 @@ export default async function ProductPage({ params }: PageProps) {
     <>
       <ProductDetail slug={slug} />
 
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: product.name,
-            description: product.description,
-            image: `${siteConfig.url}${product.image}`,
-            brand: {
-              "@type": "Brand",
-              name: siteConfig.name,
-            },
-            manufacturer: {
-              "@type": "Organization",
-              name: siteConfig.name,
-            },
-            category: product.category === "beans" ? "Vanilla Beans" : product.category === "paste" ? "Vanilla Paste" : "Vanilla Powder",
-            additionalProperty: Object.entries(product.specifications).map(([key, value]) => ({
-              "@type": "PropertyValue",
-              name:
-                SPEC_LABELS[key] ??
-                key.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase()),
-              value: value,
-            })),
-          }),
-        }}
-      />
+      {/*
+        TODO (SEO): add Product JSON-LD with an offers block once real prices
+        are published. The previous Product markup was removed 2026-11-14
+        because, without offers/review/aggregateRating, Google flagged it
+        invalid. Do not re-add Product schema without prices.
+      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

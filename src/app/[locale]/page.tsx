@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig, breadcrumbSchema } from "@/lib/config";
-import { twitterCard, ogImages } from "@/lib/seo";
+import { twitterCard, ogImageFor } from "@/lib/seo";
 import { HomePageContent } from "@/components/home-page-content";
 import { type Locale, locales } from "@/i18n";
 import { languageAlternates } from "@/lib/hreflang";
@@ -21,25 +21,12 @@ export async function generateMetadata({ params }: LocaleHomePageProps): Promise
       absolute: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
     },
     description: DESCRIPTION,
-    keywords: [
-      "vanilla supplier Indonesia",
-      "wholesale vanilla beans",
-      "vanilla paste manufacturer",
-      "vanilla powder supplier",
-      "B2B vanilla exporter",
-      "Quality Assured vanilla",
-      "Indonesian vanilla beans",
-      "best vanilla supplier",
-      "bulk vanilla beans",
-      "Java vanilla exporter",
-      "air freight vanilla",
-    ],
     alternates: {
       canonical: prefix || "/",
       languages: languageAlternates(""),
     },
     openGraph: {
-      images: ogImages,
+      images: ogImageFor("/hero-vanilla-beans-studio.jpg", "Cured Indonesian vanilla beans from Java", 2000, 1586),
       title: "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
       description: DESCRIPTION,
       url: `${siteConfig.url}${prefix}`,
@@ -49,6 +36,7 @@ export async function generateMetadata({ params }: LocaleHomePageProps): Promise
     twitter: twitterCard(
       "Wholesale Vanilla Supplier Indonesia | Beans, Paste & Powder",
       DESCRIPTION,
+      "/hero-vanilla-beans-studio.jpg",
     ),
   };
 }
