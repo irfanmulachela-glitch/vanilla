@@ -18,7 +18,7 @@ const LAST_MODIFIED: Record<string, string> = {
   about: "2026-11-10",
   contact: "2026-10-29",
   faq: "2026-11-10",
-  blog: "2026-10-29",
+  blog: "2026-11-14",
   wholesale: "2026-11-10",
   comparison: "2026-11-10",
   "la-vanilla-standard": "2026-11-10",
@@ -46,6 +46,7 @@ const LAST_MODIFIED: Record<string, string> = {
   // Merged 2026-11-14 with vanilla-bean-storage-shelf-life (now redirected).
   "blog/vanilla-bean-storage-best-practices": "2026-11-14",
   "blog/vanilla-bean-quality-testing-methods": "2026-03-15",
+  "blog/indonesian-vanilla-complete-guide": "2026-11-14",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -118,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "halal-vanilla-supplier-middle-east",
     "vanilla-bean-storage-best-practices",
     "vanilla-bean-quality-testing-methods",
+    "indonesian-vanilla-complete-guide",
   ];
 
   const blogPages = blogSlugs.map((slug) =>

@@ -704,6 +704,110 @@ const blogPosts = {
       </ul>
     `,
   },
+  "indonesian-vanilla-complete-guide": {
+    title: "Indonesian Vanilla: The Complete Guide",
+    seoTitle: "Indonesian Vanilla: The Complete Guide for B2B Buyers 2026",
+    seoDescription: "The complete guide to Indonesian vanilla for B2B buyers: grades, vanillin, beans vs paste vs powder, pricing factors, shipping, and choosing a supplier.",
+    excerpt:
+      "Everything B2B buyers need to know about Indonesian vanilla: grades, vanillin, beans vs paste vs powder, pricing, shipping, and how to choose a supplier.",
+    category: "Product Guide",
+    date: "2026-11-14",
+    readTime: "14 min read",
+    content: `
+      <p>Indonesia is the world's second-largest vanilla producer, and for many buyers it is the most practical origin to source from: consistent quality, year-round supply, and pricing that competes with any other origin. This guide covers everything a buyer needs to decide well, from grades and vanillin content to formats, pricing factors, shipping, documentation, and storage. It is written for bakeries, dessert makers, food manufacturers, extract makers, and importers who buy vanilla as an ingredient and need it to arrive right, every time.</p>
+
+      <h2>What Is Indonesian Vanilla?</h2>
+      <p>Indonesian vanilla is <em>Vanilla planifolia</em>, the same species grown in Madagascar and the one most buyers mean when they say "vanilla." It grows in Indonesia's tropical climate, where warm temperatures, high humidity, and volcanic soil suit the vanilla orchid. The beans are hand-pollinated, harvested green, and then cured to develop their flavor.</p>
+      <p>The flavor profile is what sets Indonesian vanilla apart. Where Madagascar vanilla is sweet, creamy, and floral, Indonesian vanilla is rich and creamy with notes of caramel and dried fruit and a smoky undertone. The profile is more complex, which is why it suits applications where vanilla is a leading flavor rather than background sweetness: ice cream, pastry, chocolate, and premium desserts.</p>
+      <p>Cultivation is labor-intensive. Every flower must be pollinated by hand, and every bean is cured, graded, and sorted by hand. That labor is a large part of why real vanilla costs what it does, and why the cheapest offer in the market is rarely the best value. After harvest, the beans are sun-cured for months, a slow process that builds the vanillin and aroma compounds buyers pay for.</p>
+      <p>Indonesia is also a practical origin to buy from. Production runs year-round rather than in a short season, so supply is steadier and lead times are more predictable. The country sits centrally for Asian and Middle Eastern markets, which means shorter shipping times to those regions than origins that route through Europe, and an established export infrastructure moves product by air freight worldwide. For a buyer planning production months ahead, that stability matters as much as the flavor.</p>
+
+      <h2>Indonesian Vanilla Grades: Grade A vs Grade B</h2>
+      <p>Indonesian vanilla beans are sold in two grades. The grade determines length, moisture, appearance, and best use. There is no third grade: every bean is either gourmet or extraction.</p>
+      <ul>
+        <li><strong>Grade A (Gourmet):</strong> 15-20 cm long, 25-35% moisture, 1.1-2.5% vanillin. Plump, oily, flexible beans with a strong aroma. Two sizes are common: Long at 18-20 cm and Standard at 15-17 cm. Grade A is the right choice for retail, pastry, ice cream, and any application where the bean itself is seen, split, or scraped.</li>
+        <li><strong>Grade B (Extract):</strong> 10-14 cm long, under 25% moisture, 1.0-2.0% vanillin. Drier and slimmer, often with split ends, but carrying the same real vanilla character. Grade B is made for extraction: the lower moisture means more vanillin per kilo goes into the extract instead of water weight. It is the right choice for extract manufacturing, syrups, and large-batch flavoring.</li>
+      </ul>
+      <p>The practical rule is simple: if the bean is visible in the finished product or the customer opens the pod, buy Grade A. If the bean is going into a liquid or a flavoring base, Grade B gives the same vanilla character at a lower price per kilo. For a full breakdown of how grading works, see our guide to <a href="/blog/vanilla-bean-grading">vanilla bean grading: Grade A vs Grade B</a>. Both grades are available as <a href="/products/vanilla-beans">wholesale vanilla beans</a> with a Certificate of Analysis on every shipment.</p>
+      <p>When a shipment arrives, check the beans before accepting them. Authentic Grade A beans are dark brown to black, never light brown or green. They feel oily and plump and bend without breaking, returning to shape after gentle bending. They should smell rich and complex, sweet and creamy with caramel and dried fruit notes, and the aroma should intensify when a bean is split open. Dry, brittle, stiff, or papery beans, or beans with a chemical smell, are a sign of a problem: raise it with your supplier before the beans go into production.</p>
+
+      <h2>Vanillin Content: What the Numbers Mean</h2>
+      <p>Vanillin is the main compound behind vanilla flavor and aroma, and its percentage is the single most useful quality number on a specification sheet. Grade A Indonesian vanilla runs 1.1-2.5% vanillin; Grade B runs 1.0-2.0%. Higher vanillin generally means stronger flavor per bean, which matters most when vanilla is the hero flavor.</p>
+      <p>Two things to keep in mind. First, vanillin percentage is measured in a lab, not judged by eye, so always ask for the Certificate of Analysis (CoA) for the specific lot you are buying. A supplier who cannot provide a CoA with vanillin content is a supplier to walk away from. Second, vanillin is not the whole story: the full flavor of real vanilla comes from hundreds of compounds working together, which is why real beans taste different from synthetic vanillin even at the same vanillin level.</p>
+      <p>Every shipment from La Vanilla Supplier carries a CoA with vanillin content, tested before export. Our quality requirements are set out in <a href="/la-vanilla-standard">the La Vanilla Standard</a>, and the lab methods behind the numbers are explained in our guide to <a href="/blog/vanilla-bean-quality-testing-methods">vanilla bean quality testing methods</a>.</p>
+
+      <h2>Beans, Paste, or Powder: Which Format Fits Your Product?</h2>
+      <p>Most buyers start with whole beans, but paste and powder solve real production problems. The right format depends on what you make and how your line runs.</p>
+      <ul>
+        <li><strong>Whole beans</strong> are the most versatile format: split and scrape for ice cream and pastry, infuse into cream and milk, or grind for custom blends. They keep the longest and give the cook full control. Choose <a href="/products/vanilla-beans">vanilla beans</a> when flavor is built in your kitchen or factory and you want the real pod in the process.</li>
+        <li><strong>Vanilla paste</strong> is a ready-to-use blend of vanilla seeds, extract, and a thickener, made for manufacturers who want visible vanilla seeds in the finished product without the labor of splitting pods. Our paste is made to 28% Bean Solids and can be produced in single, double, or triple fold strength to match your formulation. Choose <a href="/products/vanilla-paste">vanilla paste</a> for ice cream, yogurt, bakery fillings, and desserts where the customer should see the seeds.</li>
+        <li><strong>Vanilla powder</strong> is finely ground from premium cured beans at 40-80 mesh, made for dry applications: drink mixes, chocolate, dry blends, and coatings. It disperses evenly and needs no liquid handling. Choose <a href="/products/vanilla-powder">vanilla powder</a> when your product is dry or when liquid extract would change your formulation.</li>
+      </ul>
+      <p>If you are deciding between paste and liquid extract for a specific product, our comparison of <a href="/blog/vanilla-paste-vs-extract">vanilla paste vs vanilla extract</a> covers cost and application differences in detail.</p>
+
+      <h2>How Vanilla Is Processed: From Harvest to Export</h2>
+      <p>Green vanilla beans have almost no aroma. Flavor is created during curing, the slow process of wilting, sweating, drying, and conditioning that turns a green pod dark brown and develops its vanillin. In Indonesia the beans are sun-cured for months, then graded by length, moisture, and appearance, and packed for export.</p>
+      <p>What matters to a buyer is that each of these steps is done consistently. Uneven curing produces beans with uneven flavor; poor drying invites mold; careless grading mixes lengths and moisture levels in one lot. That is why a supplier's process matters as much as its price: the same origin can produce excellent beans or disappointing ones depending on how the harvest is handled. Our step-by-step look at <a href="/blog/indonesian-vanilla-processing">Indonesian vanilla processing: from harvest to export</a> covers each stage and what to check.</p>
+
+      <h2>How to Choose a Vanilla Supplier</h2>
+      <p>Vanilla is one of the most expensive spices in the world, and the market has its share of unreliable sellers. Before placing an order, ask the supplier for five things:</p>
+      <ul>
+        <li><strong>Certificate of Analysis (CoA)</strong> for the lot, showing vanillin content and moisture. No CoA, no order.</li>
+        <li><strong>Samples</strong> before committing to volume. A serious supplier offers free samples and expects you to test them.</li>
+        <li><strong>Clear specifications in writing:</strong> grade, length, moisture, vanillin, and packaging, so the shipment can be checked against the order.</li>
+        <li><strong>Export documentation:</strong> phytosanitary certificate and certificate of origin, arranged by the supplier.</li>
+        <li><strong>References and track record:</strong> how long the supplier has exported, which markets it serves, and whether it can show consistent shipments. La Vanilla Supplier has exported 150+ tons to 20+ countries since 2014.</li>
+      </ul>
+      <p>Red flags are consistent across the industry: no CoA, no samples, vague specifications, prices far below the market range, and pressure to pay in full before any sample ships. A reliable supplier is transparent about specifications and comfortable with small first orders. Our guide to <a href="/blog/sourcing-vanilla-beans-indonesia">sourcing vanilla beans from Indonesia</a> covers supplier vetting in depth, and our <a href="/blog/how-to-choose-right-vanilla-supplier">7 criteria for choosing a vanilla supplier</a> is a practical due diligence checklist. Common questions are also answered in our <a href="/faq">FAQ</a>.</p>
+      <p>The safest way to start a new supplier relationship is small: a 1 kg first order, tested in your own production, tells you more than any brochure. If the quality holds, scale up the volume and, for regular buying, consider a supply contract that holds your volume and pricing steady across shipments so costs stay predictable through the year.</p>
+
+      <h2>Understanding Vanilla Pricing</h2>
+      <p>Vanilla pricing moves with several factors, and understanding them helps you read any quotation:</p>
+      <ul>
+        <li><strong>Grade:</strong> Grade A costs more than Grade B, because the beans are longer, plumper, and higher in moisture.</li>
+        <li><strong>Vanillin content:</strong> higher vanillin commands premium pricing within a grade.</li>
+        <li><strong>Bean length:</strong> longer beans are more valuable, especially at the 18-20 cm end of Grade A.</li>
+        <li><strong>Moisture content:</strong> affects weight, shelf life, and handling.</li>
+        <li><strong>Order volume:</strong> larger orders, from 100 kg up, get better rates per kilo.</li>
+        <li><strong>Season:</strong> harvest timing affects availability through the year.</li>
+        <li><strong>Incoterm and shipping:</strong> air freight is faster but costs more than sea freight; the Incoterm decides who pays for what.</li>
+      </ul>
+      <p>As a market reference, published market ranges for Indonesian vanilla are often quoted around $300-500/kg for Grade A and $150-300/kg for Grade B, compared with around $500-800/kg for Madagascar Grade A. These are market ranges that move with grade, vanillin, volume, and season, not a quotation: request a quote for current pricing on your specific order. Our <a href="/blog/vanilla-bean-prices-indonesia">vanilla bean prices guide</a> explains the factors in more detail, and the <a href="/comparison">Indonesia vs Madagascar comparison</a> shows how the two origins stack up on price, flavor, and supply.</p>
+      <p>When comparing quotations, compare like with like. A price per kilo means little until you know the grade, the vanillin content, the length, the moisture, and the Incoterm behind it. Two quotations for "Grade A vanilla" can describe very different products, so ask every supplier for the same specification sheet and check the CoA against it. Requesting quotes from multiple suppliers is still worth doing: it shows you the real market for your exact specification, not just a headline number.</p>
+
+      <h2>Ordering and Shipping</h2>
+      <p>Ordering from La Vanilla Supplier starts at 1 kg, so a first order can be small enough to test in your own production before committing to volume. Larger orders, from 100 kg up, get better rates per kilo, and regular buyers can set up a supply contract that holds volume and pricing steady across shipments.</p>
+      <p>Shipping is by air freight first, with delivery in 3-7 days to 20+ countries. The Incoterms offered are FCA (Surakarta) and CPT. Sea freight can be arranged on request for larger shipments. Every order ships with full export documentation, and free samples are available before you order. Quotes are answered within 24 hours. See the <a href="/wholesale">wholesale page</a> for order details, or <a href="/contact">contact us</a> with your volume and specifications.</p>
+
+      <h2>Export Documentation</h2>
+      <p>Every international vanilla shipment needs paperwork, and your supplier should handle it. The standard documents are a phytosanitary certificate, a certificate of origin, and a Certificate of Analysis for the lot. Vanilla beans ship under HS code 0905.10. Requirements vary by destination country, so confirm with your supplier and your customs broker before the first shipment. Our <a href="/blog/export-documentation-guide">export documentation guide</a> lists what each document is and why importers need it.</p>
+
+      <h2>Halal Certification</h2>
+      <p>La Vanilla Supplier's vanilla is halal certified, which matters for buyers serving Muslim-majority markets in the Middle East and Southeast Asia, and for manufacturers whose customers require halal ingredients. Halal certification covers the product and the handling process, so the beans, paste, and powder you buy can be used in halal-certified finished products. Our guide to <a href="/blog/halal-vanilla-supplier">finding a halal vanilla supplier</a> explains what to check when halal compliance is part of your specification.</p>
+
+      <h2>Storing Vanilla Beans</h2>
+      <p>Vanilla beans are a premium product, and poor storage destroys their value. Store beans in airtight containers at 15-25°C with 60-70% humidity, away from heat and direct light. Check stored beans regularly for mold and dryness, and keep containers sealed between uses.</p>
+      <p>Stored properly, Grade A beans keep for 18-24 months, and up to 30 months under acceptable storage. Grade B beans keep for 12-18 months, and up to 24 months. Vacuum-sealed bags extend storage further, up to 36 months. Our full guide to <a href="/blog/vanilla-bean-storage-best-practices">vanilla bean storage best practices</a> covers containers, temperature, humidity, and the signs that beans are past their best.</p>
+
+      <h2>Indonesian Vanilla vs Madagascar Vanilla</h2>
+      <p>Indonesia and Madagascar are the world's two largest vanilla producers, and buyers often compare them directly. Madagascar vanilla is sweet and creamy with classic floral notes, vanillin 1.5-2.2%, in thinner, more uniform beans. Indonesian vanilla is richer and more complex, with caramel and dried fruit notes, vanillin 1.1-2.5%, in thicker beans with higher moisture.</p>
+      <p>On supply, Indonesia offers more stable year-round production and shorter shipping times to Asian and Middle Eastern markets, while Madagascar exports are more seasonal and typically route through Europe. On value, Indonesian vanilla generally offers better pricing at comparable quality. The full comparison is in our post on <a href="/blog/indonesian-vanilla-vs-madagascar">Indonesian vanilla vs Madagascar vanilla</a> and on the <a href="/comparison">comparison page</a>.</p>
+
+      <h2>Buyer FAQ</h2>
+      <p><strong>What is the minimum order?</strong><br />Orders start at 1 kg. Larger orders, from 100 kg up, get better rates per kilo.</p>
+      <p><strong>How fast is shipping?</strong><br />Air freight delivers in 3-7 days to 20+ countries. Sea freight can be arranged on request for larger shipments.</p>
+      <p><strong>What documents come with my order?</strong><br />A Certificate of Analysis for the lot, a phytosanitary certificate, and a certificate of origin. Vanilla beans ship under HS code 0905.10.</p>
+      <p><strong>Should I buy Grade A or Grade B for extract?</strong><br />Grade B. It is made for extraction: lower moisture means more vanillin per kilo goes into your extract, and the split ends and shorter length do not matter once the bean is in liquid.</p>
+      <p><strong>Can I get a sample before ordering?</strong><br />Yes, free samples are available. We recommend testing a sample in your own production before placing a volume order.</p>
+      <p><strong>Is the vanilla halal certified?</strong><br />Yes, our vanilla is halal certified, suitable for halal-certified finished products and Muslim-majority markets.</p>
+      <p><strong>How should I store vanilla beans?</strong><br />In airtight containers at 15-25°C and 60-70% humidity, away from heat and light. Stored properly, Grade A keeps 18-24 months and Grade B keeps 12-18 months.</p>
+      <p><strong>Do you ship to my country?</strong><br />We ship by air freight to 20+ countries worldwide. If you are unsure about delivery to your destination, send us your location with your inquiry and we will confirm.</p>
+      <p><strong>What does 28% Bean Solids mean for vanilla paste?</strong><br />It is the share of real vanilla bean solids in the paste, the measure of how much actual vanilla is in the product rather than carrier. Our paste can be made in single, double, or triple fold strength to match your formulation.</p>
+
+      <h2>Next Step</h2>
+      <p>The fastest way to judge Indonesian vanilla is to test it in your own product. Request a free sample, check the Certificate of Analysis, and run it through your process. When you are ready, <a href="/contact">contact us</a> with your grade, volume, and specifications, and we will send a quote within 24 hours. To compare formats first, see our <a href="/products/vanilla-beans">vanilla beans</a>, <a href="/products/vanilla-paste">vanilla paste</a>, and <a href="/products/vanilla-powder">vanilla powder</a>.</p>
+    `,
+  },
 };
 
 type Props = {

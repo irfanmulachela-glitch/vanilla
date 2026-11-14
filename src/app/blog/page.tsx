@@ -218,6 +218,16 @@ const blogPosts = [
     date: "2026-04-15",
     readTime: "9 min read",
   },
+  {
+    id: "20",
+    title: "Indonesian Vanilla: The Complete Guide",
+    slug: "indonesian-vanilla-complete-guide",
+    excerpt:
+      "Everything B2B buyers need to know about Indonesian vanilla: grades, vanillin, beans vs paste vs powder, pricing, shipping, and how to choose a supplier.",
+    category: "Product Guide",
+    date: "2026-11-14",
+    readTime: "14 min read",
+  },
 ];
 
 const EYEBROW = "text-[#B5A37A] text-xs font-semibold uppercase tracking-[0.2em] mb-4";
