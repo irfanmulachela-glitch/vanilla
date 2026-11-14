@@ -56,6 +56,11 @@ html {
   transition-delay: var(--sr-delay, 0ms);
 }
 
+/* numbers: hidden only until the script has reset them to 0 (fallback after 3s) */
+.sr-js:not(.sr-fallback) [data-count]:not([data-counting]) {
+  opacity: 0;
+}
+
 /* photos settle from a slight zoom */
 .sr-img-hidden {
   transform: scale(1.08);
@@ -124,6 +129,7 @@ html {
   .sr-headline > span { animation: none; }
   .sr-hidden, .sr-img-hidden, .sr-bar-hidden { opacity: 1; transform: none; }
   .sr-rule-hidden { background-size: 100% 1px; }
+  [data-count] { opacity: 1 !important; }
 }
 
 /* Section headings share the hero's serif (Libre Baskerville) sitewide */
